@@ -18,7 +18,7 @@ Community | x | [Specifications Process 0.1](https://docs.google.com/document/d/
 
 If you missed a meeting please check the [meetings and minutes page](https://github.com/BioSchemas/bioschemas/wiki/Meetings-and-minutes)
 
-## Organizations involved and its representatives
+## Organizations involved
 
 Organisation/Community | Representative
 --- | --- 
