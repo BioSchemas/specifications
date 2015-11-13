@@ -14,7 +14,7 @@ Training Material | x | x | trainingmaterial@bioschemas.org | [x](https://github
 Organisation | x | x | organization@bioschemas.org | [x](https://github.com/BioSchemas/bioschemas/labels/type%3A%20organisation)
 Person | x | x | person@bioschemas.org | [x](https://github.com/BioSchemas/bioschemas/labels/type%3A%20person)
 Standard | x | x | standard@bioschemas.org | [x](https://github.com/BioSchemas/bioschemas/labels/type%3A%20standard)
-Community | x | [Standard Specifications Process 0.1](https://docs.google.com/document/d/1eDHBfw6frl9xAjIduLYRwcqUY3jehfzJ-xSKCc1nSsc/edit?usp=sharing) | community@bioschemas.org | [x](https://github.com/BioSchemas/bioschemas/labels/type%3A%20community)
+Community | x | [Specifications Process 0.1](https://docs.google.com/document/d/1eDHBfw6frl9xAjIduLYRwcqUY3jehfzJ-xSKCc1nSsc/edit?usp=sharing) | community@bioschemas.org | [x](https://github.com/BioSchemas/bioschemas/labels/type%3A%20community)
 
 If you missed a meeting please check the [meetings and minutes page](https://github.com/BioSchemas/bioschemas/wiki/Meetings-and-minutes)
 
