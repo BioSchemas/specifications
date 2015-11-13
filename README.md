@@ -1,4 +1,4 @@
-Several organisations and communities in life science have started a joint initiative - BioSchemas - to facilitate the description, information sharing and promotion of their activities. BioSchemas is an open community and welcomes any individual or organisation to join this community effort. Some of the content types the BioSchema community started to work on are: events, training materials, people, standards and organisations in the the life sciences.
+Several organisations and communities in life science have started a joint initiative - BioSchemas - to facilitate the description, information sharing and promotion of their activities. BioSchemas is an open community and welcomes any organization or individual to join this community effort. Some of the content types the BioSchemas community started to work on are: events, training materials, people, standards and organisations in the the life sciences.
 
 BioSchemas relies and extends from [schema.org](http://schema.org) and aims to reuse existing standards and reach consensus among a wide number of life sciences organizations and communities.
 
