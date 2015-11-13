@@ -5,6 +5,7 @@ If you want to join or provide feedback please visit the group pages and contact
 ## Groups and related information
 
 BioSchemas types | Group page | Guidelines | Mailing list | Tasks and issues | Minutes
+--- | --- | --- | --- | --- | ---
 Event | [x](https://github.com/BioSchemas/bioschemas/wiki/Event-Group) | [Event Specification 0.1](https://docs.google.com/document/d/1CzE_EGDp_II7skKCUFzZUQ7ZSkImkwcEPiQJVpX8YNk/edit?usp=sharing) | event@bioschemas.org | [x](https://github.com/BioSchemas/bioschemas/labels/type%3A%20event) | [x](https://github.com/BioSchemas/bioschemas/wiki/Meetings-and-minutes)
 Training Material | x | x | trainingmaterial@bioschemas.org | [x](https://github.com/BioSchemas/bioschemas/labels/type%3A%20training%20material) | [x](https://github.com/BioSchemas/bioschemas/wiki/Meetings-and-minutes)
 Organisation | x | x | organization@bioschemas.org | [x](https://github.com/BioSchemas/bioschemas/labels/type%3A%20organisation) | [x](https://github.com/BioSchemas/bioschemas/wiki/Meetings-and-minutes)
