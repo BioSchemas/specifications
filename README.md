@@ -8,12 +8,13 @@ If you want to join or provide feedback please visit the group pages and contact
 ## Groups and related information
 
 Name | Page | Guidelines | eMail | Tasks/issues
---- | --- | --- | --- | --- | ---
+--- | --- | --- | --- | --- 
 Event | [x](https://github.com/BioSchemas/bioschemas/wiki/Event-Group) | [Event Specification 0.1](https://docs.google.com/document/d/1CzE_EGDp_II7skKCUFzZUQ7ZSkImkwcEPiQJVpX8YNk/edit?usp=sharing) | event@bioschemas.org | [x](https://github.com/BioSchemas/bioschemas/labels/type%3A%20event)
 Training Material | x | x | trainingmaterial@bioschemas.org | [x](https://github.com/BioSchemas/bioschemas/labels/type%3A%20training%20material)
 Organisation | x | x | organization@bioschemas.org | [x](https://github.com/BioSchemas/bioschemas/labels/type%3A%20organisation)
 Person | x | [Person Specification 0.1](https://docs.google.com/document/d/1Hhm9uZ85eJvH6JG1ZoPz83E9bx-B95r2rW8vPZ2_XJE/edit#heading=h.udykbimgtwao) | person@bioschemas.org | [x](https://github.com/BioSchemas/bioschemas/labels/type%3A%20person)
 Standard | x | x | standard@bioschemas.org | [x](https://github.com/BioSchemas/bioschemas/labels/type%3A%20standard)
+Commons | x | x | commons@bioschemas.org | [x](https://github.com/BioSchemas/bioschemas/labels/type%3A%20commons)
 Community | x | [Specifications Process 0.1](https://docs.google.com/document/d/1eDHBfw6frl9xAjIduLYRwcqUY3jehfzJ-xSKCc1nSsc/edit?usp=sharing) | community@bioschemas.org | [x](https://github.com/BioSchemas/bioschemas/labels/type%3A%20community)
 
 If you missed a meeting please check the [meetings and minutes page](https://github.com/BioSchemas/bioschemas/wiki/Meetings-and-minutes)
