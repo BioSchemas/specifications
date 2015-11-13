@@ -14,8 +14,8 @@ Training Material |  |  | trainingmaterial@bioschemas.org | [![link](https://raw
 Organisation |  |  | organization@bioschemas.org | [![link](https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png)](https://github.com/BioSchemas/bioschemas/labels/type%3A%20organisation)
 Person |  | [Person Specification 0.1](https://docs.google.com/document/d/1Hhm9uZ85eJvH6JG1ZoPz83E9bx-B95r2rW8vPZ2_XJE/edit#heading=h.udykbimgtwao) | person@bioschemas.org | [![link](https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png)](https://github.com/BioSchemas/bioschemas/labels/type%3A%20person)
 Standard |  |  | standard@bioschemas.org | [![link](https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png)](https://github.com/BioSchemas/bioschemas/labels/type%3A%20standard)
-Commons |  |  | commons@bioschemas.org | [![link](https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png)](https://github.com/BioSchemas/bioschemas/labels/type%3A%20commons)
-Community |  | [Specifications Process 0.1](https://docs.google.com/document/d/1eDHBfw6frl9xAjIduLYRwcqUY3jehfzJ-xSKCc1nSsc/edit?usp=sharing) | community@bioschemas.org | [![link](https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png)](https://github.com/BioSchemas/bioschemas/labels/type%3A%20community)
+Commons |  |  | commons@bioschemas.org | [![link](https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png)](https://github.com/BioSchemas/bioschemas/labels/commons)
+Community |  | [Specifications Process 0.1](https://docs.google.com/document/d/1eDHBfw6frl9xAjIduLYRwcqUY3jehfzJ-xSKCc1nSsc/edit?usp=sharing) | community@bioschemas.org | [![link](https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png)](https://github.com/BioSchemas/bioschemas/labels/community)
 
 If you missed a meeting please check the [meetings and minutes page](https://github.com/BioSchemas/bioschemas/wiki/Meetings-and-minutes)
 
