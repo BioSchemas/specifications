@@ -7,16 +7,16 @@ If you want to join or provide feedback please visit the group pages and contact
 
 ## Groups and related information
 
-BioSchemas types | Group page | Guidelines | Mailing list | Tasks and issues | Minutes
+BioSchemas types | Group page | Guidelines | Mailing list | Tasks and issues
 --- | --- | --- | --- | --- | ---
-Event | [x](https://github.com/BioSchemas/bioschemas/wiki/Event-Group) | [Event Specification 0.1](https://docs.google.com/document/d/1CzE_EGDp_II7skKCUFzZUQ7ZSkImkwcEPiQJVpX8YNk/edit?usp=sharing) | event@bioschemas.org | [x](https://github.com/BioSchemas/bioschemas/labels/type%3A%20event) | [x](https://github.com/BioSchemas/bioschemas/wiki/Meetings-and-minutes)
-Training Material | x | x | trainingmaterial@bioschemas.org | [x](https://github.com/BioSchemas/bioschemas/labels/type%3A%20training%20material) | [x](https://github.com/BioSchemas/bioschemas/wiki/Meetings-and-minutes)
-Organisation | x | x | organization@bioschemas.org | [x](https://github.com/BioSchemas/bioschemas/labels/type%3A%20organisation) | [x](https://github.com/BioSchemas/bioschemas/wiki/Meetings-and-minutes)
-Person | x | x | person@bioschemas.org | [x](https://github.com/BioSchemas/bioschemas/labels/type%3A%20person) | [x](https://github.com/BioSchemas/bioschemas/wiki/Meetings-and-minutes)
-Standard | x | x | standard@bioschemas.org | [x](https://github.com/BioSchemas/bioschemas/labels/type%3A%20standard) | [x](https://github.com/BioSchemas/bioschemas/wiki/Meetings-and-minutes)
-Community | x | [Standard Specifications Process 0.1](https://docs.google.com/document/d/1eDHBfw6frl9xAjIduLYRwcqUY3jehfzJ-xSKCc1nSsc/edit?usp=sharing) | community@bioschemas.org | [x](https://github.com/BioSchemas/bioschemas/labels/type%3A%20community) | [x](https://github.com/BioSchemas/bioschemas/wiki/Meetings-and-minutes)
+Event | [x](https://github.com/BioSchemas/bioschemas/wiki/Event-Group) | [Event Specification 0.1](https://docs.google.com/document/d/1CzE_EGDp_II7skKCUFzZUQ7ZSkImkwcEPiQJVpX8YNk/edit?usp=sharing) | event@bioschemas.org | [x](https://github.com/BioSchemas/bioschemas/labels/type%3A%20event)
+Training Material | x | x | trainingmaterial@bioschemas.org | [x](https://github.com/BioSchemas/bioschemas/labels/type%3A%20training%20material)
+Organisation | x | x | organization@bioschemas.org | [x](https://github.com/BioSchemas/bioschemas/labels/type%3A%20organisation)
+Person | x | x | person@bioschemas.org | [x](https://github.com/BioSchemas/bioschemas/labels/type%3A%20person)
+Standard | x | x | standard@bioschemas.org | [x](https://github.com/BioSchemas/bioschemas/labels/type%3A%20standard)
+Community | x | [Standard Specifications Process 0.1](https://docs.google.com/document/d/1eDHBfw6frl9xAjIduLYRwcqUY3jehfzJ-xSKCc1nSsc/edit?usp=sharing) | community@bioschemas.org | [x](https://github.com/BioSchemas/bioschemas/labels/type%3A%20community)
 
-
+If you missed a minute please check the [meetings and minutes page](https://github.com/BioSchemas/bioschemas/wiki/Meetings-and-minutes)
 
 ## Organizations involved and its representatives
 
