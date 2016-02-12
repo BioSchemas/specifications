@@ -17,7 +17,7 @@ Standard  |  | standard@bioschemas.org | [![link](https://raw.githubusercontent.
 Commons  |  | commons@bioschemas.org | [![link](https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png)](https://github.com/BioSchemas/bioschemas/labels/commons)
 Community  | [Specifications Process 0.1](https://docs.google.com/document/d/1eDHBfw6frl9xAjIduLYRwcqUY3jehfzJ-xSKCc1nSsc/edit?usp=sharing) | community@bioschemas.org | [![link](https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png)](https://github.com/BioSchemas/bioschemas/labels/community)
 
-If you missed a meeting please check the [meetings and minutes page](https://github.com/BioSchemas/bioschemas/wiki/Meetings-and-minutes)
+If you missed a meeting please check the [meetings and minutes page](https://github.com/BioSchemas/bioschemas/wiki/Meetings-and-minutes).
 
 ## Organizations involved
 
