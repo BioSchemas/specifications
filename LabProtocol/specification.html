@@ -1,0 +1,245 @@
+---
+description: 'An experimental protocol is a sequence of tasks and operations executed
+  to perform experimental research in biological and biomedical areas.
+
+  Experimental protocols are fundamental information structures that support the description
+  of the processes by means of which results are generated in experimental research
+  [1]. Experimental protocols describe how the data were produced, the steps undertaken
+  and conditions under which these steps were carried out.
+
+  [1]  Giraldo, O., Garcia, A., Corcho, O.: SMART Protocols: SeMAntic RepresenTation
+  for Experimental Protocols, Riva del Garda, Trentino, Italy (2014). 4th Workshop
+  on Linked Science 2014- Making Sense Out of Data (LISC2014)
+
+  '
+edit_url: https://github.com/BioSchemas/specifications/tree/master/LabProtocol/specification.html
+g_mapping_file: LabProtocol Mapping
+gh_examples: https://github.com/BioSchemas/specifications/tree/master/LabProtocol/examples
+gh_folder: https://github.com/BioSchemas/specifications/tree/master/LabProtocol
+gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20LabProtocol
+hierarchy:
+- CreativeWork
+- Thing
+layout: new_type_detail
+name: LabProtocol
+parent_type: CreativeWork
+properties:
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies:
+    - name: SP
+      url: ExperimentalProtocol
+    terms: []
+  expected_type:
+  - URL
+  marginality: Optional
+  name: additionalType
+  parent: Thing
+  sdo_desc: An additional type for the item, typically used for adding more specific
+    types from external vocabularies in microdata syntax. This is a relationship between
+    something and a class that the thing is in. In RDFa syntax, it is better to use
+    the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org
+    tools may have only weaker understanding of extra types, in particular those defined
+    externally.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Recommended
+  name: description
+  parent: Thing
+  sdo_desc: A description of the item.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - PropertyValue, Text, URL
+  marginality: Recommended
+  name: identifier
+  parent: Thing
+  sdo_desc: The identifier property represents any kind of identifier for any kind
+    of <a class="localLink" href="http://schema.org/Thing">Thing</a>, such as ISBNs,
+    GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing
+    many of these, either as textual strings or as URL (URI) links. See <a href="/docs/datamodel.html#identifierBg">background
+    notes</a> for more details.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - CreativeWork
+  - URL
+  marginality: Recommended
+  name: citation
+  parent: CreativeWork
+  sdo_desc: A citation or reference to another creative work, such as another publication,
+    web page, scholarly article, etc.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - CreativeWork
+  - URL
+  marginality: Recommended
+  name: license
+  parent: CreativeWork
+  sdo_desc: A license document that applies to this content, typically indicated by
+    URL.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - CreativeWork
+  - URL
+  marginality: Optional
+  name: isBasedOn
+  parent: CreativeWork
+  sdo_desc: A resource that was used in the creation of this resource. This term can
+    be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - CreativeWork
+  marginality: Optional
+  name: isPartOf
+  parent: CreativeWork
+  sdo_desc: Indicates a CreativeWork that this CreativeWork is (in some sense) part
+    of.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Recommended
+  name: keywords
+  parent: CreativeWork
+  sdo_desc: Keywords or tags used to describe this content. Multiple entries in a
+    keywords list are typically delimited by commas.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies:
+    - name: SMART Protocols (http
+      url: //bioportal.bioontology.org/ontologies/SP)
+    terms: []
+  expected_type:
+  - CreativeWork
+  marginality: Recommended
+  name: structuralElement
+  parent: LabProtocol
+  sdo_desc: 'Proposal: Add this property to CreativeWork.  A structural element refers
+    to qualified text in a CreativeWork. It should be used when plain text is not
+    enough, for instance, to distinguish abstract, sections or paragraphs. Qualification
+    is achieved by using the additionaType property which should point to an ontological
+    term describing the element referred to by this property. The text itself can
+    be added using the property text.  Bioschemas usage.  A particular case in Bioschemas
+    is LabProtocol where structural elements are used to described advantages (situations
+    the Protocol has been successfully employed), limitations (situations the Protocol
+    would be unreliable or otherwise unsuccessful), applications (Applications of
+    the protocol list the full diversity of the applications of the method and support
+    if is possible to extend the range of applications of the protocol. e.g. northern
+    blot assays, sequencing, etc.), and outcomes (outcome or expected result by a
+    protocol execution).  For LabProtocol, in the applicationType, please use http://purl.org/net/SMARTprotocol#AdvantageOfTheProtocol
+    for advantages, http://purl.org/net/SMARTprotocol#LimitationOfTheProtocol for
+    limitations, http://purl.org/net/SMARTprotocol#ApplicationOfTheProtocol for applicability,
+    and http://purl.org/net/SMARTprotocol#OutcomeOfTheProtocol for outcomes.'
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - PhysicalEntity, Text
+  - URL
+  marginality: Minimum
+  name: reagent
+  parent: LabProtocol
+  sdo_desc: Reagent used in the protocol. It can be a record in a Dataset describing
+    the reagent or a PhysicalEntity corresponding to the reagent or a URL pointing
+    to the type of reagent used. ChEBI and PubChem entities can be used whenever available.
+    Commercial names are also acceptable (URL if possible)
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Minimum
+  name: purpose
+  parent: LabProtocol
+  sdo_desc: A goal towards an action is taken. Can be concrete or abstract.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Thing, Text
+  - URL
+  marginality: Minimum
+  name: instrument
+  parent: LabProtocol
+  sdo_desc: The object that helped the agent perform the action. e.g. John wrote a
+    book with a pen.  For LabProtocols it would be a laboratory equipment use by a
+    person to follow one or more steps described in this LabProtocol.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - PhysicalEntity, Text
+  - URL
+  marginality: Minimum
+  name: sample
+  parent: LabProtocol
+  sdo_desc: Sample used in the protocol. It could be a record in a Dataset describing
+    the sample or a physical object corresponding to the sample or a URL pointing
+    to the type of sample used.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - SoftwareApplication
+  marginality: Recommended
+  name: software
+  parent: LabProtocol
+  sdo_desc: An application that can complete the request.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Duration
+  marginality: Recommended
+  name: duration
+  parent: LabProtocol
+  sdo_desc: The time it takes to actually carry on the protocol, in ISO 8601 duration
+    format.
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1julB0P6kjXK_mL2dU8EDU9zMxIMah0_dYYeGt2Spllo/edit?usp=drivesdk
+spec_type: Type
+status: revision
+subtitle: Bioschemas specification describing LabProtocol in the life-science.
+use_cases_url: https://docs.google.com/a/ebi.ac.uk/document/d/1EZ_U2u2aJH_ERsoecaJRAJkWVHYGU2SK8HYSjvhEaMM/edit?usp=sharing
+version: 0.0.1
+---

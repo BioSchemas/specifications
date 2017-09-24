@@ -1,0 +1,259 @@
+---
+description: "A Record acts itself as a dataset although it refers to what could be\
+  \ seen as the minimum compact, complete and auto-descriptive unit in a dataset,\
+  \ i.e., a record.\n\nBioschemas usage\n\nIn Life Sciences, records will represent\
+  \ a PhysicalEntity. A link to the represented physical entity should be done via\
+  \ \u201Crepresents\u201D property. "
+edit_url: https://github.com/BioSchemas/specifications/tree/master/Record/specification.html
+g_mapping_file: Record Mapping
+gh_examples: https://github.com/BioSchemas/specifications/tree/master/Record/examples
+gh_folder: https://github.com/BioSchemas/specifications/tree/master/Record
+gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Record
+hierarchy:
+- Dataset
+- CreativeWork
+- Thing
+layout: new_type_detail
+name: Record
+parent_type: Dataset
+properties:
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - 'Yes'
+    - ' as it better suits to the concept described by this entity'
+  expected_type:
+  - URL
+  marginality: Recommended
+  name: additionalType
+  parent: Thing
+  sdo_desc: An additional type for the item, typically used for adding more specific
+    types from external vocabularies in microdata syntax. This is a relationship between
+    something and a class that the thing is in. In RDFa syntax, it is better to use
+    the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org
+    tools may have only weaker understanding of extra types, in particular those defined
+    externally.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Minimum
+  name: identifier
+  parent: Thing
+  sdo_desc: The identifier property represents any kind of identifier for any kind
+    of <a class="localLink" href="http://schema.org/Thing">Thing</a>, such as ISBNs,
+    GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing
+    many of these, either as textual strings or as URL (URI) links. See <a href="/docs/datamodel.html#identifierBg">background
+    notes</a> for more details.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - ImageObject
+  - URL
+  marginality: Optional
+  name: image
+  parent: Thing
+  sdo_desc: An image of the item. This can be a <a class="localLink" href="http://schema.org/URL">URL</a>
+    or a fully described <a class="localLink" href="http://schema.org/ImageObject">ImageObject</a>.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - URL
+  marginality: Optional
+  name: sameAs
+  parent: Thing
+  sdo_desc: URL of a reference Web page that unambiguously indicates the item's identity.
+    E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - URL
+  marginality: Optional
+  name: url
+  parent: Thing
+  sdo_desc: URL of the item.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - CreativeWork
+  - Text
+  marginality: Optional
+  name: citation
+  parent: CreativeWork
+  sdo_desc: A citation or reference to another creative work, such as another publication,
+    web page, scholarly article, etc.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Date
+  - DateTime
+  marginality: Optional
+  name: dateCreated
+  parent: CreativeWork
+  sdo_desc: The date on which the CreativeWork was created or the item was added to
+    a DataFeed.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Date
+  - DateTime
+  marginality: Optional
+  name: dateModified
+  parent: CreativeWork
+  sdo_desc: The date on which the CreativeWork was most recently modified or when
+    the item's entry was modified within a DataFeed.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Date
+  - DateTime
+  marginality: Optional
+  name: datePublished
+  parent: CreativeWork
+  sdo_desc: Date of first broadcast/publication.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies:
+    - name: http
+      url: //www.ebi.ac.uk/ols/ontologies/eco
+    terms:
+    - ECO
+  expected_type:
+  - Thing
+  - CreativeWork
+  - Product
+  - URL
+  marginality: Optional
+  name: isBasedon
+  parent: Record
+  sdo_desc: 'A resource that was used in the creation of this resource. This term
+    can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
+    Supersedes isBasedOnUrl.  Inverse property: isBasisFor.  Bioschemas usage.  Whenever
+    possible use Evidence Codes (ECO, http://www.ebi.ac.uk/ols/ontologies/eco)'
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Optional
+  name: keywords
+  parent: CreativeWork
+  sdo_desc: Keywords or tags used to describe this content. Multiple entries in a
+    keywords list are typically delimited by commas.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Thing
+  marginality: Minimum
+  name: mainEntity
+  parent: CreativeWork
+  sdo_desc: Indicates the primary entity described in some page or other CreativeWork.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - DataDownload
+  marginality: Optional
+  name: distribution
+  parent: Dataset
+  sdo_desc: A downloadable form of this dataset, at a specific location, in a specific
+    format.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - 'Yes'
+    - ' as better suits to describe this additional property'
+  expected_type:
+  - PropertyValue
+  marginality: Optional
+  name: additionalProperty
+  parent: Record
+  sdo_desc: 'A property-value pair representing an additional characteristics of the
+    entitity, e.g. a product feature or another characteristic for which there is
+    no matching property in schema.org.  Note: Publishers should be aware that applications
+    designed to use specific schema.org properties (e.g. http://schema.org/width,
+    http://schema.org/color, http://schema.org/gtin13, ...) will typically expect
+    such data to be provided using those properties, rather than using the generic
+    property/value mechanism.  Bioschemas usage.  Additional to the use of name and
+    description to describe this property in a human-readable way, additionalType
+    should be used to specify the nature of the property/relation. For instance, if
+    the property refers to a gene/protein disease association, you could use http://semanticscience.org/resource/SIO_000983
+    as additionalType for the additionalProperty.'
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Thing
+  - URL
+  marginality: Optional
+  name: seeAlso
+  parent: Record
+  sdo_desc: A pointer to any somehow related Thing. To be used whenever you are not
+    so sure about the nature of the relation. Otherwise, use additionalProperty that
+    will allow you to specify that nature.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies:
+    - name: http
+      url: //www.ebi.ac.uk/ols/ontologies/eco
+    terms:
+    - ECO
+  expected_type:
+  - Thing
+  - CreativeWork
+  - Product
+  - URL
+  marginality: Optional
+  name: isBasisFor
+  parent: Record
+  sdo_desc: 'Proposal: Add this property to CreativeWork.  A resource for which this
+    resource is basis for. Inverse property: isBasedOn.  Bioschemas usage.  Whenever
+    possible use Evidence Codes (ECO, http://www.ebi.ac.uk/ols/ontologies/eco)'
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1uRs-q7JAdfAxN8lkhvS12ElDTtzTrnnOSMqm3VYaB8o/edit?usp=drivesdk
+spec_type: Type
+status: revision
+subtitle: Bioschemas specification describing a record in a dataset.
+use_cases_url: https://drive.google.com/drive/folders/0B0fE3oOZIq44U1gzLWgtV0VBaTQ
+version: 0.0.1
+---

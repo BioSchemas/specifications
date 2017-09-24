@@ -1,0 +1,241 @@
+---
+description: 'A PhysicalEntity is any object that exists in the physical world and
+  cannot be better represented with any other existing type in schema.org. In order
+  to specify the nature of this physical entity, additionalProperty must be used to
+  specify the nature/type of this physical entity. For instance, http://semanticscience.org/resource/SIO_010043
+  can be used to refer to a protein.
+
+
+  Bioschemas usage
+
+
+  A PhysicalEntity is a flexible and extensible wrapper for Life Sciences entities.
+  Representations of physical entities in Life Sciences are usually recorded in datasets;
+  the link to a dataset should be done via properties. A particular Life Sciences
+  entity, refer to as a profile in Bioschemas, will customize PhysicalEntity by modifying
+  the marginality, cardinality and ontologies used. For instance, a protein profile
+  would recommend pointing to an organism a part of the minimum information, but not
+  necessarily to a sample or disease.'
+edit_url: https://github.com/BioSchemas/specifications/tree/master/PhysicalEntity/specification.html
+g_mapping_file: PhysicalEntity Mapping
+gh_examples: https://github.com/BioSchemas/specifications/tree/master/PhysicalEntity/examples
+gh_folder: https://github.com/BioSchemas/specifications/tree/master/PhysicalEntity
+gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20PhysicalEntity
+hierarchy:
+- Thing
+layout: new_type_detail
+name: PhysicalEntity
+parent_type: Thing
+properties:
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - 'Yes'
+    - ' as it better suits to the concept described by this entity'
+  expected_type:
+  - URL
+  marginality: Minimum
+  name: additionalType
+  parent: Thing
+  sdo_desc: An additional type for the item, typically used for adding more specific
+    types from external vocabularies in microdata syntax. This is a relationship between
+    something and a class that the thing is in. In RDFa syntax, it is better to use
+    the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org
+    tools may have only weaker understanding of extra types, in particular those defined
+    externally.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Recommended
+  name: alternateName
+  parent: Thing
+  sdo_desc: An alias for the item.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Recommended
+  name: description
+  parent: Thing
+  sdo_desc: A description of the item.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Minimum
+  name: identifier
+  parent: Thing
+  sdo_desc: The identifier property represents any kind of identifier for any kind
+    of <a class="localLink" href="http://schema.org/Thing">Thing</a>, such as ISBNs,
+    GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing
+    many of these, either as textual strings or as URL (URI) links. See <a href="/docs/datamodel.html#identifierBg">background
+    notes</a> for more details.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - ImageObject
+  - URL
+  marginality: Optional
+  name: image
+  parent: Thing
+  sdo_desc: An image of the item. This can be a <a class="localLink" href="http://schema.org/URL">URL</a>
+    or a fully described <a class="localLink" href="http://schema.org/ImageObject">ImageObject</a>.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - CreativeWork
+  - URL
+  marginality: Recommended
+  name: mainEntityOfPage
+  parent: Thing
+  sdo_desc: Indicates a page (or other CreativeWork) for which this thing is the main
+    entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background
+    notes</a> for details.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Recommended
+  name: name
+  parent: Thing
+  sdo_desc: The name of the item.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - URL
+  marginality: Optional
+  name: sameAs
+  parent: Thing
+  sdo_desc: URL of a reference Web page that unambiguously indicates the item's identity.
+    E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - URL
+  marginality: Recommended
+  name: url
+  parent: Thing
+  sdo_desc: URL of the item.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - 'Yes'
+    - ' as better suits to describe this additional property'
+  expected_type:
+  - PropertyValue
+  marginality: Optional
+  name: additionalProperty
+  parent: PhysicalEntity
+  sdo_desc: 'A property-value pair representing an additional characteristics of the
+    entitity, e.g. a product feature or another characteristic for which there is
+    no matching property in schema.org.  Note: Publishers should be aware that applications
+    designed to use specific schema.org properties (e.g. http://schema.org/width,
+    http://schema.org/color, http://schema.org/gtin13, ...) will typically expect
+    such data to be provided using those properties, rather than using the generic
+    property/value mechanism.  Bioschemas usage.  Additional to the use of name and
+    description to describe this property in a human-readable way, additionalType
+    should be used to specify the nature of the property/relation. For instance, if
+    the property refers to a gene/protein disease association, you could use http://semanticscience.org/resource/SIO_000983
+    as additionalType for the additionalProperty.'
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - PhysicalEntity
+  - URL
+  marginality: Optional
+  name: isContainedIn
+  parent: PhysicalEntity
+  sdo_desc: Indicates a PhysicalEntity that this PhysicalEntity is (in some sense)
+    part of.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - PhysicalEntity
+  - URL
+  marginality: Optional
+  name: contains
+  parent: PhysicalEntity
+  sdo_desc: 'Indicates a PhysicalEntity that is (in some sense) a part of this PhysicalEntity.
+    Inverse property: isPartOf.'
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - 'Yes'
+    - ' as it better suits to describe the location.'
+  expected_type:
+  - Place, PostalAddress, PropertyValue, Text
+  - URL
+  marginality: Optional
+  name: location
+  parent: PhysicalEntity
+  sdo_desc: The location of for example where the event is happening, an organization
+    is located, or where an action takes place.  Bioschemas usage.  In Bioschemas
+    location can be refer to a position in a chromosome or sequence or to a physical
+    place where, for instance, a sample is stored. Using additionalType is advised
+    to make the distinction. For instance, FALDO can be used for sequence coordinates.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - 'Yes'
+    - ' as it better suits to describe the nature of the representation'
+  expected_type:
+  - PropertyValue, Text
+  - URL
+  marginality: Optional
+  name: hasRepresentation
+  parent: PhysicalEntity
+  sdo_desc: A representation for this entity other than, for instance, an image (used
+    image property for that) or the main web page/record (use mainEntityOfPage for
+    that, and see background notes, http://schema.org/docs/datamodel.html#mainEntityBackground,
+    for sameAs and url).  Bioschemas usage.  This property could be used, for instance,
+    to register a sequence protein as it is a representation of the protein. If you
+    want to better define the nature of the representation, use a PropertyValue as
+    described in additionalProperty.
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1e_8LUQ4GYxar0-gotOXsbAUVUQkvF6GNuBdr54hbcdc/edit?usp=drivesdk
+spec_type: Type
+status: revision
+subtitle: Bioschemas specification describing a physical entity.
+use_cases_url: https://docs.google.com/a/ebi.ac.uk/document/d/1q4A8KvhdsMcTYkwQdCptGc1fbiqe4yqJB5xMt9fWRso/edit?usp=sharing
+version: 0.0.2
+---

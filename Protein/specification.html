@@ -1,0 +1,287 @@
+---
+description: This Protein profile specification presents the PhysicalEntity usage
+  when describing a Protein.
+edit_url: https://github.com/BioSchemas/specifications/tree/master/Protein/specification.html
+g_mapping_file: Protein Mapping
+gh_examples: https://github.com/BioSchemas/specifications/tree/master/Protein/examples
+gh_folder: https://github.com/BioSchemas/specifications/tree/master/Protein
+gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Protein
+hierarchy:
+- Thing
+layout: new_spec_detail
+name: Protein
+parent_type: Thing
+properties:
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies:
+    - name: SIO
+      url: SIO_010043
+    terms: []
+  expected_type:
+  - URL
+  marginality: Minimum
+  name: additionalType
+  parent: Thing
+  sdo_desc: An additional type for the item, typically used for adding more specific
+    types from external vocabularies in microdata syntax. This is a relationship between
+    something and a class that the thing is in. In RDFa syntax, it is better to use
+    the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org
+    tools may have only weaker understanding of extra types, in particular those defined
+    externally.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies:
+    - name: SIO
+      url: SIO_000983
+    - name: SIO
+      url: SIO_010299
+    terms:
+    - ' OMIM'
+    - ' any other well-known ontology describing diseases'
+  expected_type:
+  - PropertyValue
+  marginality: Recommended
+  name: additionalProperty.disease_ association
+  parent: Protein
+  sdo_desc: "\u201CadditionalProperty\u201D : { \_\u201CadditionalType\u201D: \u201C\
+    http://semanticscience.org/resource/SIO_000983\u201D \_\u201Cname\u201D: \u201C\
+    disease association\u201D, \_\u201Cvalue\u201D: { \_\_\_\u201C@type\u201D: [\u201C\
+    StructuredValue\u201D, \u201CMedicalCondition\u201D], \_\_\_\u201CadditionalType\u201D\
+    : \u201Chttp://semanticscience.org/resource/SIO_010299\u201D, \_\_\_\u201Cname\u201D\
+    : \u201C<disease name>\u201D, \_\_\_\u201Cidentifier\u201D: \u201C<disease identifier/URL>\u201D\
+    , \_\_\_\"code\": { \_\_\_\_\_\_\_\"@type\": \"MedicalCode\", \_\_\_\_\_\_\_\"\
+    code\": \"<medical code>\", \_\_\_\_\_\_\_\"codingSystem\": \"<coding system>\"\
+    \ \_\_\_\_\_} \_} }"
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies:
+    - name: SIO
+      url: SIO_010081
+    - name: SIO
+      url: SIO_010035
+    terms: []
+  expected_type:
+  - PropertyValue
+  marginality: Minimum
+  name: additionalProperty.transcribed_from
+  parent: Protein
+  sdo_desc: "\u201CadditionalProperty\u201D : { \_\u201CadditionalType\u201D: \u201C\
+    http://semanticscience.org/resource/SIO_010081\u201D  \_\u201Cname\u201D: \u201C\
+    transcribed from\u201D, \_\u201Cvalue\u201D: { \_\_\_\u201C@type\u201D: \u201C\
+    StructuredValue\u201D \_\_\_additionalType: \u201Chttp://semanticscience.org/resource/SIO_010035\u201D\
+    , \_\_\_\u201Cname\u201D: \u201C<gene name>\u201D \_} }"
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Recommended
+  name: alternateName
+  parent: Thing
+  sdo_desc: An alias for the item.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Recommended
+  name: description
+  parent: Thing
+  sdo_desc: A description of the item.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Minimum
+  name: identifier
+  parent: Thing
+  sdo_desc: The identifier property represents any kind of identifier for any kind
+    of <a class="localLink" href="http://schema.org/Thing">Thing</a>, such as ISBNs,
+    GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing
+    many of these, either as textual strings or as URL (URI) links. See <a href="/docs/datamodel.html#identifierBg">background
+    notes</a> for more details.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - ImageObject
+  - URL
+  marginality: Optional
+  name: image
+  parent: Thing
+  sdo_desc: An image of the item. This can be a <a class="localLink" href="http://schema.org/URL">URL</a>
+    or a fully described <a class="localLink" href="http://schema.org/ImageObject">ImageObject</a>.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - CreativeWork
+  - URL
+  marginality: Optional
+  name: mainEntityOfPage
+  parent: Thing
+  sdo_desc: Indicates a page (or other CreativeWork) for which this thing is the main
+    entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background
+    notes</a> for details.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Recommended
+  name: name
+  parent: Thing
+  sdo_desc: The name of the item.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - URL
+  marginality: Optional
+  name: sameAs
+  parent: Thing
+  sdo_desc: URL of a reference Web page that unambiguously indicates the item's identity.
+    E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - URL
+  marginality: Recommended
+  name: url
+  parent: Thing
+  sdo_desc: URL of the item.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - 'Yes'
+    - ' as better suits to describe this additional property'
+  expected_type:
+  - PropertyValue
+  marginality: Optional
+  name: additionalProperty
+  parent: Protein
+  sdo_desc: 'A property-value pair representing an additional characteristics of the
+    entitity, e.g. a product feature or another characteristic for which there is
+    no matching property in schema.org.  Note: Publishers should be aware that applications
+    designed to use specific schema.org properties (e.g. http://schema.org/width,
+    http://schema.org/color, http://schema.org/gtin13, ...) will typically expect
+    such data to be provided using those properties, rather than using the generic
+    property/value mechanism.  Bioschemas usage.  Additional to the use of name and
+    description to describe this property in a human-readable way, additionalType
+    should be used to specify the nature of the property/relation. For instance, if
+    the property refers to a gene/protein disease association, you could use http://semanticscience.org/resource/SIO_000983
+    as additionalType for the additionalProperty.'
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - PhysicalEntity
+  - URL
+  marginality: Optional
+  name: isContainedIn
+  parent: Protein
+  sdo_desc: Indicates a PhysicalEntity that this PhysicalEntity is (in some sense)
+    part of.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - Recommended url should point to a well-known ontology such as NCBI taxon or
+      UniProt Taxonomy
+  expected_type:
+  - PhysicalEntity
+  marginality: Minimum
+  name: isContainedIn.organism
+  parent: Protein
+  sdo_desc: "\"isContainedIn\": { \_\_\_\"@type\": \"PhysicalEntity\", \_ \_\_\_\"\
+    additionalType\": \"http://semanticscience.org/resource/SIO_010000\", \_\_\_\"\
+    identifier\": \"<taxon ID>\", \_\_\_\"name\": \"Homo sapiens\", \_\_\_\"url\"\
+    : \"<taxon ID URL>\" \_}"
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - PhysicalEntity
+  - URL
+  marginality: Optional
+  name: contains
+  parent: Protein
+  sdo_desc: 'Indicates a PhysicalEntity that is (in some sense) a part of this PhysicalEntity.
+    Inverse property: isPartOf.'
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - 'Yes'
+    - ' as it better suits to describe the location.'
+  expected_type:
+  - Place, PostalAddress, PropertyValue, Text
+  - URL
+  marginality: Optional
+  name: location
+  parent: Protein
+  sdo_desc: The location of for example where the event is happening, an organization
+    is located, or where an action takes place.  Bioschemas usage.  In Bioschemas
+    location can be refer to a position in a chromosome or sequence or to a physical
+    place where, for instance, a sample is stored. Using additionalType is advised
+    to make the distinction. For instance, FALDO can be used for sequence coordinates.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - 'Yes'
+    - ' as it better suits to describe the nature of the representation'
+  expected_type:
+  - PropertyValue, Text
+  - URL
+  marginality: Optional
+  name: hasRepresentation
+  parent: Protein
+  sdo_desc: A representation for this entity other than, for instance, an image (used
+    image property for that) or the main web page/record (use mainEntityOfPage for
+    that, and see background notes, http://schema.org/docs/datamodel.html#mainEntityBackground,
+    for sameAs and url).  Bioschemas usage.  This property could be used, for instance,
+    to register a sequence protein as it is a representation of the protein. If you
+    want to better define the nature of the representation, use a PropertyValue as
+    described in additionalProperty.
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1WZmPPEPa6JE4iq3OSQOatUH5TeSvWj5lcRi_kDTSayU/edit?usp=drivesdk
+spec_type: Profile
+status: revision
+subtitle: Bioschemas specification describing a Protein (PhysicalEntity profile) in
+  Life Sciences
+use_cases_url: https://docs.google.com/document/d/1MNU-r7CMAvKdGav1VT3XeyQXr2XwRA6JXDsoWoA0R1E
+version: 0.0.1
+---
