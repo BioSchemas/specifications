@@ -1,4 +1,3 @@
-<script type="application/ld+json">
 {
     "@context": "http://schema.org",
     "@type": "DataCatalog",
@@ -21,4 +20,3 @@
                 "url": "https://dx.doi.org/10.1038/nmeth.4326"
           }
 }
-</script>
