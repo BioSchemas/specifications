@@ -127,11 +127,7 @@
             "@type": "creativeWork",
 			"datePublished" : "1 June 2017",
 			"headline" : "Genomic data for 78 chickens from 14 populations"
-        },
-    "citation": "Che, T; Chen, B; Gaur, U; Jin, L; Li, D; Li, M; Li, Y; Luo, M; Tang, Q; Tian, S; Wang, Y; Xu, Z; Yin, H; Zhang, G; Zhang, L; Zhao, X; Zhou, X; Xu, H; Yang, M; Zhou, R; Li, R; Zhu, Q; Li, M (2017): Supporting data for \"Genomic data for 78 chickens from 14 populations\" GigaScience Database. http://dx.doi.org/10.5524/100291",
-    "license": "https://creativecommons.org/share-your-work/public-domain/",
-    "@context": "http://schema.org/",
-    "@type": "DataSet"
+        }
 }
 
 </script>
