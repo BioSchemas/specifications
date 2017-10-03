@@ -27,7 +27,8 @@
         "additionalType": "http://semanticscience.org/resource/SIO_010000",
         "identifier": "9606",
         "name": "Homo sapiens",
-        "url": "http://www.uniprot.org/uniprot/P00519",
+        "url": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+        "sameAs": "http://purl.uniprot.org/taxonomy/9606",
     },
   },
     
