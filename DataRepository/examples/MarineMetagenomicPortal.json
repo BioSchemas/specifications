@@ -1,0 +1,58 @@
+{
+    "@context": "https://schema.org",
+    "@type": "DataCatalog",
+    "name": "Marine Metagenomic Portal",
+    "description": "MarRef is a manually curated marine microbial reference genome database that contains completely sequenced genomes.",
+    "url": "https://mmp.sfb.uit.no/",
+    "keywords": "marine, metagenomic, procariotic, genome",
+    "provider": [
+        {
+            "@type": "Organization",
+            "name": "Center for Bioinformatics - UiT",
+            "url": "https://en.uit.no/forskning/forskningsgrupper/gruppe?p_document_id=347053"
+        },
+        {
+            "@type": "Organization",
+            "name": "Elixir-Norway",
+            "url": "http://www.elixir-norway.org/"
+        }
+    ],
+    "dataset": [
+        {
+            "@type": "DataSet",
+            "name": "MarRef",
+            "description": "MarRef is a manually curated marine microbial reference genome database that contains completely sequenced genomes.",
+            "url": "https://mmp.sfb.uit.no/databases/marref/",
+            "keywords": "marine, metagenomic, procariotic, genome",
+            "identifier": "MarRef",
+            "includedInDataCatalog": {
+                "@type": "DataCatalog",
+                "name": "Marine Metagenomic Portal"
+            }
+        },
+        {
+            "@type": "DataSet",
+            "name": "MarDB",
+            "description": "MarDB includes all non-complete sequenced marine microbial genomes regardless of level of completeness",
+            "url": "https://mmp.sfb.uit.no/databases/mardb",
+            "keywords": "marine, metagenomic, non-complete, procariotic, genome",
+            "identifier": "MarDB",
+            "includedInDataCatalog": {
+                "@type": "DataCatalog",
+                "name": "Marine Metagenomic Portal"
+            }
+        },
+        {
+            "@type": "DataSet",
+            "name": "MarCat",
+            "description": "MarCat is a gene (protein) catalogue of uncultivable and cultivable marine microorganisms derived from metagenomics samples",
+            "url": "https://mmp.sfb.uit.no/databases/marcat",
+            "keywords": "marine, metagenomic, protein, catalogue, uncultivable, cultivable, microorganism, procariotic, genome",
+            "identifier": "MarCat",
+            "includedInDataCatalog": {
+                "@type": "DataCatalog",
+                "name": "Marine Metagenomic Portal"
+            }
+        }
+    ]
+}
