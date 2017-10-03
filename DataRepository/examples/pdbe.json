@@ -60,11 +60,6 @@
         ],
         "name": "Protein DataBank in Europe",
         "url": "https://pdbe.org",
-        "email": "pdbehelp@ebi.ac.uk",
-        "location": {
-            "addressCountry": "United Kingdom",
-            "postalCode": "CB10 1SD",
-            "streetAddress": "EMBL-EBI"
-        }
+        "email": "pdbehelp@ebi.ac.uk"
     }
 }
