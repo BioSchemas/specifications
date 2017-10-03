@@ -14,5 +14,7 @@
       "@type": "Organization",
       "name": "ISA team"
     }
-  ]
+  ],
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "comment": "The license applies to the ISA-Tab files available through this data catalogue/application"
 }
