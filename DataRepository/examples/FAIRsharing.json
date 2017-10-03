@@ -23,7 +23,7 @@
             "identifier": "https://www.fairsharing.org/biodbcoreXXXXXX",
             "url": "https://fairsharing.org/databases",
             "keywords": "Database, Data repository",
-            "includedInDataCatalog" : "https://www.fairsharing.org",
+            "includedInDataCatalog" : "https://www.fairsharing.org"
         },
         {
             "@type" : "Dataset",
@@ -32,16 +32,32 @@
             "identifier": "https://www.fairsharing.org/bsg-pXXXXXX",
             "url": "https://fairsharing.org/policies",
             "keywords": "Data policy, journal, funder, society"
-        },
+        }
         ],
     "keywords": "registry, life science, natural science, social science, ",
-    "provider":{
+    "provider":
+    	[
+        {
         "@type":"Person",
         "name": "FAIRsharing.org support",
         "email": "biosharing-contact-us@lists.sf.net"
         },
-    "license":{
-        "@type":"CreativeWork",
+        {
+        "@type":"Organization",
+        "name": "Oxford e-Research Centre, University of Oxford",
+        "url": "http://www.oerc.ox.ac.uk/"
+        },
+        {
+        "@type":"Organization",
+        "name": "ELIXIR-UK",
+        "url": "http://www.elixir-uk.org"
+    	},
+    	{
+        "alternateName": ["FAIRsharing.org Registry", "BioSharing.org"]
+        }
+        ],
+    "license": {
+        "@type": "CreativeWork",
         "name": "Creative Commons CC BY-SA 4.0 Attribution",
         "url": "https://creativecommons.org/licenses/by-sa/4.0/"
         },
@@ -50,13 +66,8 @@
             "@type":"PublicationEvent",
             "name": "BioSharing: curated and crowd-sourced metadata standards, databases and data policies in the life sciences.",
             "url": "https://academic.oup.com/database/article-lookup/doi/10.1093/database/baw075"
-        },
-        ],
-    "sourceOrganization": {
-        "@type":"Organization",
-        "name": "Oxford e-Research Centre, University of Oxford",
-        "url": "http://www.oerc.ox.ac.uk/"
-    },
-    "alternateName": ["FAIRsharing.org Registry", "BioSharing.org"]
+        }
+        ]
+    
 }
 </script>
