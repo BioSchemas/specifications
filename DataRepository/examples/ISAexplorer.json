@@ -1,0 +1,18 @@
+{
+  "@context": "http://schema.org",
+  "@type": "DataCatalog",
+  "name": "ISA-explorer",
+  "description": "An ISA-explorer instance for Scientific Data data descriptors",
+  "url": "http://scientificdata.isa-explorer.org/",
+  "keywords": "Scientific Data, ISA-Tab",
+  "provider": [
+    {
+      "@type": "Organization",
+      "name": "Springer Nature Scientific Data"
+    },
+    {
+      "@type": "Organization",
+      "name": "ISA team"
+    }
+  ]
+}
