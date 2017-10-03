@@ -29,38 +29,6 @@
         "name": "Homo sapiens",
         "url": "http://www.uniprot.org/uniprot/P00519",
     },
-
-    "url": "http://www.uniprot.org/uniprot/P00519",
-    "additionalProperty": {
-      "additionalType": "http://semanticscience.org/resource/SIO_000983",
-      "name": "disease association",
-      "value": {
-        "@type": ["StructuredValue", "MedicalCondition"],
-        "additionalType": "http://semanticscience.org/resource/SIO_010299",
-        "name": "Leukemia, chronic myeloid (CML)",
-        "code": {
-          "@type": "MedicalCode",
-          "code": "608232",
-          "codingSystem": "OMIM"
-        },
-        "sameAs": "http://www.uniprot.org/diseases/DI-03735"
-      },
-    },
-
-    "alternateName": [
-      {
-        "@language": "en",
-        "@value": "ABL"
-      },
-      {
-        "@language": "en",
-        "@value": "JTK7"
-      }
-    ],
-    "description": {
-      "@language": "en",
-      "@value": "Non-receptor tyrosine-protein kinase that plays a role..."
-    }
   },
     
   "isPartOf": {
