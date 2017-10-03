@@ -28,7 +28,7 @@
         "identifier": "9606",
         "name": "Homo sapiens",
         "url": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
-        "sameAs": "http://purl.uniprot.org/taxonomy/9606",
+        "sameAs": "http://purl.uniprot.org/taxonomy/9606"
     },
   },
     
