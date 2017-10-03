@@ -38,8 +38,10 @@
   },
 
     
-  "additionalType": "http://purl.uniprot.org/core/Protein",
   "url": "http://www.uniprot.org/uniprot/P00519",
+    
+    
+  "additionalType": "http://purl.uniprot.org/core/Protein",
   "sameAs": "http://purl.uniprot.org/uniprot/P00519",
 
     

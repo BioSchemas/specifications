@@ -37,9 +37,7 @@
     "@type": "Dataset",
     "@id": "http://www.uniprot.org/news/2017/03/15/release"
   },
-
     
-  "additionalType": "http://purl.uniprot.org/core/Protein",
-  "url": "http://www.uniprot.org/uniprot/P00519",
-  "sameAs": "http://purl.uniprot.org/uniprot/P00519"
+    
+  "url": "http://www.uniprot.org/uniprot/P00519"
 }
