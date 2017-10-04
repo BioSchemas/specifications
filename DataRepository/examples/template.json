@@ -1,0 +1,13 @@
+{
+  "@context": "http://schema.org",
+  "@type": "DataCatalog",
+    
+  "name": "The name of the item",    
+  "description": "A description of the item",
+  "url": "URL of the item",
+  "keywords": "Keywords or tags used to describe this content. Use terms from Controlled Vocabularies where possible.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Name of the organisation"  
+  }        
+}
