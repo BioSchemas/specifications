@@ -13,6 +13,6 @@ Folder that stores JSON-LD, RDFa or microdata examples.
 ```
 4) Embed the example in your landing page.
 
-Any questions email:
+# Any questions email:
 Peter McQuilton - peter.mcquilton@oerc.ox.ac.uk (FAIRsharing.org)
 Sarala Wimalaratne - sarala@ebi.ac.uk (Identifiers.org)
