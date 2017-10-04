@@ -1,7 +1,7 @@
 {
     "@context": "http://schema.org",
     "@type": "DataCatalog",
-    "identifier":"https://identifiers.org/MIR:00100800",
+    "identifier":"https://identifiers.org/MIR:00000364",
     "name": "FAIRsharing.org",
     "description": "A manually curated, informative and educational resource on data and metadata standards, inter-related to databases/data repositories and funder and journal publisher data policies from across disciplines. FAIRsharing is an ELIXIR-UK node resource and has an active role in the RDA and Force11 data initiatives.",
     "url": "https://fairsharing.org/",
