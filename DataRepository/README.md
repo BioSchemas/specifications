@@ -1,4 +1,4 @@
-## DataCatalog specification v. 0.0.1 
+## DataCatalog specification v. 0.2
 
 **Profile** 
 
