@@ -1,4 +1,4 @@
-## DataRepository specification v. 0.0.1 
+## DataCatalog specification v. 0.0.1 
 
 **Profile** 
 
@@ -11,9 +11,9 @@ This document covers the schema.org and bioschemas.org properties necessary to d
 Note that this draft will be improved progressively through the bioschemas process.
  
 # Links 
-- [Specification](http://bioschemas.org/bsc_specs/DataRepository/specification/)
+- [Specification](http://bioschemas.org/bsc_specs/DataCatalog/specification/)
 - [Specification source](specification.html)
 - [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1H12h5VpVNJFzNs2RQJWjXkauCEn3qEsVFzKRoiHHffY/edit?usp=drivesdk)
-- [Coding Examples](https://github.com/BioSchemas/specifications/tree/master/DataRepository/examples)
-- [GitHUb Issues](https://github.com/BioSchemas/bioschemas/labels/type%3A%20DataRepository)
+- [Coding Examples](https://github.com/BioSchemas/specifications/tree/master/DataCatalog/examples)
+- [GitHUb Issues](https://github.com/BioSchemas/bioschemas/labels/type%3A%20DataCatalog)
 > These files were generated using [map2model](https://github.com/BioSchemas/map2model) Python Module.
