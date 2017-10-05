@@ -15,3 +15,5 @@ In this document we propose a simple way for a beacons to self-describe their ge
 - [Coding Examples](https://github.com/BioSchemas/specifications/tree/master/Beacon/examples)
 - [GitHUb Issues](https://github.com/BioSchemas/bioschemas/labels/type%3A%20Beacon)
 > These files were generated using [map2model](https://github.com/BioSchemas/map2model) Python Module.
+
+# New section for Beacon
