@@ -1,0 +1,84 @@
+---
+description: ''
+edit_url: https://github.com/BioSchemas/specifications/tree/master/Dataset/specification.html
+g_mapping_file: Dataset mapping
+gh_examples: https://github.com/BioSchemas/specifications/tree/master/Dataset/examples
+gh_folder: https://github.com/BioSchemas/specifications/tree/master/Dataset
+gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Dataset
+hierarchy:
+- Dataset
+- CreativeWork
+- Thing
+layout: new_spec_detail
+name: Dataset
+parent_type: Dataset
+properties:
+- bsc_dec: It is a descriptive name of the dataset
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Minimum
+  name: name
+  parent: Thing
+  sdo_desc: The name of the item.
+- bsc_dec: It is a short summary describing a dataset.
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Minimum
+  name: description
+  parent: Thing
+  sdo_desc: A description of the item.
+- bsc_dec: It is the location of a page describing the dataset.
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - URL
+  marginality: Minimum
+  name: url
+  parent: Thing
+  sdo_desc: URL of the item.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Minimum
+  name: identifier
+  parent: Thing
+  sdo_desc: The identifier property represents any kind of identifier for any kind
+    of <a class="localLink" href="http://schema.org/Thing">Thing</a>, such as ISBNs,
+    GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing
+    many of these, either as textual strings or as URL (URI) links. See <a href="/docs/datamodel.html#identifierBg">background
+    notes</a> for more details.
+- bsc_dec: These keywords provide a summary of the dataset.
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Minimum
+  name: keywords
+  parent: CreativeWork
+  sdo_desc: Keywords or tags used to describe this content. Multiple entries in a
+    keywords list are typically delimited by commas.
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1lOOy4EMKg3T73v29FvThoBKjVw1xxwBI2Tq798XKGd8/edit?usp=drivesdk
+spec_type: Profile
+status: revision
+subtitle: Bioschemas specification for describing Dataset in the life-science.
+use_cases_url: err_404
+version: 0.0.1
+---
