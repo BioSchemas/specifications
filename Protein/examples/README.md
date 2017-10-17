@@ -1,3 +1,5 @@
-## Protein coding examples. 
-Folder that stores JSON-LD, RDFa or microdata examples.
->Examples will be added in a future map2model release.
+# Protein profile examples 
+
+##JSON-LD
+* Protein entity. An  [example](./ProteinEntity.json) modelling a protein associated to a disease
+* Protein record. An [example](./ProteinRecord.json) modelling a protein record (which includes a protein with no disease association as mainEntity)
