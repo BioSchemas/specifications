@@ -5,31 +5,37 @@
 
   "identifier": "P00519",
   "mainEntity": {
-    "@type": "PhysicalEntity",
+    "@type": "BioChemEntity",
+
     "additionalType": "http://semanticscience.org/resource/SIO_010043",
     "identifier": "P00519",
-    "name": {
-      "@language": "en",
-      "@value": "ABL1"
-    },
-    "additionalProperty": {
-      "additionalType": "http://semanticscience.org/resource/SIO_010081",
-      "name": "gene",
-      "value": {
-        "@type": ["StructuredValue", "PhysicalEntity"],
-        "additionalType": "http://semanticscience.org/resource/SIO_010035",
-        "identifier": "ABL1",
-        "name": "ABL1",
-      },
-    },
+    "name": "ABL1",    
+    
+    "additionalProperty": {  
+        "@type": "PropertyValue",    
+        "additionalType": "http://semanticscience.org/resource/SIO_010081",
+        "name": "gene",
+        "value": {
+          "@type": ["StructuredValue", "BioChemEntity"],
+          "additionalType": "http://semanticscience.org/resource/SIO_010035",
+          "identifier": "ABL1",
+          "name": "ABL1"
+        }
+    }, 
+         
     "isContainedIn": {
-        "@type": "PhysicalEntity",
+        "@type": "BioChemEntity",
         "additionalType": "http://semanticscience.org/resource/SIO_010000",
         "identifier": "9606",
         "name": "Homo sapiens",
         "url": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
         "sameAs": "http://purl.uniprot.org/taxonomy/9606"
-    }
+    },
+    
+    "url": "http://www.uniprot.org/uniprot/P00519",
+    
+    "alternateName": ["ABL", "JTK7"],
+    "description": "Non-receptor tyrosine-protein kinase that plays a role..."
   },
     
   "isPartOf": {
@@ -39,9 +45,6 @@
 
     
   "url": "http://www.uniprot.org/uniprot/P00519",
-    
-    
-  "additionalType": "http://purl.uniprot.org/core/Protein",
   "sameAs": "http://purl.uniprot.org/uniprot/P00519",
 
     
@@ -49,10 +52,8 @@
     {
       "@id": "http://www.identifiers.org/pubmed/10194451",
       "@type": "ScholarlyArticle",
-      "name": {
-        "@language": "en",
-        "@value": "A novel SH2-containing ..."
-      },
+      "headline": "A novel SH2-containing ...",
+      "datePublished": "1999-04-15",
       "sameAs": [
         "https://www.ncbi.nlm.nih.gov/pubmed/10194451",
         "http://europepmc.org/abstract/MED/10194451",
@@ -62,10 +63,8 @@
     {
       "@id": "http://www.identifiers.org/pubmed/9037071",
       "@type": "ScholarlyArticle",
-      "name": {
-        "@language": "en",
-        "@value": "Regulation of DNA ..."
-      },
+      "headline": "Regulation of DNA ...",
+      "datePublished": "1997-02-18",
       "sameAs": [
         "https://www.ncbi.nlm.nih.gov/pubmed/9037071",
         "http://europepmc.org/abstract/MED/9037071",
