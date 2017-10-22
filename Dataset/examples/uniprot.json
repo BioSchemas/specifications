@@ -28,5 +28,5 @@
       "fileFormat": "fasta",
       "contentURL": "ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/uniparc/uniparc_active.fasta.gz"        
     }
-  ],
+  ]
 }
