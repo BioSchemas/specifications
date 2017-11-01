@@ -21,7 +21,7 @@
 			}
 		},
 		{
-			"additionalType": "http://semanticscience.org/resource/SIO_000983",
+			"additionalType": "http://semanticscience.org/resource/gene-disease-association",
 			"name": "disease association",
 			"value": {
 				"@type": ["StructuredValue", "MedicalContition"],
