@@ -18,7 +18,7 @@
 		"url": "http://purl.bioontology.org/ontology/NCBITAXON/9606"
 	},
 	"url": "http://www.uniprot.org/uniprot/P00519",
-	"http://semanticscience.org/resource/SIO_000983": {
+	"http://semanticscience.org/resource/gene-disease-association": {
 		"@type": ["StructuredValue", "MedicalContition", "http://semanticscience.org/resource/disease"],
 		"name": "Leukemia, chronic myeloid (CML)",
 		"code": {
