@@ -6,7 +6,7 @@
   "name": "UniProt",    
   "description": "The Universal Protein Resource (UniProt) is a comprehensive resource for protein sequence and annotation data",
   "url": "http://www.uniprot.org",
-  "keyworks": "protein, protein sequence, protein annotation",
+  "keywords": "protein, protein sequence, protein annotation",
   "provider": {
     "@type": "Organization",
     "name": "UniProt Consortium"  
@@ -32,13 +32,13 @@
       "distribution": [
         {
           "@type": "DataDownload",
-          "name": "Reviewed (Swiss-Prot)"
+          "name": "Reviewed (Swiss-Prot)",
           "fileFormat": "xml",
           "contentURL": "ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.xml.gz"      
         },
         {
           "@type": "DataDownload",
-          "name": "Unreviewed (TrEMBL)"    
+          "name": "Unreviewed (TrEMBL)",    
           "fileFormat": "xml",
           "contentURL": "ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_trembl.xml.gz"      
         }
@@ -79,7 +79,7 @@
           "fileFormat": "xml",
           "contentURL": "ftp://ftp.uniprot.org/pub/databases/uniprot/uniref/uniref50/uniref50.xml.gz"        
         }  
-      ],
+      ]
     },
     {
       "@type": "Dataset",
@@ -110,17 +110,14 @@
           "fileFormat": "fasta",
           "contentURL": "ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/uniparc/uniparc_active.fasta.gz"        
         }
-      ],
+      ]
     }  
   ],
   "license": "Creative Commons Attribution-NoDerivs",
   "publication": {
     "@id": "http://www.identifiers.org/pubmed:27899622",
     "@type": "PublicationEvent",
-    "name": {
-      "@language": "en",
-      "@value": "UniProt: the universal protein knowledgebase"
-    },
+    "name": "UniProt: the universal protein knowledgebase",
     "sameAs": [
       "https://doi.org/10.1093/nar/gkw1099",
       "http://europepmc.org/abstract/MED/27899622",

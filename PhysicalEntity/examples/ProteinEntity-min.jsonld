@@ -1,0 +1,23 @@
+{
+	"@context": "http://schema.org",
+	"@type": "ProteinEntity",
+
+	"identifier": "P00519",
+	"name": {
+		"@language": "en",
+		"@value": "ABL1"
+	},
+
+	"transcribedGene": {
+		"@type": "GeneEntity",
+		"identifier": "ABL1",
+		"name": "ABL1"
+	},
+
+	"containedInOrganism": {
+		"@type": "OrganismEntity",
+		"identifier": "9606",
+		"name": "Homo sapiens",
+		"url": "http://purl.bioontology.org/ontology/NCBITAXON/9606"
+	}
+}

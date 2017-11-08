@@ -1,0 +1,31 @@
+{
+	"@context": "http://schema.org",
+	"@type": ["BioChemEntity”, “http://semanticscience.org/resoures/protein"],
+	"identifier": "P00519",
+	"name": {
+		"@language": "en",
+		"@value": "ABL1"
+	},
+	"http://semanticscience.org/resource/is-transcribed-from": {
+"@type": ["StructuredValue", "BioChemEntity", "http://semanticscience.org/resource/gene"],
+		"identifier": "ABL1",
+		"name": "ABL1"
+	},
+	"isContainedIn": {
+		"@type": ["BioChemEntity", "http://semanticscience.org/resource/organism"],
+		"identifier": "9606",
+		"name": "Homo sapiens",
+		"url": "http://purl.bioontology.org/ontology/NCBITAXON/9606"
+	},
+	"url": "http://www.uniprot.org/uniprot/P00519",
+	"http://semanticscience.org/resource/gene-disease-association": {
+		"@type": ["StructuredValue", "MedicalContition", "http://semanticscience.org/resource/disease"],
+		"name": "Leukemia, chronic myeloid (CML)",
+		"code": {
+			"@type": "MedicalCode",
+			"code": "608232",
+			"codingSystem": "OMIM"
+		},
+		"sameAs": "http://www.uniprot.org/disease/DI-0375"
+	}
+}
