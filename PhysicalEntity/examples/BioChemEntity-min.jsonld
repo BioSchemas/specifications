@@ -2,7 +2,7 @@
 	"@context": "http://schema.org",
 	"@type": "BioChemEntity",
 
-	"additionalType": "http://semanticscience.org/resoures/protein",
+	"additionalType": "http://semanticscience.org/resource/protein",
 	"identifier": "P00519",
 	"name": {
 		"@language": "en",
