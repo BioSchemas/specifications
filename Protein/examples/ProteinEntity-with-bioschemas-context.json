@@ -1,6 +1,5 @@
 {
-  "@context": [
-    "http://schema.org",
+  "@context": [    
     {
       "@vocab": "http://bioschemas.org/",
       "bioschemas": "http://bioschemas.org/",
@@ -22,6 +21,7 @@
         "#type": "@id"        
       }
     },
+    "http://schema.org",
     {"@base": "http://schema.org"}
   ],
   
