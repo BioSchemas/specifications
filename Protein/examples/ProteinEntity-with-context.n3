@@ -1,0 +1,49 @@
+@prefix : <http://schema.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix so: <http://purl.obolibrary.org/obo/SO_> .
+@prefix soProp: <http://purl.obolibrary.org/obo/so#> .
+@prefix sio: <http://semanticscience.org/resource/SIO_> .
+@prefix pr: <http://purl.obolibrary.org/obo/PR_> .
+@prefix uniprot: <http://purl.uniprot.org/uniprot/> .
+@prefix uptaxonomy: <http://purl.uniprot.org/taxonomy/> .
+
+uniprot:P00519 a pr:000000001, :BioChemEntity ;
+    :identifier "P00519" ;
+    :name "ABL1" ;
+
+
+
+
+
+    :description "Function: Non-receptor tyrosine-protein kinase that plays a role..." ;
+    :url <http://www.uniprot.org/uniprot/P00519> ;
+    :isContainedIn [ a :BioChemEntity;
+            :identifier "9606" ;
+            :name "Homo sapiens" ;
+            :sameAs uptaxonomy:9606 ;
+            :url <http://www.uniprot.org/taxonomy/9606> ] ;
+    sio:010081 [ a :BioChemEntity, so:0000704 ;
+            :identifier "ABL1" ;
+            :name "ABL1" ] ;
+    soProp:associated_with [ a :MedicalCondition;
+            :additionalType sio:010299 ;
+            :code [ a :MedicalCode ;
+                    :codeValue "608232" ;
+                    :codingSystem "OMIM" ] ;
+            :name "Leukemia, chronic myeloid (CML)" ;
+            :sameAs uniprot:608232 ;
+            :url <http://www.uniprot.org/diseases/DI-03735> ] ;
+
+
+
+
+    :additionalType sio:010081 ;
+    :alternateName "ABL", "JTK7" ;
+
+
+
+
+    sio:000001 "http://pfam.xfam.org/clan/CL0001" 
+.
