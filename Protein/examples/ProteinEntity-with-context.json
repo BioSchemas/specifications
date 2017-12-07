@@ -1,6 +1,7 @@
 {
   "@context": [    
-  "http://schema.org",
+    "http://schema.org",
+    {"@base": "http://schema.org"},
     {
       "Gene": {
         "@id": "http://purl.obolibrary.org/obo/SO_0000704"
@@ -12,15 +13,15 @@
         "@id": "http://semanticscience.org/resource/SIO_010081",
         "@type": "@id"
       },
-      "associatedDisease": {
-        "@id": "http://semanticscience.org/resource/SIO_000983",
+      "associatedWith": {
+        "@id": "http://purl.obolibrary.org/obo/so#associated_with",
         "#type": "@id"        
       }
-    },    
-    {"@base": "http://schema.org"}
+    }
   ],
   
   
+  "@id": "http://purl.uniprot.org/uniprot/P00519",
   
   
   "@type": ["BioChemEntity", "Protein"],  
@@ -28,23 +29,21 @@
   
   
   
-  
-  "additionalType": "http://purl.obolibrary.org/obo/PR_000000001",
+  "additionalType": "http://semanticscience.org/resource/SIO_010081",
   "alternateName": ["ABL", "JTK7"],
-  "description": "Non-receptor tyrosine-protein kinase that plays a role...",
+  "description": "Function: Non-receptor tyrosine-protein kinase that plays a role...",
   "name": "ABL1",
   "url": "http://www.uniprot.org/uniprot/P00519",
   
   "isContainedIn": {
     "@type": "BioChemEntity",
-    "additionalType": "http://purl.obolibrary.org/obo/OBI_0100026",
     "identifier": "9606",
     "name": "Homo sapiens",
-    "url": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+    "url": "http://www.uniprot.org/taxonomy/9606",
     "sameAs": "http://purl.uniprot.org/taxonomy/9606"
   },
   
-  "associatedDisease": {
+  "associatedWith": {
       "@type": "MedicalCondition",
       "additionalType": "http://semanticscience.org/resource/SIO_010299",
       "name": "Leukemia, chronic myeloid (CML)",
@@ -53,11 +52,11 @@
         "code": "608232",
         "codingSystem": "OMIM"
       },
-      "sameAs": "http://www.uniprot.org/diseases/DI-03735"
+      "sameAs": "http://purl.uniprot.org/mim/608232",
+      "url": "http://www.uniprot.org/diseases/DI-03735"
   },  
   "transcribedFrom": {
     "@type": ["BioChemEntity", "Gene"],
-    "additionalType": "http://purl.obolibrary.org/obo/SO_0000704",
     "identifier": "ABL1",
     "name": "ABL1"
   },
