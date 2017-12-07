@@ -49,7 +49,7 @@
       "name": "Leukemia, chronic myeloid (CML)",
       "code": {
         "@type": "MedicalCode",
-        "code": "608232",
+        "codeValue": "608232",
         "codingSystem": "OMIM"
       },
       "sameAs": "http://purl.uniprot.org/mim/608232",
