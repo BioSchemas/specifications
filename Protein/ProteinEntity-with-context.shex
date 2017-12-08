@@ -79,6 +79,11 @@ PREFIX pr: <http://purl.obolibrary.org/obo/PR_>
     schema:mainEntityOfPage IRI |
     schema:mainEntityOfPage schema:CreativeWork |
     schema:mainEntityOfPage schema:URL
+  ) * ;
+  (
+    schema:contains IRI |
+    schema:contains schema:BioChemEntity |
+    schema:contains schema:URL
   ) * 
 }
 
