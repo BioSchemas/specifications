@@ -15,7 +15,7 @@
       },
       "associatedWith": {
         "@id": "http://purl.obolibrary.org/obo/so#associated_with",
-        "#type": "@id"        
+        "@type": "@id"        
       }
     }
   ],
