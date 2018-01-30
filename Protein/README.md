@@ -1,4 +1,4 @@
-## Protein specification v. 0.0.1 
+## Protein specification v. 0.4 
 
 **Profile** 
 
