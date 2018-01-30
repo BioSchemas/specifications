@@ -2,9 +2,7 @@
 
 **Profile** 
 
-Thing
-
-BioChemEntity
+Thing > BioChemEntity(Protein profile)
 
 **Bioschemas specification describing a Protein (BioChemEntity profile) in Life Sciences** 
 
