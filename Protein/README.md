@@ -4,7 +4,7 @@
 
 Thing
 
-**Bioschemas specification describing a Protein (PhysicalEntity profile) in Life Sciences** 
+**Bioschemas specification describing a Protein (BioChemEntity profile) in Life Sciences** 
 
 # Description 
 This Protein profile specification presents the PhysicalEntity usage when describing a Protein. 
