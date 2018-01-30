@@ -19,6 +19,7 @@ We include examples not just for proteins but also for records describing protei
 - [Protein entity in JSON-LD](https://github.com/BioSchemas/specifications/blob/master/Protein/examples/ProteinEntity-with-context.json)
 - [Protein entity in Turtle](https://github.com/BioSchemas/specifications/blob/master/Protein/examples/ProteinEntity-with-context.n3)
 - [Record of a protein entity](https://github.com/BioSchemas/specifications/blob/master/Protein/examples/ProteinRecord.json)
+- [Full example of a protein record about a protein entity](https://github.com/BioSchemas/specifications/blob/master/Protein/examples/ProteinRecordAndEntity_wtihContext.json)
 ## Links to other relevant types/profiles
 Protein records will be included in a Dataset which will belong to a DataCatalog. A Protein can also be related to Protein Annotation or Protein Structure
 - [DataCatalog](https://github.com/BioSchemas/specifications/blob/master/DataCatalog/examples/UniProt.json)
