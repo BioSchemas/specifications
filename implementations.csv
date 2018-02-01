@@ -1,0 +1,8 @@
+"name","URL","schema.org type","bioschemas profile","profile version"
+"Pscan","http://www.beaconlab.it/pscan","SoftwareApplication","Tool","0.1"
+"PscanChIP","http://www.beaconlab.it/pscan_chip_dev","SoftwareApplication","Tool","0.1"
+"Cscan","http://www.beaconlab.it/cscan","SoftwareApplication","Tool","0.1"
+"BAR 3.0","https://bar.biocomp.unibo.it/bar3/","SoftwareApplication","Tool","0.1"
+"AGAME","http://beaconlab.it/agame","SoftwareApplication","Tool","0.1"
+"ITSoneDB","http://itsonedb.cloud.ba.infn.it/","DataCatalog","DataCatalog","0.1"
+"ITSoneDB","http://itsonedb.cloud.ba.infn.it/","DataSet","DataSet","0.1"
