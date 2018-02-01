@@ -1,7 +1,7 @@
 {
 	"@context": "http://schema.org",
 	"@type": "DataCatalog",
-	"@id": "ITSOneDB",
+	"@id": "http://itsonedb.cloud.ba.infn.it/",
    
 	"name": "ITSoneDB",    
 	"description": "ITSoneDB is a comprehensive collection of eukaryotic ribosomal RNA Internal Transcribed Spacer 1 (ITS1) sequences. It is aimed at supporting metabarcoding surveys of fungal and other microbial eukaryotic environmental communities.",
@@ -33,8 +33,9 @@
 		"url": "https://www.ncbi.nlm.nih.gov/pubmed/22786784",
 		"sameAs": "https://academic.oup.com/bib/article/13/6/682/193389"
  	},       
+	"datePublished": "2012-09",
 	"dateModified": "2017-08-01",
-  
+	"alternateName": "ITS1DB",
 	"dataset": [
 		{
 		  "@type": "Dataset",
@@ -43,7 +44,7 @@
 		  "url": "http://http://itsonedb.cloud.ba.infn.it/",
 		  "identifier": "ITSoneDB-Euk",
 		  "keywords": "barcoding, metagenomics, ITS, Internal Transcribed Spacer, eukaryotic",
-		  "includedInDataCatalog": "ITSoneDB",
+		  "includedInDataCatalog": "http://itsonedb.cloud.ba.infn.it/",
 			
 		  "creator": [
 				{
@@ -88,7 +89,7 @@
 		  "url": "http://itsonedb.cloud.ba.infn.it/",
 		  "identifier": "ITSoneDB-Mar",
 		  "keywords": "barcoding, metagenomics, marine, ITS, Internal Transcribed Spacer, marine",
-		  "includedInDataCatalog": "ITSoneDB",
+		  "includedInDataCatalog": "http://itsonedb.cloud.ba.infn.it/",
 			
 		  "creator": [
 			  {
