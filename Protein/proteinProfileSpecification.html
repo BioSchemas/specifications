@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        BioSchemas - Protein Specification
+    </title>
+    <meta name="description" content="">
+</head>
+<body>
+<section id="main_content" class="inner">
+    <h1>Protein Specification v. 0.5</h1>
+    <h2>Bioschemas profile specification describing a Protein (Thing&gt;BioChemEntity) in Life Sciences</h2>
+    <h3>Contributors</h3>
+    <p>The following people have been involved to the creation of this specification document.</p>
+    <h4>Group Leader(s)</h4>
+    <ul>
+        <li>Maria Martin</li>
+    </ul>
+    <h4>Other team members</h4>
+    <ul>
+        <li>Leyla Garcia (Group coordinator)</li>
+        <li>Aurélien Luciani</li>
+        <li>Robert Finn</li>
+        <li>Sameer Velankar</li>
+        <li>Saqib Mir</li>
+        <li>Stephen Anyango</li>
+        <li>Andra Waagmeester</li>
+    </ul>
+    <h3>Protein profile</h3>
+    <a href="http://schema.org/Thing">Thing</a>
+    &gt;
+    <a href="http://bioschemas.org/types/BioChemEntity/specification/">BioChemEntity</a>
+    &gt; Protein as defined by <a href="http://purl.obolibrary.org/obo/PR_000000001">PR:000000001</a>
+    <h4>Bioschemas JSON context</h4>
+    The following context will be provided by Bioschemas in order to make clearer and easier to model proteins
+    <pre>
+"@context": [
+    "http://schema.org", {"@base": "http://schema.org"},
+    {
+      "Gene": { "@id": "http://purl.obolibrary.org/obo/SO_0000704" },
+      "Protein": { "@id": "http://purl.obolibrary.org/obo/PR_000000001" },
+      "transcribedFrom": { "@id": "http://semanticscience.org/resource/SIO_010081" },
+      "associatedTo": { "@id": "http://semanticscience.org/resource/SIO_000001" },
+      "enables": { "@id": "http://purl.obolibrary.org/obo/RO_0002327" },
+      "involvedIn": { "@id": "http://purl.obolibrary.org/obo/RO_0002331" },
+      "hasEvidence": { "@id": "http://purl.obolibrary.org/obo/RO_0002558" }
+    }
+]
+    </pre>
+    <br>
+    <h3>Detailed description</h3>
+    <p>
+        This Protein profile specification presents the BioChemEntity usage when describing a Protein.
+        <br>
+        <strong>
+            The recommended type used in Bioschemas is
+            <a href="http://purl.obolibrary.org/obo/PR_000000001">PR:000000001</a>
+        </strong>
+    </p>
+    <br>
+    <table class="bioschemas_properties" border="1px" cellspacing="0">
+        <thead>
+        <tr>
+            <th>Source</th>
+            <th>Property</th>
+            <th>Expected Type</th>
+            <th>Description</th>
+            <th>CD</th>
+            <th>Controlled Vocabulary</th>
+            <th>JSON Example</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="cardinality">
+            <td colspan="7">
+                Marginality: <b class="Minimum">Minimum.</b>
+            </td>
+        </tr>
+        <tr>
+            <td>schema.org</td>
+            <th><a href="http://schema.org/identifier">identifier</a></th>
+            <td>
+                <a href="http://schema.org/PropertyValue">PropertyValue</a><br>
+                <a href="http://schema.org/"></a><br>
+                <a href="http://schema.org/Text">Text</a><br>
+                <a href="http://schema.org/"></a><br>
+                <a href="http://schema.org/URL">URL</a><br>
+            </td>
+            <td><em><u>Schema</u>: </em>The identifier property represents any kind of identifier for any
+                kind of <a class="localLink" href="http://schema.org/Thing">Thing</a>,
+                such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+                properties for representing many of these, either as textual strings or
+                as URL (URI) links. See <a href="http://schema.org/docs/datamodel.html#identifierBg">background
+                    notes</a> for more details.
+                <br><br>
+                <em><u>Bioschemas</u>: </em></td>
+            <td>ONE</td>
+            <td>
+            </td>
+            <td>
+                <pre>
+{
+    "@type": ["BioChemEntity", "Protein"],
+    "@id": "http://purl.uniprot.org/uniprot/P05519"
+    "identifier": "P00519"
+}
+                </pre>
+            </td>
+        </tr>
+        <tr class="cardinality">
+            <td colspan="7">
+                Marginality: <b class="Recommended">Recommended.</b>
+            </td>
+        </tr>
+        <tr>
+            <td>schema.org</td>
+            <th><a href="http://schema.org/additionalType">additionalType</a></th>
+            <td>
+                <a href="http://schema.org/URL">URL</a><br>
+            </td>
+            <td><em><u>Schema</u>: </em>An additional
+                type for the item, typically used for adding more specific types from
+                external vocabularies in microdata syntax. This is a relationship
+                between something and a class that the thing is in. In RDFa syntax, it
+                is better to use the native RDFa syntax - the 'typeof' attribute - for
+                multiple types. Schema.org tools may have only weaker understanding of
+                extra types, in particular those defined externally.
+                <br><br>
+                <em><u>Bioschemas protein profile</u>: </em>Any ontology term describing the protein concept.
+            </td>
+            <td>MANY</td>
+            <td>
+                Any ontology term describing a protein. For instance
+                <a href="https://www.w"additionalType": "http://semanticscience.org/resource/SIO_010043"ikidata.org/wiki/Q8054">wikidata:protein</a> or
+                <a href="http://semanticscience.org/resource/SIO_010043">sio:SIO_010043</a>
+            </td>
+            <td>
+                <pre>
+{
+    "@type": ["BioChemEntity", "Protein"],
+    "@id": "http://purl.uniprot.org/uniprot/P05519"
+    "additionalType": "http://semanticscience.org/resource/SIO_010043"
+}
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td>schema.org</td>
+            <th><a href="http://schema.org/alternateName">alternateName</a></th>
+            <td>
+                <a href="http://schema.org/Text">Text</a><br>
+            </td>
+            <td><em><u>Schema</u>: </em>An alias for the item.
+                <br><br>
+                <em><u>Bioschemas</u>: </em></td>
+            <td>MANY</td>
+            <td>
+            </td>
+            <td>
+                <pre>
+{
+    "@type": ["BioChemEntity", "Protein"],
+    "@id": "http://purl.uniprot.org/uniprot/P05519"
+    "alternateName": ["ABL", "JTK7"]
+}
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td>profile</td>
+            <th>bioschemas:associatedTo</th>
+            <td>
+                <a href="http://schema.org/MedicalContidion">MedicalContidion</a><br>
+                <a href="http://schema.org/URL">URL</a><br>
+                <a href="http://schema.org/PropertyValue">PropertyValue</a><br>
+            </td>
+            <td><em><u>Schema</u>: </em>
+                <br><br>
+                <em><u>Bioschemas protein profile</u>: </em>Used as short and direct alternative to
+                <a href="http://schema.org/additionalProperty">additionalProperty</a>.
+                It represents the association between a protein and a disease. The disease should be modeled as a
+                <a href="http://schema.org/MedicalCondition">schema:MedicalCondition</a>. Whenever possible, use the
+                <a href="http://schema.org/MedicalCode">MedicalCode</a> to refer to an ontology term such as those in
+                OMIM. If PropertyValue is used as the object, use the property "value" for the medical condition
+                and the propererty "hasEvidence" for any evidence related to the association.
+            </td>
+            <td>MANY</td>
+            <td>
+                Property corresponding to
+                <a href="http://semanticscience.org/resource/SIO_000001">sio:SIO_000001</a>
+            </td>
+            <td>
+                Association to a medical condition
+                <pre>
+{
+    "@type": ["BioChemEntity", "Protein"],
+    "@id": "http://purl.uniprot.org/uniprot/P05519"
+    "associatedTo": {
+        "@type": "MedicalCondition",
+        "additionalType": "http://semanticscience.org/resource/SIO_010299",
+        "name": "Leukemia, chronic myeloid (CML)",
+        "code": { "@type": "MedicalCode", "code": "608232", "codingSystem": "OMIM“ },
+        "sameAs": "http://www.uniprot.org/diseases/DI-03735"
+    }
+}
+                </pre>
+                Association to a medical condition with evidence
+                <pre>
+{
+    "@type": ["BioChemEntity", "Protein"],
+    "@id": "http://purl.uniprot.org/uniprot/P05519"
+    "associatedTo": {
+        "@type": "PropertyValue",
+        "value": {
+            "@type": "MedicalCondition",
+            "additionalType": "http://semanticscience.org/resource/SIO_010299",
+            "name": "Leukemia, chronic myeloid (CML)",
+            "code": { "@type": "MedicalCode", "code": "608232", "codingSystem": "OMIM“ },
+            "sameAs": "http://www.uniprot.org/diseases/DI-03735"
+        },
+        "hasEvidence": "https://www.ncbi.nlm.nih.gov/pubmed/15201367"
+    }
+}
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td>profile</td>
+            <th>bioschemas:transcribedFrom</th>
+            <td>
+                <a href="http://bioschemas.org/specifications/BioChemEntity/specification/">BioChemEntity</a><br>
+                <a href="http://schema.org/bioschemas:Gene">bioschemas:Gene</a><br>
+                <a href="http://schema.org/URL">URL</a><br>
+            </td>
+            <td><em><u>Schema</u>: </em>
+                <br><br>
+                <em><u>Bioschemas protein profile</u>: </em>Used as a short and direct alternative to
+                <a href="http://schema.org/additionalProperty">additionalProperty</a>.
+                It represents the association between a protein and a gene, i.e., protein is transcribed (via the mRNA)
+                from a gene. The gen shoul be modeled as a
+                <a href="http://bioschemas.org/specifications/BioChemEntity/specification/">schema:BioChemEntity</a>
+                under the profile Gene.
+            </td>
+            <td>MANY</td>
+            <td>
+                Property corresponding to
+                <a href="http://semanticscience.org/resource/SIO_010081">sio:SIO_010081</a>
+            </td>
+            <td>
+                <pre>
+{
+    "@type": ["BioChemEntity", "Protein"],
+    "@id": "http://purl.uniprot.org/uniprot/P05519"
+    "transcribedFrom": {
+        "@type": ["BioChemEntity", "Gene"],
+        "additionalType": "http://purl.obolibrary.org/obo/SO_0000704",
+        "identifier": "ABL1", "name": "ABL1"
+    }
+}
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td>schema.org</td>
+            <th><a href="http://schema.org/description">description</a></th>
+            <td>
+                <a href="http://schema.org/Text">Text</a><br>
+            </td>
+            <td><em><u>Schema</u>: </em>A description of the item.
+                <br><br>
+                <em><u>Bioschemas protein profile</u>: </em>Protein function
+            </td>
+            <td>ONE</td>
+            <td>
+            </td>
+            <td>
+                <pre>
+{
+    "@type": ["BioChemEntity", "Protein"],
+    "@id": "http://purl.uniprot.org/uniprot/P05519"
+    "description": "Non-receptor tyrosine-protein kinase that plays a role..."
+}
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td>bioschemas.org</td>
+            <th><a href="http://schema.org/isContainedIn">isContainedIn</a></th>
+            <td>
+                <a href="http://bioschemas.org/specifications/BioChemEntity/specification/">BioChemEntity</a><br>
+                <a href="http://schema.org/URL">URL</a><br>
+            </td>
+            <td><em><u>Schema</u>: </em>Indicates a BioChemEntity that this BioChemEntity is (in some sense)
+                part of.
+                <br><br>
+                <em><u>Bioschemas</u>: </em></td>
+            <td>MANY</td>
+            <td>
+                Multiple options depending on the BioChemEntity. For instance, you can use NCBITaxon for organisms.
+            </td>
+            <td>
+                If a protein belongs to an organism, it is recommended to model it whenever possible, make sure you link
+                to a well-known taxonomy term:
+                <pre>
+{
+    "@type": ["BioChemEntity", "Protein"],
+    "@id": "http://purl.uniprot.org/uniprot/P05519"
+    "isContainedIn": {
+        "@type": "BioChemEntity",
+        "additionalType": "http://purl.obolibrary.org/obo/OBI_0100026",
+        "identifier": "9606", "name": "Homo sapiens",
+        "url": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+        "sameAs": "http://purl.uniprot.org/taxonomy/9606"
+    }
+}
+                </pre>
+                You can also model how a protein is contained in a particular orga:
+                <pre>
+{
+    "@type": ["BioChemEntity", "Protein"],
+    "@id": "http://purl.uniprot.org/uniprot/P05519"
+    "isContainedIn": {
+        "@type": "BioChemEntity",
+        "name": "Liver"
+    }
+}
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td>schema.org</td>
+            <th><a href="http://schema.org/name">name</a></th>
+            <td>
+                <a href="http://schema.org/Text">Text</a><br>
+            </td>
+            <td><em><u>Schema</u>: </em>The name of the item.
+                <br><br>
+                <em><u>Bioschemas</u>: </em></td>
+            <td>ONE</td>
+            <td>
+            </td>
+            <td>
+                <pre>
+{
+    "@type": ["BioChemEntity", "Protein"],
+    "@id": "http://purl.uniprot.org/uniprot/P05519"
+    "name": "ABL1"
+}
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td>schema.org</td>
+            <th><a href="http://schema.org/url">url</a></th>
+            <td>
+                <a href="http://schema.org/URL">URL</a><br>
+            </td>
+            <td><em><u>Schema</u>: </em>URL of the item.
+                <br><br>
+                <em><u>Bioschemas</u>: </em>Bioschemas usage.
+                Link to the official webpage associated to this entity.
+            </td>
+            <td>ONE</td>
+            <td>
+            </td>
+            <td>
+                <pre>
+{
+    "@type": ["BioChemEntity", "Protein"],
+    "@id": "http://purl.uniprot.org/uniprot/P05519"
+    "url": "http://www.uniprot.org/uniprot/P05519"
+}
+                </pre>
+            </td>
+        </tr>
+        <tr class="cardinality">
+            <td colspan="7">
+                Marginality: <b class="Optional">Optional.</b>
+            </td>
+        </tr>
+        <tr>
+            <td>schema.org</td>
+            <th><a href="http://schema.org/additionalProperty">additionalProperty</a></th>
+            <td>
+                <a href="http://schema.org/PropertyValue">PropertyValue</a><br>
+            </td>
+            <td><em><u>Schema</u>: </em>A property-value
+                pair representing an additional characteristics of the entitity, e.g. a
+                product feature or another characteristic for which there is no matching
+                property in schema.org. Note: Publishers should be aware that
+                applications designed to use specific schema.org properties (e.g.
+                http://schema.org/width, http://schema.org/color,
+                http://schema.org/gtin13, ...) will typically expect such data to be
+                provided using those properties, rather than using the generic
+                property/value mechanism.
+                <br><br>
+                <em><u>Bioschemas</u>: </em>As much a possible, do not use it! Alternatively, considered
+                reusing properties/relations already coined in controlled vocabularies. We recommed to look at
+                the OBO Relation Ontology (RO) or the Semanticscience Integrated Ontology (SIO) as starting points.
+                <br><br>
+                <em><u>Bioschemas protein profile</u>: </em>
+                Find a suitable relation or property already existing. As an example, take a look to
+                bioschemas:transcribedFrom or bioschemas:associatedTo used in this ProteinProfile.
+            </td>
+            <td>MANY</td>
+            <td>
+                Any ontology term coined as a property and suitable for your needs. For instance
+                <a href="http://semanticscience.org/resource/SIO_000095">sio:SIO_000095 (is member of)</a> could be
+                used to model the relation between a protein and a protein clan.
+            </td>
+            <td>
+                Short direct alternative to express relation between protein and protein clan.
+                <pre>
+{
+    "@type": ["BioChemEntity", "Protein"],
+    "@id": "http://purl.uniprot.org/uniprot/P05519"
+    "http://semanticscience.org/resource/SIO_000095":"http://pfam.xfam.org/clan/CL0001"
+}
+                </pre>
+                If no ontology term expressing the desired relation exists, then
+                <pre>
+{
+    "@type": ["BioChemEntity", "Protein"],
+    "@id": "http://purl.uniprot.org/uniprot/P05519"
+    "additionalProperty": {
+        "name": "my new property",
+        "value": {
+            "@type": "PropertyValue",
+            "value": "the object in this relation, more properties can be used as needed"
+        }
+    }
+}
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td>bioschemas.org</td>
+            <th><a href="http://schema.org/contains">contains</a></th>
+            <td>
+                <a href="http://bioschemas.org/specifications/BioChemEntity/specification/">BioChemEntity</a><br>
+                <a href="http://schema.org/URL">URL</a><br>
+            </td>
+            <td><em><u>Schema</u>: </em>Indicates a BioChemEntity that is (in some sense) a part of this
+                BioChemEntity. Inverse property: isContainedIn.
+                <br><br>
+                <em><u>Bioschemas</u>: </em></td>
+            <td>MANY</td>
+            <td>
+            </td>
+            <td>
+                A protein can contain a variant:
+                <pre>
+{
+    "@type": ["BioChemEntity", "Protein"],
+    "@id": "http://purl.uniprot.org/uniprot/P05519"
+    "contains":"http://purl.uniprot.org/annotation/VAR_022315"
+}
+                </pre>
+                More information about the variant can also be included
+                <pre>
+{
+    "@type": ["BioChemEntity", "Protein"],
+    "@id": "http://purl.uniprot.org/uniprot/P05519"
+    "contains": {
+        "@type": "BioChemEntity",
+        "@id": "http://purl.uniprot.org/annotation/VAR_022315",
+        "aditionalType": "http://semanticscience.org/resource/SIO_010471",
+        "identifier": "VAR_022315",
+        "location": [
+            {
+              "@type": "PropertyValue",
+              "value": 355
+            },
+    }
+}
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td>bioschemas.org</td>
+            <th><a href="http://schema.org/hasRepresentation">hasRepresentation</a></th>
+            <td>
+                <a href="http://schema.org/PropertyValue">PropertyValue</a><br>
+                <a href="http://schema.org/Text">Text</a><br>
+                <a href="http://schema.org/URL">URL</a><br>
+            </td>
+            <td><em><u>Schema</u>: </em>A representation
+                for this entity other than, for instance, an image (used image property
+                for that) or the main web page/record (use mainEntityOfPage for that,
+                and see background notes,
+                http://schema.org/docs/datamodel.html#mainEntityBackground, for sameAs
+                and url). Bioschemas usage. This property could be used, for instance,
+                to register a sequence protein as it is a representation of the
+                protein. If you want to better define the nature of the representation,
+                use a PropertyValue as described in additionalProperty.
+                <br><br>
+                <em><u>Bioschemas</u>: </em></td>
+            <td>MANY</td>
+            <td>
+            </td>
+            <td>
+                A protein can be represented in different ways, for intance using its primary, secondary or tertiaty
+                representations. It can also be graphically and interactevely (so image is not appropriate)
+                represented as shown here:
+                <pre>
+{
+    "@type": ["BioChemEntity", "Protein"],
+    "@id": "http://purl.uniprot.org/uniprot/P05519"
+    "hasRepresentation": "http://www.uniprot.org/uniprot/P05067#showFeaturesViewer"
+}
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td>schema.org</td>
+            <th><a href="http://schema.org/image">image</a></th>
+            <td>
+                <a href="http://schema.org/ImageObject">ImageObject</a><br>
+                <a href="http://schema.org/"></a><br>
+                <a href="http://schema.org/URL">URL</a><br>
+            </td>
+            <td><em><u>Schema</u>: </em>An image of the item. This can be a
+                <a class="localLink" href="http://schema.org/URL">URL</a>
+                or a fully described <a class="localLink" href="http://schema.org/ImageObject">ImageObject</a>.
+                <br><br>
+                <em><u>Bioschemas</u>:
+                </em></td>
+            <td>MANY</td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>schema.org</td>
+            <th><a href="http://schema.org/location">location</a></th>
+            <td>
+                <a href="http://schema.org/Place">Place</a><br>
+                <a href="http://schema.org/PostalAddress">PostalAddress</a><br>
+                <a href="http://schema.org/PropertyValue">PropertyValue</a><br>
+                <a href="http://schema.org/Text">Text</a><br>
+                <a href="http://schema.org/URL">URL</a><br>
+            </td>
+            <td><em><u>Schema</u>: </em>The location of
+                for example where the event is happening, an organization is located, or
+                where an action takes place. Bioschemas usage.
+                <br><br>
+                <em><u>Bioschemas</u>: </em>In Bioschemas location
+                can be refer to a position in a chromosome or sequence or to a physical
+                place where, for instance, a sample is stored. Using additionalType is
+                advised to make the distinction.
+                <br><br>
+                <em><u>Bioschemas protein profile</u>: </em>Currently not in use.
+            </td>
+            <td>MANY</td>
+            <td>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>schema.org</td>
+            <th><a href="http://schema.org/mainEntityOfPage">mainEntityOfPage</a></th>
+            <td>
+                <a href="http://schema.org/CreativeWork">CreativeWork</a><br>
+                <a href="http://schema.org/"></a><br>
+                <a href="http://schema.org/URL">URL</a><br>
+            </td>
+            <td><em><u>Schema</u>: </em>Indicates a page (or other CreativeWork) for which this thing is the
+                main entity being described. See <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background
+                    notes</a> for details.
+                <br><br>
+                <em><u>Bioschemas</u>: </em>Bioschemas usage. Link via DataRecord
+                or URL to the main Record representing this entity in a dataset. The preferred way is to link the
+                DataRecord to the BioChemEntity rather than the other way around.
+                <br><br>
+                <em><u>Bioschemas protein profile</u>: </em>Currently not in use (we use the "mainEntity" property from
+                the DataRecord)
+            </td>
+            <td>ONE</td>
+            <td>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>schema.org</td>
+            <th><a href="http://schema.org/sameAs">sameAs</a></th>
+            <td>
+                <a href="http://schema.org/URL">URL</a><br>
+            </td>
+            <td><em><u>Schema</u>: </em>URL of a
+                reference Web page that unambiguously indicates the item's identity.
+                E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+                website.
+                <br><br>
+                <em><u>Bioschemas</u>: </em></td>
+            <td>MANY</td>
+            <td>
+            </td>
+            <td>
+                <pre>
+{
+    "@type": ["BioChemEntity", "Protein"],
+    "@id": "http://purl.uniprot.org/uniprot/P05519"
+    "sameAs": ["https://www.wikidata.org/wiki/Q587961", "https//:identifiers.org/uniprot:P05519"]
+}
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td>Protein profile</td>
+            <th>bioschemas:enables</th>
+            <td>
+                <a href="http://schema.org/CategoryCode">CategoryCode</a><br>
+                <a href="http://schema.org/PropertyValue">PropertyValue</a><br>
+            </td>
+            <td><em><u>Schema</u>: </em>
+                <br><br>
+                <em><u>Bioschemas protein profile</u>: </em> A protein enables GO molecular functions.
+                If you want to add an evidence use PropertyValue with "value" pointing to the CategoryCode
+                corresponding to the GO term and "hasEvidence" to the evidence. Otherwise just use the GO term
+                as the CategoryCode.
+            </td>
+            <td>MANY</td>
+            <td>
+                Gene Ontology (GO)
+            </td>
+            <td>
+                Protein enabling a GO molecular function
+                <pre>
+{
+    "@type": ["BioChemEntity", "Protein"],
+    "@id": "http://purl.uniprot.org/uniprot/P05519"
+    "enables": {
+        "@type": "CategoryCode",
+        "@id": "http://purl.obolibrary.org/obo/GO_0000166",
+        "codeValue": "GO:0000166",
+        "name": "nucleotide binding"
+    }
+}
+                </pre>
+                Evidence can also be modeled
+                <pre>
+{
+    "@type": ["BioChemEntity", "Protein"],
+    "@id": "http://purl.uniprot.org/uniprot/P05519"
+    "enables": {
+        "@type": "PropertyValue",
+        "value": {
+            "@type": "CategoryCode",
+            "@id": "http://purl.obolibrary.org/obo/GO_0000166",
+            "codeValue": "GO:0000166",
+            "name": "nucleotide binding"
+        },
+        "hasEvidence": {
+            "@type": "CategoryCode",
+            "@id": "http://purl.obolibrary.org/obo/ECO_0000256",
+            "codeValue": "ECO:0000256",
+            "name": "match to sequence model evidence used in automatic assertion"
+        }
+    }
+}
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td>Protein profile</td>
+            <th>bioschemas:involvedIn</th>
+            <td>
+                <a href="http://schema.org/CategoryCode">CategoryCode</a><br>
+                <a href="http://schema.org/PropertyValue">PropertyValue</a><br>
+            </td>
+            <td><em><u>Schema</u>: </em>
+                <br><br>
+                <em><u>Bioschemas protein profile</u>: </em> A protein is involved in GO biological processes.
+                If you want to add an evidence use PropertyValue with "value" pointing to the CategoryCode
+                corresponding to the GO term and "hasEvidence" to the evidence. Otherwise just use the GO term
+                as the CategoryCode.
+            </td>
+            <td>MANY</td>
+            <td>
+            </td>
+            <td>
+                Protein involved in a GO biological process
+                <pre>
+{
+    "@type": ["BioChemEntity", "Protein"],
+    "@id": "http://purl.uniprot.org/uniprot/P05519"
+    "involvedIn": {
+        "@type": ["BioChemEntity", "CategoryCode"],
+        "@id": "http://purl.obolibrary.org/obo/GO_0000278",
+        "codeValue": "GO:0000278",
+        "name": "mitotic cell cycle"
+    }
+}
+                </pre>
+                Protein involved in a GO biological process with evidence
+                <pre>
+{
+    "@type": ["BioChemEntity", "Protein"],
+    "@id": "http://purl.uniprot.org/uniprot/P05519"
+    "involvedIn": {
+        "@type": "PropertyValue",
+        "value": {
+            "@type": "CategoryCode",
+            "@id": "http://purl.obolibrary.org/obo/GO_0000278",
+            "codeValue": "GO:0000278",
+            "name": "mitotic cell cycle"
+        },
+        "hasEvidence": {
+            "@type": "CategoryCode",
+            "@id": "http://purl.obolibrary.org/obo/ECO_0000256",
+            "codeValue": "ECO:0000256",
+            "name": "match to sequence model evidence used in automatic assertion"
+        }
+    }
+}
+                </pre>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+</body>
+</html>
