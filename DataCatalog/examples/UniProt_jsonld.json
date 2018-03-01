@@ -1,0 +1,123 @@
+{
+  "@context": "http://schema.org",
+  "@type": "DataCatalog",
+  "@id": "http://www.uniprot.org",
+  "name": "UniProt",
+  "description": "The Universal Protein Resource (UniProt) is a comprehensive resource for protein sequence and annotation data",
+  "url": "http://www.uniprot.org",
+  "keywords": "protein, protein sequence, protein annotation",
+  "provider": {
+    "@type": "Organization",
+    "name": "UniProt Consortium"
+  },
+  "dataset": [
+    {
+      "@type": "Dataset",
+      "@id": "http://www.uniprot.org/uniprot/",
+      "name": "UniProt Knowledgebase (UniProtKB)",
+      "description": "The UniProt Knowledgebase (UniProtKB) is the central hub for the collection of functional information on proteins, with accurate, consistent and rich annotation. In addition to capturing the core data mandatory for each UniProtKB entry (mainly, the amino acid sequence, protein name or description, taxonomic data and citation information), as much annotation information as possible is added. This includes widely accepted biological ontologies, classifications and cross-references, and clear indications of the quality of annotation in the form of evidence attribution of experimental and computational data. The UniProt Knowledgebase consists of two sections: a section containing manually-annotated records with information extracted from literature and curator-evaluated computational analysis, and a section with computationally analyzed records that await full manual annotation. For the sake of continuity and name recognition, the two sections are referred to as 'UniProtKB/Swiss-Prot'(reviewed, manually annotated) and 'UniProtKB/TrEMBL' (unreviewed, automatically annotated), respectively.",
+      "url": "http://www.uniprot.org/uniprot/",
+      "identifier": "UniProtKB",
+      "keywords": "protein, protein sequence, protein annotations, knowledgebase, TrEMBL, Swiss-Prot",
+      "includedInDataCatalog": "http://www.uniprot.org",
+      "creator": {
+        "@type": "Organization",
+        "name": "UniProt Consortium"
+      },
+      "version": "2017-09",
+      "license": "Creative Commons Attribution-NoDerivs",
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "name": "Reviewed (Swiss-Prot)",
+          "fileFormat": "xml",
+          "contentURL": "ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.xml.gz"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "Unreviewed (TrEMBL)",
+          "fileFormat": "xml",
+          "contentURL": "ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_trembl.xml.gz"
+        }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "@id": "http://www.uniprot.org/uniref",
+      "name": "UniProt Reference Clusters (UniRef)",
+      "description": "The UniProt Reference Clusters (UniRef) provide clustered sets of sequences from the UniProt Knowledgebase (including isoforms) and selected UniParc records in order to obtain complete coverage of the sequence space at several resolutions while hiding redundant sequences (but not their descriptions) from view. Unlike in UniParc, sequence fragments are merged in UniRef: The UniRef100 database combines identical sequences and sub-fragments with 11 or more residues from any organism into a single UniRef entry, displaying the sequence of a representative protein, the accession numbers of all the merged entries and links to the corresponding UniProtKB and UniParc records. UniRef90 is built by clustering UniRef100 sequences with 11 or more residues using the CD-HIT algorithm (Li W. and Godzik A., Bioinformatics, 22: 1658-1659, 2006) such that each cluster is composed of sequences that have at least 90% sequence identity to and 80% overlap with the longest sequence (a.k.a. seed sequence) of the cluster. Similarly, UniRef50 is built by clustering UniRef90 seed sequences that have at least 50% sequence identity to and 80% overlap with the longest sequence in the cluster. Prior to 2013 there was no overlap threshold, so clusters were more heterogeneous in length. UniRef90 and UniRef50 yield a database size reduction of approximately 58% and 79%, respectively, providing for significantly faster sequence similarity searches. The seed sequences are the longest members of the cluster. However, the longest sequence is not always the most informative. There is often more biologically relevant information (name, function, cross-references) available on other cluster members. All the proteins in a cluster are therefore ranked as follows to facilitate the selection of a biologically relevant representative for the cluster: 1. quality of the entry: manually reviewed entries (from the UniProtKB/Swiss-Prot section) are preferred. 2. annotation score: entries that have higher UniProtKB annotation scores are preferred. This also means that UniProtKB entries will always take precedence over entries that are in UniParc but not in UniProtKB (annotation score is undefined in UniParc, which does not contain any annotations). 3. organism: entries from reference proteomes and model organisms are preferred. 4. length of the sequence: longest sequence is preferred",
+      "url": "http://www.uniprot.org/uniref",
+      "identifier": "UniRef",
+      "keywords": "protein, protein sequence, sequence clusters",
+      "includedInDataCatalog": "http://www.uniprot.org",
+      "creator": {
+        "@type": "Organization",
+        "name": "UniProt Consortium"
+      },
+      "version": "2017-09",
+      "license": "Creative Commons Attribution-NoDerivs",
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "name": "UniRef 100",
+          "fileFormat": "xml",
+          "contentURL": "ftp://ftp.uniprot.org/pub/databases/uniprot/uniref/uniref100/uniref100.xml.gz"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "UniRef 100",
+          "fileFormat": "xml",
+          "contentURL": "ftp://ftp.uniprot.org/pub/databases/uniprot/uniref/uniref90/uniref90.xml.gz"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "UniRef 100",
+          "fileFormat": "xml",
+          "contentURL": "ftp://ftp.uniprot.org/pub/databases/uniprot/uniref/uniref50/uniref50.xml.gz"
+        }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "@id": "http://www.uniprot.org/uniparc",
+      "name": "UniProt Archive (UniParc)",
+      "description": "The UniProt Archive (UniParc) is a comprehensive and non-redundant database that contains most of the publicly available protein sequences in the world. Proteins may exist in different source databases and in multiple copies in the same database. UniParc avoided such redundancy by storing each unique sequence only once and giving it a stable and unique identifier (UPI) making it possible to identify the same protein from different source databases. A UPI is never removed, changed or reassigned. UniParc contains only protein sequences. All other information about the protein must be retrieved from the source databases using the database cross-references. UniParc tracks sequence changes in the source databases and archives the history of all changes. UniParc has combined many databases into one at the sequence level and searching UniParc is equivalent to searching many databases simultaneously",
+      "url": "http://www.uniprot.org/uniparc",
+      "identifier": "UniParc",
+      "keywords": "protein, protein sequence, archive",
+      "includedInDataCatalog": "http://www.uniprot.org",
+      "creator": {
+        "@type": "Organization",
+        "name": "UniProt Consortium"
+      },
+      "version": "2017-09",
+      "license": "Creative Commons Attribution-NoDerivs",
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "name": "UniParc XML",
+          "fileFormat": "xml",
+          "contentURL": "ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/uniparc/uniparc_all.xml.gz"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "UniParc FASTA",
+          "fileFormat": "fasta",
+          "contentURL": "ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/uniparc/uniparc_active.fasta.gz"
+        }
+      ]
+    }
+  ],
+  "license": "Creative Commons Attribution-NoDerivs",
+  "publication": {
+    "@id": "http://www.identifiers.org/pubmed:27899622",
+    "@type": "PublicationEvent",
+    "name": "UniProt: the universal protein knowledgebase",
+    "sameAs": [
+      "https://doi.org/10.1093/nar/gkw1099",
+      "http://europepmc.org/abstract/MED/27899622",
+      "https://www.ncbi.nlm.nih.gov/pubmed/27899622",
+      "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5210571"
+    ]
+  }
+}

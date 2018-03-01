@@ -1,0 +1,31 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Dataset",
+  "@id": "http://www.uniprot.org/uniparc",
+  "name": "UniProt Archive (UniParc)",
+  "description": "The UniProt Archive (UniParc) is a comprehensive and non-redundant database that contains most of the publicly available protein sequences in the world. Proteins may exist in different source databases and in multiple copies in the same database. UniParc avoided such redundancy by storing each unique sequence only once and giving it a stable and unique identifier (UPI) making it possible to identify the same protein from different source databases. A UPI is never removed, changed or reassigned. UniParc contains only protein sequences. All other information about the protein must be retrieved from the source databases using the database cross-references. UniParc tracks sequence changes in the source databases and archives the history of all changes. UniParc has combined many databases into one at the sequence level and searching UniParc is equivalent to searching many databases simultaneously",
+  "url": "http://www.uniprot.org/uniparc",
+  "identifier": "UniParc",
+  "keywords": "protein, protein sequence, archive",
+  "includedInDataCatalog": "http://www.uniprot.org",
+  "creator": {
+    "@type": "Organization",
+    "name": "UniProt Consortium"
+  },
+  "version": "2017-09",
+  "license": "Creative Commons Attribution-NoDerivs",
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "UniParc XML",
+      "fileFormat": "xml",
+      "contentURL": "ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/uniparc/uniparc_all.xml.gz"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "UniParc FASTA",
+      "fileFormat": "fasta",
+      "contentURL": "ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/uniparc/uniparc_active.fasta.gz"
+    }
+  ]
+}

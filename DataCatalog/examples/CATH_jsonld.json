@@ -1,0 +1,61 @@
+{
+  "@context": "http://schema.org",
+  "@type": "DataCatalog",
+  "name": "CATH - Protein Structure Classification",
+  "description": "CATH is a classification of protein structures downloaded from the Protein Data Bank. We group protein domains into superfamilies when there is sufficient evidence they have diverged from a common ancestor.",
+  "url": "http://cathdb.info/",
+  "dataset": [
+    {
+      "@type": "Dataset",
+      "name": "Collection",
+      "description": "CATH Domain Classification List (latest release) - protein structural domains classified into CATH hierarchy.",
+      "identifier": "https://identifiers.org/MIR:00100005",
+      "url": "ftp://orengoftp.biochem.ucl.ac.uk/cath/releases/latest-release/cath-classification-data/cath-domain-list.txt",
+      "keywords": [
+        "protein",
+        "domain"
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "name": "Collection",
+      "description": "CATH Domain Boundaries List (latest release) - PDB residue start/stop boundaries for CATH protein structural domains.",
+      "identifier": "https://identifiers.org/MIR:00100005",
+      "url": "ftp://orengoftp.biochem.ucl.ac.uk/cath/releases/latest-release/cath-classification-data/cath-domain-boundaries.txt",
+      "keywords": [
+        "protein",
+        "domain"
+      ]
+    }
+  ],
+  "keywords": [
+    "registry",
+    "life science"
+  ],
+  "provider": [
+    {
+      "@type": "Person",
+      "name": "CATH support",
+      "email": "i.sillitoe@ucl.ac.uk"
+    }
+  ],
+  "identifier": "www.cathdb.info",
+  "alternateName": "CATH-Gene3D",
+  "license": "http://creativecommons.org/licenses/by/4.0/",
+  "publication": {
+    "@id": "http://www.identifiers.org/pubmed/27899584",
+    "@type": "PublicationEvent",
+    "name": "CATH: an expanded resource to predict protein function through structure and sequence.",
+    "sameAs": [
+      "https://www.ncbi.nlm.nih.gov/pubmed/27899584",
+      "http://europepmc.org/abstract/MED/27899584",
+      "http://purl.uniprot.org/citations/27899584"
+    ]
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "name": "University College London (UCL)",
+    "identifier": "www.ucl.ac.uk"
+  },
+  "image": "http://www.cathdb.info/static/images/cath-favicon.png"
+}

@@ -1,0 +1,44 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfa": "http://www.w3.org/ns/rdfa#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [{
+      "@id": "",
+      "rdfa:usesVocabulary": {
+        "@id": "schema:"
+      },
+      "schema:additionalProperty": {
+        "@id": "_:N5f532001080541cf84a612429cd25559"
+      },
+      "schema:datasetUrl": {
+        "@id": "http://www.ebi.ac.uk/ena/data/view/ERS398461"
+      },
+      "schema:description": "84 Mixed species samples from ENA SRA",
+      "schema:identifier": "SAMEA2340790",
+      "schema:name": [
+        "ERS398461",
+        "S.lycLA4451_1"
+      ]
+    },
+    {
+      "@id": "_:N5f532001080541cf84a612429cd25559",
+      "@type": "schema:PropertyValue",
+      "schema:code": {
+        "@id": "_:Nc3483546896e44988745872e1fee6be2"
+      },
+      "schema:propertyId": "Organism",
+      "schema:value": "Solanum lycopersicum"
+    },
+    {
+      "@id": "_:Nc3483546896e44988745872e1fee6be2",
+      "@type": "schema:BiomedicalCode",
+      "schema:codeValue": {
+        "@id": "http://purl.obolibrary.org/obo/NCBITaxon_4081"
+      }
+    }
+  ]
+}

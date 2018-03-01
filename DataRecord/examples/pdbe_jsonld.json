@@ -1,0 +1,142 @@
+{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "url": "http://pdbe.org/4wa9",
+    "primaryImageOfPage": "http://www.ebi.ac.uk/pdbe/static/entry/4wa9_deposited_chain_front_image-800x800.png",
+    "mainEntity": {
+        "@context": "http://schema.org",
+        "@type": "Record, BiochemEntity",
+        "@id": "http://identifiers.org/pdb:4wa9",
+        "additionalType": "http://semanticscience.org/resource/SIO_011119", //biomolecular structure
+        "identifier": "4wa9",
+        "mainEntityOfPage": "http://pdbe.org/4wa9",
+        "name": {
+            "@language": "en",
+            "@value": "The crystal structure of human abl1 wild type kinase domain in complex with axitinib"
+        },
+        "isBasedOn": { //Uniprot protein
+            "@type": "BiochemEntity",
+            "@id": "http://identifiers.org/uniprot:P00519",
+            "additionalType": "http://semanticscience.org/resource/SIO_010043",
+            "identifier": "P00519",
+            "url": "http://www.ebi.ac.uk/pdbe/entry/pdb/4wa9/protein/1",
+            "name": {
+                "@language": "en",
+                "@value": "Tyrosine-protein kinase ABL1"
+            }
+        },
+        "contains": [ //Interpro domains
+            {
+                "@type": "BiochemEntity",
+                "@id": "http://identifiers.org/interpro:IPR001245",
+                "additionalType": "http://semanticscience.org/resource/SIO_010043",
+                "identifier": "IPR001245",
+                "name": "Serine-threonine/tyrosine-protein kinase, catalytic domain"
+            },
+            {
+                "@type": "BiochemEntity",
+                "@id": "http://identifiers.org/interpro:IPR008266",
+                "additionalType": "Domain",
+                "identifier": "IPR008266",
+                "name": "Tyrosine-protein kinase, active site"
+            },
+            {
+                "@type": "BiochemEntity",
+                "@id": "http://identifiers.org/interpro:IPR000719",
+                "additionalType": "Domain",
+                "identifier": "IPR000719",
+                "name": "Protein kinase domain"
+            },
+            {
+                "@type": "BiochemEntity",
+                "@id": "http://identifiers.org/interpro:IPR017441",
+                "additionalType": "Domain",
+                "identifier": "IPR017441",
+                "name": "Protein kinase, ATP binding site"
+            },
+            {
+                "@type": "PhysicalEntity",
+                "@id": "http://identifiers.org/interpro:IPR020635",
+                "additionalType": "Domain",
+                "identifier": "IPR020635",
+                "name": "Tyrosine-protein kinase, catalytic domain"
+            },
+            {
+                "@type": "PhysicalEntity",
+                "@id": "http://identifiers.org/interpro:IPR011009",
+                "additionalType": "Domain",
+                "identifier": "IPR011009",
+                "name": "Protein kinase-like domain"
+            }
+        ]
+    },
+    "isPartOf": {
+        "@type": "Dataset",
+        "@id": "http://pdbe.org"
+    },
+    "name": {
+        "@language": "en",
+        "@value": "The crystal structure of human abl1 wild type kinase domain in complex with axitinib"
+    },
+    "dateCreated": "2014-08-28",
+    "datePublished": "2015-02-11",
+    "dateModified": "2015-03-18",
+    "citation": {
+        "@type": "ScholarlyArticle",
+        "additionalType": "http://semanticscience.org/resource/SIO_000174",
+        "url": "http://identifiers.org/pubmed:25686603",
+        "name": "Axitinib effectively inhibits BCR-ABL1(T315I) with a distinct binding conformation."
+    },
+    "image": "http://www.ebi.ac.uk/pdbe/static/entry/4wa9_deposited_chain_front_image-800x800.png",
+    "additionalProperty": [
+        {
+            "@type": "PropertyValue",
+            "additionalType": "http://semanticscience.org/resource/SIO_010000",
+            "name": "organism",
+            "value": "http://identifiers.org/taxonomy:9606"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "method",
+            "value": "X-ray diffraction"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "resolution",
+            "value": "2.2Å"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "boundMolecule",
+            "value": "http://identifiers.org/pdb.ligand:AXI"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "expressionSystem",
+            "value": "http://identifiers.org/taxonomy:7108",
+            "description": "Spodoptera frugiperda"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "biochemicalFunction",
+            "value": "http://identifiers.org/GO:0005524",
+            "description": "ATP binding"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "biologicalProcess",
+            "value": "http://identifiers.org/GO:0007169",
+            "description": "transmembrane receptor protein tyrosine kinase signaling pathway"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "assemblyComposition",
+            "value": "hetero trimer"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "preferredAssembly",
+            "value": "1"
+        }
+    ]
+}

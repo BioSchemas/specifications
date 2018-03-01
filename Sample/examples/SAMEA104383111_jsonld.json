@@ -1,0 +1,20 @@
+{
+    "@context": "http://schema.org",
+    "@type": ["BioChemEntity", "Sample"],
+    "identifier": "biosample:SAMEA104383111",
+    "name": "HPSI0617pf-tuji",
+    "description": "Fibroblast cell line ...",
+    "url": "http://www.ebi.ac.uk/biosamples/samples/SAMEA104383111",
+    "dataset": [...],
+    "additionalProperty": [{
+        "@type": "PropertyValue",
+        "name": "cellType",
+        "value": "fibroblast from the user",
+        "valueReference": {
+            "@type": "CateagoryCode",
+            "name": "fibroblast",
+            "url": "http://purl.obolibrary.org/obo/CL_0000057",
+            "codeValue": "CL:0000057"
+        }
+    }]
+}

@@ -1,0 +1,59 @@
+{
+    "@context": "http://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "BAR 3.0",
+    "description": "BAR 3.0 is a server for the annotation of protein sequences relying on a comparative large-scale analysis on the entire UniProt. With BAR 3.0 and a sequence you can annotate when possible: function (Gene Ontology), structure (Protein Data Bank), protein domains (Pfam). Also if your sequence falls into a cluster with a structural/some structural template/s we provide an alignment towards the template/templates based on the Cluster-HMM (HMM profile) that allows you to directly compute your 3D model. Cluster HMMs are available for downloading.",
+    "url": "http://bar.biocomp.unibo.it/bar3",
+    "featureList": [
+        "http://edamontology.org/operation_3459",
+        "http://edamontology.org/operation_0297",
+        "http://edamontology.org/operation_1777",
+        "http://edamontology.org/operation_3439 ",
+        "http://edamontology.org/operation_2464"
+    ],
+    "softwareVersion": "3.0",
+    "citation": "https://dx.doi.org/10.1093/nar/gkx330",
+    "publisher": [{
+            "@type": "Person",
+            "name": "Giuseppe Profiti",
+            "email": "giuseppe.profiti2@unibo.it"
+        },
+        {
+            "@type": "Organization",
+            "name": "Bologna Biocomputing Group",
+            "founder": {
+                "@type": "Person",
+                "name": "Rita Casadio",
+                "email": "casadio@biocomp.unibo.it"
+            },
+            "url": "http://www.biocomp.unibo.it"
+        }
+    ],
+    "applicationCategory": "Web Application",
+    "operatingSystem": "Any",
+    "softwareHelp": {
+        "@type": "CreativeWork",
+        "url": "https://bar.biocomp.unibo.it/bar3/help.html",
+        "name": "Help page"
+    },
+    "dateCreated": "2018-01-31",
+    "Keywords": [
+        "http://edamontology.org/topic_3307",
+        "http://edamontology.org/topic_0123",
+        "http://edamontology.org/topic_0128",
+        "http://edamontology.org/topic_0128",
+        "http://edamontology.org/topic_0623",
+        "http://edamontology.org/topic_0080"
+    ],
+    "potentialAction": {
+        "@type": "ControlAction",
+        "object": {
+            "@type": "Dataset",
+            "additionalType": "http://edamontology.org/data_3021"
+        },
+        "result": {
+            "@type": "Dataset",
+            "additionalType": "http://edamontology.org/data_0896"
+        }
+    }
+}

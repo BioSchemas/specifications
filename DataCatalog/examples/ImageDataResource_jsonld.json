@@ -1,0 +1,24 @@
+{
+    "@context": "http://schema.org",
+    "@type": "DataCatalog",
+    "name": "Image Data Resource",
+    "description": "The Image Data Resource is an online, public data repository which seeks to store, integrate and serve image datasets from published scientific studies",
+    "url": "https://idr.openmicroscopy.org/",
+    "keywords": [
+        "bioimaging",
+        "life science"
+    ],
+    "provider": [
+        {
+            "@type": "Person",
+            "name": "Image Data Resource support",
+            "email": "idr@openmicroscopy.org"
+        }
+    ],
+    "alternateName": "IDR",
+    "publication": {
+        "@type": "PublicationEvent",
+        "name": "Image Data Resource: a bioimage data integration and publication platform",
+        "url": "https://dx.doi.org/10.1038/nmeth.4326"
+    }
+}

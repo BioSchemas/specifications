@@ -1,0 +1,11 @@
+{
+    "@context": "http://schema.org/",
+    "@type": "DataCatalog",
+    "name": "BioSamples",
+    "description": "BioSamples stores and supplies descriptions and metadata about biological samples used in research and development by academia and industry",
+    "url": "https://www.ebi.ac.uk/biosamples/",
+    "provider": {
+        "@type": "Organization",
+        "name": "EMBL-EBI"
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "@context": "http://schema.org",
+    "@type": "DataCatalog",
+    "@id": "https://pdbe.org",
+    "identifier": "pdbe.org",
+    "name": "Protein DataBank in Europe",
+    "description": "PDBe is the European resource for the collection, organisation and dissemination of data on biological macromolecular structures",
+    "url": "https://pdbe.org",
+    "keywords": "protein, protein structure, pdb, mmcif, ligand, pdbe",
+    "dateModified": "2017.09.27",
+    "publication": {
+        "@type": "PublicationEvent",
+        "name": "Protein Data Bank (PDB): The Single Global Macromolecular Structure Archive.",
+        "url": "http://identifiers.org/pubmed:28573592"
+    },
+    "license": {
+        "@type": "CreativeWork",
+        "name": "Creative Commons CC4 Attribution",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "dataset": {
+        "@type": "Dataset",
+        "@id": "https://pdbe.org",
+        "identifier": "pdbe",
+        "name": "Protein DataBank in Europe",
+        "description": "Weekly release of pdb entries done every Wednesday at 00:00 UTC",
+        "url": "https://pdbe.org",
+        "keywords": [
+            "protein",
+            "protein structure",
+            "pdb",
+            "mmcif",
+            "ligand",
+            "pdbe"
+        ]
+    },
+    "sourceOrganization": {
+        "@type": "Organization",
+        "name": "The European Bioinformatics Institute (EMBL-EBI)",
+        "url": "https://www.ebi.ac.uk"
+    },
+    "provider": {
+        "@type": "Organization",
+        "memberOf": [
+            {
+                "@type": "Organization",
+                "name": "World-Wide Protein Data Bank",
+                "url": "http://pdb.org"
+            },
+            {
+                "@type": "Organization",
+                "name": "World-Wide Protein Data Bank Foundation",
+                "url": "http://foundation.wwpdb.org"
+            },
+            {
+                "@type": "Organization",
+                "name": "EMDataBank",
+                "url": "http://emdatabank.org"
+            }
+        ],
+        "name": "Protein DataBank in Europe",
+        "url": "https://pdbe.org",
+        "email": "pdbehelp@ebi.ac.uk"
+    }
+}
