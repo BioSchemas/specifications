@@ -1,0 +1,42 @@
+{
+  "@context": "http://schema.org/",
+  "@type": "Dataset",
+  "identifier": "MTBLS234",
+  "url": "http://www.ebi.ac.uk/metabolights/MTBLS234",
+  "name": "Automated Label-free Quantification of Metabolites from Liquid Chromatographyâ€“Mass Spectrometry Data (Plasma)Automated Label-free Quantification of Metabolites from Liquid Chromatographyâ€“Mass Spectrometry Data (Plasma)",
+  "description": "Liquid chromatography coupled to mass spectrometry (LC-MS) has become a standard technology in metabolomics. In particular, label-free quantification based on LC-MS is easily amenable to large-scale studies and thus well suited to clinical metabolomics. Large-scale studies, however, require automated processing of the large and complex LC-MS datasets. </p> We present a novel algorithm for the detection of mass traces and their aggregation into features (i.e. all signals caused by the same analyte species) that is computationally efficient and sensitive and that leads to reproducible quantification results. The algorithm is based on a sensitive detection of mass traces, which are then assembled into features based on mass-to-charge spacing, co-elution information, and a support vector machineâ€“based classifier able to identify potential metabolite isotope patterns. The algorithm is not limited to metabolites but is applicable to a wide range of small molecules (e.g. lipidomics, peptidomics), as well as to other separation technologies. </p> We assessed the algorithm's robustness with regard to varying noise levels on synthetic data and then validated the approach on experimental data investigating human plasma samples. We obtained excellent results in a fully automated data-processing pipeline with respect to both accuracy and reproducibility. Relative to state-of-the art algorithms, ours demonstrated increased precision and recall of the method. The algorithm is available as part of the open-source software package OpenMS and runs on all major operating systems. </p> See MTBLS235 for the simulated part of this study.",
+  "keywords": [
+    "Mass spectrometry",
+    "Plasma",
+    "Spike-in",
+    "Control"
+  ],
+  "includedinDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "EMBL-EBI Metabolights",
+    "url": "http://www.ebi.ac.uk/metabolights"
+  },
+  "creator": {
+    "@type": "Person",
+    "familyName": "Kohlbacher",
+    "givenName": "Oliver",
+    "email": "oliver.kohlbacher@uni-tuebingen.de",
+    "affiliation": "Wilhelm Schickard Institute for Computer Science, University of Tubingen"
+  },
+  "variablesMeasured": "metabolite concentration",
+  "measurementTechnique": "mass spectrometry",
+  "citation": {
+    "@type": "ScholarlyArticle",
+    "headline": "Automated Label-free Quantification of Metabolites from Liquid Chromatographyâ€“Mass Spectrometry Data",
+    "identifier": [
+      "http://doi.org/10.1074/mcp.M113.031278",
+      "https://www.ncbi.nlm.nih.gov/pubmed/24176773"
+    ],
+    "datePublished": "2014-01"
+  },
+  "license": "http://www.ebi.ac.uk/about/terms-of-use",
+  "dateCreated": "2015-09-23T",
+  "datePublished": "2016-12-15T",
+  "dateModified": "2016-12-15T",
+  "fileFormat": "ISA-Tab"
+}

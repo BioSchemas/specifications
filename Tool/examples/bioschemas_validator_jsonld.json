@@ -1,0 +1,107 @@
+{
+    "@context": "http://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Bioschemas validator",
+    "featureList": "operation_0004",
+    "description": "This tool is designed to validate the fields of a schema.org object based on Bioschemas specifications. It process a URL link to a page enhanced with schema.org markup and is able to read all three formats (Microdata, JSON-LD and RDFa).",
+    "url": "https://www.france-bioinformatique.fr/en/bioschemas_crawler",
+    "applicationCategory": [
+        "Web Application"
+    ],
+    "license": [{
+            "@type": "CreativeWork",
+            "name": "LGPL-V3",
+            "url": "https://github.com/terazus/bioschemas_validator_drupal7/blob/master/LICENCE",
+            "description": "generic software licence"
+        },
+        "LGPL-V3"
+    ],
+    "potentialAction": {
+        "@type": "ControlAction",
+        "object": {
+            "@type": "Dataset",
+            "additionalType": "http://edamontology.org/format_3749",
+            "variableMeasured": "http://edamontology.org/data_2042"
+        },
+        "result": {
+            "@type": "Dataset",
+            "additionalType": "http://edamontology.org/format_2331",
+            "variableMeasured": "http://edamontology.org/data_2042"
+        },
+        "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.france-bioinformatique.fr/{lang}/bioschemas_crawler{?url,format}&media=json",
+            "httpMethod": "get"
+        }
+    },
+    "Citation": {
+        "@type": "CreativeWork",
+        "name": "My article Name",
+        "url": "https://www.example.com/myarticle",
+        "description": "This is a description",
+        "sameAs": "https://doi.org/MY/DOI"
+    },
+    "keywords": [
+        "http://edamontology.org/topic_3345"
+    ],
+    "softwareVersion": "1.0",
+    "publisher": [{
+            "@type": "Organization",
+            "name": "IFB",
+            "email": "contact@groupes.france-bioinformatique.fr",
+            "description": "French Institut of Bioinformatics (French Elixir Node)"
+        },
+        {
+            "@type": "Person",
+            "name": "Batista Dominique",
+            "email": "dominique.batista@france-bioinformatique.fr",
+            "description": "Web developer @ IFB-Core"
+        }
+    ],
+    "dateCreated": "07/06/2017",
+    "dateModified": "09/09/2017",
+    "softwareRequirements": "Null",
+    "image": "https://www.france-bioinformatique.fr/sites/default/files/ifb-logo_1.png",
+    "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "Null"
+    },
+    "hasPart": {
+        "@type": "SoftwareApplication",
+        "name": "PHP-Microdata",
+        "description": "PHP library to ensure Microdata to JSON-LD translation",
+        "url": "https://github.com/soyrex/PHP-Microdata",
+        "softwareVersion": "Unknown",
+        "featureList": "operation_0004",
+        "publisher": {
+            "@type": "Person",
+            "name": "Alex Soyrex",
+            "email": "Null",
+            "description": "Null"
+        },
+        "license": "No license",
+        "applicationCategory": "Library",
+        "operatingSystem": "All",
+        "softwareRequirements": "Apache - PHP",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "Null"
+        }
+    },
+    "operatingSystem": "All",
+    "softwareHelp": [{
+            "@type": "CreativeWork",
+            "name": "Documentation - advanced",
+            "url": "https://www.example.com/advhelp",
+            "description": "How to use Bioschemas validator as an API"
+        },
+        {
+            "@type": "CreativeWork",
+            "name": "Documentation - basics",
+            "url": "https://www.example.com/stdhelp",
+            "description": "How to use Bioschemas validator as a web form"
+        }
+    ]
+}

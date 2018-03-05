@@ -1,0 +1,70 @@
+{
+  "@context": [{
+      "@vocab": "http://bioschemas.org/",
+      "bioschemas": "http://bioschemas.org/",
+      "Gene": {
+        "@id": "bioschemas:Gene"
+      },
+      "Organism": {
+        "@id": "bioschemas:Organism"
+      },
+      "Protein": {
+        "@id": "bioschemas:Protein"
+      },
+      "transcribedFrom": {
+        "@id": "bioschemas:transcribedFrom",
+        "@type": "@id"
+      },
+      "associatedDisease": {
+        "@id": "bioschemas:associatedDisease",
+        "#type": "@id"
+      }
+    },
+    "http://schema.org",
+    {
+      "@base": "http://schema.org"
+    }
+  ],
+  "@type": [
+    "BioChemEntity",
+    "bioschemas:Protein"
+  ],
+  "identifier": "P00519",
+  "additionalType": "http://purl.obolibrary.org/obo/PR_000000001",
+  "alternateName": [
+    "ABL",
+    "JTK7"
+  ],
+  "description": "Non-receptor tyrosine-protein kinase that plays a role...",
+  "name": "ABL1",
+  "url": "http://www.uniprot.org/uniprot/P00519",
+  "isContainedIn": {
+    "@type": "BioChemEntity",
+    "additionalType": "http://purl.obolibrary.org/obo/OBI_0100026",
+    "identifier": "9606",
+    "name": "Homo sapiens",
+    "url": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+    "sameAs": "http://purl.uniprot.org/taxonomy/9606"
+  },
+  "bioschemas:associatedDisease": {
+    "@type": "MedicalCondition",
+    "additionalType": "http://semanticscience.org/resource/SIO_010299",
+    "name": "Leukemia, chronic myeloid (CML)",
+    "code": {
+      "@type": "MedicalCode",
+      "code": "608232",
+      "codingSystem": "OMIM"
+    },
+    "sameAs": "http://www.uniprot.org/diseases/DI-03735"
+  },
+  "bioschemas:transcribedFrom": {
+    "@type": [
+      "BioChemEntity",
+      "bioschemas:Gene"
+    ],
+    "additionalType": "http://purl.obolibrary.org/obo/SO_0000704",
+    "identifier": "ABL1",
+    "name": "ABL1"
+  },
+  "http://semanticscience.org/resource/SIO_000001": "http://pfam.xfam.org/clan/CL0001"
+}

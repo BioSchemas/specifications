@@ -1,0 +1,57 @@
+﻿{
+  "@context": "http://schema.org/",
+  "@type": "SoftwareApplication",
+  "name": "PscanChIP",
+  "citation": "Zambelli F, Pesole G, Pavesi G. PscanChIP: Finding over-represented transcription factor-binding site motifs and their correlations in sequences from ChIP-Seq experiments. Nucleic Acids Res. 2013 Jul;41(Web Server issue):W535-43. doi: 10.1093/nar/gkt448. Epub 2013 Jun 7. PubMed PMID: 23748563; PubMed Central PMCID: PMC3692095.",
+  "description": "PscanChIP is a web server that, starting from a collection of genomic regions derived from a ChIP-Seq experiment, scans them using motif descriptors like JASPAR or TRANSFAC position-specific frequency matrices, or descriptors uploaded by users, and it evaluates both motif enrichment and positional bias within the regions according to different measures and criteria.",
+  "url": "http://www.beaconlab.it/pscan_chip_dev",
+  "featureList": ["Enrichment analysis", "Transcriptional regulatory element prediction", "Transcription factors and regulatory sites", "Sequence motif recognition", "Sequence motif discovery", "Transcription factor binding site prediction", "ChIP-seq"],
+  "softwareVersion": "1.3",
+  "applicationCategory": "Web application",
+  "operatingSystem": "Any",
+  "softwareHelp": {
+    "@type": "CreativeWork",
+    "Name": "Help Page",
+    "url": "http://159.149.160.88/pscan_chip_dev/help.html"
+  },
+  "dateCreated": "2013-06-07",
+  "dateModified": "2018-01-24",
+  "potentialAction": {
+    "@type": "ControlAction",
+    "object": {
+      "@type": "Dataset",
+      "additionalType": "http://edamontology.org/data_2012"
+    },
+    "result": {
+      "@type": "Dataset",
+      "additionalType": "http://edamontology.org/operation_3501"
+    }
+  },
+  "license": "https://www.gnu.org/licenses/gpl-3.0.en.html",
+  "publisher": {
+    "@type": "Organization",
+    "name": "BeaconLab",
+    "url": "http://www.beaconlab.it",
+    "employee": [{
+        "@type": "Person",
+        "name": "Giulio Pavesi",
+        "email": "giulio.pavesi@unimi.it"
+      },
+      {
+        "@type": "Person",
+        "name": "Federico Zambelli",
+        "email": "federico.zambelli@unimi.it"
+      }
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Graziano Pesole",
+      "email": "graziano.pesole@uniba.it"
+    },
+    "memberOf": {
+      "@type": "Organization",
+      "name": "ELIXIR-IIB",
+      "url": "http://www.elixir-italy.org"
+    }
+  }
+}

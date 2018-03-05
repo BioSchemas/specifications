@@ -1,0 +1,62 @@
+{
+    "@context": "http://schema.org",
+    "@type": "Beacon",
+    "identifier": "amplab",
+    "name": "AMPLab - 1000 Genomes Project",
+    "supportedReference": "hg38",
+    "url": "https://amplab.cs.berkeley.edu/",
+    "version": "v0.1",
+    "dataset": [
+        {
+            "@type": "Dataset",
+            "identifier": "EGAD00001000227",
+            "name": "UK10K NEURO ABERDEEN",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "url": "https://www.ebi.ac.uk/ega/dacs/EGAC00001000205",
+            "provider": [
+                {
+                    "@type": "Organization",
+                    "name": "EMBL-EBI",
+                    "contactPoint": {
+                        "email": "",
+                        "name": ""
+                    },
+                    "description": "",
+                    "url": "http://www.ebi.ac.uk/",
+                    "address": "",
+                    "logo": "https://example.com/logo.png"
+                },
+                {
+                    "@type": "Organization",
+                    "name": "CRG",
+                    "contactPoint": {
+                        "email": "",
+                        "name": ""
+                    },
+                    "description": "",
+                    "url": "https://ega.crg.eu",
+                    "address": "",
+                    "logo": ""
+                }
+            ]
+        }
+    ],
+    "provider": {
+        "@type": "Organization",
+        "memberOf": [
+            {
+                "@type": "Organization",
+                "name": "Beacon network",
+                "url": "https://beacon-network.org"
+            },
+            {
+                "@type": "Organization",
+                "name": "Global Alliance for Genomics and Health",
+                "url": "https://www.ga4gh.org/"
+            }
+        ],
+        "name": "Beacon Network",
+        "url": "https://beacon-network.org",
+        "email": "bhelp@beacon-network.org"
+    }
+}

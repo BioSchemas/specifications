@@ -1,0 +1,72 @@
+{
+    "@context": "http://schema.org",
+    "@type": "DataCatalog",
+    "name": "SynBioMine",
+    "description": "A data warehouse for synthetic biology.",
+    "url": "http://synbiomine.org/",
+    "keywords": "data warehouse, synthetic biology",
+    "datePublished": "2017-02-06",
+    "dataset": [
+        {
+            "@type": "Dataset",
+            "name": "NCBI Taxonomy",
+            "keywords": "species, taxonomy",
+            "url": "http://www.ncbi.nlm.nih.gov/taxonomy",
+            "includedInDataCatalog": "http://synbiomine.org"
+        },
+        {
+            "@type": "Dataset",
+            "name": "NCBI RefSeq",
+            "keywords": "gene, gene sequences",
+            "url": "https://www.ncbi.nlm.nih.gov/refseq/",
+            "includedInDataCatalog": "http://synbiomine.org"
+        },
+        {
+            "@type": "Dataset",
+            "name": "UniProt",
+            "keywords": "proteins",
+            "url": "http://uniprot.org",
+            "includedInDataCatalog": "http://synbiomine.org"
+        },
+        {
+            "@type": "Dataset",
+            "name": "UniProt-GOA",
+            "keywords": "proteins, protein annotations",
+            "url": "https://www.ebi.ac.uk/GOA",
+            "includedInDataCatalog": "http://synbiomine.org"
+        },
+        {
+            "@type": "Dataset",
+            "name": "InterPro",
+            "keywords": "proteins, protein domains",
+            "url": "http://www.ebi.ac.uk/interpro/",
+            "includedInDataCatalog": "http://synbiomine.org"
+        },
+        {
+            "@type": "Dataset",
+            "name": "EggNOG",
+            "keywords": "functional annotations",
+            "url": "eggnogdb.embl.de",
+            "includedInDataCatalog": "http://synbiomine.org"
+        },
+        {
+            "@type": "Dataset",
+            "name": "BioGRID",
+            "keywords": "interactions",
+            "url": "https://thebiogrid.org/",
+            "includedInDataCatalog": "http://synbiomine.org"
+        },
+        {
+            "@type": "Dataset",
+            "name": "OrthoDB",
+            "keywords": "orthologs",
+            "url": "http://www.orthodb.org/",
+            "includedInDataCatalog": "http://synbiomine.org"
+        }
+    ],
+    "provider": {
+        "@type": "Organization",
+        "name": "Micklem Lab",
+        "url": "http://www.micklemlab.org/"
+    }
+}

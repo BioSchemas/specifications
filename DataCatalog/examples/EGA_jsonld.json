@@ -1,0 +1,49 @@
+{
+    "@context": "http://schema.org",
+    "@type": "DataCatalog",
+    "name": "European Genome-phenome Archive",
+    "alternateName": "EGA",
+    "description": "The EGA provides a service for the permanent archiving and distribution of personally identifiable genetic and phenotypic data resulting from biomedical research projects. Data at EGA was collected from individuals whose consent agreements authorise data release only for specific research use to bona fide researchers. Strict protocols govern how information is managed, stored and distributed by the EGA project.",
+    "url": "https://ega-archive.org",
+    "publication": {
+        "@type": "PublicationEvent",
+        "name": "The European Genome-phenome Archive of human data consented for biomedical research.",
+        "url": "http://europepmc.org/abstract/MED/26111507"
+    },
+    "keywords": [
+        "European Genome-phenome Archive",
+        "Genomics",
+        "Genomics Research",
+        "CRG",
+        "Centre for Genomic Regulation",
+        "EGA",
+        "EBI",
+        "European Bioinformatic Institute",
+        "Research",
+        "Genomics Archives",
+        "European Research",
+        "Human",
+        "Controlled Access",
+        "Human Data",
+        "Natural Science"
+    ],
+    "sourceOrganization": [
+        {
+            "@type": "Organization",
+            "name": "The European Bioinformatics Institute (EMBL-EBI)",
+            "url": "http://www.ebi.ac.uk/"
+        },
+        {
+            "@type": "Organization",
+            "name": "Centre for Genomic Regulation (CRG) ",
+            "url": "http://www.crg.eu/"
+        }
+    ],
+    "provider": [
+        {
+            "@type": "Person",
+            "name": "Helpdesk Officer",
+            "email": "ega-helpdesk@ebi.ac.uk"
+        }
+    ]
+}

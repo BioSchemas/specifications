@@ -1,0 +1,37 @@
+{
+    "@context": "http://schema.org/",
+    "@type": "Event",
+    "name": "Epigenomics of Common Diseases",
+    "startDate": "2017-04-15T",
+    "endDate": "2017-04-16T",
+    "description": "This conference will bring together leading scientists from the fields of epigenomics, genetics and bioinformatics.",
+    "hostInstitution": {
+        "@type": "Organization",
+        "name": "EMBL-EBI",
+        "url":"http://www.ebi.ac.uk/",
+        "email": ""
+    },
+    "organizer": {
+        "@type": "Organization",
+        "name": "EMBL-EBI",
+        "url":"http://www.ebi.ac.uk/",
+        "email": ""
+    },
+    "location": {
+        "@type": "Place",
+        "name": "University of Manchester",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "581 Oxford Road",
+            "addressCountry": "United Kingdom",
+            "addressRegion": "Manchester",
+            "postalCode": "M13 9PL"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-12.203029",
+            "longitude": "42.203021"
+        }
+    },
+    "eventType": "Workshops and courses"
+}

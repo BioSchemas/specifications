@@ -1,0 +1,77 @@
+{
+    "@context": "http://schema.org",
+    "@type": "DataCatalog",
+    "name": "IUPHAR/BPS Guide to PHARMACOLOGY",
+    "alternateName": "GtoPdb",
+    "description": "The IUPHAR/BPS Guide to PHARMACOLOGY is an expert-driven guide to pharmacological targets with quantitative information on the prescription medicines and experimental dugs that act on them. Developed as a joint initiative of the International Union of Basic and Clinical Pharmacology (IUPHAR) and the British Pharmacological Society (BPS) and is now the new home of the IUPHAR Database (IUPHAR-DB).",
+    "url": "http://www.guidetopharmacology.org/",
+    "identifier": "https://identifiers.org/MIR:00100708",
+    "keywords": "protein, target, ligand, drug, pharmacology, curated database",
+    "dataset": [
+        {
+            "@type": "Dataset",
+            "name": "IUPHAR/BPS Guide to PHARMACOLOGY database",
+            "description": "An expert-curated database of pharmacological targets with quantitative information on the prescription medicines and experimental dugs that act on them.",
+            "identifier": "https://identifiers.org/MIR:00100708",
+            "url": "http://www.guidetopharmacology.org/",
+            "keywords": [
+                "protein",
+                "target",
+                "ligand",
+                "drug",
+                "pharmacology",
+                "curated database"
+            ],
+            "version": "2017.5",
+            "license": {
+                "@type": "CreativeWork",
+                "name": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+                "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+            },
+            "distribution": {
+                "@type": "DataDownload",
+                "contentUrl": "http://www.guidetopharmacology.org/DATA/public_iuphardb_v2017.5.zip",
+                "fileFormat": "application/zip of a SQL file"
+            }
+        }
+    ],
+    "sourceOrganization": [
+        {
+            "@type": "Organization",
+            "name": "The International Union of Basic and Clinical Pharmacology",
+            "url": "http://www.iuphar.org/"
+        },
+        {
+            "@type": "Organization",
+            "name": "The British Pharmacological Society",
+            "url": "https://www.bps.ac.uk/"
+        },
+        {
+            "@type": "Organization",
+            "name": "The University of Edinburgh",
+            "url": "http://www.ed.ac.uk/"
+        }
+    ],
+    "provider": [
+        {
+            "@type": "Organization",
+            "name": "The International Union of Basic and Clinical Pharmacology",
+            "url": "http://www.iuphar.org/"
+        },
+        {
+            "@type": "Organization",
+            "name": "The British Pharmacological Society",
+            "url": "https://www.bps.ac.uk/"
+        }
+    ],
+    "license": {
+        "@type": "CreativeWork",
+        "name": "Open Data Commons Open Database License (ODbL)",
+        "url": "https://opendatacommons.org/licenses/odbl/"
+    },
+    "publication": {
+        "@type": "PublicationEvent",
+        "name": "The IUPHAR/BPS Guide to PHARMACOLOGY in 2016: towards curated quantitative interactions between 1300 protein targets and 6000 ligands",
+        "url": "http://identifiers.org/pubmed:26464438"
+    }
+}
