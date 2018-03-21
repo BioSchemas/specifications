@@ -24,7 +24,7 @@
   "@id": "http://purl.uniprot.org/uniprot/P00519",
   "@type": ["BioChemEntity", "Protein"],
   "identifier": "P00519",
-  "additionalType": "http://semanticscience.org/resource/SIO_010081",
+  "additionalType": "http://semanticscience.org/resource/SIO_010043",
   "alternateName": ["ABL", "JTK7"],
   "description": "Function: Non-receptor tyrosine-protein kinase that plays a role...",
   "name": "ABL1",
