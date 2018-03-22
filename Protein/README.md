@@ -12,6 +12,7 @@ This Protein profile specification presents the BioChemEntity usage when describ
 - [Stable specification at bioschemas.org](http://bioschemas.org/specifications/Protein/specification/)
 - [Specification candidate release](proteinProfileSpecification.html)
 - [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1WZmPPEPa6JE4iq3OSQOatUH5TeSvWj5lcRi_kDTSayU/edit?usp=drivesdk)
+- [Discussion of BioChemEntity profiles with Protein examples](https://github.com/BioSchemas/specifications/wiki/Adding-profile-specific-relations-to-BioChemEntity-and-DataRecord)
 - [Coding Examples](https://github.com/BioSchemas/specifications/tree/master/Protein/examples)
 - [GitHUb Issues](https://github.com/BioSchemas/bioschemas/labels/type%3A%20Protein)
 ## Examples
