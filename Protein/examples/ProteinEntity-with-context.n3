@@ -39,7 +39,7 @@ uniprot:P00519 a pr:000000001, :BioChemEntity ;
 
 
 
-    :additionalType sio:010081 ;
+    :additionalType sio:010043 ;
     :alternateName "ABL", "JTK7" ;
 
 
