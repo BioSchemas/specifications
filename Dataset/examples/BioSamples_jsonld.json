@@ -1,0 +1,11 @@
+{
+    "@context": "http://schema.org",
+    "@type": "Dataset",
+    "description": "BioSamples stores and supplies descriptions and metadata about biological samples used in research and development by academia and industry. Samples are either 'reference' samples (e.g. from 1000 Genomes, HipSci, FAANG) or have been used in an assay database such as the European Nucleotide Archive (ENA) or ArrayExpress.",
+    "includedInDataCatalog": {
+        "@id": "https://www.ebi.ac.uk/biosamples",
+        "@type": "DataCatalog"
+    },
+    "name": "Sample collection",
+    "url": "https://www.ebi.ac.uk/biosamples/samples"
+}
