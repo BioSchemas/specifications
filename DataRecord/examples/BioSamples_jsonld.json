@@ -2,8 +2,8 @@
     "@context": "http://schema.org",
     "@type": "DataRecord",
     "identifier": "biosamples:TESTrestsearch5",
-    "dateCreated": "2013-01-01T00:00:00",
-    "dateModified": "2018-01-23T03:52:14.219",
+    "dateCreated": "2013-01-01T00:00:00Z",
+    "dateModified": "2018-01-23T03:52:14.219Z",
     "mainEntity": {
         "@context": "http://schema.org",
         "@type": [
