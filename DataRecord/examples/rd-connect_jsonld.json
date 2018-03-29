@@ -1,0 +1,94 @@
+{
+  "@context" : "http://schema.org",
+  "@type" : "DataRecord",
+  "identifier" : "",
+  "dateCreated" : "2017-11-21T00:00:00Z",
+  "dateModified" : "2017-11-21T00:00:00Z",
+  "provider" : {
+    "@type" : "Organization",
+    "url" : "http://catalogue.rd-connect.eu/web/galliera-genetic-bank/bb_home"
+   },
+  "mainEntity" : {
+    "@context" : "http://schema.org",
+    "@type" : [ "BioChemEntity", "Sample" ],
+    "identifiers" : [ "urn:rdconnect:tngb:aaaacx6z737gv6qwh3j3muaaae", "urn:rdconnect:tngb:7809" ],
+    "url" : "https://samples.rd-connect.eu/menu/main/dataexplorer?entity=rdconnect_Sample&mod=data",
+    "additionalProperty" : [ {
+      "@type" : "PropertyValue",
+      "name" : "Disease",
+      "value" : "Ring chromosome 14",
+      "valueReference" : [ {
+        "@type" : "CategoryCode",
+        "url" : "urn:miriam:orphanet:Orphanet_1440",
+        "name" : "Ring chromosome 14",
+        "codeValue" : "1440"
+      }]
+    }, {
+      "@type" : "PropertyValue",
+      "name" : "Material Type",
+      "value" : "DNA",
+      "valueReference" : [ {
+        "@type" : "CategoryCode",
+        "url" : "http://purl.obolibrary.org/obo/FMA_74412",
+        "name" : "DNA",
+        "codeValue" : "74412"
+      }]
+    }, {
+      "@type" : "PropertyValue",
+      "name" : "Anatomical Site",
+      "value" : "Blood",
+      "valueReference" : [ {
+        "@type" : "CategoryCode",
+        "url" : "http://purl.obolibrary.org/obo/UBERON_0000178",
+        "name" : "Blood",
+        "codeValue" : "0000178"
+      }]
+    }, {
+      "@type" : "PropertyValue",
+      "name" : "Sex",
+      "value" : "Male",
+      "valueReference" : [ {
+        "@type" : "CategoryCode",
+        "url" : "http://purl.obolibrary.org/obo/PATO_0000384",
+        "name" : "Male",
+        "codeValue" : "0000384"
+      }]
+    }, {
+      "@type" : "PropertyValue",
+      "name" : "Diagnosis Type",
+      "value" : "Molecular,Cytogenetics"
+    }, {
+      "@type" : "PropertyValue",
+      "name" : "Genotype data available",
+      "value" : "Yes"
+    }, {
+      "@type" : "PropertyValue",
+      "name" : "Affected",
+      "value" : "Yes"
+    }, {
+      "@type" : "PropertyValue",
+      "name" : "Family members available",
+      "value" : "Unknown"
+    }, {
+      "@type" : "PropertyValue",
+      "name" : "Related samples available",
+      "value" : "Unknown"
+    }, {
+      "@type" : "PropertyValue",
+      "name" : "Registry data available",
+      "value" : "Yes"
+    }, {
+      "@type" : "PropertyValue",
+      "name" : "Hosting Biobank",
+      "value" : "Galliera Genetic Bank"
+    }, {
+      "@type" : "PropertyValue",
+      "name" : "Hosting Registry",
+      "value" : "Ring14 Clinical database"
+    }, {
+      "@type" : "PropertyValue",
+      "name" : "Participant ID",
+      "value" : "urn:rdconnect:tngb:7809"
+    }]
+  }
+}
