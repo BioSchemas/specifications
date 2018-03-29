@@ -3,7 +3,7 @@
    "@type" : "Organization",
    "address" : {
       "@type" : "PostalAddress",
-      "addressLocality" : "Brno,CZ",
+      "addressLocality" : "Brno, Czechia",
       "contactType" : "juridical person",
       "streetAddress" : "Masarykův onkologický ústav Žlutý kopec 7"
    },
