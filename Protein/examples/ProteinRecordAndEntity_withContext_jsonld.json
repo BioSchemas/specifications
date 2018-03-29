@@ -41,8 +41,11 @@
       "@type": "BioChemEntity",
       "identifier": "9606",
       "name": "Homo sapiens",
-      "url": "http://www.uniprot.org/taxonomy/9606",
-      "sameAs": "http://purl.uniprot.org/taxonomy/9606"
+      "categoryCode": {
+        "codeValue": "9606",
+        "url": "http://purl.uniprot.org/taxonomy/9606"
+      },
+      "url": "http://www.uniprot.org/taxonomy/9606"
     },
 
     "associatedWith": {
