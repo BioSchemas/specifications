@@ -1,0 +1,180 @@
+{
+   "@context" : "http://schema.org",
+   "@id" : null,
+   "@type" : [
+      "DataRecord"
+   ],
+   "additionalProperty" : [
+      {
+         "name" : "diagnosis_available",
+         "url" : "http://purl.obolibrary.org/obo/OGMS_0000073",
+         "value" : "urn:miriam:icd:D37-D48",
+         "valueReference" : [
+            {
+               "@type" : "CategoryCode",
+               "codeValue" : "D37-D48",
+               "name" : "Neoplasms of uncertain or unknown behaviour",
+               "url" : "https://directory.bbmri-eric.eu/api/v2/eu_bbmri_eric_disease_types/urn:miriam:icd:D37-D48"
+            }
+         ]
+      },
+      {
+         "name" : "diagnosis_available",
+         "url" : "http://purl.obolibrary.org/obo/OGMS_0000073",
+         "value" : "urn:miriam:icd:D00-D09",
+         "valueReference" : [
+            {
+               "@type" : "CategoryCode",
+               "codeValue" : "D00-D09",
+               "name" : "In situ neoplasms",
+               "url" : "https://directory.bbmri-eric.eu/api/v2/eu_bbmri_eric_disease_types/urn:miriam:icd:D00-D09"
+            }
+         ]
+      },
+      {
+         "name" : "diagnosis_available",
+         "url" : "http://purl.obolibrary.org/obo/OGMS_0000073",
+         "value" : "urn:miriam:icd:D10-D36",
+         "valueReference" : [
+            {
+               "@type" : "CategoryCode",
+               "codeValue" : "D10-D36",
+               "name" : "Benign neoplasms",
+               "url" : "https://directory.bbmri-eric.eu/api/v2/eu_bbmri_eric_disease_types/urn:miriam:icd:D10-D36"
+            }
+         ]
+      },
+      {
+         "name" : "diagnosis_available",
+         "url" : "http://purl.obolibrary.org/obo/OGMS_0000073",
+         "value" : "urn:miriam:icd:C00-C97",
+         "valueReference" : [
+            {
+               "@type" : "CategoryCode",
+               "codeValue" : "C00-C97",
+               "name" : "Malignant neoplasms",
+               "url" : "https://directory.bbmri-eric.eu/api/v2/eu_bbmri_eric_disease_types/urn:miriam:icd:C00-C97"
+            }
+         ]
+      },
+      {
+         "name" : "materials",
+         "value" : "DNA",
+         "valueReference" : [
+            {
+               "@type" : "CategoryCode",
+               "codeValue" : "DNA",
+               "name" : "DNA",
+               "url" : "https://directory.bbmri-eric.eu/api/v2/eu_bbmri_eric_material_types/DNA"
+            }
+         ]
+      },
+      {
+         "name" : "materials",
+         "value" : "Other",
+         "valueReference" : [
+            {
+               "@type" : "CategoryCode",
+               "codeValue" : "OTHER",
+               "name" : "Other",
+               "url" : "https://directory.bbmri-eric.eu/api/v2/eu_bbmri_eric_material_types/OTHER"
+            }
+         ]
+      },
+      {
+         "name" : "materials",
+         "value" : "Serum",
+         "valueReference" : [
+            {
+               "@type" : "CategoryCode",
+               "codeValue" : "SERUM",
+               "name" : "Serum",
+               "url" : "https://directory.bbmri-eric.eu/api/v2/eu_bbmri_eric_material_types/SERUM"
+            },
+            {
+               "@type" : "CategoryCode",
+               "name" : "blood serum specimen",
+               "url" : "http://purl.obolibrary.org/obo/OBI_0100017"
+            }
+         ]
+      },
+      {
+         "name" : "materials",
+         "value" : "Whole Blood",
+         "valueReference" : [
+            {
+               "@type" : "CategoryCode",
+               "codeValue" : "WHOLE_BLOOD",
+               "name" : "Whole Blood",
+               "url" : "https://directory.bbmri-eric.eu/api/v2/eu_bbmri_eric_material_types/WHOLE_BLOOD"
+            },
+            {
+               "@type" : "CategoryCode",
+               "name" : "blood specimen",
+               "url" : "http://purl.obolibrary.org/obo/OBI_0000655"
+            }
+         ]
+      },
+      {
+         "name" : "materials",
+         "value" : "Tissue (frozen)",
+         "valueReference" : [
+            {
+               "@type" : "CategoryCode",
+               "codeValue" : "TISSUE_FROZEN",
+               "name" : "Tissue (frozen)",
+               "url" : "https://directory.bbmri-eric.eu/api/v2/eu_bbmri_eric_material_types/TISSUE_FROZEN"
+            },
+            {
+               "@type" : "CategoryCode",
+               "name" : "frozen specimen",
+               "url" : "http://purl.obolibrary.org/obo/OBI_0000922"
+            }
+         ]
+      },
+      {
+         "name" : "data_categories",
+         "value" : "BIOLOGICAL_SAMPLES"
+      },
+      {
+         "name" : "data_categories",
+         "value" : "IMAGING_DATA"
+      },
+      {
+         "name" : "data_categories",
+         "value" : "MEDICAL_RECORDS",
+         "valueReference" : [
+            {
+               "@type" : "CategoryCode",
+               "name" : "sample medical record",
+               "url" : "http://purl.obolibrary.org/obo/OMIABIS_0001027"
+            }
+         ]
+      },
+      {
+         "name" : "data_categories",
+         "value" : "NATIONAL_REGISTRIES"
+      },
+      {
+         "name" : "data_categories",
+         "value" : "PHYSIOLOGICAL_BIOCHEMICAL_MEASUREMENTS"
+      },
+      {
+         "name" : "data_categories",
+         "value" : "SURVEY_DATA",
+         "valueReference" : [
+            {
+               "@type" : "CategoryCode",
+               "name" : "survey data",
+               "url" : "http://purl.obolibrary.org/obo/OMIABIS_0000060"
+            }
+         ]
+      }
+   ],
+   "provider" : {
+      "@id" : "https://directory.bbmri-eric.eu/menu/main/dataexplorer/details/eu_bbmri_eric_biobanks/bbmri-eric:ID:CZ_MMCI",
+      "@type" : "Organization",
+      "identifier" : "bbmri-eric:ID:CZ_MMCI",
+      "url" : "https://directory.bbmri-eric.eu/menu/main/dataexplorer/details/eu_bbmri_eric_biobanks/bbmri-eric:ID:CZ_MMCI"
+   }
+}
