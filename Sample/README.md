@@ -14,11 +14,9 @@ This Sample profile specification presents the BioChemEntity usage when describi
 - [Coding Examples](https://github.com/BioSchemas/specifications/tree/master/Sample/examples)
 - [Live deployes](http://bioschemas.org/liveDeploys/)
 
-## Examples
+## Other example
 
-We include examples not just for samples but also for records describing samples. As Sample we will model the entity itself (name, organism, gene, and so), while as DataRecord we will model a bit more technical stuff (latest modifed date, dataset where it belongs to, citations, distribution and so).
+We include examples not just for samples but also for records describing samples. As Sample we could model the entity itself (name, organism, additionalProperties, etc.), while as DataRecord we will model a bit more technical stuff (latest modifed date, dataset where it belongs to, etc.).
 
 - [DataRecord - BioSamples](https://github.com/BioSchemas/specifications/blob/master/DataRecord/examples/BioSamples_jsonld.json)
-- [DataSet - Rare Disease](https://github.com/BioSchemas/specifications/blob/master/DataRecord/examples/rd-connect_jsonld.json)
-- [DataRecord - BioSamples](https://github.com/BioSchemas/specifications/blob/master/DataRecord/examples/BioSamples_jsonld.json)
-- [DataSet - Rare Disease](https://github.com/BioSchemas/specifications/blob/master/DataRecord/examples/rd-connect_jsonld.json)
+- [DataRecord - Rare Disease](https://github.com/BioSchemas/specifications/blob/master/DataRecord/examples/rd-connect_jsonld.json)
