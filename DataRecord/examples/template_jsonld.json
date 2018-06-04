@@ -1,0 +1,23 @@
+{
+  "@type": "Record",
+  "citation": [
+    {
+      "@id": "URL for citing article",
+      "@type": "ScholarlyArticle",
+      "name": "Name of citing article"
+    }
+  ],
+  "dateCreated": "YYYY-MM-DD",
+  "dateModified": "YYYY-MM-DD",
+  "distribution": "http://www.uniprot.org/uniprot/P05067.fasta",
+  "image": "URL for entity image",
+  "mainEntity": {
+    "@type": "Bioschemas type name(s) for the entity",
+    "additionalType": "ontology term that further defines this entity",
+    "identifier": "entity identifier",
+    "name": "entity nane",
+    "description": "entity description"
+  },
+  "seeAlso": "cross-reference URL to information on this entity in some other data resource",
+  "url": "URL of this DataRecord"
+}
