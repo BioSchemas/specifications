@@ -1,0 +1,15 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Dataset",
+  "name": "The name of the item",
+  "description": "A description of the item",
+  "url": "URL of the item",
+  "keywords": "Keywords or tags used to describe this item",
+  "includedInDataCatalog": "URL of the containing DataCatalog",
+  "creator": {
+    "@type": "Organization",
+    "name": "Organization name"
+  },
+  "version": "Version Number",
+  "license": "License names"
+}
