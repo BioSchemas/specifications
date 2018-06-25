@@ -17,6 +17,5 @@ We use this bioschemas repository to create tasks as well as rise ideas, issues 
 ## Bioschemas links
 - [Web Site](http://bioschemas.org)
 - [Meetings](http://bioschemas.org/meetings/)
-- [Comunity](http://bioschemas.org/community/index.html)
+- [Community](http://bioschemas.org/community/index.html)
 - [Groups](http://bioschemas.org/groups/index.html)
-
