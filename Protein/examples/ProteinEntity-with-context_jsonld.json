@@ -11,7 +11,7 @@
       "Protein": {
         "@id": "http://purl.obolibrary.org/obo/PR_000000001"
       },
-      "transcribedFrom": {
+      "isTranslatedFrom": {
         "@id": "http://semanticscience.org/resource/SIO_010081",
         "@type": "@id"
       },
@@ -32,7 +32,7 @@
     "@type": "BioChemEntity",
     "identifier": "9606",
     "name": "Homo sapiens",
-    "categoryCode": {
+    "hasCategoryCode": {
       "codeValue": "9606",
       "url": "http://purl.uniprot.org/taxonomy/9606"
     },
@@ -50,7 +50,7 @@
     "sameAs": "http://purl.uniprot.org/mim/608232",
     "url": "http://www.uniprot.org/diseases/DI-03735"
   },
-  "transcribedFrom": {
+  "isTranslatedFrom": {
     "@type": ["BioChemEntity", "Gene"],
     "identifier": "ABL1",
     "name": "ABL1"
