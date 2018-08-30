@@ -5,14 +5,15 @@
 PREFIX schema: <http://schema.org/>
 PREFIX bs: <http://bioschemas.org/>
 
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-PREFIX so: <http://purl.obolibrary.org/obo/SO_> 
-PREFIX soProp: <http://purl.obolibrary.org/obo/so#> 
-PREFIX sio: <http://semanticscience.org/resource/SIO_> 
-PREFIX pr: <http://purl.obolibrary.org/obo/PR_> 
+PREFIX so: <http://purl.obolibrary.org/obo/SO_>
+PREFIX soProp: <http://purl.obolibrary.org/obo/so#>
+PREFIX sio: <http://semanticscience.org/resource/SIO_>
+PREFIX pr: <http://purl.obolibrary.org/obo/PR_>
+PREFIX ro: <http://purl.obolibrary.org/obo/RO_>
 
 <ProteinMinimum>{
   $bs:minimum (
@@ -21,14 +22,14 @@ PREFIX pr: <http://purl.obolibrary.org/obo/PR_>
     (
       schema:identifier xsd:string |
       schema:identifier IRI |
-      schema:identifier schema:PropertyValue |
+      schema:identifier @<PropertyValue> |
       schema:identifier schema:Text |
       schema:identifier schema:URL
-    ) + ;
+    ) ;
     (
       schema:name xsd:string |
       schema:name schema:Text
-    ) +
+    )
   ) ;
 }
 
@@ -38,64 +39,126 @@ PREFIX pr: <http://purl.obolibrary.org/obo/PR_>
     (
       schema:description xsd:string |
       schema:description schema:Text
-    ) + ;
+    ) ;
     (
       schema:image IRI |
-      schema:image schema:ImageObject |
+      schema:image @<ImageObject> |
       schema:image schema:URL
-    ) * ;
+    ) + ;
     (
       schema:url IRI |
       schema:url schema:URL
-    ) + ;
-    (
-      schema:isContainedIn IRI |
-      schema:isContainedIn BNODE |
-      schema:isContainedIn schema:BioChemEntity |
-      schema:isContainedIn schema:URL
-    ) + ;
-    (
-      sio:010081 IRI |
-      sio:010081 BNODE |
-      sio:010081 schema:BioChemEntity |
-      sio:010081 @<Gene>
+    ) ;
+    schema:isContainedIn @<BioChemEntity> + ; #Specification only permits BioChemEntity
+    ( #Specification does not permit URL. Specification states 010083 as the ID no 010081
+      sio:010083 @<BioChemEntity> |
+      sio:010083 @<Gene>
     ) + ;
     (
       soProp:associated_with IRI |
-      soProp:associated_with BNODE |
       soProp:associated_with schema:URL |
-      soProp:associated_with schema:MedicalCondition
-    ) *
+      soProp:associated_with @<MedicalCondition>
+    ) +
   ) ;
 }
 
 <ProteinOptional> {
   &bs:recommended ;
-  (
+  ( #enables
+    ro:0002327 @<CategoryCode> |
+    ro:0002327 @<PropertyValue>
+  ) + ;
+  ( #involvedIn
+    ro:0002331 @<CategoryCode> |
+    ro:0002331 @<PropertyValue>
+  ) + ;
+  schema:additionalProperty @<PropertyValue> + ;
+  ( # Need to restrict the values to wikidata:protein or SIO:010043
     schema:additionalType IRI |
     schema:additionaType schema:URL
-  ) * ;
+  ) + ;
   (
     schema:alternateName xsd:string |
     schema:alternateName schema:Text
-  ) * ;
+  ) + ;
+  schema:categoryCode @<CategoryCode> + ;
   (
     schema:sameAs IRI |
     schema:sameAs schema:URL
-  ) * ;
+  ) + ;
   (
+    schema:mainEntityOfPage @<CreativeWork> |
     schema:mainEntityOfPage IRI |
-    schema:mainEntityOfPage schema:CreativeWork |
     schema:mainEntityOfPage schema:URL
-  ) * ;
+  ) + ;
+  ( #Specification does not state that URL is valid type
+    schema:contains @<BioChemEntity> |
+    schema:contains @<ProteinAnnotation>
+  ) + ;
   (
-    schema:contains IRI |
-    schema:contains schema:BioChemEntity |
-    schema:contains schema:URL
-  ) * 
+    schema:hasRepresentation @<PropertyValue> |
+    schema:hasRepresentation xsd:string |
+    schema:hasRepresentation schema:Text |
+    schema:hasRepresentation IRI |
+    schema:hasRepresentation schema:URL
+  ) + ;
+  (
+    schema:location @<Place> |
+    schema:location @<PostalAddress> |
+    schema:location @<PropertyValue> |
+    schema:location xsd:string |
+    schema:location schema:Text |
+    schema:location IRI |
+    schema:location schema:URL
+  ) + ;
 }
 
 <Gene> {
   rdf:type [schema:BioChemEntity] ;
-  rdf:type [so:0000704] 
+  rdf:type [so:0000704]
+}
+
+<PropertyValue> {
+  rdf:type [schema:PropertyValue]
+  #We should define what is expected in a PropertyValue
+}
+
+<BioChemEntity> {
+  rdf:type [schema:BioChemEntity]
+  #We should define what is expected
+}
+
+<MedicalCondition> {
+  rdf:type [schema:MedicalCondition]
+  #We should define what is expected
+}
+
+<ImageObject> {
+  rdf:type [schema:ImageObject]
+  #We should define what is expected
+}
+
+<CategoryCode> {
+  rdf:type [schema:CategoryCode]
+  #We should define what is expected, inlcuding restrictions to certain ontologies
+}
+
+<ProteinAnnotation> {
+  rdf:type [schema:ProteinAnnotation]
+  #We should link to the ProteinAnnotation ShEx when it is defined
+}
+
+<CreativeWork> {
+  rdf:type [schema:CreativeWork]
+  #We should define what is expected
+}
+
+<Place> {
+  rdf:type [schema:Place]
+  #We should define what is expected
+}
+
+<PostalAddress> {
+  rdf:type [schema:PostalAddress]
+  #We should define what is expected
 }
