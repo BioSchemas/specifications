@@ -74,12 +74,10 @@
             schema:name "Creative Commons CC BY-SA 4.0 Attribution" ;
             schema:url <https://creativecommons.org/licenses/by-sa/4.0/> ] ;
     schema:name "FAIRsharing.org" ;
+    schema:alternateName "BioSharing.org", "FAIRsharing.org Registry" ; #Not meant to be part of the provider information
     schema:provider [ a schema:Organization ;
             schema:name "ELIXIR-UK" ;
             schema:url <http://www.elixir-uk.org/> ],
-        [ a schema:Organization ; # Added type declaration to make compliant
-            schema:alternateName "BioSharing.org",
-                "FAIRsharing.org Registry" ],
         [ a schema:Person ;
             schema:email "biosharing-contact-us@lists.sf.net" ;
             schema:name "FAIRsharing.org support" ],
@@ -89,4 +87,15 @@
     schema:publication [ a schema:PublicationEvent ;
             schema:name "BioSharing: curated and crowd-sourced metadata standards, databases and data policies in the life sciences." ;
             schema:url <https://academic.oup.com/database/article-lookup/doi/10.1093/database/baw075> ] ;
-    schema:url <https://fairsharing.org/> .
+    #Added citation as it is a Recommended property
+    schema:citation [ a schema:CreativeWork ;
+            schema:name "BioSharing: curated and crowd-sourced metadata standards, databases and data policies in the life sciences." ;
+            schema:url <https://academic.oup.com/database/article-lookup/doi/10.1093/database/baw075> ] ;
+    schema:url <https://fairsharing.org/> ;
+    #Added dateCreated as it is a Recommended property
+    schema:dateCreated "2017-07-11"^^xsd:date ;
+    #Added sourceOrganization as it is a Recommended property
+    schema:sourceOrganization [ a schema:Organization ;
+        schema:name "Oxford e-Research Centre, University of Oxford" ;
+        schema:url <http://www.oerc.ox.ac.uk/> ] 
+    .

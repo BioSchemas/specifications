@@ -42,8 +42,34 @@ start = @<DataCatalogMinimum>
     &bs:minimum ;
     (
       schema:alternateName xsd:string |
-      schema:description schema:Text
-    ) +
+      schema:alternateName schema:Text
+    ) + ;
+    (
+      schema:citation xsd:string |
+      schema:citation schema:Text |
+      schema:citation @<CreativeWork>
+    ) + ;
+    schema:dataset @<Dataset> + ;
+    (
+      schema:dateCreated xsd:date |
+      schema:dateCreated schema:Date |
+      schema:dateCreated xsd:dateTime |
+      schema:dateCreated schema:DateTime
+    ) ;
+    (
+      schema:identifier @<PropertyValue> |
+      schema:identifier xsd:string |
+      schema:identifier schema:Text |
+      schema:identifier IRI |
+      schema:identifier schema:URL
+    ) ;
+    (
+      schema:license @<CreativeWork> |
+      schema:license IRI |
+      schema:license schema:URL
+    ) ;
+    schema:publication @<PublicationEvent> + ;
+    schema:sourceOrganization @<Organization> +
   ) ;
 }
 
@@ -61,4 +87,32 @@ start = @<DataCatalogMinimum>
 
 <Person> {
   rdf:type [schema:Person]
+}
+
+#CreativeWork shape being used by both citation and license
+<CreativeWork> {
+  rdf:type [schema:CreativeWork] ;
+  (
+    schema:name xsd:string |
+    schema:name schema:Text
+  ) ;
+  (
+    schema:url IRI |
+    schema:url schema:URL
+  )
+}
+
+# We should see if we can cross link to the Dataset Shapes
+<Dataset> {
+  rdf:type [schema:Dataset]
+}
+
+<PropertyValue> {
+  rdf:type [schema:PropertyValue]
+  # We should define what else is expected here
+}
+
+<PublicationEvent> {
+  rdf:type [schema:PublicationEvent]
+  # We should define what else is expected here
 }
