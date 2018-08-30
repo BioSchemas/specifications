@@ -1,0 +1,92 @@
+# File created by converting JSON-LD version into turtle using https://rdf-translator.appspot.com/
+# Original JSON-LD version https://github.com/BioSchemas/specifications/blob/5bb3fe32074392d99f590e46c6c25782fb552d16/DataCatalog/examples/FAIRsharing_jsonld.json
+
+@prefix : <http://schema.org/> .
+@prefix cat: <http://www.w3.org/ns/dcat#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix cnt1: <http://www.w3.org/2008/content#> .
+@prefix ctag: <http://commontag.org/ns#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix earl: <http://www.w3.org/ns/earl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix gldp: <http://www.w3.org/ns/people#> .
+@prefix gr: <http://purl.org/goodrelations/v1#> .
+@prefix grddl: <http://www.w3.org/2003/g/data-view#> .
+@prefix ht: <http://www.w3.org/2006/http#> .
+@prefix http: <http://www.w3.org/2011/http#> .
+@prefix ical: <http://www.w3.org/2002/12/cal/icaltzd#> .
+@prefix ma: <http://www.w3.org/ns/ma-ont#> .
+@prefix og: <http://ogp.me/ns#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ptr: <http://www.w3.org/2009/pointers#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfa: <http://www.w3.org/ns/rdfa#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rev: <http://purl.org/stuff/rev#> .
+@prefix rif: <http://www.w3.org/2007/rif#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix schema: <http://schema.org/> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix v: <http://rdf.data-vocabulary.org/#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix wdr: <http://www.w3.org/2007/05/powder#> .
+@prefix wdrs: <http://www.w3.org/2007/05/powder-s#> .
+@prefix wdsr: <http://www.w3.org/2007/05/powder-s#> .
+@prefix xhv: <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<fso> a schema:DataCatalog ;
+    schema:dataset [ a schema:Dataset ;
+            schema:description "A manually curated registry of data policies from research funders, journal publishers, societies, and other organisations. These are linked to the databases and standards that they recommend for use" ;
+            schema:identifier <https://www.fairsharing.org/bsg-pXXXXXX> ;
+            schema:keywords "Data policy, journal, funder, society" ;
+            schema:name "Data Policy" ;
+            schema:url <https://fairsharing.org/policies> ],
+        [ a schema:Dataset ;
+            schema:description "A manually curated registry of standards, split into three types - Terminology Artifacts (ontologies, e.g. Gene Ontology), Models and Formats (conceptual schema, formats, data models, e.g. FASTA), and Reporting Guidelines (e.g. the ARRIVE guidelines for in vivo animal testing). These are linked to the databases that implement them and the funder and journal publisher data policies that recommend or endorse their use." ;
+            schema:identifier <https://www.fairsharing.org/bsg-sXXXXXX> ;
+            schema:includedInDataCatalog "https://www.fairsharing.org" ;
+            schema:keywords "Standards, Metadata, Formats, Ontologies, Terminology Artifacts, Reporting Guidelines" ;
+            schema:name "Metadata Standard" ;
+            schema:url <https://fairsharing.org/standards> ],
+        [ a schema:Dataset ;
+            schema:description "A manually curated registry of databases/data repositories, conforming to the BioDBcore standard (from the Life Sciences). These are linked to the standards that they use and the funder and journal publisher data policies that recommend or endorse their use." ;
+            schema:identifier <https://www.fairsharing.org/biodbcoreXXXXXX> ;
+            schema:includedInDataCatalog "https://www.fairsharing.org" ;
+            schema:keywords "Database, Data repository" ;
+            schema:name "Database" ;
+            schema:url <https://fairsharing.org/databases> ] ;
+    schema:description "A manually curated, informative and educational resource on data and metadata standards, inter-related to databases/data repositories and funder and journal publisher data policies from across disciplines. FAIRsharing is an ELIXIR-UK node resource and has an active role in the RDA and Force11 data initiatives." ;
+    schema:identifier <https://identifiers.org/MIR:00000364> ;
+    schema:keywords "registry, life science, natural science, social science, " ;
+    schema:license [ a schema:CreativeWork ;
+            schema:name "Creative Commons CC BY-SA 4.0 Attribution" ;
+            schema:url <https://creativecommons.org/licenses/by-sa/4.0/> ] ;
+    schema:name "FAIRsharing.org" ;
+    schema:provider [ a schema:Organization ;
+            schema:name "ELIXIR-UK" ;
+            schema:url <http://www.elixir-uk.org/> ],
+        [ a schema:Organization ; # Added type declaration to make compliant
+            schema:alternateName "BioSharing.org",
+                "FAIRsharing.org Registry" ],
+        [ a schema:Person ;
+            schema:email "biosharing-contact-us@lists.sf.net" ;
+            schema:name "FAIRsharing.org support" ],
+        [ a schema:Organization ;
+            schema:name "Oxford e-Research Centre, University of Oxford" ;
+            schema:url <http://www.oerc.ox.ac.uk/> ] ;
+    schema:publication [ a schema:PublicationEvent ;
+            schema:name "BioSharing: curated and crowd-sourced metadata standards, databases and data policies in the life sciences." ;
+            schema:url <https://academic.oup.com/database/article-lookup/doi/10.1093/database/baw075> ] ;
+    schema:url <https://fairsharing.org/> .

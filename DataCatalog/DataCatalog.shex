@@ -1,0 +1,64 @@
+# Validation shapes for DataCatalog resources
+# Enforces DataCatalog Specification version 0.1
+# http://bioschemas.org/specifications/DataCatalog/specification/
+
+PREFIX schema: <http://schema.org/>
+PREFIX bs: <http://bioschemas.org/>
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+start = @<DataCatalogMinimum>
+
+<DataCatalogMinimum>{
+  $bs:minimum (
+    rdf:type [schema:DataCatalog] ;
+    (
+      schema:description xsd:string |
+      schema:description schema:Text
+    ) ;
+    (
+      schema:keywords xsd:string |
+      schema:keywords schema:Text
+    ) ;
+    (
+      schema:name xsd:string |
+      schema:name schema:Text
+    ) ;
+    (
+      schema:provider @<Organization> |
+      schema:provider @<Person>
+    ) + ;
+    (
+      schema:url IRI |
+      schema:url schema:URL
+    )
+  ) ;
+}
+
+<DataCatalogRecommended> {
+  $bs:recommended (
+    &bs:minimum ;
+    (
+      schema:alternateName xsd:string |
+      schema:description schema:Text
+    ) +
+  ) ;
+}
+
+<DataCatalogOptional> {
+  &bs:recommended ;
+  (
+    schema:dateModified schema:Date |
+    schema:dateModified schema:DateTime
+  )
+}
+
+<Organization> {
+  rdf:type [schema:Organization]
+}
+
+<Person> {
+  rdf:type [schema:Person]
+}
