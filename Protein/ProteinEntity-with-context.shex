@@ -1,4 +1,8 @@
-PREFIX schema: <http://schema.org/> 
+# Validation shapes for Protein resources
+# Enforces Protein Specification version 0.4
+# http://bioschemas.org/specifications/Protein/specification/
+
+PREFIX schema: <http://schema.org/>
 PREFIX bs: <http://bioschemas.org/>
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
