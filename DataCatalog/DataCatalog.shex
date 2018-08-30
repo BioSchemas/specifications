@@ -76,9 +76,17 @@ start = @<DataCatalogMinimum>
 <DataCatalogOptional> {
   &bs:recommended ;
   (
+    schema:dateModified xsd:date |
     schema:dateModified schema:Date |
+    schema:dateModified xsd:DateTime |
     schema:dateModified schema:DateTime
-  )
+  ) ;
+  (
+    schema:fileFormat xsd:string |
+    schema:fileFormat schema:Text |
+    schema:fileFormat IRI |
+    schema:fileFormat schema:URL
+  ) +
 }
 
 <Organization> {

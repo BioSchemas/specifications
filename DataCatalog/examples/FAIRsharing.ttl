@@ -97,5 +97,9 @@
     #Added sourceOrganization as it is a Recommended property
     schema:sourceOrganization [ a schema:Organization ;
         schema:name "Oxford e-Research Centre, University of Oxford" ;
-        schema:url <http://www.oerc.ox.ac.uk/> ] 
+        schema:url <http://www.oerc.ox.ac.uk/> ] ;
+    #Added dateModified to test Optional property
+    schema:dateModified "2018-08-30"^^xsd:date ;
+    #Added fileFormat to test Optional property
+    schema:fileFormat <https://www.iana.org/assignments/media-types/application/json>
     .
