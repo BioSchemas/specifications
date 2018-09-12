@@ -25,13 +25,13 @@
     "url": "https://inpn.mnhn.fr/espece/cd_nom/60932?lg=en",
     "image": "https://inpn.mnhn.fr/photos/uploads/webtofs/inpn/3/181473.jpg",
 
-    "name": "Delphinapterus leucas (Pallas, 1776)",
+    "name": "Delphinapterus leucas",
+    "dwc:scientificName": "Delphinapterus leucas (Pallas, 1776)",
+    "dwc:scientificNameAuthorship": "(Pallas, 1776)",
     "alternateName": [ 
         "Balaena albicans Muller, 1776",
         "Beluga catodon Gray, 1846" 
     ],
-    "dwc:scientificName": "Delphinapterus leucas (Pallas, 1776)",
-    "dwc:scientificNameAuthorship": "(Pallas, 1776)",
 
     "dwc:taxonRank": "species",    
     "tc:rank": "http://rs.tdwg.org/ontology/voc/TaxonRank#Species",
