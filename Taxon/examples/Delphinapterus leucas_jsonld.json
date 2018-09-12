@@ -12,7 +12,6 @@
             "tc:rank": { "@type": "@id" },
             "dwc:parentNameUsageID": { "@type": "@id" },
             "wdt:P171": { "@type": "@id" },
-            "wdt:P105": { "@type": "@id" }
         }
     ],
     
@@ -34,8 +33,10 @@
     ],
 
     "dwc:taxonRank": "species",    
-    "tc:rank": "http://rs.tdwg.org/ontology/voc/TaxonRank#Species",
-    "wdt:P105": "http://www.wikidata.org/entity/Q7432",
+    "tc:rank":  [
+        "http://rs.tdwg.org/ontology/voc/TaxonRank#Species",
+        "http://www.wikidata.org/entity/Q7432"
+    ],
 
     "wdt:P171": "http://taxref.mnhn.fr/lod/taxon/191588/10.0",
     "dwc:parentNameUsageID": "http://taxref.mnhn.fr/lod/taxon/191588/10.0",
