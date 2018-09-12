@@ -35,8 +35,8 @@
     "isContainedIn": {
         "@type": [ "BioChemEntity", "Taxon" ],
         "identifier": "191588",
-        "url": "https://inpn.mnhn.fr/espece/cd_nom/191588?lg=en"
-        "name": "Delphinapterus"
+        "url": "https://inpn.mnhn.fr/espece/cd_nom/191588?lg=en",
+        "name": "Delphinapterus",
         "dwc:scientificName": "Delphinapterus Lacépède, 1804",
     },
 
