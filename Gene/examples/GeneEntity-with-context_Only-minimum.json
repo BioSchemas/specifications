@@ -1,0 +1,25 @@
+{
+  "@context": [
+    "http://schema.org",
+    {
+      "@base": "http://schema.org"
+    },
+    {
+      "Gene": {
+        "@id": "http://purl.obolibrary.org/obo/SO_0000704"
+      },
+      "Protein": {
+        "@id": "http://purl.obolibrary.org/obo/PR_000000001"
+      },
+      "SIO": {
+        "@id": "http://semanticscience.org/resource/SIO_",
+        "@type": "@id"
+      }
+    }
+  ],
+  "@type": ["BioChemEntity", "Gene"],
+
+
+  "identifier": "ENSG00000142192",
+  "name": "APP"
+}

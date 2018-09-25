@@ -1,0 +1,43 @@
+{
+  "@context": [
+    "http://schema.org",
+    {
+      "@base": "http://schema.org"
+    },
+    {
+      "Gene": {
+        "@id": "http://purl.obolibrary.org/obo/SO_0000704"
+      },
+      "Protein": {
+        "@id": "http://purl.obolibrary.org/obo/PR_000000001"
+      },
+      "transcribedFrom": {
+        "@id": "http://semanticscience.org/resource/SIO_010081",
+        "@type": "@id"
+      },
+      "associatedWith": {
+        "@id": "http://purl.obolibrary.org/obo/so#associated_with",
+        "@type": "@id"
+      }
+    }
+  ],
+
+  "@type": "DataRecord",
+  "@id": "http://www.identifiers.org/ensembl/ENSG00000142192",
+
+  "identifier": "P00519",
+  "mainEntity": {
+    "@type": ["BioChemEntity", "Gene"],
+    "identifier": "ENSG00000142192",
+    "name": "APP"
+  },
+
+  "isPartOf": {
+    "@type": "Dataset",
+    "@id": "https://www.ensembl.org/info/website/news.html"
+  },
+  "dateModified": "2017-12-01",
+
+
+  "url": "https://www.ensembl.org/Homo_sapiens/Variation/Summary?db=core;g=ENSG00000142192;r=21:25880550-26171128;vf=110312838"
+}
