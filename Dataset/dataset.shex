@@ -1,0 +1,32 @@
+PREFIX schema: <http://schema.org/>
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<DatasetMinimum>{
+  rdf:type [schema:Dataset] ;
+  (
+    schema:description schema:Text |
+    schema:description xsd:string
+  ) ;
+  (
+    schema:identifier xsd:string |
+    schema:identifier IRI |
+    schema:identifier schema:PropertyValue |
+    schema:identifier schema:Text |
+    schema:identifier schema:URL
+  ) + ;
+  (
+    schema:keywords xsd:string |
+    schema:keywords schema:Text
+  ) ;
+  (
+    schema:name xsd:string |
+    schema:name schema:Text
+  ) ;
+  (
+    schema:url IRI |
+    schema:url schema:URL
+  ) ;
+}
