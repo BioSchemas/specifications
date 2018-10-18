@@ -1,32 +1,46 @@
+# Validation shapes for Dataset resources
+# Enforces Dataset Specification version 0.2
+# http://bioschemas.org/specifications/Dataset
+
 PREFIX schema: <http://schema.org/>
+PREFIX bs: <http://bioschemas.org/>
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <DatasetMinimum>{
-  rdf:type [schema:Dataset] ;
-  (
-    schema:description schema:Text |
-    schema:description xsd:string
+  $bs:minimum (
+    rdf:type [schema:Dataset] ;
+    (
+      schema:description schema:Text |
+      schema:description xsd:string
+    ) ;
+    (
+      schema:identifier xsd:string |
+      schema:identifier IRI |
+      schema:identifier schema:PropertyValue |
+      schema:identifier schema:Text |
+      schema:identifier schema:URL
+    ) + ;
+    (
+      schema:keywords xsd:string |
+      schema:keywords schema:Text
+    ) ;
+    (
+      schema:name xsd:string |
+      schema:name schema:Text
+    ) ;
+    (
+      schema:url IRI |
+      schema:url schema:URL
+    ) ;
   ) ;
-  (
-    schema:identifier xsd:string |
-    schema:identifier IRI |
-    schema:identifier schema:PropertyValue |
-    schema:identifier schema:Text |
-    schema:identifier schema:URL
-  ) + ;
-  (
-    schema:keywords xsd:string |
-    schema:keywords schema:Text
-  ) ;
-  (
-    schema:name xsd:string |
-    schema:name schema:Text
-  ) ;
-  (
-    schema:url IRI |
-    schema:url schema:URL
+}
+
+<DatasetRecommended> {
+  $bs:recommended (
+    &bs:minimum ;
+    schema:citation schema:Text
   ) ;
 }
