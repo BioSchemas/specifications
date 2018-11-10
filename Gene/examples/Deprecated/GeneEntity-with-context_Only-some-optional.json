@@ -1,0 +1,34 @@
+{
+  "@context": [
+    { "bs": "http://bioschemas.org/specifications/" },
+    "http://schema.org",
+    {
+      "@base": "http://schema.org"
+    }
+  ],
+  "@type": ["BioChemEntity", "bs:Gene"],
+
+  "additionalType": "http://semanticscience.org/resource/SIO_010035",
+  "alternateName": "AD1",
+  "sameAs": "https://www.wikidata.org/wiki/Q14865870",
+  "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000142192;r=21:25880550-26171128",
+  "contains": {
+    "@type": "BioChemEntity",
+    "additionalType": "http://semanticscience.org/resource/SIO_001381",
+    "identifier": "rs577882423",
+    "location": {
+      "@type": "PropertyValue",
+      "minValue": "21:25875563",
+      "maxValue": "21:25875563",
+      "value": "C",
+      "description": "mutation",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "description": "wild",
+        "value": "T"
+      }
+    },
+    "url": "https://www.ensembl.org/Homo_sapiens/Variation/Summary?db=core;g=ENSG00000142192;r=21:25880550-26171128;vf=110312838"
+  }
+
+}
