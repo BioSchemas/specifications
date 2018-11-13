@@ -15,14 +15,12 @@
   "identifier": "ENSG00000142192",
   "name": "APP",
   "image": "https://en.wikipedia.org/wiki/Amyloid_precursor_protein#/media/File:Ideogram_human_chromosome_21.svg",
-  // note: may go away
   "isPartOfBioChemEntity": [
     {
       "@type": "BioChemEntity",
       "name": "Chromosome 21"
     }
   ],
-  //   correct as part of CC, should be valueReference eventually
   "hasCategoryCode": [
     {
       "@type": "BioChemEntity",
@@ -42,7 +40,7 @@
     "@type": "Taxon",
     "name": "Homo sapiens",
     "alternateName": "Human",
-    "url": "http://bioportal.bioontology.org/ontologies/NCBITAXON?p=classes&conceptid=9606",
+    "url": "http://bioportal.bioontology.org/ontologies/NCBITAXON?p=classes&conceptid=9606"
   },
   "hasRepresentation": "https://www.ncbi.nlm.nih.gov/nuccore/NC_000021.9?report=fasta&from=25880550&to=26171128&strand=true",
   "isTranscribedInto": {

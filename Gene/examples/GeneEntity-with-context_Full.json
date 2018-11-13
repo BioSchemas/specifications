@@ -21,7 +21,6 @@
       "name": "Chromosome 21"
     }
   ],
-  //   correct as part of CC, should be valueReference eventually
   "hasCategoryCode": [
     {
       "@type": "BioChemEntity",
