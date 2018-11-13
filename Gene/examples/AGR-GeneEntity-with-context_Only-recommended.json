@@ -52,21 +52,22 @@
         "bs:Protein"
       ],
       "identifier": "uniprot:Q5DLW5",
-      "url": "https://www.uniprot.org/uniprot/Q5DLW5"
+
+      "url": "http://purl.uniprot.org/uniprot/Q5DLW5"
     },
     {
       "@type": [
         "bs:Protein"
       ],
       "identifier": "uniprot:Q6NXE1",
-      "url": "https://www.uniprot.org/uniprot/Q6NXE1"
+      "url": "http://purl.uniprot.org/uniprot/Q6NXE1"
     },
     {
       "@type": [
         "bs:Protein"
       ],
       "identifier": "uniprot:Q8UV13",
-      "url": "https://www.uniprot.org/uniprot/Q8UV13"
+      "url": "http://purl.uniprot.org/uniprot/Q8UV13"
     }
   ]
 }
