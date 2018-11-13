@@ -15,14 +15,12 @@
   "identifier": "ZFIN:ZDB-GENE-001103-2",
   "url":"https://www.alliancegenome.org/gene/ZFIN:ZDB-GENE-001103-2",
   "name": "sox9b",
-  // note: may go away
   "isPartOfBioChemEntity": [
     {
       "@type": "BioChemEntity",
       "name": "Chromosome 3"
     }
   ],
-  //   correct as part of CC, should be valueReference eventually
   "hasCategoryCode": [
     {
       "@type": "BioChemEntity",

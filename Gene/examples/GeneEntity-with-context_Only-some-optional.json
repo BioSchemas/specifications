@@ -9,7 +9,8 @@
     }
   ],
   "@type": [
-    "bs:Gene","http://semanticscience.org/resource/SIO_010035"
+    "bs:Gene",
+    "http://purl.obolibrary.org/obo/SO_0000704"
   ],
   "identifier": "ENSG00000142192",
   "name": "APP",

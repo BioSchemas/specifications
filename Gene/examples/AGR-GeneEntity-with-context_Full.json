@@ -9,7 +9,7 @@
     }
   ],
   "@type": [
-    "bs:Gene", "http://semanticscience.org/resource/SIO_010035"
+    "bs:Gene", "http://purl.obolibrary.org/obo/SO_0000704"
   ],
   "description": "Predicted to have DNA-binding activity transcription activator activity, RNA polymerase II-specific; involved in several processes, including animal organ development, embryonic morphogenesis, and hepaticobiliary system development; predicted to localize to the nucleus.",
   "identifier": "ZFIN:ZDB-GENE-001103-2",
@@ -72,7 +72,7 @@
   "hasBioChemEntityPart": {
     "@type": [
       "BioChemEntity",
-      "http://www.sequenceontology.org/browser/current_svn/term/SO:0001023"
+      "http://purl.obolibrary.org/obo/SO_0001023"
     ],
     "identifier": "fh313",
     "name": "fh313",
