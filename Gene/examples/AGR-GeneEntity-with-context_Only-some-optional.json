@@ -1,0 +1,26 @@
+{
+  "@context": [
+    {
+      "bs": "http://bioschemas.org/"
+    },
+    "http://schema.org",
+    {
+      "@base": "http://schema.org"
+    }
+  ],
+  "@type": [
+    "bs:Gene"
+  ],
+  "identifier": "ZFIN:ZDB-GENE-001103-2",
+  "name": "sox9b",
+  "url": "https://www.alliancegenome.org/gene/ZFIN:ZDB-GENE-001103-2",
+  "additionalType": "http://www.sequenceontology.org/browser/current_svn/term/SO:0000704",
+  "sameAs": "https://zfin.org/ZDB-GENE-001103-2",
+  "hasBioChemEntityPart": {
+    "@type": "BioChemEntity",
+    "additionalType": "http://www.sequenceontology.org/browser/current_svn/term/SO:0001023",
+    "identifier": "fh313",
+    "name": "fh313",
+    "url": "https://zfin.org/ZDB-ALT-100311-9"
+  }
+}
