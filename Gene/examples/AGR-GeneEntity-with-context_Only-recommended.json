@@ -1,0 +1,56 @@
+{
+  "@context": [
+    {
+      "bs": "http://bioschemas.org/"
+    },
+    "http://schema.org",
+    {
+      "@base": "http://schema.org"
+    }
+  ],
+  "@type": [
+    "bs:Gene"
+  ],
+  "description": "Predicted to have DNA-binding activity transcription activator activity, RNA polymerase II-specific; involved in several processes, including animal organ development, embryonic morphogenesis, and hepaticobiliary system development; predicted to localize to the nucleus.",
+  "identifier": "ZFIN:ZDB-GENE-001103-2",
+  "url":"https://www.alliancegenome.org/gene/ZFIN:ZDB-GENE-001103-2",
+  "name": "sox9b",
+  // note: may go away
+  "isPartOfBioChemEntity": [
+    {
+      "@type": "BioChemEntity",
+      "name": "Chromosome 3"
+    }
+  ],
+  //   correct as part of CC, should be valueReference eventually
+  "hasCategoryCode": [
+    {
+      "@type": "BioChemEntity",
+      "name": "Ciliary rootlet",
+      "codeCategory": {
+        "@type": "CategoryCode",
+        "codeValue": "GO:0035253",
+        "url": "http://purl.obolibrary.org/obo/GO_0035253",
+        "inCodeSet": {
+          "@type": "CategoryCodeSet",
+          "name": "Gene Ontology"
+        }
+      }
+    }
+  ],
+  "taxonomicRange": {
+    "@type": "Taxon",
+    "name": "Danio rerio",
+    "alternateName": "Zebrafish",
+    "url": "http://purl.bioontology.org/ontology/NCBITAXON/7955",
+    "sameAs": "http://purl.uniprot.org/taxonomy/7955",
+  },
+  "hasRepresentation": "https://www.ncbi.nlm.nih.gov/nuccore/NC_000021.9?report=fasta&from=25880550&to=26171128&strand=true",
+  "isTranscribedInto": {
+    "@type": [
+      "bs:Protein"
+    ],
+    "identifier": "uniprot:P05067",
+    "url": "https://www.uniprot.org/uniprot/P05067"
+  }
+}
