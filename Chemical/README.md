@@ -1,4 +1,4 @@
-## Chemical specification
+## MolecularEntity specification
 
 **Profile** 
 
