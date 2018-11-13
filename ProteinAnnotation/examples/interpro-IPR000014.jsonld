@@ -1,0 +1,7 @@
+{
+	"@type": ["BioChemEntity", "ProteinAnnotation"],
+	"@id": "https://identifiers.org/interpro:IPR000014",
+	"additionalType": "http://semanticscience.org/resource/SIO_001379.rdf",
+	"name": "PAS domain",
+	"description": "PAS domains are involved in many signalling proteins where they are used as a signal sensor domain [PMID: 10357859]. PAS domains appear in archaea, bacteria and eukaryotes. Several PAS-domain proteins are known to detect their signal by way of an associated cofactor. Haeme, flavin, and a 4-hydroxycinnamyl chromophore are used in different proteins. The PAS domain was named after three proteins that it occurs in: 1) Per- period circadian protein 2) Arnt- Ah receptor nuclear translocator protein 3) Sim- single-minded protein."
+}
