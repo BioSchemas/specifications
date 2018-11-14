@@ -9,7 +9,7 @@
     }
   ],
   "@type": [
-    "bs:Gene", "http://purl.obolibrary.org/obo/SO_0000704"
+    "bs:Gene"
   ],
   "description": "Predicted to have DNA-binding activity transcription activator activity, RNA polymerase II-specific; involved in several processes, including animal organ development, embryonic morphogenesis, and hepaticobiliary system development; predicted to localize to the nucleus.",
   "identifier": "ZFIN:ZDB-GENE-001103-2",

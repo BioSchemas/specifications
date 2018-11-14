@@ -9,8 +9,7 @@
     }
   ],
   "@type": [
-    "bs:Gene",
-    "http://semanticscience.org/resource/SIO_010035"
+    "bs:Gene"
   ],
   "identifier": "ENSG00000142192",
   "name": "APP",

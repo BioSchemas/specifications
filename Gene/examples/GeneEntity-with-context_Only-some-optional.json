@@ -9,8 +9,7 @@
     }
   ],
   "@type": [
-    "bs:Gene",
-    "http://purl.obolibrary.org/obo/SO_0000704"
+    "bs:Gene"
   ],
   "identifier": "ENSG00000142192",
   "name": "APP",

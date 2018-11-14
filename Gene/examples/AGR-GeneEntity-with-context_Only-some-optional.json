@@ -9,8 +9,7 @@
     }
   ],
   "@type": [
-    "bs:Gene",
-    "http://purl.obolibrary.org/obo/SO_0000704"
+    "bs:Gene"
   ],
   "identifier": "ZFIN:ZDB-GENE-001103-2",
   "name": "sox9b",
