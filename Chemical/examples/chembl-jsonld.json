@@ -17,31 +17,59 @@
 	"biologicalRole": [
 		{
 			"@type": "DefinedTerm",
-			"inDefinedTermSet": "http://purl.obolibrary.org/obo/CHEBI_35522",
+			"@id": "http://purl.obolibrary.org/obo/CHEBI_35522",
+			"inDefinedTermSet":
+				{
+					"@type":"DefinedTermSet",
+					"@id":"ftp://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.owl",
+					"name": "CHEBI"
+				},
 			"termCode": "CHEBI:35522",
-			"name": "β-adrenergic agonist"
+			"name": "β-adrenergic agonist",
+			"url": "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:35522"
 		},
 		{
 			"@type": "DefinedTerm",
-			"inDefinedTermSet": "http://purl.obolibrary.org/obo/CHEBI_77746",
+			"@id": "http://purl.obolibrary.org/obo/CHEBI_77746",
+			"inDefinedTermSet":
+				{
+					"@type":"DefinedTermSet",
+					"@id":"ftp://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.owl",
+					"name": "CHEBI"
+				},
 			"termCode": "CHEBI:77746",
-			"name": "human metabolite"
+			"name": "human metabolite",
+			"url": "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:77746"
 		}
 	],
 	"chemicalRole": [
 		{
 			"@type": "DefinedTerm",
-			"inDefinedTermSet": "http://purl.obolibrary.org/obo/CHEBI_39142",
+			"@id": "http://purl.obolibrary.org/obo/CHEBI_39142",
+			"inDefinedTermSet":
+				{
+					"@type":"DefinedTermSet",
+					"@id":"ftp://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.owl",
+					"name": "CHEBI"
+				},
 			"termCode": "CHEBI:39142",
-			"name": "Brønsted base"
-		}
+			"name": "Brønsted base",
+			"url": "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:39142"
+		}		
 	],
 	"potentialUse": [
 		{
 			"@type": "DefinedTerm",
-			"inDefinedTermSet": "CHEBI:38147",
-			"termCode": "http://purl.obolibrary.org/obo/CHEBI_38147",
-			"name": "cardiotonic drug"
+			"@id": "http://purl.obolibrary.org/obo/CHEBI_38147",
+			"inDefinedTermSet":
+				{
+					"@type":"DefinedTermSet",
+					"@id":"ftp://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.owl",
+					"name": "CHEBI"
+				},
+			"termCode": "CHEBI:38147",
+			"name": "cardiotonic drug",
+			"url": "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:38147"
 		}],
 	"biochemicalInteraction": [{
 		"@type": "BioChemEntity",
