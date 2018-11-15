@@ -1,0 +1,39 @@
+{
+	"@context": "http://schema.org",
+	"@type": "Phenotype",
+	"name": "abnormal digit morphology",
+	"alternateName": [
+		"abnormal finger morphology",
+		"digit abnormalities",
+		"abnormal toe morphology"
+	],
+	"identifier": "MP:0002110",
+	"url": "http://www.mousephenotype.org/data/phenotypes/MP:0002110",
+	"image": "http://www.ebi.ac.uk/mi/impc/phenotype-archive/media/images/900/M00571072_00021593_download_tn_large.jpg",
+	"sameAs": "http://www.informatics.jax.org/vocab/mp_ontology/MP:0002110",
+	"valueReference": {
+		"@context": "http://schema.org",
+		"@type": "DefinedTerm",
+		"inDefinedTermSet": "http://purl.obolibrary.org/obo/mp.owl",
+		"termCode": "MP_0002110"
+	},
+	"taxonomicRange": {
+		"@context": "http://schema.org",
+		"@type": "Taxon",
+		"name": "Mus musculus",
+		"url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=10090"
+	},
+	"anatomicalLocation": {
+		"@context": "http://schema.org",
+		"@type": "DefinedTerm",
+		"name": "limb digit",
+		"inDefinedTermSet": "http://purl.obolibrary.org/obo/emapa.owl",
+		"termCode": "EMAPA_32725"
+	},
+	"isAssociatedWith": {
+		"@context": "http://schema.org",
+		"@type": "Gene",
+		"name": "Ascc2",
+		"url": "http://www.mousephenotype.org/data/genes/MGI:1922702"
+	}
+}
