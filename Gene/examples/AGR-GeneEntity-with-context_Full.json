@@ -1,0 +1,81 @@
+{
+  "@context": [
+    {
+      "bs": "http://bioschemas.org/"
+    },
+    "http://schema.org",
+    {
+      "@base": "http://schema.org"
+    }
+  ],
+  "@type": [
+    "bs:Gene"
+  ],
+  "description": "Predicted to have DNA-binding activity transcription activator activity, RNA polymerase II-specific; involved in several processes, including animal organ development, embryonic morphogenesis, and hepaticobiliary system development; predicted to localize to the nucleus.",
+  "identifier": "ZFIN:ZDB-GENE-001103-2",
+  "url": "https://www.alliancegenome.org/gene/ZFIN:ZDB-GENE-001103-2",
+  "name": "sox9b",
+  "isPartOfBioChemEntity": [
+    {
+      "@type": "BioChemEntity",
+      "name": "Chromosome 21"
+    }
+  ],
+  "hasCategoryCode": [
+    {
+      "@type": "BioChemEntity",
+      "name": "Ciliary rootlet",
+      "codeCategory": {
+        "@type": "CategoryCode",
+        "codeValue": "GO:0035253",
+        "url": "http://purl.obolibrary.org/obo/GO_0035253",
+        "inCodeSet": {
+          "@type": "CategoryCodeSet",
+          "name": "Gene Ontology"
+        }
+      }
+    }
+  ],
+  "taxonomicRange": {
+    "@type": "Taxon",
+    "name": "Danio rerio",
+    "alternateName": "Zebrafish",
+    "url": "http://purl.bioontology.org/ontology/NCBITAXON/7955",
+    "sameAs": "http://purl.uniprot.org/taxonomy/7955"
+  },
+  "hasRepresentation": "http://jbrowse.alliancegenome.org/jbrowse/index.html?data=data%2FDanio%20rerio&tracks=All%20Genes&highlight=&lookupSymbol=sox9b&loc=3:62337803..62352444",
+  "isTranscribedInto": [
+    {
+      "@type": [
+        "bs:Protein"
+      ],
+      "identifier": "uniprot:Q5DLW5",
+      "url": "http://purl.uniprot.org/uniprot/Q5DLW5"
+    },
+    {
+      "@type": [
+        "bs:Protein"
+      ],
+      "identifier": "uniprot:Q6NXE1",
+      "url": "http://purl.uniprot.org/uniprot/Q6NXE1"
+    },
+    {
+      "@type": [
+        "bs:Protein"
+      ],
+      "identifier": "uniprot:Q8UV13",
+      "url": "http://purl.uniprot.org/uniprot/Q8UV13"
+    }
+  ],
+  "alternateName": "SRY (sex determining region Y)-box 9b",
+  "sameAs": "https://zfin.org/ZDB-GENE-001103-2",
+  "hasBioChemEntityPart": {
+    "@type": [
+      "BioChemEntity",
+      "http://purl.obolibrary.org/obo/SO_0001023"
+    ],
+    "identifier": "fh313",
+    "name": "fh313",
+    "url": "https://zfin.org/ZDB-ALT-100311-9"
+  }
+}
