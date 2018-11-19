@@ -1,4 +1,4 @@
 /.idea/
 /specifications.iml
 *.swp
-*.DS_store
+.DS_STORE
