@@ -1,0 +1,16 @@
+{
+  "@context": [
+    {
+      "bs": "http://bioschemas.org/"
+    },
+    "http://schema.org",
+    {
+      "@base": "http://schema.org"
+    }
+  ],
+  "@type": [
+    "bs:Gene"
+  ],
+  "identifier": "ZFIN:ZDB-GENE-001103-2",
+  "name": "sox9b"
+}

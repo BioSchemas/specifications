@@ -1,0 +1,53 @@
+{
+  "@context": [
+    {
+      "bs": "http://bioschemas.org/"
+    },
+    "http://schema.org",
+    {
+      "@base": "http://schema.org"
+    }
+  ],
+  "@type": [
+    "bs:Gene"
+  ],
+  "description": "amyloid beta precursor protein",
+  "identifier": "ENSG00000142192",
+  "name": "APP",
+  "image": "https://en.wikipedia.org/wiki/Amyloid_precursor_protein#/media/File:Ideogram_human_chromosome_21.svg",
+  "isPartOfBioChemEntity": [
+    {
+      "@type": "BioChemEntity",
+      "name": "Chromosome 21"
+    }
+  ],
+  "hasCategoryCode": [
+    {
+      "@type": "BioChemEntity",
+      "name": "Ciliary rootlet",
+      "codeCategory": {
+        "@type": "CategoryCode",
+        "codeValue": "GO:0035253",
+        "url": "http://purl.obolibrary.org/obo/GO_0035253",
+        "inCodeSet": {
+          "@type": "CategoryCodeSet",
+          "name": "Gene Ontology"
+        }
+      }
+    }
+  ],
+  "taxonomicRange": {
+    "@type": "Taxon",
+    "name": "Homo sapiens",
+    "alternateName": "Human",
+    "url": "http://bioportal.bioontology.org/ontologies/NCBITAXON?p=classes&conceptid=9606"
+  },
+  "hasRepresentation": "https://www.ncbi.nlm.nih.gov/nuccore/NC_000021.9?report=fasta&from=25880550&to=26171128&strand=true",
+  "isTranscribedInto": {
+    "@type": [
+      "bs:Protein"
+    ],
+    "identifier": "uniprot:P05067",
+    "url": "http://purl.uniprot.org/uniprot/P05067"
+  }
+}
