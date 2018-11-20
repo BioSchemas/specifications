@@ -73,8 +73,8 @@
 			"name": "Creative Commons CC3 Attribution",
 			"url": "https://creativecommons.org/licenses/by/4.0/"
 		},
-		"publication": {
-			"@type": "PublicationEvent",
+		"citation": {
+			"@type": "ScholarlyPublication",
 			"name": "WormBase 2017: molting into a new stage",
 			"url": "https://www.ncbi.nlm.nih.gov/pubmed/29069413"
 		}
