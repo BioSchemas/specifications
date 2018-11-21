@@ -1,0 +1,35 @@
+{
+  "@context": {
+    "scheme": "http://schema.org/",
+    "bs": "http://bioschema.org/"
+  },
+  "@type": "https://bioschemas.org/Protein",
+  "identifier": [
+    "Q12068"
+  ],
+  "keywords": "enzyme Oxidoreductase NADP ",
+  "url": "https://www.uniprot.org/uniprot/Q12068",
+  "name": "NADPH-dependent methylglyoxal reductase GRE2",
+  "isEncodedBy": "http://fungi.ensembl.org/Saccharomyces_cerevisiae/Gene/Summary?db=core;g=YOL151W;r=XV:43694-44722;t=YOL151W_mRNA",
+  "taxonomicRange": "https://www.uniprot.org/taxonomy/559292",
+  "hasEnzymaticFunctions": [
+    	{
+            "@type": "https://bioschemas.org/Enzyme",
+            "identifier": "https://enzyme.expasy.org/EC/1.1.1.283",
+            "hasECNumber": "1.1.1.283",
+            "hasECAcceptedName": "Methylglyoxal reductase (NADPH)",
+ 	    "hasKineticRate": ["5.88"],
+ 	    "hasOptimalPH": ["7.5"],
+ 	    "hasOptimalTemperature": ["30"],
+	    "hasCofactor": ["NADP"]
+        },
+    	{
+            "@type": "https://bioschemas.org/Enzyme",
+            "identifier": "https://enzyme.expasy.org/EC/1.1.1.265",
+            "hasECNumber": "1.1.1.265",
+            "hasECAcceptedName": "3-methylbutanal reductase",
+ 	    "hasKineticRate": "0.14",
+ 	    "hasCofactor": ["NADP"]
+        }
+  ]
+}
