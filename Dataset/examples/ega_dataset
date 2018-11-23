@@ -1,0 +1,31 @@
+<script type="application/ld+json">
+{
+    "name": "Genetic determinants of glycated hemoglobin levels in the Greenlandic Inuit population",
+    "description": "We recently showed that a common genetic variant leads to a remarkably increased risk of type 2 diabetes (T2D) in the small and historically isolated Greenlandic population. Motivated by this, we aimed at investigating the genetic determinants for glycated hemoglobin (HbA1C). We found no novel associations but saw that for 10 out of 15 known HbA1C loci that the effects in Greenlandic Inuit were similar to previously reported. One locus, ANK1, showed a significant ancestral population specific effect. Our results shed light on the genetics effects across ethnicites. ",
+    "url": "https://ega-archive.org/studies/EGAS00001002641",
+    "identifier": [
+        "EGAS00001002641"
+    ],
+    "keywords": "Cardio-Metabochip, Type 2 diabetes",
+    "citation": [
+        "http://europepmc.org/abstract/MED/29926116",
+        "Identification of novel high-impact recessively inherited type 2 diabetes risk variants in the Greenlandic population."
+    ],
+    "creator": [
+        "EGA Submitter"
+    ],
+    "distribution": "https://ega-archive.org/studies/EGAS00001002641",
+    "includedInDataCatalog": [
+        "https://ega-archive.org"
+    ],
+    "measurementTechnique": [
+        "Array / Sequencing",
+        "Chip Type / Run Type / Analysis Type"
+    ],
+    "variableMeasured": [
+        "Genetic variation"
+    ],
+    "@context": "http://schema.org",
+    "@type": "Dataset"
+}
+</script>
