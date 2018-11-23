@@ -1,0 +1,30 @@
+<script type="application/ld+json">
+{
+    "name": "Exome-sequencing of human B cell lymphoma cell lines",
+    "description": "26 cell lines derived from human Diffuse Large B Cell lymphomas (DLBCL) or Burkit Lymphomas (BL) were subjected to whole exome sequencing. Exome capture was carried out using the SeqCap EZ Exome Library 2.0 kit (Roche/Nimblegen) and 100 bp single-read sequencing was performed on a HiSeq2500 (Illumina). 82% of the coding region was covered at least 30x.",
+    "url": "https://ega-archive.org/studies/EGAS00001001463",
+    "identifier": [
+        "EGAS00001001463"
+    ],
+    "keywords": "null",
+    "citation": [
+        "http://europepmc.org/abstract/MED/27324824"
+    ],
+    "creator": [
+        "MED-DUS"
+    ],
+    "distribution": "https://ega-archive.org/studies/EGAS00001001463",
+    "includedInDataCatalog": [
+        "https://ega-archive.org/"
+    ],
+    "license": "null",
+    "measurementTechnique": [
+        "WXS"
+    ],
+    "variableMeasured": [
+        "others"
+    ],
+    "@context": "http://schema.org",
+    "@type": "Dataset"
+}
+</script>
