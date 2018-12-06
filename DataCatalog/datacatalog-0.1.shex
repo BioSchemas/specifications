@@ -1,0 +1,62 @@
+# Validation shapes for DataCatalog resources
+# Enforces DataCatalog Specification version 0.1
+# http://bioschemas.org/specifications/DataCatalog
+
+PREFIX schema: <http://schema.org/>
+PREFIX bs: <http://bioschemas.org/>
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<DataCatalogMinimum>{
+  $bs:minimum (
+    rdf:type [schema:DataCatalog] ;
+    schema:description schema:Text OR xsd:string ;
+    schema:keywords schema:Text OR xsd:string ;
+    schema:name schema:Text OR xsd:string ;
+    schema:provider {
+        rdf:type [schema:Person schema:Organization] ;
+        schema:name schema:Text OR xsd:string ;
+      } + ;
+    schema:url schema:URL OR IRI ;
+  ) ;
+}
+
+<DataCatalogRecommended> {
+  $bs:recommended (
+    &bs:minimum ;
+    schema:alternateName schema:Text OR xsd:string ;
+    schema:citation @<PublicationShape> OR schema:Text OR xsd:string + ;
+    schema:dataset {
+        rdf:type schema:Dataset ;
+      } + ;
+    schema:dateCreated schema:Date OR xsd:date OR schema:DateTime OR xsd:datetime ;
+    schema:identifier @<PropertyValueShape> OR schema:Text OR xsd:string OR schema:URL OR IRI + ;
+    schema:license @<LicenseShape> OR schema:URL OR IRI ;
+    schema:publication {
+        rdf:type schema:PublicationEvent ;
+      } + ;
+    schema:sourceOrganization {
+      rdf:type schema:Organization ;
+    } + ;
+  ) ;
+}
+
+<DataCatalogOptional> {
+  &bs:recommended ;
+  schema:dateModified schema:Date OR xsd:date OR schema:DateTime OR xsd:datetime ;
+  schema:fileFormat schema:Text OR xsd:string OR schema:URL OR IRI + ;
+}
+
+<PublicationShape> {
+  rdf:type [schema:CreativeWork schema:ScholarlyArticle];
+}
+
+<PropertyValueShape> {
+  rdf:type [schema:PropertyValue] ;
+}
+
+<LicenseShape> {
+  rdf:type [schema:CreativeWork] ;
+}
