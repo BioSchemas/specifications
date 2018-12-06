@@ -13,7 +13,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
   $bs:minimum (
     rdf:type [schema:Dataset] ;
     schema:description schema:Text OR xsd:string ;
-    schema:identifier @<PropertyValueShape> OR schema:Text OR xsd:string OR OR schema:URL OR IRI + ;
+    schema:identifier @<PropertyValueShape> OR schema:Text OR xsd:string OR schema:URL OR IRI + ;
     schema:keywords schema:Text OR xsd:string + ;
     schema:name schema:Text OR xsd:string ;
     schema:url schema:URL OR IRI ;
