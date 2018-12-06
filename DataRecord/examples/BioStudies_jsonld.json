@@ -1,0 +1,86 @@
+{
+   "@context":{
+      "schema":"http://schema.org/",
+      "bs":"http://bioschemas.org/"
+   },
+   "@type":"DataRecord",
+   "identifier":"biostudies:S-DIXA-027",
+   "dateCreated":"2017-07-21",
+   "mainEntity":{
+      "@context":{
+         "schema":"http://schema.org/",
+         "bs":"http://bioschemas.org/"
+      },
+      "@type":"Study",
+      "description":"\"The aim of this study was the development of an alternative testing method based on human embryonic stem cells for prenatal developmental toxicity with particular emphasis on early neural development. To this purpose, we designed an in vitro protocol based on the generation of neural rosettes, representing the in vitro counterpart of the developing neural plate and neural tube, and we challenged this complex cell model with retinoic acid (RA), a well-known teratogenic agent. The cells were exposed to different concentrations of RA during the process of rosettes formation. Morphological and molecular parameters were evaluated in treated as compared with untreated cells to detect both cytotoxicity and specific neural toxicity. Transcriptomic analysis was performed with microarray Affymetrix platform and validated by quantitative real-time PCR for genes relevant to early neural development such as HoxA1, HoxA3, HoxB1, HoxB4, FoxA2, FoxC1, Otx2, and Pax7. The results obtained demonstrated that neural rosette forming cells respond to RA with clear concentration-dependent morphological, and gene expression changes remarkably similar to those induced in vivo, in the developing neural tube, by RA exposure. This strict correspondence indicates that the neural rosette protocol described is capable of detecting specific teratogenic mechanisms causing perturbations of early neural development and therefore represents a promising alternative test for human prenatal developmental toxicity.\"",
+      "url":"https://wwwdev.ebi.ac.uk/biostudies/studies/S-DIXA-027",
+      "name":"Development of a Neural Teratogenicity Test Based on Human Embryonic Stem Cells- Response to Retinoic Acid Exposure",
+      "additionalProperty":[
+         {
+            "@type":"PropertyValue",
+            "name":"Project",
+            "value":"Esnats"
+         },
+         {
+            "@type":"PropertyValue",
+            "name":"Description",
+            "value":"\"The aim of this study was the development of an alternative testing method based on human embryonic stem cells for prenatal developmental toxicity with particular emphasis on early neural development. To this purpose, we designed an in vitro protocol based on the generation of neural rosettes, representing the in vitro counterpart of the developing neural plate and neural tube, and we challenged this complex cell model with retinoic acid (RA), a well-known teratogenic agent. The cells were exposed to different concentrations of RA during the process of rosettes formation. Morphological and molecular parameters were evaluated in treated as compared with untreated cells to detect both cytotoxicity and specific neural toxicity. Transcriptomic analysis was performed with microarray Affymetrix platform and validated by quantitative real-time PCR for genes relevant to early neural development such as HoxA1, HoxA3, HoxB1, HoxB4, FoxA2, FoxC1, Otx2, and Pax7. The results obtained demonstrated that neural rosette forming cells respond to RA with clear concentration-dependent morphological, and gene expression changes remarkably similar to those induced in vivo, in the developing neural tube, by RA exposure. This strict correspondence indicates that the neural rosette protocol described is capable of detecting specific teratogenic mechanisms causing perturbations of early neural development and therefore represents a promising alternative test for human prenatal developmental toxicity.\""
+         },
+         {
+            "@type":"PropertyValue",
+            "name":"Factor Name",
+            "value":"compound"
+         },
+         {
+            "@type":"PropertyValue",
+            "name":"Factor Name",
+            "value":"dose"
+         },
+         {
+            "@type":"PropertyValue",
+            "name":"Organism",
+            "value":"Homo sapiens"
+         },
+         {
+            "@type":"PropertyValue",
+            "name":"Cell",
+            "value":"embryonic stem cell"
+         },
+         {
+            "@type":"PropertyValue",
+            "name":"Cell Line",
+            "value":"HUES-1"
+         },
+         {
+            "@type":"PropertyValue",
+            "name":"Material Type",
+            "value":"total RNA"
+         },
+         {
+            "@type":"PropertyValue",
+            "name":"Measurement Type",
+            "value":"Transcription profiling"
+         },
+         {
+            "@type":"PropertyValue",
+            "name":"Technology Type",
+            "value":"DNA microarray"
+         },
+         {
+            "@type":"PropertyValue",
+            "name":"Technology Platform",
+            "value":"Affymetrix"
+         },
+         {
+            "@type":"PropertyValue",
+            "name":"Label",
+            "value":"biotin"
+         }
+      ]
+   },
+   "isPartOf":{
+      "@type":"schema:Dataset",
+      "@id":"https://www.ebi.ac.uk/biostudies/dixa/studies"
+   },
+   "url":"https://wwwdev.ebi.ac.uk/biostudies/dixa/studies/S-DIXA-027"
+}

@@ -1,0 +1,88 @@
+{
+  "@context": [
+    { "bs": "http://bioschemas.org/specifications/" },
+    "http://schema.org",
+    {
+      "@base": "http://schema.org"
+    }
+  ],
+  "@type": ["BioChemEntity", "bs:Gene"],
+
+
+  "identifier": "ENSG00000142192",
+  "name": "APP",
+
+  "description": "amyloid beta precursor protein",
+  "image": "https://en.wikipedia.org/wiki/Amyloid_precursor_protein#/media/File:Ideogram_human_chromosome_21.svg",
+  "isContainedIn": [
+    {
+      "@type": "BioChemEntity",
+      "name": "Chromosome 21",
+      "location": {
+        "@type": "PropertyValue",
+        "minValue": "25880550",
+        "maxValue": "26171128",
+        "description": "reverse strand"
+      }
+    },
+    {
+      "@type": "BioChemEntity",
+      "name": "Ciliary rootlet",
+      "codeCategory": {
+        "@type": "CategoryCode",
+        "codeValue": "GO:0035253",
+        "url": "http://purl.obolibrary.org/obo/GO_0035253",
+        "inCodeSet": {
+          "@type": "CategoryCodeSet",
+          "name": "Gene Ontology"
+        }
+      }
+    },
+    {
+      "@type": "BioChemEntity",
+      "name": "Homo sapiens",
+      "alternateName": "Human",
+      "codeCategory": {
+        "@type": "CategoryCode",
+        "codeValue": "9606",
+        "url": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+        "sameAs": "http://purl.uniprot.org/taxonomy/9606"
+        "inCodeSet": {
+          "@type": "CategoryCodeSet",
+          "name": "NCBI taxon"
+        }
+      }
+    }
+  ],
+  "hasRepresentation": "https://www.ncbi.nlm.nih.gov/nuccore/NC_000021.9?report=fasta&from=25880550&to=26171128&strand=true",
+  "isTranscribedInto": {
+    "@type": ["BioChemEntity", "bs:Protein"],
+    "identifier": "uniprot:P05067",
+    "url": "https://www.uniprot.org/uniprot/P05067"
+  },
+
+
+  "additionalType": "http://semanticscience.org/resource/SIO_010035",
+  "alternateName": "AD1",
+  "sameAs": "https://www.wikidata.org/wiki/Q14865870",
+  "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000142192;r=21:25880550-26171128",
+  "contains": {
+    "@type": "BioChemEntity",
+    "additionalType": "http://semanticscience.org/resource/SIO_001381",
+    "identifier": "rs577882423",
+    "location": {
+      "@type": "PropertyValue",
+      "minValue": "21:25875563",
+      "maxValue": "21:25875563",
+      "value": "C",
+      "description": "mutation",
+      "valueReference": {
+        "@type": "PropertyValue",
+        "description": "wild",
+        "value": "T"
+      }
+    },
+    "url": "https://www.ensembl.org/Homo_sapiens/Variation/Summary?db=core;g=ENSG00000142192;r=21:25880550-26171128;vf=110312838"
+  }
+
+}

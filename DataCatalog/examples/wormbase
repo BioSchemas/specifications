@@ -1,0 +1,82 @@
+{
+	"@context": "http://schema.org",
+	"@type": "DataCatalog",
+	"name": "WormBase",
+	"description": "WormBase is the authoritative database for genomic and genetic information of the free-living nematode, Caenorhabditis elegans and related nematodes.",
+	"url": "https://www.wormbase.org",
+   "dataset": [
+        {
+            "@type": "Dataset",
+            "name": "WormBase",
+            "description": "WormBase is the authoritative database for genomic and genetic information of the free-living nematode, Caenorhabditis elegans and related nematodes.",
+            "identifier": "https://identifiers.org/wb",
+            "url": "http://www.wormbase.org/",
+	"keywords": [
+		"Model organism database",
+		"Model organism",
+		"Genome resource",
+		"Biomedical research",
+		"Caenorhabditis elegans",
+    "Nematode",
+		"Genetics",
+		"curated database",
+		"Phenotypes",
+		"Genotypes",
+		"Gene",
+		"Disease"
+            ],
+            "version": "WS268",
+            "license": {
+                "@type": "CreativeWork",
+                "name": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+                "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+            },
+		"distribution": {
+			"@type": "DataDownload",
+			"contentUrl": "ftp://ftp.wormbase.org/pub/wormbase/releases/current-production-release/acedb/",
+			"fileFormat": "many .tar .gz files"
+		}
+        }
+    ],
+    "sourceOrganization": [
+        {
+            "@type": "Organization",
+            "name": "WormBase",
+            "url": "http://www.wormbase.org/"
+        }
+	],  
+	"about": {
+		"@type": "Taxon",
+		"@id": "NCBI:txid6239",
+		"name": "Caenorhabditis elegans",
+		"taxonRank": {
+			"@type": "PropertyValue",
+			"id": "NCBI:txid6239",
+			"name": "Species"
+		},
+		"parentTaxon": [{
+				"@type": "Taxon",
+				"@id": "NCBI:txid6237",
+				"name": "Caenorhabditis",
+				"taxonRank": "NCBI:txid6237"
+			},
+			{
+				"type": "Taxon",
+				"@id": "NCBI:txid6231",
+				"name": "Nematoda",
+				"taxonRank": "NCBI:txid6231"
+			}
+		]
+        },
+		"license": {
+			"@type": "CreativeWork",
+			"name": "Creative Commons CC3 Attribution",
+			"url": "https://creativecommons.org/licenses/by/4.0/"
+		},
+		"citation": {
+			"@type": "ScholarlyPublication",
+			"name": "WormBase 2017: molting into a new stage",
+			"url": "https://www.ncbi.nlm.nih.gov/pubmed/29069413"
+		}
+	}
+}

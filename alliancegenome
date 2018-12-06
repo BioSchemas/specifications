@@ -1,0 +1,129 @@
+{
+  "@context": "http://schema.org",
+  "@type": "DataCatalog",
+  "name": "Alliance of Genome Resources",
+  "description": "The pages of the Alliance of Genome Resources is a union of data and information represented in the current individual Model Organism Databases: WormBase, Flybase, Saccharomyces Genome Database, Zebrafish Information Network, Mouse Genome Informatics, Rat Genome Database, and the Gene Ontology Consortium. These Alliance pages provide the best of each MOD in one place while maintaining community integrity and preserving the unique aspects of each model organism.  Through the implementation of a shared, modular information system architecture, the Alliance serves diverse user communities including human geneticists who want access to all model organism data for orthologous human genes;  basic science researchers who use specific model organisms to understand fundamental biology; computational biologists and data scientists who need access to standardized, well-structured data, both big and small; and educators and students.",
+  "url": "https://www.alliancegenome.org", 
+  "provider": {
+      "@type": "Organization",
+      "name": "Alliance of Genome Resources",
+      "url": "https://www.alliancegenome.org"
+},
+  "alternativeName": ["Alliance", "AGR"],
+  "license": {
+                "@type": "CreativeWork",
+                "name": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+                "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+            },
+  "sourceOrganization": [
+{
+    "@type": "Organization",
+    "name": "WormBase",
+    "url": "https://www.wormbase.org"
+    },
+{
+    "@type": "Organization",
+    "name": "FlyBase",
+    "url": "https://www.flybase.org"
+  },
+{
+    "@type": "Organization",
+    "name": "Zebrafish Information Network",
+    "alternateName": "ZFIN",
+    "url": "https://www.zfin.org"
+  },
+{
+    "@type": "Organization",
+    "name": "Rat Genome Database",
+    "alternateName": "RGD",
+    "url": "https://rgd.mcw.edu"
+  },
+{
+    "@type": "Organization",
+    "name": "Mouse Genome Informatics",
+	"alternateName": "MGI",
+	"url": "http://www.informatics.jax.org"
+  },
+{
+    "@type": "Organization",
+    "name": "Saccharomyces Genome Database",
+	"alternateName": "SGD",
+	"url": "https://www.yeastgenome.org"
+  },  
+{
+    "@type": "Organization",
+    "name": "Gene Ontology Consortium",
+	"alternateName": "GO",
+	"url": "https://www.geneontology.org"
+  }
+  ],
+ "dataset": [
+        {
+            "@type": "Dataset",
+            "name": "Alliance of Genome Resources",
+            "description": "A collaborative output of curated data from 6 Model Organism Databases–WormBase, Flybase, Saccharomyces Genome Database, Zebrafish Information Network, Mouse Genome Informatics and Rat Genome Database, and the Gene Ontology Consortium.",
+          "url": "http://www.alliancegenome.org/",
+          "identifier": "http://www.alliancegenome.org/agr",
+  "keywords": [
+   "Model organism database", "Model organism", "Genome resource", "Biomedical research", "Caenorhabditis", "Drosophila", "Danio", "Homo sapien", "Mus", "Laboratory mouse", "Fruit fly", "Nematode", "Rattus", "Laboratory rat", "Gene ontology", "Saccharomyces", "Yeast", "Disease", "Phenotype", "Gene", "Curated database"
+  ],
+  "creator": [
+{
+    "@type": "Organization",
+    "name": "WormBase",
+    "url": "https://www.wormbase.org"
+    },
+{
+    "@type": "Organization",
+    "name": "FlyBase",
+    "url": "https://www.flybase.org"
+  },
+{
+    "@type": "Organization",
+    "name": "Zebrafish Information Network",
+    "alternateName": "ZFIN",
+    "url": "https://www.zfin.org"
+  },
+{
+    "@type": "Organization",
+    "name": "Rat Genome Database",
+    "alternateName": "RGD",
+    "url": "https://rgd.mcw.edu"
+  },
+{
+    "@type": "Organization",
+    "name": "Mouse Genome Informatics",
+	"alternateName": "MGI",
+	"url": "http://www.informatics.jax.org"
+  },
+{
+    "@type": "Organization",
+    "name": "Saccharomyces Genome Database",
+	"alternateName": "SGD",
+	"url": "https://www.yeastgenome.org"
+  },  
+{
+    "@type": "Organization",
+    "name": "Gene Ontology Consortium",
+	"alternateName": "GO",
+	"url": "https://www.geneontology.org"
+  }
+  ],
+         "includedInCatalog": {
+            "@type": "DataCatalog",
+            "@id": "http://www.alliancegenome.org/agr"
+         },
+  "license": {
+	"@type": "CreativeWork",
+	"name": "Creative Commons CC3 Attribution",
+	"url": "https://creativecommons.org/licenses/by/3.0"
+  },
+  "version": "2.2",
+   "distribution": {
+                "@type": "WebAPI",
+                "documentation": "https://www.alliancegenome.org/api/swagger-ui"
+            }
+        }
+ ]
+   
+   }
