@@ -12,29 +12,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <DatasetMinimum>{
   $bs:minimum (
     rdf:type [schema:Dataset] ;
-    (
-      schema:description schema:Text |
-      schema:description xsd:string
-    ) ;
-    (
-      schema:identifier xsd:string |
-      schema:identifier IRI |
-      schema:identifier schema:PropertyValue |
-      schema:identifier schema:Text |
-      schema:identifier schema:URL
-    ) + ;
-    (
-      schema:keywords xsd:string |
-      schema:keywords schema:Text
-    ) ;
-    (
-      schema:name xsd:string |
-      schema:name schema:Text
-    ) ;
-    (
-      schema:url IRI |
-      schema:url schema:URL
-    ) ;
+    schema:description schema:Text OR xsd:string ;
+    schema:identifier xsd:string OR IRI OR schema:PropertyValue OR schema:Text OR schema:URL + ;
+    schema:keywords xsd:string OR schema:Text ;
+    schema:name xsd:string OR schema:Text ;
+    schema:url IRI OR schema:URL ;
   ) ;
 }
 
