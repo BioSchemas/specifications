@@ -1,0 +1,51 @@
+{
+	"@context": "http://schema.org",
+	"@type": "ChemicalSubstance",
+	"name": "JRCNM10404",
+	"alternateName": [
+		"SiO2"
+	],
+	"identifier": "NWKI-e624f68e-2e00-30e4-b4bb-9e34383580cb/study",
+	"url": "https://data.enanomapper.net/substance/NWKI-e624f68e-2e00-30e4-b4bb-9e34383580cb/study",
+	"sameAs": "https://www.wikidata.org/wiki/Q58630711",
+	"molecularFormula": "SiO2",
+	"hasBioChemEntityPart": [{
+		"@type": "BioChemEntity",
+		"identifier": "CHEBI:30563",
+		"name": "silicon dioxide",
+		"url": "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:30563",
+		"chemicalRole": "http://purl.bioontology.org/ontology/npo#NPO_1617"
+	}],
+	"potentialUse": [
+	{
+            "@type": "DefinedTerm",
+            "@id": "http://purl.obolibrary.org/obo/CHEBI_23888",
+            "inDefinedTermSet": "ftp://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.owl",
+            "termCode": "CHEBI:23888",
+            "name": "drug",
+            "url": "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:23888"
+        },
+        {
+            "@type": "DefinedTerm",
+            "@id": "http://purl.enanomapper.org/onto/ENM_8000194",
+            "inDefinedTermSet": "http://purl.enanomapper.net/onto/enanomapper.owl",
+            "termCode": "ENM_8000194",
+            "name": "food flavouring and nutrient",
+            "url": "https://www.ebi.ac.uk/ols/ontologies/enm/terms?iri=http%3A%2F%2Fpurl.enanomapper.org%2Fonto%2FENM_8000194"
+        }],
+	"chemicalRole": [
+	{
+		"@type": "DefinedTerm",
+		"@id": "http://purl.bioontology.org/ontology/npo#NPO_1909",
+		"inDefinedTermSet":
+		{
+			"@type":"DefinedTermSet",
+			"@id":"https://github.com/enanomapper/ontologies/blob/master/enanomapper.owl",
+			"name": "eNanoMapper ontology"
+		},
+		"termCode": "NPO_1909",
+		"name": "engineered nanomaterial",
+		"url": "http://bioportal.bioontology.org/ontologies/ENM/?p=classes&conceptid=http%3A%2F%2Fpurl.bioontology.org%2Fontology%2Fnpo%23NPO_1909"
+	}
+  ]
+}
