@@ -1,0 +1,29 @@
+{
+	"@context": "http://schema.org",
+	"@type": "MolecularEntity",
+	"name": "3alpha-Hydroxy-5alpha-cholan-24-oic acid Methyl ester",
+	"alternateName": [
+		"Allolithocholic Acid Methyl ester"
+	],
+	"identifier": "NU000001",
+	"url": "https://msbi.ipb-halle.de/MassBank/RecordDisplay.jsp?id=NU000001&dsn=Nihon_Univ",
+	"molecularFormula": "C25H42O3",
+	"monoisotopicMolecularWeight": 390.31340,
+	"inChI": "InChI=1S/C25H42O3/c1-16(5-10-23(27)28-4)20-8-9-21-19-7-6-17-15-18(26)11-13-24(17,2)22(19)12-14-25(20,21)3/h16-22,26H,5-15H2,1-4H3/t16-,17+,18-,19+,20-,21+,22+,24+,25-/m1/s1",
+	"smiles": ["C(C1(C)4)([H])(C(C)CCC(=O)OC)CCC1(C(C3([H])CC4)([H])CCC(C3(C)2)([H])CC(O)CC2)[H]"],
+	"biologicalRole": [
+		{
+			"@type": "DefinedTerm",
+			"@id": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C66892",
+			"inDefinedTermSet":
+				{
+					"@type":"DefinedTermSet",
+					"@id":"http://data.bioontology.org/ontologies/NCIT/submissions/69/download?apikey=8b5b7825-538d-40e0-9e9e-5ab9274a9aeb",
+					"name": "National Cancer Institute Thesaurus"
+				},
+			"termCode": "C66892",
+			"name": "natural product",
+			"url": "http://bioportal.bioontology.org/ontologies/NCIT?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C66892"
+		}
+  ]
+}
