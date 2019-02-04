@@ -3,8 +3,7 @@
         "http://schema.org",
         {
             "dwc": "http://rs.tdwg.org/dwc/terms/",
-            "dwc:vernacularName": { "@container": "@language" },
-            "tc:rank": { "@type": "@id" }
+            "dwc:vernacularName": { "@container": "@language" }
         }
     ],
     
