@@ -1,0 +1,164 @@
+{
+  "@context": "http://schema.org",
+  "@type": "CreativeWork",
+  "identifier": "biotea:PMC35353",
+  "isBasedOn": "https://www.ncbi.nlm.nih.gov/pmc/oai/oai.cgi?verb=GetRecord&identifier=oai:pubmedcentral.nih.gov:35353&metadataPrefix=pmc_fm",
+  "dateCreated": "2019-03-15",
+  "sdPublisher": "http://biotea.github.io",
+  "creator": "http://biotea.github.io/agent/biotea_serializer",
+  "sdLicense": "https://creativecommons.org/licenses/by/4.0/",
+  "version": "201903",
+  "sameAs": [
+    "http://bio2rdf.org/pubmed:11476670",
+    "http://identifiers.org/pubmed/11476670"
+  ],
+  "mainEntity": {
+    "@id": "https://doi.org/10.1186/1471-2156-2-9",
+    "@type": "ScholarlyArticle",
+    "identifier": "doi:10.1186/1471-2156-2-9",
+    "url": "https://doi.org/10.1186/1471-2156-2-9",
+    "alternateName": [
+      "accession:PMC35353",
+      "pmcid:PMC35353",
+      "pmc-uid:35353",
+      "pmid:11476670",
+      "publisher-id:1471-2156-2-9",
+      "pmid:11476670"
+    ],
+    "headline": "A missense mutation (Q279R) in the Fumarylacetoacetate Hydrolase gene, responsible for hereditary tyrosinemia, acts as a splicing mutation",
+    "pageStart": 9,
+    "pageEnd": 9,
+    "datePublished": "2001-6-29",
+    "backstory": "Background: Tyrosinemia type I, the most severe disease of the tyrosine catabolic pathway is caused by a deficiency in fumarylacetoacetate hydrolase (FAH). A patient showing few of the symptoms associated with the disease, was found to be a compound heterozygote for a splice mutation, IVS6-1g-&gt;t, and a putative missense mutation, Q279R. Analysis of FAH expression in liver sections obtained after resection for hepatocellular carcinoma revealed a mosaic pattern of expression. No FAH was found in tumor regions while a healthy region contained enzyme-expressing nodules. Results: Analysis of DNA from a FAH expressing region showed that the expression of the protein was due to correction of the Q279R mutation. RT-PCR was used to assess if Q279R RNA was produced in the liver cells and in fibroblasts from the patient. Normal mRNA was found in the liver region where the mutation had reverted while splicing intermediates were found in non-expressing regions suggesting that the Q279R mutation acted as a splicing mutation. Sequence of transcripts showed skipping of exon 8 alone or together with exon 9. Using minigenes in transfection assays, the Q279R mutation was shown to induce skipping of exon 9 when placed in a constitutive splicing environment. Conclusion: These data suggest that the putative missense mutation Q279R in the FAH gene acts as a splicing mutation. Moreover FAH expression can be partially restored in certain liver cells as a result of a reversion of the Q279R mutation and expansion of the corrected cells. ",
+    "author": [
+      {
+        "@type": "Person",
+        "givenName": "Natacha",
+        "familyName": "Dreumont",
+        "name": "Natacha Dreumont"
+      },
+      {
+        "@type": "Person",
+        "givenName": "Jacques A",
+        "familyName": "Poudrier",
+        "name": "Jacques A Poudrier"
+      },
+      {
+        "@type": "Person",
+        "givenName": "Anne",
+        "familyName": "Bergeron",
+        "name": "Anne Bergeron"
+      },
+      {
+        "@type": "Person",
+        "givenName": "Harvey L",
+        "familyName": "Levy",
+        "name": "Harvey L Levy"
+      },
+      {
+        "@type": "Person",
+        "givenName": "Faouzi",
+        "familyName": "Baklouti",
+        "name": "Faouzi Baklouti"
+      },
+      {
+        "@type": "Person",
+        "givenName": "Robert M",
+        "familyName": "Tanguay",
+        "name": "Robert M Tanguay"
+      }
+    ],
+    "sameAs": [
+      "http://www.biomedcentral.com/1471-2156/2/9",
+      "http://www.ncbi.nlm.nih.gov/pmc/articles/PMC35353",
+      "http://info.identifiers.org/pubmed/11476670",
+      "https://www.ncbi.nlm.nih.gov/pubmed/11476670"
+    ],
+    "isPartOf": {
+      "@type": "PublicationVolume",
+      "volumeNumber": 2,
+      "isPartOf": {
+        "@type": "Periodical",
+        "issn": "1471-2156",
+        "name": "BMC Genetics",
+        "publisher": {
+          "@type": "Organization",
+          "name": "BioMed Central"
+        }
+      }
+    },
+    "citation": [
+      {
+        "@type": "ScholarlyArticle",
+        "sameAs": [
+          "http://info.identifiers.org/pubmed/270706",
+          "https://www.ncbi.nlm.nih.gov/pubmed/270706"
+        ],
+        "alternateName": "pmid:270706"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "sameAs": [
+          "http://info.identifiers.org/pubmed/2378356",
+          "https://www.ncbi.nlm.nih.gov/pubmed/2378356"
+        ],
+        "alternateName": "pmid:2378356"
+      }
+    ]
+  },
+  "hasPart": {
+    "@type": "Collection",
+    "isBasedOn": "http://pubannotation.org/projects/Biotea/docs/sourcedb/PMC/sourceid/35353/annotations.json",
+    "dateCreated": "2019-03-15",
+    "sdPublisher": "http://biotea.github.io",
+    "creator": "http://biotea.github.io/agent/biotea_serializer",
+    "sdLicense": "https://creativecommons.org/licenses/by/4.0/",
+    "version": "201903",
+    "hasPart": [
+      {
+        "@type": [
+          "CreativeWork",
+          "SemanticAnnotation"
+        ],
+        "subjectOf": "https://doi.org/10.1186/1471-2156-2-9",
+        "creator": "http://data.bioontology.org/documentation#nav_annotator",
+        "text": "missense mutation",
+        "commentCount": 3,
+        "mainEntity": [
+          {
+            "@type": "DefinedTerm",
+            "termCode": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C45585"
+          },
+          {
+            "@type": "DefinedTerm",
+            "termCode": "http://purl.bioontology.org/ontology/MESH/D020125"
+          },
+          {
+            "@type": "DefinedTerm",
+            "termCode": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C18133"
+          }
+        ]
+      },
+      {
+        "@type": [
+          "CreativeWork",
+          "SemanticAnnotation"
+        ],
+        "subjectOf": "https://doi.org/10.1186/1471-2156-2-9",
+        "creator": "http://data.bioontology.org/documentation#nav_annotator",
+        "text": "corrected",
+        "commentCount": 1,
+        "mainEntity": [
+          {
+            "@type": "DefinedTerm",
+            "termCode": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C37934"
+          },
+          {
+            "@type": "DefinedTerm",
+            "termCode": "http://purl.bioontology.org/ontology/SNOMEDCT/33714007"
+          }
+        ]
+      }
+    ]
+  }
+}
