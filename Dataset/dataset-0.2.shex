@@ -1,0 +1,60 @@
+# Validation shapes for Dataset resources
+# Enforces Dataset Specification version 0.2
+# http://bioschemas.org/specifications/Dataset
+
+PREFIX schema: <http://schema.org/>
+PREFIX bs: <http://bioschemas.org/>
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<DatasetMinimum>{
+  $bs:minimum (
+    rdf:type [schema:Dataset] ;
+    schema:description schema:Text OR xsd:string ;
+    schema:identifier @<PropertyValueShape> OR schema:Text OR xsd:string OR schema:URL OR IRI + ;
+    schema:keywords schema:Text OR xsd:string ;
+    schema:name schema:Text OR xsd:string ;
+    schema:url schema:URL OR IRI ;
+  ) ;
+}
+
+<DatasetRecommended> {
+  $bs:recommended (
+    &bs:minimum ;
+    schema:citation @<PublicationShape> OR schema:Text OR xsd:string + ;
+    schema:creator @<PersonOrOrganizationShape> + ;
+    schema:distribution @<DataDownloadShape> ;
+    schema:includedInDataCatalog @<DataCatalogShape> + ;
+    schema:license @<LicenseShape> OR schema:URL OR IRI ;
+    schema:measurementTechnique schema:Text OR xsd:string OR schema:URL OR IRI + ;
+    schema:variableMeasured @<PropertyValueShape> OR schema:Text OR xsd:string + ;
+    schema:version schema:Number OR xsd:int OR xsd:decimal OR schema:Text OR xsd:string ;
+  ) ;
+}
+
+<PublicationShape> {
+  rdf:type [schema:CreativeWork schema:ScholarlyArticle];
+}
+
+<PersonOrOrganizationShape> {
+  rdf:type [schema:Organization schema:Person] ;
+  schema:name schema:Text OR xsd:string ;
+}
+
+<DataDownloadShape> {
+  rdf:type [schema:DataDownload] ;
+}
+
+<DataCatalogShape> {
+  rdf:type [schema:DataCatalog] ;
+}
+
+<LicenseShape> {
+  rdf:type [schema:CreativeWork] ;
+}
+
+<PropertyValueShape> {
+  rdf:type [schema:PropertyValue] ;
+}
