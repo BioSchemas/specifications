@@ -7,8 +7,10 @@
         }
     ],
     
-    "@type" : [ "Taxon" ],
+    "@type" : "Taxon",
     "additionalType": [ "dwc:Taxon", "http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept" ],
+    "identifier": "60932",
+    "mainEntityOfPage": "https://inpn.mnhn.fr/espece/cd_nom/60932?lg=en",
 
     "name": "Delphinapterus leucas",
     "dwc:scientificName": "Delphinapterus leucas (Pallas, 1776)",
@@ -17,9 +19,11 @@
         "Balaena albicans Muller, 1776",
         "Beluga catodon Gray, 1846" 
     ],
+    "dwc:vernacularName": [
+        { "@language": "en", "@value": "Beluga Whale" },
+        { "@language": "fr", "@value": "Bélouga" }
+    ],
 
-    "identifier": "60932",
-    "url": "https://inpn.mnhn.fr/espece/cd_nom/60932?lg=en",
     "image": "https://inpn.mnhn.fr/photos/uploads/webtofs/inpn/3/181473.jpg",
 
     "taxonRank": [
@@ -37,15 +41,9 @@
         "taxonRank" : [ "http://rs.tdwg.org/ontology/voc/TaxonRank#Genus", "genus" ]
     },
 
-    "dwc:vernacularName": [
-        { "@language": "en", "@value": "Beluga Whale" },
-        { "@language": "fr", "@value": "Bélouga" }
-    ],
-    
     "sameAs": [
-        "http://eol.org/pages/328541",
-        "http://en.wikipedia.org/w/index.php?title=Beluga_whale",
-        "http://www.catalogueoflife.org/annual-checklist/details/species/id/6850357",
+        "http://doris.ffessm.fr/Especes/Delphinapterus-leucas-Beluga-868",
+        "http://www.marinespecies.org/aphia.php?p=taxdetails&id=137115",
         "http://www.iucnredlist.org/details/6335"
     ]
 }
