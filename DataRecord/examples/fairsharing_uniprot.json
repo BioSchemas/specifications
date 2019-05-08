@@ -1,7 +1,7 @@
 {
   "@type": "Record",
   "@id":"htts://doi.org/10.25504/FAIRsharing.s1ne3g",
-  "identifier": "uniprot",
+  "identifier": "10.25504/FAIRsharing.s1ne3g",
   "mainEntity": {
     "@type": "Dataset",
     "identifier": "https://uniprot.org",
