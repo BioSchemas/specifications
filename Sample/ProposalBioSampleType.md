@@ -68,7 +68,7 @@ Range extended to include BioSample.
 
 Potential issue is that the description of `locationCreated` mentions `CreativeWork` which `BioSample` does not inherit from.
 
-#### sampleingAge
+#### samplingAge
 
 New property 
 
