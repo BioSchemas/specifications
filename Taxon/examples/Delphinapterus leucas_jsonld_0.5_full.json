@@ -20,6 +20,7 @@
             "value": "137115"
         }
     ],
+    "mainEntityOfPage": "https://inpn.mnhn.fr/espece/cd_nom/60932?lg=en",
     
     "name": "Delphinapterus leucas (Pallas, 1776)",
     "scientificName": {
@@ -56,7 +57,7 @@
         "@type": "Taxon",
         "name": "Delphinapterus Lacépède, 1804",
         "identifier": "191588",
-        "url": "https://inpn.mnhn.fr/espece/cd_nom/191588?lg=en",
+        "mainEntityOfPage": "https://inpn.mnhn.fr/espece/cd_nom/191588?lg=en",
         "taxonRank" : [ 
             "http://rs.tdwg.org/ontology/voc/TaxonRank#Genus", 
             "http://www.wikidata.org/entity/Q34740",
@@ -82,7 +83,6 @@
         }
     },
     
-    "mainEntityOfPage": "https://inpn.mnhn.fr/espece/cd_nom/60932?lg=en",
     "image": "https://inpn.mnhn.fr/photos/uploads/webtofs/inpn/3/181473.jpg",
     "sameAs": [
         "http://doris.ffessm.fr/Especes/Delphinapterus-leucas-Beluga-868",

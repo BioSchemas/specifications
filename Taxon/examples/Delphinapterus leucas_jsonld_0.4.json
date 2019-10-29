@@ -31,11 +31,11 @@
       "species"
     ],
 
-    "parentTaxon": { 
+    "parentTaxon": {
         "@type": "Taxon",
         "name": "Delphinapterus Lacépède, 1804",
         "identifier": "191588",
-        "url": "https://inpn.mnhn.fr/espece/cd_nom/191588?lg=en",
+        "mainEntityOfPage": "https://inpn.mnhn.fr/espece/cd_nom/191588?lg=en",
         "taxonRank" : [ "http://rs.tdwg.org/ontology/voc/TaxonRank#Genus", "genus" ]
     },
 
