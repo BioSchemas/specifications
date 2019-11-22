@@ -1,0 +1,79 @@
+{
+  "@context": "http://schema.org/",
+  "@type": "DataCatalog",
+  "@id": "https://disprot.org/",
+  "name": "DisProt, The database of intrinsically disordered proteins",
+  "description": "DisProt is a database of intrinsically disordered proteins. Disordered regions are manually curated from literature. DisProt annotations cover both structural and functional aspects of disorder detected by specific experimental methods. Annotation concepts and detection methods are encoded in the Disorder Ontology.",
+  "url": "https://disprot.org/",
+  "citation": {
+    "@type": "ScholarlyArticle",
+    "@id": "https://doi.org/10.1093/nar/gkz975",
+    "name": "DisProt: intrinsic protein disorder annotation in 2020",
+    "url": "https://doi.org/10.1093/nar/gkz975",
+    "sameAs": [
+      "https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkz975/5622715",
+      "https://www.ncbi.nlm.nih.gov/pubmed/31612960"
+    ]
+  },
+  "keywords": [
+    "IDP",
+    "IDPs",
+    "DisProt",
+    "intrinsic protein disorder",
+    "protein annotation",
+    "protein disorder"
+  ],
+  "sourceOrganization": [
+    {
+      "@type": "Organization",
+      "@id": "http://protein.bio.unipd.it#O",
+      "name": "University of Padua, Department of Biomedical Sciences, BioComputing UP",
+      "url": "http://protein.bio.unipd.it"
+    }
+  ],
+  "provider": [
+    {
+      "@type": "Person",
+      "name": "Silvio Tosatto",
+      "email": "silvio.tosatto@unipd.it"
+    }
+  ],
+  "datePublished": "2019-09",
+  "dateModified": "2019-09",
+  "encodingFormat": "text/html",
+  "license": {
+    "@type": "CreativeWork",
+    "@id": "licence",
+    "name": "Creative Commons CC4 Attribution",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "identifier": "https://www.ebi.ac.uk/miriam/main/datatypes/MIR:00000199",
+  "dataset": {
+    "@context": "http://schema.org",
+    "@type": "Dataset",
+    "@id": "https://disprot.org/#2019_09",
+    "name": "DisProt",
+    "description": "DisProt is a database of intrinsically disordered proteins. Disordered regions are manually curated from literature. DisProt annotations cover both structural and functional aspects of disorder detected by specific experimental methods. Annotation concepts and detection methods are encoded in the Disorder Ontology.",
+    "url": "https://disprot.org/",
+    "identifier": "https://www.ebi.ac.uk/miriam/main/datatypes/MIR:00000199",
+    "keywords": [
+      "IDP",
+      "IDPs",
+      "DisProt",
+      "intrinsic protein disorder",
+      "protein annotation",
+      "protein disorder",
+      "manually curated"
+    ],
+    "includedInDataCatalog": {
+      "@id": "https://disprot.org/"
+    },
+    "creator": {
+      "@id": "http://protein.bio.unipd.it#O"
+    },
+    "version": "2019-09",
+    "license": {
+      "@id": "licence"
+    }
+  }
+}
