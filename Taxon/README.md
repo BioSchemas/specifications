@@ -1,4 +1,4 @@
-## Taxon specification v. 0.0.1 
+## Taxon specification
 
 **Profile** 
 
