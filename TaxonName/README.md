@@ -2,15 +2,11 @@
 
 ## Type 
 
-- [Type (latest)](http://bioschemas.org/TaxonName/)
-
-Thing > BioChemEntity > Taxon
+Thing > [Taxon](http://bioschemas.org/Taxon/)
 
 ## Profile
 
-- [Profile (latest)](http://bioschemas.org/profiles/TaxonName/)
-
-This profile provides a way to denote the scientific names of a taxon. 
+This [profile](http://bioschemas.org/profiles/TaxonName/) provides a way to denote the scientific names of a taxon. 
 A scientific name taxon may be the currently valid (zoological) or accepted (botanical) name of the taxon, or a synonym (non accepted) name.
 
 ### Example Markup
@@ -21,4 +17,4 @@ Examples should be stored in a subfolder indicating which version of the profile
 
 ## Issue Tracker 
 
-- [GitHub Issues](https://github.com/BioSchemas/specifications/labels/type%3A%20TaxonName)
+- [TaxonName Issues](https://github.com/BioSchemas/specifications/labels/type%3A%20TaxonName)
