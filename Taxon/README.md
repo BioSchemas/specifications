@@ -2,15 +2,11 @@
 
 ## Type 
 
-- [Type (latest)](http://bioschemas.org/Taxon/)
-
-Thing > Taxon
+Thing > [Taxon](http://bioschemas.org/Taxon/)
 
 ## Profile
 
-- [Profile (latest)](http://bioschemas.org/profiles/Taxon/)
-
-This profile aims to denote a taxon by common properties such as its scientific name, authority, taxonomic rank and vernacular names. It is also a means to link to existing taxonomic registers where each taxon has a URI.
+This [profile](http://bioschemas.org/profiles/Taxon/) aims to denote a taxon by common properties such as its scientific name, authority, taxonomic rank and vernacular names. It is also a means to link to existing taxonomic registers where each taxon has a URI.
 
 ### Example Markup
 
@@ -20,4 +16,4 @@ Examples should be stored in a subfolder indicating which version of the profile
 
 ## Issue Tracker
 
-- [GitHub Issues](https://github.com/BioSchemas/specifications/labels/type%3A%20Taxon)
+- [Taxon Issues](https://github.com/BioSchemas/specifications/labels/type%3A%20Taxon)
