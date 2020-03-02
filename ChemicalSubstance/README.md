@@ -6,7 +6,7 @@ Thing > BioChemEntity > [ChemicalSubstance](https://bioschemas.org/ChemicalSubst
 
 ## Profile
 
-This [profile](https://bioschemas.org/profiles/ChemicalSubstance/) provides a way to denote
+The [ChemicalSubstance Profile](https://bioschemas.org/profiles/ChemicalSubstance/) provides a way to denote resources about chemical compounds. For specific molecular entities, use the [MolecularEntity Profile](https://bioschemas.org/profiles/MolecularEntity).
 
 ### Example Markup
 
