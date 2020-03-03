@@ -3,9 +3,9 @@ We use the Bioschemas Specifications repository to:
 
 - Provide example markup for profiles, see [below](#profile-examples)
 
-- [Track issues](issues) relating to Bioschemas specifications (profiles and types), website, and governance 
+- [Track issues](https://github.com/BioSchemas/specifications/issues) relating to Bioschemas specifications (profiles and types), website, and governance 
 
-- Give detailed guidance for specification development and support tools through the [wiki](wiki)
+- Give detailed guidance for specification development and support tools through the [wiki](https://github.com/BioSchemas/specifications/wiki)
 
 The content of the Bioschemas [website](https://bioschemas.org/) is managed in the [bioschemas.github.io](https://github.com/BioSchemas/bioschemas.github.io) repository, while the [governance structure](https://bioschemas.org/community/governance) of the Bioschemas community is managed in the [governance](https://github.com/BioSchemas/governance) repository.
 
