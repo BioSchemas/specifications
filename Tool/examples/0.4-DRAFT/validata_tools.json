@@ -1,0 +1,12 @@
+{
+    "@context": "https://schema.org/",
+    "@type": "SoftwareApplication",
+    "@type": "SIO:000097",
+    "name": "Validata",
+    "citation": ["Jacob Baungard Hansen, Andrew Beveridge, Roisin Farmer, Leif Gehrmann, Alasdair J. G. Gray, Sunil Khutan, Tomas Robertson, and Johnny Val. Validata: An Online Tool for Testing RDF Data Conformance. In Proceedings of the 8th Semantic Web Applications and Tools for Life Sciences International Conference, Cambridge UK, December 7-10, 2015., page 157–166, 2015.", "http://ceur-ws.org/Vol-1546/paper_3.pdf"],
+    "description": "Validata is an intuitive, standalone web-based tool to help building valid RDF documents by validating against preset schemas written in the Shape Expressions (ShEx) language.",
+    "url": "http://hw-swel.github.io/Validata/",
+    "featureList": "http://edamontology.org/operation_0336",
+    "applicationCategory": "Computational science tool",
+    "applicationSubCategory": "http://edamontology.org/topic_0605"
+  }
