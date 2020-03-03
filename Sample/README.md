@@ -8,6 +8,7 @@ Thing > [Sample](https://bioschemas.org/Sample)
 
 The [Sample Profile](https://bioschemas.org/profiles/Sample) presents the Bioschemas markup when describing a Sample. 
 
+For BioSamples, please use the more specific [BioSample Profile](https://bioschemas.org/profiles/BioSample).
 
 ### Example Markup
 
