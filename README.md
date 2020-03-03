@@ -11,4 +11,8 @@ The content of the Bioschemas [website](https://bioschemas.org/) is managed in t
 
 ## Profile Examples
 
-The folders in this repository correspond to the [profiles](https://bioschemas.org/profiles) developed by the Bioschemas community. Within each folder, you will find a README file giving a brief overview of the profile, and an examples folder. Within the examples folder, you will find subfolders corresponding to different versions of the profile.
+The folders in this repository correspond to the [profiles](https://bioschemas.org/profiles) developed by the Bioschemas community. 
+
+Within each folder, you will find a README file giving a brief overview of the profile, and an examples folder. 
+
+Within the examples folder, you will find subfolders corresponding to different versions of the profile. Within these folders you will provide examples of markup that conform to the specific version of a profile.
