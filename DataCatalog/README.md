@@ -30,7 +30,5 @@ Examples should be stored in a subfolder indicating which version of the profile
 
 Peter McQuilton - peter.mcquilton@oerc.ox.ac.uk (FAIRsharing.org)
 
-Sarala Wimalaratne - sarala@ebi.ac.uk (Identifiers.org)
-
 ## Issue Tracker
 - [DataCatalog Issues](https://github.com/BioSchemas/bioschemas/labels/type%3A%20DataCatalog)
