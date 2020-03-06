@@ -16,4 +16,5 @@ Examples should be stored in a subfolder indicating which version of the profile
 
 ## Issue Tracker 
 
-- [TaxonName Issues](https://github.com/BioSchemas/specifications/labels/type%3A%20BioChemStructure)
+- [BioChemStructure Issues](https://github.com/BioSchemas/specifications/labels/type%3A%20BioChemStructure)
+
