@@ -1,0 +1,63 @@
+{
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "@id": "https://string-db.org",
+  "identifier": "stringdb",
+  "name": "STRING protein-protein interaction networks",
+  "description": "STRING is a database of known and predicted protein-protein interactions and a functional enrichment tool covering more than 5000 genomes",
+  "url": "https://string-db.org",
+  "keywords": "protein, protein interactions, string, functional annotation, functional associations, interaction network, enrichment",
+  "dateModified": "2019.01.13",
+  "publication": {
+    "@type": "PublicationEvent",
+    "name": "STRING v11: protein-protein association networks with increased coverage, supporting functional discovery in genome-wide experimental datasets.",
+    "url": "http://identifiers.org/pubmed:30476243"
+  },
+  "license": {
+    "@type": "CreativeWork",
+    "name": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://string-db.org/images/string_logo_2015.png"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "STRING consortium",
+    "url": "https://string-db.org",
+    "email": [
+      "mering@imls.uzh.ch",
+      "bork@embl.de",
+      "lars.juhl.jensen@cpr.ku.dk"
+    ],
+    "memberOf": [
+      {
+        "@type": "Organization",
+        "name": "SIB Swiss bioinformatics institute",
+        "url": "https://www.sib.swiss/"
+      },
+      {
+        "@type": "Organization",
+        "name": "European Molecular Biology Laboratory",
+        "url": "https://embl.org/"
+      },
+      {
+        "@type": "Organization",
+        "name": "University of Zurich",
+        "url": "https://www.uzh.ch/"
+      },
+      {
+        "@type": "Organization",
+        "name": "University of Copenhagen",
+        "url": "https://www.ku.dk/"
+      }
+    ]
+  },
+  "version": "11.0",
+  "potentialAction": {
+    "target": "https://string-db.org/cgi/network.pl?identifier={query_string}",
+    "@type": "SearchAction",
+    "query-input": "required name=query_string"
+  }
+}

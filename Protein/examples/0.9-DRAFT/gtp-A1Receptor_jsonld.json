@@ -1,0 +1,61 @@
+{
+  "@context": "http://schema.org",
+  "@type": "DataRecord",
+  "@id": "https://www.guidetopharmacology.org/GRAC/ObjectDisplayForward?objectId=18#",
+  "includedInDataset": "https://www.guidetopharmacology.org/index.jsp#dataset",
+  "citation": {
+    "@id": "https://doi.org/10.2218/gtopdb/F3/2019.4",
+    "@type": "ScholarlyPublication"
+  },
+  "mainEntity": {
+    "@id": "https://www.guidetopharmacology.org/GRAC/ObjectDisplayForward?objectId=18",
+    "@type": "Protein",
+    "http://purl.org/dc/terms/conformsTo": "https://bioschemas.org/specifications/Protein/0.9-DRAFT",
+    "identifier": "18",
+    "name": "A1 receptor",
+    "description": "class A G protein-coupled receptor",
+    "alternateName": ["RDC7", "adenosine receptor A1", "A1-AR", "A1R"],
+    "url": "https://www.guidetopharmacology.org/GRAC/ObjectDisplayForward?objectId=18",
+    "hasBioChemEntityPart": [
+      {
+        "isEncodedByBioChemEntity": {
+          "@type": "Gene",
+          "name": "adenosine A1 receptor",
+          "identifier": "ADORA1",
+          "hasRepresentation": "1q32.1"
+        },
+        "taxonomicRange": {
+          "@id": "https://identifiers.org/taxonomy:9606",
+          "@type": "Taxon",
+          "name": "Human"
+        }
+      },
+      {
+        "isEncodedByBioChemEntity": {
+          "@type": "Gene",
+          "name": "adenosine A1 receptor",
+          "identifier": "Adora1",
+          "hasRepresentation": "1 E4"
+        },
+        "taxonomicRange": {
+          "@id": "https://identifiers.org/taxonomy:10090",
+          "@type": "Taxon",
+          "name": "Mouse"
+        }
+      },
+      {
+        "isEncodedByBioChemEntity": {
+          "@type": "Gene",
+          "name": "adenosine A1 receptor",
+          "identifier": "Adora1",
+          "hasRepresentation": "13q13"
+        },
+        "taxonomicRange": {
+          "@id": "https://identifiers.org/taxonomy:10114",
+          "@type": "Taxon",
+          "name": "Rat"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "@context": [
+    {
+      "bio": "http://bioschemas.org/"
+    },
+    "http://schema.org",
+    {
+      "@base": "http://schema.org"
+    }
+  ],
+  "@type": "Dataset",
+  "@id": "https://string-db.org/network/9606.ENSP00000379258",
+  "mainEntity": {
+    "@type": [
+      "bio:Protein"
+    ],
+    "name": "GLI3",
+    "identifier": "9606.ENSP00000379258",
+    "additionalproperty": [
+      {
+        "@id": "http://identifiers.org/taxonomy:9606",
+        "identifier": "9606",
+        "@type": "bio:taxon",
+        "name": "Homo sapiens",
+        "taxonRank": "species"
+      }
+    ]
+  },
+  "name": "STRING GLI3 interaction network (Homo sapiens)",
+  "description": "Homo sapiens STRING functional association network of GLI3 protein.",
+  "identifier": "9606.ENSP00000379258",
+  "url": "https://string-db.org/network/9606.ENSP00000379258",
+  "keywords": "GLI3, GLI3 network, interactions, interaction network, functional associations",
+  "license": {
+    "@type": "CreativeWork",
+    "name": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "name": "STRING GLI3 interaction network (Homo sapiens)",
+    "url": "https://string-db.org/image_png/9606.ENSP00000379258.png",
+    "license": {
+      "@type": "CreativeWork",
+      "name": "Creative Commons Attribution 4.0 International",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "String Consortium",
+    "url": "https://string-db.org",
+    "email": [
+      "mering@imls.uzh.ch",
+      "bork@embl.de",
+      "lars.juhl.jensen@cpr.ku.dk"
+    ],
+    "MemberOf": [
+      {
+        "@type": "Organization",
+        "name": "SIB Swiss Bioinformatics Institute",
+        "url": "https://www.sib.swiss/"
+      },
+      {
+        "@type": "Organization",
+        "name": "European Molecular Biology Laboratory",
+        "url": "https://embl.org/"
+      },
+      {
+        "@type": "Organization",
+        "name": "University of Zurich",
+        "url": "https://www.uzh.ch/"
+      },
+      {
+        "@type": "Organization",
+        "name": "University of Copenhagen",
+        "url": "https://www.ku.dk/"
+      }
+    ]
+  },
+  "version": "11.0"
+}

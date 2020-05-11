@@ -1,0 +1,55 @@
+PREFIX ex: <http://ex.example/#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX schema: <http://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<MolecularEntity_Minimal> {
+  $ex:minimal (
+    rdf:type [schema:MolecularEntity],
+    schema:identifier IRI,
+    schema:name LITERAL,
+    schema:url IRI+
+  )
+}
+
+<MolecularEntity_Recommended> {
+  &ex:minimal ;
+  $ex:recommended (
+    schema:smiles LITERAL+,
+    schema:inChI LITERAL,
+    schema:inChIKey LITERAL,
+    schema:iupacName LITERAL,
+    schema:molecularFormula LITERAL,
+    schema:molecularWeight LITERAL
+  )
+}
+
+<MolecularEntity_Optional> {
+  &ex:minimal ; &ex:recommended ;
+  schema:alternateName LITERAL*,
+  (
+    schema:biochemicalInteraction IRI |
+    schema:biochemicalInteraction {
+      rdf:type [schema:BioChemEntity],
+      schema:identifier IRI,
+      schema:name LITERAL,
+      schema:url IRI
+    }
+  )*,
+  (
+    schema:biochemicalSimilarity IRI |
+    schema:biochemicalSimilarity {
+      &ex:minimal
+    }
+  )*,
+  schema:biologicalRole IRI*,
+  schema:chemicalRole IRI*,
+  schema:potentialUse IRI*,
+  schema:description LITERAL?,
+  schema:disambiguatingDescription LITERAL?,
+  schema:image IRI*,
+  schema:monoisotopicMolecularWeight LITERAL?,
+  schema:sameAs IRI*
+}
+
+
