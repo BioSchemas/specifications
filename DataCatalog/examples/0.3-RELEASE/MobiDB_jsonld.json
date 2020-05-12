@@ -1,0 +1,98 @@
+{
+  "@context": "http://schema.org/",
+  "@type": "DataCatalog",
+  "@id": "https://mobidb.org/",
+  "dct:conformsTo": "https://bioschemas.org/profiles/DataCatalog/0.3-RELEASE-2019_07_01",
+  "sameAs":"https://registry.identifiers.org/registry/mobidb",
+  "url": "https://mobidb.org/",
+  "identifier": "https://registry.identifiers.org/registry/mobidb",
+  "name": "MobiDB, a database of protein disorder and mobility annotations",
+  "description": "MobiDB is a database of protein disorder and mobility annotations. MobiDB was designed to offer a centralized resource for annotations of intrinsic protein disorder and its function. The database covers different disorder aspects such as disordered regions lacking a fixed three-dimensional structure, linear interacting peptides and dynamic structures",
+  "datePublished": "2019-09",
+  "dateModified": "2020-03",
+  "citation": {
+    "@type": "ScholarlyArticle",
+    "@id": "https://doi.org/10.1093/nar/gkx1071",
+    "name": "MobiDB 3.0: more annotations for intrinsic disorder, conformational diversity and interactions in proteins",
+    "url": "https://doi.org/10.1093/nar/gkx1071",
+    "sameAs": [
+      "https://academic.oup.com/nar/article-lookup/doi/10.1093/nar/gkx1071",
+      "https://www.ncbi.nlm.nih.gov/pubmed/29136219"
+    ]
+  },
+  "keywords": [
+    "IDP",
+    "IDPs",
+    "MobiDB",
+    "intrinsic protein disorder",
+    "intrinsically disordered protein",
+    "intrinsically disordered proteins",
+    "protein annotation",
+    "protein disorder",
+    "protein database"
+  ],
+  "sourceOrganization": [
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "@id": "http://protein.bio.unipd.it#O",
+      "dct:conformsTo": "https://bioschemas.org/profiles/Organization/0.2-DRAFT-2019_07_19",
+      "description": "University of Padua, Department of Biomedical Sciences, BioComputing UP laboratory",
+      "name": "University of Padova",
+      "url": "http://protein.bio.unipd.it"
+    }
+  ],
+  "provider": [
+    {
+      "@type": "Person",
+      "@id": "Silvio Tosatto",
+      "name": "Silvio Tosatto",
+      "email": "silvio.tosatto@unipd.it"
+    }
+  ],
+  "encodingFormat": [
+    "text/html",
+    "application/json"
+  ],
+  "license": {
+    "@type": "CreativeWork",
+    "@id": "https://creativecommons.org/licenses/by/4.0/",
+    "name": "Creative Commons CC4 Attribution",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "dataset": {
+    "@context": "http://schema.org",
+    "@type": "Dataset",
+    "@id": "https://mobidb.org/#2020-03",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Dataset/0.3-RELEASE-2019_06_14",
+    "includedInDataCatalog": {
+      "@id": "https://mobidb.org/"
+    },
+    "url": "https://mobidb.org/",
+    "dateModified": "2020-03",
+    "version": "3.1.0",
+    "name": "MobiDB",
+    "description": "MobiDB is a database of protein disorder and mobility annotations. MobiDB was designed to offer a centralized resource for annotations of intrinsic protein disorder and its function. The database covers different disorder aspects such as disordered regions lacking a fixed three-dimensional structure, linear interacting peptides and dynamic structures.",
+    "identifier": "https://mobidb.org/#2020-03",
+    "keywords": [
+      "IDP",
+      "IDPs",
+      "MobiDB",
+      "intrinsic protein disorder",
+      "intrinsically disordered protein",
+      "intrinsically disordered proteins",
+      "protein annotation",
+      "protein disorder",
+      "protein database"
+    ],
+    "creator": {
+      "@id": "http://protein.bio.unipd.it#O"
+    },
+    "license": {
+      "@type": "CreativeWork",
+      "@id": "https://creativecommons.org/licenses/by/4.0/",
+      "name": "Creative Commons CC4 Attribution",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  }
+}
