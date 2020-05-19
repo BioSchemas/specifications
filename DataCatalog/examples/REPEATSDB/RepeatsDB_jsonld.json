@@ -1,0 +1,98 @@
+{
+  "@context": "http://schema.org/",
+  "@type": "DataCatalog",
+  "@id": "http://repeatsdb.bio.unipd.it/",
+  "dct:conformsTo": "https://bioschemas.org/profiles/DataCatalog/0.3-RELEASE-2019_07_01", ???
+  "sameAs":"https://registry.identifiers.org/registry/mobidb", ???
+  "url": "http://repeatsdb.bio.unipd.it/",
+  "identifier": "https://registry.identifiers.org/registry/mobidb", ???
+  "name": "RepeatsDB, databse of repeat protein structures",
+  "description": "RepeatsDB features structural annotations for tandem repeat proteins, combining computer-based methods and manual curation. The database provides the position of repeat units, regions and insertions, as well as repeat classification.",
+  "datePublished": "2017-01", 
+  "dateModified": "2020-02", 
+  "citation": {
+    "@type": "ScholarlyArticle",
+    "@id": "https://doi.org/10.1093/nar/gkw1136",
+    "name": "RepeatsDB 2.0: improved annotation, classification, search and visualization of repeat protein structures",
+    "url": "https://doi.org/10.1093/nar/gkw1136",
+    "sameAs": [
+      "https://academic.oup.com/nar/article-lookup/doi/10.1093/nar/gkw1136",
+      "https://academic.oup.com/nar/article/45/D1/D308/2605753"
+    ]
+  },
+  "keywords": [
+    "TR",
+    "TRPs",
+    "RepeatsDB",
+    "tandem repeat proteins",
+    "repeat proteins",
+    "tandem repeat regions",
+    "protein annotation",
+    "protein repeats",
+    "protein database"
+  ],
+  "sourceOrganization": [
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "@id": "http://protein.bio.unipd.it#O", ???
+      "dct:conformsTo": "https://bioschemas.org/profiles/Organization/0.2-DRAFT-2019_07_19", ???
+      "description": "University of Padua, Department of Biomedical Sciences, BioComputing UP laboratory",
+      "name": "University of Padova",
+      "url": "http://protein.bio.unipd.it"
+    }
+  ],
+  "provider": [
+    {
+      "@type": "Person",
+      "@id": "Silvio Tosatto",
+      "name": "Silvio Tosatto",
+      "email": "silvio.tosatto@unipd.it"
+    }
+  ],
+  "encodingFormat": [
+    "text/html",
+    "application/json"
+  ],
+  "license": {
+    "@type": "CreativeWork",
+    "@id": "https://creativecommons.org/licenses/by/4.0/",
+    "name": "Creative Commons CC4 Attribution",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "dataset": {
+    "@context": "http://schema.org",
+    "@type": "Dataset",
+    "@id": "https://mobidb.org/#2020-03",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Dataset/0.3-RELEASE-2019_06_14", ???
+    "includedInDataCatalog": {
+      "@id": "http://repeatsdb.bio.unipd.it/"
+    },
+    "url": "http://repeatsdb.bio.unipd.it/",
+    "dateModified": "2020-02",
+    "version": "2020.02.18",
+    "name": "RepeatsDB",
+    "description": "RepeatsDB features structural annotations for tandem repeat proteins, combining computer-based methods and manual curation. The database provides the position of repeat units, regions and insertions, as well as repeat classification.",
+    "identifier": "https://mobidb.org/#2020-03", ???
+    "keywords": [
+      "TR",
+    "TRPs",
+    "RepeatsDB",
+    "tandem repeat proteins",
+    "repeat proteins",
+    "tandem repeat regions",
+    "protein annotation",
+    "protein repeats",
+    "protein database"
+    ],
+    "creator": {
+      "@id": "http://protein.bio.unipd.it#O" ???
+    },
+    "license": {
+      "@type": "CreativeWork",
+      "@id": "https://creativecommons.org/licenses/by/4.0/",
+      "name": "Creative Commons CC4 Attribution",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  }
+}
