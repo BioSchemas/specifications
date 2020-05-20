@@ -1,0 +1,71 @@
+{
+  "@context": "http://schema.org",
+  "@type": "DataRecord",
+  "@id": "https://mobidb.org/P0DTC9#DR", ???
+  "dct:conformsTo": "https://bioschemas.org/profiles/DataRecord/0.2-DRAFT-2019_06_14", ???
+  "includedInDataset": "https://mobidb.org/#2020-03", ???
+  "mainEntity": {
+    "@type": "Protein structure",
+    "@id": "https://mobidb.org/1rwrA",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Protein/0.11-RELEASE", ???
+    "identifier": "https://identifiers.org/repeatsdb:1rwrA",
+    "sameAs": "http://purl.uniprot.org/uniprot/1rwrA", ???
+    "hasBioPolymerSequence": "QGLVPQGQTQVLQGGNKVPVVNIADPNSGGVSHNKFQQFNVANPGVVFNNGLTDGVSRIGGALTKNPNLTRQASAILAEVTDTSPSRLAGTLEVYGKGADLIIANPNGISVNGLSTLNASNLTLTTGRPSVNGGRIGLDVQQGTVTIERGGVNATGLGYFDVVARLVKLQGAVSSKQGKPLADIAVVAGANRYDHATRRATPIAAGARGAAAGAYAIDGTAAGAMYGKHITLVSSDSGLGVRQLGSLSSPSAITVSSQGEIALGDATVQRGPLSLKGAGVVSAGKLASGGGAVNVAGGGAV",
+    "name": "Nucleoprotein",
+    "taxonomicRange": {
+      "@id": "https://identifiers.org/taxonomy:2697049"
+    },
+    "hasSequenceAnnotation": [ ???
+      {
+        "@type": "SequenceAnnotation", 
+        "@id": "http://repeatsdb.bio.unipd.it/protein/1rwrA",
+        "sequenceLocation": {
+          "@type": "SequenceRange",
+          "rangeStart": 84,
+          "rangeEnd": 105
+        },
+        "additionalProperty": {
+          "@type": "PropertyValue",
+          "name": "Term",
+          "value": {
+            "@type": "DefinedTerm",
+            "@id": "https://www.disprot.org/assets/data/idpontology_disprot_8_v0.1.0.owl#DO:00076", ???
+            "inDefinedTermSet": {
+              "@type": "DefinedTermSet",
+              "@id": "https://www.disprot.org/assets/data/idpontology_disprot_8_v0.1.0.owl", ???
+              "name": "TR ontology"
+            },
+            "termCode": "DO:00076", ???
+            "name": "Repeat unit"
+          }
+        },
+        "description": "Repeat structure for the protein"
+      },
+      {
+        "@type": "SequenceAnnotation", 
+        "@id": "http://repeatsdb.bio.unipd.it/protein/1rwrA",
+        "sequenceLocation": {
+          "@type": "SequenceRange",
+          "rangeStart": 106,
+          "rangeEnd": 143
+        },
+        "additionalProperty": {
+          "@type": "PropertyValue",
+          "name": "Term",
+          "value": {
+            "@type": "DefinedTerm",
+            "@id": "https://www.disprot.org/assets/data/idpontology_disprot_8_v0.1.0.owl#DO:00076", ???
+            "inDefinedTermSet": {
+              "@type": "DefinedTermSet",
+              "@id": "https://www.disprot.org/assets/data/idpontology_disprot_8_v0.1.0.owl", ???
+              "name": "TR ontology"
+            },
+            "termCode": "DO:00076", ???
+            "name": "Repeat unit" alternative: Repeat insertion
+          }
+        },
+        "description": "Repeat structure for the protein"
+      }
+    ]
+  }
+}
