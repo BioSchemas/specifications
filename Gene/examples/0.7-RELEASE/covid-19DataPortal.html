@@ -1,0 +1,36 @@
+<!--
+  This file includes annotations at the end of some lines.
+  These have a # at the start of them.
+-->
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@id": "https://www.covid19dataportal.org/expression?db=atlas-genes#search-content",
+  "@type": "CollectionPage",
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": 4,
+    "itemListElement": [
+      {
+        "@type": "Gene",
+        "@id": "http://www.ebi.ac.uk/gxa/genes/ENSG00000130234",
+        "identifier": "ENSG00000130234",
+        "name": "ACE2",
+        "description": "Homo sapiens ACE2, angiotensin I converting enzyme 2 [Source:HGNC Symbol;Acc:HGNC:13557], is expressed in 30 baseline experiment(s); cell type: induced pluripotent stem cell; ancestry category: European, South Asian; disease: renal cell carcinoma, normal - adjacent to renal cell carcinoma, glioma, breast carcinoma, neuroblastoma, ovarian serous cys ...",
+        "associatedDisease": "http://purl.obolibrary.org/obo/DOID_0080600", #Pick another ontology URI if you prefer, this value will be constant for all entries
+        "taxonomicRange": "Homo sapiens" #You may not be able to add this since it is only stated in the description and not as a property in your table. Ideally this should be a link to a Taxon term, e.g. NCBI:Taxon http://purl.obolibrary.org/obo/NCBITaxon_9606
+      },
+      {
+        "@type": "Gene",
+        "@id": "http://www.ebi.ac.uk/gxa/genes/ENSG00000184012",
+        "identifier": "ENSG00000184012",
+        "name": "TMPRSS2",
+        "description": "Homo sapiens TMPRSS2, transmembrane serine protease 2 [Source:HGNC Symbol;Acc:HGNC:11876], is expressed in 37 baseline experiment(s); progenitor cell type: erythroblast, T cell; developmental stage: juvenile stage, infant, 18 week post conception, 6 week post conception, 7 week post conception, adult, middle adult, fetal, 12 post conception weeks, ...",
+        "associatedDisease": "http://purl.obolibrary.org/obo/DOID_0080600", #Pick another ontology URI if you prefer, this value will be constant for all entries
+        "taxonomicRange": "Homo sapiens" #You may not be able to add this since it is only stated in the description and not as a property in your table. Ideally this should be a link to a Taxon term, e.g. NCBI:Taxon http://purl.obolibrary.org/obo/NCBITaxon_9606
+      },
+      #Rest of the list goes here
+      ...
+    ]
+  }
+</script>
