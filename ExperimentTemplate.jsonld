@@ -1,14 +1,13 @@
-
 {
   "@context": "https://schema.org/",
   "@type": "Experiment",
   "@id": "",
   "name": "",
-  "description":"",
+  "description": "",
   "experimentalFactor": [
     {
       "@type": "PropertyValue",
-      "name": "cultural practice",
+      "name": "Cultural practice",
       "value": "Low nitrogen"
     },
     {
@@ -17,13 +16,19 @@
       "value": "High nitrogen"
     },
     {
-      watering
+      "@type": "PropertyValue",
+      "name": "Cultural practice",
+      "value": "Watering"
     },
     {
-      disease innoculation
+      "@type": "PropertyValue",
+      "name": "Cultural practice",
+      "value": "Disease inoculation"
     },
     {
-      salinity
+      "@type": "PropertyValue",
+      "name": "Cultural practice",
+      "value": "Salinity"
     }
   ],
   "experimentProtocol": [
@@ -33,26 +38,30 @@
       "value": "Early adult"
     },
     {
-      "@type":"PropertyValue",
+      "@type": "PropertyValue",
       "name": "Growth facility",
       "value": "Greenhouse"
     },
+    {
+      "@type": "PropertyValue",
+      "name": "Measurement type",
+      "value": "Environment"
+    }
   ],
   "variableMeasured": [
     {
       "@type": "PropertyValue",
-      "name":"Plant height",
-      "value":""
-    },
-    {}
+      "name": "Plant height",
+      "value": ""
+    }
   ],
   "associatedSample": {
-    "@id":
+    "@id": ""
   },
   "associatedPhenotype": {
 
   },
-  taxonomicRange {
+  "taxonomicRange": {
     "@type": "Taxon",
     "name": ""
   }
