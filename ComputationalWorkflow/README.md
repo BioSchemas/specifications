@@ -16,5 +16,5 @@ Examples should be stored in a subfolder indicating which version of the profile
 
 ## Issue Tracker
 
-- [Samples Issues](https://github.com/BioSchemas/bioschemas/labels/type%3A%20Workflow)
+- [ComputationalWorkflow Issues](https://github.com/BioSchemas/bioschemas/labels/type%3A%20Workflow)
 
