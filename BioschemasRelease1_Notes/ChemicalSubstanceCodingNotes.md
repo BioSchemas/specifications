@@ -25,7 +25,7 @@ The following ontologies were also considered when developing this proposal:
 
 ## Proposal
 
-The proposed type is available at http://sdo-bioschemas-227516.appspot.com/ChemicalSubstance (a cached copy is also available on the Bioschemas [website](https://bioschemas.org/types/ChemicalSubstance/)).
+For convenience the `ChemicalSubstance` proposal is available from the Bioschemas website (https://bioschemas.org/types/ChemicalSubstance/).
 
 Schema.org already includes a [`schema:Substance`](https://schema.org/Substance) type which is defined as a subclass of [`schema:MedicalEntity`](https://schema.org/MedicalEntity). A `ChemicalSubstance` and `MolecularEntity` in general are not medical tools and many properties of `MedicalEntity` simply do not apply to the two newly proposed concepts.
 
