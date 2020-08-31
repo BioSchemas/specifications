@@ -30,7 +30,7 @@ The following ontologies were considered when developing this proposal:
 
 ## Proposal
 
-The proposed type is available at http://sdo-bioschemas-227516.appspot.com/BioChemEntity (a cached copy is also available on the Bioschemas [website](https://bioschemas.org/types/BioChemEntity/)).
+For convenience the `BioChemEntity` proposal is available from the Bioschemas website (https://bioschemas.org/types/BioChemEntity/).
 
 We summarise here the design decisions taken to reach this proposal.
 
