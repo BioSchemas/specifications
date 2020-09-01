@@ -37,6 +37,5 @@ We are proposing to add the `Gene` type under a `BioChemEntity` type which inher
 This property allows the linking of the many variants of a gene.
 - encodesBioChemEntity: *New property*
 - expressedIn: *New property*
-- hasSequence: *New property*
-**ToDo:** *How is this different from `hasRepresentation` proposed on BioChemEntity?*
+- hasBioPolymerSequence: *New property*
 - hasStatus: *New property*
