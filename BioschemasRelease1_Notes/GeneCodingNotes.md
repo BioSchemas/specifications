@@ -23,7 +23,7 @@ The following ontologies were considered when developing this proposal:
 
 ## Proposal
 
-The proposed type is available at http://sdo-bioschemas-227516.appspot.com/Gene (a cached copy is also available on the Bioschemas [website](https://bioschemas.org/types/Gene/)).
+For convenience the `Gene` proposal is available on the Bioschemas website (https://bioschemas.org/types/Gene/).
 
 We summarise here the design decisions taken to reach this proposal.
 
