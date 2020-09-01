@@ -34,7 +34,4 @@ We are proposing to add the `Protein` type under a `BioChemEntity` type which in
 
 ### Properties
 
-- hasSequence: *New property* 
-
-  **ToDo:** *How is this different from `hasRepresentation` proposed on BioChemEntity?*
-
+- hasBioPolymerSequence: *New property* 
