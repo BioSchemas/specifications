@@ -28,4 +28,4 @@ This is a non-exhaustive list of domain specific and general purpose ontologies 
 - NCBI [Taxonomy](https://www.ncbi.nlm.nih.gov/taxonomy)Protein Ontology ([PRO](https://proconsortium.org/))
 - SemanticScience Integrated Ontology ([SIO](http://sio.semanticscience.org/))
 - UniProt RDF Schema Ontology ([UniProt](https://www.uniprot.org/core/))
-- Wikidata
+- Wikidata [Ontology](https://www.wikidata.org/wiki/Wikidata:WikiProject_Ontology/Modelling)
