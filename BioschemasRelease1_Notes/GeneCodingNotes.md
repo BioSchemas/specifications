@@ -23,7 +23,7 @@ The following ontologies were considered when developing this proposal:
 
 ## Proposal
 
-The proposed type is available at http://sdo-bioschemas-227516.appspot.com/Gene (a cached copy is also available on the Bioschemas [website](https://bioschemas.org/types/Gene/)).
+For convenience the `Gene` proposal is available on the Bioschemas website (https://bioschemas.org/types/Gene/).
 
 We summarise here the design decisions taken to reach this proposal.
 
@@ -37,6 +37,5 @@ We are proposing to add the `Gene` type under a `BioChemEntity` type which inher
 This property allows the linking of the many variants of a gene.
 - encodesBioChemEntity: *New property*
 - expressedIn: *New property*
-- hasSequence: *New property*
-**ToDo:** *How is this different from `hasRepresentation` proposed on BioChemEntity?*
+- hasBioPolymerSequence: *New property*
 - hasStatus: *New property*

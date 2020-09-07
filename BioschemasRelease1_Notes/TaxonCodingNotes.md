@@ -22,7 +22,7 @@ The proposal is based on the [Darwin Core standard for Taxons](https://dwc.tdwg.
 
 ## Proposal
 
-The proposed type is available at http://sdo-bioschemas-227516.appspot.com/Taxon (a cached copy is also available on the Bioschemas [website](https://bioschemas.org/types/Taxon/)).
+For convenience the `Taxon` proposal is available from the Bioschemas website (https://bioschemas.org/types/Taxon/).
 
 We summarise here the design decisions taken to reach this proposal.
 
