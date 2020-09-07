@@ -16,7 +16,7 @@ The `BioChemEntity` type has been discussed in the Bioschemas community in:
 
 The Bioschemas community were originally looking for a minimal extension to Schema.org that could be specialised with properties from other life sciences ontologies. The original version of `BioChemEntity` was devised for this purpose with specialisms defined in usage profiles to enable the markup of pages about proteins, chemicals, etc. This proved to make the markup overly complicated both for publishers and consumers of the markup.
 
-This revised version of `BioChemEntity` now serves the purpose of being a parent type for the various types required for the life sciences to support search use cases, and some limited data exchange. We have deliberately chosen to go for a shallow and wide subtree from `BioChemEntity` to avoid focusing on acurate biological modelling, instead focusing on the properties required for search.
+This revised version of `BioChemEntity` now serves the purpose of being a parent type for the various types required for the life sciences to support search use cases, and some data exchange. We have deliberately chosen to go for a shallow and wide subtree from `BioChemEntity` to avoid focusing on acurate biological modelling, instead focusing on the properties required for search.
 
 The following ontologies were considered when developing this proposal:
 
