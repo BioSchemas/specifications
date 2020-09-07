@@ -17,9 +17,9 @@ The development of the types has been driven by use cases and experiences from w
     - [Protein](https://bioschemas.org/Protein) ([notes](ProteinCodingNotes.md)) deployment on [DisProt](https://www.disprot.org/DP00086) ([Google SDTT](https://search.google.com/structured-data/testing-tool?url=https://www.disprot.org/DP00086))
   - [Taxon](https://bioschemas.org/Taxon) ([notes](TaxonCodingNotes.md)) deployment at [Muséum National D’Histoire Naturelle](https://inpn.mnhn.fr/espece/cd_nom/60878/) ([Google SDTT](https://search.google.com/structured-data/testing-tool?url=https://inpn.mnhn.fr/espece/cd_nom/60878/))
 
-## Domain Ontologies Considered
+## Ontologies Considered
 
-This is a non-exhaustive list of the domain specific ontologies that have been considered during the development of the Bioschemas types:
+This is a non-exhaustive list of domain specific and general purpose ontologies that have been considered during the development of the Bioschemas types:
 
 - Biodiversity Information Standards ([TDWGOntology](https://github.com/tdwg/ontology))
 - Chemical Entities of Biological Interest ([ChEBI](https://www.ebi.ac.uk/chebi/))
