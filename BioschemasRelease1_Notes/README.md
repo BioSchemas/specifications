@@ -4,7 +4,7 @@ The [Bioschemas Community](https://bioschemas.org/) have prepared seven types to
 
 The collection of types focuses on genes, proteins, and their chemical interactions. We have proposed one generic type (BioChemEntity) under which we expect the majority of Bioschemas proposed types to sit. We believe that Taxon is a more generic type and have thus not put it under BioChemEntity.
 
-The development of the types has been driven by use cases and experiences from working deployed markup. Each type is available from the Bioschemas website with detailed notes on the modelling of the type included in the Bioschemas examples repository. We also include a link to a live deployment of the type.
+The development of the types has been driven by use cases and experiences from working deployed markup (list of [live deployments](https://bioschemas.org/liveDeploys/)). Each type is available from the Bioschemas [website](https://bioschemas.org/types/) with detailed notes on the modelling of the type included in the Bioschemas examples [repository](https://github.com/BioSchemas/specifications/tree/master/BioschemasRelease1_Notes). We also include a link to a live deployment of the type.
 
 ## Proposed Types and Hierarchy
 
