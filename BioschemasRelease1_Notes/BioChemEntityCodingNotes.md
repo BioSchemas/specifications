@@ -1,6 +1,6 @@
 # Proposal of BioChemEntity Type
 
-The [Bioschemas](https://bioschemas.org) community would like to propose a new top-level type from which other types in the life sciences will extend.
+The [Bioschemas](https://bioschemas.org) community would like to propose a new top-level type from which the majority of life sciences focused types will extend.
 
 ## Background
 
