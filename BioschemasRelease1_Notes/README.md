@@ -2,7 +2,7 @@
 
 The [Bioschemas Community](https://bioschemas.org/) have prepared seven types to be considered for inclusion in Schema.org. The types support searching for resources, but leave the accurate modelling of bioinformatics to the numerous specialised overlapping domain ontologies. For each type, leading domain ontologies have been considered.
 
-The collection of types focuses on genes, proteins, and their chemical interactions. We have proposed one generic type (BioChemEntity) under which we expect the majority of Bioschemas proposed types to sit. We believe that Taxon is a more generic type and have thus not put it under BioChemEntity.
+The collection of types focuses on genes, proteins, and their chemical interactions. We have proposed one generic type (BioChemEntity) under which we expect the majority of Bioschemas proposed types to sit. We believe that Taxon is a more generic type and have thus not put it under BioChemEntity. Development work on other types continues and can be seen in the drafts section of the [types page](https://bioschemas.org/types/). 
 
 The development of the types has been driven by use cases and experiences from working deployed markup (list of [live deployments](https://bioschemas.org/liveDeploys/)). Each type is available from the Bioschemas [website](https://bioschemas.org/types/) with detailed notes on the modelling of the type included in the Bioschemas examples [repository](https://github.com/BioSchemas/specifications/tree/master/BioschemasRelease1_Notes). We also include a link to a live deployment of the type.
 
