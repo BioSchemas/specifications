@@ -1,0 +1,187 @@
+{
+    "@context": "http://schema.org/",
+    "@type": "LabProtocol",
+    "headline": "Universal DNA isolation protocol V.3",
+    "identifier": "https://dx.doi.org/10.17504/protocols.io.z2jf8cn",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "keywords": ["DNA extraction", "CTAB", "plant tissues", "blood", "herbarium specimens", "difficult tissues"],
+   
+    "protocolPurpose": "This protocol describes an efficient method for purification or/and isolation of nucleic acids from difficult animal tissues, plant material and other samples from which DNA extraction is generally regarded as being difficult which can contain impurities and inhibitors or interfering substances",
+
+    "protocolAdvantage": "This method is established acidic CTAB (with a pH value of 5 to 6.8) based extraction protocol that allows for reliable isolation of high molecular weight genomic DNA for removing contaminants from nucleic acids in a sample, e.g., environmental or biological samples such as soil, food, plant, animal or microorganism. DNA may quickly be extracted from samples without phenol, guanidine thiocyanate or 2-mercaptoethanol.",
+
+    "protocolApplication": "The isolation of nucleic acids from a sample is an important step for many molecular biological applications and medical diagnostic assays",
+ 
+    "bioSampleUsed": [
+     {
+       "@type": ["BioChemEntity", "BioSample"],
+       "url": "http://purl.obolibrary.org/obo/ENVO_00001998",
+       "name": {
+         "@language": "en",
+         "@value": "soil"
+       }
+     },
+     {
+       "@type": ["BioChemEntity", "BioSample"],
+       "url": "http://purl.obolibrary.org/obo/CHEBI_33290",
+       "name": {
+         "@language": "en",
+         "@value": "food"
+        }
+     },
+     {
+       "@type": ["BioChemEntity", "BioSample"],
+       "url": "http://purl.obolibrary.org/obo/BTO_0001481",
+       "name": {
+         "@language": "en",
+         "@value": "plant"
+       }
+    },
+    {
+        "@type": ["BioChemEntity", "BioSample"],
+        "url": "http://purl.obolibrary.org/obo/BTO_0000042",
+        "name": {
+            "@language": "en",
+            "@value": "animal"
+        }
+     },
+     {
+        "@type": ["BioChemEntity", "BioSample"],
+        "url": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C14329",
+        "name": {
+            "@language": "en",
+            "@value": "microorganism"
+        }
+    }
+   ],
+    
+   "reagentUsed": [
+    {
+      "@type": ["BioChemEntity", "MolecularEntity", "ChemicalSubstance"],
+      "url": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C62218",
+      "name": {
+        "@language": "en",
+        "@value": "70% Ethanol"
+        }
+     },
+     {
+        "@type": ["BioChemEntity", "MolecularEntity", "ChemicalSubstance"],
+        "url": "http://purl.obolibrary.org/obo/CHMO_0002069",
+        "name": {
+          "@language": "en",
+          "@value": "TE buffer"
+          }
+       },
+     {
+      "@type": ["BioChemEntity", "MolecularEntity", "ChemicalSubstance"],
+      "url": "http://purl.org/net/SMARTprotocol#CTABBuffer",
+      "name": {
+        "@language": "en",
+        "@value": "CTAB buffer"
+        }
+     },
+     {
+      "@type": ["BioChemEntity", "MolecularEntity", "ChemicalSubstance"],
+      "url": "http://purl.org/net/SMARTprotocol#ChloroformIsoamylAlcoholMixture",
+      "name": {
+        "@language": "en",
+        "@value": "Chloroform:Isoamyl alcohol"
+        }
+     },
+     {
+      "@type": ["BioChemEntity", "MolecularEntity", "ChemicalSubstance"],
+      "url": "http://purl.obolibrary.org/obo/CHMO_0001759",
+      "name": {
+        "@language": "en",
+        "@value": "HEPES buffer"
+        }
+     },
+     {
+      "@type": ["BioChemEntity", "MolecularEntity", "ChemicalSubstance"],
+      "url": "http://purl.obolibrary.org/obo/CHEBI_17824",
+      "name": {
+        "@language": "en",
+        "@value": "Isopropanol"
+        }
+     }
+    ],
+    
+   "labEquipmentUsed": [
+    {
+    "@language": "en",
+    "@value": "MM300 Mixer Mill"  
+    },
+    {
+   "@type": "DefinedTerm",
+   "url": "http://purl.org/net/SMARTprotocol#MicrocentrifugeTube",
+    "name": {
+       "@language": "en",
+       "@value": "Eppendorf Safe-Lock microcentrifuge tube"
+        }
+    },
+   {
+   "@type": "DefinedTerm",
+   "url": "http://purl.obolibrary.org/obo/OBI_0001100",
+    "name": {
+       "@language": "en",
+       "@value": "microcentrifuge"
+        }
+    },
+    {
+   "@type": "DefinedTerm",
+   "url": "http://purl.obolibrary.org/obo/OBI_0001128",
+    "name": {
+       "@language": "en",
+       "@value": "micropipette"
+        }
+    }
+    ],
+
+    "step": [
+        {
+            "@language": "en",
+            "@value": "Eppendorf Safe-Lock microcentrifuge tube with tissue sample and glass ball (6 mm) freeze at -80°C, grind in the MM300 Mixer Mill for 2 min at 30 Hz. Alternatively, grind the sample in lysis solution." 
+           },
+           {
+            "@language": "en",
+            "@value": "In 2 ml tube with mechanically disrupted seeds/leaves/herbarium or DNA solution (CTAB purification) add 1 ml CTAB solution buffer with RNAse A (the sample mass should not exceed 100 mg), vortex very well and incubate the samples at 60-65°C during 60-120 min or longer (long incubation increases DNA yield)."
+           },
+           {
+            "@language": "en",
+            "@value": "Spin at maximum speed in a microcentrifuge for 2 minutes, transferred the upper aqueous layer to a new 2 ml microcentrifuge tube."
+           },
+           {
+            "@language": "en",
+            "@value": "Transfer theentire clarified supernatant to a new 2 ml microcentrifuge tube contains an equal volume of chloroform. Mix well for 3-5 minutes in the MM300 Mixer Mill at 30 Hz."  
+           },
+           {
+            "@language": "en",
+            "@value": "Spin at maximum speed in a microcentrifuge for 2 minutes."
+           },
+           {
+            "@language": "en",
+            "@value": "Transfer the entire clarified upper aqueous layer to a new 2 ml microcentrifuge tube which contains an equal or half volume of 2-propanol and vortex thoroughly."   
+           },
+           {
+            "@language": "en",
+            "@value": "Centrifuge at maximum speed in a microcentrifuge for 2-5 minutes. A whitish DNA pellet should be visible."    
+           },
+           {
+            "@language": "en",
+            "@value": "Discard supernatant and wash the pellet by adding 1.8 ml 70% ethanol, vortex thoroughly. At this stage, DNA samples can be stored at room temperature or refrigerated."  
+           },
+           {
+            "@language": "en",
+            "@value": "Centrifuge at maximum speed for 2-5 min and carefully discard the supernatant by decanting or with a micropipette. A whitish DNA pellet should be visible during discarding a supernatant."   
+           },
+           {
+            "@language": "en",
+            "@value": "The DNA pellet does not dry and dissolved immediately in 300 μl 1xTE, pH 8.0 at 55°C for 10-20 minutes."
+           }
+    ]
+   }
+   
+   
+   
+   
+   
