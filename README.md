@@ -7,7 +7,7 @@ We use the Bioschemas Specifications repository to:
 
 - Give detailed guidance for specification development and support tools through the [wiki](https://github.com/BioSchemas/specifications/wiki)
 
-The content of the Bioschemas [website](https://bioschemas.org/) is managed in the [bioschemas.github.io](https://github.com/BioSchemas/bioschemas.github.io) repository, while the [governance structure](https://bioschemas.org/community/governance) of the Bioschemas community is managed in the [governance](https://github.com/BioSchemas/governance) repository.
+The content of the Bioschemas [website](https://bioschemas.org/) is managed in the [bioschemas.github.io](https://github.com/BioSchemas/bioschemas.github.io) repository, while the [governance structure](https://github.com/BioSchemas/governance/blob/master/governance.md) of the Bioschemas community is managed in the [governance](https://github.com/BioSchemas/governance) repository.
 
 ## Profile Examples
 

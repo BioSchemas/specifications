@@ -1,0 +1,11 @@
+  {
+  "@context": "https://schema.org",
+  "@type": "MolecularEntity",
+  "@id": "%%%URL%%%",
+  "http://purl.org/dc/terms/conformsTo": "https://bioschemas.org/profiles/MolecularEntity/0.4-DRAFT-2019_11_11/",
+  "identifier": "%%%IDENTIFIER%%%",
+  "name": "%%%NAME%%%",
+  "url": "%%%URL%%%",
+  "associatedDisease": "%%%ASSOCATEDDISEASE%%%",
+  "description": "%%%DESCRIPTION%%%",
+  }
