@@ -135,9 +135,9 @@
     }
   ],
   "teaches": [
-  "The student will be able to recall shell commands", 
-  "The student will be able to write code to copy files", 
-  "The student will be able to discover new commands on their own"
+      "The student will be able to recall shell commands", 
+      "The student will be able to write code to copy files", 
+      "The student will be able to discover new commands on their own"
   ],
   "timeRequired": "P3D",
   "url": "https://training.site/123",
