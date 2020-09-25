@@ -11,6 +11,9 @@
   
   
   
+  
+  
+  
   "about": [
     {
       "@type": "DefinedTerm", 
@@ -32,8 +35,10 @@
   "abstract": "This course will take you through the basic usage of the command line shell. In it, you will discover what a shell is, skills for directory navigation, file manipulation, and how to run tools.",
   "aggregateRating": "4/5",
   "citation": [
+    {
       "@type": "CreativeWork",
       "identifier": "https://reference.site/creativework"
+    }
   ],
   "coursePrerequisites": [
      {
