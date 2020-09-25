@@ -1,1 +1,229 @@
-{test}
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "dct:conformsTo": "https://bioschemas.org/profiles/Course/0.8_DRAFT-2020_09_28",
+
+
+  
+  "description": "This is a course ran at an institution. It's ran periodically - specific courses can be found through CourseInstances.",
+  "keywords": "RNA-Seq, Workshop",
+  "name": "My Course",
+  
+  
+  
+  "about": [
+    {
+      "@type": "DefinedTerm", 
+      "@id": "http://edamontology.org/topic_3316",
+      "inDefinedTermSet": "http://edamontology.org",
+      "termCode": "topic_3316",
+      "name": "Computer Science",
+      "url": "https://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_3316"
+    },
+    {
+      "@type": "DefinedTerm", 
+      "@id": "http://edamontology.org/topic_3314",
+      "inDefinedTermSet": "http://edamontology.org",
+      "termCode": "topic_3314",
+      "name": "Chemistry",
+      "url": "http://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_3314"
+    }
+  ],
+  "abstract": "This course will take you through the basic usage of the command line shell. In it, you will discover what a shell is, skills for directory navigation, file manipulation, and how to run tools.",
+  "aggregateRating": "4/5",
+  "citation": [
+      "@type": "CreativeWork",
+      "identifier": "https://reference.site/creativework"
+  ],
+  "coursePrerequisites": [
+     {
+       "@type": "AlignmentObject",
+       "alignmentType"": "educationalLevel",
+       "educationalFramework": "QAA",
+       "targetName": "Higher Education Credit Framework For England",
+       "targetUrl": "https://www.qaa.ac.uk/docs/qaa/quality-code/academic-credit-framework.pdf?sfvrsn=940bf781_12"
+    },
+    {
+       "@type": "Course",
+       "name": "Foundation Course in CS",
+       "description": "This course introduces you to the very basic, foundational concepts of computers and programming",
+       "keywords": "CS, foundation, course, eLearning",
+       "url": "http://my-training.site/myPrerequisiteCourse",
+       "timeRequired": "P1W2DT5H",
+       "educationalLevel": "beginner"
+    }
+  ],
+  "educationalLevel": "Intermediate",
+  "hasCourseInstance": [
+    {
+       "@type": "CourseInstance",
+       "courseMode": "online",
+       "location": 
+          {
+            "@type": "Place",
+            "address": 
+            {
+               "@type": "PostalAddress",
+               "streetAddress": "1.17, Kilburn Building, University of Manchester",
+               "addressLocality": "Manchester",
+               "addressRegion": "Greater Manchester",
+               "addressCountry": "United Kingdom",
+               "postalCode": "M13 9PL"
+             }
+           },
+         "url": "http://my-training.site/myCourse/courseInstance",
+         "inLanguage": "en-GB",
+         "instructor": [
+           {
+           "@type": "Person",
+           "name": "John Smith"
+           },
+           { 
+           "@type": "Person",
+           "name": "Bob Jones"
+           }
+         ],
+       "startDate": "2019-02-04T11:00:00",
+       "endDate": "2019-02-05T17:00:00",
+       "offers": 
+          {
+            "@type": "Offer",
+            "price": "100.00",
+            "priceCurrency": "GBP",
+            "url": "http://www.eventbrite.com/my-workshop"
+          },
+       "mentions": [
+          {
+            "@type": "Tool",
+            "name": "Galaxy",
+            "url": "https://bio.tools/galaxy",
+            "description": "Open, web-based platform for data intensive biomedical research"
+          },
+          {
+            "@type": "Dataset",
+            "name": "European Genome-phenome Archive",
+            "url": "https://www.ebi.ac.uk/ega/home",
+            "description": "The EGA archives a large number of datasets, the access to which is controlled by a Data Access Committee (DAC)."
+          }
+        ]
+    }
+  ],
+  "license": "CC-BY 2.0 CA",
+  "mentions": [
+    {
+      "@type": "Tool",
+      "name": "Galaxy",
+      "url": "https://bio.tools/galaxy",
+      "description": "Open, web-based platform for data intensive biomedical research"
+    },
+    {
+      "@type": "Dataset",
+      "name": "European Genome-phenome Archive",
+      "url": "https://www.ebi.ac.uk/ega/home",
+      "description": "The EGA archives a large number of datasets, the access to which is controlled by a Data Access Committee (DAC)."
+    }
+  ],
+  "provider":  [
+    { 
+      "@type": "Organization",
+      "name": "University of Manchester"
+    }
+  ],
+  "teaches": [
+  "The student will be able to recall shell commands", 
+  "The student will be able to write code to copy files", 
+  "The student will be able to discover new commands on their own"
+  ],
+  "timeRequired": "P3D",
+  "url": "https://training.site/123",
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  ##### FROM TRAINING MATERIALS####
+  
+  "about": [
+    {
+      "@type": "DefinedTerm", 
+      "@id": "http://edamontology.org/topic_0089",
+      "inDefinedTermSet": "http://edamontology.org",
+      "termCode": "topic_0089",
+      "name": "Ontology and terminology",
+      "url": "http://edamontology.org/topic_0089"
+    }, {
+    "@id": "http://edamontology.org/topic_0089"
+    }
+  ],
+  "abstract": "An introduction to the 10 simple rules for making training materials FAIR, including introduction to the rules and discussion with the audience based on predefined questions",
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Trainers, people interested in training materials and FAIR" 
+  },
+  "author":  [
+    {
+      "@type": "Person",
+      "name": "Leyla Garcia"
+    },{ 
+      "@type": "Organization",
+      "name": "ZB MED Information Centre for Life Sciences",
+      "url": "https://zbmed.de"
+    },
+    {
+      "@type": "Person",
+      "name": "Patricia Palagi"
+    },{ 
+      "@type": "Organization",
+      "name": "SIB Swiss Institute of Bioinformatics",
+      "url": "https://www.sib.swiss"
+    }
+  ],
+  "educationalLevel": "Beginner",
+  "identifier": "https://docs.google.com/presentation/d/1_C2TTX_gYRxpVQjNEbuMm3YLfz6ouocGUxoioUCnG5I",
+  "inLanguage": ["en-US"],
+  "learningResourceType": ["slides"],
+  "license": ["https://creativecommons.org/licenses/by/4.0/"],
+  "mentions": [
+    {
+      "@type": "CreativeWork",
+      "@id": "https://doi.org/10.1371/journal.pcbi.1007854",
+      "name": "Ten simple rules for making training materials FAIR",
+      "identifier": "DOI:10.1371/journal.pcbi.1007854",      
+      "url": "https://doi.org/10.1371/journal.pcbi.1007854"
+    }
+  ],
+  "teaches": [
+    "The learned will be able to recognize FAIR elements recommended for training materials"
+  ],
+  "timeRequired": "P40M0S",
+  "url": "https://docs.google.com/presentation/d/1_C2TTX_gYRxpVQjNEbuMm3YLfz6ouocGUxoioUCnG5I",
+
+
+
+
+  "accessibilitySummary": "Visual elements are not described",
+  "contributor":  [
+    {
+      "@type": "Organization",
+      "name": "ELIXIR Training Platform",
+      "url": "https://elixir-europe.org/platforms/training"
+    }
+  ],
+  "creativeWorkStatus": "active",
+  "dateCreated": "2020-08-28",
+  "dateModified": "2020-09-19",
+  "datePublished": "2020-09-17",
+  "recordedAt": [
+    {
+      "@type": "Webinar",
+      "name": "Ten simple rules to make training materials FAIR",
+      "url": "https://elixir-europe.org/events/elixir-webinar-fair-training"
+    }
+  ],
+  "version": "0.0.1"
+}
