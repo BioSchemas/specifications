@@ -71,9 +71,9 @@
                "postalCode": "M13 9PL"
              }
            },
-         "url": "http://my-training.site/myCourse/courseInstance",
-         "inLanguage": "en-GB",
-         "instructor": [
+        "url": "http://my-training.site/myCourse/courseInstance",
+        "inLanguage": "en-GB",
+        "instructor": [
            {
            "@type": "Person",
            "name": "John Smith"
@@ -144,86 +144,66 @@
   
   
   
-  
-  
-  ##### FROM TRAINING MATERIALS####
-  
-  "about": [
-    {
-      "@type": "DefinedTerm", 
-      "@id": "http://edamontology.org/topic_0089",
-      "inDefinedTermSet": "http://edamontology.org",
-      "termCode": "topic_0089",
-      "name": "Ontology and terminology",
-      "url": "http://edamontology.org/topic_0089"
-    }, {
-    "@id": "http://edamontology.org/topic_0089"
-    }
-  ],
-  "abstract": "An introduction to the 10 simple rules for making training materials FAIR, including introduction to the rules and discussion with the audience based on predefined questions",
-  "audience": {
-    "@type": "Audience",
-    "audienceType": "Trainers, people interested in training materials and FAIR" 
-  },
-  "author":  [
+  "accessibilitySummary": "Visual elements are not described.",
+  "alternateName": "Comp-sci 101",
+  "audience": "PhD students, Post-docs",
+  "comment": "This course is excellent for gaining the foundations of operating systems",
+  "commentCount": "37",
+  "courseCode": "CS101",
+  "creator":  [
     {
       "@type": "Person",
-      "name": "Leyla Garcia"
-    },{ 
-      "@type": "Organization",
-      "name": "ZB MED Information Centre for Life Sciences",
-      "url": "https://zbmed.de"
+      "name": "Elizabeth Windsor"
     },
-    {
-      "@type": "Person",
-      "name": "Patricia Palagi"
-    },{ 
-      "@type": "Organization",
-      "name": "SIB Swiss Institute of Bioinformatics",
-      "url": "https://www.sib.swiss"
+    { 
+      "@type": ""Organization",
+      "name": "University of Manchester"
     }
   ],
-  "educationalLevel": "Beginner",
-  "identifier": "https://docs.google.com/presentation/d/1_C2TTX_gYRxpVQjNEbuMm3YLfz6ouocGUxoioUCnG5I",
-  "inLanguage": ["en-US"],
-  "learningResourceType": ["slides"],
-  "license": ["https://creativecommons.org/licenses/by/4.0/"],
-  "mentions": [
+  "dateCreated": "2019-02-18 09:00:00 +0000",
+  "dateModified": "2019-03-28 13:25:13 +0000",
+  "educationalCredentialAwarded": "Certified Software Carpentry Instructor",
+  "hasPart": [
     {
-      "@type": "CreativeWork",
-      "@id": "https://doi.org/10.1371/journal.pcbi.1007854",
-      "name": "Ten simple rules for making training materials FAIR",
-      "identifier": "DOI:10.1371/journal.pcbi.1007854",      
-      "url": "https://doi.org/10.1371/journal.pcbi.1007854"
+      "@type": "TrainingMaterial",
+      "name": "Course Slides for CS101",
+      "description": "The course slides contain diagrams, questions, and links to various resources about this course",
+      "keywords": "Computer Science, CS, Introductory",
+      "timeRequired": "P1W2DT5H",
+      "learningResourceType": "slides",
+      "url": "http://example.com/slides_website",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "skillLevel": "beginner",
+      "identifier": "http://identifiers.org/my-org/13412",
+      "about": [
+        {
+          "@type": "DefinedTerm", 
+          "@id": "http://edamontology.org/topic_3316",
+          "inDefinedTermSet": "http://edamontology.org",
+          "termCode": "topic_3316",
+          "name": "Computer Science",
+          "url": "https://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_3316"
+        }
+      ],
+      "inLanguage": "en-GB",
+      "mentions": [
+        {
+          "@type": "Tool",
+          "name": "Galaxy",
+          "url": "https://bio.tools/galaxy",
+          "description": "Open, web-based platform for data intensive biomedical research"
+        }
+      ]
     }
   ],
-  "teaches": [
-    "The learned will be able to recognize FAIR elements recommended for training materials"
-  ],
-  "timeRequired": "P40M0S",
-  "url": "https://docs.google.com/presentation/d/1_C2TTX_gYRxpVQjNEbuMm3YLfz6ouocGUxoioUCnG5I",
-
-
-
-
-  "accessibilitySummary": "Visual elements are not described",
-  "contributor":  [
+  "image": "https://image.server.com/my-image.jpg",
+  "isBasedOn": [
     {
-      "@type": "Organization",
-      "name": "ELIXIR Training Platform",
-      "url": "https://elixir-europe.org/platforms/training"
+      "@type": "Course",
+      "name": "Based on this Course Name XX",
+      "description": "This couse XX is ran at insitution YY every fall.",
+      "keywords": "RNA-Seq, Viruses, Short course"
     }
   ],
-  "creativeWorkStatus": "active",
-  "dateCreated": "2020-08-28",
-  "dateModified": "2020-09-19",
-  "datePublished": "2020-09-17",
-  "recordedAt": [
-    {
-      "@type": "Webinar",
-      "name": "Ten simple rules to make training materials FAIR",
-      "url": "https://elixir-europe.org/events/elixir-webinar-fair-training"
-    }
-  ],
-  "version": "0.0.1"
+  "thumbnailUrl": "https://image.server.com/my-image.jpg"
 }
