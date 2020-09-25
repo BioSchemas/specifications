@@ -38,7 +38,7 @@
   "coursePrerequisites": [
      {
        "@type": "AlignmentObject",
-       "alignmentType"": "educationalLevel",
+       "alignmentType": "educationalLevel",
        "educationalFramework": "QAA",
        "targetName": "Higher Education Credit Framework For England",
        "targetUrl": "https://www.qaa.ac.uk/docs/qaa/quality-code/academic-credit-framework.pdf?sfvrsn=940bf781_12"
