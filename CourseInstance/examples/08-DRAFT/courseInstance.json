@@ -114,7 +114,7 @@
 		"name": "University of Soth Wales"
 	}
   ],
-  "name": "RNA-seq in R for Autumn 2020 CS101",
+  "name": "RNA-seq data analysis in R in Autumn 2020 CS101",
   "subEvent": [
 	{
 		"@type": "Event",
