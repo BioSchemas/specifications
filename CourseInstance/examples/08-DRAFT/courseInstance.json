@@ -1,7 +1,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Event",
-  "dct:conformsTo": "https://bioschemas.org/profiles/CourseInstance/0.8_DRAFT-2020_09_28",
+  "dct:conformsTo": "https://bioschemas.org/profiles/CourseInstance/0.8_DRAFT-2020_10_06",
   
   "courseMode": ["online", "synchronous", "part-time"],
   "location": {
