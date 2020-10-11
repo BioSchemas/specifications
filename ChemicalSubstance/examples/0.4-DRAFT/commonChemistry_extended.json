@@ -1,0 +1,26 @@
+{
+  "@context": "http://schema.org",
+  "@type": "ChemicalSubstance",
+  "identifier": "50-78-2",
+  "name": "Benzoic acid, 2-(acetyloxy)-",
+  "url": "https://commonchemistry.org/ChemicalDetail.aspx?ref=50-78-2",
+  "chemicalComposition": "C3H8O4",
+  "hasBioChemEntityPart": [
+    {
+      "@type": "MolecularEntity",
+      "name": "Benzoic acid, 2-(acetyloxy)-",
+      "identifier": "InChI=1S/C9H8O4/c1-6(10)13-8-5-3-2-4-7(8)9(11)12/h2-5H,1H3,(H,11,12)",
+      "url": "https://en.wikipedia.org/wiki/Aspirin",
+      "molecularFormula": "C3H8O4",
+      "iupacName": "2-acetoxybenzoic acid"
+    }
+  ],
+  "alternateName": [
+    "2-(ACETLOYXYBENZOIC) ACID",
+    "2-(Acetyloxy)benzoic acid",
+    "2-Acetoxybenzoic acid",
+    "2-Carboxyphenyl acetate",
+    "A.S.A. Empirin",
+    "AC 5230"
+  ]
+}
