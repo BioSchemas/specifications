@@ -1,0 +1,157 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataRecord",
+  "@id": "http://disport.org/DP00003#DR",
+  "includedInDataset": "https://disprot.org/#2019_09",
+  "http://purl.org/dc/terms/conformsTo": {
+    "@id": "https://bioschemas.org/profiles/DataRecord/0.2-DRAFT-2019_06_14",
+    "@type": "CreativeWork"
+  },
+  "mainEntity": {
+    "@id": "http://disport.org/DP00003",
+    "@type": "Protein",
+    "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/specifications/Protein/0.9-DRAFT",
+        "@type": "CreativeWork"
+    },
+    "hasRepresentation": "",
+    "identifier": "https://identifiers.org/mobidb:DP00003",
+    "name": "DNA-binding protein",
+    "sameAs": "http://purl.uniprot.org/uniprot/P03265",
+    "taxonomicRange": {
+      "@id": "https://identifiers.org/taxonomy:28285"
+    },
+    "hasSequenceAnnotation": [
+      {
+        "@type": "SequenceAnnotation",
+        "@id": "https://disprot.org/DP00003r002#SA",
+        "creationMethod": {
+          "@type": "DefinedTerm",
+          "@id": "http://www.semanticweb.org/idpfun/ontologies/2019/08/idpontology_disprot_8#DO:00130",
+          "inDefinedTermSet": {
+            "@type": "DefinedTermSet",
+            "@id": "https://www.disprot.org/assets/data/idpontology_disprot_8_v0.1.0.owl",
+            "name": "IDP Ontology"
+          },
+          "termCode": "DO:00130",
+          "name": "Missing electron density",
+          "url": "http://www.semanticweb.org/idpfun/ontologies/2019/08/idpontology_disprot_8#DO:00130"
+        },
+        "citation": {
+          "@id": "pmid:8632448"
+        },
+        "isPartOfBioChemEntity": {
+          "@id": "http://disport.org/"
+        },
+        "sequenceLocation": {
+          "@type": "SequenceRange",
+          "rangeStart": 294,
+          "rangeEnd": 334
+        },
+        "additionalProperty": {
+          "@type": "PropertyValue",
+          "name": "Term",
+          "value": {
+            "@type": "DefinedTerm",
+            "@id": "http://www.semanticweb.org/idpfun/ontologies/2019/08/idpontology_disprot_8#DO:00076",
+            "inDefinedTermSet": {
+              "@type": "DefinedTermSet",
+              "@id": "https://www.disprot.org/assets/data/idpontology_disprot_8_v0.1.0.owl",
+              "name": "IDP Ontology"
+            },
+            "termCode": "DO:00076",
+            "name": "Disorder",
+            "url": "http://www.semanticweb.org/idpfun/ontologies/2019/08/idpontology_disprot_8#DO:00076"
+          }
+        }
+      },
+      {
+        "@type": "SequenceAnnotation",
+        "@id": "https://disprot.org/DP00003r003#SA",
+        "creationMethod": {
+          "@type": "DefinedTerm",
+          "@id": "http://www.semanticweb.org/idpfun/ontologies/2019/08/idpontology_disprot_8#DO:00130",
+          "inDefinedTermSet": {
+            "@type": "DefinedTermSet",
+            "@id": "https://www.disprot.org/assets/data/idpontology_disprot_8_v0.1.0.owl",
+            "name": "IDP Ontology"
+          },
+          "termCode": "DO:00130",
+          "name": "Missing electron density",
+          "url": "http://www.semanticweb.org/idpfun/ontologies/2019/08/idpontology_disprot_8#DO:00130"
+        },
+        "citation": {
+          "@id": "pmid:8632448"
+        },
+        "isPartOfBioChemEntity": {
+          "@id": "http://disport.org/"
+        },
+        "sequenceLocation": {
+          "@type": "SequenceRange",
+          "rangeStart": 294,
+          "rangeEnd": 334
+        },
+        "additionalProperty": {
+          "@type": "PropertyValue",
+          "name": "Term",
+          "value": {
+            "@type": "DefinedTerm",
+            "@id": "http://www.semanticweb.org/idpfun/ontologies/2019/08/idpontology_disprot_8#DO:00002",
+            "inDefinedTermSet": {
+              "@type": "DefinedTermSet",
+              "@id": "https://www.disprot.org/assets/data/idpontology_disprot_8_v0.1.0.owl",
+              "name": "IDP Ontology"
+            },
+            "termCode": "DO:00002",
+            "name": "Flexible linker/spacer",
+            "url": "http://www.semanticweb.org/idpfun/ontologies/2019/08/idpontology_disprot_8#DO:00002"
+          }
+        }
+      },
+      {
+        "@type": "SequenceAnnotation",
+        "@id": "https://disprot.org/DP00003r004#SA",
+        "creationMethod": {
+          "@type": "DefinedTerm",
+          "@id": "http://www.semanticweb.org/idpfun/ontologies/2019/08/idpontology_disprot_8#DO:00130",
+          "inDefinedTermSet": {
+            "@type": "DefinedTermSet",
+            "@id": "https://www.disprot.org/assets/data/idpontology_disprot_8_v0.1.0.owl",
+            "name": "IDP Ontology"
+          },
+          "termCode": "DO:00130",
+          "name": "Missing electron density",
+          "url": "http://www.semanticweb.org/idpfun/ontologies/2019/08/idpontology_disprot_8#DO:00130"
+        },
+        "citation": {
+          "@id": "pmid:8632448"
+        },
+        "isPartOfBioChemEntity": {
+          "@id": "http://disport.org/"
+        },
+        "sequenceLocation": {
+          "@type": "SequenceRange",
+          "rangeStart": 454,
+          "rangeEnd": 464
+        },
+        "additionalProperty": {
+          "@type": "PropertyValue",
+          "name": "Term",
+          "value": {
+            "@type": "DefinedTerm",
+            "@id": "http://www.semanticweb.org/idpfun/ontologies/2019/08/idpontology_disprot_8#DO:00076",
+            "inDefinedTermSet": {
+              "@type": "DefinedTermSet",
+              "@id": "https://www.disprot.org/assets/data/idpontology_disprot_8_v0.1.0.owl",
+              "name": "IDP Ontology"
+            },
+            "termCode": "DO:00076",
+            "name": "Disorder",
+            "url": "http://www.semanticweb.org/idpfun/ontologies/2019/08/idpontology_disprot_8#DO:00076"
+          }
+        }
+      }
+    ],
+    "hasBioPolymerSequence": "MASREEEQRETTPERGRGAARRPPTMEDVSSPSPSPPPPRAPPKKRMRRRIESEDEEDSSQDALVPRTPSPRPSTSAADLAIAPKKKKKRPSPKPERPPSPEVIVDSEEEREDVALQMVGFSNPPVLIKHGKGGKRTVRRLNEDDPVARGMRTQEEEEEPSEAESEITVMNPLSVPIVSAWEKGMEAARALMDKYHVDNDLKANFKLLPDQVEALAAVCKTWLNEEHRGLQLTFTSKKTFVTMMGRFLQAYLQSFAEVTYKHHEPTGCALWLHRCAEIEGELKCLHGSIMINKEHVIEMDVTSENGQRALKEQSSKAKIVKNRWGRNVVQISNTDARCCVHDAACPANQFSGKSCGMFFSEGAKAQVAFKQIKAFMQALYPNAQTGHGHLLMPLRCECNSKPGHAPFLGRQLPKLTPFALSNAEDLDADLISDKSVLASVHHPALIVFQCCNPVYRNSRAQGGGPNCDFKISAPDLLNALVMVRSLWSENFTELPRMVVPEFKWSTKHQYRNVSLPVAHSDARQNPFDF"
+  }
+}
