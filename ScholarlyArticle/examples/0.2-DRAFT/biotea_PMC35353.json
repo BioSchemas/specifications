@@ -101,16 +101,22 @@
             "commentCount": 3,
             "mainEntity": [
                 {
-                    "@type": "DefinedTerm",
-                    "termCode": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C45585"
+                  "@type": "DefinedTerm",
+                  "inDefinedTermSet": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                  "termCode": "ncit:C45585",
+                  "url": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C45585"
                 },
                 {
-                    "@type": "DefinedTerm",
-                    "termCode": "http://purl.bioontology.org/ontology/MESH/D020125"
+                  "@type": "DefinedTerm",
+                  "inDefinedTermSet": "http://purl.bioontology.org/ontology/MESH/",
+                  "termCode": "mesh:D020125",
+                  "url": "http://purl.bioontology.org/ontology/MESH/D020125"
                 },
                 {
-                    "@type": "DefinedTerm",
-                    "termCode": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C18133"
+                  "@type": "DefinedTerm",
+                  "inDefinedTermSet": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                  "termCode": "ncit:C18133",
+                  "url": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C18133"
                 }
             ]
         }
