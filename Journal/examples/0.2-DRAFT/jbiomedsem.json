@@ -1,0 +1,38 @@
+{
+    "@type": "Periodical",
+    "@id": "https://jbiomedsem.biomedcentral.com/",
+    "dct:conformsTo": "https://bioschemas.org/profiles/Journal/0.2-DRAFT-2020_12_03",
+    
+    "identifier": "issn:2041-1480",
+    "name": "Journal of Biomedical Semantics",
+    "keywords": "Biomedical semantics, semantic web, RDF, ontologies, linked data",
+    "url": "https://jbiomedsem.biomedcentral.com/",
+    "about": "Journal of Biomedical Semantics addresses issues of semantic enrichment and semantic processing in the biomedical domain...",
+    "editor": [
+        {
+            "@type": "Person",
+            "givenName": "Dietrich",
+            "familyName": "Rebholz-Schuhmann"
+        }
+    ],
+    "hasPart": [
+        {
+            "@id": "https://doi.org/10.1186/2041-1480-4-s1-s5"
+        },
+        {
+            "@type": "PublicationVolume",
+            "url": "https://jbiomedsem.biomedcentral.com/articles/supplements/volume-4-supplement-1",
+            "volumeNumber": "Volume 4 supplement 1"
+        }
+    ],
+    "isAccessibleForFree": true,
+    "license": "https://www.biomedcentral.com/about/policies/license-agreement",
+    "publisher": [
+        {
+            "@type": "Organization",
+            "name": "BMC BioMedCentral",
+            "url": "https://www.biomedcentral.com"
+        }
+    ],
+    "publishingPrinciples": "https://jbiomedsem.biomedcentral.com/submission-guidelines"
+}
