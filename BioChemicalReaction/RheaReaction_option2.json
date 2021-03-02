@@ -11,6 +11,10 @@
     "itemListElement": [
       {
         "@type": "MolecularEntity",
+        "dct:conformsTo": {
+          "@type": "CreativeWork",
+          "@id": "https://bioschemas.org/profiles/MolecularEntity/0.5-RELEASE/"
+        },
         "@id": "http://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15377",
         "identifier": "CHEBI:15377",
         "name": "H2O",
@@ -21,6 +25,10 @@
       },
       {
         "@type": "MolecularEntity",
+        "dct:conformsTo": {
+          "@type": "CreativeWork",
+          "@id": "https://bioschemas.org/profiles/MolecularEntity/0.5-RELEASE/"
+        },
         "@id": "http://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:63740",
         "identifier": "CHEBI:63740",
         "name": "P1,P6-bis(5'-adenosyl) hexaphosphate",
@@ -31,6 +39,10 @@
       },
       {
         "@type": "MolecularEntity",
+        "dct:conformsTo": {
+          "@type": "CreativeWork",
+          "@id": "https://bioschemas.org/profiles/MolecularEntity/0.5-RELEASE/"
+        },
         "@id": "http://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:58450",
         "identifier": "CHEBI:58450",
         "name": "adenosine 5'-tetraphosphate",
@@ -41,6 +53,10 @@
       },
       {
         "@type": "MolecularEntity",
+        "dct:conformsTo": {
+          "@type": "CreativeWork",
+          "@id": "https://bioschemas.org/profiles/MolecularEntity/0.5-RELEASE/"
+        },
         "@id": "http://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:456216",
         "identifier": "CHEBI:456216",
         "name": "ADP",
@@ -51,6 +67,10 @@
       },
       {
         "@type": "MolecularEntity",
+        "dct:conformsTo": {
+          "@type": "CreativeWork",
+          "@id": "https://bioschemas.org/profiles/MolecularEntity/0.5-RELEASE/"
+        },
         "@id": "http://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15378",
         "identifier": "CHEBI:15378",
         "name": "H+",
