@@ -103,5 +103,59 @@
   "keywords": "Untargeted Metabolites, Phenylalanine, Tryptophan, Ultra-Performance Liquid Chromatography-Mass Spectrometry, Labelling, Tandem Mass Spectrometry",
   "name": "Stable Isotope–Assisted Plant Metabolomics: Combination of Global and Tracer-Based Labeling for Enhanced Untargeted Profiling and Compound Annotation",
   "studyDomain": "http://edamontology.org/topic_3172",
-  "studyProcess": "Liquid chromatography-mass spectrometry (LC-MS)-based stable isotope assisted approach"
+  "studyProcess": "Liquid chromatography-mass spectrometry (LC-MS)-based stable isotope assisted approach",
+  "studySubject" : [
+    {
+      "@type": "BioSample",
+      "dct:conformsTo": {
+        "@type": "CreativeWork",
+        "@id": "https://bioschemas.org/profiles/BioSample/0.1-DRAFT-2019_11_12/"
+      },
+      "name": "12C13CRemus_Untreated",
+      "taxonomicRange": {
+        "@type": "Taxon",
+        "dct:conformsTo": {
+          "@type": "CreativeWork",
+          "@id": "https://bioschemas.org/profiles/Taxon/0.7-DRAFT/"
+        },
+        "name": "Triticum aestivum cv. Remus",
+        "parentTaxon": "Triticum aestivum"
+      }
+    },
+    {
+      "@type": "BioSample",
+      "dct:conformsTo": {
+        "@type": "CreativeWork",
+        "@id": "https://bioschemas.org/profiles/BioSample/0.1-DRAFT-2019_11_12/"
+      },
+      "name": "13CPhe",
+      "taxonomicRange": {
+        "@type": "Taxon",
+        "dct:conformsTo": {
+          "@type": "CreativeWork",
+          "@id": "https://bioschemas.org/profiles/Taxon/0.7-DRAFT/"
+        },
+        "name": "Triticum aestivum cv. Remus",
+        "parentTaxon": "Triticum aestivum"
+      }
+    },
+    {
+      "@type": "BioSample",
+      "dct:conformsTo": {
+        "@type": "CreativeWork",
+        "@id": "https://bioschemas.org/profiles/BioSample/0.1-DRAFT-2019_11_12/"
+      },
+      "name": "13CTrp",
+      "taxonomicRange": {
+        "@type": "Taxon",
+        "dct:conformsTo": {
+          "@type": "CreativeWork",
+          "@id": "https://bioschemas.org/profiles/Taxon/0.7-DRAFT/"
+        },
+        "name": "Triticum aestivum cv. Remus",
+        "parentTaxon": "Triticum aestivum"
+      }
+    }
+  ]
+
 }
