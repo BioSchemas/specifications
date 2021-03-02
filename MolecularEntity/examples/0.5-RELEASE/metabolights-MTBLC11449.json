@@ -1,5 +1,5 @@
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org/",
   "@id": "https://www.ebi.ac.uk/metabolights/MTBLC11449",
   "@type": "DataRecord",
   "dct:conformsTo": "https://bioschemas.org/profiles/DataRecord/0.2-DRAFT-2019_06_14",
