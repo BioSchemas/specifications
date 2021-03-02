@@ -8,52 +8,82 @@
   "author": [
     {
       "@type": "Person",
-      "dct:conformsTo": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+      "dct:conformsTo": {
+        "@type": "CreativeWork",
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19"
+      },
       "name": "Maria Doppler"
     },
     {
       "@type": "Person",
-      "dct:conformsTo": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+      "dct:conformsTo": {
+        "@type": "CreativeWork",
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19"
+      },
       "name": "Christoph Bueschl"
     },
     {
       "@type": "Person",
-      "dct:conformsTo": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+      "dct:conformsTo": {
+        "@type": "CreativeWork",
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19"
+      },
       "name": "Bernhard Kluger"
     },
     {
       "@type": "Person",
-      "dct:conformsTo": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+      "dct:conformsTo": {
+        "@type": "CreativeWork",
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19"
+      },
       "name": "Andrea Koutnik"
     },
     {
       "@type": "Person",
-      "dct:conformsTo": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+      "dct:conformsTo": {
+        "@type": "CreativeWork",
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19"
+      },
       "name": "Marc Lemmens"
     },
     {
       "@type": "Person",
-      "dct:conformsTo": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+      "dct:conformsTo": {
+        "@type": "CreativeWork",
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19"
+      },
       "name": "Hermann Buerstmayr"
     },
     {
       "@type": "Person",
-      "dct:conformsTo": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+      "dct:conformsTo": {
+        "@type": "CreativeWork",
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19"
+      },
       "name": "Justyna Rechthaler"
     },
     {
       "@type": "Person",
-      "dct:conformsTo": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+      "dct:conformsTo": {
+        "@type": "CreativeWork",
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19"
+      },
       "name": "Rudolf Krska"
     },
     {
       "@type": "Person",
-      "dct:conformsTo": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+      "dct:conformsTo": {
+        "@type": "CreativeWork",
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19"
+      },
       "name": "Gerhard Adam"
     },
     {
       "@type": "Person",
-      "dct:conformsTo": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+      "dct:conformsTo": {
+        "@type": "CreativeWork",
+        "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19"
+      },
       "name": "Rainer Schuhmacher"
     }
   ],
