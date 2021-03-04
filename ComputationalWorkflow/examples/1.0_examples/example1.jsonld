@@ -2,6 +2,7 @@
   "@context": "http://schema.org",
   "@type": "ComputationalWorkflow",
   "@id": "https://workflowhub.eu/workflows/49",
+  "dct:conformsTo": "https://bioschemas.org/profiles/ComputationalWorkflow/1.0-RELEASE",
   "description": "Galaxy-E (ecology.usegalaxy.eu) workflow to calculate species presence / absence, community metrics and compute generalized linear models to identify effects and significativity of these effects on biodiversity.",
   "name": "Population and community metrics calculation from Biodiversity data",
   "url": "https://workflowhub.eu/workflows/49",
