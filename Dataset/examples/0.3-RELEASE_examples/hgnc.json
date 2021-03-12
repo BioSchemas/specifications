@@ -1,0 +1,52 @@
+
+  {
+    "@context": "http://schema.org",
+    "@type": "Dataset",
+    "@id": "https://www.genenames.org/data/gene-symbol-report/#data-set",
+    "url": "https:\/\/www.genenames.org\/",
+    "name": "Gene symbol reports",
+    "includedInDataCatalog": {
+      "@type": "DataCatalog",
+      "@id": "https://www.genenames.org/#data-catalog",
+      "url": "https://www.genenames.org"
+    },
+    "keywords": [
+      "Gene",
+      "Nomenclature",
+      "Gene symbol",
+      "Gene name",
+      "Gene cross references"
+    ],
+    "potentialAction": {
+      "@type": "Action",
+      "target": {
+        "@type": "EntryPoint",
+        "httpMethod": "GET",
+        "urlTemplate": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/{hgncID}",
+        "contentType": "text/html; charset=UTF-8",
+        "encodingType": "gzip"
+      },
+      "description": "Entry point into a specific gene symbol report",
+      "name": "Gene symbol report"
+    },
+    "distribution": [
+      {
+        "@type": "DataDownload",
+        "contentUrl": "ftp://ftp.ebi.ac.uk/pub/databases/genenames/hgnc/tsv/hgnc_complete_set.txt",
+        "encodingFormat": "text/plain",
+        "name": "Complete HGNC approved dataset - tab separated values"
+      },
+      {
+        "@type": "DataDownload",
+        "contentUrl": "ftp://ftp.ebi.ac.uk/pub/databases/genenames/hgnc/json/hgnc_complete_set.json",
+        "encodingFormat": "application/json",
+        "name": "Complete HGNC approved dataset - json"
+      }
+    ],
+    "description": "HGNC gene nomenclature reports with cross references to other pertinent resources.",
+    "creator": {
+      "@type": "Organization",
+      "@id": "https://www.genenames.org/#organisation"
+    },
+    "license": "https://creativecommons.org/share-your-work/public-domain/cc0/"
+  }

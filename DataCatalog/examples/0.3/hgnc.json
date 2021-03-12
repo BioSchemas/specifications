@@ -1,0 +1,131 @@
+
+    {
+      "@context": [
+        {
+          "bs": "http://bioschemas.org/"
+        },
+        "http://schema.org",
+        {
+          "@base": "http://schema.org"
+        }
+      ],
+      "@id": "https://www.genenames.org/#data-catalog",
+      "@type": "bs:DataCatalog",
+      "alternateName": [
+        "HGNC"
+      ],
+      "description": "The resource for approved human gene nomenclature. For each known human gene we approve a gene name and symbol (short-form abbreviation). All approved symbols are stored in the HGNC database, www.genenames.org, a curated online repository of HGNC-approved gene nomenclature, gene groups and ortholog predictions.",
+      "keywords": [
+        "genes",
+        "nomenclature",
+        "HGNC",
+        "gene groups"
+      ],
+      "name": "HUGO Gene Nomenclature Committee",
+      "provider": [
+        {
+          "@id": "https://www.genenames.org/#organisation",
+          "url": "https://www.genenames.org"
+        }
+      ],
+      "url": "https://beta.genenames.org",
+      "citation": {
+        "@type": "ScholarlyArticle",
+        "@id": "https://academic.oup.com/nar/article/49/D1/D939/5957168",
+        "name": "Genenames.org: the HGNC and VGNC resources in 2021.",
+        "headline": "Genenames.org: the HGNC and VGNC resources in 2021.",
+        "identifier": [
+          "https://dx.doi.org/10.1093/nar/gkaa980"
+        ],
+        "url": "https://dx.doi.org/10.1093/nar/gkaa980",
+        "datePublished": "2020-11-05",
+        "inLanguage": "en",
+        "copyrightYear": "2021",
+        "sameAs": "https://academic.oup.com/nar/article/49/D1/D939/5957168",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Oxford University Press",
+          "logo": "https://academic.oup.com/UI/app/svg/umbrella/oxford-academic-logo.svg"
+        },
+        "pageStart": "D939",
+        "pageEnd": "D946",
+        "image": "https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/nar/Issue/49/D1/1/m_cover.gif?Expires=1676156253&Signature=OkaZrIeABs5iEFjPHIHdG1JcXpdrLQlBJ1qnoKRvyCUmhQgIfuYoI7qruOpVYaOEnu0U7tvFMaRMMiaLhdzB2Dh-CYnbodR3E719kTbaFd6012xXfELcKbTpgNeD3TlMCsa1hKXjIx0vsM9sj28bpIHSR9RR6Uv2tXj7-RZbA1IHHqoi5rWdbMdz3fbdbkwNSDTZbbZsHgjex44Ie7jhDBXfQiyWulpSjoWf0qvDgwdyBem94gy9AhoVYaOLcCOLKd79HPkCEQ2-MFZBx4IQyrZeYtAE57pTp23HML8SmEYSPXtG3SRNF65cNDKUK1eUyJMjx~QTMuOXhXTT5OlbIQ__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA",
+        "thumbnailUrl": "https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/nar/Issue/49/D1/1/m_cover.gif?Expires=1676156253&Signature=OkaZrIeABs5iEFjPHIHdG1JcXpdrLQlBJ1qnoKRvyCUmhQgIfuYoI7qruOpVYaOEnu0U7tvFMaRMMiaLhdzB2Dh-CYnbodR3E719kTbaFd6012xXfELcKbTpgNeD3TlMCsa1hKXjIx0vsM9sj28bpIHSR9RR6Uv2tXj7-RZbA1IHHqoi5rWdbMdz3fbdbkwNSDTZbbZsHgjex44Ie7jhDBXfQiyWulpSjoWf0qvDgwdyBem94gy9AhoVYaOLcCOLKd79HPkCEQ2-MFZBx4IQyrZeYtAE57pTp23HML8SmEYSPXtG3SRNF65cNDKUK1eUyJMjx~QTMuOXhXTT5OlbIQ__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA",
+        "isPartOf": {
+          "@type": "PublicationIssue",
+          "@id": "https://academic.oup.com/nar/nar/issue/49/D1",
+          "issueNumber": "D1",
+          "datePublished": "2021-01-08",
+          "isPartOf": {
+            "@type": "Periodical",
+            "@id": "https://academic.oup.com/nar/nar",
+            "name": "Nucleic Acids Research",
+            "issn": "1362-4962"
+          }
+        },
+        "copyrightHolder": {
+          "@type": "Organization",
+          "name": "Oxford University Press"
+        },
+
+        "author": [
+          {
+            "@type": "Person",
+            "givenName": "Susan",
+            "familyName": "Tweedie",
+            "url": "https://orcid.org/0000-0003-1818-8243",
+            "name": "Susan Tweedie"
+          },
+          {
+            "@type": "Person",
+            "givenName": "Bryony",
+            "familyName": "Braschi",
+            "url": "https://orcid.org/0000-0002-5269-0985",
+            "name": " Bryony Braschi"
+          },
+          {
+            "@type": "Person",
+            "givenName": "Kristian",
+            "familyName": "Gray",
+            "url": "https://orcid.org/0000-0002-7035-7107",
+            "name": "Kristian Gray"
+          },
+          {
+            "@type": "Person",
+            "givenName": "Tamsin",
+            "familyName": "Jones",
+            "url": "https://orcid.org/0000-0002-0027-0858",
+            "name": "Tamsin E M Jones"
+          },
+          {
+            "@type": "Person",
+            "givenName": "Ruth",
+            "familyName": "Seal",
+            "url": "https://orcid.org/0000-0002-7545-6817",
+            "name": "Ruth L Seal"
+          },
+          {
+            "@type": "Person",
+            "givenName": "Bethan",
+            "familyName": "Yates",
+            "url": "https://orcid.org/0000-0003-1658-1762",
+            "name": "Bethan Yates"
+          },
+          {
+            "@type": "Person",
+            "givenName": "Elspeth",
+            "familyName": "Bruford",
+            "url": "https://orcid.org/0000-0002-8380-5247",
+            "name": "Elspeth A Bruford"
+          }
+        ]
+      },
+      "dataset": [
+        {
+          "@id": "https://www.genenames.org/data/gene-symbol-report/#data-set"
+        },
+        {
+          "@id": "https://www.genenames.org/data/genegroup/#data-set"
+        }
+      ]
+    }
