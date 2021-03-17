@@ -2,7 +2,7 @@
   "@context": "https://schema.org/",
   "@id": "https://www.ebi.ac.uk/metabolights/MTBLC11449",
   "@type": "MolecularEntity",
-  "dct:conformsTo": {
+  "http://purl.org/dc/terms/conformsTo": {
     "@type": "CreativeWork",
     "@id": "https://bioschemas.org/profiles/MolecularEntity/0.5-RELEASE/"
   },
