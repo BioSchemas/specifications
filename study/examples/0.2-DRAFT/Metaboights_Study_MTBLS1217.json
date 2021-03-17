@@ -2,13 +2,13 @@
   "@context": "https://schema.org/",
   "@id": "https://www.ebi.ac.uk/metabolights/MTBLS1217",
   "@type": "Study",
-  "dct:conformsTo": {
+  "http://purl.org/dc/terms/conformsTo": {
     "@type": "CreativeWork"
     "@id": "https://bioschemas.org/profiles/Study/0.2-DRAFT/",
   "author": [
     {
       "@type": "Person",
-      "dct:conformsTo": {
+      "http://purl.org/dc/terms/conformsTo": {
         "@type": "CreativeWork",
         "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19"
       },
@@ -16,7 +16,7 @@
     },
     {
       "@type": "Person",
-      "dct:conformsTo": {
+      "http://purl.org/dc/terms/conformsTo": {
         "@type": "CreativeWork",
         "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19"
       },
@@ -24,7 +24,7 @@
     },
     {
       "@type": "Person",
-      "dct:conformsTo": {
+      "http://purl.org/dc/terms/conformsTo": {
         "@type": "CreativeWork",
         "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19"
       },
@@ -32,7 +32,7 @@
     },
     {
       "@type": "Person",
-      "dct:conformsTo": {
+      "http://purl.org/dc/terms/conformsTo": {
         "@type": "CreativeWork",
         "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19"
       },
@@ -40,7 +40,7 @@
     },
     {
       "@type": "Person",
-      "dct:conformsTo": {
+      "http://purl.org/dc/terms/conformsTo": {
         "@type": "CreativeWork",
         "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19"
       },
@@ -48,7 +48,7 @@
     },
     {
       "@type": "Person",
-      "dct:conformsTo": {
+      "http://purl.org/dc/terms/conformsTo": {
         "@type": "CreativeWork",
         "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19"
       },
@@ -56,7 +56,7 @@
     },
     {
       "@type": "Person",
-      "dct:conformsTo": {
+      "http://purl.org/dc/terms/conformsTo": {
         "@type": "CreativeWork",
         "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19"
       },
@@ -64,7 +64,7 @@
     },
     {
       "@type": "Person",
-      "dct:conformsTo": {
+      "http://purl.org/dc/terms/conformsTo": {
         "@type": "CreativeWork",
         "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19"
       },
@@ -72,7 +72,7 @@
     },
     {
       "@type": "Person",
-      "dct:conformsTo": {
+      "http://purl.org/dc/terms/conformsTo": {
         "@type": "CreativeWork",
         "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19"
       },
@@ -80,7 +80,7 @@
     },
     {
       "@type": "Person",
-      "dct:conformsTo": {
+      "http://purl.org/dc/terms/conformsTo": {
         "@type": "CreativeWork",
         "@id": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19"
       },
@@ -107,14 +107,14 @@
   "studySubject" : [
     {
       "@type": "BioSample",
-      "dct:conformsTo": {
+      "http://purl.org/dc/terms/conformsTo": {
         "@type": "CreativeWork",
         "@id": "https://bioschemas.org/profiles/BioSample/0.1-DRAFT-2019_11_12/"
       },
       "name": "12C13CRemus_Untreated",
       "taxonomicRange": {
         "@type": "Taxon",
-        "dct:conformsTo": {
+        "http://purl.org/dc/terms/conformsTo": {
           "@type": "CreativeWork",
           "@id": "https://bioschemas.org/profiles/Taxon/0.7-DRAFT/"
         },
@@ -124,14 +124,14 @@
     },
     {
       "@type": "BioSample",
-      "dct:conformsTo": {
+      "http://purl.org/dc/terms/conformsTo": {
         "@type": "CreativeWork",
         "@id": "https://bioschemas.org/profiles/BioSample/0.1-DRAFT-2019_11_12/"
       },
       "name": "13CPhe",
       "taxonomicRange": {
         "@type": "Taxon",
-        "dct:conformsTo": {
+        "http://purl.org/dc/terms/conformsTo": {
           "@type": "CreativeWork",
           "@id": "https://bioschemas.org/profiles/Taxon/0.7-DRAFT/"
         },
@@ -141,14 +141,14 @@
     },
     {
       "@type": "BioSample",
-      "dct:conformsTo": {
+      "http://purl.org/dc/terms/conformsTo": {
         "@type": "CreativeWork",
         "@id": "https://bioschemas.org/profiles/BioSample/0.1-DRAFT-2019_11_12/"
       },
       "name": "13CTrp",
       "taxonomicRange": {
         "@type": "Taxon",
-        "dct:conformsTo": {
+        "http://purl.org/dc/terms/conformsTo": {
           "@type": "CreativeWork",
           "@id": "https://bioschemas.org/profiles/Taxon/0.7-DRAFT/"
         },
