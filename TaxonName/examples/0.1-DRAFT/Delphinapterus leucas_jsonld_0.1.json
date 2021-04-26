@@ -4,6 +4,10 @@
         { "tn": "http://rs.tdwg.org/ontology/voc/TaxonName#" }
     ],
 
+    "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/TaxonName/0.1-DRAFT"
+    },
+
     "@type" : "TaxonName",
     "additionalType": "tn:TaxonName",
     "name": "Delphinapterus leucas",
