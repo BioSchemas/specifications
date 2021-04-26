@@ -6,6 +6,10 @@
         }
     ],
     
+    "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Taxon/0.7-DRAFT"
+    },
+
     "@type" : "Taxon",
     "additionalType": [ "dwc:Taxon", "http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept" ],
     "identifier": "60932",
