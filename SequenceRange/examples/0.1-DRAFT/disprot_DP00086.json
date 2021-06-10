@@ -1,0 +1,70 @@
+{
+  "@context": "http://schema.org/",
+  "@type": "Protein",
+  "@id": "http://disprot.org/DP00086",
+  "includedInDataset": "https://disprot.org/#current",
+  "http://purl.org/dc/terms/conformsTo": {"@id": "https://bioschemas.org/specifications/Protein/0.12-DRAFT"},
+  "hasRepresentation": "MEEPQSDPSVEPPLSQETFSDLWKLLPENNVLSPLPSQAMDDLMLSPDDIEQWFTEDPGPDEAPRMPEAAPPVAPAPAAPTPAAPAPAPSWPLSSSVPSQKTYQGSYGFRLGFLHSGTAKSVTCTYSPALNKMFCQLAKTCPVQLWVDSTPPPGTRVRAMAIYKQSQHMTEVVRRCPHHERCSDSDGLAPPQHLIRVEGNLRVEYLDDRNTFRHSVVVPYEPPEVGSDCTTIHYNYMCNSSCMGGMNRRPILTIITLEDSSGNLLGRNSFEVRVCACPGRDRRTEEENLRKKGEPHHELPPGSTKRALPNNTSSSPQPKKKPLDGEYFTLQIRGRERFEMFRELNEALELKDAQAGKEPGGSRAHSSHLKSKKGQSTSRHKKLMFKTEGPDSD",
+  "identifier": "DP00086",
+  "name": "Cellular tumor antigen p53",
+  "sameAs": [
+    "https://www.uniprot.org/uniprot/P04637",
+    "https://mobidb.org/P04637"
+  ],
+  "taxonomicRange": {
+    "@id": "https://identifiers.org/taxonomy:9606"
+  },
+  "hasSequenceAnnotation": [
+    {
+      "@type": "SequenceAnnotation",
+      "@id": "https://disprot.org/DP00086r026",
+      "http://purl.org/dc/terms/conformsTo": {"@id": "https://bioschemas.org/specifications/SequenceAnnotation/0.7-DRAFT"},
+      "creationMethod": {
+        "@type": "DefinedTerm",
+        "@id": "http://www.semanticweb.org/idpfun/ontologies/2019/08/idpontology_disprot_8#DO:00120",
+        "inDefinedTermSet": {
+          "@type": "DefinedTermSet",
+          "@id": "https://www.disprot.org/assets/data/idpontology_disprot_8_v0.1.0.owl",
+          "name": "IDP Ontology"
+        },
+        "termCode": "DO:00120",
+        "name": "Nuclear magnetic resonance",
+        "url": "http://www.semanticweb.org/idpfun/ontologies/2019/08/idpontology_disprot_8#DO:00120"
+      },
+      "editor": {
+        "@id": "https://disprot.org/curator#bhajdu"
+      },
+      "citation": {
+        "@id": "https://www.ncbi.nlm.nih.gov/pubmed/16793543"
+      },
+      "isPartOfBioChemEntity": {
+        "@id": "http://disprot.org/DP00086"
+      },
+      "sequenceLocation": {
+        "@type": "SequenceRange",
+        "http://purl.org/dc/terms/conformsTo": {"@id": "https://bioschemas.org/specifications/SequenceRange/0.1-DRAFT"},
+        "rangeStart": 20,
+        "rangeEnd": 73
+      },
+      "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Term",
+        "value": {
+          "@type": "DefinedTerm",
+          "@id": "http://www.semanticweb.org/idpfun/ontologies/2019/08/idpontology_disprot_8#DO:00076",
+          "inDefinedTermSet": {
+            "@type": "DefinedTermSet",
+            "@id": "https://www.disprot.org/assets/data/idpontology_disprot_8_v0.1.0.owl",
+            "name": "IDP Ontology"
+          },
+          "termCode": "DO:00076",
+          "name": "Disorder",
+          "url": "http://www.semanticweb.org/idpfun/ontologies/2019/08/idpontology_disprot_8#DO:00076"
+        }
+      },
+      "description": [
+        "Chemical shift analysis and the NOE pattern demonstrated that p53 in complex with Tfb1 adopts an\na-helical fold that extends from Pro47 to Thr55. Outside this region, p53 is flexible, as also supported by the 15N-1H heteronuclear NOE data."
+      ]
+    }
+  ]
+}
