@@ -1,0 +1,63 @@
+{
+  "provider": {
+    "name": "Ensembl",
+    "@type": "Organization",
+    "email": "helpdesk@ensembl.org"
+  },
+  "url": "http://www.ensembl.org",
+  "@type": "DataCatalog",
+  "http://purl.org/dc/terms/conformsTo": {
+    "@id": "https://bioschemas.org/profiles/DataCatalog/0.3-RELEASE-2019_07_01/",
+    "@type": "CreativeWork"
+  },
+  "name": "Ensembl",
+  "dataset": [
+    {
+      "keywords": "phylogenetics, evolution, homology, synteny",
+      "@type": "Dataset",
+      "@id": "http://www.ensembl.org/#dataset",
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Dataset/0.3-RELEASE-2019_06_14/",
+        "@type": "CreativeWork"
+      },
+      "name": "Ensembl Comparative Genomics Data",
+      "description": "Gene trees, protein families and alignments across the vertebrate taxonomic space",
+      "includedInDataCatalog": "http://www.ensembl.org/#project",
+      "distribution": [
+        {
+          "contentURL": "http://ftp.ensembl.org/pub/emf/ensembl-compara/",
+          "description": "Alignments of resequencing data for Ensembl vertebrate species",
+          "fileFormat": "emf",
+          "name": "Ensembl Comparative Genomics - EMF files",
+          "@type": "DataDownload",
+          "encodingFormat": "text/plain"
+        }
+      ],
+      "url": "http://www.ensembl.org/info/genome/compara/accessing_compara.html",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    {
+      "@type": "Dataset",
+      "@id": "http://www.ensembl.org/#human-gene-set",
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Dataset/0.3-RELEASE-2019_06_14/",
+        "@type": "CreativeWork"
+      },
+      "name": "Ensembl Human Gene Set",
+      "description": "Gene trees, protein families and alignments across the vertebrate taxonomic space",
+      "includedInDataCatalog": "http://www.ensembl.org/#project",
+      "isPartOf": {
+        "@id": "http://www.ensembl.org/#dataset",
+        "@type": "Dataset"
+      }
+    }
+  ],
+  "@context": "http://schema.org/",
+  "@id": "http://www.ensembl.org/",
+  "sourceOrganization": {
+    "name": "European Bioinformatics Institute",
+    "@type": "Organization",
+    "url": "https://www.ebi.ac.uk"
+  },
+  "keywords": "genomics, bioinformatics, vertebrate, EBI, genetic, research, gene, regulation, variation, tool, download"
+}
