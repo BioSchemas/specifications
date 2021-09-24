@@ -2,6 +2,7 @@
   "@context": {
     "biotools": "https://bio.tools/ontology/",
     "bsc": "http://bioschemas.org/",
+    "bsct": "http://bioschemas.org/types/",
     "dct": "http://purl.org/dc/terms/",
     "edam": "http://edamontology.org/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -15,128 +16,132 @@
       "@type": "sc:CreativeWork"
     },
     {
+      "@id": "https://doi.org/10.1093/nar/gkm955",
+      "@type": "sc:CreativeWork"
+    },
+    {
       "@id": "https://bio.tools/jaspar",
       "@type": "sc:SoftwareApplication",
       "biotools:primaryContact": [
+        "Boris Lenhard",
         {
           "@id": "http://orcid.org/0000-0001-5127-5459"
         },
-        "Boris Lenhard",
         "Albin Sandelin",
         "Wyeth Wasserman"
       ],
       "bsc:input": [
         {
-          "@id": "_:N9c6c7a1925e843fda44ad3c983ddcdba"
+          "@id": "_:Na338131d85a647ce93db783f7f2cb2ea"
         },
         {
-          "@id": "_:N40c74af07b8a43f1b583f0cb36decc75"
+          "@id": "_:Ne005c63609c64c9ea68f24ea447abdef"
         },
         {
-          "@id": "_:Nef4e4b20d2ef4813a67eab2277585b4d"
+          "@id": "_:Nb1ddae82ad9a43dc845cf6faaa057dee"
         },
         {
-          "@id": "_:Nf077e565355846fa98edc7aa9bcc5b01"
+          "@id": "_:N6092416410e7478f81b0362ee63340bc"
         },
         {
-          "@id": "_:Nf2cf5a05e8a94344bddff2f41c630d38"
+          "@id": "_:Nc9f7ef0ae960406986c885a24caf59c6"
         },
         {
-          "@id": "_:N05b7291b66464c4a8b6101a35c38433b"
+          "@id": "_:Nf65c00a66cb441f3b8460129fafa0813"
         },
         {
-          "@id": "_:N7dfafbd618314351912bd03f80344d2b"
+          "@id": "_:N18cdd29d40e44a35b55ef3196a2a7cc2"
         },
         {
-          "@id": "_:Nae6edc3985f3458db055852dd12d28a3"
+          "@id": "_:Nfd5acec1b5c84ddcbe745034d08f5689"
         },
         {
-          "@id": "_:Nd429d998da9147858ad3fd808cd9302d"
+          "@id": "_:N866161a2bf6545f2bc2e0380e01200f8"
         }
       ],
       "bsc:output": [
         {
-          "@id": "_:N0cc76cb0fd8a4904b6e5d248367e96e1"
+          "@id": "_:N346ee527558d4da3b5138c54331e50e8"
         },
         {
-          "@id": "_:N40c9add9f3fc41e3829c99301270031a"
+          "@id": "_:Nfdda47f7fa7849248ba08369d64ffe05"
         }
       ],
       "dct:conformsTo": "https://bioschemas.org/profiles/ComputationalTool/0.6-DRAFT",
       "sc:additionalType": [
-        "Web application",
+        "Database portal",
         "Web API",
-        "Database portal"
+        "Web application"
       ],
       "sc:applicationSubCategory": [
         {
-          "@id": "edam:topic_0622"
-        },
-        {
-          "@id": "edam:topic_2815"
+          "@id": "edam:topic_0749"
         },
         {
           "@id": "edam:topic_0204"
         },
         {
-          "@id": "edam:topic_0621"
-        },
-        {
-          "@id": "edam:topic_0749"
+          "@id": "edam:topic_0622"
         },
         {
           "@id": "edam:topic_0780"
+        },
+        {
+          "@id": "edam:topic_2815"
+        },
+        {
+          "@id": "edam:topic_0621"
         }
       ],
       "sc:citation": [
-        "pubmed:18006571",
+        "pubmed:29253085",
         {
           "@id": "https://doi.org/10.1093/nar/gkx1126"
         },
-        "pubmed:19906716",
+        "pubmed:24194598",
         {
-          "@id": "https://doi.org/10.1093/nar/gkh012"
+          "@id": "https://doi.org/10.1093/nar/gkp950"
+        },
+        {
+          "@id": "https://doi.org/10.1093/nar/gkv1176"
+        },
+        "pubmed:19906716",
+        "pubmed:14681366",
+        "pubmed:18006571",
+        {
+          "@id": "https://doi.org/10.1093/nar/gkm955"
         },
         {
           "@id": "https://doi.org/10.1093/nar/gkt997"
         },
         {
-          "@id": "https://doi.org/10.1093/nar/gkp950"
+          "@id": "https://doi.org/10.1093/bioinformatics/btx804"
+        },
+        "pubmed:26531826",
+        {
+          "@id": "https://doi.org/10.1093/nar/gkh012"
         },
         {
           "@id": "https://doi.org/10.1093/nar/gkj115"
         },
-        {
-          "@id": "https://doi.org/10.1093/nar/gkm955"
-        },
-        "pubmed:26531826",
-        "pubmed:16381983",
-        {
-          "@id": "https://doi.org/10.1093/nar/gkv1176"
-        },
-        "pubmed:14681366",
-        "pubmed:29253085",
-        {
-          "@id": "https://doi.org/10.1093/bioinformatics/btx804"
-        },
-        "pubmed:24194598"
+        "pubmed:16381983"
       ],
       "sc:description": "The high-quality transcription factor binding profile database.",
       "sc:featureList": [
         {
-          "@id": "edam:operation_0445"
+          "@id": "edam:operation_2421"
         },
         {
-          "@id": "edam:operation_2421"
+          "@id": "edam:operation_0445"
         }
       ],
       "sc:isAccessibleForFree": true,
       "sc:license": "CC-BY-4.0",
       "sc:name": "JASPAR",
       "sc:operatingSystem": [
+        "Windows",
         "Linux",
-        "Mac",
-        "Windows"
+        "Mac"
       ],
       "sc:softwareHelp": [
         {
@@ -152,88 +157,84 @@
       "sc:url": "http://jaspar.genereg.net/"
     },
     {
-      "@id": "_:N9c6c7a1925e843fda44ad3c983ddcdba",
-      "@type": "https://bio.tools/FormalParameter",
-      "sc:identifier": "http://edamontology.org/data_2732",
-      "sc:name": "Family name",
-      "sc:sameAs": "http://edamontology.org/data_2732"
-    },
-    {
-      "@id": "_:N0cc76cb0fd8a4904b6e5d248367e96e1",
-      "@type": "https://bio.tools/FormalParameter",
-      "sc:identifier": "http://edamontology.org/data_1119",
-      "sc:name": "JASPAR profile ID",
-      "sc:sameAs": "http://edamontology.org/data_1119"
-    },
-    {
-      "@id": "_:N40c9add9f3fc41e3829c99301270031a",
-      "@type": "https://bio.tools/FormalParameter",
-      "sc:identifier": "http://edamontology.org/data_1119",
-      "sc:name": "JASPAR profile ID",
-      "sc:sameAs": "http://edamontology.org/data_1119"
-    },
-    {
-      "@id": "_:N40c74af07b8a43f1b583f0cb36decc75",
-      "@type": "https://bio.tools/FormalParameter",
-      "sc:identifier": "http://edamontology.org/data_1868",
-      "sc:name": "Taxon",
-      "sc:sameAs": "http://edamontology.org/data_1868"
-    },
-    {
-      "@id": "_:Nef4e4b20d2ef4813a67eab2277585b4d",
-      "@type": "https://bio.tools/FormalParameter",
+      "@id": "_:Na338131d85a647ce93db783f7f2cb2ea",
+      "@type": "bsct:FormalParameter",
       "sc:identifier": "http://edamontology.org/data_1077",
       "sc:name": "Transcription factor identifier",
       "sc:sameAs": "http://edamontology.org/data_1077"
     },
     {
-      "@id": "_:Nf077e565355846fa98edc7aa9bcc5b01",
-      "@type": "https://bio.tools/FormalParameter",
-      "sc:identifier": "http://edamontology.org/data_1119",
-      "sc:name": "JASPAR profile ID",
-      "sc:sameAs": "http://edamontology.org/data_1119"
-    },
-    {
-      "@id": "_:Nf2cf5a05e8a94344bddff2f41c630d38",
-      "@type": "https://bio.tools/FormalParameter",
-      "sc:identifier": "http://edamontology.org/data_3671",
-      "sc:name": "Text",
-      "sc:sameAs": "http://edamontology.org/data_3671"
-    },
-    {
-      "@id": "_:N05b7291b66464c4a8b6101a35c38433b",
-      "@type": "https://bio.tools/FormalParameter",
-      "sc:identifier": "http://edamontology.org/data_2291",
-      "sc:name": "UniProt ID",
-      "sc:sameAs": "http://edamontology.org/data_2291"
-    },
-    {
-      "@id": "_:N7dfafbd618314351912bd03f80344d2b",
-      "@type": "https://bio.tools/FormalParameter",
-      "sc:identifier": "http://edamontology.org/data_1045",
-      "sc:name": "Species name",
-      "sc:sameAs": "http://edamontology.org/data_1045"
-    },
-    {
-      "@id": "_:Nae6edc3985f3458db055852dd12d28a3",
-      "@type": "https://bio.tools/FormalParameter",
+      "@id": "_:Ne005c63609c64c9ea68f24ea447abdef",
+      "@type": "bsct:FormalParameter",
       "sc:identifier": "http://edamontology.org/data_2755",
       "sc:name": "Transcription factor name",
       "sc:sameAs": "http://edamontology.org/data_2755"
     },
     {
-      "@id": "_:Nd429d998da9147858ad3fd808cd9302d",
-      "@type": "https://bio.tools/FormalParameter",
+      "@id": "_:Nb1ddae82ad9a43dc845cf6faaa057dee",
+      "@type": "bsct:FormalParameter",
+      "sc:identifier": "http://edamontology.org/data_1119",
+      "sc:name": "JASPAR profile ID",
+      "sc:sameAs": "http://edamontology.org/data_1119"
+    },
+    {
+      "@id": "_:N6092416410e7478f81b0362ee63340bc",
+      "@type": "bsct:FormalParameter",
+      "sc:identifier": "http://edamontology.org/data_1045",
+      "sc:name": "Species name",
+      "sc:sameAs": "http://edamontology.org/data_1045"
+    },
+    {
+      "@id": "_:Nc9f7ef0ae960406986c885a24caf59c6",
+      "@type": "bsct:FormalParameter",
       "sc:identifier": "http://edamontology.org/data_3494",
       "sc:name": "DNA sequence",
       "sc:sameAs": "http://edamontology.org/data_3494"
     },
     {
-      "@id": "https://doi.org/10.1093/nar/gkm955",
-      "@type": "sc:CreativeWork"
+      "@id": "_:Nf65c00a66cb441f3b8460129fafa0813",
+      "@type": "bsct:FormalParameter",
+      "sc:identifier": "http://edamontology.org/data_3671",
+      "sc:name": "Text",
+      "sc:sameAs": "http://edamontology.org/data_3671"
     },
     {
-      "@id": "https://doi.org/10.1093/nar/gkp950",
+      "@id": "_:N18cdd29d40e44a35b55ef3196a2a7cc2",
+      "@type": "bsct:FormalParameter",
+      "sc:identifier": "http://edamontology.org/data_1868",
+      "sc:name": "Taxon",
+      "sc:sameAs": "http://edamontology.org/data_1868"
+    },
+    {
+      "@id": "_:Nfd5acec1b5c84ddcbe745034d08f5689",
+      "@type": "bsct:FormalParameter",
+      "sc:identifier": "http://edamontology.org/data_2291",
+      "sc:name": "UniProt ID",
+      "sc:sameAs": "http://edamontology.org/data_2291"
+    },
+    {
+      "@id": "_:N866161a2bf6545f2bc2e0380e01200f8",
+      "@type": "bsct:FormalParameter",
+      "sc:identifier": "http://edamontology.org/data_2732",
+      "sc:name": "Family name",
+      "sc:sameAs": "http://edamontology.org/data_2732"
+    },
+    {
+      "@id": "_:N346ee527558d4da3b5138c54331e50e8",
+      "@type": "bsct:FormalParameter",
+      "sc:identifier": "http://edamontology.org/data_1119",
+      "sc:name": "JASPAR profile ID",
+      "sc:sameAs": "http://edamontology.org/data_1119"
+    },
+    {
+      "@id": "_:Nfdda47f7fa7849248ba08369d64ffe05",
+      "@type": "bsct:FormalParameter",
+      "sc:identifier": "http://edamontology.org/data_1119",
+      "sc:name": "JASPAR profile ID",
+      "sc:sameAs": "http://edamontology.org/data_1119"
+    },
+    {
+      "@id": "https://doi.org/10.1093/nar/gkt997",
       "@type": "sc:CreativeWork"
     },
     {
@@ -241,7 +242,7 @@
       "@type": "sc:CreativeWork"
     },
     {
-      "@id": "https://doi.org/10.1093/nar/gkv1176",
+      "@id": "https://doi.org/10.1093/nar/gkp950",
       "@type": "sc:CreativeWork"
     },
     {
@@ -253,11 +254,11 @@
       "@type": "schema:Person"
     },
     {
-      "@id": "https://doi.org/10.1093/nar/gkt997",
+      "@id": "https://doi.org/10.1093/nar/gkj115",
       "@type": "sc:CreativeWork"
     },
     {
-      "@id": "https://doi.org/10.1093/nar/gkj115",
+      "@id": "https://doi.org/10.1093/nar/gkv1176",
       "@type": "sc:CreativeWork"
     }
   ]
