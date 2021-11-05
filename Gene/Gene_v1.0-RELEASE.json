@@ -18,6 +18,29 @@
         "$schema": "http://json-schema.org/draft-07/schema#",
         "type": "object",
         "properties": {
+          "identifier": {
+            "description": "The identifier property represents any kind of identifier for any kind of <a class=\"localLink\" href=\"http://schema.org/Thing\">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href=\"/docs/datamodel.html#identifierBg\">background notes</a> for more details.",
+            "anyOf": [
+              {
+                "$ref": "#/definitions/propertyValue"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "string",
+                "format": "uri"
+              }
+            ]
+          },
+          "name": {
+            "description": "The name of the item.",
+            "type": "string"
+          },
+          "description": {
+            "description": "A description of the item.",
+            "type": "string"
+          },
           "encodesBioChemEntity": {
             "description": "For genes, this property is used to express in a generic way gene products encoded by this gene, for instance RNA or Protein",
             "oneOf": [
@@ -28,6 +51,39 @@
                 "type": "array",
                 "items": {
                   "$ref": "#/definitions/bioChemEntity"
+                }
+              }
+            ]
+          },
+          "isPartOfBioChemEntity": {
+            "description": "Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. Inverse property: hasBioChemEntityPart. For genes, it is recommended to at least specify the DNA/chromosome containing this gene.",
+            "oneOf": [
+              {
+                "$ref": "#/definitions/bioChemEntity"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/bioChemEntity"
+                }
+              }
+            ]
+          },
+          "url": {
+            "description": "URL of the item.",
+            "type": "string",
+            "format": "uri"
+          },
+          "alternateName": {
+            "description": "An alias for the item.",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
                 }
               }
             ]
@@ -44,54 +100,6 @@
                   "$ref": "#/definitions/gene"
                 }
               }
-            ]
-          },
-          "expressedIn": {
-            "description": "Tissue, organ, biological sample, etc in which activity of this gene has been observed experimentally. For example brain, digestive system.",
-            "anyOf": [
-              {
-                "$ref": "#/definitions/definedTerm"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "$ref": "#/definitions/definedTerm"
-                }
-              },
-              {
-                "$ref": "#/definitions/bioChemEntity"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "$ref": "#/definitions/bioChemEntity"
-                }
-              },
-              {
-                "$ref": "#/definitions/anatomicalPart"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "$ref": "#/definitions/anatomicalPart"
-                }
-              }
-            ]
-          },
-          "hasBioPolymerSequence": {
-            "description": "Schema:  A symbolic representation of a BioChemEnity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a Protein.",
-            "type": "string"
-          },
-          "hasStatus": {
-            "description": "Schema:  One of pseudogene, dead, killed, live, predicted, suppressed.",
-            "type": "string",
-            "enum": [
-              "pseudogene",
-              "dead",
-              "killed",
-              "live",
-              "predicted",
-              "suppressed"
             ]
           },
           "associatedDisease": {
@@ -128,6 +136,38 @@
               }
             ]
           },
+          "expressedIn": {
+            "description": "Tissue, organ, biological sample, etc in which activity of this gene has been observed experimentally. For example brain, digestive system.",
+            "anyOf": [
+              {
+                "$ref": "#/definitions/definedTerm"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/definedTerm"
+                }
+              },
+              {
+                "$ref": "#/definitions/bioChemEntity"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/bioChemEntity"
+                }
+              },
+              {
+                "$ref": "#/definitions/anatomicalPart"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/anatomicalPart"
+                }
+              }
+            ]
+          },
           "hasBioChemEntityPart": {
             "description": "Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part. Inverse property: isPartOfBioChemEntity",
             "oneOf": [
@@ -141,6 +181,10 @@
                 }
               }
             ]
+          },
+          "hasBioPolymerSequence": {
+            "description": "Schema:  A symbolic representation of a BioChemEnity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a Protein.",
+            "type": "string"
           },
           "hasMolecularFunction": {
             "description": "Molecular function performed by this BioChemEntity; please use PropertyValue if you want to include any evidence.",
@@ -210,6 +254,23 @@
               }
             ]
           },
+          "hasStatus": {
+            "description": "Schema:  One of pseudogene, dead, killed, live, predicted, suppressed.",
+            "type": "string",
+            "enum": [
+              "pseudogene",
+              "dead",
+              "killed",
+              "live",
+              "predicted",
+              "suppressed"
+            ]
+          },
+          "image": {
+            "description": "An image of the item. This can be a <a class=\"localLink\" href=\"http://schema.org/URL\">URL</a> or a fully described <a class=\"localLink\" href=\"http://schema.org/ImageObject\">ImageObject</a>.",
+            "type": "string",
+            "format": "uri"
+          },
           "isInvolvedInBiologicalProcess": {
             "description": "Biological process this BioChemEntity is involved in; please use PropertyValue if you want to include any evidence.",
             "anyOf": [
@@ -278,19 +339,15 @@
               }
             ]
           },
-          "isPartOfBioChemEntity": {
-            "description": "Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. Inverse property: hasBioChemEntityPart. For genes, it is recommended to at least specify the DNA/chromosome containing this gene.",
-            "oneOf": [
-              {
-                "$ref": "#/definitions/bioChemEntity"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "$ref": "#/definitions/bioChemEntity"
-                }
-              }
-            ]
+          "mainEntityOfPage": {
+            "description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href=\"/docs/datamodel.html#mainEntityBackground\">background notes</a> for details.",
+            "type": "string",
+            "format": "uri"
+          },
+          "sameAs": {
+            "description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+            "type": "string",
+            "format": "uri"
           },
           "taxonomicRange": {
             "description": "The taxonomic grouping of the organism that expresses, encodes, or in someway related to the BioChemEntity.",
@@ -334,68 +391,34 @@
                 }
               }
             ]
-          },
-          "alternateName": {
-            "description": "An alias for the item.",
-            "oneOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            ]
-          },
-          "description": {
-            "description": "A description of the item.",
-            "type": "string"
-          },
-          "identifier": {
-            "description": "The identifier property represents any kind of identifier for any kind of <a class=\"localLink\" href=\"http://schema.org/Thing\">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href=\"/docs/datamodel.html#identifierBg\">background notes</a> for more details.",
-            "anyOf": [
-              {
-                "$ref": "#/definitions/propertyValue"
-              },
-              {
-                "type": "string"
-              },
-              {
-                "type": "string",
-                "format": "uri"
-              }
-            ]
-          },
-          "image": {
-            "description": "An image of the item. This can be a <a class=\"localLink\" href=\"http://schema.org/URL\">URL</a> or a fully described <a class=\"localLink\" href=\"http://schema.org/ImageObject\">ImageObject</a>.",
-            "type": "string",
-            "format": "uri"
-          },
-          "mainEntityOfPage": {
-            "description": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href=\"/docs/datamodel.html#mainEntityBackground\">background notes</a> for details.",
-            "type": "string",
-            "format": "uri"
-          },
-          "name": {
-            "description": "The name of the item.",
-            "type": "string"
-          },
-          "sameAs": {
-            "description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
-            "type": "string",
-            "format": "uri"
-          },
-          "url": {
-            "description": "URL of the item.",
-            "type": "string",
-            "format": "uri"
           }
         },
         "required": [
           "identifier",
           "name"
+        ],
+        "recommended":[
+            "description",
+            "encodesBioChemEntity",
+            "isPartOfBioChemEntity",
+            "url"
+        ],
+        "optional":[
+            "alternateName",
+            "alternativeOf",
+            "associatedDisease",
+            "expressedIn",
+            "hasBioChemEntityPart",
+            "hasBioPolymerSequence",
+            "hasMolecularFunction",
+            "hasRepresentation",
+            "hasStatus",
+            "image",
+            "isInvolvedInBiologicalProcess",
+            "isLocatedInSubcellularLocation"
+            "mainEntityOfPage",
+            "sameAs",
+            "taxonomicRange"
         ],
         "definitions":{
           "taxon": {
