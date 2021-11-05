@@ -511,6 +511,37 @@
           "name",
           "url"
         ],
+        "recommended": [
+          "applicationCategory",
+          "applicationSubCategory",
+          "author",
+          "citation",
+          "featureList",
+          "license",
+          "softwareVersion"
+        ],
+        "optional": [
+          "applicationSuite",
+          "codeRepository",
+          "contributor",
+          "discussionUrl",
+          "downloadUrl",
+          "funder",
+          "hasPart",
+          "identifier",
+          "input",
+          "isAccessibleForFree",
+          "isBasedOn",
+          "isPartOf",
+          "keywords",
+          "operatingSystem",
+          "output",
+          "programmingLanguage",
+          "provider",
+          "softwareAddOn",
+          "softwareHelp",
+          "thumbnailUrl"    
+        ],
         "definitions": {
           "formalParameter": {
             "@type": "bioschemas:FormalParameter",

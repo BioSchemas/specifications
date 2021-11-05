@@ -416,6 +416,28 @@
           "identifier",
           "name"
         ],
+        "recommended": [
+          "associatedDisease",
+          "description",
+          "isEncodedByBioChemEntity",
+          "taxonomicRange",
+          "url"
+        ],
+        "optional": [
+          "alternateName",
+          "bioChemInteraction",
+          "bioChemSimilarity",
+          "hasBioChemEntityPart",
+          "hasBioPolymerSequence",
+          "hasMolecularFunction",
+          "hasRepresentation",
+          "image",
+          "isInvolvedInBiologicalProcess",
+          "isLocatedInSubcellularLocation",
+          "isPartOfBioChemEntity",
+          "mainEntityOfPage",
+          "sameAs"
+        ],
         "definitions":{
           "taxon": {
             "@type": "bioschemas:Taxon",

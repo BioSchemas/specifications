@@ -109,6 +109,16 @@
         "required": [
           "name"
         ],
+        "recommended": [
+          "additionalType",
+          "description",
+          "encodingFormat"
+        ],
+        "optional": [
+          "defaultValue",
+          "identifier",
+          "valueRequired"
+        ],
         "definitions": {
           "thing": {
             "description": "The most generic type of item.",
