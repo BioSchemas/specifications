@@ -415,7 +415,7 @@
             "hasStatus",
             "image",
             "isInvolvedInBiologicalProcess",
-            "isLocatedInSubcellularLocation"
+            "isLocatedInSubcellularLocation",
             "mainEntityOfPage",
             "sameAs",
             "taxonomicRange"
