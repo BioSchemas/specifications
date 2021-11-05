@@ -194,6 +194,17 @@
           "taxonRank",
           "name"
         ],
+        "recommended": [
+            "parentTaxon",
+            "url"
+        ],
+        "optional": [
+            "additionalType",
+            "alternateName",
+            "childTaxon",
+            "sameAs",
+            "vernacularName"
+        ],
         "definitions":{
             "taxon": {
                 "@type": "bioschemas:Taxon",
