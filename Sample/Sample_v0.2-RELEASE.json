@@ -107,6 +107,15 @@
         "required": [
           "identifier"
         ],
+        "recommended": [
+          "url"
+        ],
+        "optional": [
+          "additionalProperty",
+          "description",
+          "name",
+          "subjectOf"
+        ],
         "definitions": {
           "propertyValue": {
             "@type": "PropertyValue",
