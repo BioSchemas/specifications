@@ -73,7 +73,7 @@
           },
           "programmingLanguage": {
             "description": "The main programming language(s) used to build or execute the tool. Please use terms from the ‘Programming language’ table in the Bio.Tools documentation",
-            "oneOf": [
+            "anyOf": [
               {
                 "type": "string"
               },
@@ -81,6 +81,15 @@
                 "type": "array",
                 "items": {
                   "type": "string"
+                }
+              },
+              {
+                "$ref": "#/definitions/computerLanguage"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/computerLanguage"
                 }
               }
             ]
@@ -766,7 +775,7 @@
             "required": []
           },
           "product" : {
-             "@type": "Product",
+            "@type": "Product",
             "type": "object",
             "properties": {
               "name": {
@@ -781,6 +790,16 @@
               }
             },
             "required": []             
+          },
+          "computerLanguage": {
+            "@type": "ComputerLanguage",
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": []                           
           }
         }
       }
