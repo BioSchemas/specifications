@@ -384,6 +384,15 @@
                   "type": "string",
                   "format": "uri"
                 }
+              },
+              {
+                "$ref": "#/definitions/imageObject"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/imageObject"
+                }
               }
             ]
           },
@@ -422,6 +431,60 @@
                 }
               }
             ]
+          },
+          "additionalType": {
+            "description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            ]
+              
+          },
+          "mainEntityOfPage": {
+            "anyOf": [
+              {
+                "$ref": "#/definitions/creativeWork"  
+              },
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/creativeWork"    
+                }
+              }
+            ]  
+          },
+          "subjectOf": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/creativeWork"  
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/creativeWork"    
+                }
+              }
+            ]  
           }
         },
         "required": [],
@@ -570,6 +633,20 @@
             },
             "required": [
             ]  
+          },
+          "imageObject": {
+            "@type": "ImageObject",
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": []     
           }
         }
       }
