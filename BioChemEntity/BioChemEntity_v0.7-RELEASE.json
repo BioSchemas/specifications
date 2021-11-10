@@ -647,6 +647,23 @@
               }
             },
             "required": []     
+          },
+          "creativeWork": {
+            "@type": "CreativeWork",
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "identifier": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": []
           }
         }
       }
