@@ -750,6 +750,26 @@
               "unitText"
             ]
           },
+          "categoryCode": {
+            "@type": "CategoryCode",
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "codeValue": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "codeValue",
+              "url"
+            ]
+          },
           "creativeWork": {
             "@type": "CreativeWork",
             "type": "object",
