@@ -87,7 +87,20 @@
             "description": "Gender of the person. While http://schema.org/Male and http://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender",
             "oneOf": [
               {
-                "$ref": "#/definitions/genderType"
+                "enum": [
+                  {
+                    "@type": "GenderType",
+                    "rdfs:label": "Male",
+                    "schema:sameAs": {"@id":"schema:Male"},
+                    "description": "https://schema.org/Male"
+                  },
+                  {
+                    "@type": "GenderType",
+                    "rdfs:label": "Female",
+                    "schema:sameAs": {"@id":"schema:Female"},
+                    "description": "https://schema.org/Female"
+                  }    
+                ]
               },
               {
                 "type": "string"
@@ -880,12 +893,6 @@
                 "type": "string",
                 "format": "uri"
               }
-            }
-          },
-          "genderType": {
-            "@type": "GenderType",
-            "items":{
-              "enum": [{"schema":"Male"},{"schema":"Female"}]
             }
           },
           "place": {
