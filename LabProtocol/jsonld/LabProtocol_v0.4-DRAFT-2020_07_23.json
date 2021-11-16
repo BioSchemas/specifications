@@ -864,26 +864,6 @@
             }
         },
         {
-            "@id": "bioschemas:author",
-            "rdfs:comment": "The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.",
-            "@type": "rdf:Property",
-            "rdfs:label": "author",
-            "schema:sameAs": {
-                "@id": "schema:author"
-            },
-            "schema:domainIncludes": {
-                "@id": "bioschemas:LabProtocol"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Person"
-                },
-                {
-                    "@id": "schema:Organization"
-                }
-            ]
-        },
-        {
             "@id": "bioschemas:bioSampleUsed",
             "rdfs:comment": "BioSample used in the protocol. It could be a record in a Dataset describing the sample or a physical object corresponding to the sample or a URL pointing to the type of sample used.  ",
             "@type": "rdf:Property",
