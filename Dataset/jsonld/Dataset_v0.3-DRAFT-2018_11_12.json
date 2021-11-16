@@ -11,7 +11,7 @@
             "@type": "rdfs:Class",
             "rdfs:comment": " A guide for how to describe datasets in the life-sciences using Schema.org-like annotation. Version: 0.3-DRAFT-2018_11_12",
             "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/Dataset/0.3-DRAFT-2018_11_12"
+                "https://bioschemas.org/profiles/Dataset/0.3-DRAFT-2018_11_12"
             ],
             "rdfs:label": "Dataset",
             "rdfs:subClassOf": {

@@ -11,7 +11,7 @@
             "@type": "rdfs:Class",
             "rdfs:comment": "Bioschemas profile, based on Biotea model, describing a Journal in Life Sciences. A Journal is a collection of publication issues, publication volumes or scholarly articles, or possibly, although no commonly, any mix from those mentioned. <h4>Summary of Changes</h4>    Changes since previous draft 0.1 Journal profile:    <ul>      <li>Add examples</li>      <li>Keywords range updated as per changes on schema.org</li>    </ul> Version: 0.2-DRAFT-2020_12_03",
             "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/Journal/0.2-DRAFT-2020_12_03"
+                "https://bioschemas.org/profiles/Journal/0.2-DRAFT-2020_12_03"
             ],
             "rdfs:label": "Journal",
             "rdfs:subClassOf": {

@@ -11,7 +11,7 @@
             "@type": "rdfs:Class",
             "rdfs:comment": "Specification for describing an event in the Life Sciences Specification for describing a Life Science event. This includes conferences, workshops, meetings, courses, receptions, networking and prizegivings.         Version: 0.2-DRAFT-2019_06_14",
             "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/Event/0.2-DRAFT-2019_06_14"
+                "https://bioschemas.org/profiles/Event/0.2-DRAFT-2019_06_14"
             ],
             "rdfs:label": "Event",
             "rdfs:subClassOf": {
