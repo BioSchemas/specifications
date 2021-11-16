@@ -466,6 +466,9 @@
             "rdfs:comment": "Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
             "@type": "rdf:Property",
             "rdfs:label": "keywords",
+            "schema:sameAs": {
+                "@id": "schema:keywords"
+            },
             "schema:domainIncludes": {
                 "@id": "bioschemas:Person"
             },
