@@ -606,6 +606,23 @@
             }
         },
         {
+            "@id": "bioschemas:founderMember",
+            "rdfs:comment": " For an alliance or collaboration or project, the founding members. NOTE: schema/Organization has founder but this has a type of Person not Person and Organization.",
+            "@type": "rdf:Property",
+            "rdfs:label": "founderMember",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Organization"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Person"
+                },
+                {
+                    "@id": "schema:Organization"
+                }
+            ]
+        },
+        {
             "@id": "bioschemas:dateModified",
             "rdfs:comment": " The date on which the CreativeWork was most recently modified or when the item’s entry was modified within a DataFeed.",
             "@type": "rdf:Property",
