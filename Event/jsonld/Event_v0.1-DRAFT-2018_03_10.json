@@ -775,6 +775,29 @@
             ]
         },
         {
+            "@id": "bioschemas:keywords",
+            "rdfs:comment": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+            "@type": "rdf:Property",
+            "rdfs:label": "keywords",
+            "schema:sameAs": {
+                "@id":"schema:keywords"
+            },
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Event"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:DefinedTerm"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
             "@id": "bioschemas:acceptanceNotificationDate",
             "rdfs:comment": " Date for the host to confirm acceptance to applicants.",
             "@type": "rdf:Property",

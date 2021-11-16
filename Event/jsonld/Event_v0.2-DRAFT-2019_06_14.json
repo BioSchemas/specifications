@@ -752,6 +752,46 @@
             }
         },
         {
+            "@id": "bioschemas:keywords",
+            "rdfs:comment": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+            "@type": "rdf:Property",
+            "rdfs:label": "keywords",
+            "schema:sameAs": {
+                "@id":"schema:keywords"
+            },
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Event"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:DefinedTerm"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:dateModified",
+            "rdfs:comment": " The date on which the CreativeWork was most recently modified or when the item’s entry was modified within a DataFeed.",
+            "@type": "rdf:Property",
+            "rdfs:label": "dateModified",
+            "schema:sameAs": {
+                "@id":"schema:dateModified"
+            },
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Event"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Date"
+                }
+            ]
+        },
+        {
             "@id": "bioschemas:acceptanceNotificationDate",
             "rdfs:comment": " Date for the host to confirm acceptance to applicants.",
             "@type": "rdf:Property",
