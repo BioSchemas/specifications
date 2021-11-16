@@ -606,6 +606,20 @@
             }
         },
         {
+            "@id": "bioschemas:keywords",
+            "rdfs:comment": "Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+            "@type": "rdf:Property",
+            "rdfs:label": "keywords",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Organization"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
             "@id": "bioschemas:founderMember",
             "rdfs:comment": " For an alliance or collaboration or project, the founding members. NOTE: schema/Organization has founder but this has a type of Person not Person and Organization.",
             "@type": "rdf:Property",
