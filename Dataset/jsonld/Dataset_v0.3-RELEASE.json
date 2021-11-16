@@ -3,11 +3,11 @@
     "schema": "http://schema.org/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "bioschemastemp": "http://discovery.biothings.io/view/bioschemastemp/"
+    "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
   },
   "@graph": [
     {
-      "@id": "bioschemastemp:Dataset",
+      "@id": "bioschemas:Dataset",
       "@type": "rdfs:Class",
       "rdfs:comment": "A guide for how to describe datasets in the life-sciences using Schema.org-like annotation.",
       "rdfs:label": "Dataset",
