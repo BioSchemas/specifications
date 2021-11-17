@@ -808,6 +808,20 @@
                     "@id": "schema:MediaObject"
                 }
             ]
+        },
+        {
+            "@id": "serviceOutput",
+            "rdfs:comment": " This is equivalent to edam:has_output. It should be modelled as a MediaObject.",
+            "@type": "rdf:Property",
+            "rdfs:label": "serviceOutput",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ComputationalTool"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:MediaObject"
+                }
+            ]
         }
     ]
 }
