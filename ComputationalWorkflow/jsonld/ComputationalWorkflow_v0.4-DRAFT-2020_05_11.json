@@ -730,7 +730,7 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bioschemas:FormalParameter"
+                    "@id": "schema:PropertyValueSpecification"
                 }
             ]
         },
@@ -744,7 +744,7 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bioschemas:FormalParameter"
+                    "@id": "schema:PropertyValueSpecification"
                 }
             ]
         }
