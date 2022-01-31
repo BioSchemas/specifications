@@ -422,7 +422,7 @@
         ],
         "definitions":{
           "taxon": {
-            "@type": "bioschemas:Taxon",
+            "@type": "Taxon",
             "type": "object",
             "properties": {
               "name": {
@@ -515,7 +515,7 @@
             ]  
           },
           "bioChemEntity" : {
-            "@type": "bioschemas:BioChemEntity",
+            "@type": "BioChemEntity",
             "type": "object",
             "properties": {
               "url": {
@@ -530,7 +530,7 @@
             ]  
           },
           "gene" : {
-            "@type": "bioschemas:Gene",
+            "@type": "Gene",
             "type": "object",
             "properties": {
               "identifier": {
@@ -596,71 +596,6 @@
       }
         }
       }
-    },
-    {
-      "@id": "bioschemas:encodesBioChemEntity",
-      "@type": "rdf:Property",
-      "rdfs:comment": "Schema:  This property is used to link to gene products encoded (even indirectly) from this gene such as RNA or proteins.  Bioschemas:  For genes, this property is used to express in a generic way gene products encoded by this gene, for instance RNA or Protein",
-      "rdfs:label": "encodesBioChemEntity",
-      "schema:domainIncludes": {
-        "@id": "bioschemas:Gene"
-      },
-      "schema:rangeIncludes": [
-        {
-          "@id": "bioschemas:BioChemEntity"
-        }
-      ]
-    },
-    {
-      "@id": "bioschemas:alternativeOf",
-      "@type": "rdf:Property",
-      "rdfs:comment": "Bioschemas:  Is variant of. Use this property to express when a gene is a variant of any other gene.",
-      "rdfs:label": "alternativeOf",
-      "schema:domainIncludes": {
-        "@id": "bioschemas:Gene"
-      },
-      "schema:rangeIncludes": [
-        {
-          "@id": "bioschemas:Gene"
-        }
-      ]
-    },
-    {
-      "@id": "bioschemas:expressedIn",
-      "@type": "rdf:Property",
-      "rdfs:comment": "Schema:  Tissue, organ, biological sample, etc in which activity of this gene has been observed experimentally. For example brain, digestive system.",
-      "rdfs:label": "expressedIn",
-      "schema:domainIncludes": {
-        "@id": "bioschemas:Gene"
-      },
-      "schema:rangeIncludes": [
-        {
-          "@id": "schema:AnatomicalStructure"
-        },
-        {
-          "@id": "schema:AnatomicalSystem"
-        },
-        {
-          "@id": "bioschemas:BiochemEntity"
-        },
-        {
-          "@id": "schema:DefinedTerm"
-        }
-      ]
-    },
-    {
-      "@id": "bioschemas:hasBioPolymerSequence",
-      "@type": "rdf:Property",
-      "rdfs:comment": "Schema:  A symbolic representation of a BioChemEnity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a Protein.",
-      "rdfs:label": "hasBioPolymerSequence",
-      "schema:domainIncludes": {
-        "@id": "bioschemas:Gene"
-      },
-      "schema:rangeIncludes": [
-        {
-          "@id": "schema:Text"
-        }
-      ]
     },
     {
       "@id": "bioschemas:hasStatus",
