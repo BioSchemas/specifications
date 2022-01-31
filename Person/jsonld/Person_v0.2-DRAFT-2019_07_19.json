@@ -186,7 +186,15 @@
                     },
                     "keywords": {
                         "description": "Keywords to describe the person. These should be single words or short phrases that relate to a person. Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
-                        "type": "string"
+                        "oneOf": [
+                            {"type": "string"},
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
                     },
                     "knowsLanguage": {
                         "description": "A list of languages spoken by the Person Of a Person, and less typically of an Organization, to indicate a known language. We do not distinguish skill levels or reading/writing/speaking/signing here. Use language codes from the IETF BCP 47 standard.",
@@ -439,7 +447,7 @@
                         "required": []
                     },
                     "language": {
-                        "@type": "schema:Language",
+                        "@type": "Language",
                         "type": "object",
                         "properties": {
                             "name": {
@@ -449,7 +457,7 @@
                         "required": []
                     },
                     "programmembership": {
-                        "@type": "schema:ProgramMembership",
+                        "@type": "ProgramMembership",
                         "type": "object",
                         "properties": {
                             "name": {
@@ -457,26 +465,34 @@
                             }
                         },
                         "required": []
+                    },
+                    "postaladdress": {
+                        "@type": "schema:PostalAddress",
+                        "type": "object",
+                        "properties": {
+                            "addressCountry": {
+                                "type": "string"
+                            },
+                            "addressLocality": {
+                                "type": "string"
+                            },                            
+                            "addressRegion": {
+                                "type": "string"
+                            },
+                            "postOfficeBoxNumber": {
+                                "type": "string"
+                            },
+                            "postalCode": {
+                                "type": "string"
+                            },
+                            "streetAddress": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
                     }
                 }
             }
-        },
-        {
-            "@id": "bioschemas:keywords",
-            "rdfs:comment": "Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
-            "@type": "rdf:Property",
-            "rdfs:label": "keywords",
-            "schema:sameAs": {
-                "@id": "schema:keywords"
-            },
-            "schema:domainIncludes": {
-                "@id": "bioschemas:Person"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Text"
-                }
-            ]
         },
         {
             "@id": "bioschemas:advisor",
@@ -624,6 +640,20 @@
             "schema:rangeIncludes": [
                 {
                     "@id": "schema:CreativeWork"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:keywords",
+            "rdfs:comment": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+            "@type": "rdf:Property",
+            "rdfs:label": "keywords",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Person"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
                 }
             ]
         }
