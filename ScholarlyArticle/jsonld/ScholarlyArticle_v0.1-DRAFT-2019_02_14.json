@@ -1,0 +1,806 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+    },
+    "@graph": [
+        {
+            "@id": "bioschemas:ScholarlyArticle",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Bioschemas profile, based on Biotea model, describing a ScholarlyArticle in Life Sciences. A ScholarlyArticle is an article commonly reporting a scientific research, for instance a journal article or thesis. Version: 0.1-DRAFT-2019_02_14",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/profiles/ScholarlyArticle/0.1-DRAFT-2019_02_14"
+            ],
+            "rdfs:label": "ScholarlyArticle",
+            "rdfs:subClassOf": {
+                "@id": "schema:ScholarlyArticle"
+            },
+            "$validation": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "type": "object",
+                "properties": {
+                    "alternateName": {
+                        "description": "Any othe name, including alternate identifiers in the form namespace:id such as pmcid:PMC3804025 or pmid:29312824. An alias for the item.",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "alternativeHeadline": {
+                        "description": " A secondary title of the CreativeWork.",
+                        "type": "string"
+                    },
+                    "articleBody": {
+                        "description": "If included, could be separated in paragraphs or so. The actual body of the article.",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "articleSection": {
+                        "description": " Articles may belong to one or more 'sections' in a magazine or newspaper, such as Sports, Lifestyle, etc.",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "author": {
+                        "description": " The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                }
+                            }
+                        ]
+                    },
+                    "backstory": {
+                        "description": "Abstract. For an Article, typically a NewsArticle, the backstory property provides a textual summary giving a brief explanation of why and how an article was created. In a journalistic setting this could include information about reporting process, methods, interviews, data sources, etc.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "citation": {
+                        "description": " A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "comment": {
+                        "description": "Semantic scholarly annotations identified in this scholarly article Comments, typically from users.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/comment"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/comment"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/semanticscholarlyannotation"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/semanticscholarlyannotation"
+                                }
+                            }
+                        ]
+                    },
+                    "commentCount": {
+                        "description": "Number of semantic scholarly annotations identified in this article The number of comments this CreativeWork (e.g. Article, Question or Answer) has received. This is most applicable to works published in Web sites with commenting system; additional comments may exist elsewhere.",
+                        "type": "integer"
+                    },
+                    "copyrightHolder": {
+                        "description": " The party holding the legal copyright to the CreativeWork.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                }
+                            }
+                        ]
+                    },
+                    "copyrightYear": {
+                        "description": " The year during which the claimed copyright for the CreativeWork was first asserted.",
+                        "type": "number"
+                    },
+                    "dateCreated": {
+                        "description": " The date on which the CreativeWork was created or the item was added to a DataFeed.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "date"
+                            },
+                            {
+                                "$ref": "#/definitions/datetime"
+                            }
+                        ]
+                    },
+                    "dateModified": {
+                        "description": " The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "format": "date"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "date"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/datetime"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/datetime"
+                                }
+                            }
+                        ]
+                    },
+                    "datePublished": {
+                        "description": " Date of first broadcast/publication.",
+                        "type": "string",
+                        "format": "date"
+                    },
+                    "hasPart": {
+                        "description": "An article has part ScholarlySemanticAnnotation, i.e., entities recognized in the text and associated to an ontology term. Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).\n Inverse property: isPartOf.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/trip"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/trip"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/scholarlysemanticannotation"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/scholarlysemanticannotation"
+                                }
+                            }
+                        ]
+                    },
+                    "headline": {
+                        "description": "Title of the article. Headline of the article.",
+                        "type": "string"
+                    },
+                    "identifier": {
+                        "description": "A global a unique identifier for articles in their DOI. Any other identifier can be included as an alternate name. The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ]
+                    },
+                    "inLanguage": {
+                        "description": " The language of the content or performance or used in an action. Please use one of the language codes from the IETF BCP 47 standard. See also availableLanguage. Supersedes language.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/language"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/language"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "isAccessibleForFree": {
+                        "description": " A flag to signal that the item, event, or place is accessible for free. Supersedes free.",
+                        "type": "boolean"
+                    },
+                    "isBasedOn": {
+                        "description": "Link to any HTML other than the DOI one as well as to possible web services, such as PMC OAI service, providing machine-readable versions used to create this metadata. A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html. Supersedes isBasedOnUrl.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/product"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/product"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "isPartOf": {
+                        "description": "We recommend at least to inlcude a link to the lowest level possible, i.e., PublicationIssue. It is also possible to use 'isPartOf' to link as well directly to the PublicationVolume or the Journal, making it easier to find links to each other. Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.\n Inverse property: hasPart.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/journal"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/journal"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/publicationvolume"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/publicationvolume"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/publicationissue"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/publicationissue"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/trip"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/trip"
+                                }
+                            }
+                        ]
+                    },
+                    "keywords": {
+                        "description": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+                        "type": "string"
+                    },
+                    "license": {
+                        "description": " A license document that applies to this content, typically indicated by URL.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ]
+                    },
+                    "pageEnd": {
+                        "description": " The page on which the work ends; for example \"138\" or \"xvi\".",
+                        "oneOf": [
+                            {
+                                "type": "integer"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "pageStart": {
+                        "description": " The page on which the work starts; for example \"135\" or \"xiii\".",
+                        "oneOf": [
+                            {
+                                "type": "integer"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "pagination": {
+                        "description": " Any description of pages that is not separated into pageStart and pageEnd; for example, \"1-6, 9, 55\" or \"10-12, 46-49\".",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "sameAs": {
+                        "description": "Any other link to this article, including those machine readable. URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "url": {
+                        "description": "DOI is the recommended URL, any other should go as sameAs. URL of the item.",
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "version": {
+                        "description": " The version of the CreativeWork embodied by a specified resource.",
+                        "anyOf": [
+                            {
+                                "type": "number"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "number"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "wordCount": {
+                        "description": " The number of words in the text of the Article.",
+                        "type": "integer"
+                    },
+                    "sdDatePublished": {
+                        "description": " Indicates the date on which the current structured data was generated / published. Typically used alongside sdPublisher.",
+                        "type": "string",
+                        "format": "date"
+                    },
+                    "sdPublisher": {
+                        "description": " Indicates the party responsible for generating and publishing the current structured data markup, typically in cases where the structured data is derived automatically from existing published content but published on a different site. For example, student projects and open data initiatives often re-publish existing content with more explicitly structured metadata. The sdPublisher property helps make such practices more explicit.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            }
+                        ]
+                    }
+                },
+                "required": [
+                    "headline",
+                    "identifier"
+                ],
+                "recommended": [
+                    "alternateName",
+                    "author",
+                    "backstory",
+                    "citation",
+                    "comment",
+                    "dateCreated",
+                    "dateModified",
+                    "datePublished",
+                    "hasPart",
+                    "isAccessibleForFree",
+                    "isBasedOn",
+                    "isPartOf",
+                    "keywords",
+                    "license",
+                    "pageEnd",
+                    "pageStart",
+                    "url",
+                    "sdDatePublished",
+                    "sdPublisher"
+                ],
+                "optional": [
+                    "alternativeHeadline",
+                    "articleBody",
+                    "articleSection",
+                    "commentCount",
+                    "copyrightHolder",
+                    "copyrightYear",
+                    "inLanguage",
+                    "pagination",
+                    "sameAs",
+                    "version",
+                    "wordCount"
+                ],
+                "definitions": {
+                    "organization": {
+                        "@type": "Organization",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "legalName": {
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
+                            },
+                            "sameAs": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        }
+                    },
+                    "person": {
+                        "@type": "Person",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "mainEntityOfPage": {
+                                "anyOf": [
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "format": "uri"
+                                        }
+                                    },
+                                    {
+                                        "$ref": "#/definitions/creativework"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/definitions/creativework"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ]
+                    },
+                    "creativework": {
+                        "@type": "CreativeWork",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
+                    "comment": {
+                        "@type": "schema:Comment",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "semanticscholarlyannotation": {
+                        "@type": "schema:SemanticScholarlyAnnotation",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "datetime": {
+                        "@type": "schema:DateTime",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "trip": {
+                        "@type": "schema:Trip",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "scholarlysemanticannotation": {
+                        "@type": "schema:ScholarlySemanticAnnotation",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "propertyvalue": {
+                        "@type": "PropertyValue",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "valuereference": {
+                                "oneOf": [
+                                    {
+                                        "$ref": "#/definitions/categorycode"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": [
+                                            {
+                                                "$ref": "#/definitions/categorycode"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    }
+                                ]
+                            },
+                            "unitText": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "recommended": [
+                            "valueReference"
+                        ],
+                        "optional": [
+                            "unitCode",
+                            "unitText"
+                        ]
+                    },
+                    "categorycode": {
+                        "@type": "CategoryCode",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "codeValue": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                        ]
+                    },
+                    "language": {
+                        "@type": "schema:Language",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "product": {
+                        "@type": "schema:Product",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "journal": {
+                        "@type": "bioschemas:Journal",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "publicationvolume": {
+                        "@type": "bioschemas:PublicationVolume",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "publicationissue": {
+                        "@type": "bioschemas:PublicationIssue",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    }
+                }
+            }
+        }
+    ]
+}
