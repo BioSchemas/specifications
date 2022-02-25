@@ -33,17 +33,11 @@
           "startUncertainty": {
             "description": "If the initial position is not known with reasonable certainty, specify here the uncertainty type as one of \u2018<\u2019 (any position before than rangeStart), \u2018>\u2019 (any position after rangeStart), \u2018~\u2019 (around the rangeStart), \u2018[#-#] (to indicate a range where rangeStart could be located)\u2019.",
             "type": "string"
-          },
-          "conformsTo": {
-            "description": "Used to state the Bioschemas profile that the markup relates to. The versioned URL of the profile must be used. Note that we use a CURIE in the table here but the full URL for Dublin Core terms must be used in the markup (http://purl.org/dc/terms/conformsTo), see example.",
-            "type": "string",
-            "format": "uri"
           }
         },
         "required": [
           "rangeEnd",
-          "rangeStart",
-          "conformsTo"
+          "rangeStart"
         ],
         "recommended": [
           "endUncertainty",
