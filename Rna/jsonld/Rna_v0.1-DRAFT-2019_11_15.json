@@ -564,6 +564,20 @@
               "@id": "schema:URL"
             }
           ]
+        },
+        {
+          "@id": "bioschemas:hasSequence",
+          "@type": "rdf:Property",
+          "rdfs:comment": "Nucleotide or amino acid sequence.",
+          "rdfs:label": "hasSequence",
+          "schema:domainIncludes": {
+            "@id": "bioschemas:Rna"
+          },
+          "schema:rangeIncludes": [
+            {
+              "@id": "schema:Text"
+            }
+          ]
         }
     ]
 }
