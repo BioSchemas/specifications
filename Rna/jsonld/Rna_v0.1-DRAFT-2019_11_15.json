@@ -15,7 +15,7 @@
             ],
             "rdfs:label": "Rna",
             "rdfs:subClassOf": {
-                "@id": "schema:Gene"
+                "@id": "schema:BioChemEntity"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
@@ -550,6 +550,51 @@
                     }
                 }
             }
+        },
+        {
+          "@id": "bioschemas:isEncodedByBioChemEntity",
+          "@type": "rdf:Property",
+          "rdfs:comment": "Another BioChemEntity encoding by this one. Inverse property: encodesBioChemEntity.",
+          "rdfs:label": "isEncodedByBioChemEntity",
+          "schema:domainIncludes": {
+            "@id": "bioschemas:Rna"
+          },
+          "schema:rangeIncludes": [
+            {
+              "@id": "schema:PropertyValue"
+            },
+            {
+              "@id": "bioschemas:SequenceAnnotation"
+            }
+          ]
+        },
+        {
+          "@id": "bioschemas:isMatchedBy",
+          "@type": "rdf:Property",
+          "rdfs:comment": "A model matching this BioChemEntity.",
+          "rdfs:label": "isCodingRna",
+          "schema:domainIncludes": {
+            "@id": "bioschemas:Rna"
+          },
+          "schema:rangeIncludes": [
+            {
+              "@id": "schema:SequenceMatchingModel"
+            }
+          ]
+        },
+        {
+          "@id": "bioschemas:isCodingRna",
+          "@type": "rdf:Property",
+          "rdfs:comment": "Indicates whether or not this RNA is a coding one..",
+          "rdfs:label": "isCodingRna",
+          "schema:domainIncludes": {
+            "@id": "bioschemas:Rna"
+          },
+          "schema:rangeIncludes": [
+            {
+              "@id": "schema:Boolean"
+            }
+          ]
         },
         {
           "@id": "bioschemas:additionalType",
