@@ -78,7 +78,7 @@
               }
             ]
           },
-          "biogicalRole": {
+          "biologicalRole": {
             "description": "A role played by the molecular entity within a biological context.",
             "oneOf": [
               {
@@ -300,20 +300,6 @@
       "schema:rangeIncludes": [
         {
           "@id": "schema:Text"
-        }
-      ]
-    },
-    {
-      "@id": "bioschemas:chemicalRole",
-      "@type": "rdf:Property",
-      "rdfs:comment": "A role played by the BioChemEntity or molecular entity within a chemical context.",
-      "rdfs:label": "chemicalRole",
-      "schema:domainIncludes": {
-        "@id": "bioschemas:ChemicalSubstance"
-      },
-      "schema:rangeIncludes": [
-        {
-          "@id": "schema:DefinedTerm"
         }
       ]
     }
