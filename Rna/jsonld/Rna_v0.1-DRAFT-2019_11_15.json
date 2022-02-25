@@ -552,10 +552,10 @@
             }
         },
         {
-          "@id": "bioschemas:isEncodedByBioChemEntity",
+          "@id": "bioschemas:encodesBioChemEntity",
           "@type": "rdf:Property",
-          "rdfs:comment": "Another BioChemEntity encoding by this one. Inverse property: encodesBioChemEntity.",
-          "rdfs:label": "isEncodedByBioChemEntity",
+          "rdfs:comment": "Another BioChemEntity encoded by this one. Inverse property:isEncodedByBioChemEntity.",
+          "rdfs:label": "encodesBioChemEntity",
           "schema:domainIncludes": {
             "@id": "bioschemas:Rna"
           },
