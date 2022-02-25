@@ -9,10 +9,10 @@
     {
       "@id": "bioschemas:Dna",
       "@type": "rdfs:Class",
-      "rdfs:comment": "Dna\nVersion: 0.2-DRAFT-2019_06_20 (2019-06-20)",
+      "rdfs:comment": "Dna\nVersion: 0.2-DRAFT-2019_06_20 (2019-06-20). Note, the parent class for this type has been updated to a pending class in schema.org.",
       "rdfs:label": "Dna",
       "rdfs:subClassOf": {
-        "@id": "bioschemas:BioChemEntity"
+        "@id": "schema:Gene"
       }
     },
     {
@@ -29,20 +29,6 @@
         },
         {
           "@id": "bioschemas:SequenceAnnotation"
-        }
-      ]
-    },
-    {
-      "@id": "bioschemas:encodesBioChemEntity",
-      "@type": "rdf:Property",
-      "rdfs:comment": "Another BioChemEntity encoded by this one. Inverse property: isEncodedByBioChemEntity.",
-      "rdfs:label": "encodesBioChemEntity",
-      "schema:domainIncludes": {
-        "@id": "bioschemas:Dna"
-      },
-      "schema:rangeIncludes": [
-        {
-          "@id": "bioschemas:BioChemEntity"
         }
       ]
     },

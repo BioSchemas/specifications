@@ -9,10 +9,10 @@
     {
       "@id": "bioschemas:SequenceRange",
       "@type": "rdfs:Class",
-      "rdfs:comment": "Used to define the range of a subsequence, typically used in conjunction with SequenceAnnotation to define the range of the annotation on the protein or gene sequence. Version: 0.1-DRAFT",
+      "rdfs:comment": "Used to define the range of a subsequence, typically used in conjunction with SequenceAnnotation to define the range of the annotation on the protein or gene sequence. Version: 0.1-DRAFT. Note, the parent class for this profile has been updated to a pending class in schema.org.",
       "rdfs:label": "SequenceRange",
       "rdfs:subClassOf": {
-        "@id": "bioschemas:BioChemEntity"
+        "@id": "schema:BioChemEntity"
       },
       "$validation": {
         "$schema": "http://json-schema.org/draft-07/schema#",
