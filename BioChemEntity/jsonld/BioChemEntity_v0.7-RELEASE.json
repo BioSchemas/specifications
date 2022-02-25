@@ -66,10 +66,10 @@
       ]
     },
     {
-      "@id": "bioschemas:biogicalRole",
+      "@id": "bioschemas:biologicalRole",
       "@type": "rdf:Property",
       "rdfs:comment": "A role played by the molecular entity within a biological context.",
-      "rdfs:label": "biogicalRole",
+      "rdfs:label": "biologicalRole",
       "schema:domainIncludes": {
         "@id": "bioschemas:BioChemEntity"
       },
