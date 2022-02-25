@@ -585,7 +585,7 @@
           "rdfs:comment": "Pointer to a sequence annotation; please use PropertyValue if you want to include any evidence.",
           "rdfs:label": "hasSequenceAnnotation",
           "schema:domainIncludes": {
-            "@id": "bioschemas:Dna"
+            "@id": "bioschemas:Rna"
           },
           "schema:rangeIncludes": [
             {
