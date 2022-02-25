@@ -160,7 +160,7 @@
               }
             ]
           },
-          "biogicalRole": {
+          "biologicalRole": {
             "description": "A role played by the molecular entity within a biological context.",
             "oneOf": [
               {
