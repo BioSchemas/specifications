@@ -578,6 +578,23 @@
               "@id": "schema:Text"
             }
           ]
+        },
+        {
+          "@id": "bioschemas:hasSequenceAnnotation",
+          "@type": "rdf:Property",
+          "rdfs:comment": "Pointer to a sequence annotation; please use PropertyValue if you want to include any evidence.",
+          "rdfs:label": "hasSequenceAnnotation",
+          "schema:domainIncludes": {
+            "@id": "bioschemas:Dna"
+          },
+          "schema:rangeIncludes": [
+            {
+              "@id": "schema:PropertyValue"
+            },
+            {
+              "@id": "bioschemas:SequenceAnnotation"
+            }
+          ]
         }
     ]
 }
