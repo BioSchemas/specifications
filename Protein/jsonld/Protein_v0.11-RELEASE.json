@@ -9,10 +9,10 @@
     {
       "@id": "bioschemas:Protein",
       "@type": "rdfs:Class",
-      "rdfs:comment": "Bioschemas profile describing a Protein in Life Sciences. This Protein profile specification presents the most common properties used for a Protein and is based on Version 0.11",
+      "rdfs:comment": "Bioschemas profile describing a Protein in Life Sciences. This Protein profile specification presents the most common properties used for a Protein and is based on Version 0.11. Note, the parent class for this profile has been updated to a pending class in schema.org.",
       "rdfs:label": "Protein",
       "rdfs:subClassOf": {
-        "@id": "bioschemas:BioChemEntity"
+        "@id": "schema:Protein"
       },
       "$validation": {
         "$schema": "http://json-schema.org/draft-07/schema#",
@@ -674,20 +674,6 @@
           }
         }
       }
-    },
-    {
-      "@id": "bioschemas:hasBioPolymerSequence",
-      "@type": "rdf:Property",
-      "rdfs:comment": "A symbolic representation of a BioChemEnity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a Protein.",
-      "rdfs:label": "hasBioPolymerSequence",
-      "schema:domainIncludes": {
-        "@id": "bioschemas:Protein"
-      },
-      "schema:rangeIncludes": [
-        {
-          "@id": "schema:Text"
-        }
-      ]
     }
   ]
 }

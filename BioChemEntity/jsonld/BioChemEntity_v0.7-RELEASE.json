@@ -9,7 +9,7 @@
     {
       "@id": "bioschemas:BioChemEntity",
       "@type": "rdfs:Class",
-      "rdfs:comment": "Any biological, chemical, or biochemical thing. For example: a protein; a gene; a chemical; a synthetic chemical.",
+      "rdfs:comment": "Any biological, chemical, or biochemical thing. For example: a protein; a gene; a chemical; a synthetic chemical. Note, this version (0.7-RELEASE) is the version that is currently pending on schema.org",
       "rdfs:label": "BioChemEntity",
       "schema:additionalType": "https://bioschemas.org/types#nav-release",
       "schema:schemaVersion":"0.7-RELEASE",

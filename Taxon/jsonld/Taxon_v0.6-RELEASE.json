@@ -9,10 +9,10 @@
     {
       "@id": "bioschemas:Taxon",
       "@type": "rdfs:Class",
-      "rdfs:comment": "A set of organisms asserted to represent a natural cohesive biological unit.",
+      "rdfs:comment": "A set of organisms asserted to represent a natural cohesive biological unit. Note, the parent class for this profile has been updated to a pending class in schema.org.",
       "rdfs:label": "Taxon",
       "rdfs:subClassOf": {
-        "@id": "schema:Thing"
+        "@id": "schema:Taxon"
       },
       "$validation": {
         "$schema": "http://json-schema.org/draft-07/schema#",
@@ -271,66 +271,6 @@
             }
         }
       }
-    },
-    {
-      "@id": "bioschemas:childTaxon",
-      "@type": "rdf:Property",
-      "rdfs:comment": "Closest child taxa of the taxon in question. Inverse property: parentTaxon",
-      "rdfs:label": "childTaxon",
-      "schema:domainIncludes": {
-        "@id": "bioschemas:Taxon"
-      },
-      "schema:rangeIncludes": [
-        {
-          "@id": "bioschemas:Taxon"
-        },
-        {
-          "@id": "schema:Text"
-        },
-        {
-          "@id": "schema:URL"
-        }
-      ]
-    },
-    {
-      "@id": "bioschemas:parentTaxon",
-      "@type": "rdf:Property",
-      "rdfs:comment": "Closest parent taxon of the taxon in question. Inverse property: childTaxon",
-      "rdfs:label": "parentTaxon",
-      "schema:domainIncludes": {
-        "@id": "bioschemas:Taxon"
-      },
-      "schema:rangeIncludes": [
-        {
-          "@id": "bioschemas:Taxon"
-        },
-        {
-          "@id": "schema:Text"
-        },
-        {
-          "@id": "schema:URL"
-        }
-      ]
-    },
-    {
-      "@id": "bioschemas:taxonRank",
-      "@type": "rdf:Property",
-      "rdfs:comment": "The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary \u2013 (typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs).",
-      "rdfs:label": "taxonRank",
-      "schema:domainIncludes": {
-        "@id": "bioschemas:Taxon"
-      },
-      "schema:rangeIncludes": [
-        {
-          "@id": "schema:PropertyValue"
-        },
-        {
-          "@id": "schema:Text"
-        },
-        {
-          "@id": "schema:URL"
-        }
-      ]
     },
     {
       "@id": "bioschemas:vernacularName",

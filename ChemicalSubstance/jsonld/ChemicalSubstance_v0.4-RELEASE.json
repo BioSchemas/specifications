@@ -9,10 +9,11 @@
     {
       "@id": "bioschemas:ChemicalSubstance",
       "@type": "rdfs:Class",
-      "rdfs:comment": "This profile describes a ChemicalSubstance which is 'a portion of matter of constant composition, composed of molecular entities of the same type or of different types' (source: ChEBI:59999). ",
+      "rdfs:comment": "This profile describes a ChemicalSubstance which is 'a portion of matter of constant composition, composed of molecular entities of the same type or of different types' (source: ChEBI:59999). Note, the parent class for this profile has been updated to a pending class in schema.org.
+",
       "rdfs:label": "ChemicalSubstance",
       "rdfs:subClassOf": {
-        "@id": "bioschemas:BioChemEntity"
+        "@id": "schema:ChemicalSubstance"
       },
       "$validation": {
         "$schema": "http://json-schema.org/draft-07/schema#",
