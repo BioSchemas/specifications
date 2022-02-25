@@ -294,7 +294,7 @@
             "type": "object",
             "properties": {
               "name": {
-                "type": "text"
+                "type": "string"
               }
             }
           },
