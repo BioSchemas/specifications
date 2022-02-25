@@ -572,7 +572,7 @@
           "@id": "bioschemas:isMatchedBy",
           "@type": "rdf:Property",
           "rdfs:comment": "A model matching this BioChemEntity.",
-          "rdfs:label": "isCodingRna",
+          "rdfs:label": "isMatchedBy",
           "schema:domainIncludes": {
             "@id": "bioschemas:Rna"
           },
