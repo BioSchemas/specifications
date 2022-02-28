@@ -9,9 +9,9 @@
         {
             "@id": "bioschemas:RNA",
             "@type": "rdfs:Class",
-            "rdfs:comment": "  Version: 0.1-DRAFT-2019_11_15. Note, the parent class for this type has been updated to a pending class in schema.org.",
+            "rdfs:comment": " Version: 0.1-DRAFT-2019_11_15. Note, the parent class for this type has been updated to a pending class in schema.org.",
             "schema:schemaVersion": [
-                "https://bioschemas.org/profiles/Rna/0.1-DRAFT-2019_11_15"
+                "https://bioschemas.org/profiles/RNA/0.1-DRAFT-2019_11_15"
             ],
             "rdfs:label": "RNA",
             "rdfs:subClassOf": {

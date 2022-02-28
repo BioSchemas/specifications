@@ -9,7 +9,7 @@
     {
       "@id": "bioschemas:DNA",
       "@type": "rdfs:Class",
-      "rdfs:comment": "Dna\nVersion: 0.2-DRAFT-2019_06_20 (2019-06-20). Note, the parent class for this type has been updated to a pending class in schema.org.",
+      "rdfs:comment": "DNA\nVersion: 0.2-DRAFT-2019_06_20 (2019-06-20). Note, the parent class for this type has been updated to a pending class in schema.org.",
       "rdfs:label": "DNA",
       "rdfs:subClassOf": {
         "@id": "schema:BioChemEntity"
