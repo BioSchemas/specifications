@@ -7,13 +7,13 @@
     },
     "@graph": [
         {
-            "@id": "bioschemas:Rna",
+            "@id": "bioschemas:RNA",
             "@type": "rdfs:Class",
             "rdfs:comment": "  Version: 0.1-DRAFT-2019_11_15. Note, the parent class for this type has been updated to a pending class in schema.org.",
             "schema:schemaVersion": [
                 "https://bioschemas.org/profiles/Rna/0.1-DRAFT-2019_11_15"
             ],
-            "rdfs:label": "Rna",
+            "rdfs:label": "RNA",
             "rdfs:subClassOf": {
                 "@id": "schema:BioChemEntity"
             },
@@ -473,7 +473,7 @@
                         "required": []
                     },
                     "rna": {
-                        "@type": "bioschemas:Rna",
+                        "@type": "bioschemas:RNA",
                         "type": "object",
                         "properties": {
                             "name": {
@@ -557,7 +557,7 @@
           "rdfs:comment": "Another BioChemEntity encoded by this one. Inverse property:isEncodedByBioChemEntity.",
           "rdfs:label": "encodesBioChemEntity",
           "schema:domainIncludes": {
-            "@id": "bioschemas:Rna"
+            "@id": "bioschemas:RNA"
           },
           "schema:rangeIncludes": [
             {
@@ -574,7 +574,7 @@
           "rdfs:comment": "A model matching this BioChemEntity.",
           "rdfs:label": "isMatchedBy",
           "schema:domainIncludes": {
-            "@id": "bioschemas:Rna"
+            "@id": "bioschemas:RNA"
           },
           "schema:rangeIncludes": [
             {
@@ -588,7 +588,7 @@
           "rdfs:comment": "Indicates whether or not this RNA is a coding one..",
           "rdfs:label": "isCodingRna",
           "schema:domainIncludes": {
-            "@id": "bioschemas:Rna"
+            "@id": "bioschemas:RNA"
           },
           "schema:rangeIncludes": [
             {
@@ -602,7 +602,7 @@
           "rdfs:comment": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
           "rdfs:label": "additionalType",
           "schema:domainIncludes": {
-            "@id": "bioschemas:Rna"
+            "@id": "bioschemas:RNA"
           },
           "schema:rangeIncludes": [
             {
@@ -616,7 +616,7 @@
           "rdfs:comment": "Nucleotide or amino acid sequence.",
           "rdfs:label": "hasSequence",
           "schema:domainIncludes": {
-            "@id": "bioschemas:Rna"
+            "@id": "bioschemas:RNA"
           },
           "schema:rangeIncludes": [
             {
@@ -630,7 +630,7 @@
           "rdfs:comment": "Pointer to a sequence annotation; please use PropertyValue if you want to include any evidence.",
           "rdfs:label": "hasSequenceAnnotation",
           "schema:domainIncludes": {
-            "@id": "bioschemas:Rna"
+            "@id": "bioschemas:RNA"
           },
           "schema:rangeIncludes": [
             {

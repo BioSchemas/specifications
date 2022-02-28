@@ -7,10 +7,10 @@
   },
   "@graph": [
     {
-      "@id": "bioschemas:Dna",
+      "@id": "bioschemas:DNA",
       "@type": "rdfs:Class",
       "rdfs:comment": "Dna\nVersion: 0.2-DRAFT-2019_06_20 (2019-06-20). Note, the parent class for this type has been updated to a pending class in schema.org.",
-      "rdfs:label": "Dna",
+      "rdfs:label": "DNA",
       "rdfs:subClassOf": {
         "@id": "schema:BioChemEntity"
       }
@@ -21,7 +21,7 @@
       "rdfs:comment": "Another BioChemEntity encoded by this one. Inverse property:isEncodedByBioChemEntity.",
       "rdfs:label": "encodesBioChemEntity",
       "schema:domainIncludes": {
-        "@id": "bioschemas:Dna"
+        "@id": "bioschemas:DNA"
       },
       "schema:rangeIncludes": [
         {
@@ -38,7 +38,7 @@
       "rdfs:comment": "Pointer to a sequence annotation; please use PropertyValue if you want to include any evidence.",
       "rdfs:label": "hasSequenceAnnotation",
       "schema:domainIncludes": {
-        "@id": "bioschemas:Dna"
+        "@id": "bioschemas:DNA"
       },
       "schema:rangeIncludes": [
         {
@@ -55,7 +55,7 @@
       "rdfs:comment": "Nucleotide or amino acid sequence.",
       "rdfs:label": "hasSequence",
       "schema:domainIncludes": {
-        "@id": "bioschemas:Dna"
+        "@id": "bioschemas:DNA"
       },
       "schema:rangeIncludes": [
         {
