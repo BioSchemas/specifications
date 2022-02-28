@@ -306,7 +306,92 @@
                 "type": "string"
               }
             }
-          }
+          },
+          "propertyvalue": {
+            "@type": "PropertyValue",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "value": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "boolean"
+                        },
+                        {
+                            "type": "number"
+                        }
+                    ]
+                },
+                "identifier": {
+                    "type": "string"
+                },
+                "valuereference": {
+                    "oneOf": [
+                        {
+                            "$ref": "#/definitions/categorycode"
+                        },
+                        {
+                            "type": "array",
+                            "items": [
+                                {
+                                    "$ref": "#/definitions/categorycode"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "unitCode": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "string",
+                            "format": "uri"
+                        }
+                    ]
+                },
+                "unitText": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "value"
+            ],
+            "recommended": [
+                "valueReference"
+            ],
+            "optional": [
+                "unitCode",
+                "unitText"
+            ]
+        },
+          "categorycode": {
+            "@type": "CategoryCode",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "codeValue": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "codeValue",
+                "url"
+            ]
+        }
         }
       }
     },
