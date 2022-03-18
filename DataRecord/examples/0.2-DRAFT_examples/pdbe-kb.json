@@ -1,0 +1,47 @@
+{
+    "@context": [
+        {
+            "@base": "http://schema.org"
+        },
+        {
+            "Gene": {
+                "@id": "http://purl.obolibrary.org/obo/SO_0000704"
+            },
+            "Protein": {
+                "@id": "http://purl.obolibrary.org/obo/PR_000000001"
+            },
+            "transcribedFrom": {
+                "@id": "http://semanticscience.org/resource/SIO_010081",
+                "@type": "@id"
+            },
+            "chain": {
+                "@id": "http://semanticscience.org/resource/SIO_010031",
+                "@type": "@id"
+            },
+            "region": ""
+        }
+    ],
+    "@type": "DataRecord",
+    "url": "http://www.ebi.ac.uk/pdbe/entry/pdb/5hbi/protein/1",
+    "mainEntity": {
+        "@type": [
+            "Protein",
+            "BioChemEntity"
+        ],
+        
+        "@id": "http://identifiers.org/uniprot:P02213",
+        "identifier": "P02213",
+        "name": "GLB1_ANAIN",
+        
+        "additionalType": "http://semanticscience.org/resource/SIO_010043",
+        
+        "url": "http://www.ebi.ac.uk/pdbe/entry/pdb/5hbi/protein/1",
+        "transcribedFrom": [
+        
+                        
+        ],
+        
+        
+        "hasRepresentation": "PSVYDAAAQLTADVKKDLRDSWKVIGSDKKGNGVALMTTLFADNQETIGYFKRLGDVSQGMANDKLRGHSIILMYALQNFIDQLDNPDDLVCVVEKFAVNHITRKISAAEFGKINGPIKKVLASKNFGDKYANAWAKLVAVVQAAL"
+    }
+}
