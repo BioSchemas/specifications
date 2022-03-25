@@ -1,0 +1,99 @@
+{
+"@context": "https://schema.org",
+"@type": "LearningResource",
+"@id": "https://docs.google.com/presentation/d/1_C2TTX_gYRxpVQjNEbuMm3YLfz6ouocGUxoioUCnG5I",
+"dct:conformsTo": {
+  "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+  "@type": "CreativeWork"
+}
+"description": "An introduction to the 10 simple rules for making training materials FAIR",
+"keywords": "FAIR, Training Materials, Bioschemas, ELIXIR, Structured Markup",
+"name": "Ten simple rules to make training materials FAIR",
+"about": [
+{
+"@type": "DefinedTerm",
+"@id": "http://edamontology.org/topic_0089",
+"inDefinedTermSet": "http://edamontology.org",
+"termCode": "topic_0089",
+"name": "Ontology and terminology",
+"url": "http://edamontology.org/topic_0089"
+},
+{
+"@id": "http://edamontology.org/topic_0089"
+}
+],
+"abstract": "An introduction to the 10 simple rules for making training materials FAIR, including introduction to the rules and discussion with the audience based on predefined questions",
+"audience": {
+"@type": "Audience",
+"audienceType": "Trainers, people interested in training materials and FAIR"
+},
+"author": [
+{
+"@type": "Person",
+"name": "Leyla Garcia"
+},
+{
+"@type": "Organization",
+"name": "ZB MED Information Centre for Life Sciences",
+"url": "https://zbmed.de"
+},
+{
+"@type": "Person",
+"name": "Patricia Palagi"
+},
+{
+"@type": "Organization",
+"name": "SIB Swiss Institute of Bioinformatics",
+"url": "https://www.sib.swiss"
+}
+],
+"competencyRequired": [
+"FAIR",
+"Linked Data"
+],
+"educationalLevel": "Beginner",
+"identifier": "https://docs.google.com/presentation/d/1_C2TTX_gYRxpVQjNEbuMm3YLfz6ouocGUxoioUCnG5I",
+"inLanguage": [
+"en-US"
+],
+"learningResourceType": [
+"slides"
+],
+"license": [
+"https://creativecommons.org/licenses/by/4.0/"
+],
+"mentions": [
+{
+"@type": "CreativeWork",
+"@id": "https://doi.org/10.1371/journal.pcbi.1007854",
+"name": "Ten simple rules for making training materials FAIR",
+"identifier": "DOI:10.1371/journal.pcbi.1007854",
+"url": "https://doi.org/10.1371/journal.pcbi.1007854"
+}
+],
+"teaches": [
+"The learned will be able to recognize FAIR elements recommended for training materials"
+],
+"timeRequired": "P40M0S",
+"url": "https://docs.google.com/presentation/d/1_C2TTX_gYRxpVQjNEbuMm3YLfz6ouocGUxoioUCnG5I",
+"accessibilitySummary": "Visual elements are not described",
+"contributor": [
+{
+"@type": "Organization",
+"name": "ELIXIR Training Platform",
+"url": "https://elixir-europe.org/platforms/training"
+}
+],
+"creativeWorkStatus": "active",
+"dateCreated": "2020-08-28",
+"dateModified": "2020-09-19",
+"datePublished": "2020-09-17",
+"recordedAt": [
+{
+"@type": "Webinar",
+"name": "Ten simple rules to make training materials FAIR",
+"url": "https://elixir-europe.org/events/elixir-webinar-fair-training"
+}
+],
+"version": "0.0.1"
+}
