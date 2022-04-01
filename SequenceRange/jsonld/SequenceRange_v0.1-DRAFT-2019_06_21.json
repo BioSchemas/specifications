@@ -1,0 +1,75 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/"
+  },
+  "@graph": [
+    {
+      "@id": "bioschemastypesdrafts:SequenceRange",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Used to define the range of a subsequence, typically used in conjunction with SequenceAnnotation to define the range of the annotation on the protein or gene sequence. Version: 0.1-DRAFT-2019_06_21.",
+      "rdfs:label": "SequenceRange",
+      "rdfs:subClassOf": {
+        "@id": "schema:BioChemEntity"
+      }
+    },
+    {
+      "@id": "bioschemastypesdrafts:rangeEnd",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Final position of the range",
+      "rdfs:label": "rangeEnd",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:SequenceRange"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Integer"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:rangeStart",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Initial position of the range.",
+      "rdfs:label": "rangeStart",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:SequenceRange"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Integer"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:endUncertainty",
+      "@type": "rdf:Property",
+      "rdfs:comment": "If the initial position is not known with reasonable certainty, specify here the uncertainty type as one of \u2018<\u2019 (any position before than rangeEnd), \u2018>\u2019 (any position after rangeEnd), \u2018~\u2019 (around rangeEnd), \u2018[#-#] (to indicate a range where rangeEnd could be located)\u2019.",
+      "rdfs:label": "endUncertainty",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:SequenceRange"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:startUncertainty",
+      "@type": "rdf:Property",
+      "rdfs:comment": "If the initial position is not known with reasonable certainty, specify here the uncertainty type as one of \u2018<\u2019 (any position before than rangeStart), \u2018>\u2019 (any position after rangeStart), \u2018~\u2019 (around the rangeStart), \u2018[#-#] (to indicate a range where rangeStart could be located)\u2019.",
+      "rdfs:label": "startUncertainty",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:SequenceRange"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    }
+  ]
+}

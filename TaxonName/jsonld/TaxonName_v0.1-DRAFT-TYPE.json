@@ -1,0 +1,39 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemastypesdrafts": "http://discovery.biothings.io/view/bioschemastypesdrafts/"
+    },
+    "@graph": [
+        {
+            "@id": "bioschemastypesdrafts:TaxonName",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A name of a biological taxon, may it be valid (zoology) / accepted (botany) or not. Version: 0.1-DRAFT",
+            "rdfs:label": "TaxonName",
+            "rdfs:subClassOf": {
+                "@id": "schema:CreativeWork"
+            }
+        },
+        {
+            "@id": "bioschemastypesdrafts:taxonRank",
+            "rdfs:comment": "The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary \u2013 (typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs). ",
+            "@type": "rdf:Property",
+            "rdfs:label": "taxonRank",
+            "schema:domainIncludes": {
+                "@id": "bioschemastypesdrafts:TaxonName"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:PropertyValue"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        }
+    ]
+}

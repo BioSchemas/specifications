@@ -1,0 +1,216 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/",
+    "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/"
+  },
+  "@graph": [
+    {
+      "@id": "bioschemastypesdrafts:LabProtocol",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An experimental protocol is a sequence of tasks and operations executed to perform experimental research in biological and biomedical areas. Version 0.3-DRAFT-2019_06_20",
+      "rdfs:label": "LabProtocol",
+      "rdfs:subClassOf": {
+        "@id": "schema:CreativeWork"
+      }
+    },
+    {
+      "@id": "bioschemastypesdrafts:executionTime",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The time it takes to actually carry out the protocol in ISO 8601 date format.",
+      "rdfs:label": "executionTime",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:LabProtocol"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Duration"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:labEquipment",
+      "@type": "rdf:Property",
+      "rdfs:comment": "For LabProtocols it would be a laboratory equipment use by a person to follow one or more steps described in this LabProtocol.",
+      "rdfs:label": "labEquipment",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:LabProtocol"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:DefinedTerm"
+        },
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:protocolAdvantage",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Situations where the Protocol has been successfully employed.",
+      "rdfs:label": "protocolAdvantage",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:LabProtocol"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:CreativeWork"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:protocolApplication",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Applications of the protocol list the full diversity of the applications of the method and support if is possible to extend the range of applications of the protocol. e.g. northern blot assays, sequencing, etc.",
+      "rdfs:label": "protocolApplication",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:LabProtocol"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:CreativeWork"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:protocolLimitation",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Situations where the Protocol would be unreliable or otherwise unsuccessful.",
+      "rdfs:label": "protocolLimitation",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:LabProtocol"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:CreativeWork"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:protocolOutcome",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Outcome or expected result by a protocol execution.",
+      "rdfs:label": "protocolOutcome",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:LabProtocol"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:CreativeWork"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:purpose",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A goal towards an action is taken. Can be concrete or abstract.",
+      "rdfs:label": "purpose",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:LabProtocol"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:MedicalDevicePurpose"
+        },
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:Thing"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:reagent",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Reagent used in the protocol. It can be a record in a Dataset describing the reagent or a BioChemEntity corresponding to the reagent or a URL pointing to the type of reagent used. ChEBI and PubChem entities can be used whenever available. Commercial names are also acceptable (URL if possible).",
+      "rdfs:label": "reagent",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:LabProtocol"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:BioChemEntity"
+        },
+        {
+          "@id": "schema:DefinedTerm"
+        },
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:sampleUsed",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Sample used in the protocol. It could be a record in a Dataset describing the sample or a physical object corresponding to the sample or a URL pointing to the type of sample used.",
+      "rdfs:label": "sampleUsed",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:LabProtocol"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:BioChemEntity"
+        },
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        },
+        {
+          "@id": "schema:DefinedTerm"
+        },
+        {
+          "@id": "bioschemastypes:BioSample"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:software",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Software or tool used as part of the lab protocol to complete a part of it.",
+      "rdfs:label": "software",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:LabProtocol"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:SoftwareApplication"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:step",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A single step item (as HowToStep, text, document, video, etc.) or a HowToSection. Supersedes steps.",
+      "rdfs:label": "step",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:LabProtocol"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:CreativeWork"
+        },
+        {
+          "@id": "schema:HowToSection"
+        },
+        {
+          "@id": "schema:HowToStep"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    }
+  ]
+}
