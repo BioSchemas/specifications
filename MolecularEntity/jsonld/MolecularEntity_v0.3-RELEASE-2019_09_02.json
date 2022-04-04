@@ -1,0 +1,154 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/"
+  },
+  "@graph": [
+      {
+      "@id": "bioschemastypes:MolecularEntity",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity. (Source: ChEBI:23367). Note, this version has been updated to a pending class in schema.org.",
+      "schema:schemaVersion": [
+        "https://bioschemas.org/types/MolecularEntity/0.3-RELEASE-2019_09_02"
+      ],
+      "rdfs:label": "MolecularEntity",
+      "rdfs:subClassOf": {
+        "@id": "schema:BioChemEntity"
+      }
+    },
+    {
+      "@id": "bioschemastypes:chemicalRole",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A role played by the BioChemEntity within a chemical context.",
+      "rdfs:label": "chemicalRole",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypes:MolecularEntity"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:DefinedTerm"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypes:inChI",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Non-proprietary identifier for molecular entity that can be used in printed and electronic data sources thus enabling easier linking of diverse data compilations.",
+      "rdfs:label": "inChI",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypes:MolecularEntity"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypes:inChIKey",
+      "@type": "rdf:Property",
+      "rdfs:comment": "InChIKey is a hashed version of the full InChI (using the SHA-256 algorithm).",
+      "rdfs:label": "inChIKey",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypes:MolecularEntity"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypes:iupacName",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Systematic method of naming chemical compounds as recommended by the International Union of Pure and Applied Chemistry (IUPAC).",
+      "rdfs:label": "iupacName",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypes:MolecularEntity"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypes:molecularFormula",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The empirical formula is the simplest whole number ratio of all the atoms in a molecule.",
+      "rdfs:label": "molecularFormula",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypes:MolecularEntity"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypes:molecularWeight",
+      "@type": "rdf:Property",
+      "rdfs:comment": "This is the molecular weight of the entity being described, not of the parent. Units should be included in the form '<Number> <unit>', for example '12 amu' or as '<QuantitativeValue>.",
+      "rdfs:label": "molecularWeight",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypes:MolecularEntity"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:QuantitativeValue"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypes:monoisotopicMolecularWeight",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The monoisotopic mass is the sum of the masses of the atoms in a molecule using the unbound, ground-state, rest mass of the principal (most abundant) isotope for each element instead of the isotopic average mass. Please include the units the form '<Number> <unit>', for example '770.230488 g/mol' or as '<QuantitativeValue>.",
+      "rdfs:label": "monoisotopicMolecularWeight",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypes:MolecularEntity"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:QuantitativeValue"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypes:potentialUse",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Intended use of the BioChemEntity by humans.",
+      "rdfs:label": "potentialUse",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypes:MolecularEntity"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:DefinedTerm"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypes:smiles",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A specification in form of a line notation for describing the structure of chemical species using short ASCII strings.",
+      "rdfs:label": "smiles",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypes:MolecularEntity"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "bioschemastypes": "http://discovery.biothings.io/view/bioschemastypes/"
+  },
+  "@graph": [
+    {
+      "@id": "bioschemastypes:ComputationalWorkflow",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A computational workflow consists of an orchestrated and repeatable pattern of activity enabled by the systematic organization of resources into processes that transform materials, provide services, or process information (source Wikipedia.org). It is executed by a computational process and is thus distinct from laboratory or business workflows. version 1.0-RELEASE",
+      "schema:schemaVersion": [
+        "https://bioschemas.org/types/ComputationalWorkflow/1.0-RELEASE"
+      ],
+      "rdfs:label": "ComputationalWorkflow",
+      "rdfs:subClassOf": {
+        "@id": "schema:SoftwareSourceCode"
+      }
+    },
+    {
+      "@id": "bioschemastypes:input",
+      "@type": "rdf:Property",
+      "rdfs:comment": "An input required to use the computational workflow (eg. Excel spreadsheet, BAM file)",
+      "rdfs:label": "input",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypes:ComputationalWorkflow"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "bioschemastypes:FormalParameter"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypes:output",
+      "@type": "rdf:Property",
+      "rdfs:comment": "An output produced by the workflow",
+      "rdfs:label": "output",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypes:ComputationalWorkflow"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "bioschemastypes:FormalParameter"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypes:documentation",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Documentation describing the ComputationalWorkflow and its use.",
+      "rdfs:label": "documentation",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypes:ComputationalWorkflow"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:CreativeWork"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypes:funding",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The funding for the workflow",
+      "rdfs:label": "funding",
+      "schema:sameAs": {
+        "@id": "schema:funding"
+      },
+      "schema:domainIncludes": {
+        "@id": "bioschemastypes:ComputationalWorkflow"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Grant"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypes:softwareRequirements",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Renaming schema.org/requirements as softwareRequirements. Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (Examples: DirectX, Java or .NET runtime). Supersedes requirements. ",
+      "rdfs:label": "softwareRequirements",
+      "schema:sameAs": {
+        "@id": "schema:softwareRequirements"
+      },
+      "schema:domainIncludes": {
+        "@id": "bioschemastypes:ComputationalWorkflow"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    }
+  ]
+}

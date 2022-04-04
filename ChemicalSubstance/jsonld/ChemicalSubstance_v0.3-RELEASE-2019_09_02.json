@@ -1,0 +1,64 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemastypes": "http://discovery.biothings.io/view/bioschemastypes/"
+    },
+    "@graph": [
+        {
+            "@id": "bioschemastypes:ChemicalSubstance",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A chemical substance is 'a portion of matter of constant composition, composed of molecular entities of the same type or of different types' (source: ChEBI:59999). Version: 0.3-RELEASE-2019_09_02. This version is was released as a pending class as of schema.org version 13",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/types/ChemicalSubstance/0.3-RELEASE-2019_09_02"
+            ],
+            "rdfs:label": "ChemicalSubstance",
+            "rdfs:subClassOf": {
+                "@id": "schema:BioChemEntity"
+            }
+        },
+        {
+            "@id": "bioschemastypes:chemicalComposition",
+            "rdfs:comment": "The chemical composition describes the identity and relative ratio of the chemical elements that make up the substance. For substances this often cannot be accurately determined, an approximation is acceptable.",
+            "@type": "rdf:Property",
+            "rdfs:label": "chemicalComposition",
+            "schema:domainIncludes": {
+                "@id": "bioschemastypes:ChemicalSubstance"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemastypes:chemicalRole",
+            "rdfs:comment": "A role played by the BioChemEntity within a chemical context. A role played by the molecular entity within a chemical context.",
+            "@type": "rdf:Property",
+            "rdfs:label": "chemicalRole",
+            "schema:domainIncludes": {
+                "@id": "bioschemastypes:ChemicalSubstance"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:DefinedTerm"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemastypes:potentialUse",
+            "rdfs:comment": "Intended use of the BioChemEntity by humans. ",
+            "@type": "rdf:Property",
+            "rdfs:label": "potentialUse",
+            "schema:domainIncludes": {
+                "@id": "bioschemastypes:ChemicalSubstance"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:DefinedTerm"
+                }
+            ]
+        }
+    ]
+}

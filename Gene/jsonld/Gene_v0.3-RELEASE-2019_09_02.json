@@ -1,0 +1,101 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/"
+  },
+  "@graph": [
+      {
+      "@id": "bioschemastypes:Gene",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A discrete unit of inheritance which affects one or more biological traits (Source: https://en.wikipedia.org/wiki/Gene). Examples include FOXP2 (Forkhead box protein P2), SCARNA21 (small Cajal body-specific RNA 21), A- (agouti genotype). Note, this version of the type has been added as a pending class in schema.org.",
+      "schema:schemaVersion": [
+        "https://bioschemas.org/types/Gene/0.3-RELEASE-2019_09_02"
+      ],
+      "rdfs:label": "Gene",
+      "rdfs:subClassOf": {
+        "@id": "schema:BioChemEntity"
+      }
+    },
+    {
+      "@id": "bioschemastypes:hasStatus",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Schema:  One of pseudogene, dead, killed, live, predicted, suppressed.",
+      "rdfs:label": "hasStatus",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypes:Gene"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypes:alternativeOf",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Another gene which is a variation of this one.",
+      "rdfs:label": "alternativeOf",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypes:Gene"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Gene"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypes:encodesBioChemEntity",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Another BioChemEntity encoded by this one. Inverse property: isEncodedByBioChemEntity.",
+      "rdfs:label": "encodesBioChemEntity",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypes:Gene"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:BioChemEntity"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypes:expressedIn",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Tissue, organ, biological sample, etc in which activity of this gene has been observed experimentally. For example brain, digestive system.",
+      "rdfs:label": "expressedIn",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypes:Gene"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:AnatomicalStructure"
+        },
+        {
+          "@id": "schema:AnatomicalSystem"
+        },
+        {
+          "@id": "schema:BioChemEntity"
+        },
+        {
+          "@id": "schema:DefinedTerm"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypes:hasBioPolymerSequence",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A symbolic representation of a BioChemEnity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a Protein.",
+      "rdfs:label": "hasBioPolymerSequence",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypes:Gene"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    }  
+  ]
+}
