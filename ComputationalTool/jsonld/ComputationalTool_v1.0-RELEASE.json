@@ -586,7 +586,7 @@
             "strict": false,
             "vocabulary": {
               "ontology": [
-                "edamTopic"
+                "edam"
               ],
               "children_of": [
                 "http://edamontology.org/topic_0003"
@@ -611,7 +611,7 @@
             "strict": false,
             "vocabulary": {
               "ontology": [
-                "edamOperation"
+                "edam"
               ],
               "children_of": [
                 "http://edamontology.org/operation_0004"

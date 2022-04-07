@@ -3,12 +3,14 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
+        "bioschemastypes": "http://discovery.biothings.io/view/bioschemastypes/",
+        "bioschemastypesdrafts": "http://discovery.biothings.io/view/bioschemastypesdrafts/",
+        "bioschemasdrafts": "http://discovery.biothings.io/view/bioschemasdrafts/",
         "dwc": "http://rs.tdwg.org/dwc/terms/"
     },
     "@graph": [
         {
-            "@id": "bioschemas:Taxon",
+            "@id": "bioschemasdrafts:Taxon",
             "@type": "rdfs:Class",
             "rdfs:comment": "Bioschemas profile for describing a biological taxon This profile aims to denote a taxon by common properties such as its scientific name, taxonomic rank and vernacular names. It is also a means to link to existing taxonomic registers where each taxon has a URI. <br/>Changes in 0.7: <ul><li>Use of identifier to add the taxon id within well known authorities (NCBI id, GBIF id, EoL id etc.)</li><li>Add property isBasedOn</li><li>Add properties scientificName and alternateScientificName to link the Taxon to TaxonName instances</li></ul> Version: 0.7-DRAFT",
             "schema:schemaVersion": [
@@ -16,7 +18,7 @@
             ],
             "rdfs:label": "Taxon",
             "rdfs:subClassOf": {
-                "@id": "bioschemas:Taxon"
+                "@id": "schema:Taxon"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
@@ -279,7 +281,7 @@
                 ],
                 "definitions": {
                     "taxonname": {
-                        "@type": "bioschemas:TaxonName",
+                        "@type": "bioschemastypesdrafts:TaxonName",
                         "type": "object",
                         "properties": {
                             "name": {
@@ -289,7 +291,7 @@
                         "required": []
                     },
                     "taxon": {
-                        "@type": "bioschemas:Taxon",
+                        "@type": "schema:Taxon",
                         "type": "object",
                         "properties": {
                             "name": {
@@ -335,7 +337,7 @@
                         ]
                     },
                     "propertyvalue": {
-                        "@type": "PropertyValue",
+                        "@type": "schema:PropertyValue",
                         "type": "object",
                         "properties": {
                             "name": {
@@ -400,7 +402,7 @@
                         ]
                     },
                     "categorycode": {
-                        "@type": "CategoryCode",
+                        "@type": "schema:CategoryCode",
                         "type": "object",
                         "properties": {
                             "name": {
@@ -420,7 +422,7 @@
                         ]
                     },
                     "imageobject": {
-                        "@type": "ImageObject",
+                        "@type": "schema:ImageObject",
                         "type": "object",
                         "properties": {
                             "name": {
@@ -434,7 +436,7 @@
                         "required": []
                     },
                     "creativework": {
-                        "@type": "CreativeWork",
+                        "@type": "schema:CreativeWork",
                         "type": "object",
                         "properties": {
                             "name": {
@@ -454,16 +456,16 @@
             }
         },
         {
-            "@id": "bioschemas:alternateScientificName",
+            "@id": "bioschemasdrafts:alternateScientificName",
             "rdfs:comment": "A TaxonName representing a scientific name, with authorship and date information if known, of a synonym of the currently valid (zoological) or accepted (botanical) name ",
             "@type": "rdf:Property",
             "rdfs:label": "alternateScientificName",
             "schema:domainIncludes": {
-                "@id": "bioschemas:Taxon"
+                "@id": "bioschemasdrafts:Taxon"
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bioschemas:TaxonName"
+                    "@id": "bioschemasdrafts:TaxonName"
                 }
             ]
         },
@@ -473,7 +475,7 @@
             "@type": "rdf:Property",
             "rdfs:label": "vernacularName",
             "schema:domainIncludes": {
-                "@id": "bioschemas:Taxon"
+                "@id": "bioschemasdrafts:Taxon"
             },
             "schema:rangeIncludes": [
                 {
@@ -482,16 +484,30 @@
             ]
         },
         {
-            "@id": "bioschemas:parentTaxon",
+            "@id": "bioschemasdrafts:isBasedOn",
+            "rdfs:comment": "A CreativeWork, such as a scholarly article, asserting the status of the accepted/valid name and synonyms, retained for the taxon circumscription",
+            "@type": "rdf:Property",
+            "rdfs:label": "isBasedOn",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdrafts:Taxon"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:CreativeWork"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemasdrafts:parentTaxon",
             "rdfs:comment": "Closest parent taxon of the taxon in question.\nInverse property: childTaxon Direct, most proximate higher-rank parent taxon",
             "@type": "rdf:Property",
             "rdfs:label": "parentTaxon",
             "schema:domainIncludes": {
-                "@id": "bioschemas:Taxon"
+                "@id": "bioschemasdrafts:Taxon"
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bioschemas:Taxon"
+                    "@id": "bioschemasdrafts:Taxon"
                 },
                 {
                     "@id": "schema:Text"
@@ -502,26 +518,26 @@
             ]
         },
         {
-            "@id": "bioschemas:scientificName",
+            "@id": "bioschemasdrafts:scientificName",
             "rdfs:comment": "A TaxonName representing the currently valid (zoological) or accepted (botanical) name for that taxon ",
             "@type": "rdf:Property",
             "rdfs:label": "scientificName",
             "schema:domainIncludes": {
-                "@id": "bioschemas:Taxon"
+                "@id": "bioschemasdrafts:Taxon"
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bioschemas:TaxonName"
+                    "@id": "bioschemasdrafts:TaxonName"
                 }
             ]
         },
         {
-            "@id": "bioschemas:taxonRank",
+            "@id": "bioschemasdrafts:taxonRank",
             "rdfs:comment": "The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary (e.g. the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs) ",
             "@type": "rdf:Property",
             "rdfs:label": "taxonRank",
             "schema:domainIncludes": {
-                "@id": "bioschemas:Taxon"
+                "@id": "bioschemasdrafts:Taxon"
             },
             "schema:rangeIncludes": [
                 {
