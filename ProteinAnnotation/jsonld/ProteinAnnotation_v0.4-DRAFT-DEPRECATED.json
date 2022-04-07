@@ -5,11 +5,11 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "dct": "https://dublincore.org/specifications/dublin-core/dcmi-terms/#",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+        "bioschemasdeprecated": "http://discovery.biothings.io/view/bioschemasdeprecated/"
     },
     "@graph": [
         {
-            "@id": "bioschemas:ProteinAnnotation",
+            "@id": "bioschemasdeprecated:ProteinAnnotation",
             "@type": "rdfs:Class",
             "owl:deprecated": "True",
             "rdfs:comment": "Bioschemas specification describing a Protein annotation (BioChemEntity profile) in Life Sciences. This profile specification presents the BioChemEntity usage when describing a Protein annotation. Version: 0.4-DRAFT-2018_02_25",
@@ -103,14 +103,34 @@
                     },
                     "hasRepresentation": {
                         "description": "Representation of this entity. For instance, a chemical structure or sequence. A representation for this entity other than, for instance, an image (use image property for that) or the main web page/record (use mainEntityOfPage for that), and see background notes, for sameAs and url).",
-                        "oneOf": [
+                        "anyOf": [
                             {
-                                "$ref": "#/definitions/propertyvalue ortext orurl"
+                                "$ref": "#/definitions/propertyvalue"
                             },
                             {
                                 "type": "array",
                                 "items": {
-                                    "$ref": "#/definitions/propertyvalue ortext orurl"
+                                    "$ref": "#/definitions/propertyvalue"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
                                 }
                             }
                         ]
@@ -157,35 +177,92 @@
                     },
                     "isContainedIn": {
                         "description": "Indicates a BioChemEntity that this BioChemEntity is (in some sense) a part of. Inverse property: contains. ",
-                        "oneOf": [
+                        "anyOf": [
                             {
-                                "$ref": "#/definitions/biochementity orurl"
+                                "$ref": "#/definitions/biochementity"
                             },
                             {
                                 "type": "array",
                                 "items": {
-                                    "$ref": "#/definitions/biochementity orurl"
+                                    "$ref": "#/definitions/biochementity"
                                 }
-                            }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }                            
                         ]
                     },
                     "location": {
-                        "description": "The location can refer to a position in the chromosome or sequence or to a physical place where, for instance, a sample is stored. Using [additionalType](http://bioschemas.org/devSpecs/ProteinAnnotation/#additionalType) is advised to make this distinction. For instance, [FALDO](https://github.com/OBF/FALDO) can be used for sequence co-ordinates.\n**Note:** The list of Expected Types has been extended as schema.org/location only has Place, PostalAddress and Text. The location of for example where the event is happening, an organization is located, or where an action takes place.",
-                        "oneOf": [
+                        "description": "The location can refer to a position in the chromosome or sequence or to a physical place where, for instance, a sample is stored. Using [additionalType](http://bioschemas.org/devSpecs/ProteinStructure/#additionalType) is advised to make this distinction. For instance, [FALDO](https://github.com/OBF/FALDO) can be used for sequence co-ordinates.\n**Note:** The list of Expected Types has been extended as schema.org/location only has Place, PostalAddress and Text. The location of for example where the event is happening, an organization is located, or where an action takes place.",
+                        "anyOf": [
                             {
-                                "$ref": "#/definitions/place orpostaladdress orpropertyvalue ortext orurl"
+                                "$ref": "#/definitions/place"
                             },
                             {
                                 "type": "array",
                                 "items": {
-                                    "$ref": "#/definitions/place orpostaladdress orpropertyvalue ortext orurl"
+                                    "$ref": "#/definitions/place"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/postaladdress"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/postaladdress"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/propertyvalue"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
                                 }
                             }
                         ]
                     },
                     "mainEntityOfPage": {
                         "description": "Link via DataRecord or [URL](http://schema.org/url) to the main Record representing this entity in a dataset.\n**Note:** Bioschemas has replaced CreativeWork with DataRecord in the Expected Types. Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details.",
-                        "$ref": "#/definitions/datarecord orurl"
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "$ref": "#/definitions/datarecord"
+                            }
+                        ]
                     },
                     "name": {
                         "description": " The name of the item.",
@@ -306,28 +383,8 @@
                             "unitText"
                         ]
                     },
-                    "categorycode": {
-                        "@type": "CategoryCode",
-                        "type": "object",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            },
-                            "codeValue": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "name",
-                            "codeValue",
-                            "url"
-                        ]
-                    },
                     "biochementity": {
-                        "@type": "bioschemas:BioChemEntity",
+                        "@type": "schema:BioChemEntity",
                         "type": "object",
                         "properties": {
                             "url": {
@@ -338,16 +395,6 @@
                                 "type": "string"
                             },
                             "identifier": {
-                                "type": "string"
-                            }
-                        },
-                        "required": []
-                    },
-                    "propertyvalue ortext orurl": {
-                        "@type": "schema:PropertyValue orText orURL",
-                        "type": "object",
-                        "properties": {
-                            "name": {
                                 "type": "string"
                             }
                         },
@@ -367,8 +414,102 @@
                         },
                         "required": []
                     },
-                    "biochementity orurl": {
-                        "@type": "schema:BioChemEntity orURL",
+                    "taxon": {
+                        "@type": "Taxon",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "taxonRank": {
+                                "anyOf": [
+                                    {
+                                        "$ref": "#/definitions/propertyvalue"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/definitions/propertyvalue"
+                                        }
+                                    },
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "format": "uri"
+                                        }
+                                    },
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "required": []
+                    },
+                    "categorycode": {
+                      "@type": "CategoryCode",
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "codeValue": {
+                            "type": "string"
+                        },
+                        "url": {
+                            "type": "string"
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "codeValue",
+                        "url"
+                      ]
+                    },
+                    "place": {
+                        "@type": "Place",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                        ]
+                    },
+                    "postaladdress": {
+                        "@type": "PostalAddress",
+                        "type": "object",
+                        "properties": {
+                            "streetAddress": {
+                                "type": "string"
+                            },
+                            "postalCode": {
+                                "type": "string"
+                            },
+                            "postOfficeBoxNumber": {
+                                "type": "string"
+                            },
+                            "addressRegion": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                        ]
+                    },
+                    "creativework": {
+                        "@type": "schema:CreativeWork",
                         "type": "object",
                         "properties": {
                             "name": {
@@ -377,18 +518,8 @@
                         },
                         "required": []
                     },
-                    "place orpostaladdress orpropertyvalue ortext orurl": {
-                        "@type": "schema:Place orPostalAddress orPropertyValue orText orURL",
-                        "type": "object",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": []
-                    },
-                    "datarecord orurl": {
-                        "@type": "schema:DataRecord orURL",
+                    "datarecord": {
+                        "@type": "bioschemasdeprecated:DataRecord",
                         "type": "object",
                         "properties": {
                             "name": {
@@ -401,12 +532,26 @@
             }
         },
         {
-            "@id": "bioschemas:contains",
+            "@id": "bioschemasdeprecated:additionalProperty",
+            "rdfs:comment": "As much a possible, do not use it! Alternatively, consider reusing properties/relations already coined in controlled vocabularies. We recommed to look at the OBO Relations Ontology (RO) or the Semanticscience Integrated Ontology (SIO) as starting points..",
+            "@type": "rdf:Property",
+            "rdfs:label": "additionalProperty",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdeprecated:ProteinAnnotation"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:PropertyValue"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemasdeprecated:contains",
             "rdfs:comment": " Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. Inverse property: isContainedIn.",
             "@type": "rdf:Property",
             "rdfs:label": "contains",
             "schema:domainIncludes": {
-                "@id": "bioschemas:ProteinAnnotation"
+                "@id": "bioschemasdeprecated:ProteinAnnotation"
             },
             "schema:rangeIncludes": [
                 {
@@ -418,12 +563,12 @@
             ]
         },
         {
-            "@id": "bioschemas:creationMethod",
+            "@id": "bioschemasdeprecated:creationMethod",
             "rdfs:comment": " Method used to create this annotation.",
             "@type": "rdf:Property",
             "rdfs:label": "creationMethod",
             "schema:domainIncludes": {
-                "@id": "bioschemas:ProteinAnnotation"
+                "@id": "bioschemasdeprecated:ProteinAnnotation"
             },
             "schema:rangeIncludes": [
                 {
@@ -432,58 +577,82 @@
             ]
         },
         {
-            "@id": "bioschemas:hasRepresentation",
+            "@id": "bioschemasdeprecated:hasRepresentation",
             "rdfs:comment": "A representation for this entity other than, for instance, an image (use image property for that) or the main web page/record (use mainEntityOfPage for that), and see background notes, for sameAs and url). Representation of this entity. For instance, a chemical structure or sequence.",
             "@type": "rdf:Property",
             "rdfs:label": "hasRepresentation",
             "schema:domainIncludes": {
-                "@id": "bioschemas:ProteinAnnotation"
+                "@id": "bioschemasdeprecated:ProteinAnnotation"
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "schema:PropertyValue orText orURL"
+                    "@id": "schema:PropertyValue"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
                 }
             ]
         },
         {
-            "@id": "bioschemas:isContainedIn",
+            "@id": "bioschemasdeprecated:isContainedIn",
             "rdfs:comment": " Indicates a BioChemEntity that this BioChemEntity is (in some sense) a part of. Inverse property: contains.",
             "@type": "rdf:Property",
             "rdfs:label": "isContainedIn",
             "schema:domainIncludes": {
-                "@id": "bioschemas:ProteinAnnotation"
+                "@id": "bioschemasdeprecated:ProteinAnnotation"
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "schema:BioChemEntity orURL"
+                    "@id": "schema:BioChemEntity"
+                },
+                {
+                    "@id": "schema:URL"
                 }
             ]
         },
         {
-            "@id": "bioschemas:location",
+            "@id": "bioschemasdeprecated:location",
             "rdfs:comment": "The location of for example where the event is happening, an organization is located, or where an action takes place. The location can refer to a position in the chromosome or sequence or to a physical place where, for instance, a sample is stored. Using [additionalType](http://bioschemas.org/devSpecs/ProteinAnnotation/#additionalType) is advised to make this distinction. For instance, [FALDO](https://github.com/OBF/FALDO) can be used for sequence co-ordinates.\n**Note:** The list of Expected Types has been extended as schema.org/location only has Place, PostalAddress and Text.",
             "@type": "rdf:Property",
             "rdfs:label": "location",
             "schema:domainIncludes": {
-                "@id": "bioschemas:ProteinAnnotation"
+                "@id": "bioschemasdeprecated:ProteinAnnotation"
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "schema:Place orPostalAddress orPropertyValue orText orURL"
+                    "@id": "schema:Place"
+                },
+                {
+                    "@id": "schema:PostalAddress"
+                },
+                {
+                    "@id": "schema:PropertyValue"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
                 }
             ]
         },
         {
-            "@id": "bioschemas:mainEntityOfPage",
+            "@id": "bioschemasdeprecated:mainEntityOfPage",
             "rdfs:comment": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details. Link via DataRecord or [URL](http://schema.org/url) to the main Record representing this entity in a dataset.\n**Note:** Bioschemas has replaced CreativeWork with DataRecord in the Expected Types.",
             "@type": "rdf:Property",
             "rdfs:label": "mainEntityOfPage",
             "schema:domainIncludes": {
-                "@id": "bioschemas:ProteinAnnotation"
+                "@id": "bioschemasdeprecated:ProteinAnnotation"
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "schema:DataRecord orURL"
+                    "@id": "schema:DataRecord"
+                },
+                {
+                    "@id": "schema:URL"
                 }
             ]
         },
@@ -493,7 +662,7 @@
             "@type": "rdf:Property",
             "rdfs:label": "type",
             "schema:domainIncludes": {
-                "@id": "bioschemas:ProteinAnnotation"
+                "@id": "bioschemasdeprecated:ProteinAnnotation"
             },
             "schema:rangeIncludes": [
                 {

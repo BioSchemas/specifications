@@ -1,0 +1,439 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "bioschemasdeprecated": "https://discovery.biothings.io/view/bioschemasdeprecated/",
+    "bioschemas": "https://discovery.biothings.io/view/bioschemas/"
+  },
+  "@graph": [
+    {
+      "@id": "bioschemasdeprecated:DataRecord",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A Record acts itself as a dataset although it refers to what could be seen as the minimum compact, complete and auto-descriptive unit in a dataset, i.e., a record. Bioschemas usage In Life Sciences, records will represent a BioChemEntity. Version 0.2-DRAFT-2019_06_14. Deprecated on: 2021-02-22",
+      "rdfs:label": "DataRecord",
+      "rdfs:subClassOf": {
+        "@id": "schema:CreativeWork"
+      },
+      "$validation": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "additionalProperty": {
+            "description": "Additional to the use of name and description to describe this property in a human-readable way, additionalType should be used to specify the nature of the property/relation. For instance, if the property refers to a gene/protein disease association, you could use SIO:000983 (gene-disease association) as the additionalType for the additionalProperty.",
+            "oneOf": [
+              {
+                "$ref": "#/definitions/propertyvalueObject"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/propertyvalueObject"
+                }
+              }
+            ]
+          },
+          "distribution": {
+            "description": "A downloadable form of this dataset, at a specific location, in a specific format.",
+            "oneOf": [
+              {
+                "$ref": "#/definitions/datadownloadObject"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/datadownloadObject"
+                }
+              }
+            ]
+          },
+          "isBasisFor": {
+            "description": "A resource for which this resource is basis for. Inverse property: isBasedOn.",
+            "anyOf": [
+              {
+                "$ref": "#/definitions/creativeworkObject"
+              },
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "$ref": "#/definitions/productObject"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/creativeworkObject"
+                }
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/productObject"
+                }
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            ]
+          },
+          "seeAlso": {
+            "description": "A pointer to any (somehow related) Thing. To be used whenever you are not so sure about the nature of the relation. Otherwise, use more precise terms from pre-existing Controlled Vocabularies.",
+            "anyOf": [
+              {
+                "$ref": "#/definitions/thingObject"
+              },
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/thingObject"
+                }
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            ]
+          },
+          "isBasedOn": {
+            "description": "A resource from which this work is derived or from which it is a modification or adaption.",
+            "anyOf": [
+              {
+                "$ref": "#/definitions/creativeworkObject"
+              },
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "$ref": "#/definitions/productObject"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/creativeworkObject"
+                }
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/productObject"
+                }
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            ]
+          },
+          "datePublished": {
+            "description": "Date of first broadcast/publication.",
+            "format": "date",
+            "type": "string"
+          },
+          "mainEntity": {
+            "description": "Indicates the primary entity described in some page or other CreativeWork.",
+            "$ref": "#/definitions/thingObject"
+          },
+          "keywords": {
+            "description": "Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+            "type": "string"
+          },
+          "dateModified": {
+            "description": "The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
+            "format": "date",
+            "type": "string"
+          },
+          "dateCreated": {
+            "description": "The date on which the CreativeWork was created or the item was added to a DataFeed.",
+            "format": "date",
+            "type": "string"
+          },
+          "citation": {
+            "description": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+            "anyOf": [
+              {
+                "$ref": "#/definitions/creativeworkObject"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/creativeworkObject"
+                }
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "additionalType": {
+            "description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            ]
+          },
+          "identifier": {
+            "description": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.\n        ",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "$ref": "#/definitions/propertyvalueObject"
+              }
+            ]
+          },
+          "image": {
+            "description": "An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].",
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "$ref": "#/definitions/imageObject"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/imageObject"
+                }
+              }
+            ]
+          },
+          "sameAs": {
+            "description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            ]
+          },
+          "url": {
+            "description": "URL of the item.",
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "mainEntity",
+          "identifier"
+        ],
+        "recommended": [
+          "additionalType"
+        ],
+        "optional": [
+          "additionalProperty",
+          "distribution",
+          "isBasisFor",
+          "seeAlso",
+          "isBasedOn",
+          "datePublished",
+          "keywords",
+          "dateModified",
+          "dateCreated",
+          "citation",
+          "image",
+          "sameAs",
+          "url"
+        ],
+        "definitions": {
+          "propertyvalueObject": {
+            "description": "a propertyvalue object.",
+            "@type": "PropertyValue",
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": []
+          },
+          "datadownloadObject": {
+            "description": "a datadownload object.",
+            "@type": "DataDownload",
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": []
+          },
+          "creativeworkObject": {
+            "description": "a creativework object.",
+            "@type": "CreativeWork",
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": []
+          },
+          "thingObject": {
+            "description": "a thing object.",
+            "@type": "Thing",
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": []
+          },
+          "productObject": {
+            "description": "a product object.",
+            "@type": "Product",
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            },
+              "required": []
+          },
+          "imageObject": {
+            "description": "an image object.",
+            "@type": "ImageObject",
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              }
+            },
+            "required": []
+        }
+        }
+      }
+    },
+    {
+      "@id": "bioschemasdeprecated:additionalProperty",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Additional to the use of name and description to describe this property in a human-readable way, additionalType should be used to specify the nature of the property/relation. For instance, if the property refers to a gene/protein disease association, you could use SIO:000983 (gene-disease association) as the additionalType for the additionalProperty.",
+      "rdfs:label": "additionalProperty",
+      "schema:domainIncludes": {
+        "@id": "bioschemasdeprecated:DataRecord"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:PropertyValue"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemasdeprecated:distribution",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A downloadable form of this dataset, at a specific location, in a specific format.",
+      "rdfs:label": "distribution",
+      "schema:domainIncludes": {
+        "@id": "bioschemasdeprecated:DataRecord"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:DataDownload"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemasdeprecated:isBasisFor",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A resource for which this resource is basis for. Inverse property: isBasedOn.",
+      "rdfs:label": "isBasisFor",
+      "schema:domainIncludes": {
+        "@id": "bioschemasdeprecated:DataRecord"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:CreativeWork"
+        },
+        {
+          "@id": "schema:Product"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemasdeprecated:seeAlso",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A pointer to any (somehow related) Thing. To be used whenever you are not so sure about the nature of the relation. Otherwise, use more precise terms from pre-existing Controlled Vocabularies.",
+      "rdfs:label": "seeAlso",
+      "schema:domainIncludes": {
+        "@id": "bioschemasdeprecated:DataRecord"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Thing"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    }
+  ]
+}

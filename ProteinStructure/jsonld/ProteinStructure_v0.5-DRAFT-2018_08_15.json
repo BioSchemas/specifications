@@ -344,7 +344,7 @@
                         ]
                     },
                     "mainEntityOfPage": {
-                        "description": "Link via DataRecord or [URL](http://schema.org/url) to the main Record representing this entity in a dataset.\n**Note:** Bioschemas has replaced CreativeWork with DataRecord in the Expected Types. Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details.",
+                        "description": "Link via DataRecord or [URL](http://schema.org/url) to the main Record representing this entity in a dataset.\n**Note:** Bioschemas has replaced DataRecord with CreativeWork in the Expected Types. Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details.",
                         "oneOf": [
                             {
                                 "type": "string",
@@ -461,26 +461,6 @@
                         "optional": [
                             "unitCode",
                             "unitText"
-                        ]
-                    },
-                    "categorycode": {
-                        "@type": "CategoryCode",
-                        "type": "object",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            },
-                            "codeValue": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "name",
-                            "codeValue",
-                            "url"
                         ]
                     },
                     "biochementity": {
