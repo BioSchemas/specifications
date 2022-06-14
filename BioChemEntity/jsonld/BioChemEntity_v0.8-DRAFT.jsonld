@@ -5,7 +5,7 @@
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "issue542": "https://discovery.biothings.io/view/issue542/",
     "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
-    "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/SequenceAnnotation"
+    "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/"
   },
   "@graph": [
     {
