@@ -1,8 +1,5 @@
 name: Trigger Web Site
-on:
-  push:
-    branches:
-      - master
+on: [push]
 jobs:
   build:
     name: Run Web App
