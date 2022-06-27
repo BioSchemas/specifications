@@ -2,17 +2,18 @@ name: Trigger Web Site
 on: [push]
 jobs:
   build:
-    name: Run Web App
+    name: Trigger Bioschemas Web Site
     runs-on: ubuntu-latest
     steps:
-      - name: Build Web App
+      - name: Wait 10s
         run: |
-          echo "Build Web App"
+          echo "For safety wait a bit"
           sleep 10s
       - uses: convictional/trigger-workflow-and-wait@v1.3.0
         with:
-          owner: Bioschemas
+          owner: sahar-frikha
           repo: bioschemas.github.io
+          github_token: ${{ secrets.SECRET_PERSONAL_TOKEN }}
           workflow_file_name: auto-generate-profile.yml
           ref: profile_auto_generation
       - name: Deploy Web App
