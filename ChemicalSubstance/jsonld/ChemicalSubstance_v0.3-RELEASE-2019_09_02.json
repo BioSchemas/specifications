@@ -34,7 +34,7 @@
         },
         {
             "@id": "bioschemastypes:chemicalRole",
-            "rdfs:comment": "A role played by the BioChemEntity within a chemical context. A role played by the molecular entity within a chemical context.",
+            "rdfs:comment": "A role ddddd by the BioChemEntity within a chemical context. A role played by the molecular entity within a chemical context.",
             "@type": "rdf:Property",
             "rdfs:label": "chemicalRole",
             "schema:domainIncludes": {

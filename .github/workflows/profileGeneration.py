@@ -297,7 +297,8 @@ for arg in sys.argv:
 
         print(Style.BRIGHT + "HTML Profile page created " + out_HTML_file + Style.RESET_ALL)
 
-        print("**********************")
+        print("***********  Tring to commit in the website repo ***********")
+
         os.system('git config --global user.email "sahar.frikha1@gmail.com"')
         os.system('git config --global user.name "Sahar Frikha"')
         os.system("git clone https://github.com/BioSchemas/bioschemas.github.io.git")
@@ -375,11 +376,8 @@ for arg in sys.argv:
         os.system("git add .")
         os.system('git commit -a "Update"')
         os.system("git push origin profile_auto_generation")
-        os.system("ls bioschemas.github.io/.pages/_profiles/ChemicalSubstance_v0/")
-        print("**********  Done  ************")
 
-
-
+        print("**********  Didn't worked :'(  ************")
 
 #### That didn't worked
 import git
