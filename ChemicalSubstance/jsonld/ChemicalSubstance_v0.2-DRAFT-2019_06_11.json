@@ -36,7 +36,7 @@
                         ]
                     },
                     "bioChemInteraction": {
-                        "description": "Interaction of the molecular entity with other BioChemical entities. A BioChemEntity that is known to interact with this item.",
+                        "description": "Interaction dd the molecular entity with other BioChemical entities. A BioChemEntity that is known to interact with this item.",
                         "oneOf": [
                             {
                                 "$ref": "#/definitions/biochementity"
