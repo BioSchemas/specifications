@@ -298,10 +298,11 @@ for arg in sys.argv:
         print(Style.BRIGHT + "HTML Profile page created " + out_HTML_file + Style.RESET_ALL)
 
         print("**********************")
+        os.system('git config --global user.email "sahar.frikha1@gmail.com"')
+        os.system('git config --global user.name "Sahar Frikha"')
         os.system("git clone https://github.com/BioSchemas/bioschemas.github.io.git")
         os.system("cd bioschemas.github.io")
         os.system("git checkout profile_auto_generation")
-        os.system("ls")
         folderpath ="./pages/_profiles/"+profile_name
 
         out_YAML_file = folderpath+"/"+"generated_"+profile_name+".yaml"
@@ -372,8 +373,9 @@ for arg in sys.argv:
         print(Style.BRIGHT + "HTML Profile page created " + out_HTML_file + Style.RESET_ALL)
         os.system("git status")
         os.system("git add .")
-        os.system('git commit -m "Update"')
+        os.system('git commit -a "Update"')
         os.system("git push origin profile_auto_generation")
+        os.system("ls bioschemas.github.io/.pages/_profiles/ChemicalSubstance_v0/")
         print("**********  Done  ************")
 
 
