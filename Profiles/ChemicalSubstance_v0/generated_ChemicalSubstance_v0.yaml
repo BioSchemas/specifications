@@ -45,8 +45,8 @@ mapping:
     as a part.'
   example: ''
   expected_types:
-  - Biochementity
   - Uri
+  - Biochementity
   marginality: Minimum
   property: hasBioChemEntityPart
   type: ''
@@ -150,8 +150,8 @@ mapping:
   description: ' An image of the item. This can be a URL or a fully described ImageObject.'
   example: ''
   expected_types:
-  - Imageobject
   - Uri
+  - Imageobject
   marginality: Optional
   property: image
   type: ''
@@ -181,7 +181,7 @@ mapping:
   type: ''
   type_url: ''
 spec_info:
-  description: 'Bioschemas progjgjgfile describing a ChemicalEntity This specification
+  description: 'Bioschemas peeeerogjgjgfile describing a ChemicalEntity This specification
     describes a ChemicalSubstance which is ''a portion of matter of constant composition,
     composed of molecular entities of the same type or of different types'' (source:
     ChEBI). Version: 0.1-DRAFT-2018_12_07'
