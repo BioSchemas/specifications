@@ -22,7 +22,7 @@
                 "type": "object",
                 "properties": {
                     "acceptanceNotificationDate": {
-                        "description": "Date for the host to confirm acceptance to applicants. ",
+                        "description": "Date for the eeee to confirm acceptance to applicants. ",
                         "oneOf": [
                             {
                                 "type": "string",

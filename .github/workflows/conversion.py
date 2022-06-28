@@ -235,14 +235,14 @@ for arg in sys.argv:
             print("Create folder : ", folderpath)
             os.makedirs(os.path.dirname(folderpath), exist_ok=True)
         
-        out_YAML_file = "./Profiles/"+"generated_"+profile_name+".yaml"
+        out_YAML_file = folderpath+"/"+"generated_"+profile_name+".yaml"
 
         with open(out_YAML_file, "w", encoding="utf-8") as o:
             yaml.dump(transformed_profile, o)
 
         print(Style.BRIGHT + "Transformed profiles Generated and saved in " + out_YAML_file + Style.RESET_ALL)
         
-        out_HTML_file= "./Profiles/"+ transformed_profile["spec_info"]["version"] +".html"
+        out_HTML_file= folderpath+"/"+ transformed_profile["spec_info"]["version"] +".html"
 
         top_of_the_page='''
         redirect_from:
