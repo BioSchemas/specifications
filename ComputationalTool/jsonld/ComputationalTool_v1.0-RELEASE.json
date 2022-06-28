@@ -19,7 +19,7 @@
         "type": "object",
         "properties": {
           "codeRepository": {
-            "description": "Link to the source code repository of the tool.",
+            "description": "Link ffff the source code repository of the tool.",
             "oneOf": [
               {
                 "type": "string",

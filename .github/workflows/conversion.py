@@ -233,7 +233,8 @@ for arg in sys.argv:
             print ("folder esists")
         else:
             print("Create folder : ", folderpath)
-            os.mkdir(folderpath)
+            os.cd("./profiles/")
+            os.mkdir(profile_name)
         
         out_YAML_file = "./profiles/"+profile_name+"/"+ "generated_"+profile_name+".yaml"
 
