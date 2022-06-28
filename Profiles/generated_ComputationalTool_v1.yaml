@@ -1,0 +1,386 @@
+mapping:
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A short description of the tool.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Required
+  property: description
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The name of the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Required
+  property: name
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Homepage of the tool. URL of the item.
+  example: ''
+  expected_types:
+  - Uri
+  marginality: Required
+  property: url
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Type of software application, e.g. 'Game, Multimedia'. Please use terms
+    from the 'Tool type' table in the biotools documentation.
+  example: ''
+  expected_types:
+  - Uri
+  - Text
+  marginality: Minimum
+  property: applicationCategory
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Subcategory of the application, e.g. 'Arcade Game'. Use an EDAM:Topic
+    to describe the category of application
+  example: ''
+  expected_types:
+  - Edamtopic
+  marginality: Minimum
+  property: applicationSubCategory
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The author of this content or rating. Please note that author is special
+    in that HTML 5 provides a special mechanism for indicating authorship via the
+    rel tag. That is equivalent to this and may be used interchangeably.
+  example: ''
+  expected_types:
+  - Person
+  - Organization
+  marginality: Minimum
+  property: author
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Publication about this tool. A citation or reference to another creative
+    work, such as another publication, web page, scholarly article, etc.
+  example: ''
+  expected_types:
+  - Citation
+  marginality: Minimum
+  property: citation
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Features or modules provided by this application (and possibly required
+    by other applications). Functionality provided by the tool. Note: Bioschemas have
+    removed Text from the Expected Types.'
+  example: ''
+  expected_types:
+  - Edamoperation
+  - Uri
+  marginality: Minimum
+  property: featureList
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The license of a software, curated dataset, etc. A license document
+    that applies to this content, typically indicated by URL. Use SPDX list of licenses
+    in form https://spdx.org/licenses/
+  example: ''
+  expected_types:
+  - Creativework
+  - Uri
+  marginality: Minimum
+  property: license
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Version(s) of the tool, which this information is valid for. Can also
+    be a comma-delimited list and include hyphen-separated ranges of versions.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Minimum
+  property: softwareVersion
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A suite of tools, to which the tool belongs. The name of the application
+    suite to which the application belongs (e.g. Excel belongs to Office).
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: applicationSuite
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Link ffff the source code repository of the tool.
+  example: ''
+  expected_types:
+  - Uri
+  marginality: Optional
+  property: codeRepository
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A secondary contributor to the CreativeWork or Event.
+  example: ''
+  expected_types:
+  - Person
+  - Organization
+  marginality: Optional
+  property: contributor
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A link to the page containing the comments of the CreativeWork.
+  example: ''
+  expected_types:
+  - Uri
+  marginality: Optional
+  property: discussionUrl
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Link(s) to the downloadable(s).
+  example: ''
+  expected_types:
+  - Uri
+  marginality: Optional
+  property: downloadUrl
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A person or organization that supports (sponsors) something through
+    some kind of financial contribution.
+  example: ''
+  expected_types:
+  - Person
+  - Organization
+  marginality: Optional
+  property: funder
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Indicates any software dependency. Indicates an item or CreativeWork
+    that is part of this item, or CreativeWork (in some sense).
+  example: ''
+  expected_types:
+  - Creativework
+  marginality: Optional
+  property: hasPart
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The identifier property represents any kind of identifier for any kind
+    of <a class="localLink" href="http://schema.org/Thing">Thing</a>, such as ISBNs,
+    GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing
+    many of these, either as textual strings or as URL (URI) links. See <a href="/docs/datamodel.html#identifierBg">background
+    notes</a> for more details.
+  example: ''
+  expected_types:
+  - Propertyvalue
+  - Uri
+  - Text
+  marginality: Optional
+  property: identifier
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Specification of a consumed input.
+  example: ''
+  expected_types:
+  - Formalparameter
+  marginality: Optional
+  property: input
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A flag to signal that the tool or the service are available to be used
+    for free.
+  example: ''
+  expected_types:
+  - Boolean
+  marginality: Optional
+  property: isAccessibleForFree
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A tool or another work which this tool is based on, or is an extension,
+    distribution, or deployment of.  A resource from which this work is derived or
+    from which it is a modification or adaption.
+  example: ''
+  expected_types:
+  - Product
+  - Creativework
+  - Uri
+  marginality: Optional
+  property: isBasedOn
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A collection, other than a suite of tools, to which the tool belongs..
+    Indicates an item or CreativeWork that this item, or CreativeWork (in some sense),
+    is part of.
+  example: ''
+  expected_types:
+  - Creativework
+  marginality: Optional
+  property: isPartOf
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Additional keywords or tags important for this tool. Multiple entries
+    are delimited by commas. Keywords or tags used to describe this content. Multiple
+    entries in a keywords list are typically delimited by commas.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: keywords
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: "Operating ss on kk the uyjuyty can be used (without additional wrapping).\
+    \ Operating systems supported (Windows 7, OSX 10.6, Android 1.6). Please use terms\
+    \ from the \u2018Operating systems\u2019 table in the biotools documentation"
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: operatingSystem
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Specification of a produced output.
+  example: ''
+  expected_types:
+  - Formalparameter
+  marginality: Optional
+  property: output
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: "The main dd language(s) used to build or execute the tool. Please\
+    \ use terms from the \u2018Programming language\u2019 table in the Bio.Tools documentation"
+  example: ''
+  expected_types:
+  - Computerlanguage
+  - Text
+  marginality: Optional
+  property: programmingLanguage
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'The provider organization of a web application, database portal, web
+    service, etc. Note: Bioschemas have removed Person from the Expected Types. The
+    service provider, service operator, or service performer; the goods producer.
+    Another party (a seller) may offer those services or goods on behalf of the provider.
+    A provider may also serve as the seller.'
+  example: ''
+  expected_types:
+  - Organization
+  marginality: Optional
+  property: provider
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Additional sub-tools (add-ons, plug-ins, tools in a suite, etc.) that
+    are included in the tool or workflow. Additional content for a software application.
+  example: ''
+  expected_types:
+  - Softwareapplication
+  marginality: Optional
+  property: softwareAddOn
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A documentation of the tool.
+  example: ''
+  expected_types:
+  - Creativework
+  marginality: Optional
+  property: softwareHelp
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A small image representing the tool, such as an icon. A thumbnail image
+    relevant to the Thing.
+  example: ''
+  expected_types:
+  - Uri
+  marginality: Optional
+  property: thumbnailUrl
+  type: ''
+  type_url: ''
+spec_info:
+  description: The Life Science Tools specification provides a way to describe bioscience
+    tools and software on the World Wide Web. It defines a set of metadata and vocabularies,
+    built on top of existing technologies and standards, that can be used to represent
+    such tools in Web pages and applications. The goal of the specification is to
+    make it easier to discover. Version 1.0-RELEASE.
+  full_example: https://github.com/BioSchemas/specifications/tree/master/ComputationalTool/examples
+  official_type:
+    '@id': schema:SoftwareApplication
+  title: ComputationalTool
+  version: 0.5-DRAFT
