@@ -42,13 +42,11 @@ mapping:
   cardinality: MANY
   controlled_vocab: ''
   description: ' Indicates a BioChemEntity that (in some sense) has this BioChemEntity
-    as a part.
-
-    Inverse property: isPartOfBioChemEntity'
+    as a part.'
   example: ''
   expected_types:
-  - Biochementity
   - Uri
+  - Biochementity
   marginality: Minimum
   property: hasBioChemEntityPart
   type: ''
@@ -56,9 +54,9 @@ mapping:
 - bsc_description: ''
   cardinality: ONE
   controlled_vocab: ''
-  description: For substances this often cannot accurately be determined, an approximation
-    is acceptable. The empirical formula is the simplest whole number ratio of all
-    the atoms in a molecule.
+  description: 'The empirical formula is the simplest whole number ratio of all the
+    atoms in a molecule. Because for substances this often cannot accurately be determined,
+    an approximation is acceptable. Inverse property: isPartOfBioChemEntity'
   example: ''
   expected_types:
   - Text
@@ -80,31 +78,30 @@ mapping:
 - bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
-  description: Interaction dd the molecular entity with other BioChemical entities.
-    A BioChemEntity that is known to interact with this item.
+  description: 'Interaction of the molecular entity with other BioChemical entities. '
   example: ''
   expected_types:
   - Biochementity
   marginality: Optional
-  property: bioChemInteraction
+  property: biochemicalInteraction
   type: ''
   type_url: ''
 - bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
-  description: ' A similar molecular entity, e.g., obtained by fingerprint similarity
-    algorithms.'
+  description: 'A similar molecular entity, e.g., obtained by fingerprint similarity
+    algorithms. '
   example: ''
   expected_types:
   - Biochementity
   marginality: Optional
-  property: bioChemSimilarity
+  property: 'biochemicalSimilarity '
   type: ''
   type_url: ''
 - bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
-  description: ' A role played by the molecular entity within a biological context.'
+  description: 'A role played by the molecular entity within a biological context. '
   example: ''
   expected_types:
   - Definedterm
@@ -115,8 +112,7 @@ mapping:
 - bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
-  description: A role played by the molecular entity within a chemical context. A
-    role played by the molecular entity within a chemical context.
+  description: 'A role played by the molecular entity within a chemical context. '
   example: ''
   expected_types:
   - Definedterm
@@ -163,7 +159,7 @@ mapping:
 - bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
-  description: ' Intended use of the molecular entity by humans.'
+  description: 'Intended use of the molecular entity by humans. '
   example: ''
   expected_types:
   - Definedterm
@@ -174,8 +170,9 @@ mapping:
 - bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
-  description: ' URL of a zzz Web page that unambiguously indicates the item''s identity.
-    E.g. the URL of the item''s Wikipedia page, Wikidata entry, or official website.'
+  description: ' URL of a reference Web page that unambiguously indicates the item''s
+    identity. E.g. the URL of the item''s Wikipedia page, Wikidata entry, or official
+    website.'
   example: ''
   expected_types:
   - Uri
@@ -184,12 +181,12 @@ mapping:
   type: ''
   type_url: ''
 spec_info:
-  description: 'Bioschemas profile sssss a ChemicalEntity This specification describes
+  description: 'Bioschemas ssss describing a ChemicalEntity This specification describes
     a ChemicalSubstance which is ''a portion of matter of constant composition, composed
     of molecular entities of the same type or of different types'' (source: ChEBI).
-    Version: 0.2-DRAFT-2019_06_11'
+    Version: 0.1-DRAFT-2018_12_07'
   full_example: https://github.com/BioSchemas/specifications/tree/master/ChemicalSubstance/examples
   official_type:
     '@id': bioschemas:BioChemEntity
   title: ChemicalSubstance
-  version: 0.2-DRAFT-2019_06_11
+  version: 0.1-DRAFT-2018_12_07
