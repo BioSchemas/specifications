@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 from pydoc import doc
 import yaml
 from colorama import Fore
@@ -235,7 +236,8 @@ for arg in sys.argv:
         if path.exists(folderpath):
             print ("folder esists")
         else:
-            os.makedirs(os.path.dirname(folderpath), exist_ok=True)
+            #os.makedirs(os.path.dirname(folderpath), exist_ok=True)
+            Path(folderpath).mkdir(parents=True, exist_ok=True) 
             print("Create folder : ", folderpath)
 
 
