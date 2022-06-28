@@ -187,7 +187,7 @@
                         ]
                     },
                     "sameAs": {
-                        "description": " URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+                        "description": " URL of a zzz Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
                         "oneOf": [
                             {
                                 "type": "string",
