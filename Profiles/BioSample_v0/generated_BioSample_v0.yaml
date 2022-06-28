@@ -1,0 +1,13 @@
+mapping: []
+spec_info:
+  description: 'A yyeyeyt material entity that is representative of a whole.
+
+    Comments: Typically samples are intended to be representative of the whole or
+    aspects thereof. Examples of samples include biomedical samples (blood, urine)
+    and plant specimens held at herbaria. Version 0.1-RELEASE. Note, the parent class
+    for this schema has been updated to a pending class in schema.org.'
+  full_example: https://github.com/BioSchemas/specifications/tree/master/BioSample/examples
+  official_type:
+    '@id': schema:BioChemEntity
+  title: BioSample
+  version: '0'
