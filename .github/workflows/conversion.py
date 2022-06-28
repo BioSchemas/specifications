@@ -194,7 +194,7 @@ def generate_transformed_profile(g):
 # For each new uploaded JSON-LD file 
 for arg in sys.argv:
     arglist= arg.split('/')
-    profile_name=arglist.split('/')[-1].split('.')[0]
+    profile_name=arg.split('/')[-1].split('.')[0]
     print(Fore.YELLOW + 'added/updated profile: ' + profile_name + Style.RESET_ALL)
 
     in_file = "./"+arg
