@@ -1,0 +1,10 @@
+mapping: []
+spec_info:
+  description: 'Any biological, chemical, or biochemical thing. For example: a protein;
+    a gene; a chemical; a synthetic chemical. Note, this version (0.7-RELEASE) is
+    the version that is currently pending on schema.org'
+  full_example: https://github.com/BioSchemas/specifications/tree/master/BioChemEntity/examples
+  official_type:
+    '@id': schema:Thing
+  title: BioChemEntity
+  version: '0'
