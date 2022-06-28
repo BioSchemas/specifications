@@ -38,7 +38,7 @@
                         ]
                     },
                     "accreditation": {
-                        "description": "Type if accrediation or organisation that accredits the event ",
+                        "description": "Type if zzz or organisation that accredits the event ",
                         "oneOf": [
                             {
                                 "$ref": "#/definitions/organization"
