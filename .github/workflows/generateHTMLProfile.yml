@@ -37,6 +37,11 @@ jobs:
         uses: py-actions/py-dependency-install@v3
         with:
           path: "./.github/workflows/requirements.txt"
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: BioSchemas/bioschemas.github.io
+
       - name: Execute the Python Script
         run: |
           python ./.github/workflows/conversion.py ${{steps.changed-files.outputs.all_changed_files}}
