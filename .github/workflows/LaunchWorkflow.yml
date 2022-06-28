@@ -38,9 +38,21 @@ jobs:
         with:
           path: "./.github/workflows/requirements.txt"
 
+      - name: ls Before
+        run: ls
+
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: BioSchemas/bioschemas.github.io
+          branch: profile_auto_generation
+
+      - name: ls After
+        run: ls
+
       - name: Execute the Python Script
         run: |
-          python ./.github/workflows/conversion.py ${{steps.changed-files.outputs.all_changed_files}}
+          python profileGeneration.py ${{steps.changed-files.outputs.all_changed_files}}
       
       # Commit and push the changes to the branch
       - name: Setup the Github TOKEN
