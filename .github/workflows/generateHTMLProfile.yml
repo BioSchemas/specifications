@@ -39,7 +39,7 @@ jobs:
           path: "./.github/workflows/requirements.txt"
 
       - name: ls Before
-        run: ls specifications
+        run: ls
 
       - name: Checkout
         uses: actions/checkout@v2
@@ -47,7 +47,7 @@ jobs:
           repository: BioSchemas/bioschemas.github.io
 
       - name: ls After
-        run: ls specifications
+        run: ls
 
       - name: Execute the Python Script
         run: |
