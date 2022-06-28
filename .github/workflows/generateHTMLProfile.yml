@@ -37,10 +37,17 @@ jobs:
         uses: py-actions/py-dependency-install@v3
         with:
           path: "./.github/workflows/requirements.txt"
+
+      - name: ls Before
+        run: ls specifications
+
       - name: Checkout
         uses: actions/checkout@v2
         with:
           repository: BioSchemas/bioschemas.github.io
+
+      - name: ls After
+        run: ls specifications
 
       - name: Execute the Python Script
         run: |
