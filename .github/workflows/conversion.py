@@ -228,22 +228,22 @@ for arg in sys.argv:
 
         ### PROBLEM: if the forlder "profile name" doesn't exist it will throw an exception, so we need to create it manually
         
-        folderpath = "./profiles/"+profile_name
+        folderpath = "./Profiles/"+profile_name
         if path.exists(folderpath):
             print ("folder esists")
         else:
             print("Create folder : ", folderpath)
-            os.system('cd ./profiles/')
+            os.system('cd ./Profiles')
             os.mkdir(profile_name)
         
-        out_YAML_file = "./profiles/"+profile_name+"/"+ "generated_"+profile_name+".yaml"
+        out_YAML_file = "./Profiles/"+profile_name+"/"+ "generated_"+profile_name+".yaml"
 
         with open(out_YAML_file, "w", encoding="utf-8") as o:
             yaml.dump(transformed_profile, o)
 
         print(Style.BRIGHT + "Transformed profiles Generated and saved in " + out_YAML_file + Style.RESET_ALL)
         
-        out_HTML_file= "./profiles/"+profile_name+"/"+ transformed_profile["spec_info"]["version"] +".html"
+        out_HTML_file= "./Profiles/"+profile_name+"/"+ transformed_profile["spec_info"]["version"] +".html"
 
         top_of_the_page='''
         redirect_from:
