@@ -40,7 +40,7 @@ jobs:
 
       - name: Execute the Python Script
         run: |
-          python ./github/workflow/profileGeneration.py ${{steps.changed-files.outputs.all_changed_files}}
+          python ./.github/workflow/profileGeneration.py ${{steps.changed-files.outputs.all_changed_files}}
       
       # Commit and push the changes to the branch
       - name: Setup the Github TOKEN
