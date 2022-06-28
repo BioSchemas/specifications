@@ -222,7 +222,7 @@
             ]
           },
           "operatingSystem": {
-            "description": "Operating ss on which the tool can be used (without additional wrapping). Operating systems supported (Windows 7, OSX 10.6, Android 1.6). Please use terms from the ‘Operating systems’ table in the biotools documentation",
+            "description": "Operating ss on kk the tool can be used (without additional wrapping). Operating systems supported (Windows 7, OSX 10.6, Android 1.6). Please use terms from the ‘Operating systems’ table in the biotools documentation",
             "oneOf": [
               {
                 "type": "string"
