@@ -1,0 +1,162 @@
+mapping:
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: "Datasets served by this Beacon. A dataset contained in this catalog.\
+    \ \ninverse property: [includedInDataCatalog.](http://schema.org/includedInDataCatalog)"
+  example: ''
+  expected_types:
+  - Datacatalog
+  marginality: Required
+  property: dataset
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Name of this Beacon. The name of the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Required
+  property: name
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: List of Actions that can be performed on this Beacon. Indicates a potential
+    Action, which describes an idealized action in which this thing would play an
+    'object' role.
+  example: ''
+  expected_types:
+  - Action
+  marginality: Required
+  property: potentialAction
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Contact information for this Beacon. The service provider, service
+    operator, or service performer; the goods producer. Another party (a seller) may
+    offer those services or goods on behalf of the provider. A provider may also serve
+    as the seller. Supersedes [carrier](http://schema.org/carrier).
+  example: ''
+  expected_types:
+  - Organization
+  - Person
+  marginality: Required
+  property: provider
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: 'This is used by validation tools to indentify the profile used. You
+    must use the value specified in the Controlled Vocabulary column. '
+  example: ''
+  expected_types:
+  - Uri
+  marginality: Required
+  property: type
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Supported Genome ID references. '
+  example: ''
+  expected_types:
+  - Text
+  marginality: Required
+  property: supportedRefs
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Welcome Page of this Beacon. URL of the item.
+  example: ''
+  expected_types:
+  - Uri
+  marginality: Required
+  property: url
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: 'True if Beacon is an agregator of other Beacon Datasets. '
+  example: ''
+  expected_types:
+  - Boolean
+  marginality: Minimum
+  property: aggregator
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Description of this Beacon. A description of the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Minimum
+  property: description
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Unique identifier of the Beacon. The identifier property represents
+    any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs
+    etc. Schema.org provides dedicated properties for representing many of these,
+    either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
+  example: ''
+  expected_types:
+  - Uri
+  - Propertyvalue
+  - Text
+  marginality: Minimum
+  property: identifier
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Beacon API version number. The version of the CreativeWork embodied
+    by a specified resource.
+  example: ''
+  expected_types:
+  - Number
+  - Text
+  marginality: Minimum
+  property: version
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Alternative URL for this Beacon. URL of a reference Web page that unambiguously
+    indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata
+    entry, or official website.
+  example: ''
+  expected_types:
+  - Uri
+  marginality: Optional
+  property: sameAs
+  type: ''
+  type_url: ''
+spec_info:
+  description: 'A convention ddeded beacon to self-describe.  In this document we
+    propose a simple way for a beacons to self-describe their genetic variant cardinality
+    service for better integration with other beacons within the beacon-network. It
+    builds upon the Beacon service API and uses existing schema.org entities and properties.  Version:
+    0.2-DRAFT-2018_04_23'
+  full_example: https://github.com/BioSchemas/specifications/tree/master/Beacon/examples
+  official_type:
+    '@id': schema:DataCatalog
+  title: Beacon
+  version: 0.2-DRAFT-2018_04_23
