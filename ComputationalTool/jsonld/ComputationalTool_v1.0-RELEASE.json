@@ -306,7 +306,7 @@
             ]
           },
           "citation": {
-            "description": "Publication about this tool. A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+            "description": "Publication about this ff. A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
             "oneOf": [
               {
                 "$ref": "#/definitions/citation"
