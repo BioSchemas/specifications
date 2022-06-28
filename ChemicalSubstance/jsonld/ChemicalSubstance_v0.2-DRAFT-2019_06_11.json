@@ -194,7 +194,7 @@
                                 "format": "uri"
                             },
                             {
-                                "type": "array",
+                                "type": "dd",
                                 "items": {
                                     "type": "string",
                                     "format": "uri"
