@@ -193,101 +193,104 @@ def generate_transformed_profile(g):
 
 # For each new uploaded JSON-LD file 
 for arg in sys.argv:
-    arglist= arg.split('/')
-    profile_name=arg.split('/')[-1].split('.')[0]
-    print(Fore.YELLOW + 'added/updated profile: ' + profile_name + Style.RESET_ALL)
-
-    in_file = "./"+arg
-
-    with open(in_file, "r", encoding="utf-8") as i:
-        data = json.load(i)
-
-    #print(json.dumps(data['@graph'][0], indent=True))
-
-
-    for g in data["@graph"]:
-        
-        print(Fore.BLUE + Style.BRIGHT + f'Profile : {g["@id"]}' + Style.RESET_ALL) 
-        #print(Style.BRIGHT + f'{g.keys()}' + Style.RESET_ALL)
-        
-        #For each profile : 
-        #Prepare the transfermed profile : spec_info & mapping fields
-        transformed_profile = generate_transformed_profile(g)
-        
-        #print(json.dumps(transformed_profile, indent=True))
-        #print(yaml.dump(transformed_profile, indent=4, default_flow_style=False))
-        
-        #To display only the bioschemas:ComputationalTool
-        break
-
-    # Inject the YAML in a HTML File
-    # Note: The folder should be in the transformed_profile["spec_info"]["title"] folder
-
-    ### PROBLEM: if the forlder "profile name" doesn't exist it will throw an exception, so we need to create it manually
-    
-    folderpath = "./profiles/"+profile_name
-    if path.exists(folderpath):
-        print ("folder esists")
+    if ".github" in arg.split('/'):
+        print(Fore.YELLOW + 'No Profiles added.' + Style.RESET_ALL)
     else:
-        print("Create folder : ", folderpath)
-        os.mkdir(folderpath)
-    
-    out_YAML_file = "./profiles/"+profile_name+"/"+ "generated_"+profile_name+".yaml"
+        arglist= arg.split('/')
+        profile_name=arg.split('/')[-1].split('.')[0]
+        print(Fore.YELLOW + 'added/updated profile: ' + profile_name + Style.RESET_ALL)
 
-    with open(out_YAML_file, "w", encoding="utf-8") as o:
-        yaml.dump(transformed_profile, o)
+        in_file = "./"+arg
 
-    print(Style.BRIGHT + "Transformed profiles Generated and saved in " + out_YAML_file + Style.RESET_ALL)
-    
-    out_HTML_file= "./profiles/"+profile_name+"/"+ transformed_profile["spec_info"]["version"] +".html"
+        with open(in_file, "r", encoding="utf-8") as i:
+            data = json.load(i)
 
-    top_of_the_page='''
-    redirect_from:
-    - "devSpecs/Tool/specification"
-    - "devSpecs/Tool/specification/"
-    - "/devSpecs/Tool/"
-    - "/devSpecs/Tool"
-    - "/specifications/drafts/Tool"
-    - "/specifications/drafts/Tool/"
-    - "/profiles/Tool/"
-    - "/profiles/Tool"
-    - "/profiles/ComputationalTool/"
-    - "/profiles/ComputationalTool"
-    - "/profiles/Tool/0.6-DRAFT/"
-
-    hierarchy:
-    - Thing
-    - CreativeWork
-    - SoftwareApplication
-
-    name: ComputationalTool
-
-    previous_version: 0.5-DRAFT
-    previous_release:
-
-    status: revision
-    spec_type: Profile
-    group: tools
-    use_cases_url: '/useCases/ComputationalTool'
-    cross_walk_url: https://docs.google.com/spreadsheets/d/12W7DQkUfsY0lrHEVvowgHXAcO2WJyNI6c8ZJzXgzoRI/edit
-    gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Tool
-    live_deploy: /liveDeploys
-
-    parent_type: SoftwareApplication
-    hierarchy:
-    - Thing
-    - CreativeWork
-    - SoftwareApplication
-
-    # spec_info content generated using GOWeb
-    # DO NOT MANUALLY EDIT THE CONTENT
-    '''
+        #print(json.dumps(data['@graph'][0], indent=True))
 
 
-    with open(out_HTML_file, "w", encoding="utf-8") as o:
-        o.write("---")
-        o.write(top_of_the_page)
-        yaml.dump(transformed_profile, o)
-        o.write("---")
+        for g in data["@graph"]:
+            
+            print(Fore.BLUE + Style.BRIGHT + f'Profile : {g["@id"]}' + Style.RESET_ALL) 
+            #print(Style.BRIGHT + f'{g.keys()}' + Style.RESET_ALL)
+            
+            #For each profile : 
+            #Prepare the transfermed profile : spec_info & mapping fields
+            transformed_profile = generate_transformed_profile(g)
+            
+            #print(json.dumps(transformed_profile, indent=True))
+            #print(yaml.dump(transformed_profile, indent=4, default_flow_style=False))
+            
+            #To display only the bioschemas:ComputationalTool
+            break
 
-    print(Style.BRIGHT + "HTML Profile page created " + out_HTML_file + Style.RESET_ALL)
+        # Inject the YAML in a HTML File
+        # Note: The folder should be in the transformed_profile["spec_info"]["title"] folder
+
+        ### PROBLEM: if the forlder "profile name" doesn't exist it will throw an exception, so we need to create it manually
+        
+        folderpath = "./profiles/"+profile_name
+        if path.exists(folderpath):
+            print ("folder esists")
+        else:
+            print("Create folder : ", folderpath)
+            os.mkdir(folderpath)
+        
+        out_YAML_file = "./profiles/"+profile_name+"/"+ "generated_"+profile_name+".yaml"
+
+        with open(out_YAML_file, "w", encoding="utf-8") as o:
+            yaml.dump(transformed_profile, o)
+
+        print(Style.BRIGHT + "Transformed profiles Generated and saved in " + out_YAML_file + Style.RESET_ALL)
+        
+        out_HTML_file= "./profiles/"+profile_name+"/"+ transformed_profile["spec_info"]["version"] +".html"
+
+        top_of_the_page='''
+        redirect_from:
+        - "devSpecs/Tool/specification"
+        - "devSpecs/Tool/specification/"
+        - "/devSpecs/Tool/"
+        - "/devSpecs/Tool"
+        - "/specifications/drafts/Tool"
+        - "/specifications/drafts/Tool/"
+        - "/profiles/Tool/"
+        - "/profiles/Tool"
+        - "/profiles/ComputationalTool/"
+        - "/profiles/ComputationalTool"
+        - "/profiles/Tool/0.6-DRAFT/"
+
+        hierarchy:
+        - Thing
+        - CreativeWork
+        - SoftwareApplication
+
+        name: ComputationalTool
+
+        previous_version: 0.5-DRAFT
+        previous_release:
+
+        status: revision
+        spec_type: Profile
+        group: tools
+        use_cases_url: '/useCases/ComputationalTool'
+        cross_walk_url: https://docs.google.com/spreadsheets/d/12W7DQkUfsY0lrHEVvowgHXAcO2WJyNI6c8ZJzXgzoRI/edit
+        gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Tool
+        live_deploy: /liveDeploys
+
+        parent_type: SoftwareApplication
+        hierarchy:
+        - Thing
+        - CreativeWork
+        - SoftwareApplication
+
+        # spec_info content generated using GOWeb
+        # DO NOT MANUALLY EDIT THE CONTENT
+        '''
+
+
+        with open(out_HTML_file, "w", encoding="utf-8") as o:
+            o.write("---")
+            o.write(top_of_the_page)
+            yaml.dump(transformed_profile, o)
+            o.write("---")
+
+        print(Style.BRIGHT + "HTML Profile page created " + out_HTML_file + Style.RESET_ALL)
