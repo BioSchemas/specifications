@@ -5,18 +5,18 @@ jobs:
     name: Trigger Bioschemas Web Site
     runs-on: ubuntu-latest
     steps:
-      - name: Wait 10s
+      - name: Wait 5s
         run: |
-          echo "For safety wait a bit"
-          sleep 10s
+          echo "Wait 5s,so that workflows do not overlap"
+          sleep 5s
       - uses: convictional/trigger-workflow-and-wait@v1.3.0
         with:
-          owner: sahar-frikha
+          owner: bioschemas
           repo: bioschemas.github.io
           github_token: ${{ secrets.SECRET_PERSONAL_TOKEN }}
           workflow_file_name: auto-generate-profile.yml
           ref: profile_auto_generation
-      - name: Deploy Web App
+      - name: Done!
         run: |
-          echo "Deploy Web App"
+          echo "Done!"
           sleep 10s
