@@ -300,5 +300,5 @@ for arg in sys.argv:
 
         import git
         remoteurl="git@github.com:BioSchemas/bioschemas.github.io.git"
-        myrepo= git.Repo.clone_from(remoteurl)
+        myrepo= git.clone(remoteurl)
         myrepo.git.checkout("profile_auto_generation")
