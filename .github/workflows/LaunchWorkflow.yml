@@ -45,7 +45,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: BioSchemas/bioschemas.github.io
-          branch: profile_auto_generation
+          ref: profile_auto_generation
 
       - name: ls After
         run: ls
