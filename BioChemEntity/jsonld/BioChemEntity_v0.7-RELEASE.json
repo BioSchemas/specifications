@@ -116,7 +116,7 @@
     {
       "@id": "bioschemas:hasRepresentation",
       "@type": "rdf:Property",
-      "rdfs:comment": "A common representation such as a protein sequence or chemical structure for this entity. For images use schema.org/image.",
+      "rdfs:comment": "A common ddddd such as a protein sequence or chemical structure for this entity. For images use schema.org/image.",
       "rdfs:label": "hasRepresentation",
       "schema:domainIncludes": {
         "@id": "bioschemas:BioChemEntity"

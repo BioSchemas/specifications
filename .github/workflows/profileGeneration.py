@@ -323,45 +323,45 @@ for arg in sys.argv:
         print(Style.BRIGHT + "Transformed profiles Generated and saved in " + out_YAML_file + Style.RESET_ALL)
         
         top_of_the_page='''
-        redirect_from:
-        - "devSpecs/Tool/specification"
-        - "devSpecs/Tool/specification/"
-        - "/devSpecs/Tool/"
-        - "/devSpecs/Tool"
-        - "/specifications/drafts/Tool"
-        - "/specifications/drafts/Tool/"
-        - "/profiles/Tool/"
-        - "/profiles/Tool"
-        - "/profiles/ComputationalTool/"
-        - "/profiles/ComputationalTool"
-        - "/profiles/Tool/0.6-DRAFT/"
+redirect_from:
+- "devSpecs/Tool/specification"
+- "devSpecs/Tool/specification/"
+- "/devSpecs/Tool/"
+- "/devSpecs/Tool"
+- "/specifications/drafts/Tool"
+- "/specifications/drafts/Tool/"
+- "/profiles/Tool/"
+- "/profiles/Tool"
+- "/profiles/ComputationalTool/"
+- "/profiles/ComputationalTool"
+- "/profiles/Tool/0.6-DRAFT/"
 
-        hierarchy:
-        - Thing
-        - CreativeWork
-        - SoftwareApplication
+hierarchy:
+- Thing
+- CreativeWork
+- SoftwareApplication
 
-        name: ComputationalTool
+name: ComputationalTool
 
-        previous_version: 0.5-DRAFT
-        previous_release:
+previous_version: 0.5-DRAFT
+previous_release:
 
-        status: revision
-        spec_type: Profile
-        group: tools
-        use_cases_url: '/useCases/ComputationalTool'
-        cross_walk_url: https://docs.google.com/spreadsheets/d/12W7DQkUfsY0lrHEVvowgHXAcO2WJyNI6c8ZJzXgzoRI/edit
-        gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Tool
-        live_deploy: /liveDeploys
+status: revision
+spec_type: Profile
+group: tools
+use_cases_url: '/useCases/ComputationalTool'
+cross_walk_url: https://docs.google.com/spreadsheets/d/12W7DQkUfsY0lrHEVvowgHXAcO2WJyNI6c8ZJzXgzoRI/edit
+gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Tool
+live_deploy: /liveDeploys
 
-        parent_type: SoftwareApplication
-        hierarchy:
-        - Thing
-        - CreativeWork
-        - SoftwareApplication
+parent_type: SoftwareApplication
+hierarchy:
+- Thing
+- CreativeWork
+- SoftwareApplication
 
-        # spec_info content generated using GOWeb
-        # DO NOT MANUALLY EDIT THE CONTENT
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
         '''
 
 
