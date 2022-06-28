@@ -298,7 +298,7 @@ for arg in sys.argv:
         print(Style.BRIGHT + "HTML Profile page created " + out_HTML_file + Style.RESET_ALL)
 
 
-        import git
-        remoteurl="git@github.com:BioSchemas/bioschemas.github.io.git"
-        myrepo= git.clone(remoteurl)
-        myrepo.git.checkout("profile_auto_generation")
+import git
+remoteurl="git@github.com:BioSchemas/bioschemas.github.io.git"
+myrepo= git.clone(remoteurl)
+myrepo.git.checkout("profile_auto_generation")
