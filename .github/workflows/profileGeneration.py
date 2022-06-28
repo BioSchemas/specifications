@@ -297,13 +297,89 @@ for arg in sys.argv:
 
         print(Style.BRIGHT + "HTML Profile page created " + out_HTML_file + Style.RESET_ALL)
 
+        print("**********************")
+        os.system("git clone https://github.com/BioSchemas/bioschemas.github.io.git")
+        os.system("cd bioschemas.github.io")
+        os.system("git checkout profile_auto_generation")
+        os.system("ls")
+                folderpath ="./pages/_profiles/"+profile_name
 
-os.system("git clone https://github.com/BioSchemas/bioschemas.github.io.git")
-os.system("git checkout profile_auto_generation")
-os.system("cd bioschemas.github.io.git")
-os.system("ls")
+        out_YAML_file = folderpath+"/"+"generated_"+profile_name+".yaml"
+        out_HTML_file= folderpath+"/"+ transformed_profile["spec_info"]["version"] +".html"
 
-print("**********************")
+        if path.exists(folderpath):
+            print ("folder esists")
+        else:
+            #os.makedirs(os.path.dirname(folderpath), exist_ok=True)
+            Path(folderpath).mkdir(parents=True, exist_ok=True) 
+            print("Create folder : ", folderpath)
+
+
+        with open(out_YAML_file, "w", encoding="utf-8") as o:
+            yaml.dump(transformed_profile, o)
+
+        print(Style.BRIGHT + "Transformed profiles Generated and saved in " + out_YAML_file + Style.RESET_ALL)
+        
+        top_of_the_page='''
+        redirect_from:
+        - "devSpecs/Tool/specification"
+        - "devSpecs/Tool/specification/"
+        - "/devSpecs/Tool/"
+        - "/devSpecs/Tool"
+        - "/specifications/drafts/Tool"
+        - "/specifications/drafts/Tool/"
+        - "/profiles/Tool/"
+        - "/profiles/Tool"
+        - "/profiles/ComputationalTool/"
+        - "/profiles/ComputationalTool"
+        - "/profiles/Tool/0.6-DRAFT/"
+
+        hierarchy:
+        - Thing
+        - CreativeWork
+        - SoftwareApplication
+
+        name: ComputationalTool
+
+        previous_version: 0.5-DRAFT
+        previous_release:
+
+        status: revision
+        spec_type: Profile
+        group: tools
+        use_cases_url: '/useCases/ComputationalTool'
+        cross_walk_url: https://docs.google.com/spreadsheets/d/12W7DQkUfsY0lrHEVvowgHXAcO2WJyNI6c8ZJzXgzoRI/edit
+        gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Tool
+        live_deploy: /liveDeploys
+
+        parent_type: SoftwareApplication
+        hierarchy:
+        - Thing
+        - CreativeWork
+        - SoftwareApplication
+
+        # spec_info content generated using GOWeb
+        # DO NOT MANUALLY EDIT THE CONTENT
+        '''
+
+
+        with open(out_HTML_file, "w", encoding="utf-8") as o:
+            o.write("---")
+            o.write(top_of_the_page)
+            yaml.dump(transformed_profile, o)
+            o.write("---")
+
+        print(Style.BRIGHT + "HTML Profile page created " + out_HTML_file + Style.RESET_ALL)
+        os.system("git status")
+        os.system("git add .")
+        os.system('git commit -m "Update"')
+        os.system("git push origin profile_auto_generation")
+        print("**********  Done  ************")
+
+
+
+
+#### That didn't worked
 import git
 remoteurl="git@github.com:BioSchemas/bioschemas.github.io.git"
 myrepo= git.clone(remoteurl)

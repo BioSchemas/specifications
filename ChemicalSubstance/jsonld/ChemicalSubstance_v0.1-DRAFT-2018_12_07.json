@@ -9,7 +9,7 @@
         {
             "@id": "bioschemas:ChemicalSubstance",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Bioschemas progjgjgfile describing a ChemicalEntity This specification describes a ChemicalSubstance which is 'a portion of matter of constant composition, composed of molecular entities of the same type or of different types' (source: ChEBI). Version: 0.1-DRAFT-2018_12_07",
+            "rdfs:comment": "Bioschemas peeeerogjgjgfile describing a ChemicalEntity This specification describes a ChemicalSubstance which is 'a portion of matter of constant composition, composed of molecular entities of the same type or of different types' (source: ChEBI). Version: 0.1-DRAFT-2018_12_07",
             "schema:schemaVersion": [
                 "https://bioschemas.org/profiles/ChemicalSubstance/0.1-DRAFT-2018_12_07"
             ],
