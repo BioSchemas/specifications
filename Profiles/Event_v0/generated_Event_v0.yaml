@@ -1,0 +1,426 @@
+mapping:
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Main point of contact that can be contacted for general queries. This
+    would be an event organizer or an administrator. '
+  example: ''
+  expected_types:
+  - Person
+  - Organization
+  marginality: Required
+  property: contact
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' A description of the item.'
+  example: ''
+  expected_types:
+  - Text
+  marginality: Required
+  property: description
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' The end date and time of the item (in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+    date format).'
+  example: ''
+  expected_types:
+  - Date
+  - Datetime
+  marginality: Required
+  property: endDate
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'This can be one of 4 options. Please see controlled vocabulary '
+  example: ''
+  expected_types:
+  - Eventtype
+  marginality: Required
+  property: eventType
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'The organization or institution responsible for hosting the event
+    (not necessarily responsible for organizing). '
+  example: ''
+  expected_types:
+  - Organization
+  marginality: Required
+  property: hostInstitution
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The location of the event. It is recommended to use Place, and within
+    [Place](http://schema.org/Place) use the [PostalAddress](http://schema.org/PostalAddress)
+    and [GeoCoordinates](http://schema.org/GeoCoordinates). The location of for example
+    where the event is happening, an organization is located, or where an action takes
+    place.
+  example: ''
+  expected_types:
+  - Postaladdress
+  - Place
+  - Text
+  marginality: Required
+  property: location
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' The name of the item.'
+  example: ''
+  expected_types:
+  - Text
+  marginality: Required
+  property: name
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: 'This is used by validation tools to indentify the profile used. You
+    must use the value specified in the Controlled Vocabulary column. '
+  example: ''
+  expected_types:
+  - Uri
+  marginality: Required
+  property: type
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' The start date and time of the item (in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+    date format).'
+  example: ''
+  expected_types:
+  - Date
+  - Datetime
+  marginality: Required
+  property: startDate
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: 'Type if zzz or organisation that accredits the event '
+  example: ''
+  expected_types:
+  - Organization
+  - Text
+  marginality: Minimum
+  property: accreditation
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Can be used for the subtitle of the event. An alias for the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Minimum
+  property: alternateName
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'The scientific background the participants should be from. Please
+    use a term from [EDAM: Topic](http://edamontology.org/topic_0003).
+
+
+    **Note:** Bioschemas have changed the Expected Types from [Audience](http://schema.org/Audience)
+    to [URL](http://schema.org/URL). An intended audience, i.e. a group for whom something
+    was created. Supersedes serviceAudience.'
+  example: ''
+  expected_types:
+  - Uri
+  marginality: Minimum
+  property: audience
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Deadlines dates for this event e.g. application deadline, poster submission,
+    paper submission, early registration '
+  example: ''
+  expected_types:
+  - Uri
+  - Text
+  marginality: Minimum
+  property: deadline
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Defines the type of eligibility to attend this event e.g. first come
+    first served. Please use one of the values from the Controlled Vocabulary column. '
+  example: ''
+  expected_types:
+  - Text
+  marginality: Minimum
+  property: eligibility
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: '**NOTE**: Keywords is not part of Event  Keywords or tags used to
+    describe this content. Multiple entries in a keywords list are typically delimited
+    by commas.'
+  example: ''
+  expected_types:
+  - Text
+  marginality: Minimum
+  property: keywords
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' The total number of individuals that may attend an event or venue.'
+  example: ''
+  expected_types:
+  - Integer
+  marginality: Minimum
+  property: maximumAttendeeCapacity
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'A list of prerequisites to be able to attend the event '
+  example: ''
+  expected_types:
+  - Text
+  marginality: Minimum
+  property: prerequisite
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: 'A plan or schedule of activities or procedures to be followed. '
+  example: ''
+  expected_types:
+  - Uri
+  - Text
+  marginality: Minimum
+  property: programme
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'The scientific topic the event is about. Please use a term from [EDAM:
+    Topic](http://edamontology.org/topic_0003). '
+  example: ''
+  expected_types:
+  - Uri
+  marginality: Minimum
+  property: topic
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: It is recommended you specify the URL even if it is the same as the
+    current page. URL of the item.
+  example: ''
+  expected_types:
+  - Uri
+  marginality: Minimum
+  property: url
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Date for the eeee to confirm acceptance to applicants. '
+  example: ''
+  expected_types:
+  - Date
+  marginality: Optional
+  property: acceptanceNotificationDate
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Any files or related websites which give more information about this
+    event. e.g. flyers, third party sites handling tickets. '
+  example: ''
+  expected_types:
+  - Uri
+  marginality: Optional
+  property: attachment
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: '**NOTE**: Keywords is not part of Event The date on which the CreativeWork
+    was most recently modified or when the item''s entry was modified within a DataFeed.'
+  example: ''
+  expected_types:
+  - Date
+  - Datetime
+  marginality: Optional
+  property: dateModified
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Unique id for the event. The identifier property represents any kind
+    of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org
+    provides dedicated properties for representing many of these, either as textual
+    strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
+  example: ''
+  expected_types:
+  - Uri
+  - Propertyvalue
+  - Text
+  marginality: Optional
+  property: identifier
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ''
+  controlled_vocab: ''
+  description: " An offer to provide this item\u2014for example, an offer to sell\
+    \ a product, rent the DVD of a movie, perform a service, or give away tickets\
+    \ to an event."
+  example: ''
+  expected_types: []
+  marginality: Optional
+  property: offers
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: " A performer at the event\u2014for example, a presenter, musician,\
+    \ musical group or actor. Supersedes performers."
+  example: ''
+  expected_types:
+  - Person
+  - Organization
+  marginality: Optional
+  property: performer
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: 'The status of registration for an event; choose a value from the Controlled
+    Vocabulary column. '
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: registrationStatus
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' A review of the item. Supersedes reviews.'
+  example: ''
+  expected_types:
+  - Review
+  marginality: Optional
+  property: review
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Link to social media websites like twitter or facebook '
+  example: ''
+  expected_types:
+  - Uri
+  marginality: Optional
+  property: socialMedia
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The organizations or institutions providing sponsorship for the event.
+    A person or organization that supports a thing through a pledge, promise, or financial
+    contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event.
+  example: ''
+  expected_types:
+  - Person
+  - Organization
+  marginality: Optional
+  property: sponsor
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' An Event that is part of this event. For example, a conference event
+    includes many presentations, each of which is a subEvent of the conference. Supersedes
+    subEvents.
+
+    Inverse property: superEvent.'
+  example: ''
+  expected_types:
+  - Event
+  marginality: Optional
+  property: subEvent
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'The person or organization who submits an event to a repository or
+    registry of events (such as iAnn, ISCB). '
+  example: ''
+  expected_types:
+  - Person
+  - Organization
+  marginality: Optional
+  property: submitter
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ''
+  controlled_vocab: ''
+  description: ' An event that this event is a part of. For example, a collection
+    of individual music performances might each have a music festival as their superEvent.
+
+    Inverse property: subEvent.'
+  example: ''
+  expected_types: []
+  marginality: Optional
+  property: superEvent
+  type: ''
+  type_url: ''
+spec_info:
+  description: 'ss for describsssing an event in the Life Sciences. Specification
+    for describing a Life Science event. This includes conferences, workshops, meetings,
+    courses, receptions, networking and prizegivings. Version: 0.1-DRAFT-2018_03_10'
+  full_example: https://github.com/BioSchemas/specifications/tree/master/Event/examples
+  official_type:
+    '@id': schema:Event
+  title: Event
+  version: 0.1-DRAFT-2018_03_10
