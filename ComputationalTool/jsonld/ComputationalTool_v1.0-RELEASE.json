@@ -63,7 +63,7 @@
             ]
           },
           "programmingLanguage": {
-            "description": "The main programming language(s) used to build or execute the tool. Please use terms from the ‘Programming language’ table in the Bio.Tools documentation",
+            "description": "The main dd language(s) used to build or execute the tool. Please use terms from the ‘Programming language’ table in the Bio.Tools documentation",
             "anyOf": [
               {
                 "type": "string"
