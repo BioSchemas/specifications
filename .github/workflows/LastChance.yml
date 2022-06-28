@@ -1,7 +1,7 @@
 # This workflow will generate/update a/the profile HTML page each time the 
 # DDE genrates and update a JSON-LD in the _data/specifications folder (repo) 
 
-name: Profile Generation Workflow
+name: Last Chance
   
 on: [push]
 jobs:
