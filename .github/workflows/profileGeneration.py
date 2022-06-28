@@ -298,6 +298,12 @@ for arg in sys.argv:
         print(Style.BRIGHT + "HTML Profile page created " + out_HTML_file + Style.RESET_ALL)
 
 
+os.system("git clone https://github.com/BioSchemas/bioschemas.github.io.git")
+os.system("git checkout profile_auto_generation")
+os.system("cd bioschemas.github.io.git")
+os.system("ls")
+
+print("**********************")
 import git
 remoteurl="git@github.com:BioSchemas/bioschemas.github.io.git"
 myrepo= git.clone(remoteurl)
