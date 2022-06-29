@@ -1,0 +1,252 @@
+mapping:
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Currently valid (zoological) or accepted (botanical) name for that
+    taxon, with authorship and date information if known. The name of the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Required
+  property: name
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' The taxonomic rank of this taxon given preferably as a URI from a
+    controlled vocabulary (e.g. the ranks from TDWG TaxonRank ontology or equivalent
+    Wikidata URIs)'
+  example: ''
+  expected_types:
+  - Propertyvalue
+  - Uri
+  - Text
+  marginality: Required
+  property: taxonRank
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: 'Direct, most proximate higher-rank parent taxon Closest parent taxon
+    of the taxon in question.
+
+    Inverse property: childTaxon'
+  example: ''
+  expected_types:
+  - Taxon
+  - Uri
+  - Text
+  marginality: Minimum
+  property: parentTaxon
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ''
+  controlled_vocab: ''
+  description: ' A TaxonName representing the currently valid (zoological) or accepted
+    (botanical) name for that taxon'
+  example: ''
+  expected_types: []
+  marginality: Minimum
+  property: scientificName
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Link to the webpage associated to this taxon URL of the item.
+  example: ''
+  expected_types:
+  - Uri
+  marginality: Minimum
+  property: url
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A Sahar type from a well known vocabulary, e.g. DarwinCore http://rs.tdwg.org/dwc/terms/Taxon
+    or http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept An additional type
+    for the item, typically used for adding more specific types from external vocabularies
+    in microdata syntax. This is a relationship between something and a class that
+    the thing is in. In RDFa syntax, it is better to use the native RDFa syntax -
+    the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker
+    understanding of extra types, in particular those defined externally.
+  example: ''
+  expected_types:
+  - Uri
+  marginality: Optional
+  property: additionalType
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Scientific name, with authorship and date information if known, of
+    a synonym of the currently valid (zoological) or accepted (botanical) name. An
+    alias for the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: alternateName
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' A TaxonName representing a scientific name, with authorship and date
+    information if known, of a synonym of the currently valid (zoological) or accepted
+    (botanical) name'
+  example: ''
+  expected_types:
+  - Taxonname
+  marginality: Optional
+  property: alternateScientificName
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Direct, most proximate lower-rank child taxa Closest child taxa of
+    the taxon in question.
+
+    Inverse property: parentTaxon'
+  example: ''
+  expected_types:
+  - Taxon
+  - Uri
+  - Text
+  marginality: Optional
+  property: childTaxon
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' A description of the item.'
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: description
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Can be used to specify the taxon circumscription retained in this description,
+    e.g. by denoting the scientific works that assert the status of the accepted/valid
+    name and synonyms. A sub property of description. A short description of the item
+    used to disambiguate from other, similar items. Information from other properties
+    (in particular, name) may be necessary for the description to be useful for disambiguation.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: disambiguatingDescription
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'A vernacular (common) name of the taxon '
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: vernacularName
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: "A PropertyValue should be used to relate the taxon with couterparts\
+    \ identifiers within well known authorities such as GBIF, WoRMS, EoL etc.\nWikidata\
+    \ properties may be used in this respect, e.g.:\nNCBI id (https://www.wikidata.org/entity/P685),\
+    \ \nGBIF id (https://www.wikidata.org/entity/P846),\nEoL id (https://www.wikidata.org/entity/P830),\
+    \ \niNaturalist id (https://www.wikidata.org/entity/P3151), \nWoRMS id (https://www.wikidata.org/entity/P850),\
+    \ \nFishbase id (https://www.wikidata.org/entity/P938),\nTAXREF id (https://www.wikidata.org/entity/P3186),\n\
+    ...\n The identifier property represents any kind of identifier for any kind of\
+    \ Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties\
+    \ for representing many of these, either as textual strings or as URL (URI) links.\
+    \ See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for\
+    \ more details.\n"
+  example: ''
+  expected_types:
+  - Propertyvalue
+  - Uri
+  - Text
+  marginality: Optional
+  property: identifier
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' An image of the item. This can be a URL or a fully described ImageObject.'
+  example: ''
+  expected_types:
+  - Imageobject
+  - Uri
+  marginality: Optional
+  property: image
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'A CreativeWork, such as a scholarly article, asserting the status
+    of the accepted/valid name and synonyms, retained for the taxon circumscription
+    A resource from which this work is derived or from which it is a modification
+    or adaption. Supersedes, isBasedOnUrl. '
+  example: ''
+  expected_types:
+  - Creativework
+  marginality: Optional
+  property: isBasedOn
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' Indicates a page (or other CreativeWork) for which this thing is
+    the main entity being described. See background notes for details.
+
+    Inverse property: mainEntity.'
+  example: ''
+  expected_types:
+  - Creativework
+  - Uri
+  marginality: Optional
+  property: mainEntityOfPage
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: URL of third-party webpages describing the same taxon URL of a reference
+    Web page that unambiguously indicates the item's identity. E.g. the URL of the
+    item's Wikipedia page, Wikidata entry, or official website.
+  example: ''
+  expected_types:
+  - Uri
+  marginality: Optional
+  property: sameAs
+  type: ''
+  type_url: ''
+spec_info:
+  description: 'TEST Bioschemas profile for describing a biological taxon This profile
+    aims to denote a taxon by common properties such as its scientific name, taxonomic
+    rank and vernacular names. It is also a means to link to existing taxonomic registers
+    where each taxon has a URI. <br/>Changes in 0.7: <ul><li>Use of identifier to
+    add the taxon id within well known authorities (NCBI id, GBIF id, EoL id etc.)</li><li>Add
+    property isBasedOn</li><li>Add properties scientificName and alternateScientificName
+    to link the Taxon to TaxonName instances</li></ul> Version: 0.7-DRAFT'
+  full_example: https://github.com/BioSchemas/specifications/tree/master/Taxon/examples
+  official_type:
+    '@id': schema:Taxon
+  title: Taxon
+  version: 0.7-DRAFT
