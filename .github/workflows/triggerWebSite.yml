@@ -13,7 +13,7 @@ jobs:
         with:
           owner: bioschemas
           repo: bioschemas.github.io
-          github_token: ${{ secrets.SECRET_PERSONAL_TOKEN }}
+          github_token: ${{ secrets.Sahar_Workflows_Token }}
           workflow_file_name: auto-generate-profile.yml
           ref: profile_auto_generation
       - name: Done!
