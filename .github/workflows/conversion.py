@@ -194,12 +194,10 @@ def generate_transformed_profile(g):
 
 # For each new uploaded JSON-LD file 
 for arg in sys.argv:
-    if ".github" in arg.split('/'):
-        print(Fore.YELLOW + 'No Profiles added.' + Style.RESET_ALL)
-    else:
+    if 'json' in arg.split('.'):
         arglist= arg.split('/')
         profile_name=arg.split('/')[-1].split('.')[0]
-        print(Fore.YELLOW + 'added/updated profile: ' + profile_name + Style.RESET_ALL)
+        print(Fore.YELLOW + 'added/updated profile: ' + arg + Style.RESET_ALL)
 
         in_file = "./"+arg
 
@@ -286,9 +284,7 @@ hierarchy:
 
 # spec_info content generated using GOWeb
 # DO NOT MANUALLY EDIT THE CONTENT
-        '''
-
-
+'''
         with open(out_HTML_file, "w", encoding="utf-8") as o:
             o.write("---")
             o.write(top_of_the_page)
