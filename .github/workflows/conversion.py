@@ -170,12 +170,12 @@ def generate_transformed_profile(g):
     if "$validation" in g.keys():
         for req_label in g['$validation']["required"]:
             prop = g['$validation']["properties"][req_label]
-            new_p = generate_property (g, prop, req_label, "Required")
+            new_p = generate_property (g, prop, req_label, "Minimum")
             transformed_profile["mapping"].append(new_p)
 
         for reco_label in g['$validation']["recommended"]:
             prop = g['$validation']["properties"][reco_label]
-            new_p = generate_property (g, prop, reco_label, "Minimum")
+            new_p = generate_property (g, prop, reco_label, "Recommended")
             transformed_profile["mapping"].append(new_p)
 
         for opt_label in g['$validation']["optional"]:
