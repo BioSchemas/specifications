@@ -11,7 +11,7 @@ jobs:
           sleep 5s
       - uses: convictional/trigger-workflow-and-wait@v1.3.0
         with:
-          owner: bioschemas
+          owner: BioSchemas
           repo: bioschemas.github.io
           github_token: ${{ secrets.Sahar_Workflows_Token }}
           workflow_file_name: auto-generate-profile.yml
