@@ -64,6 +64,7 @@ jobs:
         run: | 
           cd ${{ github.workspace }}/bioschemas.github.io
           git status
+          ps: Set-Content -Path "$HOME\.git-credentials" -Value "https://$($secrets.Sahar_Workflows_Token):x-oauth-basic@github.com`n" -NoNewline
           git config user.name sahar-frikha
           git config user.email sahar.frikha1@gmail.com
           git add .
