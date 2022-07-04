@@ -56,6 +56,7 @@ jobs:
        #   path: bioschemas.github.io
 
       # Commit and push the changes to the website
+
       - name: Checkout the branch
         run: | 
           cd bioschemas.github.io
@@ -68,7 +69,8 @@ jobs:
           cd bioschemas.github.io
           ls
           git status
-            - name: Setup the Github TOKEN
+      
+      - name: Setup the Github TOKEN
         uses: oleksiyrudenko/gha-git-credentials@v2-latest
         with:
           path: bioschemas.github.io
@@ -76,7 +78,7 @@ jobs:
           name: sahar-frikha
           actor: sahar-frikha
           token: '${{secrets.Sahar_Workflows_Token}}'
-
+      
       - name: Commit and Push the changes in the website
         run: | 
           cd bioschemas.github.io
