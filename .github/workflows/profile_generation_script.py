@@ -196,7 +196,7 @@ def generate_transformed_profile(g):
 for arg in sys.argv:
     if 'json' in arg.split('.'):
         arglist= arg.split('/')
-        profile_name=arg.split('/')[-1].split('.')[0]
+        profile_name=arg.split('/')[-1].split('.')[0].split('_')[0]
         print(Fore.YELLOW + 'added/updated profile: ' + arg + Style.RESET_ALL)
 
         in_file = "./"+arg
@@ -227,9 +227,9 @@ for arg in sys.argv:
 
         ### PROBLEM: if the forlder "profile name" doesn't exist it will throw an exception, so we need to create it manually
         
-        folderpath = "./Profiles/"+profile_name
+        folderpath = "./bioschemas.github.io/pages/_profiles/"+profile_name
         out_YAML_file = folderpath+"/"+"generated_"+profile_name+".yaml"
-        out_HTML_file= folderpath+"/"+ transformed_profile["spec_info"]["version"] +".html"
+        #out_HTML_file= folderpath+"/"+ transformed_profile["spec_info"]["version"] +".html"
 
         if path.exists(folderpath):
             print ("folder esists")
@@ -239,10 +239,10 @@ for arg in sys.argv:
             print("Create folder : ", folderpath)
 
 
-        with open(out_YAML_file, "w", encoding="utf-8") as o:
-            yaml.dump(transformed_profile, o)
+        #with open(out_YAML_file, "w", encoding="utf-8") as o:
+        #    yaml.dump(transformed_profile, o)
 
-        print(Style.BRIGHT + "Transformed profiles Generated and saved in " + out_YAML_file + Style.RESET_ALL)
+        #print(Style.BRIGHT + "Transformed profiles Generated and saved in " + out_YAML_file + Style.RESET_ALL)
         
         top_of_the_page='''
 redirect_from:
