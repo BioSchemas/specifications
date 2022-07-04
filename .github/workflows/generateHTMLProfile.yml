@@ -80,10 +80,6 @@ jobs:
       - name: Commit and Push the changes in the website
         run: | 
           cd bioschemas.github.io
-          git checkout profile-auto-generation
-          git pull
-          git config user.name "sahar-frikha"
-          git config user.email "sahar.frikha1@gmail.com"
           git add .
           git commit -m "Updating Profile"  # How to commit with a specific msg
           git push origin -f profile-auto-generation
