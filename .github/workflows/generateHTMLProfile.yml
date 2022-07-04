@@ -76,9 +76,7 @@ jobs:
       
       - name: Commit and Push the changes in the website
         run: | 
-          ls
           cd bioschemas.github.io
-          git pull
           git branch
           git add .
           git commit -m "Updating Profile"  # How to commit with a specific msg
