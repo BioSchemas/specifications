@@ -9,7 +9,7 @@
     {
       "@id": "bioschemas:ComputationalTool",
       "@type": "rdfs:Class",
-      "rdfs:comment": "The Life Science Tools specification provides a way to describe bioscience tools and software on the World Wide Web. It defines a set of metadata and vocabularies, built on top of existing technologies and standards, that can be used to represent such tools in Web pages and applications. The goal of the specification is to make it easier to discover. Version 1.0-RELEASE.",
+      "rdfs:comment": "The Life Science Tools specification, provides a way to describe bioscience tools and software on the World Wide Web. It defines a set of metadata and vocabularies, built on top of existing technologies and standards, that can be used to represent such tools in Web pages and applications. The goal of the specification is to make it easier to discover. Version 1.0-RELEASE.",
       "rdfs:label": "ComputationalTool",
       "rdfs:subClassOf": {
         "@id": "schema:SoftwareApplication"

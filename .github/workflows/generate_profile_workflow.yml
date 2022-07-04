@@ -50,7 +50,7 @@ jobs:
       
       - name: Execute the Python Script
         run: |
-          python ./.github/workflows/profile_generation_script.py ${{steps.changed-files.outputs.all_changed_files}}
+          python ./.github/workflows/profile_generation_script.py ${{steps.changed-files.outputs.all_changed_files}} bioschemas.github.io
       
       - name: Setup the Github TOKEN
         uses: oleksiyrudenko/gha-git-credentials@v2-latest

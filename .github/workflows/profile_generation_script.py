@@ -193,7 +193,11 @@ def generate_transformed_profile(g):
 # Generate the HTML profile page
 
 # For each new uploaded JSON-LD file 
-for arg in sys.argv:
+args = sys.argv
+website_repo= args[-1]
+args.remove(website_repo)
+
+for arg in args:
     if 'json' in arg.split('.'):
         arglist= arg.split('/')
         profile_name=arg.split('/')[-1].split('.')[0].split('_')[0]
@@ -227,7 +231,7 @@ for arg in sys.argv:
 
         ### PROBLEM: if the forlder "profile name" doesn't exist it will throw an exception, so we need to create it manually
         
-        folderpath = "./bioschemas.github.io/pages/_profiles/"+profile_name
+        folderpath = "./"+website_repo+"/pages/_profiles/"+profile_name
         #out_YAML_file = folderpath+"/"+"generated_"+profile_name+".yaml"
         out_HTML_file= folderpath+"/"+ transformed_profile["spec_info"]["version"] +".html"
 
