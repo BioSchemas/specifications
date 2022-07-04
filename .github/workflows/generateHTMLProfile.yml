@@ -59,11 +59,13 @@ jobs:
         uses: oleksiyrudenko/gha-git-credentials@v2-latest
         with:
           path: bioschemas.github.io
-          token: '${{secrets.GITHUB_TOKEN}}'
+          token: '${{secrets.Sahar_Workflows_Token}}'
       - name: Commit and Push
         run: | 
           cd ${{ github.workspace }}/bioschemas.github.io
           git status
+          git config user.name github-actions
+          git config user.email github-actions@github.com
           git add .
           git commit -m "Updating Profile"  # How to commit with a specific msg
           git push origin HEAD:profile-auto-generation  # Updated to master after the merge
