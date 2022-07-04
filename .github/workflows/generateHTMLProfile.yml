@@ -50,7 +50,7 @@ jobs:
           path: bioschemas.github.io
 
       - name: Move the files to the website
-        run: mv Profiles/ bioschemas.github.io/
+        run: move Profiles/ bioschemas.github.io/Profiles/
 
       # Commit and push the changes to the website
       - name: Setup the Github TOKEN
