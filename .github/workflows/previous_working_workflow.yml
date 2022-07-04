@@ -1,0 +1,60 @@
+# This workflow will generate/update a/the profile HTML page each time the 
+# DDE genrates and update a JSON-LD in the _data/specifications folder (repo) 
+
+name: auto-generate-profile
+  
+on: [push]
+jobs:
+  generate-profile:
+    runs-on: ubuntu-latest
+
+    steps: 
+      # Display the changed files
+      
+      - name: Checkout and Retreive the Preceding Commit
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # OR "2" -> To retrieve the preceding commit.
+
+      - name: Get Changed Files
+        id: changed-files
+        uses: tj-actions/changed-files@v21
+
+      - name: List Changed Files
+        run: |
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            echo "$file was changed"
+          done
+
+      # Run the python script
+      # Generate / Save the HTML profile in pages/_profiles
+
+      - name: Setup Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8 #install the python needed
+      - name: Install Python dependencies
+        uses: py-actions/py-dependency-install@v3
+        with:
+          path: "./.github/workflows/requirements.txt"
+
+      - name: Execute the Python Script
+        run: |
+          python ./.github/workflows/profile_generation_script.py ${{steps.changed-files.outputs.all_changed_files}}
+      
+      # Commit and push the changes to the branch
+      - name: Setup the Github TOKEN
+        uses: oleksiyrudenko/gha-git-credentials@v2-latest
+        with:
+          token: '${{secrets.GITHUB_TOKEN}}'
+      - name: Git Status
+        run: git status
+      - name: Git Add Changed Files
+        run: git add .
+      - name: Git Commit Changed Files
+        run: git commit -m "Updating Profile"  # How to commit with a specific msg
+      - name: Push Code to Branch
+        run: git push origin HEAD:git-actions-test  # Updated to master after the merge
+      - name: End Workflow
+        run: |
+          echo "End Workflow!"
