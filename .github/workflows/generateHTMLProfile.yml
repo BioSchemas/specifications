@@ -34,29 +34,23 @@ jobs:
         with:
           path: "./.github/workflows/requirements.txt"
 
-      - name: Execute the Python Script
-        run: |
-          python ./.github/workflows/conversion.py ${{steps.changed-files.outputs.all_changed_files}}
-
       - name: Checkout the Website repo
         env:
           GITHUB_TOKEN: ${{ secrets.Sahar_Workflows_Token }}
         run: | 
           git clone https://user:$GITHUB_TOKEN@github.com/BioSchemas/bioschemas.github.io
           ls
-          
+
       - name: Checkout the branch profile-auto-generation
         run: | 
           cd bioschemas.github.io
           git pull
           git checkout -b profile-auto-generation
-
-      - name: Move the generated files to the website
-        run: | 
-          mv Profiles/ bioschemas.github.io
-          cd bioschemas.github.io
-          ls
-          git status
+          cd ..
+      
+      - name: Execute the Python Script
+        run: |
+          python ./.github/workflows/conversion.py ${{steps.changed-files.outputs.all_changed_files}}
       
       - name: Setup the Github TOKEN
         uses: oleksiyrudenko/gha-git-credentials@v2-latest

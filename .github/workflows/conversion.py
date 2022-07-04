@@ -227,7 +227,7 @@ for arg in sys.argv:
 
         ### PROBLEM: if the forlder "profile name" doesn't exist it will throw an exception, so we need to create it manually
         
-        folderpath = "./Profiles/"+profile_name
+        folderpath = "./bioschemas.github.io/pages/_profiles/"+profile_name
         out_YAML_file = folderpath+"/"+"generated_"+profile_name+".yaml"
         out_HTML_file= folderpath+"/"+ transformed_profile["spec_info"]["version"] +".html"
 

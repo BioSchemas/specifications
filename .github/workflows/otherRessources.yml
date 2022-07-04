@@ -1,7 +1,12 @@
 
-
-
-                - name: Checkout the Website repo
+      - name: Move the generated files to the website
+        run: | 
+          mv Profiles/ bioschemas.github.io
+          cd bioschemas.github.io
+          ls
+          git status
+          
+     - name: Checkout the Website repo
         uses: actions/checkout@v2
         with:
           repository: BioSchemas/bioschemas.github.io
