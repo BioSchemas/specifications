@@ -142,7 +142,7 @@ def generate_spec_info(g):
     if "schema:schemaVersion" in g.keys():
         spec_info["version"] = g['schema:schemaVersion'][0].split('/')[-1]
     else:
-        spec_info["version"]="0.5-DRAFT"
+        spec_info["version"]=""
         #raise Exception("Please Provide the version of your profile!")
         
     if "rdfs:subClassOf" in g.keys():
