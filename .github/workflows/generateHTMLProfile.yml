@@ -54,18 +54,29 @@ jobs:
         with:
           path: bioschemas.github.io
           token: '${{secrets.Sahar_Workflows_Token}}'
-      - name: Move the files to the website, Commit and Push
+      - name: Checkout the branch
         run: | 
-          cd ${{ github.workspace }}/bioschemas.github.io
+          cd bioschemas.github.io
           ls
           git checkout sahar's-branch-trash
-          mv ../Profiles/ bioschemas.github.io
+          ls
+
+      - name: Move the files to the website
+        run: | 
+          mv Profiles/ bioschemas.github.io
+          cd bioschemas.github.io
+          ls
           git status
+      
+      - name: Commit and Push the changes in the website
+        run: | 
+          cd bioschemas.github.io
           git config user.name sahar-frikha
           git config user.email sahar.frikha1@gmail.com
           git add .
           git commit -m "Updating Profile"  # How to commit with a specific msg
           git push origin HEAD:profile-auto-generation  # Updated to master after the merge
+
       - name: End Workflow
         run: |
           echo "End Workflow!"
