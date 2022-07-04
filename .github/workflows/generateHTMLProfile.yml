@@ -43,10 +43,12 @@ jobs:
           python ./.github/workflows/conversion.py ${{steps.changed-files.outputs.all_changed_files}}
 
       - name: Checkout the Website repo
-        uses: actions/checkout@v2
-        with:
-          repository: BioSchemas/bioschemas.github.io
-          path: bioschemas.github.io
+        env:
+          GITHUB_TOKEN: ${{ secrets.Sahar_Workflows_Token }}
+        run: | 
+          git clone https://user:$GITHUB_TOKEN@github.com/BioSchemas/bioschemas.github.io
+          ls
+
 
       # Commit and push the changes to the website
       - name: Setup the Github TOKEN
@@ -58,8 +60,7 @@ jobs:
         run: | 
           cd bioschemas.github.io
           git pull
-          git branch
-          git checkout -b profile-auto-generation-sahar
+          git checkout -b profile-auto-generation
 
       - name: Move the files to the website
         run: | 
