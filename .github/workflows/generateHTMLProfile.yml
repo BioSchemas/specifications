@@ -57,9 +57,8 @@ jobs:
       - name: Checkout the branch
         run: | 
           cd bioschemas.github.io
-          ls
+          git branch
           git checkout profile-auto-generation
-          ls
 
       - name: Move the files to the website
         run: | 
