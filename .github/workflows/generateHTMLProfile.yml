@@ -51,8 +51,8 @@ jobs:
 
       - name: Move the files to the website
         run: | 
-        mv Profiles/ /bioschemas.github.io/Profiles/
-        ls /bioschemas.github.io/
+          mv Profiles/ /bioschemas.github.io/Profiles/
+          ls /bioschemas.github.io/
 
       # Commit and push the changes to the website
       - name: Setup the Github TOKEN
