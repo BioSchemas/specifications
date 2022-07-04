@@ -60,6 +60,9 @@ jobs:
         uses: oleksiyrudenko/gha-git-credentials@v2-latest
         with:
           path: bioschemas.github.io
+          email: sahar.frikha1@gmail.com
+          name: sahar-frikha
+          actor: sahar-frikha
           token: '${{secrets.Sahar_Workflows_Token}}'
       - name: Checkout the branch
         run: | 
@@ -77,10 +80,13 @@ jobs:
       - name: Commit and Push the changes in the website
         run: | 
           cd bioschemas.github.io
-          git branch
+          git checkout -b profile-auto-generation
+          git pull
+          git config user.name "sahar-frikha"
+          git config user.email "sahar.frikha1@gmail.com"
           git add .
           git commit -m "Updating Profile"  # How to commit with a specific msg
-          git push origin profile-auto-generation
+          git push origin -f profile-auto-generation
 
       - name: End Workflow
         run: |
