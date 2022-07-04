@@ -229,7 +229,7 @@ for arg in sys.argv:
         
         folderpath = "./bioschemas.github.io/pages/_profiles/"+profile_name
         out_YAML_file = folderpath+"/"+"generated_"+profile_name+".yaml"
-        out_HTML_file= folderpath+"/"+ transformed_profile["spec_info"]["version"] +".html"
+        #out_HTML_file= folderpath+"/"+ transformed_profile["spec_info"]["version"] +".html"
 
         if path.exists(folderpath):
             print ("folder esists")
@@ -239,10 +239,10 @@ for arg in sys.argv:
             print("Create folder : ", folderpath)
 
 
-        with open(out_YAML_file, "w", encoding="utf-8") as o:
-            yaml.dump(transformed_profile, o)
+        #with open(out_YAML_file, "w", encoding="utf-8") as o:
+        #    yaml.dump(transformed_profile, o)
 
-        print(Style.BRIGHT + "Transformed profiles Generated and saved in " + out_YAML_file + Style.RESET_ALL)
+        #print(Style.BRIGHT + "Transformed profiles Generated and saved in " + out_YAML_file + Style.RESET_ALL)
         
         top_of_the_page='''
 redirect_from:
