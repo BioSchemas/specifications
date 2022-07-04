@@ -82,7 +82,7 @@ jobs:
           git config user.email "sahar.frikha1@gmail.com"
           git add .
           git commit -m "Updating Profile"  # How to commit with a specific msg
-          git push origin HEAD:profile-auto-generation  # Updated to master after the merge
+          git push origin -f profile-auto-generation
 
       - name: End Workflow
         run: |
