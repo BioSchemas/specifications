@@ -1,0 +1,6 @@
+      - name: Checkout the Website repo
+        env:
+          GITHUB_TOKEN: ${{ secrets.Sahar_Workflows_Token }}
+        run: | 
+          git clone https://user:$GITHUB_TOKEN@github.com/BioSchemas/bioschemas.github.io
+          ls

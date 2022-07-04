@@ -9,8 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps: 
-      # Display the changed files
-      
+
       - name: Checkout Spec Repo and Retreive the Preceding Commit
         uses: actions/checkout@v3
         with:
@@ -26,9 +25,6 @@ jobs:
             echo "$file was changed"
           done
 
-      # Run the python script
-      # Generate / Save the HTML profile in pages/_profiles
-
       - name: Setup Python 3.8
         uses: actions/setup-python@v2
         with:
@@ -43,27 +39,18 @@ jobs:
           python ./.github/workflows/conversion.py ${{steps.changed-files.outputs.all_changed_files}}
 
       - name: Checkout the Website repo
-        env:
-          GITHUB_TOKEN: ${{ secrets.Sahar_Workflows_Token }}
-        run: | 
-          git clone https://user:$GITHUB_TOKEN@github.com/BioSchemas/bioschemas.github.io
-          ls
+        uses: actions/checkout@v2
+        with:
+          repository: BioSchemas/bioschemas.github.io
+          path: bioschemas.github.io
 
-   #   - name: Checkout the Website repo
-    #    uses: actions/checkout@v2
-     #   with:
-      #    repository: BioSchemas/bioschemas.github.io
-       #   path: bioschemas.github.io
-
-      # Commit and push the changes to the website
-
-      - name: Checkout the branch
+      - name: Checkout the branch profile-auto-generation
         run: | 
           cd bioschemas.github.io
           git pull
           git checkout -b profile-auto-generation
 
-      - name: Move the files to the website
+      - name: Move the generated files to the website
         run: | 
           mv Profiles/ bioschemas.github.io
           cd bioschemas.github.io
@@ -90,4 +77,4 @@ jobs:
 
       - name: End Workflow
         run: |
-          echo "End Workflow!"
+          echo "Check the Website !"
