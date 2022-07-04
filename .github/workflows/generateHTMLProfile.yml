@@ -49,6 +49,11 @@ jobs:
           git clone https://user:$GITHUB_TOKEN@github.com/BioSchemas/bioschemas.github.io
           ls
 
+   #   - name: Checkout the Website repo
+    #    uses: actions/checkout@v2
+     #   with:
+      #    repository: BioSchemas/bioschemas.github.io
+       #   path: bioschemas.github.io
 
       # Commit and push the changes to the website
       - name: Setup the Github TOKEN
@@ -72,6 +77,7 @@ jobs:
       - name: Commit and Push the changes in the website
         run: | 
           cd bioschemas.github.io
+          git pull
           git config user.name "sahar-frikha"
           git config user.email "sahar.frikha1@gmail.com"
           git add .
