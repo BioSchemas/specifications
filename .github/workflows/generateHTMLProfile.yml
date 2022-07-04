@@ -11,11 +11,12 @@ jobs:
     steps: 
       # Display the changed files
       
-      - name: Checkout and Retreive the Preceding Commit
+      - name: Checkout Spec Repo and Retreive the Preceding Commit
         uses: actions/checkout@v3
         with:
+          path: specifications
           fetch-depth: 0  # OR "2" -> To retrieve the preceding commit.
-
+      
       - name: Get Changed Files
         id: changed-files
         uses: tj-actions/changed-files@v21
@@ -41,20 +42,30 @@ jobs:
       - name: Execute the Python Script
         run: |
           python ./.github/workflows/conversion.py ${{steps.changed-files.outputs.all_changed_files}}
-      
-      # Commit and push the changes to the branch
+
+      - name: Checkout the Website repo
+        uses: actions/checkout@v2
+        with:
+          repository: BioSchemas/bioschemas.github.io
+          ref: profile-auto-generation
+          path: bioschemas.github.io
+
+      - name: Move the files to the website
+        run: mv specifications/Profiles/ bioschemas.github.io/
+
+      # Commit and push the changes to the website
       - name: Setup the Github TOKEN
         uses: oleksiyrudenko/gha-git-credentials@v2-latest
         with:
+          path: bioschemas.github.io
           token: '${{secrets.GITHUB_TOKEN}}'
-      - name: Git Status
-        run: git status
-      - name: Git Add Changed Files
-        run: git add .
-      - name: Git Commit Changed Files
-        run: git commit -m "Updating Profile"  # How to commit with a specific msg
-      - name: Push Code to Branch
-        run: git push origin HEAD:git-actions-test  # Updated to master after the merge
+      - name: Commit and Push
+        run: | 
+          cd ${{ github.workspace }}/bioschemas.github.io
+          git status
+          git add .
+          git commit -m "Updating Profile"  # How to commit with a specific msg
+          git push origin HEAD:profile-auto-generation  # Updated to master after the merge
       - name: End Workflow
         run: |
           echo "End Workflow!"
