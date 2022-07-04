@@ -196,7 +196,7 @@ def generate_transformed_profile(g):
 for arg in sys.argv:
     if 'json' in arg.split('.'):
         arglist= arg.split('/')
-        profile_name=arg.split('/')[-1].split('.')[0]
+        profile_name=arg.split('/')[-1].split('.')[0].split('_')[0]
         print(Fore.YELLOW + 'added/updated profile: ' + arg + Style.RESET_ALL)
 
         in_file = "./"+arg
