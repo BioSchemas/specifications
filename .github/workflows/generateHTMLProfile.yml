@@ -57,9 +57,9 @@ jobs:
       - name: Move the files to the website, Commit and Push
         run: | 
           cd ${{ github.workspace }}/bioschemas.github.io
-          git checkout profile-auto-generation
-          mv Profiles/ bioschemas.github.io
-          ls bioschemas.github.io/
+          ls
+          git checkout sahar's-branch-trash
+          mv ../Profiles/ bioschemas.github.io
           git status
           git config user.name sahar-frikha
           git config user.email sahar.frikha1@gmail.com
