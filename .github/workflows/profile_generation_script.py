@@ -198,57 +198,58 @@ website_repo= args[-1]
 args.remove(website_repo)
 
 for arg in args:
-    if 'json' in arg.split('.'):
-        arglist= arg.split('/')
-        profile_name=arg.split('/')[-1].split('.')[0].split('_')[0]
-        print(Fore.YELLOW + 'added/updated profile: ' + arg + Style.RESET_ALL)
+    if 'jsonld' in arg.split('.'):
+        if 'json' in arg.split('.'):
+            arglist= arg.split('/')
+            profile_name=arg.split('/')[-1].split('.')[0].split('_')[0]
+            print(Fore.YELLOW + 'added/updated profile: ' + arg + Style.RESET_ALL)
 
-        in_file = "./"+arg
+            in_file = "./"+arg
 
-        with open(in_file, "r", encoding="utf-8") as i:
-            data = json.load(i)
+            with open(in_file, "r", encoding="utf-8") as i:
+                data = json.load(i)
 
-        #print(json.dumps(data['@graph'][0], indent=True))
+            #print(json.dumps(data['@graph'][0], indent=True))
 
 
-        for g in data["@graph"]:
+            for g in data["@graph"]:
+                
+                print(Fore.BLUE + Style.BRIGHT + f'Profile : {g["@id"]}' + Style.RESET_ALL) 
+                #print(Style.BRIGHT + f'{g.keys()}' + Style.RESET_ALL)
+                
+                #For each profile : 
+                #Prepare the transfermed profile : spec_info & mapping fields
+                transformed_profile = generate_transformed_profile(g)
+                
+                #print(json.dumps(transformed_profile, indent=True))
+                #print(yaml.dump(transformed_profile, indent=4, default_flow_style=False))
+                
+                #To display only the bioschemas:ComputationalTool
+                break
+
+            # Inject the YAML in a HTML File
+            # Note: The folder should be in the transformed_profile["spec_info"]["title"] folder
+
+            ### PROBLEM: if the forlder "profile name" doesn't exist it will throw an exception, so we need to create it manually
             
-            print(Fore.BLUE + Style.BRIGHT + f'Profile : {g["@id"]}' + Style.RESET_ALL) 
-            #print(Style.BRIGHT + f'{g.keys()}' + Style.RESET_ALL)
+            folderpath = "./"+website_repo+"/pages/_profiles/"+profile_name
+            #out_YAML_file = folderpath+"/"+"generated_"+profile_name+".yaml"
+            out_HTML_file= folderpath+"/"+ transformed_profile["spec_info"]["version"] +".html"
+
+            if path.exists(folderpath):
+                print ("folder esists")
+            else:
+                #os.makedirs(os.path.dirname(folderpath), exist_ok=True)
+                Path(folderpath).mkdir(parents=True, exist_ok=True) 
+                print("Create folder : ", folderpath)
+
+
+            #with open(out_YAML_file, "w", encoding="utf-8") as o:
+            #    yaml.dump(transformed_profile, o)
+
+            #print(Style.BRIGHT + "Transformed profiles Generated and saved in " + out_YAML_file + Style.RESET_ALL)
             
-            #For each profile : 
-            #Prepare the transfermed profile : spec_info & mapping fields
-            transformed_profile = generate_transformed_profile(g)
-            
-            #print(json.dumps(transformed_profile, indent=True))
-            #print(yaml.dump(transformed_profile, indent=4, default_flow_style=False))
-            
-            #To display only the bioschemas:ComputationalTool
-            break
-
-        # Inject the YAML in a HTML File
-        # Note: The folder should be in the transformed_profile["spec_info"]["title"] folder
-
-        ### PROBLEM: if the forlder "profile name" doesn't exist it will throw an exception, so we need to create it manually
-        
-        folderpath = "./"+website_repo+"/pages/_profiles/"+profile_name
-        #out_YAML_file = folderpath+"/"+"generated_"+profile_name+".yaml"
-        out_HTML_file= folderpath+"/"+ transformed_profile["spec_info"]["version"] +".html"
-
-        if path.exists(folderpath):
-            print ("folder esists")
-        else:
-            #os.makedirs(os.path.dirname(folderpath), exist_ok=True)
-            Path(folderpath).mkdir(parents=True, exist_ok=True) 
-            print("Create folder : ", folderpath)
-
-
-        #with open(out_YAML_file, "w", encoding="utf-8") as o:
-        #    yaml.dump(transformed_profile, o)
-
-        #print(Style.BRIGHT + "Transformed profiles Generated and saved in " + out_YAML_file + Style.RESET_ALL)
-        
-        top_of_the_page='''
+            top_of_the_page='''
 redirect_from:
 - "devSpecs/Tool/specification"
 - "devSpecs/Tool/specification/"
@@ -289,10 +290,10 @@ hierarchy:
 # spec_info content generated using GOWeb
 # DO NOT MANUALLY EDIT THE CONTENT
 '''
-        with open(out_HTML_file, "w", encoding="utf-8") as o:
-            o.write("---")
-            o.write(top_of_the_page)
-            yaml.dump(transformed_profile, o)
-            o.write("---")
+            with open(out_HTML_file, "w", encoding="utf-8") as o:
+                o.write("---")
+                o.write(top_of_the_page)
+                yaml.dump(transformed_profile, o)
+                o.write("---")
 
-        print(Style.BRIGHT + "HTML Profile page created " + out_HTML_file + Style.RESET_ALL)
+            print(Style.BRIGHT + "HTML Profile page created " + out_HTML_file + Style.RESET_ALL)

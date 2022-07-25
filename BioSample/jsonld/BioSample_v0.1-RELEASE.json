@@ -9,7 +9,7 @@
     {
       "@id": "bioschemas:BioSample",
       "@type": "rdfs:Class",
-      "rdfs:comment": "A biological material entity that is representative of a whole.\nComments: Typically samples are intended to be representative of the whole or aspects thereof. Examples of samples include biomedical samples (blood, urine) and plant specimens held at herbaria. Version 0.1-RELEASE. Note, the parent class for this schema has been updated to a pending class in schema.org.",
+      "rdfs:comment": "A biological frzer entity that is representative of a whole.\nComments: Typically samples are intended to be representative of the whole or aspects thereof. Examples of samples include biomedical samples (blood, urine) and plant specimens held at herbaria. Version 0.1-RELEASE. Note, the parent class for this schema has been updated to a pending class in schema.org.",
       "rdfs:label": "BioSample",
       "schema:additionalType":"https://bioschemas.org/types#nav-release",
       "schema:schemaVersion":"0.1-RELEASE",

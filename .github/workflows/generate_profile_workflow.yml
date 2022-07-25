@@ -33,6 +33,13 @@ jobs:
         uses: py-actions/py-dependency-install@v3
         with:
           path: "./.github/workflows/requirements.txt"
+      - name: Checkout the DDE repo
+        env:
+          GITHUB_TOKEN: ${{ secrets.Sahar_Workflows_Token }}
+        run: | 
+          git clone https://user:$GITHUB_TOKEN@github.com/BioSchemas/bioschemas-dde
+          git branch
+          ls
 
       - name: Checkout the Website repo
         env:
