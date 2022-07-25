@@ -198,7 +198,7 @@ website_repo= args[-1]
 args.remove(website_repo)
 
 for arg in args:
-    if 'jsonld' in arg.split('.'):
+    if 'jsonld' in arg.split('/'):
         if 'json' in arg.split('.'):
             arglist= arg.split('/')
             profile_name=arg.split('/')[-1].split('.')[0].split('_')[0]
