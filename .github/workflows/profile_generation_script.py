@@ -6,6 +6,7 @@ from colorama import Fore
 from colorama import Style
 import sys
 import os.path
+import csv
 from os import path
 
 def generate_types_cardianlity(g,prop):
@@ -224,8 +225,33 @@ for arg in args:
                 #print(json.dumps(transformed_profile, indent=True))
                 #print(yaml.dump(transformed_profile, indent=4, default_flow_style=False))
                 
-                #To display only the bioschemas:ComputationalTool
-                break
+                ### Metadata
+                profile_metadata = dict()
+
+                profile_metadata['name']=g["@id"].split(':')[1]
+                profile_metadata['use_cases_url']='/useCases/'+profile_metadata['name']
+
+                with open('bioschemas-dde/draft_profile_list.txt') as csv_file:
+                    csv_reader = csv.reader(csv_file, delimiter=',')
+                    line_count = 0
+                    for row in csv_reader:
+                        line_count += 1
+                        if line_count > 1:
+                            fields = row[0].split('\t')
+                            if fields[1]==profile_metadata['name']:
+                                #print(f'\n namespace={fields[0]}, name={fields[1]}, subclassof={fields[2]}, type={fields[3]}, version={fields[4]}, url={fields[5]}.')    
+
+                                profile_metadata['redirect_from']=list()
+                                profile_metadata['hierarchy']=list()
+                                profile_metadata['previous_version']=fields[4]
+                                profile_metadata['previous_release']=""
+                                profile_metadata['status']=""
+                                profile_metadata['spec_type']=fields[3]
+                                profile_metadata['group']="tools"
+                                profile_metadata['cross_walk_url']=fields[5]
+                                profile_metadata['gh_tasks']=""
+                                profile_metadata['live_deploy']="/liveDeploys"
+                                profile_metadata['parent_type']=""
 
             # Inject the YAML in a HTML File
             # Note: The folder should be in the transformed_profile["spec_info"]["title"] folder
@@ -249,50 +275,14 @@ for arg in args:
 
             #print(Style.BRIGHT + "Transformed profiles Generated and saved in " + out_YAML_file + Style.RESET_ALL)
             
-            top_of_the_page='''
-redirect_from:
-- "devSpecs/Tool/specification"
-- "devSpecs/Tool/specification/"
-- "/devSpecs/Tool/"
-- "/devSpecs/Tool"
-- "/specifications/drafts/Tool"
-- "/specifications/drafts/Tool/"
-- "/profiles/Tool/"
-- "/profiles/Tool"
-- "/profiles/ComputationalTool/"
-- "/profiles/ComputationalTool"
-- "/profiles/Tool/0.6-DRAFT/"
-
-hierarchy:
-- Thing
-- CreativeWork
-- SoftwareApplication
-
-name: ComputationalTool
-
-previous_version: 0.5-DRAFT
-previous_release:
-
-status: revision
-spec_type: Profile
-group: tools
-use_cases_url: '/useCases/ComputationalTool'
-cross_walk_url: https://docs.google.com/spreadsheets/d/12W7DQkUfsY0lrHEVvowgHXAcO2WJyNI6c8ZJzXgzoRI/edit
-gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Tool
-live_deploy: /liveDeploys
-
-parent_type: SoftwareApplication
-hierarchy:
-- Thing
-- CreativeWork
-- SoftwareApplication
-
+            message='''
 # spec_info content generated using GOWeb
 # DO NOT MANUALLY EDIT THE CONTENT
 '''
             with open(out_HTML_file, "w", encoding="utf-8") as o:
                 o.write("---")
-                o.write(top_of_the_page)
+                yaml.dump(profile_metadata, o)
+                o.write(message)
                 yaml.dump(transformed_profile, o)
                 o.write("---")
 
