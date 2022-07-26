@@ -280,7 +280,8 @@ for arg in args:
 # DO NOT MANUALLY EDIT THE CONTENT
 '''
             with open(out_HTML_file, "w", encoding="utf-8") as o:
-                o.write("---")
+                o.write('''---
+''')
                 yaml.dump(profile_metadata, o)
                 o.write(message)
                 yaml.dump(transformed_profile, o)
