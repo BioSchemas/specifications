@@ -46,6 +46,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.Sahar_Workflows_Token }}
         run: | 
           git clone https://user:$GITHUB_TOKEN@github.com/BioSchemas/bioschemas.github.io
+          cd bioschemas.github.io
+          git pull
           ls
 
       - name: Checkout a new branch
