@@ -52,12 +52,16 @@ jobs:
         run: | 
           cd bioschemas.github.io
           git pull
-          git checkout -b profile-auto-generation
+          git checkout profile-auto-generation
           cd ..
 
       - name: Some random tests
         run: |
-          date /t
+          date
+          today=`date +%F`
+          echo $today
+          cd bioschemas.github.io
+          git checkout -b $today
 
       - name: Execute the Python Script
         run: |
