@@ -55,13 +55,14 @@ jobs:
           git checkout profile-auto-generation
           cd ..
 
-      - name: Some random tests
+      - name: Create and checkout to a new branch
         run: |
-          date
+          echo "the workflow has runed at:" date
           today=`date +%F`
-          echo $today
           cd bioschemas.github.io
+          git pull
           git checkout -b $today
+          cd ..
 
       - name: Execute the Python Script
         run: |
