@@ -54,7 +54,11 @@ jobs:
           git pull
           git checkout -b profile-auto-generation
           cd ..
-      
+
+      - name: Some random tests
+        run: |
+          date /t
+
       - name: Execute the Python Script
         run: |
           python ./.github/workflows/profile_generation_script.py ${{steps.changed-files.outputs.all_changed_files}} bioschemas.github.io
@@ -79,5 +83,4 @@ jobs:
 
       - name: End Workflow
         run: |
-          date /t
           echo "Check the Website !"
