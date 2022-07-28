@@ -78,7 +78,7 @@ jobs:
           git config user.email "sahar.frikha1@gmail.com"
           git add .
           git commit -m "Updating Profile"  # How to commit with a specific msg
-          git push origin -f $today
+          git push --set-upstream origin $today
 
       - name: End Workflow
         run: |
