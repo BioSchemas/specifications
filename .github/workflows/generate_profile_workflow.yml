@@ -48,16 +48,10 @@ jobs:
           git clone https://user:$GITHUB_TOKEN@github.com/BioSchemas/bioschemas.github.io
           ls
 
-      - name: Checkout the branch profile-auto-generation
-        run: | 
-          cd bioschemas.github.io
-          git pull
-          git checkout profile-auto-generation
-          cd ..
-
-      - name: Create and checkout to a new branch
+      - name: Checkout a new branch
         run: |
-          echo "the workflow has runed at:" date
+          echo "the workflow has runed at:" 
+          date
           today=`date +%F`
           cd bioschemas.github.io
           git pull
@@ -84,7 +78,7 @@ jobs:
           git config user.email "sahar.frikha1@gmail.com"
           git add .
           git commit -m "Updating Profile"  # How to commit with a specific msg
-          git push origin -f profile-auto-generation
+          git push origin -f $today
 
       - name: End Workflow
         run: |
