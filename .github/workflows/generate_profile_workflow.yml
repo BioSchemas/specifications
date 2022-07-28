@@ -79,4 +79,5 @@ jobs:
 
       - name: End Workflow
         run: |
+          date /t
           echo "Check the Website !"
