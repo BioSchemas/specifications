@@ -22,7 +22,7 @@
                 "type": "object",
                 "properties": {
                     "about": {
-                        "description": "The subject of this Course. Use the DefinedTerm type to add a controlled-vocabulary term to categorise the course (e.g., using the [EDAM Topic ontology](EDAM Topic ontology](https://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_0003)). The subject matter of the content.\nInverse property: subjectOf.",
+                        "description": "The subject of this Course. Sahar the DefinedTerm type to add a controlled-vocabulary term to categorise the course (e.g., using the [EDAM Topic ontology](EDAM Topic ontology](https://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_0003)). The subject matter of the content.\nInverse property: subjectOf.",
                         "oneOf": [
                             {
                                 "$ref": "#/definitions/thing"
