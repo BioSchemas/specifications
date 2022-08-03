@@ -62,18 +62,6 @@ jobs:
           git checkout -b $today
           cd ..
 
-      - name: Tests
-        run: |
-          for /f "skip=1" %%x in ('wmic os get localdatetime') do if not defined MyDate set MyDate=%%x
-          set today=%MyDate:~0,4%-%MyDate:~4,2%-%MyDate:~6,2%
-          echo $today
-          for /f %%x in ('wmic path win32_localtime get /format:list ^| findstr "="') do set %%x
-          set today=%Year%-%Month%-%Day%
-          echo $today
-          for /f %%x in ('wmic path win32_utctime get /format:list ^| findstr "="') do set %%x
-          set today=%Year%-%Month%-%Day%
-          echo $today
-
       - name: Execute the Python Script
         run: |
           python ./.github/workflows/profile_generation_script.py ${{steps.changed-files.outputs.all_changed_files}} bioschemas.github.io
