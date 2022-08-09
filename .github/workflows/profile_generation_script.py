@@ -63,8 +63,15 @@ def generate_transformed_profile(g, path_changed_file):
     transformed_profile['parent_type']=transformed_profile["spec_info"]["official_type"]
     transformed_profile['redirect_from']=get_redirect_from(transformed_profile['name'])
     transformed_profile['hierarchy']=get_hierarchy()
+    transformed_profile['json-ld_url']=arg
+    transformed_profile['dde_ui_url']="https://discovery.biothings.io/view/"
     
-    
+    ## Case Profile
+    if arg.split("-")[1].split('.')[0]=="DRAFT":
+        transformed_profile['dde_ui_url'] = transformed_profile['dde_ui_url'] + "bioschemasdrafts/bioschemasdrafts:" + transformed_profile["name"]
+    elif arg.split("-")[1].split('.')[0]=="RELEASE":
+        transformed_profile['dde_ui_url'] = transformed_profile['dde_ui_url'] + "bioschemas/bioschemas:" + transformed_profile["name"]
+
     for i in transformed_profile:
         if i !="spec_info" and i!="mapping":
             print(Fore.YELLOW + Style.BRIGHT + f'{i} = {transformed_profile[i]}' + Style.RESET_ALL)    
