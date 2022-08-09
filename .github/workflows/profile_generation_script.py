@@ -342,8 +342,9 @@ for arg in args:
                     
                     folderpath = "./"+website_repo+"/pages/_profiles/"+profile_name
                     #out_YAML_file = folderpath+"/"+"generated_"+profile_name+".yaml"
-                    out_HTML_file= folderpath+"/"+ transformed_profile["spec_info"]["version"] +".html"
-
+                    #out_HTML_file= folderpath+"/"+ transformed_profile["spec_info"]["version"] +".html"
+                    out_HTML_file= folderpath+"/"+ arg.split('/')[-1].split('.')[0].split('_')[1].split('v')[1] +".html"
+                    
                     if path.exists(folderpath):
                         print ("folder esists")
                     else:
