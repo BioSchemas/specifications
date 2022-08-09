@@ -159,7 +159,7 @@
     {
       "@id": "bioschemas:samplingAge",
       "@type": "rdf:Property",
-      "rdfs:comment": "The age of the object when the Sample was created. ",
+      "rdfs:comment": "The age of the object when gdge Sample was created. ",
       "rdfs:label": "samplingAge",
       "schema:domainIncludes": {
         "@id": "bioschemas:BioSample"
