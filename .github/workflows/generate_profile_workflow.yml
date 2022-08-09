@@ -58,6 +58,7 @@ jobs:
           date
           today=`date +%F`
           cd bioschemas.github.io
+          git checkout profile-auto-generation
           git pull
           git checkout -b $today
           cd ..
