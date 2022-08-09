@@ -36,7 +36,7 @@
                         ]
                     },
                     "citation": {
-                        "description": "A citation for a publication that describes the dataset. A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+                        "description": "A citation gdgdg a publication that describes the dataset. A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/creativework"

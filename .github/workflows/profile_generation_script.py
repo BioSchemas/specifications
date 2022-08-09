@@ -23,6 +23,7 @@ def generate_transformed_profile(g, path_changed_file):
             
     # Browse properties by marginality and add them to the mappings        
     if "$validation" in g.keys():
+        transformed_profile["type"]="Profile"
         for req_label in g['$validation']["required"]:
             prop = g['$validation']["properties"][req_label]
             new_p = generate_property (g, prop, req_label, "Required")
@@ -37,6 +38,8 @@ def generate_transformed_profile(g, path_changed_file):
             prop = g['$validation']["properties"][opt_label]
             new_p = generate_property (g, prop, opt_label, "Optional")
             transformed_profile["mapping"].append(new_p)
+    else:
+        transformed_profile["type"]="Type"
 
     ### Generate the metadata
     transformed_profile['name']=g["@id"].split(':')[1]
