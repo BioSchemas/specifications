@@ -14,7 +14,7 @@
       "schema:additionalType":"https://bioschemas.org/types#nav-release",
       "schema:schemaVersion":"0.1-RELEASE",
       "rdfs:subClassOf": {
-        "@id": "schema:BioChemEntity"
+        "@id": "schema:hhhh"
       }
     },
     {
