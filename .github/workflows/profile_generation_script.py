@@ -42,7 +42,7 @@ def generate_transformed_profile(g, path_changed_file):
     transformed_profile['name']=g["@id"].split(':')[1]
     transformed_profile['use_cases_url']='/useCases/'+transformed_profile['name']
 
-    with open('draft_profile_list.txt') as csv_file:
+    with open('bioschemas-dde/draft_profile_list.txt') as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
         line_count = 0
         for row in csv_reader:
@@ -103,7 +103,7 @@ def get_status(version):
 def get_group(profile_name):
     group=""
     
-    with open('metadata_mapping.csv') as csv_file:
+    with open('bioschemas.github.io/_data/metadata_mapping.csv') as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
         line_count = 0
         for row in csv_reader:
@@ -117,7 +117,7 @@ def get_group(profile_name):
 def get_cross_walk_url(profile_name):
     cross_walk_url=""
     
-    with open('metadata_mapping.csv') as csv_file:
+    with open('bioschemas.github.io/_data/metadata_mapping.csv') as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
         line_count = 0
         for row in csv_reader:
@@ -132,7 +132,7 @@ def get_cross_walk_url(profile_name):
 def get_redirect_from(profile_name):
     redirect_from=list() 
 
-    with open('metadata_mapping.csv') as csv_file:
+    with open('bioschemas.github.io/_data/metadata_mapping.csv') as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
         line_count = 0
         for row in csv_reader:
