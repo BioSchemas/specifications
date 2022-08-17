@@ -97,7 +97,7 @@ def get_previous_version(path_changed_file):
         if f.split('_')[1].split('-')[1].split('.')[0]=="DRAFT":
             if int(f.split('_')[1].split('-')[0].split('.')[1]) > max:
                 max = int(f.split('_')[1].split('-')[0].split('.')[1])
-        print(Fore.LIGHTRED_EX + 'Latest Draft: ' + max + Style.RESET_ALL)
+        print(Fore.LIGHTRED_EX + 'Latest Draft: ' + str(max) + Style.RESET_ALL)
     
     return previous_version
 
