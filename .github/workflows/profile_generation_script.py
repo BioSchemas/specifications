@@ -234,14 +234,14 @@ def generate_property (g, prop, req_label, marginality,external_properties):
 
     # Here we'll suppose that all properties are in default schemas.org !!!!!!!
     new_p['type']=""
-    print(external_properties)
     for p in external_properties:
         print(p)
-        if req_label==p.split(':')[1]:
-            if p.split(':')[0].split('bioschemas').len >0:
-                new_p['type']="Bioschemas"
-            else:
-                new_p['type']=p.split(':')[0]            
+        if len(p.split(':')) >0:
+            if req_label==p.split(':')[1]:
+                if len(p.split(':')[0].split('bioschemas'))>0:
+                    new_p['type']="Bioschemas"
+                else:
+                    new_p['type']=p.split(':')[0]            
     t=new_p['type']
     print(Fore.GREEN + Style.DIM + f'Property type : {t}' + Style.RESET_ALL)
 

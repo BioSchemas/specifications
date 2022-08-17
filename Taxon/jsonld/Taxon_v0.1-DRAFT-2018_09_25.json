@@ -9,7 +9,7 @@
         {
             "@id": "bioschemas:Taxon",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Bioschemas ddd for describing a biological taxon This profile aims to denote a taxon by common properties such as its scientific name, authority, taxonomic rank and vernacular names. It is also a means to link to existing taxonomic registers where each taxon has a URI. Version: 0.1-DRAFT-2018_09_25",
+            "rdfs:comment": "Bioschemas ddd for rfrgr a biological taxon This profile aims to denote a taxon by common properties such as its scientific name, authority, taxonomic rank and vernacular names. It is also a means to link to existing taxonomic registers where each taxon has a URI. Version: 0.1-DRAFT-2018_09_25",
             "schema:schemaVersion": [
                 "https://bioschemas.org/profiles/Taxon/0.1-DRAFT-2018_09_25"
             ],
