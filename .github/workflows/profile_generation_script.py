@@ -234,7 +234,7 @@ def generate_property (g, prop, req_label, marginality,external_properties):
 
     # Here we'll suppose that all properties are in default schemas.org !!!!!!!
     new_p['type']=""
-    
+    print(external_properties)
     for p in external_properties:
         print(p)
         if req_label==p.split(':')[1]:
@@ -356,7 +356,7 @@ for arg in args:
             
             external_properties=[]  
             for g in data["@graph"]:
-              if g["@type"]=="rdfs:Property":
+              if g["@type"]=="rdf:Property":
                 external_properties.append(g["@id"])
 
             for g in data["@graph"]:
