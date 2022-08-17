@@ -19,7 +19,7 @@
         "type": "object",
         "properties": {
           "defaultValue": {
-            "description": "The default value for the tgeg. This is commonly only used for Inputs.",
+            "description": "The default value for the tgettttg. This is commonly only used for Inputs.",
             "oneOf": [
               {
                 "$ref": "#/definitions/thing"

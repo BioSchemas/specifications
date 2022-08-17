@@ -16,7 +16,7 @@ def generate_transformed_profile(g, path_changed_file, external_properties):
     transformed_profile = dict()
     
     ### Spec_info
-    transformed_profile["spec_info"] = generate_spec_info(g)    
+    transformed_profile["spec_info"] = generate_spec_info(g, path_changed_file)    
     
     ### Mapping
     transformed_profile["mapping"] = list(dict())
@@ -178,13 +178,13 @@ def get_hierarchy():
     
     return hierarchy
 
-def generate_spec_info(g):
+def generate_spec_info(g, path_changed_file):
     spec_info = dict()    
         
     if "rdfs:label" in g.keys():
         spec_info["title"] = g['rdfs:label']
     else:
-        raise Exception("Please Provide the title of your profile!")
+        spec_info["title"]=path_changed_file.split('_')[0]
 
     if "rdfs:comment" in g.keys():
         spec_info["description"] = g['rdfs:comment']
@@ -194,7 +194,7 @@ def generate_spec_info(g):
     if "schema:schemaVersion" in g.keys():
         spec_info["version"] = g['schema:schemaVersion'][0].split('/')[-1]
     else:
-        raise Exception("Please Provide the version of your profile!")
+        spec_info["version"] = path_changed_file.split('_')[1].split('v')[1].split('.json')[0]
         
     if "rdfs:subClassOf" in g.keys():
         spec_info["official_type"] = g['rdfs:subClassOf']['@id'].split(':')[1]
