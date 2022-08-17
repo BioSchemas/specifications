@@ -69,7 +69,7 @@ def generate_transformed_profile(g, path_changed_file, external_properties):
     transformed_profile['json-ld_url']=arg
     transformed_profile['dde_ui_url']="https://discovery.biothings.io/view/"
     
-    if transformed_profile["type"]="Profile":
+    if transformed_profile["type"]=="Profile":
         if arg.split("-")[1].split('.')[0]=="DRAFT":
             transformed_profile['dde_ui_url'] = transformed_profile['dde_ui_url'] + "bioschemasdrafts/bioschemasdrafts:" + transformed_profile["name"]
         elif arg.split("-")[1].split('.')[0]=="RELEASE":
