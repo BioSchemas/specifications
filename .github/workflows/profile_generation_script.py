@@ -241,6 +241,8 @@ def generate_property (g, prop, req_label, marginality,external_properties):
                 new_p['type']=p.split(':')[0]
         else:
             new_p['type']=""
+    t=new_p['type']
+    print(Fore.GREEN + Style.DIM + f'Property type : {t}' + Style.RESET_ALL)
 
     return new_p
 
