@@ -97,8 +97,8 @@ def get_previous_version(path_changed_file):
         if f.split('_')[1].split('-')[1].split('.')[0]=="DRAFT":
             if int(f.split('_')[1].split('-')[0].split('.')[1]) > max:
                 max = int(f.split('_')[1].split('-')[0].split('.')[1])
-                previous_version=f.split('_')[1].split('v')[0].split('.json')[0]
-    print(Fore.LIGHTRED_EX + 'Previous Draft: ' + previous_version + Style.RESET_ALL)
+                previous_version=f.split('_')[1].split('v')[1].split('.json')[0]
+    print(Fore.LIGHTRED_EX + 'Previous Draft: '+ previous_version + Style.RESET_ALL)
     
     return previous_version
 
