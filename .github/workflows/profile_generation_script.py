@@ -11,7 +11,7 @@ from os import path
 
 
 
-def generate_transformed_profile(g, path_changed_file):
+def generate_transformed_profile(g, path_changed_file, external_properties):
     
     transformed_profile = dict()
     
@@ -26,17 +26,17 @@ def generate_transformed_profile(g, path_changed_file):
         transformed_profile["type"]="Profile"
         for req_label in g['$validation']["required"]:
             prop = g['$validation']["properties"][req_label]
-            new_p = generate_property (g, prop, req_label, "Required")
+            new_p = generate_property (g, prop, req_label, "Required",external_properties)
             transformed_profile["mapping"].append(new_p)
 
         for reco_label in g['$validation']["recommended"]:
             prop = g['$validation']["properties"][reco_label]
-            new_p = generate_property (g, prop, reco_label, "Minimum")
+            new_p = generate_property (g, prop, reco_label, "Minimum",external_properties)
             transformed_profile["mapping"].append(new_p)
 
         for opt_label in g['$validation']["optional"]:
             prop = g['$validation']["properties"][opt_label]
-            new_p = generate_property (g, prop, opt_label, "Optional")
+            new_p = generate_property (g, prop, opt_label, "Optional",external_properties)
             transformed_profile["mapping"].append(new_p)
     else:
         transformed_profile["type"]="Type"
@@ -89,7 +89,6 @@ def get_previous_version(path_changed_file):
     previous_version=""
     
     mypath=path_changed_file.split('/')[0]+"/"+path_changed_file.split('/')[1]
-    #print(Fore.LIGHTRED_EX + 'mypath: ' + mypath + Style.RESET_ALL)
     onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
     
     for f in onlyfiles:
@@ -98,24 +97,20 @@ def get_previous_version(path_changed_file):
             if int(f.split('_')[1].split('-')[0].split('.')[1]) > max:
                 max = int(f.split('_')[1].split('-')[0].split('.')[1])
                 previous_version=f.split('_')[1].split('v')[1].split('.json')[0]
-    print(Fore.LIGHTRED_EX + 'Previous Draft: '+ previous_version + Style.RESET_ALL)
     
     return previous_version
 
 def get_previous_release(path_changed_file):
     previous_release=""
     mypath=path_changed_file.split('/')[0]+"/"+path_changed_file.split('/')[1]
-    #print(Fore.LIGHTRED_EX + 'mypath: ' + mypath + Style.RESET_ALL)
     onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
     
     for f in onlyfiles:
         max=0
         if f.split('_')[1].split('-')[1].split('.')[0]=="RELEASE":
-            print(f.split('_')[1].split('-')[0].split('.')[0].split('v')[1])
             if int(f.split('_')[1].split('-')[0].split('.')[0].split('v')[1]) > max:
                 max = int(f.split('_')[1].split('-')[0].split('.')[0].split('v')[1])
                 previous_release=f.split('_')[1].split('v')[1].split('.json')[0]
-    print(Fore.LIGHTRED_EX + 'Previous Release: ' +previous_release + Style.RESET_ALL)
 
     return previous_release
 
@@ -205,7 +200,7 @@ def generate_spec_info(g):
 
     return spec_info
 
-def generate_property (g, prop, req_label, marginality):
+def generate_property (g, prop, req_label, marginality,external_properties):
     
     print(Fore.GREEN + Style.BRIGHT + f'Property : {req_label}' + Style.RESET_ALL)
     new_p = dict()
@@ -237,8 +232,15 @@ def generate_property (g, prop, req_label, marginality):
     else:
         new_p['example']=""
 
-    # Here we'll suppose that all properties are in default schemas.org 
-    new_p['type']=""
+    # Here we'll suppose that all properties are in default schemas.org !!!!!!!
+    for p in external_properties:
+        if req_label==p.split(':')[1]:
+            if p.split(':')[0].split('bioschemas').len >0:
+                new_p['type']="Bioschemas"
+            else:
+                new_p['type']=p.split(':')[0]
+        else:
+            new_p['type']=""
 
     return new_p
 
@@ -294,7 +296,7 @@ def generate_types_cardianlity(g,prop):
     if len(list_types)==0:
         cardianliy=""
         
-    #Some cleaning up
+    ### Some cleaning up
     expected_types =[]
     
     for t in list_types:
@@ -307,7 +309,7 @@ def generate_types_cardianlity(g,prop):
         else :
             expected_types.append(t.capitalize())    
 
-    ##Remove duplicates
+    #Remove duplicates
     clean_expected_types = list(set(expected_types))
 
     #Replace 'String' with 'Text'
@@ -315,6 +317,13 @@ def generate_types_cardianlity(g,prop):
         if i == "String":
             clean_expected_types.remove(i)
             clean_expected_types.append("Text")
+    
+    #Replace 'Uri' with 'URI'
+    for i in clean_expected_types:
+        if i == "Uri":
+            clean_expected_types.remove(i)
+            clean_expected_types.append("URI")
+
     print(Fore.MAGENTA + f'Expected Types : {clean_expected_types}' + Style.RESET_ALL)
 
     print(Fore.RED + f'Cardinality = {cardianliy}' + Style.RESET_ALL)
@@ -341,10 +350,14 @@ for arg in args:
                 data = json.load(i)
 
             #print(json.dumps(data['@graph'][0], indent=True))
-
+            
+            external_properties=[]  
+            for g in data["@graph"]:
+              if g["@type"]=="rdfs:Property":
+                external_properties.append(g["@id"])
 
             for g in data["@graph"]:
-
+                
                 if g["@type"]=="rdfs:Class":
                 
                     print(Fore.BLUE + Style.BRIGHT + f'Profile : {g["@id"]}' + Style.RESET_ALL) 
@@ -352,7 +365,7 @@ for arg in args:
                     
                     #For each profile : 
                     #Prepare the transfermed profile : spec_info & mapping fields
-                    transformed_profile = generate_transformed_profile(g, arg)
+                    transformed_profile = generate_transformed_profile(g, arg, external_properties)
                     
                     # Inject the YAML in a HTML File
                     # Note: The folder should be in the transformed_profile["spec_info"]["title"] folder
@@ -384,4 +397,4 @@ for arg in args:
                         yaml.dump(transformed_profile, o)
                         o.write("---")
 
-                    print(Style.BRIGHT + "HTML Profile page created " + out_HTML_file + Style.RESET_ALL)
+                    print(Style.BRIGHT + "HTML Profile page created " + out_HTML_file + Style.RESET_ALL)                    
