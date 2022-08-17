@@ -93,8 +93,11 @@ def get_previous_version(path_changed_file):
     onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
     
     for f in onlyfiles:
+        max=0
         if f.split('_')[1].split('-')[1].split('.')[0]=="DRAFT":
-            print(Fore.LIGHTRED_EX + 'onlyfiles: ' + f + Style.RESET_ALL)
+            if int(f.split('_')[1].split('-')[0].split('.')[1]) > max:
+                max = int(f.split('_')[1].split('-')[0].split('.')[1])
+        print(Fore.LIGHTRED_EX + 'Latest Draft: ' + max + Style.RESET_ALL)
     
     return previous_version
 
@@ -106,7 +109,7 @@ def get_previous_release(path_changed_file):
     
     for f in onlyfiles:
         if f.split('_')[1].split('-')[1].split('.')[0]=="RELEASE":
-            print(Fore.LIGHTBLUE_EX + 'onlyfiles: ' + f + Style.RESET_ALL)
+            print(Fore.LIGHTBLUE_EX + 'Releases: ' + f + Style.RESET_ALL)
 
     return previous_release
 
