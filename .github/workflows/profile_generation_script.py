@@ -238,7 +238,7 @@ def generate_property (g, prop, req_label, marginality,external_properties):
         print(p)
         if len(p.split(':')) >0:
             if req_label==p.split(':')[1]:
-                if len(p.split(':')[0].split('bioschemas'))>0:
+                if len(p.split(':')[0].split('bioschemas'))>1:
                     new_p['type']="Bioschemas"
                 else:
                     new_p['type']=p.split(':')[0]            

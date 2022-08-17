@@ -12,7 +12,7 @@
         {
             "@id": "bioschemasdrafts:Taxon",
             "@type": "rdfs:Class",
-            "rdfs:comment": "a Bioschemas profile for describing a htyrty taxon This profile aims to denote a taxon by common properties such as its scientific name, taxonomic rank and vernacular names. It is also a means to link to existing taxonomic registers where each taxon has a URI. <br/>Changes in 0.7: <ul><li>Use of identifier to add the taxon id within well known authorities (NCBI id, GBIF id, EoL id etc.)</li><li>Add property isBasedOn</li><li>Add properties scientificName and alternateScientificName to link the Taxon to TaxonName instances</li></ul> Version: 0.7-DRAFT",
+            "rdfs:comment": "a Bioschemas prsssofile for describing a htyrty taxon This profile aims to denote a taxon by common properties such as its scientific name, taxonomic rank and vernacular names. It is also a means to link to existing taxonomic registers where each taxon has a URI. <br/>Changes in 0.7: <ul><li>Use of identifier to add the taxon id within well known authorities (NCBI id, GBIF id, EoL id etc.)</li><li>Add property isBasedOn</li><li>Add properties scientificName and alternateScientificName to link the Taxon to TaxonName instances</li></ul> Version: 0.7-DRAFT",
             "schema:schemaVersion": [
                 "https://bioschemas.org/profiles/Taxon/0.7-DRAFT"
             ],
