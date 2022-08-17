@@ -110,8 +110,8 @@ def get_previous_release(path_changed_file):
     for f in onlyfiles:
         max=0
         if f.split('_')[1].split('-')[1].split('.')[0]=="RELEASE":
-            if int(f.split('_')[1].split('-')[0].split('.')[1]) > max:
-                max = int(f.split('_')[1].split('-')[0].split('.')[1].split('v')[1])
+            if int(f.split('_')[1].split('-')[0].split('.')[0].split('v')[1]) > max:
+                max = int(f.split('_')[1].split('-')[0].split('.')[0].split('v')[1])
     print(Fore.LIGHTRED_EX + 'Previous Release: ' + str(max-1) + Style.RESET_ALL)
 
     return previous_release
