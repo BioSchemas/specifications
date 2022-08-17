@@ -1,7 +1,7 @@
 {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
-  "dct:conformsTo": "https://bioschemas.org/profiles/Course/0.9-DRAFT",
+  "dct:conformsTo": "https://bioschemas.org/profiles/Course/0.10-DRAFT",
 
 
 
