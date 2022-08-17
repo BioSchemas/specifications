@@ -89,15 +89,25 @@ def get_previous_version(path_changed_file):
     previous_version=""
     
     mypath=path_changed_file.split('/')[0]+"/"+path_changed_file.split('/')[1]
-    print(Fore.LIGHTRED_EX + 'mypath: ' + mypath + Style.RESET_ALL)
+    #print(Fore.LIGHTRED_EX + 'mypath: ' + mypath + Style.RESET_ALL)
     onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
-    print(Fore.LIGHTRED_EX + 'onlyfiles: ' + onlyfiles + Style.RESET_ALL)
+    
+    for f in onlyfiles:
+        if f.split('_')[1].split('.')[0].split('-')[1]=="DRAFT":
+            print(Fore.LIGHTRED_EX + 'onlyfiles: ' + f + Style.RESET_ALL)
     
     return previous_version
 
 def get_previous_release(path_changed_file):
     previous_release=""
+    mypath=path_changed_file.split('/')[0]+"/"+path_changed_file.split('/')[1]
+    #print(Fore.LIGHTRED_EX + 'mypath: ' + mypath + Style.RESET_ALL)
+    onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
     
+    for f in onlyfiles:
+        if f.split('_')[1].split('.')[0].split('-')[1]=="RELEASE":
+            print(Fore.LIGHTBLUE_EX + 'onlyfiles: ' + f + Style.RESET_ALL)
+
     return previous_release
 
 # if its draft it's revision, case release, deprecated

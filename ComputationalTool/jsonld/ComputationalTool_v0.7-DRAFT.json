@@ -113,7 +113,7 @@
                         ]
                     },
                     "citation": {
-                        "description": "yrtyr about this tool. A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+                        "description": "yrtyr eee this tool. A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/creativework"
