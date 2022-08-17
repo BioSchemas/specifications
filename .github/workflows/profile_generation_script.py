@@ -97,7 +97,8 @@ def get_previous_version(path_changed_file):
         if f.split('_')[1].split('-')[1].split('.')[0]=="DRAFT":
             if int(f.split('_')[1].split('-')[0].split('.')[1]) > max:
                 max = int(f.split('_')[1].split('-')[0].split('.')[1])
-    print(Fore.LIGHTRED_EX + 'Previous Draft: ' + str(max-1) + Style.RESET_ALL)
+                previous_version=f
+    print(Fore.LIGHTRED_EX + 'Previous Draft: ' + previous_version + Style.RESET_ALL)
     
     return previous_version
 
@@ -112,7 +113,8 @@ def get_previous_release(path_changed_file):
         if f.split('_')[1].split('-')[1].split('.')[0]=="RELEASE":
             if int(f.split('_')[1].split('-')[0].split('.')[0].split('v')[1]) > max:
                 max = int(f.split('_')[1].split('-')[0].split('.')[0].split('v')[1])
-    print(Fore.LIGHTRED_EX + 'Previous Release: ' + str(max-1) + Style.RESET_ALL)
+                previous_release=f
+    print(Fore.LIGHTRED_EX + 'Previous Release: ' +previous_release + Style.RESET_ALL)
 
     return previous_release
 
