@@ -88,11 +88,11 @@ from os.path import isfile, join
 def get_previous_version(path_changed_file):
     previous_version=""
     
-    hey = '''    #mypath="../"+path_changed_file.split('/')[0]+path_changed_file.split('/')[1]
-    mypath="./"
+    mypath="../"+path_changed_file.split('/')[0]+path_changed_file.split('/')[1]
+    print(Fore.LIGHTRED_EX + 'mypath: ' + mypath + Style.RESET_ALL)
     onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
-    print(onlyfiles)
-   ''' 
+    print(Fore.LIGHTRED_EX + 'onlyfiles: ' + onlyfiles + Style.RESET_ALL)
+    
     return previous_version
 
 def get_previous_release(path_changed_file):
