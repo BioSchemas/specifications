@@ -56,7 +56,7 @@
                         "$ref": "#/definitions/biochementity"
                     },
                     "name": {
-                        "description": "Taxon name (without authorship nor date information) of the currently valid (zoological) or accepted (botanical) taxon. The name of the item.",
+                        "description": "Taxon name (without ggg nor date information) of the currently valid (zoological) or accepted (botanical) taxon. The name of the item.",
                         "type": "string"
                     },
                     "rank": {
