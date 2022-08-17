@@ -51,7 +51,7 @@
                         ]
                     },
                     "applicationSubCategory": {
-                        "description": "Use an [EDAM:Topic](http://edamontology.org/topic_0003) to describe the category of application Subcategory of the application, e.g. 'Arcade Game'.",
+                        "description": "Use an [EDAM:Topic](http://edamontology.org/topic_0003) to hhh the category of application Subcategory of the application, e.g. 'Arcade Game'.",
                         "anyOf": [
                             {
                                 "type": "string"
