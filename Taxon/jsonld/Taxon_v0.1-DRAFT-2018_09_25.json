@@ -52,7 +52,7 @@
                         ]
                     },
                     "isContainedIn": {
-                        "description": "Direct, most proxissssmate higher-rank parent taxon Indicates a BioChemEntity that this BioChemEntity is (in some sense) part of.",
+                        "description": "Direct, most proxcccissssmate higher-rank parent taxon Indicates a BioChemEntity that this BioChemEntity is (in some sense) part of.",
                         "$ref": "#/definitions/biochementity"
                     },
                     "name": {
