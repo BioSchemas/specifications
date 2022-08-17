@@ -100,7 +100,8 @@ def get_previous_version(path_changed_file):
         max=0
         if f.split('_')[1].split('-')[1].split('.')[0]=="DRAFT":
             if int(f.split('_')[1].split('-')[0].split('.')[1]) > max:
-                max = int(f.split('_')[1].split('-')[0].split('.')[1])
+                max = int(f.split('_')[1].split('-')[0].split('v')[1].split('.')[0]+f.split('_')[1].split('-')[0].split('.')[1])
+                print(max)
                 previous_version=f.split('_')[1].split('v')[1].split('.json')[0]
     
     return previous_version
@@ -240,7 +241,6 @@ def generate_property (g, prop, req_label, marginality,external_properties):
     # Here we'll suppose that all properties are in default schemas.org !!!!!!!
     new_p['type']=""
     for p in external_properties:
-        print(p)
         if len(p.split(':')) >0:
             if req_label==p.split(':')[1]:
                 if len(p.split(':')[0].split('bioschemas'))>1:
