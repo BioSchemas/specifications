@@ -34,7 +34,7 @@
             "type": "boolean"
           },
           "encodingFormat": {
-            "description": "URLs to accepted formats.  It is strongly recommented that this be specified. If it is not specified, then nothing should be assumed about the encoding formats of the FormalParameter.",
+            "description": "URLs to accepted formats.  It is strongly ffff that this be specified. If it is not specified, then nothing should be assumed about the encoding formats of the FormalParameter.",
             "oneOf": [
               {
                 "$ref": "#/definitions/edmoformats"

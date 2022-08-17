@@ -69,11 +69,16 @@ def generate_transformed_profile(g, path_changed_file, external_properties):
     transformed_profile['json-ld_url']=arg
     transformed_profile['dde_ui_url']="https://discovery.biothings.io/view/"
     
-    ## Case Profile
-    if arg.split("-")[1].split('.')[0]=="DRAFT":
-        transformed_profile['dde_ui_url'] = transformed_profile['dde_ui_url'] + "bioschemasdrafts/bioschemasdrafts:" + transformed_profile["name"]
-    elif arg.split("-")[1].split('.')[0]=="RELEASE":
-        transformed_profile['dde_ui_url'] = transformed_profile['dde_ui_url'] + "bioschemas/bioschemas:" + transformed_profile["name"]
+    if transformed_profile["type"]="Profile":
+        if arg.split("-")[1].split('.')[0]=="DRAFT":
+            transformed_profile['dde_ui_url'] = transformed_profile['dde_ui_url'] + "bioschemasdrafts/bioschemasdrafts:" + transformed_profile["name"]
+        elif arg.split("-")[1].split('.')[0]=="RELEASE":
+            transformed_profile['dde_ui_url'] = transformed_profile['dde_ui_url'] + "bioschemas/bioschemas:" + transformed_profile["name"]
+    else:
+        if arg.split("-")[1].split('.')[0]=="DRAFT":
+            transformed_profile['dde_ui_url'] = transformed_profile['dde_ui_url'] + "bioschemastypesdrafts/bioschemastypesdrafts:" + transformed_profile["name"]
+        elif arg.split("-")[1].split('.')[0]=="RELEASE":
+            transformed_profile['dde_ui_url'] = transformed_profile['dde_ui_url'] + "bioschemas/bioschemastypes/bioschemastypes:" + transformed_profile["name"]
 
     for i in transformed_profile:
         if i !="spec_info" and i!="mapping":
