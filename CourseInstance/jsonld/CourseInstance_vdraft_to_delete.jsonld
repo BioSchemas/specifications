@@ -1,0 +1,1198 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "tempos": "https://discovery.biothings.io/view/tempos/",
+    "bioschemas": "https://discovery.biothings.io/view/bioschemas/"
+  },
+  "@graph": [
+    {
+      "@id": "tempos:CourseInstance",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Vr-test. Description can be a short paragraph about how this class is more specific from the class you are extending, need to extend this hierarchy, or use case.",
+      "rdfs:label": "CourseInstance",
+      "rdfs:subClassOf": {
+        "@id": "bioschemasdrafts:CourseInstance"
+      },
+      "$validation": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "conformsTo": {
+            "description": "Used to state the Bioschemas profile that the markup relates to. The versioned URL of the profile must be used. Note that we use a CURIE in the table here but the full URL for Dublin Core terms must be used in the markup (http://purl.org/dc/terms/conformsTo), see example.",
+            "@type": "CreativeWork",
+            "type": "object",
+            "properties": {
+              "identifier": {
+                "oneOf": [
+                  {
+                    "enum": [
+                      "https://github.com/BioSchemas/specifications/blob/master/CourseInstance/jsonld/CourseInstance_v0.8-DRAFT-2020_10_06.json"
+                    ]
+                  },
+                  {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                ],
+                "description": "The url of the version bioschemas profile that was used. For jsonschema, set @id to the identifier"
+              }
+            },
+            "required": [
+              "identifier"
+            ]
+          },
+          "courseMode": {
+            "description": "The medium or means of delivery of the course instance or the mode of study, either as a text label (e.g. \"online\", \"onsite\" or \"blended\"; \"synchronous\" or \"asynchronous\"; \"full-time\" or \"part-time\") or as a URL reference to a term from a controlled vocabulary (e.g. \nhttps://ceds.ed.gov/element/001311#Asynchronous ).\n\nBioschemas: Any additional description here",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              {
+                "format": "uri",
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "format": "uri",
+                  "type": "string"
+                }
+              }
+            ],
+            "owl:cardinality": "one"
+          },
+          "courseWorkload": {
+            "description": "The amount of work expected of students taking the course, often provided as a figure per week or per month, and may be broken down by type. For example, \"2 hours of lectures, 1 hour of lab work and 3 hours of independent study per week\".",
+            "owl:cardinality": "one"
+          },
+          "instructor": {
+            "description": "A person assigned to instruct or provide instructional assistance for the [[CourseInstance]].",
+            "oneOf": [
+              {
+                "@type": "Person",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "mainEntityOfPage": {
+                    "anyOf": [
+                      {
+                        "format": "uri",
+                        "type": "string"
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "format": "uri",
+                          "type": "string"
+                        }
+                      },
+                      {
+                        "@type": "CreativeWork",
+                        "type": "object",
+                        "properties": {
+                          "identifier": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "url": {
+                            "format": "uri",
+                            "type": "string"
+                          }
+                        },
+                        "required": []
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "@type": "CreativeWork",
+                          "type": "object",
+                          "properties": {
+                            "identifier": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "url": {
+                              "format": "uri",
+                              "type": "string"
+                            }
+                          },
+                          "required": []
+                        }
+                      }
+                    ]
+                  },
+                  "url": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name"
+                ]
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "Person",
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "mainEntityOfPage": {
+                      "anyOf": [
+                        {
+                          "format": "uri",
+                          "type": "string"
+                        },
+                        {
+                          "type": "array",
+                          "items": {
+                            "format": "uri",
+                            "type": "string"
+                          }
+                        },
+                        {
+                          "@type": "CreativeWork",
+                          "type": "object",
+                          "properties": {
+                            "identifier": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "url": {
+                              "format": "uri",
+                              "type": "string"
+                            }
+                          },
+                          "required": []
+                        },
+                        {
+                          "type": "array",
+                          "items": {
+                            "@type": "CreativeWork",
+                            "type": "object",
+                            "properties": {
+                              "identifier": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "url": {
+                                "format": "uri",
+                                "type": "string"
+                              }
+                            },
+                            "required": []
+                          }
+                        }
+                      ]
+                    },
+                    "url": {
+                      "format": "uri",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name"
+                  ]
+                }
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "contributor": {
+            "description": "A secondary contributor to the CreativeWork or Event.",
+            "anyOf": [
+              {
+                "@type": "Organization",
+                "type": "object",
+                "properties": {
+                  "legalName": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "sameAs": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                }
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "Organization",
+                  "type": "object",
+                  "properties": {
+                    "legalName": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "sameAs": {
+                      "format": "uri",
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "@type": "Person",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "mainEntityOfPage": {
+                    "anyOf": [
+                      {
+                        "format": "uri",
+                        "type": "string"
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "format": "uri",
+                          "type": "string"
+                        }
+                      },
+                      {
+                        "@type": "CreativeWork",
+                        "type": "object",
+                        "properties": {
+                          "identifier": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "url": {
+                            "format": "uri",
+                            "type": "string"
+                          }
+                        },
+                        "required": []
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "@type": "CreativeWork",
+                          "type": "object",
+                          "properties": {
+                            "identifier": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "url": {
+                              "format": "uri",
+                              "type": "string"
+                            }
+                          },
+                          "required": []
+                        }
+                      }
+                    ]
+                  },
+                  "url": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name"
+                ]
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "Person",
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "mainEntityOfPage": {
+                      "anyOf": [
+                        {
+                          "format": "uri",
+                          "type": "string"
+                        },
+                        {
+                          "type": "array",
+                          "items": {
+                            "format": "uri",
+                            "type": "string"
+                          }
+                        },
+                        {
+                          "@type": "CreativeWork",
+                          "type": "object",
+                          "properties": {
+                            "identifier": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "url": {
+                              "format": "uri",
+                              "type": "string"
+                            }
+                          },
+                          "required": []
+                        },
+                        {
+                          "type": "array",
+                          "items": {
+                            "@type": "CreativeWork",
+                            "type": "object",
+                            "properties": {
+                              "identifier": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "url": {
+                                "format": "uri",
+                                "type": "string"
+                              }
+                            },
+                            "required": []
+                          }
+                        }
+                      ]
+                    },
+                    "url": {
+                      "format": "uri",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name"
+                  ]
+                }
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "duration": {
+            "description": "The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).",
+            "@type": "schema:Duration",
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": [],
+            "owl:cardinality": "one"
+          },
+          "endDate": {
+            "description": "The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).",
+            "oneOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "@type": "schema:DateTime",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": []
+              }
+            ],
+            "owl:cardinality": "one"
+          },
+          "eventStatus": {
+            "description": "An eventStatus of an event represents its status; particularly useful when an event is cancelled or rescheduled.",
+            "@type": "schema:EventStatusType",
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": [],
+            "owl:cardinality": "one"
+          },
+          "funder": {
+            "description": "A person or organization that supports (sponsors) something through some kind of financial contribution.",
+            "anyOf": [
+              {
+                "@type": "Organization",
+                "type": "object",
+                "properties": {
+                  "legalName": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "sameAs": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                }
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "Organization",
+                  "type": "object",
+                  "properties": {
+                    "legalName": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "sameAs": {
+                      "format": "uri",
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "@type": "Person",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "mainEntityOfPage": {
+                    "anyOf": [
+                      {
+                        "format": "uri",
+                        "type": "string"
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "format": "uri",
+                          "type": "string"
+                        }
+                      },
+                      {
+                        "@type": "CreativeWork",
+                        "type": "object",
+                        "properties": {
+                          "identifier": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "url": {
+                            "format": "uri",
+                            "type": "string"
+                          }
+                        },
+                        "required": []
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "@type": "CreativeWork",
+                          "type": "object",
+                          "properties": {
+                            "identifier": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "url": {
+                              "format": "uri",
+                              "type": "string"
+                            }
+                          },
+                          "required": []
+                        }
+                      }
+                    ]
+                  },
+                  "url": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name"
+                ]
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "Person",
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "mainEntityOfPage": {
+                      "anyOf": [
+                        {
+                          "format": "uri",
+                          "type": "string"
+                        },
+                        {
+                          "type": "array",
+                          "items": {
+                            "format": "uri",
+                            "type": "string"
+                          }
+                        },
+                        {
+                          "@type": "CreativeWork",
+                          "type": "object",
+                          "properties": {
+                            "identifier": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "url": {
+                              "format": "uri",
+                              "type": "string"
+                            }
+                          },
+                          "required": []
+                        },
+                        {
+                          "type": "array",
+                          "items": {
+                            "@type": "CreativeWork",
+                            "type": "object",
+                            "properties": {
+                              "identifier": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "url": {
+                                "format": "uri",
+                                "type": "string"
+                              }
+                            },
+                            "required": []
+                          }
+                        }
+                      ]
+                    },
+                    "url": {
+                      "format": "uri",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name"
+                  ]
+                }
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "inLanguage": {
+            "description": "The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].",
+            "oneOf": [
+              {
+                "@type": "schema:Language",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": []
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "location": {
+            "description": "The location of, for example, where an event is happening, where an organization is located, or where an action takes place.",
+            "oneOf": [
+              {
+                "@type": "Place",
+                "type": "object",
+                "properties": {
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "address": {
+                    "oneOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "@type": "PostalAddress",
+                        "type": "object",
+                        "properties": {
+                          "addressCountry": {
+                            "type": "string"
+                          },
+                          "streetAddress": {
+                            "type": "string"
+                          },
+                          "postalCode": {
+                            "type": "string"
+                          },
+                          "addressLocality": {
+                            "type": "string"
+                          },
+                          "addressRegion": {
+                            "type": "string"
+                          },
+                          "postOfficeBoxNumber": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                }
+              },
+              {
+                "@type": "PostalAddress",
+                "type": "object",
+                "properties": {
+                  "addressCountry": {
+                    "type": "string"
+                  },
+                  "streetAddress": {
+                    "type": "string"
+                  },
+                  "postalCode": {
+                    "type": "string"
+                  },
+                  "addressLocality": {
+                    "type": "string"
+                  },
+                  "addressRegion": {
+                    "type": "string"
+                  },
+                  "postOfficeBoxNumber": {
+                    "type": "string"
+                  }
+                }
+              },
+              {
+                "type": "string"
+              },
+              {
+                "@type": "schema:VirtualLocation",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": []
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "maximumAttendeeCapacity": {
+            "description": "The total number of individuals that may attend an event or venue.",
+            "type": "integer",
+            "owl:cardinality": "one"
+          },
+          "offers": {
+            "description": "An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc. This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of common types, it can be used in others. In that case, using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.\n      ",
+            "anyOf": [
+              {
+                "@type": "schema:Demand",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": []
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "schema:Demand",
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": []
+                }
+              },
+              {
+                "@type": "schema:Offer",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": []
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "schema:Offer",
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": []
+                }
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "organizer": {
+            "description": "An organizer of an Event.",
+            "anyOf": [
+              {
+                "@type": "Organization",
+                "type": "object",
+                "properties": {
+                  "legalName": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "sameAs": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                }
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "Organization",
+                  "type": "object",
+                  "properties": {
+                    "legalName": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "sameAs": {
+                      "format": "uri",
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "@type": "Person",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "mainEntityOfPage": {
+                    "anyOf": [
+                      {
+                        "format": "uri",
+                        "type": "string"
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "format": "uri",
+                          "type": "string"
+                        }
+                      },
+                      {
+                        "@type": "CreativeWork",
+                        "type": "object",
+                        "properties": {
+                          "identifier": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "url": {
+                            "format": "uri",
+                            "type": "string"
+                          }
+                        },
+                        "required": []
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "@type": "CreativeWork",
+                          "type": "object",
+                          "properties": {
+                            "identifier": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "url": {
+                              "format": "uri",
+                              "type": "string"
+                            }
+                          },
+                          "required": []
+                        }
+                      }
+                    ]
+                  },
+                  "url": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name"
+                ]
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "Person",
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "mainEntityOfPage": {
+                      "anyOf": [
+                        {
+                          "format": "uri",
+                          "type": "string"
+                        },
+                        {
+                          "type": "array",
+                          "items": {
+                            "format": "uri",
+                            "type": "string"
+                          }
+                        },
+                        {
+                          "@type": "CreativeWork",
+                          "type": "object",
+                          "properties": {
+                            "identifier": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "url": {
+                              "format": "uri",
+                              "type": "string"
+                            }
+                          },
+                          "required": []
+                        },
+                        {
+                          "type": "array",
+                          "items": {
+                            "@type": "CreativeWork",
+                            "type": "object",
+                            "properties": {
+                              "identifier": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "url": {
+                                "format": "uri",
+                                "type": "string"
+                              }
+                            },
+                            "required": []
+                          }
+                        }
+                      ]
+                    },
+                    "url": {
+                      "format": "uri",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name"
+                  ]
+                }
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "startDate": {
+            "description": "The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).",
+            "oneOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "@type": "schema:DateTime",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": []
+              }
+            ],
+            "owl:cardinality": "one"
+          },
+          "subEvent": {
+            "description": "An Event that is part of this event. For example, a conference event includes many presentations, each of which is a subEvent of the conference.",
+            "oneOf": [
+              {
+                "@type": "bioschemas:Event",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": []
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "bioschemas:Event",
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": []
+                }
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "superEvent": {
+            "description": "An event that this event is a part of. For example, a collection of individual music performances might each have a music festival as their superEvent.",
+            "oneOf": [
+              {
+                "@type": "bioschemas:Event",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": []
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "bioschemas:Event",
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": []
+                }
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "workFeatured": {
+            "description": "A work featured in some event, e.g. exhibited in an ExhibitionEvent.\n       Specific subproperties are available for workPerformed (e.g. a play), or a workPresented (a Movie at a ScreeningEvent).",
+            "oneOf": [
+              {
+                "@type": "CreativeWork",
+                "type": "object",
+                "properties": {
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                },
+                "required": []
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "CreativeWork",
+                  "type": "object",
+                  "properties": {
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "format": "uri",
+                      "type": "string"
+                    }
+                  },
+                  "required": []
+                }
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "alternateName": {
+            "description": "An alias for the item.",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "description": {
+            "description": "A description of the item.",
+            "type": "string",
+            "owl:cardinality": "one"
+          },
+          "image": {
+            "description": "An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].",
+            "oneOf": [
+              {
+                "@type": "ImageObject",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                },
+                "required": []
+              },
+              {
+                "format": "uri",
+                "type": "string"
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "name": {
+            "description": "The name of the item.",
+            "type": "string",
+            "owl:cardinality": "one"
+          },
+          "url": {
+            "description": "URL of the item.",
+            "format": "uri",
+            "type": "string",
+            "owl:cardinality": "many"
+          }
+        },
+        "required": [
+          "conformsTo",
+          "courseMode",
+          "location"
+        ],
+        "recommended": [
+          "instructor",
+          "endDate",
+          "inLanguage",
+          "offers",
+          "startDate",
+          "url"
+        ],
+        "optional": [
+          "courseWorkload",
+          "contributor",
+          "duration",
+          "eventStatus",
+          "funder",
+          "maximumAttendeeCapacity",
+          "organizer",
+          "subEvent",
+          "superEvent",
+          "workFeatured",
+          "alternateName",
+          "description",
+          "image",
+          "name"
+        ]
+      }
+    }
+  ]
+}
