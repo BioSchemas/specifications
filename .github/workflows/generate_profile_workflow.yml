@@ -59,7 +59,7 @@ jobs:
         run: |
           echo "the date is:" date
           today=`date +%F`
-          timing=`date +%F`
+          timing=`time /T`
           branch_name=$today-$timing
           echo $branch_name
           cd bioschemas.github.io
