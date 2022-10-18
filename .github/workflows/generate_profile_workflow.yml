@@ -77,8 +77,6 @@ jobs:
           token: '${{secrets.Sahar_Workflows_Token}}'
       
       - name: Commit and Push the changes in the website
-        with:
-          super_secret: ${{secrets.Sahar_Workflows_Token}}
         run: | 
           cd bioschemas.github.io
           git config user.name "sahar-frikha"
