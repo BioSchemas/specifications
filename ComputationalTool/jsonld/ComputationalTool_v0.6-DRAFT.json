@@ -14,7 +14,7 @@
             "schema:schemaVersion": [
                 "https://bioschemas.org/profiles/ComputationalTool/0.6-DRAFT"
             ],
-            "rdfs:label": "ComputationalTool",
+            "rdfs:label": "ddddddd",
             "rdfs:subClassOf": {
                 "@id": "schema:eee"
             },
@@ -765,35 +765,35 @@
             }
         },
         {
-          "@id": "bioschemas:codeRepository",
-          "@type": "rdf:Property",
-          "rdfs:comment": "Link to the source code repository of the tool.",
-          "rdfs:label": "codeRepository",
-          "schema:domainIncludes": {
-            "@id": "bioschemas:ComputationalTool"
-          },
-          "schema:rangeIncludes": [
-            {
-              "@id": "schema:URL"
-            }
-          ]
+            "@id": "bioschemas:codeRepository",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Link to the source code repository of the tool.",
+            "rdfs:label": "codeRepository",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ComputationalTool"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:URL"
+                }
+            ]
         },
         {
-          "@id": "bioschemas:programmingLanguage",
-          "@type": "rdf:Property",
-          "rdfs:comment": "The main programming language(s) used to build or execute the tool. Please use terms from the ‘Programming language’ table in the Bio.Tools documentation",
-          "rdfs:label": "programmingLanguage",
-          "schema:domainIncludes": {
-            "@id": "bioschemas:ComputationalTool"
-          },
-          "schema:rangeIncludes": [
-            {
-              "@id": "schema:Text"
+            "@id": "bioschemas:programmingLanguage",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The main programming language(s) used to build or execute the tool. Please use terms from the ‘Programming language’ table in the Bio.Tools documentation",
+            "rdfs:label": "programmingLanguage",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ComputationalTool"
             },
-            {
-              "@id": "schema:ComputerLanguage"
-            }
-          ]
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:ComputerLanguage"
+                }
+            ]
         },
         {
             "@id": "edam:has_input",

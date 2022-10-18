@@ -4,6 +4,9 @@
 name: generate-profile
   
 on: [push]
+#  pull_request:
+#    types: [opened, reopened]
+
 jobs:
   generate-profile:
     runs-on: ubuntu-latest
@@ -52,15 +55,15 @@ jobs:
           git pull
           ls
 
-      - name: Checkout a new branch
+      - name: Checkout a new branch - Website repository
         run: |
-          echo "the workflow has runed at:" 
-          date
-          today=`date +%F`
+          today= `date +%F`
+          timing= `time +%F`
+          branch_name= %today%-%timing%
           cd bioschemas.github.io
           git checkout profile-auto-generation
           git pull
-          git checkout -b $today
+          git checkout -b $branch_name
           cd ..
 
       - name: Execute the Python Script
@@ -83,8 +86,11 @@ jobs:
           git config user.email "sahar.frikha1@gmail.com"
           git add .
           git commit -m "Updating Profile"  # How to commit with a specific msg
-          today=`date +%F`
-          git push --set-upstream origin $today
+          today= `date +%F`
+          timing= `time +%F`
+          branch_name= %today%-%timing%
+          git push --set-upstream origin $tbranch_nameoday
+          hub pull-request -m "The profile is now created and the branch is ready to be merged" -b master -h $branch_name
 
       - name: End Workflow
         run: |
