@@ -60,7 +60,7 @@ jobs:
           cd bioschemas.github.io
           git checkout profile-auto-generation
           git pull
-          git checkout -b `date +%Y/%m/%d-%H:%M:%S`
+          git checkout -b `date +%Y_%m_%d-%H_%M_%S`
           cd ..
 
       - name: Execute the Python Script
