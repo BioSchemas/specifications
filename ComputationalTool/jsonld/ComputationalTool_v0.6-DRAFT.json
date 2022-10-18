@@ -16,7 +16,7 @@
             ],
             "rdfs:label": "ddddddd",
             "rdfs:subClassOf": {
-                "@id": "schema:eee"
+                "@id": "sssss:eee"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
