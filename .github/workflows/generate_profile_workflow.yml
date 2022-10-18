@@ -57,7 +57,7 @@ jobs:
 
       - name: Checkout a new branch - Website repository
         run: |
-          echo "the date is:" date
+          date '+%Y/%m/%d %H:%M:%S'
           today=`date +%F`
           timing=`time /T`
           branch_name=$today-$timing
