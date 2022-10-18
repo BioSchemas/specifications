@@ -57,7 +57,7 @@ jobs:
 
       - name: Checkout a new branch - Website repository
         run: |
-          date '+%Y/%m/%d %H:%M:%S'
+          hey= date '+%Y/%m/%d-%H:%M:%S'
           today=`date +%F`
           timing=`time`
           branch_name=$today-$timing
@@ -65,7 +65,7 @@ jobs:
           cd bioschemas.github.io
           git checkout profile-auto-generation
           git pull
-          git checkout -b $branch_name
+          git checkout -b $hey
           cd ..
 
       - name: Execute the Python Script
