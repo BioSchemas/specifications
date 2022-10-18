@@ -58,8 +58,9 @@ jobs:
       - name: Checkout a new branch - Website repository
         run: |
           today= `date +%F`
-          timing= `time +%F`
+          timing= %time%
           branch_name= %today%-%timing%
+          echo branch_name
           cd bioschemas.github.io
           git checkout profile-auto-generation
           git pull
