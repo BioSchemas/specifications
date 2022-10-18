@@ -121,7 +121,7 @@
                             {
                                 "type": "array",
                                 "items": {
-                                    "$ref": "#/definitions/creativework"
+                                    "$ref": "#/sss/creativework"
                                 }
                             },
                             {
