@@ -58,7 +58,7 @@ jobs:
       - name: Checkout a new branch - Website repository
         run: |
           today= `date +%Y/%m/%d-%H:%M:%S`
-          echo $today
+          echo today
           cd bioschemas.github.io
           git checkout profile-auto-generation
           git pull
