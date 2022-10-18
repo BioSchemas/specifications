@@ -83,11 +83,8 @@ jobs:
           git config user.email "sahar.frikha1@gmail.com"
           git add .
           git commit -m "Updating Profile"  # How to commit with a specific msg
-          today= `date +%F`
-          timing= `time +%F`
-          branch_name= %today%-%timing%
-          git push --set-upstream origin $tbranch_nameoday
-          hub pull-request -m "The profile is now created and the branch is ready to be merged" -b master -h $branch_name
+          git push --set-upstream origin `date +%Y_%m_%d-%H_%M_%S`
+          hub pull-request -m "The profile is now created and the branch is ready to be merged" -b master -h `date +%Y_%m_%d-%H_%M_%S`
 
       - name: End Workflow
         run: |
