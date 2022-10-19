@@ -23,11 +23,11 @@ d = {}
 for doc in docs:
     try:
         for k, v in doc.items():
-            print(k, "->", v)
+            # print(k, "->", v)
             d[k] = v
-            print("\n")
+            # print("\n")
     except Exception as e:
-        print(e)
+        print("This exception occured in parsing the YAML file", e)
 
 args = sys.argv
 
@@ -49,13 +49,19 @@ for arg in args:
             )
 
             if profile_name in d.keys():
-                print(Fore.GREEN + str(d[profile_name]) + Style.RESET_ALL)
+                print(
+                    Fore.GREEN + "Before the change:",
+                    str(d[profile_name]) + Style.RESET_ALL,
+                )
                 if arg.split("-")[1].split(".")[0] == "DRAFT":
                     d[profile_name]["latest_publication"] = profile_version
 
                 elif arg.split("-")[1].split(".")[0] == "RELEASE":
                     d[profile_name]["latest_release"] = profile_version
-                print(Fore.LIGHTGREEN_EX + str(d[profile_name]) + Style.RESET_ALL)
+                print(
+                    Fore.LIGHTGREEN_EX + "After the update:",
+                    str(d[profile_name]) + Style.RESET_ALL,
+                )
 
 print(
     Fore.YELLOW + "Profile versions updated " + profile_verions_file + Style.RESET_ALL
