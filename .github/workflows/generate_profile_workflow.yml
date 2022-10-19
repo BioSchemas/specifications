@@ -88,6 +88,7 @@ jobs:
           cd bioschemas.github.io
           git config user.name "sahar-frikha"
           git config user.email "sahar.frikha1@gmail.com"
+          git status
           git add .
           git commit -m "Updating Profile"
           git push --set-upstream origin `date +%Y_%m_%d-%H_%M_%S`
