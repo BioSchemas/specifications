@@ -13,8 +13,7 @@ from yaml.loader import SafeLoader
 ## Main Script
 print(Fore.YELLOW + "Started updating profile versions config file" + Style.RESET_ALL)
 
-profile_verions_file = "profile_versions.yaml"
-# profile_verions_file = "./bioschemas.github.io/_data/profile_versions.yaml"
+profile_verions_file = "./bioschemas.github.io/_data/profile_versions.yaml"
 
 stream = open(profile_verions_file, "r")
 docs = yaml.load_all(stream, yaml.FullLoader)
