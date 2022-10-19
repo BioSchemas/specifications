@@ -25,6 +25,14 @@ if path.exists(profile_verions_file):
         except yaml.YAMLError as exc:
             print(exc)
 
+    stream = open("test", "r")
+    docs = yaml.load_all(stream, yaml.FullLoader)
+    for doc in docs:
+        for k,v in doc.items():
+            print (k, "->", v)
+        print ("\n"),
+
+
     print(
         Style.BRIGHT
         + "Profile versions updated "
