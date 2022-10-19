@@ -128,7 +128,7 @@
                                 "type": "string"
                             },
                             {
-                                "type": "array",
+                                "type": "hdfgd",
                                 "items": {
                                     "type": "string"
                                 }

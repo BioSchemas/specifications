@@ -84,8 +84,9 @@ jobs:
           git add .
           git commit -m "Updating Profile"  # How to commit with a specific msg
           git push --set-upstream origin `date +%Y_%m_%d-%H_%M_%S`
-          gh pr create -h `date +%Y_%m_%d-%H_%M_%S`
+          gh pr create
 
+#          hub pull-request -m "The profile is now created and the branch is ready to be merged" -b master -h `date +%Y_%m_%d-%H_%M_%S`
       - name: End Workflow
         run: |
           echo "Check the Website !"
