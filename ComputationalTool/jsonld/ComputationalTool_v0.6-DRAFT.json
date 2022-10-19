@@ -32,7 +32,7 @@
                             {
                                 "type": "array",
                                 "items": {
-                                    "type": "strissssng",
+                                    "type": "ssss",
                                     "format": "uri"
                                 }
                             }
