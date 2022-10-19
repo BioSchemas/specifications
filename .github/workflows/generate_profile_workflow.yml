@@ -5,7 +5,7 @@ name: generate-profile
   
 on: [push]
 #  pull_request:
-#    types: [opened, reopened]
+#    types: [closed]
 
 env:
   GH_TOKEN: ${{ secrets.Sahar_Workflows_Token }}
