@@ -1,0 +1,1372 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "temperary": "https://discovery.biothings.io/view/temperary/",
+    "bioschemas": "https://discovery.biothings.io/view/bioschemas/"
+  },
+  "@graph": [
+    {
+      "@id": "temperary:ComputationalTool",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Trash HhhhhhhhhhhhhTrash HhhhhhhhhhhhhTrash HhhhhhhhhhhhhTrash HhhhhhhhhhhhhTrash HhhhhhhhhhhhhTrash Hhhhhhhhhhhhh",
+      "rdfs:label": "ComputationalTool",
+      "rdfs:subClassOf": {
+        "@id": "bioschemas:ComputationalTool"
+      },
+      "$validation": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "codeRepository": {
+            "description": "Link to the source code repository of the tool.",
+            "oneOf": [
+              {
+                "format": "uri",
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "format": "uri",
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "programmingLanguage": {
+            "description": "The main programming language(s) used to build or execute the tool. Please use terms from the ‘Programming language’ table in the Bio.Tools documentation",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              {
+                "@type": "ComputerLanguage",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": []
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "ComputerLanguage",
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": []
+                }
+              }
+            ]
+          },
+          "conformsTo": {
+            "description": "Used to state the Bioschemas profile that the markup relates to. The versioned URL of the profile must be used. Note that we use a CURIE in the table here but the full URL for Dublin Core terms must be used in the markup (http://purl.org/dc/terms/conformsTo), see example.",
+            "@type": "CreativeWork",
+            "type": "object",
+            "properties": {
+              "identifier": {
+                "oneOf": [
+                  {
+                    "enum": [
+                      "https://github.com/BioSchemas/specifications/blob/master/ComputationalTool/jsonld/ComputationalTool_v1.0-RELEASE.json"
+                    ]
+                  },
+                  {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                ],
+                "description": "The url of the version bioschemas profile that was used. For jsonschema, set @id to the identifier"
+              }
+            },
+            "required": [
+              "identifier"
+            ]
+          },
+          "applicationCategory": {
+            "description": "Type of software application, e.g. 'Game, Multimedia'.",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "format": "uri",
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              {
+                "type": "array",
+                "items": {
+                  "format": "uri",
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "applicationSubCategory": {
+            "description": "Subcategory of the application, e.g. 'Arcade Game'.",
+            "oneOf": [
+              {
+                "vocabulary": {
+                  "children_of": [
+                    "http://edamontology.org/topic_0003"
+                  ],
+                  "property": {
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "format": "uri",
+                      "type": "string"
+                    }
+                  },
+                  "ontology": [
+                    "edamTopic"
+                  ]
+                },
+                "@type": "DefinedTerm",
+                "type": "object",
+                "strict": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "vocabulary": {
+                    "children_of": [
+                      "http://edamontology.org/topic_0003"
+                    ],
+                    "property": {
+                      "identifier": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "url": {
+                        "format": "uri",
+                        "type": "string"
+                      }
+                    },
+                    "ontology": [
+                      "edamTopic"
+                    ]
+                  },
+                  "@type": "DefinedTerm",
+                  "type": "object",
+                  "strict": false
+                }
+              }
+            ]
+          },
+          "applicationSuite": {
+            "description": "The name of the application suite to which the application belongs (e.g. Excel belongs to Office).",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "downloadUrl": {
+            "description": "If the file can be downloaded, URL to download the binary.",
+            "oneOf": [
+              {
+                "format": "uri",
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "format": "uri",
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "featureList": {
+            "description": "Features or modules provided by this application (and possibly required by other applications).",
+            "anyOf": [
+              {
+                "vocabulary": {
+                  "children_of": [
+                    "http://edamontology.org/operation_0004"
+                  ],
+                  "property": {
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "format": "uri",
+                      "type": "string"
+                    }
+                  },
+                  "ontology": [
+                    "edamOperation"
+                  ]
+                },
+                "@type": "DefinedTerm",
+                "type": "object",
+                "strict": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "vocabulary": {
+                    "children_of": [
+                      "http://edamontology.org/operation_0004"
+                    ],
+                    "property": {
+                      "identifier": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "url": {
+                        "format": "uri",
+                        "type": "string"
+                      }
+                    },
+                    "ontology": [
+                      "edamOperation"
+                    ]
+                  },
+                  "@type": "DefinedTerm",
+                  "type": "object",
+                  "strict": false
+                }
+              },
+              {
+                "format": "uri",
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "format": "uri",
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "operatingSystem": {
+            "description": "Operating systems supported (Windows 7, OSX 10.6, Android 1.6).",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "softwareAddOn": {
+            "description": "Additional content for a software application.",
+            "oneOf": [
+              {
+                "@type": "SoftwareApplication",
+                "type": "object",
+                "properties": {
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                },
+                "required": []
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "SoftwareApplication",
+                  "type": "object",
+                  "properties": {
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "format": "uri",
+                      "type": "string"
+                    }
+                  },
+                  "required": []
+                }
+              }
+            ]
+          },
+          "softwareHelp": {
+            "description": "Software application help.",
+            "oneOf": [
+              {
+                "@type": "CreativeWork",
+                "type": "object",
+                "properties": {
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                },
+                "required": []
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "CreativeWork",
+                  "type": "object",
+                  "properties": {
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "format": "uri",
+                      "type": "string"
+                    }
+                  },
+                  "required": []
+                }
+              }
+            ]
+          },
+          "softwareVersion": {
+            "description": "Version of the software instance.",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "author": {
+            "description": "The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.",
+            "anyOf": [
+              {
+                "@type": "Organization",
+                "type": "object",
+                "properties": {
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "alternateName": {
+                    "type": "string"
+                  }
+                }
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "Organization",
+                  "type": "object",
+                  "properties": {
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "alternateName": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "@type": "Person",
+                "type": "object",
+                "properties": {
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "affiliation": {
+                    "oneOf": [
+                      {
+                        "@type": "Organization",
+                        "type": "object",
+                        "properties": {
+                          "identifier": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "alternateName": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "@type": "Organization",
+                          "type": "object",
+                          "properties": {
+                            "identifier": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "alternateName": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "givenName": {
+                    "type": "string"
+                  },
+                  "familyName": {
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "alternateName": {
+                    "type": "string"
+                  }
+                }
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "Person",
+                  "type": "object",
+                  "properties": {
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "affiliation": {
+                      "oneOf": [
+                        {
+                          "@type": "Organization",
+                          "type": "object",
+                          "properties": {
+                            "identifier": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "alternateName": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        {
+                          "type": "array",
+                          "items": {
+                            "@type": "Organization",
+                            "type": "object",
+                            "properties": {
+                              "identifier": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "alternateName": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "identifier": {
+                        "type": "string"
+                      },
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "alternateName": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "citation": {
+            "description": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+            "oneOf": [
+              {
+                "@type": "CreativeWork",
+                "description": "A citation object for a resource.",
+                "type": "object",
+                "properties": {
+                  "identifier": {
+                    "description": "An identifier associated with the citation",
+                    "type": "string"
+                  },
+                  "name": {
+                    "description": "Name of or title of the citation",
+                    "type": "string"
+                  },
+                  "pmid": {
+                    "description": "A pubmed identifier if available",
+                    "type": "string"
+                  },
+                  "url": {
+                    "format": "uri",
+                    "description": "The url of the resource cited",
+                    "type": "string"
+                  },
+                  "doi": {
+                    "description": "A doi if available",
+                    "type": "string"
+                  },
+                  "citeText": {
+                    "description": "The bibliographic citation for the referenced resource as is provided",
+                    "type": "string"
+                  }
+                },
+                "required": []
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "CreativeWork",
+                  "description": "A citation object for a resource.",
+                  "type": "object",
+                  "properties": {
+                    "identifier": {
+                      "description": "An identifier associated with the citation",
+                      "type": "string"
+                    },
+                    "name": {
+                      "description": "Name of or title of the citation",
+                      "type": "string"
+                    },
+                    "pmid": {
+                      "description": "A pubmed identifier if available",
+                      "type": "string"
+                    },
+                    "url": {
+                      "format": "uri",
+                      "description": "The url of the resource cited",
+                      "type": "string"
+                    },
+                    "doi": {
+                      "description": "A doi if available",
+                      "type": "string"
+                    },
+                    "citeText": {
+                      "description": "The bibliographic citation for the referenced resource as is provided",
+                      "type": "string"
+                    }
+                  },
+                  "required": []
+                }
+              }
+            ]
+          },
+          "contributor": {
+            "description": "A secondary contributor to the CreativeWork or Event.",
+            "anyOf": [
+              {
+                "@type": "Organization",
+                "type": "object",
+                "properties": {
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "alternateName": {
+                    "type": "string"
+                  }
+                }
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "Organization",
+                  "type": "object",
+                  "properties": {
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "alternateName": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "@type": "Person",
+                "type": "object",
+                "properties": {
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "affiliation": {
+                    "oneOf": [
+                      {
+                        "@type": "Organization",
+                        "type": "object",
+                        "properties": {
+                          "identifier": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "alternateName": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "@type": "Organization",
+                          "type": "object",
+                          "properties": {
+                            "identifier": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "alternateName": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "givenName": {
+                    "type": "string"
+                  },
+                  "familyName": {
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "alternateName": {
+                    "type": "string"
+                  }
+                }
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "Person",
+                  "type": "object",
+                  "properties": {
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "affiliation": {
+                      "oneOf": [
+                        {
+                          "@type": "Organization",
+                          "type": "object",
+                          "properties": {
+                            "identifier": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "alternateName": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        {
+                          "type": "array",
+                          "items": {
+                            "@type": "Organization",
+                            "type": "object",
+                            "properties": {
+                              "identifier": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "alternateName": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "identifier": {
+                        "type": "string"
+                      },
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "alternateName": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "discussionUrl": {
+            "description": "A link to the page containing the comments of the CreativeWork.",
+            "oneOf": [
+              {
+                "format": "uri",
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "format": "uri",
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "funder": {
+            "description": "A person or organization that supports (sponsors) something through some kind of financial contribution.",
+            "anyOf": [
+              {
+                "@type": "Organization",
+                "type": "object",
+                "properties": {
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "alternateName": {
+                    "type": "string"
+                  }
+                }
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "Organization",
+                  "type": "object",
+                  "properties": {
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "alternateName": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "@type": "Person",
+                "type": "object",
+                "properties": {
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "affiliation": {
+                    "oneOf": [
+                      {
+                        "@type": "Organization",
+                        "type": "object",
+                        "properties": {
+                          "identifier": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "alternateName": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "@type": "Organization",
+                          "type": "object",
+                          "properties": {
+                            "identifier": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "alternateName": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "givenName": {
+                    "type": "string"
+                  },
+                  "familyName": {
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "alternateName": {
+                    "type": "string"
+                  }
+                }
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "Person",
+                  "type": "object",
+                  "properties": {
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "affiliation": {
+                      "oneOf": [
+                        {
+                          "@type": "Organization",
+                          "type": "object",
+                          "properties": {
+                            "identifier": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "alternateName": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        {
+                          "type": "array",
+                          "items": {
+                            "@type": "Organization",
+                            "type": "object",
+                            "properties": {
+                              "identifier": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "alternateName": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "givenName": {
+                      "type": "string"
+                    },
+                    "familyName": {
+                      "identifier": {
+                        "type": "string"
+                      },
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "alternateName": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "hasPart": {
+            "description": "Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
+            "oneOf": [
+              {
+                "@type": "CreativeWork",
+                "type": "object",
+                "properties": {
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                },
+                "required": []
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "CreativeWork",
+                  "type": "object",
+                  "properties": {
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "format": "uri",
+                      "type": "string"
+                    }
+                  },
+                  "required": []
+                }
+              }
+            ]
+          },
+          "isAccessibleForFree": {
+            "description": "A flag to signal that the item, event, or place is accessible for free.",
+            "type": "boolean"
+          },
+          "isBasedOn": {
+            "description": "A resource from which this work is derived or from which it is a modification or adaption.",
+            "anyOf": [
+              {
+                "@type": "CreativeWork",
+                "type": "object",
+                "properties": {
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                },
+                "required": []
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "CreativeWork",
+                  "type": "object",
+                  "properties": {
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "format": "uri",
+                      "type": "string"
+                    }
+                  },
+                  "required": []
+                }
+              },
+              {
+                "@type": "Product",
+                "type": "object",
+                "properties": {
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                },
+                "required": []
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "Product",
+                  "type": "object",
+                  "properties": {
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "format": "uri",
+                      "type": "string"
+                    }
+                  },
+                  "required": []
+                }
+              },
+              {
+                "format": "uri",
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "format": "uri",
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "isPartOf": {
+            "description": "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.",
+            "oneOf": [
+              {
+                "@type": "CreativeWork",
+                "type": "object",
+                "properties": {
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                },
+                "required": []
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "CreativeWork",
+                  "type": "object",
+                  "properties": {
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "format": "uri",
+                      "type": "string"
+                    }
+                  },
+                  "required": []
+                }
+              }
+            ]
+          },
+          "keywords": {
+            "description": "Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "license": {
+            "description": "A license document that applies to this content, typically indicated by URL.",
+            "anyOf": [
+              {
+                "@type": "CreativeWork",
+                "type": "object",
+                "properties": {
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                },
+                "required": []
+              },
+              {
+                "format": "uri",
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "CreativeWork",
+                  "type": "object",
+                  "properties": {
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "format": "uri",
+                      "type": "string"
+                    }
+                  },
+                  "required": []
+                }
+              },
+              {
+                "type": "array",
+                "items": {
+                  "format": "uri",
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "provider": {
+            "description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.",
+            "anyOf": [
+              {
+                "@type": "Organization",
+                "type": "object",
+                "properties": {
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "alternateName": {
+                    "type": "string"
+                  }
+                }
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "Organization",
+                  "type": "object",
+                  "properties": {
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "alternateName": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "thumbnailUrl": {
+            "description": "A thumbnail image relevant to the Thing.",
+            "format": "uri",
+            "type": "string"
+          },
+          "description": {
+            "description": "A description of the item.",
+            "type": "string"
+          },
+          "identifier": {
+            "description": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.\n        ",
+            "anyOf": [
+              {
+                "@type": "PropertyValue",
+                "type": "object",
+                "properties": {
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "required": []
+              },
+              {
+                "type": "array",
+                "items": {
+                  "@type": "PropertyValue",
+                  "type": "object",
+                  "properties": {
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": []
+                }
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              {
+                "format": "uri",
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "format": "uri",
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "name": {
+            "description": "The name of the item.",
+            "type": "string"
+          },
+          "url": {
+            "description": "URL of the item.",
+            "format": "uri",
+            "type": "string"
+          }
+        },
+        "required": [
+          "conformsTo",
+          "description",
+          "name",
+          "url"
+        ],
+        "recommended": [
+          "applicationCategory",
+          "applicationSubCategory",
+          "featureList",
+          "softwareVersion",
+          "author",
+          "citation",
+          "license"
+        ],
+        "optional": [
+          "codeRepository",
+          "programmingLanguage",
+          "applicationSuite",
+          "downloadUrl",
+          "operatingSystem",
+          "softwareAddOn",
+          "softwareHelp",
+          "contributor",
+          "discussionUrl",
+          "funder",
+          "hasPart",
+          "isAccessibleForFree",
+          "isBasedOn",
+          "isPartOf",
+          "keywords",
+          "provider",
+          "thumbnailUrl",
+          "identifier"
+        ]
+      }
+    }
+  ]
+}
