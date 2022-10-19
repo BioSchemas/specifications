@@ -11,7 +11,7 @@
       "@id": "temperary:ComputationalTool",
       "@type": "rdfs:Class",
       "rdfs:comment": "Trash  dddddqsdqsdd dddHhhhhhhhhhhhhTrash HhhhhhhhhhhhhTrash HhhhhhhhhhhhhTrash Hhhhhhhhhhhhh",
-      "rdfs:label": "ComputationalTool",
+      "rdfs:label": "ComputationadddlTool",
       "rdfs:subClassOf": {
         "@id": "bioschemas:ComputationalTool"
       },
