@@ -58,7 +58,7 @@
                             },
                             {
                                 "type": "array",
-                                "items": {
+                                "items": {c
                                     "type": "string"
                                 }
                             },

@@ -8,7 +8,7 @@ import csv
 from os import path
 from os import listdir
 from os.path import isfile, join
-
+from yaml.loader import SafeLoader
 
 ## Main Script
 print(Fore.YELLOW + "Started updating profile versions config file" + Style.RESET_ALL)
@@ -19,7 +19,7 @@ if path.exists(profile_verions_file):
     print("file esists")
 
     with open(profile_verions_file) as f:
-        data = yaml.parse(f)
+        data = yaml.load(f, Loader=SafeLoader)
         print(data)
 
     print(
