@@ -29,6 +29,7 @@ for arg in args:
                 Fore.LIGHTBLUE_EX
                 + "profile name and version: "
                 + profile_name
+                + ", "
                 + profile_version
                 + Style.RESET_ALL
             )
@@ -36,7 +37,7 @@ for arg in args:
             stream = open(profile_verions_file, "r")
             docs = yaml.load_all(stream, yaml.FullLoader)
 
-            d = dict()
+            d = {}
 
             for doc in docs:
                 for k, v in doc.items():
