@@ -63,6 +63,9 @@ for arg in args:
                     str(d[profile_name]) + Style.RESET_ALL,
                 )
 
+f = open(profile_verions_file, "w+")
+yaml.dump(d, f, allow_unicode=True)
+
 print(
     Fore.YELLOW + "Profile versions updated " + profile_verions_file + Style.RESET_ALL
 )
