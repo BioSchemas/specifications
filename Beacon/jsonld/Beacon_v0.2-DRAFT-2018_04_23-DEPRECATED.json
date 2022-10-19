@@ -12,7 +12,7 @@
             "@id": "bioschemasdeprecated:Beacon",
             "@type": "rdfs:Class",
             "owl:deprecated": "True",
-            "rdfs:comment": "A convention for beacon to self-describe.  In this document we propose a simple way for a beacons to self-describe their genetic variant cardinality service for better integration with other beacons within the beacon-network. It builds upon the Beacon service API and uses existing schema.org entities and properties.  Version: 0.2-DRAFT-2018_04_23",
+            "rdfs:comment": "A ddd for beacon to self-describe.  In this document we propose a simple way for a beacons to self-describe their genetic variant cardinality service for better integration with other beacons within the beacon-network. It builds upon the Beacon service API and uses existing schema.org entities and properties.  Version: 0.2-DRAFT-2018_04_23",
             "schema:schemaVersion": [
                 "https://bioschemas.org/profiles/Beacon/0.2-DRAFT-2018_04_23"
             ],

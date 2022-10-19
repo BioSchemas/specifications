@@ -10,20 +10,20 @@
         {
             "@id": "bioschemas:ComputationalTool",
             "@type": "rdfs:Class",
-            "rdfs:comment": " specification for describing a  in the Life Sciences The Life Science Tools specification provides a way to describe bioscience tools and software on the World Wide Web. It defines a set of metadata and vocabularies, built on top of existing technologies and standards, that can be used to represent such tools in Web pages and applications. The goal of the specification is to make it easier to discover, exchange and integrate information about life science tools across the Internet. <h3>Summary of Changes</h3> <p>Changes since the 0.4-DRAFT of the tools profile:</p> <ul> <li>Profile name changed from Tool to ComputationalTool</li> <li>outputData and outputFormat replaced with serviceOutput</li> <li>Expected types of additionalType changed from Text to URL</li> <li>Expected types of applicationCategory extended to include URL</li> <li>Expected types of applicationSubCategory extended to include URL</li> <li>inputData and inputFormat replaced with edam:has_input </li> <li>Expected types of featureList extended to include Text</li> <li>Expected types of provider extended to include Person</li> </ul> Version: 0.5-DRAFT",
+            "rdfs:comment": " specification for describing a  ddin the Life Sciences The Life Science Tools specification provides a way to describe bioscience tools and software on the World Wide Web. It defines a set of metadata and vocabularies, built on top of existing technologies and standards, that can be used to represent such tools in Web pages and applications. The goal of the specification is to make it easier to discover, exchange and integrate information about life science tools across the Internet. <h3>Summary of Changes</h3> <p>Changes since the 0.4-DRAFT of the tools profile:</p> <ul> <li>Profile name changed from Tool to ComputationalTool</li> <li>outputData and outputFormat replaced with serviceOutput</li> <li>Expected types of additionalType changed from Text to URL</li> <li>Expected types of applicationCategory extended to include URL</li> <li>Expected types of applicationSubCategory extended to include URL</li> <li>inputData and inputFormat replaced with edam:has_input </li> <li>Expected types of featureList extended to include Text</li> <li>Expected types of provider extended to include Person</li> </ul> Version: 0.5-DRAFT",
             "schema:schemaVersion": [
-                "https://bioschemas.org/profiles/ComputationalTool/0.5-DRAFT"
+                "https://bioschemas.org/profiles/ComputationalTool/0.6-DRAFT"
             ],
-            "rdfs:label": "ComputationalTool",
+            "rdfs:label": "ddddddd",
             "rdfs:subClassOf": {
-                "@id": "schema:eee"
+                "@id": "sssss:eee"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
                 "type": "object",
                 "properties": {
                     "additionalType": {
-                        "description": "Type of tool e.g. Command-line tool, Web app etc.\n**Note:** Bioschemas have changed [URL](http://schema.org/URL) to [Text](http://schema.org/Text) in the Expected Types. This will be reverted once Bio.Tools provides stable URIs for tool types. An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+                        "description": "fffff of tool e.g. Comddddmand-line tool, Web app etc.\n**Note:** Bioschemas have changed [URL](http://schema.org/URL) to [Text](http://schema.org/Text) in the Expected Types. This will be reverted once Bio.Tools provides stable URIs for tool types. An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
                         "oneOf": [
                             {
                                 "type": "string",
@@ -32,14 +32,14 @@
                             {
                                 "type": "array",
                                 "items": {
-                                    "type": "string",
+                                    "type": "ssss",
                                     "format": "uri"
                                 }
                             }
                         ]
                     },
                     "applicationCategory": {
-                        "description": "The high-level category in the global context, **please always use \"Computational science tool\"**. Type of software application, e.g. 'Game, Multimedia'.",
+                        "description": "The high-level ssss dd tzzhe global context, **please always use \"Computational science tool\"**. Type of software application, e.g. 'Game, Multimedia'.",
                         "oneOf": [
                             {
                                 "type": "string"
@@ -121,14 +121,14 @@
                             {
                                 "type": "array",
                                 "items": {
-                                    "$ref": "#/definitions/creativework"
+                                    "$ref": "#/sss/ttttt"
                                 }
                             },
                             {
                                 "type": "string"
                             },
                             {
-                                "type": "array",
+                                "type": "hdfgd",
                                 "items": {
                                     "type": "string"
                                 }
@@ -136,7 +136,7 @@
                         ]
                     },
                     "codeRepository": {
-                        "description": "Link to the source code repository of the tool. Link to the repository where the un-compiled, human readable code and related code is located (SVN, github, CodePlex).",
+                        "description": "fffff to the ddd code repository of the tool. Link to the repository where the un-compiled, human readable code and related code is located (SVN, github, CodePlex).",
                         "oneOf": [
                             {
                                 "type": "string",
@@ -195,7 +195,7 @@
                         ]
                     },
                     "downloadUrl": {
-                        "description": "A link to the downloadable(s). If the file can be downloaded, URL to download the binary.",
+                        "description": "A link to the sss(ssjjs). If the fcccccile can be downloaded, URL to download the binary.",
                         "oneOf": [
                             {
                                 "type": "string",
@@ -211,7 +211,7 @@
                         ]
                     },
                     "has_input": {
-                        "description": "This is equivalent to edam:has_input. It should be modelled as a MediaObject. ",
+                        "description": "This is errquivalent to edam:has_input. It should be modelled as a MediaObject. ",
                         "oneOf": [
                             {
                                 "$ref": "#/definitions/mediaobject"
@@ -765,35 +765,35 @@
             }
         },
         {
-          "@id": "bioschemas:codeRepository",
-          "@type": "rdf:Property",
-          "rdfs:comment": "Link to the source code repository of the tool.",
-          "rdfs:label": "codeRepository",
-          "schema:domainIncludes": {
-            "@id": "bioschemas:ComputationalTool"
-          },
-          "schema:rangeIncludes": [
-            {
-              "@id": "schema:URL"
-            }
-          ]
+            "@id": "bioschemas:codeRepository",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Link to the source code repository of the tool.",
+            "rdfs:label": "codeRepository",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ComputationalTool"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:URL"
+                }
+            ]
         },
         {
-          "@id": "bioschemas:programmingLanguage",
-          "@type": "rdf:Property",
-          "rdfs:comment": "The main programming language(s) used to build or execute the tool. Please use terms from the ‘Programming language’ table in the Bio.Tools documentation",
-          "rdfs:label": "programmingLanguage",
-          "schema:domainIncludes": {
-            "@id": "bioschemas:ComputationalTool"
-          },
-          "schema:rangeIncludes": [
-            {
-              "@id": "schema:Text"
+            "@id": "bioschemas:programmingLanguage",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The main programming language(s) used to build or execute the tool. Please use terms from the ‘Programming language’ table in the Bio.Tools documentation",
+            "rdfs:label": "programmingLanguage",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ComputationalTool"
             },
-            {
-              "@id": "schema:ComputerLanguage"
-            }
-          ]
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:ComputerLanguage"
+                }
+            ]
         },
         {
             "@id": "edam:has_input",

@@ -9,7 +9,7 @@
         {
             "@id": "bioschemas:Phenotype",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Bioschemas profile describing a Phenotype in Life Sciences This Phenotype type specification presents the markup for describing a Phenotype. Version: 0.1-DRAFT-2018_11_15",
+            "rdfs:comment": "Bioschemas ee describing a Phenotype in Life Sciences This Phenotype type specification presents the markup for describing a Phenotype. Version: 0.1-DRAFT-2018_11_15",
             "schema:schemaVersion": [
                 "https://bioschemas.org/profiles/Phenotype/0.1-DRAFT-2018_11_15"
             ],

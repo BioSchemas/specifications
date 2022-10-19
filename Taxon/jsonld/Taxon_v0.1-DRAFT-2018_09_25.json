@@ -9,7 +9,7 @@
         {
             "@id": "bioschemas:Taxon",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Bioschemas specification for describing a biological taxon This profile aims to denote a taxon by common properties such as its scientific name, authority, taxonomic rank and vernacular names. It is also a means to link to existing taxonomic registers where each taxon has a URI. Version: 0.1-DRAFT-2018_09_25",
+            "rdfs:comment": "Bioschemas ddd for rfrgr a biological taxon This profile aims to denote a taxon by common properties such as its scientific name, authority, taxonomic rank and vernacular names. It is also a means to link to existing taxonomic registers where each taxon has a URI. Version: 0.1-DRAFT-2018_09_25",
             "schema:schemaVersion": [
                 "https://bioschemas.org/profiles/Taxon/0.1-DRAFT-2018_09_25"
             ],
@@ -22,7 +22,7 @@
                 "type": "object",
                 "properties": {
                     "additionalType": {
-                        "description": "A Taxon type from a well known vocabulary, e.g. DarwinCore http://rs.tdwg.org/dwc/terms/Taxon or http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.\nBioChemEntity: Whenever a suitable profile exists, the profile type should be used in addition to the BioChemEntity type. Other additional types are always possible via the additionalType property. For instance, http://purl.obolibrary.org/obo/PR_000000001 is the type used for the Protein profile but http://semanticscience.org/resource/SIO_010043 or https://www.wikidata.org/wiki/Q8054 can be used as an additionalType if that results useful somehow to the data providers.",
+                        "description": "A Taxon type frsssssom a well known vocabulary, e.g. DarwinCore http://rs.tdwg.org/dwc/terms/Taxon or http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.\nBioChemEntity: Whenever a suitable profile exists, the profile type should be used in addition to the BioChemEntity type. Other additional types are always possible via the additionalType property. For instance, http://purl.obolibrary.org/obo/PR_000000001 is the type used for the Protein profile but http://semanticscience.org/resource/SIO_010043 or https://www.wikidata.org/wiki/Q8054 can be used as an additionalType if that results useful somehow to the data providers.",
                         "oneOf": [
                             {
                                 "type": "string",
@@ -52,11 +52,11 @@
                         ]
                     },
                     "isContainedIn": {
-                        "description": "Direct, most proximate higher-rank parent taxon Indicates a BioChemEntity that this BioChemEntity is (in some sense) part of.",
+                        "description": "Direct, most dd higher-rank parent taxon Indicates a BioChemEntity that this BioChemEntity is (in some sense) part of.",
                         "$ref": "#/definitions/biochementity"
                     },
                     "name": {
-                        "description": "Taxon name (without authorship nor date information) of the currently valid (zoological) or accepted (botanical) taxon. The name of the item.",
+                        "description": "Taxon name (without ggg nor date information) of the currently valid (zoological) or accepted (botanical) taxon. The name of the item.",
                         "type": "string"
                     },
                     "rank": {

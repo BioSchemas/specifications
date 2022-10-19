@@ -1,0 +1,103 @@
+# This workflow will generate/update a/the profile HTML page each time the 
+# DDE genrates and update a JSON-LD in the _data/specifications folder (repo) 
+
+name: generate-profile
+  
+on: [push]
+#  pull_request:
+#    types: [opened, reopened]
+
+env:
+  GH_TOKEN: ${{ secrets.Sahar_Workflows_Token }}
+
+jobs:
+  generate-profile:
+    runs-on: ubuntu-latest
+
+    steps: 
+
+      - name: Checkout Spec Repo and Retreive the Preceding Commit
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Get Changed Files
+        id: changed-files
+        uses: tj-actions/changed-files@v21
+
+      - name: List Changed Files
+        run: |
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            echo "$file was changed"
+          done
+
+      - name: Setup Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8 #install the python needed
+
+      - name: Install Python dependencies
+        uses: py-actions/py-dependency-install@v3
+        with:
+          path: "./.github/workflows/requirements.txt"
+
+      - name: Checkout the DDE repo
+        env:
+          GITHUB_TOKEN: ${{ secrets.Sahar_Workflows_Token }}
+        run: | 
+          git clone https://user:$GITHUB_TOKEN@github.com/BioSchemas/bioschemas-dde
+          git branch
+          ls
+
+      - name: Checkout the Website repo
+        env:
+          GITHUB_TOKEN: ${{ secrets.Sahar_Workflows_Token }}
+        run: | 
+          git clone https://user:$GITHUB_TOKEN@github.com/BioSchemas/bioschemas.github.io
+          cd bioschemas.github.io
+          git pull
+          ls
+
+      - name: Checkout a new branch - Website repository
+        run: |
+          cd bioschemas.github.io
+          git checkout profile-auto-generation
+          git pull
+          git checkout -b `date +%Y_%m_%d-%H_%M_%S`
+          cd ..
+
+      - name: Execute the config files update Python Script
+        run: |
+          python ./.github/workflows/config_file_update_script.py ${{steps.changed-files.outputs.all_changed_files}}
+
+      - name: Execute the profile rendering Python Script
+        run: |
+          python ./.github/workflows/profile_generation_script.py ${{steps.changed-files.outputs.all_changed_files}} bioschemas.github.io
+      
+      - name: Setup the Github TOKEN
+        uses: oleksiyrudenko/gha-git-credentials@v2-latest
+        with:
+          path: bioschemas.github.io
+          email: sahar.frikha1@gmail.com
+          name: sahar-frikha
+          actor: sahar-frikha
+          token: '${{secrets.Sahar_Workflows_Token}}'
+      
+      - name: Commit and Push the changes in the website
+        run: | 
+          cd bioschemas.github.io
+          git config user.name "sahar-frikha"
+          git config user.email "sahar.frikha1@gmail.com"
+          git status
+          git add .
+          git commit -m "Updating Profile"
+          git push --set-upstream -u origin `date +%Y_%m_%d-%H_%M_%S`
+      
+      - name: Create a pull request
+        run: |
+          cd bioschemas.github.io
+          gh pr create --title "Auto-Rendering Profile" --body "This pull request has been created by a guithub action, after adding/updating a profile in the specifications repo."
+
+      - name: End Workflow
+        run: |
+          echo "Check the Website !"

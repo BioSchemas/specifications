@@ -10,9 +10,9 @@
         {
             "@id": "bioschemas:ComputationalTool",
             "@type": "rdfs:Class",
-            "rdfs:comment": " specification for describing a  in the Life Sciences The Life Science Tools specification provides a way to describe bioscience tools and software on the World Wide Web. It defines a set of metadata and vocabularies, built on top of existing technologies and standards, that can be used to represent such tools in Web pages and applications. The goal of the specification is to make it easier to discover, exchange and integrate information about life science tools across the Internet. <h3>Summary of Changes</h3> <p>Changes since the 0.4-DRAFT of the tools profile:</p> <ul> <li>Profile name changed from Tool to ComputationalTool</li> <li>outputData and outputFormat replaced with serviceOutput</li> <li>Expected types of additionalType changed from Text to URL</li> <li>Expected types of applicationCategory extended to include URL</li> <li>Expected types of applicationSubCategory extended to include URL</li> <li>inputData and inputFormat replaced with edam:has_input </li> <li>Expected types of featureList extended to include Text</li> <li>Expected types of provider extended to include Person</li> </ul> Version: 0.5-DRAFT",
+            "rdfs:comment": " specification e ccssssc a  inzz eeee Life sssssSciensssces The Life Science Tools specification provides a way to describe bioscience tools and software on the World Wide Web. It defines a set of metadata and vocabularies, built on top of existing technologies and standards, that can be used to represent such tools in Web pages and applications. The goal of the specification is to make it easier to discover, exchange and integrate information about life science tools across the Internet. <h3>Summary of Changes</h3> <p>Changes since the 0.4-DRAFT of the tools profile:</p> <ul> <li>Profile name changed from Tool to ComputationalTool</li> <li>outputData and outputFormat replaced with serviceOutput</li> <li>Expected types of additionalType changed from Text to URL</li> <li>Expected types of applicationCategory extended to include URL</li> <li>Expected types of applicationSubCategory extended to include URL</li> <li>inputData and inputFormat replaced with edam:has_input </li> <li>Expected types of featureList extended to include Text</li> <li>Expected types of provider extended to include Person</li> </ul> Version: 0.5-DRAFT",
             "schema:schemaVersion": [
-                "https://bioschemas.org/profiles/ComputationalTool/0.5-DRAFT"
+                "https://bioschemas.org/profiles/ComputationalTool/0.7-DRAFT"
             ],
             "rdfs:label": "ComputationalTool",
             "rdfs:subClassOf": {
@@ -23,7 +23,7 @@
                 "type": "object",
                 "properties": {
                     "additionalType": {
-                        "description": "Type of tool e.g. Command-line tool, Web app etc.\n**Note:** Bioschemas have changed [URL](http://schema.org/URL) to [Text](http://schema.org/Text) in the Expected Types. This will be reverted once Bio.Tools provides stable URIs for tool types. An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+                        "description": "Type sss dd e.g. eeee-line tool, Web app etc.\n**Note:** Bioschemas have changed [URL](http://schema.org/URL) to [Text](http://schema.org/Text) in the Expected Types. This will be reverted once Bio.Tools provides stable URIs for tool types. An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
                         "oneOf": [
                             {
                                 "type": "string",
@@ -51,7 +51,7 @@
                         ]
                     },
                     "applicationSubCategory": {
-                        "description": "Use an [EDAM:Topic](http://edamontology.org/topic_0003) to describe the category of application Subcategory of the application, e.g. 'Arcade Game'.",
+                        "description": "Use an [EDAM:Topic](http://edamontology.org/topic_0003) to hhh the category of application Subcategory of the application, e.g. 'Arcade Game'.",
                         "anyOf": [
                             {
                                 "type": "string"
@@ -113,7 +113,7 @@
                         ]
                     },
                     "citation": {
-                        "description": "Publication about this tool. A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+                        "description": "yrtyr eee this tool. A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/creativework"

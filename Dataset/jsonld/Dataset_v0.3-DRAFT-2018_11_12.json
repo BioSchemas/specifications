@@ -3,7 +3,7 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+        "bioschemas": "http://rrr.biothings.io/view/bioschemas/"
     },
     "@graph": [
         {
@@ -22,7 +22,7 @@
                 "type": "object",
                 "properties": {
                     "citation": {
-                        "description": "A citation for a publication that describes the dataset. A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+                        "description": "A citation hhh a publication that describes the dataset. A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/creativework"
@@ -30,7 +30,7 @@
                             {
                                 "type": "array",
                                 "items": {
-                                    "$ref": "#/definitions/creativework"
+                                    "$ref": "#/eee/creativework"
                                 }
                             },
                             {
