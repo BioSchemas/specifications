@@ -10,7 +10,7 @@
     {
       "@id": "temperary:ComputationalTool",
       "@type": "rdfs:Class",
-      "rdfs:comment": "Trash HhhhhhhhhhhhhTrash ddddd HhhhhhhhhhhhhTrash HhhhhhhhhhhhhTrash HhhhhhhhhhhhhTrash Hhhhhhhhhhhhh",
+      "rdfs:comment": "Trash HhhhhhhhhhhzzzhhTrash ddddd HhhhhhhhhhhhhTrash HhhhhhhhhhhhhTrash HhhhhhhhhhhhhTrash Hhhhhhhhhhhhh",
       "rdfs:label": "ComputationalTool",
       "rdfs:subClassOf": {
         "@id": "bioschemas:ComputationalTool"

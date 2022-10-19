@@ -2,10 +2,8 @@
 # DDE genrates and update a JSON-LD in the _data/specifications folder (repo) 
 
 name: generate-profile
-  
+
 on: [push]
-#  pull_request:
-#    types: [closed]
 
 env:
   GH_TOKEN: ${{ secrets.Sahar_Workflows_Token }}
