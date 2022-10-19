@@ -21,10 +21,13 @@ docs = yaml.load_all(stream, yaml.FullLoader)
 d = {}
 
 for doc in docs:
-    for k, v in doc.items():
-        print(k, "->", v)
-        d[k] = v
-        print("\n")
+    try:
+        for k, v in doc.items():
+            print(k, "->", v)
+            d[k] = v
+            print("\n")
+    except Exception as e:
+        print(e)
 
 args = sys.argv
 
