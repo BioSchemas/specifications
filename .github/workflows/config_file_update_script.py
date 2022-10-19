@@ -15,6 +15,17 @@ print(Fore.YELLOW + "Started updating profile versions config file" + Style.RESE
 
 profile_verions_file = "./bioschemas.github.io/_data/profile_versions.yaml"
 
+stream = open(profile_verions_file, "r")
+docs = yaml.load_all(stream, yaml.FullLoader)
+
+d = {}
+
+for doc in docs:
+    for k, v in doc.items():
+        print(k, "->", v)
+        d[k] = v
+        print("\n")
+
 args = sys.argv
 
 # For each new uploaded JSON-LD file
@@ -33,17 +44,6 @@ for arg in args:
                 + profile_version
                 + Style.RESET_ALL
             )
-
-            stream = open(profile_verions_file, "r")
-            docs = yaml.load_all(stream, yaml.FullLoader)
-
-            d = {}
-
-            for doc in docs:
-                for k, v in doc.items():
-                    print(k, "->", v)
-                    d[k] = v
-                    print("\n")
 
             if profile_name in d.keys():
                 if arg.split("-")[1].split(".")[0] == "DRAFT":

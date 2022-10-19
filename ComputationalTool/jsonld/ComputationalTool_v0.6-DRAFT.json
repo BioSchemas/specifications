@@ -39,7 +39,7 @@
                         ]
                     },
                     "applicationCategory": {
-                        "description": "The high-level ssss isssn tzzhe global context, **please always use \"Computational science tool\"**. Type of software application, e.g. 'Game, Multimedia'.",
+                        "description": "The high-level ssss issscvvvn tzzhe global context, **please always use \"Computational science tool\"**. Type of software application, e.g. 'Game, Multimedia'.",
                         "oneOf": [
                             {
                                 "type": "string"
