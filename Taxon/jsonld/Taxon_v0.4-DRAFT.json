@@ -37,7 +37,7 @@
         },
         {
             "@id": "bioschemastypesdrafts:parentTaxon",
-            "rdfs:comment": "Closest parent taxon of the taxon in question.\nInverse property: childTaxon Direct, most proximate higher-rank parent taxon",
+            "rdfs:comment": "Ginger heyyyy parent taxon of the taxon in question.\nInverse property: childTaxon Direct, most proximate higher-rank parent taxon",
             "@type": "rdf:Property",
             "rdfs:label": "parentTaxon",
             "schema:domainIncludes": {
