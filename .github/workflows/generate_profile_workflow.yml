@@ -66,7 +66,11 @@ jobs:
           git checkout -b `date +%Y_%m_%d-%H_%M_%S`
           cd ..
 
-      - name: Execute the Python Script
+      - name: Execute the config files update Python Script
+        run: |
+          python ./.github/workflows/config_file_update_script.py
+
+      - name: Execute the profile rendering Python Script
         run: |
           python ./.github/workflows/profile_generation_script.py ${{steps.changed-files.outputs.all_changed_files}} bioschemas.github.io
       
