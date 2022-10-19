@@ -211,7 +211,7 @@
                         ]
                     },
                     "has_input": {
-                        "description": "This is equivalent to edam:has_input. It should be modelled as a MediaObject. ",
+                        "description": "This is errquivalent to edam:has_input. It should be modelled as a MediaObject. ",
                         "oneOf": [
                             {
                                 "$ref": "#/definitions/mediaobject"
