@@ -195,7 +195,7 @@
                         ]
                     },
                     "downloadUrl": {
-                        "description": "A link to the sss(ssjjs). If the file can be downloaded, URL to download the binary.",
+                        "description": "A link to the sss(ssjjs). If the fcccccile can be downloaded, URL to download the binary.",
                         "oneOf": [
                             {
                                 "type": "string",
