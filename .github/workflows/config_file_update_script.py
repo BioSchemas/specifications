@@ -16,11 +16,11 @@ print(Fore.YELLOW + "Started updating profile versions config file" + Style.RESE
 profile_verions_file = "./bioschemas.github.io/_data/profile_versions.yaml"
 
 if path.exists(profile_verions_file):
-    print("file esists")
-
-    with open(profile_verions_file) as f:
-        data = yaml.load(f, Loader=SafeLoader)
-        print(data)
+    with open(profile_verions_file, "r") as stream:
+        try:
+            print(yaml.safe_load(stream))
+        except yaml.YAMLError as exc:
+            print(exc)
 
     print(
         Style.BRIGHT
