@@ -15,13 +15,35 @@ print(Fore.YELLOW + "Started updating profile versions config file" + Style.RESE
 
 profile_verions_file = "./bioschemas.github.io/_data/profile_versions.yaml"
 
-stream = open(profile_verions_file, "r")
-docs = yaml.load_all(stream, yaml.FullLoader)
-for doc in docs:
-    for k,v in doc.items():
-        print (k, "->", v)
-    print ("\n"),
+args = sys.argv
+website_repo= args[-1]
+args.remove(website_repo)
 
+# For each new uploaded JSON-LD file 
+for arg in args:
+    if 'jsonld' in arg.split('/'):
+        if 'json' in arg.split('.'):
+            arglist= arg.split('/')
+            profile_name=arg.split('/')[-1].split('.')[0].split('_')[0]
+            profile_version=arg.split('_')[1].split('v')[1].split('.json')[0]
+            print(Fore.YELLOW + 'added/updated profile: ' + arg + Style.RESET_ALL)
+
+            stream = open(profile_verions_file, "r")
+            docs = yaml.load_all(stream, yaml.FullLoader)
+
+            d=dict()
+
+            for doc in docs:
+                for k,v in doc.items():
+                    print (k, "->", v)
+                    d[k]=v
+                    print ("\n")
+                    
+            if profile_name in d.keys():
+                if arg.split("-")[1].split('.')[0]=="DRAFT":
+                    print(Fore.GREEN + v + Style.RESET_ALL)
+                elif arg.split("-")[1].split('.')[0]=="RELEASE":
+                    print(Fore.GREEN + v + Style.RESET_ALL)
 
 print(
     Style.BRIGHT

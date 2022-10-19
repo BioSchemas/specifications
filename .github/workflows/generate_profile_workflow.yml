@@ -68,7 +68,7 @@ jobs:
 
       - name: Execute the config files update Python Script
         run: |
-          python ./.github/workflows/config_file_update_script.py
+          python ./.github/workflows/config_file_update_script.py ${{steps.changed-files.outputs.all_changed_files}}
 
       - name: Execute the profile rendering Python Script
         run: |
