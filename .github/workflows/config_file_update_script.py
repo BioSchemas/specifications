@@ -49,10 +49,13 @@ for arg in args:
             )
 
             if profile_name in d.keys():
+                print(Fore.GREEN + str(d[profile_name]) + Style.RESET_ALL)
                 if arg.split("-")[1].split(".")[0] == "DRAFT":
-                    print(Fore.GREEN + str(d[profile_name]) + Style.RESET_ALL)
+                    d[profile_name]["latest_publication"] = profile_version
+
                 elif arg.split("-")[1].split(".")[0] == "RELEASE":
-                    print(Fore.GREEN + str(d[profile_name]) + Style.RESET_ALL)
+                    d[profile_name]["latest_release"] = profile_version
+                print(Fore.LIGHTGREEN_EX + str(d[profile_name]) + Style.RESET_ALL)
 
 print(
     Fore.YELLOW + "Profile versions updated " + profile_verions_file + Style.RESET_ALL

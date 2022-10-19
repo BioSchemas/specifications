@@ -195,7 +195,7 @@
                         ]
                     },
                     "downloadUrl": {
-                        "description": "A link to the downlssssddddoadable(s). If the file can be downloaded, URL to download the binary.",
+                        "description": "A link to the downlssdddddssddddoadable(s). If the file can be downloaded, URL to download the binary.",
                         "oneOf": [
                             {
                                 "type": "string",
