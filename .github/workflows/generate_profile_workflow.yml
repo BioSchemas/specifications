@@ -94,7 +94,8 @@ jobs:
           git push --set-upstream origin `date +%Y_%m_%d-%H_%M_%S`
       
       - name: Create a pull request
-        run: | 
+        run: |
+          cd bioschemas.github.io
           gh pr create --title "Auto-Rendering Profile" --body "This pull request has been created by a guithub action, after adding/updating a profile in the specifications repo."
 
       - name: End Workflow
