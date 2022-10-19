@@ -11,18 +11,20 @@ from os.path import isfile, join
 
 
 ## Main Script
-print(Fore.YELLOW + 'Started updating profile versions config file' + Style.RESET_ALL)
+print(Fore.YELLOW + "Started updating profile versions config file" + Style.RESET_ALL)
 
 profile_verions_file = "./bioschemas.github.io/_data/profile_versions.yaml"
 
 if path.exists(profile_verions_file):
-    print ("file esists")
+    print("file esists")
 
-
-    
     with open(profile_verions_file) as f:
-        data = yaml.load(f)
+        data = yaml.parse(f)
         print(data)
 
-    
-    print(Style.BRIGHT + "Profile versions updated " + profile_verions_file + Style.RESET_ALL)                    
+    print(
+        Style.BRIGHT
+        + "Profile versions updated "
+        + profile_verions_file
+        + Style.RESET_ALL
+    )
