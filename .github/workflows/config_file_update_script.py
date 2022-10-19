@@ -16,26 +16,17 @@ print(Fore.YELLOW + "Started updating profile versions config file" + Style.RESE
 profile_verions_file = "profile_versions.yaml"
 # profile_verions_file = "./bioschemas.github.io/_data/profile_versions.yaml"
 
-if path.exists(profile_verions_file):
-    with open(profile_verions_file, "r", encoding="utf-8") as f:
-        print(Fore.YELLOW + "File opened!" + Style.RESET_ALL)
-
-        try:
-            print(yaml.safe_load(f))
-        except yaml.YAMLError as exc:
-            print(exc)
-
-        stream = open(profile_verions_file, "r")
-        docs = yaml.load_all(stream, yaml.FullLoader)
-        for doc in docs:
-            for k,v in doc.items():
-                print (k, "->", v)
-            print ("\n"),
+stream = open(profile_verions_file, "r")
+docs = yaml.load_all(stream, yaml.FullLoader)
+for doc in docs:
+    for k,v in doc.items():
+        print (k, "->", v)
+    print ("\n"),
 
 
-    print(
-        Style.BRIGHT
-        + "Profile versions updated "
-        + profile_verions_file
-        + Style.RESET_ALL
-    )
+print(
+    Style.BRIGHT
+    + "Profile versions updated "
+    + profile_verions_file
+    + Style.RESET_ALL
+)
