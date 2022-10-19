@@ -74,6 +74,15 @@ jobs:
         run: |
           python ./.github/workflows/profile_generation_script.py ${{steps.changed-files.outputs.all_changed_files}} bioschemas.github.io
       
+      - name: Setup the Github TOKEN
+        uses: oleksiyrudenko/gha-git-credentials@v2-latest
+        with:
+          path: bioschemas.github.io
+          email: sahar.frikha1@gmail.com
+          name: sahar-frikha
+          actor: sahar-frikha
+          token: '${{secrets.Sahar_Workflows_Token}}'
+      
       - name: Commit and Push the changes in the website
         run: | 
           cd bioschemas.github.io
@@ -82,9 +91,11 @@ jobs:
           git add .
           git commit -m "Updating Profile"
           git push --set-upstream origin `date +%Y_%m_%d-%H_%M_%S`
+      
+      - name: Create a pull request
+        run: | 
           gh pr create --title "Auto-Rendering Profile" --body "This pull request has been created by a guithub action, after adding/updating a profile in the specifications repo."
 
-#          hub pull-request -m "The profile is now created and the branch is ready to be merged" -b master -h `date +%Y_%m_%d-%H_%M_%S`
       - name: End Workflow
         run: |
           echo "Check the Website !"
