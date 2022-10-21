@@ -4,7 +4,7 @@
         "rdf": "https://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "dct": "https://dublincore.org/specifications/dublin-core/dcmi-terms/#",
-        "owl": "http://www.w3.org/2002/07/owl#",
+        "owl": "http://www.w3.org/2002/07/owl/",
         "bioschemasdeprecated": "http://discovery.biothings.io/view/bioschemasdeprecated/"
     },
     "@graph": [
@@ -26,7 +26,8 @@
                 "properties": {
                     "aggregator": {
                         "description": "True if Beacon is an agregator of other Beacon Datasets. ",
-                        "type": "boolean"
+                        "type": "boolean",
+                        "owl:cardinality": "one"
                     },
                     "dataset": {
                         "description": "Datasets served by this Beacon. A dataset contained in this catalog. \ninverse property: [includedInDataCatalog.](http://schema.org/includedInDataCatalog)",
@@ -40,11 +41,13 @@
                                     "$ref": "#/definitions/datacatalog"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "description": {
                         "description": "Description of this Beacon. A description of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "identifier": {
                         "description": "Unique identifier of the Beacon. The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.",
@@ -59,11 +62,13 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "name": {
                         "description": "Name of this Beacon. The name of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "potentialAction": {
                         "description": "List of Actions that can be performed on this Beacon. Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
@@ -77,7 +82,8 @@
                                     "$ref": "#/definitions/action"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "provider": {
                         "description": "Contact information for this Beacon. The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes [carrier](http://schema.org/carrier).",
@@ -100,12 +106,14 @@
                                     "$ref": "#/definitions/person"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "type": {
                         "description": "This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column. ",
                         "type": "string",
-                        "format": "uri"
+                        "format": "uri",
+                        "owl:cardinality": "one"
                     },
                     "sameAs": {
                         "description": "Alternative URL for this Beacon. URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
@@ -121,7 +129,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "supportedRefs": {
                         "description": "Supported Genome ID references. ",
@@ -135,12 +144,14 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "url": {
                         "description": "Welcome Page of this Beacon. URL of the item.",
                         "type": "string",
-                        "format": "uri"
+                        "format": "uri",
+                        "owl:cardinality": "one"
                     },
                     "version": {
                         "description": "Beacon API version number. The version of the CreativeWork embodied by a specified resource.",
@@ -151,7 +162,8 @@
                             {
                                 "type": "string"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     }
                 },
                 "required": [
@@ -358,46 +370,46 @@
             }
         },
         {
-            "@id": "bioschemasdeprecated:aggregator",
-            "rdfs:comment": " True if Beacon is an agregator of other Beacon Datasets.",
-            "@type": "rdf:Property",
-            "rdfs:label": "aggregator",
-            "schema:domainIncludes": {
-                "@id": "bioschemasdeprecated:Beacon"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Boolean"
-                }
-            ]
+          "@id": "bioschemasdeprecated:aggregator",
+          "@type": "rdf:Property",
+          "rdfs:comment": "True if Beacon is an agregator of other Beacon Datasets.",
+          "rdfs:label": "aggregator",
+          "schema:domainIncludes": {
+            "@id": "bioschemasdeprecated:Beacon"
+          },
+          "schema:rangeIncludes": [
+            {
+              "@id": "schema:Boolean"
+            }
+          ]
         },
         {
-            "@id": "rdf:type",
-            "rdfs:comment": " This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column.",
-            "@type": "rdf:Property",
-            "rdfs:label": "type",
-            "schema:domainIncludes": {
-                "@id": "bioschemasdeprecated:Beacon"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:URL"
-                }
-            ]
+          "@id": "rdf:type",
+          "@type": "rdf:Property",
+          "rdfs:comment": "This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column.",
+          "rdfs:label": "type",
+          "schema:domainIncludes": {
+            "@id": "bioschemasdeprecated:Beacon"
+          },
+          "schema:rangeIncludes": [
+            {
+              "@id": "schema:URL"
+            }
+          ]
         },
         {
-            "@id": "bioschemasdeprecated:supportedRefs",
-            "rdfs:comment": " Supported Genome ID references.",
-            "@type": "rdf:Property",
-            "rdfs:label": "supportedRefs",
-            "schema:domainIncludes": {
-                "@id": "bioschemasdeprecated:Beacon"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Text"
-                }
-            ]
+          "@id": "bioschemasdeprecated:supportedRefs",
+          "@type": "rdf:Property",
+          "rdfs:comment": "Supported Genome ID references.",
+          "rdfs:label": "supportedRefs",
+          "schema:domainIncludes": {
+            "@id": "bioschemasdeprecated:Beacon"
+          },
+          "schema:rangeIncludes": [
+            {
+              "@id": "schema:URL"
+            }
+          ]
         }
     ]
 }
