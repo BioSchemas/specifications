@@ -496,7 +496,7 @@ for arg in args:
                         print("Create folder in DDE: ", dde_folderpath)
 
                     latest_updated_profiles = (
-                        dde_folderpath + "/" + profile_name + "csv"
+                        dde_folderpath + "/" + profile_name + ".csv"
                     )
 
                     header = [
@@ -513,13 +513,12 @@ for arg in args:
                         transformed_profile["spec_info"]["version"],
                         arg,
                     ]
-                    
+
                     with open(latest_updated_profiles, "w", encoding="utf-8") as f:
                         writer = csv.writer(f)
-                        
+
                         # write the header
                         writer.writerow(header)
 
                         # write the data
                         writer.writerow(data)
-
