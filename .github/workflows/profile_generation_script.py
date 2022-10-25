@@ -511,7 +511,8 @@ for arg in args:
                         profile_name,
                         "",
                         transformed_profile["spec_info"]["version"],
-                        arg,
+                        "https://github.com/BioSchemas/specifications/tree/master/"
+                        + arg,
                     ]
 
                     with open(latest_updated_profiles, "w", encoding="utf-8") as f:
