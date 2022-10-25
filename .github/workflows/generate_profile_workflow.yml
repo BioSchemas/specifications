@@ -46,7 +46,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.Sahar_Workflows_Token }}
         run: | 
           git clone https://user:$GITHUB_TOKEN@github.com/BioSchemas/bioschemas-dde
-          git branch
+          git checkout latest-updated-profiles
           ls
 
       - name: Checkout the Website repo
@@ -83,6 +83,16 @@ jobs:
           actor: sahar-frikha
           token: '${{secrets.Sahar_Workflows_Token}}'
       
+      - name: Commit and Push the changes in the DDE repository
+        run: | 
+          cd bioschemas-dde
+          git config user.name "sahar-frikha"
+          git config user.email "sahar.frikha1@gmail.com"
+          git status
+          git add .
+          git commit -m "Updating Profile"
+          git push origin latest-updated-profiles
+
       - name: Commit and Push the changes in the website
         run: | 
           cd bioschemas.github.io

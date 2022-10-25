@@ -485,3 +485,41 @@ for arg in args:
                         + out_HTML_file
                         + Style.RESET_ALL
                     )
+
+                    ############# DDE REPOSITORY #############
+                    dde_folderpath = "./bioschemas-dde/latest-updated-profiles"
+                    if path.exists(dde_folderpath):
+                        print("Folder latest-updated-profiles exists in DDE")
+                    else:
+                        # os.makedirs(os.path.dirname(folderpath), exist_ok=True)
+                        Path(dde_folderpath).mkdir(parents=True, exist_ok=True)
+                        print("Create folder in DDE: ", dde_folderpath)
+
+                    latest_updated_profiles = (
+                        dde_folderpath + "/" + profile_name + "csv"
+                    )
+
+                    header = [
+                        "namespace",
+                        "name",
+                        "subclassOf",
+                        "type" "version",
+                        "url",
+                    ]
+                    data = [
+                        "bioschams",
+                        profile_name,
+                        "",
+                        transformed_profile["spec_info"]["version"],
+                        arg,
+                    ]
+                    
+                    with open(latest_updated_profiles, "w", encoding="utf-8") as f:
+                        writer = csv.writer(f)
+                        
+                        # write the header
+                        writer.writerow(header)
+
+                        # write the data
+                        writer.writerow(data)
+
