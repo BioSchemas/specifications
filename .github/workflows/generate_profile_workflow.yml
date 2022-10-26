@@ -75,15 +75,6 @@ jobs:
         run: |
           python ./.github/workflows/profile_generation_script.py ${{steps.changed-files.outputs.all_changed_files}} bioschemas.github.io
       
-      - name: Setup the Github TOKEN
-        uses: oleksiyrudenko/gha-git-credentials@v2-latest
-        with:
-          path: bioschemas.github.io
-          email: sahar.frikha1@gmail.com
-          name: sahar-frikha
-          actor: sahar-frikha
-          token: '${{secrets.Sahar_Workflows_Token}}'
-      
       - name: Commit and Push the changes in the DDE repository
         run: | 
           cd bioschemas-dde
