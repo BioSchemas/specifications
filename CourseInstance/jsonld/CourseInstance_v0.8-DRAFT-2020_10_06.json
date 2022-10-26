@@ -3,7 +3,8 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [
         {
@@ -33,7 +34,8 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "contributor": {
                         "description": "Contributors are those who made non-authorship contributions: e.g., critical review, commentary or revision. A secondary contributor to the CreativeWork or Event.",
@@ -56,7 +58,8 @@
                                     "$ref": "#/definitions/person"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "courseMode": {
                         "description": " The medium or means of delivery of the course instance or the mode of study, either as a text label (e.g. \"online\", \"onsite\" or \"blended\"; \"synchronous\" or \"asynchronous\"; \"full-time\" or \"part-time\") or as a URL reference to a term from a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous ).",
@@ -81,15 +84,18 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "description": {
                         "description": "A description of the Course Instance. \n\n(courseInstance) description can be used to override (course) description for specific course instances. A description of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "duration": {
                         "description": "(CourseInstance) duration can be used to override (Course) duration for specific course instances. The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format.",
-                        "$ref": "#/definitions/duration"
+                        "$ref": "#/definitions/duration",
+                        "owl:cardinality": "one"
                     },
                     "endDate": {
                         "description": " The end date and time of the item (in ISO 8601 date format).",
@@ -101,11 +107,13 @@
                             {
                                 "$ref": "#/definitions/datetime"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "eventStatus": {
                         "description": " An eventStatus of an event represents its status; particularly useful when an event is cancelled or rescheduled.",
-                        "$ref": "#/definitions/eventstatustype"
+                        "$ref": "#/definitions/eventstatustype",
+                        "owl:cardinality": "one"
                     },
                     "funder": {
                         "description": " A person or organization that supports (sponsors) something through some kind of financial contribution.",
@@ -128,7 +136,8 @@
                                     "$ref": "#/definitions/person"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "image": {
                         "description": " An image of the item. This can be a URL or a fully described ImageObject.",
@@ -140,7 +149,8 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "inLanguage": {
                         "description": " The language of the content or performance or used in an action. Please use one of the language codes from the IETF BCP 47 standard. See also availableLanguage. Supersedes language.",
@@ -151,7 +161,8 @@
                             {
                                 "type": "string"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "instructor": {
                         "description": "An instructor can be the main teacher or trainer, as well as a training assistant, or a helper. A person assigned to instruct or provide instructional assistance for the CourseInstance.",
@@ -165,7 +176,8 @@
                                     "$ref": "#/definitions/person"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "location": {
                         "description": "Location of the Course Instance. If the Course Instance is online, add the connection details as text The location of for example where the event is happening, an organization is located, or where an action takes place.",
@@ -182,15 +194,18 @@
                             {
                                 "$ref": "#/definitions/virtuallocation"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "maximumAttendeeCapacity": {
                         "description": " The total number of individuals that may attend an event or venue.",
-                        "type": "integer"
+                        "type": "integer",
+                        "owl:cardinality": "one"
                     },
                     "name": {
                         "description": "The name of the course.\n\nCourse instance name can be used to override Course name for variations in specific Course instances. Use name from Course unless the Course instance has a different name from the course. The name of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "offers": {
                         "description": "The price an attendee would pay to attend this CourseInstance. An offer to provide this item\u2014for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. Use businessFunction to indicate the kind of transaction offered, i.e. sell, lease, etc. This property can also be used to describe a Demand. While this property is listed as expected on a number of common types, it can be used in others. In that case, using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.\nInverse property: itemOffered.",
@@ -213,7 +228,8 @@
                                     "$ref": "#/definitions/offer"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "organizer": {
                         "description": " An organizer of an Event.",
@@ -236,7 +252,8 @@
                                     "$ref": "#/definitions/person"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "startDate": {
                         "description": " The start date and time of the item (in ISO 8601 date format).",
@@ -248,7 +265,8 @@
                             {
                                 "$ref": "#/definitions/datetime"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "subEvent": {
                         "description": "For events within events e.g. guest lecture within a workshop event An Event that is part of this event. For example, a conference event includes many presentations, each of which is a subEvent of the conference. Supersedes subEvents.\nInverse property: superEvent.",
@@ -262,7 +280,8 @@
                                     "$ref": "#/definitions/event"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "superEvent": {
                         "description": "Use to describe the event a course instance takes place within. e.g. Galaxy Workshop during the ISMB Conference.  An event that this event is a part of. For example, a collection of individual music performances might each have a music festival as their superEvent.\nInverse property: subEvent.",
@@ -276,12 +295,14 @@
                                     "$ref": "#/definitions/event"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "url": {
                         "description": "The preferred URL of this course instance. You must provide this value if it is known URL of the item.",
                         "type": "string",
-                        "format": "uri"
+                        "format": "uri",
+                        "owl:cardinality": "one"
                     },
                     "workFeatured": {
                         "description": "The training material used in this specific course instance, or produced for this course instance. \n\nInverse property: workFeatured\n\nIf this is the same for all Course Instances, use hasPart and/or mentions in Course instead A work featured in some event, e.g. exhibited in an ExhibitionEvent. Specific subproperties are available for workPerformed (e.g. a play), or a workPresented (a Movie at a ScreeningEvent).",
@@ -295,7 +316,8 @@
                                     "$ref": "#/definitions/creativework"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     }
                 },
                 "required": [

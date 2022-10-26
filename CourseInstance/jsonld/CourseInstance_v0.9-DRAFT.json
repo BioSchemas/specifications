@@ -10,9 +10,9 @@
         {
             "@id": "bioschemas:CourseInstance",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Specification describing the instance of a course.  This specification can be used in tandem with a Course. A course is used to describe the broad, common aspects of a recurring training event - whereas a course instance is about the specific times and location of when that course is held.  Version: 0.5-DRAFT-2019_02_22",
+            "rdfs:comment": "Specification describing the instance of a course.  This specification can be used in tandem with a Course. A course is used to describe the broad, common aspects of a recurring training event - whereas a course instance is about the specific times and location of when that course is held. <h4>Summary of Changes</h4>    Changes since previous draft 0.8 of the CourseInstance profile:    <ul>     <li>courseMode - added the BSC Description (made the description more explicit with more examples</li><li>courseMode - removed the Controled Vocabullary</li><li>eventStatus - added the BSC Description with examples</li><li>eventStatus - removed the Controled Vocabullary</li><li>offers - added the BSC Description with examples</li><li>offers - added IOS 8601 for the dates and ISO 4217 for currency in the Controled Vocabullary</li><li>workFeatured - removed 'Inverse property: workFeatured' from the Description</li><li>Changes prepared by Patricia Palagi</li>    </ul> Version: 0.9-DRAFT (16 August 2022)",
             "schema:schemaVersion": [
-                "https://bioschemas.org/profiles/CourseInstance/0.5-DRAFT-2019_02_22"
+                "https://bioschemas.org/profiles/CourseInstance/0.9-DRAFT"
             ],
             "rdfs:label": "CourseInstance",
             "rdfs:subClassOf": {
@@ -38,7 +38,7 @@
                         "owl:cardinality": "many"
                     },
                     "contributor": {
-                        "description": " A secondary contributor to the CreativeWork or Event.",
+                        "description": "Contributors are those who made non-authorship contributions: e.g., critical review, commentary or revision. A secondary contributor to the CreativeWork or Event.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/organization"
@@ -62,7 +62,7 @@
                         "owl:cardinality": "many"
                     },
                     "courseMode": {
-                        "description": " The medium or means of delivery of the course instance or the mode of study, either as a text label (e.g. \"online\", \"onsite\" or \"blended\"; \"synchronous\" or \"asynchronous\"; \"full-time\" or \"part-time\") or as a URL reference to a term from a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous ).",
+                        "description": "The medium or means of delivery of the course instance or the mode of study, either as a text label (e.g. 'online', 'onsite' or 'blended'; 'synchronous' or 'asynchronous'; 'full-time' or 'part-time') or as a URL reference to a term from a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous ). \n The medium, means or pace of delivery of the course instance or the mode of study, either as a text label (e.g. 'online', 'onsite', 'hybrid' or 'blended'; 'synchronous' or 'asynchronous'; 'full-time' or 'part-time') or as a URL reference to a term from a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous ). \n Another example of a Glossary of terms as defined by the Bioschemas Training community and published in Zenodo in 2016: https://zenodo.org/record/166378#.YrHnEi8iu-o.",
                         "anyOf": [
                             {
                                 "type": "string"
@@ -93,7 +93,7 @@
                         "owl:cardinality": "one"
                     },
                     "duration": {
-                        "description": "(courseInstance) duration can be used to override (course) timeRequired for specific course instances. The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format.",
+                        "description": "(CourseInstance) duration can be used to override (Course) duration for specific course instances. The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format.",
                         "$ref": "#/definitions/duration",
                         "owl:cardinality": "one"
                     },
@@ -111,7 +111,7 @@
                         "owl:cardinality": "one"
                     },
                     "eventStatus": {
-                        "description": " An eventStatus of an event represents its status; particularly useful when an event is cancelled or rescheduled.",
+                        "description": "An eventStatus of an event represents its status; particularly useful when an event is cancelled or rescheduled. \n An eventStatus of an event represents its status; particularly useful when an event is cancelled or rescheduled. Used as text label (e.g. 'postponed', 'cancelled', 'date TBC', 'application open' or 'registration closed').",
                         "$ref": "#/definitions/eventstatustype",
                         "owl:cardinality": "one"
                     },
@@ -165,7 +165,7 @@
                         "owl:cardinality": "one"
                     },
                     "instructor": {
-                        "description": " A person assigned to instruct or provide instructional assistance for the CourseInstance.",
+                        "description": "An instructor can be the main teacher or trainer, as well as a training assistant, or a helper. A person assigned to instruct or provide instructional assistance for the CourseInstance.",
                         "oneOf": [
                             {
                                 "$ref": "#/definitions/person"
@@ -190,6 +190,9 @@
                             },
                             {
                                 "type": "string"
+                            },
+                            {
+                                "$ref": "#/definitions/virtuallocation"
                             }
                         ],
                         "owl:cardinality": "one"
@@ -199,29 +202,23 @@
                         "type": "integer",
                         "owl:cardinality": "one"
                     },
-                    "mentions": {
-                        "description": "Datasets, tools, technologies, entities etc, which are used by or referred to by this course instance.\n\nTypically this should be covered by Mentions in Course. Use this property if the CourseInstance *mentions* varies from Course *mentions* Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.",
-                        "oneOf": [
-                            {
-                                "$ref": "#/definitions/thing"
-                            },
-                            {
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/definitions/thing"
-                                }
-                            }
-                        ],
-                        "owl:cardinality": "many"
-                    },
                     "name": {
-                        "description": "The name of the course.\n\n(courseInstance) Name overrides (course) Name. Use name from Course unless the course instance has a different name from the course The name of the item.",
+                        "description": "The name of the course.\n\nCourse instance name can be used to override Course name for variations in specific Course instances. Use name from Course unless the Course instance has a different name from the course. The name of the item.",
                         "type": "string",
                         "owl:cardinality": "one"
                     },
                     "offers": {
-                        "description": "The cost an attendee would pay to attend this course An offer to provide this item\u2014for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event.",
-                        "oneOf": [
+                        "description": "An offer to provide this item—for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. Use businessFunction to indicate the kind of transaction offered, i.e. sell, lease, etc. This property can also be used to describe a Demand. While this property is listed as expected on a number of common types, it can be used in others. In that case, using a second type, such as Product or a subtype of Product, can clarify the nature of the offer. Inverse property: itemOffered. \n Bioschemas: The price an attendee would pay to attend this CourseInstance. The price currency can be for instance in 'GBP' (pound sterling) or 'CHF' (Swiss francs).",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/demand"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/demand"
+                                }
+                            },
                             {
                                 "$ref": "#/definitions/offer"
                             },
@@ -308,7 +305,7 @@
                         "owl:cardinality": "one"
                     },
                     "workFeatured": {
-                        "description": "The training material used in this specific course instance. \n\nInverse property: workFeatured\n\nIf this is the same for all Course Instances, use hasPart in Course instead A work featured in some event, e.g. exhibited in an ExhibitionEvent. Specific subproperties are available for workPerformed (e.g. a play), or a workPresented (a Movie at a ScreeningEvent).",
+                        "description": "A work featured in some event, e.g. exhibited in an ExhibitionEvent. Specific subproperties are available for workPerformed (e.g. a play), or a workPresented (a Movie at a ScreeningEvent). \n The training material used in this specific course instance, or produced for this course instance. If this is the same for all Course Instances, use hasPart and/or mentions in Course instead",
                         "oneOf": [
                             {
                                 "$ref": "#/definitions/creativework"
@@ -331,7 +328,6 @@
                     "endDate",
                     "inLanguage",
                     "instructor",
-                    "mentions",
                     "offers",
                     "startDate",
                     "url"
@@ -532,8 +528,18 @@
                             }
                         }
                     },
-                    "thing": {
-                        "@type": "schema:Thing",
+                    "virtuallocation": {
+                        "@type": "schema:VirtualLocation",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "demand": {
+                        "@type": "schema:Demand",
                         "type": "object",
                         "properties": {
                             "name": {
@@ -564,20 +570,6 @@
                     }
                 }
             }
-        },
-        {
-            "@id": "bioschemas:mentions",
-            "rdfs:comment": "Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept. Datasets, tools, etc, to which are used by or referred to by this course instance. (courseInstance) mentions can be used to override (course) mentions for specific course instances.",
-            "@type": "rdf:Property",
-            "rdfs:label": "mentions",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:CourseInstance"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Thing"
-                }
-            ]
         }
     ]
 }

@@ -3,7 +3,9 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+        "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/",
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [
         {
@@ -15,7 +17,7 @@
             ],
             "rdfs:label": "MolecularEntity",
             "rdfs:subClassOf": {
-                "@id": "bioschemas:BioChemEntity"
+                "@id": "bioschemastypes:MolecularEntity"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
@@ -33,7 +35,8 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "biochemicalInteraction": {
                         "description": "A BioChemEntity that is known to interact with the item. ",
@@ -47,7 +50,8 @@
                                     "$ref": "#/definitions/biochementity"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "biochemicalSimilarity": {
                         "description": "A similar molecular entity, e.g., obtained by fingerprint similarity algorithms. ",
@@ -61,7 +65,8 @@
                                     "$ref": "#/definitions/biochementity"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "biologicalRole": {
                         "description": "A role played by the molecular entity within a biological context. ",
@@ -75,7 +80,8 @@
                                     "$ref": "#/definitions/definedterm"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "chemicalRole": {
                         "description": "A role played by the molecular entity within a chemical context. ",
@@ -89,15 +95,18 @@
                                     "$ref": "#/definitions/definedterm"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "description": {
                         "description": " A description of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "disambiguatingDescription": {
                         "description": " A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "identifier": {
                         "description": " The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.",
@@ -112,7 +121,8 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "image": {
                         "description": " An image of the item. This can be a URL or a fully described ImageObject.",
@@ -137,35 +147,43 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "inChI": {
                         "description": "Non-proprietary identifier for chemical substances that can be used in printed and electronic data sources thus enabling easier linking of diverse data compilations. ",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "inChIKey": {
                         "description": "InChIKey is a hashed version of the full InChI (using the SHA-256 algorithm) ",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "iupacName": {
                         "description": "Systematic method of naming organic chemical compounds as recommended by the International Union of Pure and Applied Chemistry (IUPAC). ",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "molecularFormula": {
                         "description": "The empirical formula is the simplest whole number ratio of all the atoms in a molecule. ",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "molecularWeight": {
                         "description": "This is the molecular weight of the entity being described, not of the parent.  ",
-                        "type": "number"
+                        "type": "number",
+                        "owl:cardinality": "one"
                     },
                     "monoisotopicMolecularWeight": {
                         "description": "The monoisotopic mass is the sum of the masses of the atoms in a molecule using the unbound, ground-state, rest mass of the principal (most abundant) isotope for each element instead of the isotopic average mass. ",
-                        "type": "number"
+                        "type": "number",
+                        "owl:cardinality": "one"
                     },
                     "name": {
                         "description": " The name of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "potentialUse": {
                         "description": "Intended use of the molecular entity by humans. ",
@@ -179,7 +197,8 @@
                                     "$ref": "#/definitions/definedterm"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "sameAs": {
                         "description": " URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
@@ -195,7 +214,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "smiles": {
                         "description": "A specification in form of a line notation for describing the structure of chemical species using short ASCII strings ",
@@ -209,7 +229,8 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "url": {
                         "description": " URL of the item.",
@@ -225,7 +246,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     }
                 },
                 "required": [
@@ -416,7 +438,7 @@
         },
         {
             "@id": "bioschemas:biochemicalInteraction",
-            "rdfs:comment": " A BioChemEntity that is known to interact with the item.",
+            "rdfs:comment": "A BioChemEntity that is known to interact with the item.",
             "@type": "rdf:Property",
             "rdfs:label": "biochemicalInteraction",
             "schema:domainIncludes": {
@@ -424,13 +446,13 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "schema:BioChemEntity"
+                    "@id": "bioschemastypes:BioChemEntity"
                 }
             ]
         },
         {
             "@id": "bioschemas:biochemicalSimilarity",
-            "rdfs:comment": " A similar molecular entity, e.g., obtained by fingerprint similarity algorithms.",
+            "rdfs:comment": "A similar molecular entity, e.g., obtained by fingerprint similarity algorithms.",
             "@type": "rdf:Property",
             "rdfs:label": "biochemicalSimilarity",
             "schema:domainIncludes": {
@@ -438,147 +460,7 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "schema:BioChemEntity"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:biologicalRole",
-            "rdfs:comment": " A role played by the molecular entity within a biological context.",
-            "@type": "rdf:Property",
-            "rdfs:label": "biologicalRole",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:MolecularEntity"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:DefinedTerm"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:chemicalRole",
-            "rdfs:comment": " A role played by the molecular entity within a chemical context.",
-            "@type": "rdf:Property",
-            "rdfs:label": "chemicalRole",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:MolecularEntity"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:DefinedTerm"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:inChI",
-            "rdfs:comment": " Non-proprietary identifier for chemical substances that can be used in printed and electronic data sources thus enabling easier linking of diverse data compilations.",
-            "@type": "rdf:Property",
-            "rdfs:label": "inChI",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:MolecularEntity"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Text"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:inChIKey",
-            "rdfs:comment": " InChIKey is a hashed version of the full InChI (using the SHA-256 algorithm)",
-            "@type": "rdf:Property",
-            "rdfs:label": "inChIKey",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:MolecularEntity"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Text"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:iupacName",
-            "rdfs:comment": " Systematic method of naming organic chemical compounds as recommended by the International Union of Pure and Applied Chemistry (IUPAC).",
-            "@type": "rdf:Property",
-            "rdfs:label": "iupacName",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:MolecularEntity"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Text"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:molecularFormula",
-            "rdfs:comment": " The empirical formula is the simplest whole number ratio of all the atoms in a molecule.",
-            "@type": "rdf:Property",
-            "rdfs:label": "molecularFormula",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:MolecularEntity"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Text"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:molecularWeight",
-            "rdfs:comment": " This is the molecular weight of the entity being described, not of the parent. ",
-            "@type": "rdf:Property",
-            "rdfs:label": "molecularWeight",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:MolecularEntity"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Number"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:monoisotopicMolecularWeight",
-            "rdfs:comment": " The monoisotopic mass is the sum of the masses of the atoms in a molecule using the unbound, ground-state, rest mass of the principal (most abundant) isotope for each element instead of the isotopic average mass.",
-            "@type": "rdf:Property",
-            "rdfs:label": "monoisotopicMolecularWeight",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:MolecularEntity"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Number"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:potentialUse",
-            "rdfs:comment": " Intended use of the molecular entity by humans.",
-            "@type": "rdf:Property",
-            "rdfs:label": "potentialUse",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:MolecularEntity"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:DefinedTerm"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:smiles",
-            "rdfs:comment": " A specification in form of a line notation for describing the structure of chemical species using short ASCII strings",
-            "@type": "rdf:Property",
-            "rdfs:label": "smiles",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:MolecularEntity"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Text"
+                    "@id": "bioschemastypes:BioChemEntity"
                 }
             ]
         }

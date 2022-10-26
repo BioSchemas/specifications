@@ -5,7 +5,7 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "dct": "https://dublincore.org/specifications/dublin-core/dcmi-terms/#",
         "owl": "http://www.w3.org/2002/07/owl/",
-        "bioschemasdeprecated": "http://discovery.biothings.io/view/bioschemasdeprecated/"
+        "bioschemasdeprecated": "https://discovery.biothings.io/view/bioschemasdeprecated/"
     },
     "@graph": [
         {

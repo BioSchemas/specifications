@@ -3,7 +3,8 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [
         {
@@ -33,7 +34,8 @@
                                     "$ref": "#/definitions/thing"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "alternateName": {
                         "description": " An alias for the item.",
@@ -47,7 +49,8 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "audience": {
                         "description": " An intended audience, i.e. a group for whom something was created. Supersedes serviceAudience.",
@@ -61,7 +64,8 @@
                                     "$ref": "#/definitions/audience"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "courseCode": {
                         "description": "The identifier for the Course used by the course provider (e.g. CS101 or 6.001). The identifier for the Course used by the course provider (e.g. CS101 or 6.001).",
@@ -75,7 +79,8 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "coursePrerequisites": {
                         "description": "Pre-requisite requirments before you can take this course. Requirements for taking the Course. May be completion of another Course or a textual description like \"permission of instructor\". Requirements may be a pre-requisite competency, referenced using AlignmentObject.",
@@ -107,7 +112,8 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "creator": {
                         "description": " The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.",
@@ -130,7 +136,8 @@
                                     "$ref": "#/definitions/person"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "dateCreated": {
                         "description": " The date on which the CreativeWork was created or the item was added to a DataFeed.",
@@ -142,7 +149,8 @@
                             {
                                 "$ref": "#/definitions/datetime"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "dateModified": {
                         "description": " The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
@@ -154,11 +162,13 @@
                             {
                                 "$ref": "#/definitions/datetime"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "description": {
                         "description": " A description of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "educationalCredentialAwarded": {
                         "description": " A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this course.",
@@ -183,7 +193,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "educationalLevel": {
                         "description": " The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators.",
@@ -217,7 +228,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "hasCourseInstance": {
                         "description": " An offering of the course at a specific time and place or through specific media or mode of study or to a specific section of students.",
@@ -231,7 +243,8 @@
                                     "$ref": "#/definitions/courseinstance"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "image": {
                         "description": " An image of the item. This can be a URL or a fully described ImageObject.",
@@ -243,11 +256,13 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "keywords": {
                         "description": "Keywords describing course Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "mainEntityOfPage": {
                         "description": "List different URLs that can be used to access the course Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details.\nInverse property: mainEntity.",
@@ -272,7 +287,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "mentions": {
                         "description": "Datasets, tools, etc, to which are used by or referred to by this course Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.",
@@ -286,11 +302,13 @@
                                     "$ref": "#/definitions/thing"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "name": {
                         "description": " The name of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "provider": {
                         "description": "Identify the Organization which is responsible for providing the educational input for the course, e.g. providing content, educational events, assessments, accreditation etc.\nNote: providing a course goes beyond creating it as it implies some degree of academic responsibility for accrediting the content of the course, perhaps running assessments etc. The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.",
@@ -313,21 +331,25 @@
                                     "$ref": "#/definitions/person"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "thumbnailUrl": {
                         "description": " A thumbnail image relevant to the Thing.",
                         "type": "string",
-                        "format": "uri"
+                        "format": "uri",
+                        "owl:cardinality": "one"
                     },
                     "timeRequired": {
                         "description": "The typical learning time of a course. Can be used in conjunction or instead of duration in CourseInstance Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'.",
-                        "$ref": "#/definitions/duration"
+                        "$ref": "#/definitions/duration",
+                        "owl:cardinality": "one"
                     },
                     "url": {
                         "description": "The preferred URL of the course page. You must provide this value if it is known URL of the item.",
                         "type": "string",
-                        "format": "uri"
+                        "format": "uri",
+                        "owl:cardinality": "one"
                     }
                 },
                 "required": [
@@ -560,26 +582,6 @@
                     }
                 }
             }
-        },
-        {
-            "@id": "bioschemas:educationalLevel",
-            "rdfs:comment": "The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators. ",
-            "@type": "rdf:Property",
-            "rdfs:label": "educationalLevel",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:Course"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:DefinedTerm"
-                },
-                {
-                    "@id": "schema:Text"
-                },
-                {
-                    "@id": "schema:URL"
-                }
-            ]
         }
     ]
 }

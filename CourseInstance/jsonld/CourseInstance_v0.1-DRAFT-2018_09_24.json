@@ -3,7 +3,8 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [
         {
@@ -42,7 +43,8 @@
                                     "$ref": "#/definitions/person"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "courseMode": {
                         "description": " The medium or means of delivery of the course instance or the mode of study, either as a text label (e.g. \"online\", \"onsite\" or \"blended\"; \"synchronous\" or \"asynchronous\"; \"full-time\" or \"part-time\") or as a URL reference to a term from a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous ).",
@@ -54,19 +56,23 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "description": {
                         "description": " A description of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "doorTime": {
                         "description": " The time admission will commence.",
-                        "$ref": "#/definitions/datetime"
+                        "$ref": "#/definitions/datetime",
+                        "owl:cardinality": "one"
                     },
                     "duration": {
                         "description": " The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format.",
-                        "$ref": "#/definitions/duration"
+                        "$ref": "#/definitions/duration",
+                        "owl:cardinality": "one"
                     },
                     "endDate": {
                         "description": " The end date and time of the item (in ISO 8601 date format).",
@@ -78,11 +84,13 @@
                             {
                                 "$ref": "#/definitions/datetime"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "eventStatus": {
                         "description": " An eventStatus of an event represents its status; particularly useful when an event is cancelled or rescheduled.",
-                        "$ref": "#/definitions/eventstatustype"
+                        "$ref": "#/definitions/eventstatustype",
+                        "owl:cardinality": "one"
                     },
                     "funder": {
                         "description": " A person or organization that supports (sponsors) something through some kind of financial contribution.",
@@ -105,7 +113,8 @@
                                     "$ref": "#/definitions/person"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "image": {
                         "description": " An image of the item. This can be a URL or a fully described ImageObject.",
@@ -117,7 +126,8 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "instructor": {
                         "description": "Faculty instructing course instance A person assigned to instruct or provide instructional assistance for the CourseInstance.",
@@ -131,7 +141,8 @@
                                     "$ref": "#/definitions/person"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "location": {
                         "description": "Location of the course instance The location of for example where the event is happening, an organization is located, or where an action takes place.",
@@ -145,15 +156,18 @@
                             {
                                 "type": "string"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "maximumAttendeeCapacity": {
                         "description": "Maximum number of attendees The total number of individuals that may attend an event or venue.",
-                        "type": "integer"
+                        "type": "integer",
+                        "owl:cardinality": "one"
                     },
                     "name": {
                         "description": " The name of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "offers": {
                         "description": "Cost to attend the course An offer to provide this item\u2014for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event.",
@@ -167,7 +181,8 @@
                                     "$ref": "#/definitions/offer"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "startDate": {
                         "description": " The start date and time of the item (in ISO 8601 date format).",
@@ -179,7 +194,8 @@
                             {
                                 "$ref": "#/definitions/datetime"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "subEvent": {
                         "description": "For events within events e.g. guest lecture event within a workshop event An Event that is part of this event. For example, a conference event includes many presentations, each of which is a subEvent of the conference. Supersedes subEvents.\nInverse property: superEvent.",
@@ -193,12 +209,14 @@
                                     "$ref": "#/definitions/event"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "url": {
                         "description": "URL of the course instance URL of the item.",
                         "type": "string",
-                        "format": "uri"
+                        "format": "uri",
+                        "owl:cardinality": "one"
                     }
                 },
                 "required": [

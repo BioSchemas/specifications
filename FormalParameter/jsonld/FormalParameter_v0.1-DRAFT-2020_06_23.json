@@ -3,7 +3,9 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+        "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/",
+        "owl": "http://www.w3.org/2002/07/owl/",
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/"
     },
     "@graph": [
         {
@@ -15,7 +17,7 @@
             ],
             "rdfs:label": "FormalParameter",
             "rdfs:subClassOf": {
-                "@id": "schema:Intangible"
+                "@id": "bioschemastypes:FormalParameter"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
@@ -24,15 +26,18 @@
                     "additionalType": {
                         "description": " An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
                         "type": "string",
-                        "format": "uri"
+                        "format": "uri",
+                        "owl:cardinality": "one"
                     },
                     "defaultValue": {
                         "description": " The default value for the FormalParameter. This is commonly only used for Inputs.",
-                        "$ref": "#/definitions/thing"
+                        "$ref": "#/definitions/thing",
+                        "owl:cardinality": "one"
                     },
                     "description": {
                         "description": "The description may include verbatim the Workflow's description of the FormalParameter and its type A description of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "encodingFormat": {
                         "description": " URLs to accepted formats",
@@ -57,7 +62,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "identifier": {
                         "description": " The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details.",
@@ -91,15 +97,18 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "name": {
                         "description": " The name of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "valueRequired": {
                         "description": " If the FormalParameter must be specified. This is commonly only used for Inputs",
-                        "type": "boolean"
+                        "type": "boolean",
+                        "owl:cardinality": "one"
                     }
                 },
                 "required": [
@@ -213,54 +222,6 @@
                     }
                 }
             }
-        },
-    {
-      "@id": "bioschemas:defaultValue",
-      "@type": "rdf:Property",
-      "rdfs:comment": "The default value for the FormalParameter. This is commonly only used for Inputs.",
-      "rdfs:label": "defaultValue",
-      "schema:domainIncludes": {
-        "@id": "bioschemas:FormalParameter"
-      },
-      "schema:rangeIncludes": [
-        {
-          "@id": "schema:Text"
-        },
-        {
-          "@id": "schema:Thing"
         }
-      ]
-    },
-    {
-      "@id": "bioschemas:valueRequired",
-      "@type": "rdf:Property",
-      "rdfs:comment": "If the FormalParameter must be specified. This is commonly only used for Inputs",
-      "rdfs:label": "valueRequired",
-      "schema:domainIncludes": {
-        "@id": "bioschemas:FormalParameter"
-      },
-      "schema:rangeIncludes": [
-        {
-          "@id": "schema:Boolean"
-        }
-      ]
-    },
-    {
-      "@id": "bioschemas:encodingFormat",
-      "@type": "rdf:Property",
-      "rdfs:comment": "URLs to accepted formats.  It is strongly recommented that this be specified. If it is not specified, then nothing should be assumed about the encoding formats of the FormalParameter. Recommended ontology: http://edamontology.org/format_1915",
-      "rdfs:label": "encodingFormat",
-      "schema:domainIncludes": {
-        "@id": "bioschemas:FormalParameter"
-      },
-      "schema:rangeIncludes": [
-        {
-          "@id": "schema:Text"
-        },
-        {
-          "@id": "schema:URL"
-        }
-      ]
-    }
     ]
 }

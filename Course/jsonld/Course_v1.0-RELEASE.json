@@ -10,9 +10,9 @@
         {
             "@id": "bioschemas:Course",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Specification describing a course.  This specification must be used in tandem with a courseInstance. A course is used to describe the broad, common aspects of a recurring training event - whereas a course instance is about the specific times and location of when that course is held.  Version: 0.7-DRAFT-2019_11_08",
+            "rdfs:comment": "Specification describing a course.  This specification must be used in tandem with a courseInstance. A course is used to describe the broad, common aspects of a recurring training event - whereas a course instance is about the specific times and location of when that course is held. <h4>Summary of Changes</h4>    No changes since 0.10-DRAFT of the Course profile.</li>         </ul> Version: 1.0-RELEASE (13 September 2022) ",
             "schema:schemaVersion": [
-                "https://bioschemas.org/profiles/Course/0.7-DRAFT-2019_11_08"
+                "https://bioschemas.org/profiles/Course/1.0-RELEASE"
             ],
             "rdfs:label": "Course",
             "rdfs:subClassOf": {
@@ -23,7 +23,7 @@
                 "type": "object",
                 "properties": {
                     "about": {
-                        "description": "The subject of this Course. Use the DefinedTerm type to add a controlled-vocabulary term to categorise the course (e.g., using the [EDAM Topic ontology](EDAM Topic ontology](https://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_0003)). The subject matter of the content.\nInverse property: subjectOf.",
+                        "description": "The subject of this Course. \nUse the DefinedTerm type to add a controlled vocabulary term to categorise the course (such as using the [EDAM Topic ontology](https://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_0003)). The subject matter of the content.\nInverse property: subjectOf.",
                         "oneOf": [
                             {
                                 "$ref": "#/definitions/thing"
@@ -38,12 +38,12 @@
                         "owl:cardinality": "many"
                     },
                     "abstract": {
-                        "description": " A brief overview of the item.",
+                        "description": "An abstract is a short description that summarizes a Course An abstract is a short description that summarizes a CreativeWork",
                         "type": "string",
                         "owl:cardinality": "one"
                     },
                     "accessibilitySummary": {
-                        "description": " A human-readable summary of specific accessibility features or deficiencies, consistent with the other accessibility metadata but expressing subtleties such as \"short descriptions are present but long descriptions will be needed for non-visual users\" or \"short descriptions are present and no long descriptions are needed.\"",
+                        "description": "A human-readable summary of specific accessibility features or deficiencies within the course. A human-readable summary of specific accessibility features or deficiencies, consistent with the other accessibility metadata but expressing subtleties such as \"short descriptions are present but long descriptions will be needed for non-visual users\" or \"short descriptions are present and no long descriptions are needed.\"",
                         "type": "string",
                         "owl:cardinality": "one"
                     },
@@ -62,6 +62,21 @@
                                 "type": "array",
                                 "items": {
                                     "type": "string"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "audience": {
+                        "description": "The type of audience intended for your course. A succinct description of the attendees.  An intended audience, i.e. a group for whom something was created. Supersedes serviceAudience.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/audience"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/audience"
                                 }
                             }
                         ],
@@ -110,21 +125,6 @@
                         "description": " The number of comments this CreativeWork (e.g. Article, Question or Answer) has received. This is most applicable to works published in Web sites with commenting system; additional comments may exist elsewhere.",
                         "type": "integer",
                         "owl:cardinality": "one"
-                    },
-                    "contentReferenceTime": {
-                        "description": " The specific time described by a creative work, for works (e.g. articles, video objects etc.) that emphasise a particular moment within an Event.",
-                        "oneOf": [
-                            {
-                                "$ref": "#/definitions/datetime"
-                            },
-                            {
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/definitions/datetime"
-                                }
-                            }
-                        ],
-                        "owl:cardinality": "many"
                     },
                     "courseCode": {
                         "description": " The identifier for the Course used by the course provider (e.g. CS101 or 6.001).",
@@ -243,33 +243,39 @@
                         "owl:cardinality": "one"
                     },
                     "educationalCredentialAwarded": {
-                        "description": "Strongly recommended if it exists. A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this course.",
-                        "anyOf": [
+                        "description": "Strongly recommended if exists. A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this course. A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this course.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/educationaloccupationalcredential"
+                            },
                             {
                                 "type": "string"
                             },
                             {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "educationalLevel": {
+                        "description": "The level expected to be able to participate in the course. Examples of educational levels include 'beginner', 'intermediate' or 'advanced'. The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/definedterm"
+                            },
+                            {
+                                "type": "string"
                             },
                             {
                                 "type": "string",
                                 "format": "uri"
-                            },
-                            {
-                                "type": "array",
-                                "items": {
-                                    "type": "string",
-                                    "format": "uri"
-                                }
                             }
                         ],
-                        "owl:cardinality": "many"
+                        "owl:cardinality": "one"
                     },
                     "hasCourseInstance": {
-                        "description": "A course may be run multiple times in different locations or at different times. Use hasCourseInstance to list the offerings of this Course.\n\nPlease see the [Course Instance specification](https://bioschemas.org/specifications/CourseInstance) for the full list of properties. An offering of the course at a specific time and place or through specific media or mode of study or to a specific section of students.",
+                        "description": "A course may be ran multiple times in different locations or at different times. Use hasCourseInstance to list the offerings of this Course.\n\nPlease see the [Course Instance specification](https://bioschemas.org/specifications/CourseInstance) for the full list of properties. An offering of the course at a specific time and place or through specific media or mode of study or to a specific section of students.",
                         "oneOf": [
                             {
                                 "$ref": "#/definitions/courseinstance"
@@ -284,8 +290,8 @@
                         "owl:cardinality": "many"
                     },
                     "hasPart": {
-                        "description": "Training Materials used in a Course, such as exercises, handouts or slides.\n\nIf this varies in a *CourseInstance*, use _workFeatured_ in *CourseInstance* to override _hasPart_.\n Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).\nInverse property: isPartOf.",
-                        "anyOf": [
+                        "description": "A training material used in a course such as an exercise, handouts, or slides. \n\nInverse property: isPartOf.\n\nIf this varies in a CourseInstance, use workFeatutred to override this property value.  Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).\nInverse property: isPartOf.",
+                        "oneOf": [
                             {
                                 "$ref": "#/definitions/creativework"
                             },
@@ -293,15 +299,6 @@
                                 "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/creativework"
-                                }
-                            },
-                            {
-                                "$ref": "#/definitions/trip"
-                            },
-                            {
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/definitions/trip"
                                 }
                             }
                         ],
@@ -356,27 +353,23 @@
                         "owl:cardinality": "many"
                     },
                     "keywords": {
-                        "description": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
-                        "type": "string",
-                        "owl:cardinality": "one"
-                    },
-                    "learningOutcome": {
-                        "description": " Statements that describe what knowledge, skills or abilities students should acquire on completion of this Course",
+                        "description": "Free text keywords delimited by commas describing the Course content. Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
                         "oneOf": [
+                            {
+                                "$ref": "#/definitions/definedterm"
+                            },
                             {
                                 "type": "string"
                             },
                             {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
+                                "type": "string",
+                                "format": "uri"
                             }
                         ],
-                        "owl:cardinality": "many"
+                        "owl:cardinality": "one"
                     },
                     "license": {
-                        "description": "If the Course has an open-source licence, include the short URL, as found in [OSI](https://opensource.org/licenses). Otherwise use CreativeWork to describe your custom licence. A license document that applies to this content, typically indicated by URL.",
+                        "description": "If the Course has an open-source license, include the short URL, as found in OSI. Otherwise use CreativeWork to describe your custom license. A license document that applies to this content, typically indicated by URL.",
                         "oneOf": [
                             {
                                 "$ref": "#/definitions/creativework"
@@ -389,7 +382,7 @@
                         "owl:cardinality": "one"
                     },
                     "mentions": {
-                        "description": "Data-sets, tools, technologies, entities, etc. to which this Course makes reference.\n\nSee \u2018uses\u2019 for resources that are actively utilised in this Course.\n\nIf this varies in a *CourseInstance*, use the *CourseInstance* version of _mentions_ to override this _mentions_. Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.",
+                        "description": "Datasets, tools, technologies, entities etc, which are actively used by and/or referred to by this course.\n\nIf this varies in a *CourseInstance*, use the *CourseInstance* version of _mentions_ to override this mentions. Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.",
                         "oneOf": [
                             {
                                 "$ref": "#/definitions/thing"
@@ -409,7 +402,7 @@
                         "owl:cardinality": "one"
                     },
                     "provider": {
-                        "description": "The organisation responsible for providing the educational input for the Course: e.g., content, assessments, accreditation, etc. Note: providing a Course goes beyond creating it, as it implies some degree of academic responsibility for accrediting the Course content, perhaps running assessments, etc. The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.",
+                        "description": "The organization responsible for providing the educational input for the course, e.g. content, assessments, accreditation etc.\nNote: providing a course goes beyond creating it as it implies some degree of academic responsibility for accrediting the content of the course, perhaps running assessments etc. The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/organization"
@@ -432,10 +425,29 @@
                         ],
                         "owl:cardinality": "many"
                     },
-                    "skillLevel": {
-                        "description": " The target skill level in the topic being taught. Examples of skill levels include \u2018beginner\u2019, \u2018intermediate\u2019 or \u2018advanced\u2019.",
-                        "type": "string",
-                        "owl:cardinality": "one"
+                    "teaches": {
+                        "description": "Statements that describe what knowledge, skills or abilities students should acquire on completion of this Course The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/definedterm"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/definedterm"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "thumbnailUrl": {
                         "description": " A thumbnail image relevant to the Thing.",
@@ -444,30 +456,15 @@
                         "owl:cardinality": "one"
                     },
                     "timeRequired": {
-                        "description": "This should use the ISO 8601 duration format. \n\nIf this varies in a *CourseInstance*, use _duration_ in *CourseInstance* to override _timeRequired_. Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'.",
+                        "description": "Approximate or typical time it takes to work through this learning resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'. This should use the ISO 8601 duration format. \n\nIf this varies in a *CourseInstance*, use _duration_ in *CourseInstance* to override timeRequired. Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'.",
                         "$ref": "#/definitions/duration",
                         "owl:cardinality": "one"
                     },
                     "url": {
-                        "description": "The preferred URL of the Course page. You must provide this value if it is known. URL of the item.",
+                        "description": "The preferred URL of the course page. You must provide this value if it is known. URL of the item.",
                         "type": "string",
                         "format": "uri",
                         "owl:cardinality": "one"
-                    },
-                    "uses": {
-                        "description": "Data-sets, tools, technologies, entities, etc. that are actively utilised in this Course. Lists datasets, tools, technologies, or other entities used.",
-                        "oneOf": [
-                            {
-                                "$ref": "#/definitions/thing"
-                            },
-                            {
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/definitions/thing"
-                                }
-                            }
-                        ],
-                        "owl:cardinality": "many"
                     }
                 },
                 "required": [
@@ -481,22 +478,21 @@
                     "aggregateRating",
                     "citation",
                     "coursePrerequisites",
+                    "educationalLevel",
                     "hasCourseInstance",
-                    "learningOutcome",
                     "license",
                     "mentions",
                     "provider",
-                    "skillLevel",
+                    "teaches",
                     "timeRequired",
-                    "url",
-                    "uses"
+                    "url"
                 ],
                 "optional": [
                     "accessibilitySummary",
                     "alternateName",
+                    "audience",
                     "comment",
                     "commentCount",
-                    "contentReferenceTime",
                     "courseCode",
                     "creator",
                     "dateCreated",
@@ -528,6 +524,16 @@
                         },
                         "required": []
                     },
+                    "audience": {
+                        "@type": "schema:Audience",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
                     "creativework": {
                         "@type": "CreativeWork",
                         "type": "object",
@@ -547,16 +553,6 @@
                     },
                     "comment": {
                         "@type": "schema:Comment",
-                        "type": "object",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": []
-                    },
-                    "datetime": {
-                        "@type": "schema:DateTime",
                         "type": "object",
                         "properties": {
                             "name": {
@@ -644,8 +640,8 @@
                             "name"
                         ]
                     },
-                    "courseinstance": {
-                        "@type": "bioschemas:CourseInstance",
+                    "datetime": {
+                        "@type": "schema:DateTime",
                         "type": "object",
                         "properties": {
                             "name": {
@@ -654,8 +650,58 @@
                         },
                         "required": []
                     },
-                    "trip": {
-                        "@type": "schema:Trip",
+                    "educationaloccupationalcredential": {
+                        "@type": "schema:EducationalOccupationalCredential",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "definedterm": {
+                        "@type": "DefinedTerm",
+                        "type": "object",
+                        "properties": {
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "termCode": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "inDefinedTermSet": {
+                                "$ref": "#/definitions/definedtermset"
+                            }
+                        },
+                        "required": []
+                    },
+                    "definedtermset": {
+                        "@type": "DefinedTermSet",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
+                    "courseinstance": {
+                        "@type": "bioschemas:CourseInstance",
                         "type": "object",
                         "properties": {
                             "name": {
@@ -700,48 +746,6 @@
                     }
                 }
             }
-        },
-        {
-            "@id": "bioschemas:skillLevel",
-            "rdfs:comment": "The target skill level in the topic being taught. Examples of skill levels include ‘beginner’, ‘intermediate’ or ‘advanced’.",
-            "@type": "rdf:Property",
-            "rdfs:label": "skillLevel",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:Course"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Text"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:learningOutcome",
-            "rdfs:comment": "Statements that describe what knowledge and skills a student will acquire from completing this training. It is recommended you utilize terms from Blooms taxonomy.",
-            "@type": "rdf:Property",
-            "rdfs:label": "learningOutcome",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:Course"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Text"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:uses",
-            "rdfs:comment": "List resources utilized by this resource such as datasets, tools, technologies, or other entities. Data-sets, tools, technologies, entities, etc. that are actively utilised in this Course.",
-            "@type": "rdf:Property",
-            "rdfs:label": "uses",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:Course"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Thing"
-                }
-            ]
         }
     ]
 }

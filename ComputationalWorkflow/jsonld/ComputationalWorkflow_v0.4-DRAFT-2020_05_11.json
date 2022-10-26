@@ -3,7 +3,9 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "owl": "http://www.w3.org/2002/07/owl/",
+        "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/"
     },
     "@graph": [
         {
@@ -15,7 +17,7 @@
             ],
             "rdfs:label": "Workflow",
             "rdfs:subClassOf": {
-                "@id": "schema:SoftwareSourceCode"
+                "@id": "bioschemastypes:ComputationalWorkflow"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
@@ -33,7 +35,8 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "citation": {
                         "description": " A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
@@ -56,11 +59,13 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "conditionsOfAccess": {
                         "description": " Conditions that affect the availability of, or method(s) of access to, an item. Typically used for real world items such as an ArchiveComponent held by an ArchiveOrganization. This property is not suitable for use as a general Web access control mechanism. It is expressed only in natural language.\n\nFor example \"Available by appointment from the Reading Room\" or \"Accessible only from logged-in accounts \".",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "contributor": {
                         "description": " A secondary contributor to the CreativeWork or Event.",
@@ -83,7 +88,8 @@
                                     "$ref": "#/definitions/person"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "creator": {
                         "description": " The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.",
@@ -106,7 +112,8 @@
                                     "$ref": "#/definitions/person"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "dateCreated": {
                         "description": " The date on which the CreativeWork was created or the item was added to a DataFeed.",
@@ -118,7 +125,8 @@
                             {
                                 "$ref": "#/definitions/datetime"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "dateModified": {
                         "description": " The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
@@ -130,11 +138,13 @@
                             {
                                 "$ref": "#/definitions/datetime"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "description": {
                         "description": " A description of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "encodingFormat": {
                         "description": "Should be the type of the workflow Media type typically expressed using a MIME format (see IANA siteand MDN reference) e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc.).\n\nIn cases where a CreativeWork has several media type representations, encoding can be used to indicate each MediaObject alongside particular encodingFormat information.\n\nUnregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry. Supersedes fileFormat.",
@@ -159,7 +169,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "hasPart": {
                         "description": " Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).\nInverse property: isPartOf.",
@@ -173,7 +184,8 @@
                                     "$ref": "#/definitions/creativework"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "identifier": {
                         "description": " The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.",
@@ -207,7 +219,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "image": {
                         "description": " An image of the item. This can be a URL or a fully described ImageObject.",
@@ -232,7 +245,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "input": {
                         "description": " an input required to use the workflow (eg. xl spreadsheet, xml file, ...)",
@@ -246,11 +260,13 @@
                                     "$ref": "#/definitions/propertyvaluespecification"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "keywords": {
                         "description": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "license": {
                         "description": " A license document that applies to this content, typically indicated by URL.",
@@ -275,11 +291,13 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "name": {
                         "description": "The name of the item as input The name of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "output": {
                         "description": " an output produced by the workflow",
@@ -293,7 +311,8 @@
                                     "$ref": "#/definitions/propertyvaluespecification"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "programmingLanguage": {
                         "description": " The computer programming language.\n",
@@ -316,7 +335,8 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "publisher": {
                         "description": " The publisher of the creative work.",
@@ -339,7 +359,8 @@
                                     "$ref": "#/definitions/person"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "runtimePlatform": {
                         "description": " Runtime platform or script interpreter dependencies (Example - Java v1, Python2.3, .Net Framework 3.0). Supersedes runtime.",
@@ -353,7 +374,8 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "sdPublisher": {
                         "description": " Indicates the party responsible for generating and publishing the current structured data markup, typically in cases where the structured data is derived automatically from existing published content but published on a different site. For example, student projects and open data initiatives often re-publish existing content with more explicitly structured metadata. The sdPublisherproperty helps make such practices more explicit.",
@@ -364,7 +386,8 @@
                             {
                                 "$ref": "#/definitions/person"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "softwareRequirements": {
                         "description": "Renaming schema.org/requirements as softwareRequirements Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (Examples: DirectX, Java or .NET runtime). Supersedes requirements.",
@@ -389,7 +412,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "targetProduct": {
                         "description": " Target Operating System / Product to which the code applies. If applies to several versions, just the product name can be used.",
@@ -403,12 +427,14 @@
                                     "$ref": "#/definitions/softwareapplication"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "url": {
                         "description": " URL of the item.",
                         "type": "string",
-                        "format": "uri"
+                        "format": "uri",
+                        "owl:cardinality": "one"
                     },
                     "version": {
                         "description": "version is a release, date modified may not warrant a release, but last date modified and access to all versions is important The version of the CreativeWork embodied by a specified resource.",
@@ -419,7 +445,8 @@
                             {
                                 "type": "string"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     }
                 },
                 "required": [
@@ -671,82 +698,6 @@
                     }
                 }
             }
-        },
-        {
-          "@id": "bioschemas:conditionsOfAccess",
-          "@type": "rdf:Property",
-          "rdfs:comment": "Conditions that affect the availability of, or method(s) of access to, an item. Typically used for real world items such as an ArchiveComponent held by an ArchiveOrganization. This property is not suitable for use as a general Web access control mechanism. It is expressed only in natural language.  For example \u201cAvailable by appointment from the Reading Room\u201d or \u201cAccessible only from logged-in accounts \u201c.",
-          "rdfs:label": "conditionsOfAccess",
-          "schema:domainIncludes": {
-            "@id": "bioschemas:ComputationalWorkflow"
-          },
-          "schema:rangeIncludes": [
-            {
-              "@id": "schema:Text"
-            }
-          ]
-        },
-        {
-            "@id": "bioschemas:softwareRequirements",
-            "rdfs:comment": "Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (Examples: DirectX, Java or .NET runtime). Supersedes requirements. Renaming schema.org/requirements as softwareRequirements",
-            "@type": "rdf:Property",
-            "rdfs:label": "softwareRequirements",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:ComputationalWorkflow"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Text"
-                },
-                {
-                    "@id": "schema:URL"
-                }
-            ]
-        },
-        {
-          "@id": "bioschemas:creativeWorkStatus",
-          "@type": "rdf:Property",
-          "rdfs:comment": "The status of a creative work in terms of its stage in a lifecycle. Example terms include Incomplete, Draft, Published, Obsolete. Some organizations define a set of terms for the stages of their publication lifecycle.",
-          "rdfs:label": "creativeWorkStatus",
-          "schema:domainIncludes": {
-            "@id": "bioschemas:ComputationalWorkflow"
-          },
-          "schema:rangeIncludes": [
-            {
-              "@id": "schema:Text"
-            },
-            {
-              "@id": "schema:DefinedTerm"
-            }
-          ]
-        },
-        {
-            "@id": "bioschemas:input",
-            "rdfs:comment": "an input required to use the workflow (eg. xl spreadsheet, xml file, ...) ",
-            "@type": "rdf:Property",
-            "rdfs:label": "input",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:ComputationalWorkflow"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:PropertyValueSpecification"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:output",
-            "rdfs:comment": "an output produced by the workflow ",
-            "@type": "rdf:Property",
-            "rdfs:label": "output",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:ComputationalWorkflow"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:PropertyValueSpecification"
-                }
-            ]
         }
     ]
 }

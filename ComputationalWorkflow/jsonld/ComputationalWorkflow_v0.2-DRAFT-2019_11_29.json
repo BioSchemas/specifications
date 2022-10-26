@@ -3,19 +3,22 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+        "owl": "http://www.w3.org/2002/07/owl/",
+        "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/",
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "bioschemastemp": "https://discovery.biothings.io/view/bioschemastemp/"
     },
     "@graph": [
         {
-            "@id": "bioschemas:Workflow",
+            "@id": "bioschemastemp:ComputationalWorkflow",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Bioschemas specification for describing a workflow in the Life Sciences A workflow consists of an orchestrated and repeatable pattern of activity enabled by the systematic organization of resources into processes that transform materials, provide services, or process information. It can be depicted as a sequence of operations, the work of a person or group, the work of an organization of staff, or one or more simple or complex mechanisms. (source Wikipedia.org) Version: 0.2-DRAFT-2019_11_29",
+            "rdfs:comment": "A workflow consists of an orchestrated and repeatable pattern of activity enabled by the systematic organization of resources into processes that transform materials, provide services, or process information. It can be depicted as a sequence of operations, the work of a person or group, the work of an organization of staff, or one or more simple or complex mechanisms. (source Wikipedia.org) Version: 0.2-DRAFT-2019_11_29",
             "schema:schemaVersion": [
                 "https://bioschemas.org/profiles/Workflow/0.2-DRAFT-2019_11_29"
             ],
-            "rdfs:label": "Workflow",
+            "rdfs:label": "ComputationalWorkflow",
             "rdfs:subClassOf": {
-                "@id": "schema:SoftwareSourceCode"
+              "@id": "bioschemastypes:ComputationalWorkflow"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
@@ -30,7 +33,8 @@
                             {
                                 "$ref": "#/definitions/person"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "contributor": {
                         "description": " A secondary contributor to the CreativeWork or Event.",
@@ -53,7 +57,8 @@
                                     "$ref": "#/definitions/person"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "dateCreated": {
                         "description": " The date on which the CreativeWork was created or the item was added to a DataFeed.",
@@ -65,7 +70,8 @@
                             {
                                 "$ref": "#/definitions/datetime"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "dateModified": {
                         "description": " The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
@@ -77,11 +83,13 @@
                             {
                                 "$ref": "#/definitions/datetime"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "description": {
                         "description": " A description of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "hasPart": {
                         "description": " Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).\nInverse property: isPartOf.",
@@ -95,7 +103,8 @@
                                     "$ref": "#/definitions/creativework"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "identifier": {
                         "description": " The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.",
@@ -129,7 +138,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "image": {
                         "description": " An image of the item. This can be a URL or a fully described ImageObject.",
@@ -154,7 +164,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "input": {
                         "description": " ",
@@ -168,11 +179,13 @@
                                     "$ref": "#/definitions/thing"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "keywords": {
                         "description": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "license": {
                         "description": " A license document that applies to this content, typically indicated by URL.",
@@ -184,11 +197,13 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "name": {
                         "description": " The name of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "output": {
                         "description": " ",
@@ -202,7 +217,8 @@
                                     "$ref": "#/definitions/thing"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "programmingLanguage": {
                         "description": " The computer programming language.\n",
@@ -225,21 +241,34 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "softwareRequirements": {
                         "description": "Renaming schema.org/requirements as softwareRequirements Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (Examples: DirectX, Java or .NET runtime). Supersedes requirements.",
                         "oneOf": [
                             {
-                                "$ref": "#/definitions/text orurl"
+                                "type": "string"
                             },
                             {
                                 "type": "array",
                                 "items": {
-                                    "$ref": "#/definitions/text orurl"
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "targetProduct": {
                         "description": " Target Operating System / Product to which the code applies. If applies to several versions, just the product name can be used.",
@@ -253,12 +282,14 @@
                                     "$ref": "#/definitions/softwareapplication"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "url": {
                         "description": " URL of the item.",
                         "type": "string",
-                        "format": "uri"
+                        "format": "uri",
+                        "owl:cardinality": "one"
                     },
                     "version": {
                         "description": " The version of the CreativeWork embodied by a specified resource.",
@@ -269,7 +300,8 @@
                             {
                                 "type": "string"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     }
                 },
                 "required": [
@@ -298,7 +330,7 @@
                 ],
                 "definitions": {
                     "organization": {
-                        "@type": "Organization",
+                        "@type": "schema:Organization",
                         "type": "object",
                         "properties": {
                             "name": {
@@ -317,7 +349,7 @@
                         }
                     },
                     "person": {
-                        "@type": "Person",
+                        "@type": "schema:Person",
                         "type": "object",
                         "properties": {
                             "name": {
@@ -357,7 +389,7 @@
                         ]
                     },
                     "creativework": {
-                        "@type": "CreativeWork",
+                        "@type": "schema:CreativeWork",
                         "type": "object",
                         "properties": {
                             "name": {
@@ -384,7 +416,7 @@
                         "required": []
                     },
                     "propertyvalue": {
-                        "@type": "PropertyValue",
+                        "@type": "schema:PropertyValue",
                         "type": "object",
                         "properties": {
                             "name": {
@@ -449,7 +481,7 @@
                         ]
                     },
                     "categorycode": {
-                        "@type": "CategoryCode",
+                        "@type": "schema:CategoryCode",
                         "type": "object",
                         "properties": {
                             "name": {
@@ -469,7 +501,7 @@
                         ]
                     },
                     "imageobject": {
-                        "@type": "ImageObject",
+                        "@type": "schema:ImageObject",
                         "type": "object",
                         "properties": {
                             "name": {
@@ -502,16 +534,6 @@
                         },
                         "required": []
                     },
-                    "text orurl": {
-                        "@type": "schema:Text orURL",
-                        "type": "object",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": []
-                    },
                     "softwareapplication": {
                         "@type": "schema:SoftwareApplication",
                         "type": "object",
@@ -524,48 +546,6 @@
                     }
                 }
             }
-        },
-        {
-            "@id": "bioschemas:input",
-            "rdfs:comment": " ",
-            "@type": "rdf:Property",
-            "rdfs:label": "input",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:ComputationalWorkflow"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Thing"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:output",
-            "rdfs:comment": " ",
-            "@type": "rdf:Property",
-            "rdfs:label": "output",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:ComputationalWorkflow"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Thing"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:softwareRequirements",
-            "rdfs:comment": "Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (Examples: DirectX, Java or .NET runtime). Supersedes requirements. Renaming schema.org/requirements as softwareRequirements",
-            "@type": "rdf:Property",
-            "rdfs:label": "softwareRequirements",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:ComputationalWorkflow"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Text orURL"
-                }
-            ]
         }
     ]
 }

@@ -3,7 +3,10 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+        "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/",
+        "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/",
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [
         {
@@ -15,7 +18,7 @@
             ],
             "rdfs:label": "LabProtocol",
             "rdfs:subClassOf": {
-                "@id": "schema:HowTo"
+                "@id": "bioschemastypesdrafts:LabProtocol"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
@@ -42,7 +45,8 @@
                                     "$ref": "#/definitions/person"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "bioSampleUsed": {
                         "description": " BioSample used in the protocol. It could be a record in a Dataset describing the sample or a physical object corresponding to the sample or a URL pointing to the type of sample used. ",
@@ -103,7 +107,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "citation": {
                         "description": " A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
@@ -126,7 +131,8 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "dateCreated": {
                         "description": " The date on which the CreativeWork was created or the item was added to a DataFeed.",
@@ -138,7 +144,8 @@
                             {
                                 "$ref": "#/definitions/datetime"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "dateModified": {
                         "description": "Last modified date The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
@@ -150,7 +157,8 @@
                             {
                                 "$ref": "#/definitions/datetime"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "datePublished": {
                         "description": "Many is used to cover original printed and electronic publication dates. Date of first broadcast/publication.",
@@ -166,7 +174,8 @@
                                     "format": "date"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "identifier": {
                         "description": " The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.",
@@ -181,7 +190,8 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "isBasedOn": {
                         "description": "Note: Bioschemas has removed Product from the Expected Types A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html. Supersedes isBasedOnUrl.",
@@ -206,7 +216,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "isPartOf": {
                         "description": " Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of. Inverse property: hasPart.",
@@ -229,11 +240,13 @@
                                     "$ref": "#/definitions/trip"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "keywords": {
                         "description": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "labEquipmentUsed": {
                         "description": " A laboratory equipment used by a person to follow one or more steps described in this LabProtocol. ",
@@ -267,7 +280,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "license": {
                         "description": " A license document that applies to this content, typically indicated by URL.",
@@ -279,7 +293,8 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "protocolAdvantage": {
                         "description": " Situations where the Protocol has been successfully employed (see more information <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#AdvantageOfTheProtocol\">here</a>)",
@@ -302,7 +317,8 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "protocolApplication": {
                         "description": " Applications of the protocol list the full diversity of the applications of the method and support if is possible to extend the range of applications of the protocol. e.g. northern blot assays, sequencing, etc. (see more information  <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#ApplicationOfTheProtocol\">here</a>)",
@@ -325,7 +341,8 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "protocolLimitation": {
                         "description": " Situations where the Protocol would be unreliable or otherwise unsuccessful (see more information <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#LimitationOfTheProtocol\">here</a>)",
@@ -348,7 +365,8 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "protocolOutcome": {
                         "description": " Outcome or expected result by a protocol execution (see more information <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#OutcomeOfTheProtocol\">here</a>)",
@@ -371,7 +389,8 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "protocolPurpose": {
                         "description": " The purpose of the protocol enables readers to make a decision as to the suitability of the protocol to their experimental problem. (see more information <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#PurposeOfProtocol\">here</a>)",
@@ -382,7 +401,8 @@
                             {
                                 "type": "string"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "reagentUsed": {
                         "description": " Reagents used in the protocol. ChEBI and PubChem entities can be used whenever available. Commercial names are also acceptable",
@@ -425,7 +445,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "softwareUsed": {
                         "description": " Software or tool used as part of the lab protocol to complete a part of it.",
@@ -450,7 +471,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "step": {
                         "description": " A single step item (as HowToStep, text, document, video, etc.) or a HowToSection.",
@@ -491,11 +513,13 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "totalTime": {
                         "description": " The total time required to perform instructions or a direction (including time to prepare the supplies), in ISO 8601 duration format.",
-                        "$ref": "#/definitions/duration"
+                        "$ref": "#/definitions/duration",
+                        "owl:cardinality": "one"
                     }
                 },
                 "required": [
@@ -864,37 +888,8 @@
             }
         },
         {
-            "@id": "bioschemas:bioSampleUsed",
-            "rdfs:comment": "BioSample used in the protocol. It could be a record in a Dataset describing the sample or a physical object corresponding to the sample or a URL pointing to the type of sample used.  ",
-            "@type": "rdf:Property",
-            "rdfs:label": "bioSampleUsed",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:LabProtocol"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bioschemas:BioSample"
-                },
-                {
-                    "@id": "bioschemas:Taxon"
-                },
-                {
-                    "@id": "schema:BioChemEntity"
-                },
-                {
-                    "@id": "schema:DefinedTerm"
-                },
-                {
-                    "@id": "schema:Text"
-                },
-                {
-                    "@id": "schema:URL"
-                }
-            ]
-        },
-        {
             "@id": "bioschemas:labEquipmentUsed",
-            "rdfs:comment": "A laboratory equipment used by a person to follow one or more steps described in this LabProtocol.  ",
+            "rdfs:comment": "A laboratory equipment used by a person to follow one or more steps described in this LabProtocol. Controlled Vocabulary: BAO, EFO, ERO, OBI",
             "@type": "rdf:Property",
             "rdfs:label": "labEquipmentUsed",
             "schema:domainIncludes": {
@@ -913,76 +908,51 @@
             ]
         },
         {
-            "@id": "bioschemas:protocolAdvantage",
-            "rdfs:comment": "Situations where the Protocol has been successfully employed (see more information <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#AdvantageOfTheProtocol\">here</a>) ",
+            "@id": "bioschemas:bioSampleUsed",
+            "rdfs:comment": "BioSample used in the protocol. It could be a record in a Dataset describing the sample or a physical object corresponding to the sample or a URL pointing to the type of sample used. Controlled Vocabulary: NCBI Taxonomy, Uberon",
             "@type": "rdf:Property",
-            "rdfs:label": "protocolAdvantage",
+            "rdfs:label": "bioSampleUsed",
             "schema:domainIncludes": {
                 "@id": "bioschemas:LabProtocol"
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "schema:CreativeWork"
+                    "@id": "bioschemastypes:BioChemEntity"
+                },
+                {
+                    "@id": "bioschemastypes:BioSample"
+                },
+                {
+                    "@id": "schema:DefinedTerm"
+                },
+                {
+                    "@id": "bioschemastypes:Taxon"
                 },
                 {
                     "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
                 }
             ]
         },
         {
-            "@id": "bioschemas:protocolApplication",
-            "rdfs:comment": "Applications of the protocol list the full diversity of the applications of the method and support if is possible to extend the range of applications of the protocol. e.g. northern blot assays, sequencing, etc. (see more information  <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#ApplicationOfTheProtocol\">here</a>) ",
+            "@id": "bioschemas:totalTime",
+            "rdfs:comment": "The total time required to perform instructions or a direction (including time to prepare the supplies), in ISO 8601 duration format.",
             "@type": "rdf:Property",
-            "rdfs:label": "protocolApplication",
+            "rdfs:label": "totalTime",
             "schema:domainIncludes": {
                 "@id": "bioschemas:LabProtocol"
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "schema:CreativeWork"
-                },
-                {
-                    "@id": "schema:Text"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:protocolLimitation",
-            "rdfs:comment": "Situations where the Protocol would be unreliable or otherwise unsuccessful (see more information <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#LimitationOfTheProtocol\">here</a>) ",
-            "@type": "rdf:Property",
-            "rdfs:label": "protocolLimitation",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:LabProtocol"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:CreativeWork"
-                },
-                {
-                    "@id": "schema:Text"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:protocolOutcome",
-            "rdfs:comment": "Outcome or expected result by a protocol execution (see more information <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#OutcomeOfTheProtocol\">here</a>) ",
-            "@type": "rdf:Property",
-            "rdfs:label": "protocolOutcome",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:LabProtocol"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:CreativeWork"
-                },
-                {
-                    "@id": "schema:Text"
+                    "@id": "schema:Duration"
                 }
             ]
         },
         {
             "@id": "bioschemas:protocolPurpose",
-            "rdfs:comment": "The purpose of the protocol enables readers to make a decision as to the suitability of the protocol to their experimental problem. (see more information <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#PurposeOfProtocol\">here</a>) ",
+            "rdfs:comment": "BioSample used in the protocol. It could be a record in a Dataset describing the sample or a physical object corresponding to the sample or a URL pointing to the type of sample used. Controlled Vocabulary: NCBI Taxonomy, Uberon",
             "@type": "rdf:Property",
             "rdfs:label": "protocolPurpose",
             "schema:domainIncludes": {
@@ -999,7 +969,7 @@
         },
         {
             "@id": "bioschemas:reagentUsed",
-            "rdfs:comment": "Reagents used in the protocol. ChEBI and PubChem entities can be used whenever available. Commercial names are also acceptable ",
+            "rdfs:comment": "Reagents used in the protocol. ChEBI and PubChem entities can be used whenever available. Commercial names are also acceptable. Controlled Vocabulary: ChEBI, PubChem",
             "@type": "rdf:Property",
             "rdfs:label": "reagentUsed",
             "schema:domainIncludes": {
@@ -1007,7 +977,7 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "schema:BioChemEntity"
+                    "@id": "bioschemastypes:BioChemEntity"
                 },
                 {
                     "@id": "schema:DefinedTerm"
@@ -1022,7 +992,7 @@
         },
         {
             "@id": "bioschemas:softwareUsed",
-            "rdfs:comment": "Software or tool used as part of the lab protocol to complete a part of it. ",
+            "rdfs:comment": "Software or tool used as part of the lab protocol to complete a part of it.",
             "@type": "rdf:Property",
             "rdfs:label": "softwareUsed",
             "schema:domainIncludes": {

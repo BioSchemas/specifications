@@ -3,7 +3,8 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [
         {
@@ -23,7 +24,8 @@
                 "properties": {
                     "audience": {
                         "description": " An intended audience, i.e. a group for whom something was created. Supersedes serviceAudience.",
-                        "$ref": "#/definitions/audience"
+                        "$ref": "#/definitions/audience",
+                        "owl:cardinality": "one"
                     },
                     "author": {
                         "description": " The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.",
@@ -34,11 +36,13 @@
                             {
                                 "$ref": "#/definitions/person"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "courseCode": {
                         "description": "About this course. The identifier for the Course used by the course provider (e.g. CS101 or 6.001).",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "coursePrerequisites": {
                         "description": "Pre-requisite requirments before you can take this course. Requirements for taking the Course. May be completion of another Course or a textual description like \"permission of instructor\". Requirements may be a pre-requisite competency, referenced using AlignmentObject.",
@@ -70,11 +74,13 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "description": {
                         "description": " A description of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "hasCourseInstance": {
                         "description": " An offering of the course at a specific time and place or through specific media or mode of study or to a specific section of students.",
@@ -88,7 +94,8 @@
                                     "$ref": "#/definitions/courseinstance"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "image": {
                         "description": " An image of the item. This can be a URL or a fully described ImageObject.",
@@ -100,7 +107,8 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "inLanguage": {
                         "description": " The language of the content or performance or used in an action. Please use one of the language codes from the IETF BCP 47 standard. See also availableLanguage. Supersedes language.",
@@ -111,7 +119,8 @@
                             {
                                 "type": "string"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "keywords": {
                         "description": "Keywords describing course. Use terms from Controlled Vocabularies where possible, e.g., [EDAM](http://edamontology.org/page). Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
@@ -125,11 +134,13 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "name": {
                         "description": " The name of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "producer": {
                         "description": "Faciliator/contact person. The person or organization who produced the work (e.g. music album, movie, tv/radio series etc.).",
@@ -152,7 +163,8 @@
                                     "$ref": "#/definitions/person"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "provider": {
                         "description": "Host organization. The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.",
@@ -175,7 +187,8 @@
                                     "$ref": "#/definitions/person"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "sponsor": {
                         "description": " A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event.",
@@ -198,17 +211,20 @@
                                     "$ref": "#/definitions/person"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "thumbnailUrl": {
                         "description": " A thumbnail image relevant to the Thing.",
                         "type": "string",
-                        "format": "uri"
+                        "format": "uri",
+                        "owl:cardinality": "one"
                     },
                     "url": {
                         "description": " URL of the item.",
                         "type": "string",
-                        "format": "uri"
+                        "format": "uri",
+                        "owl:cardinality": "one"
                     }
                 },
                 "required": [

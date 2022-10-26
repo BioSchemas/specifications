@@ -3,7 +3,7 @@
     "schema": "http://schema.org/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "bioschemastypes": "http://discovery.biothings.io/view/bioschemastypes/"
+    "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/"
   },
   "@graph": [
     {
