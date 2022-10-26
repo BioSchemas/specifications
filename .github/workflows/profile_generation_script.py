@@ -518,7 +518,7 @@ for arg in args:
                             line_count += 1
                             if line_count > 1:
                                 if row[0] == profile_name:
-                                    SubClass = row[4]
+                                    SubClass = row[0]
 
                     data = [
                         "bioschams",
