@@ -506,10 +506,24 @@ for arg in args:
                         "type" "version",
                         "url",
                     ]
+
+                    SubClass = ""
+
+                    with open(
+                        "bioschemas.github.io/_data/metadata_mapping.csv"
+                    ) as csv_file:
+                        csv_reader = csv.reader(csv_file, delimiter=",")
+                        line_count = 0
+                        for row in csv_reader:
+                            line_count += 1
+                            if line_count > 1:
+                                if row[0] == profile_name:
+                                    SubClass = row[4]
+
                     data = [
                         "bioschams",
                         profile_name,
-                        "",
+                        SubClass,
                         transformed_profile["spec_info"]["version"],
                         "https://github.com/BioSchemas/specifications/tree/master/"
                         + arg,
