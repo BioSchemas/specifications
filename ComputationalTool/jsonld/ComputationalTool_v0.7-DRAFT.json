@@ -791,7 +791,7 @@
               "@id": "schema:Text"
             },
             {
-              "@id": "schema:ComputerLanguage"
+              "@id": "schema:ComputerbbLanguage"
             }
           ]
         },
