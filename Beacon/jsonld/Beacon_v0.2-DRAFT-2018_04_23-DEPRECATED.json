@@ -4,14 +4,15 @@
         "rdf": "https://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "dct": "https://dublincore.org/specifications/dublin-core/dcmi-terms/#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
-        "owl": "http://www.w3.org/2002/07/owl/"
+        "owl": "http://www.w3.org/2002/07/owl/",
+        "bioschemasdeprecated": "https://discovery.biothings.io/view/bioschemasdeprecated/"
     },
     "@graph": [
         {
-            "@id": "bioschemas:Beacon",
+            "@id": "bioschemasdeprecated:Beacon",
             "@type": "rdfs:Class",
-            "rdfs:comment": "A convention for beacon hey self-describe.  In this document we propose a simple way for a beacons to self-describe their genetic variant cardinality service for better integration with other beacons within the beacon-network. It builds upon the Beacon service API and uses existing schema.org entities and properties.  Version: 0.2-DRAFT-2018_04_23",
+            "owl:deprecated": "True",
+            "rdfs:comment": "A convention for beacon to self-describe.  In this document we propose a simple way for a beacons to self-describe their genetic variant cardinality service for better integration with other beacons within the beacon-network. It builds upon the Beacon service API and uses existing schema.org entities and properties.  Version: 0.2-DRAFT-2018_04_23",
             "schema:schemaVersion": [
                 "https://bioschemas.org/profiles/Beacon/0.2-DRAFT-2018_04_23"
             ],
@@ -185,7 +186,7 @@
                 ],
                 "definitions": {
                     "datacatalog": {
-                        "@type": "bioschemas:DataCatalog",
+                        "@type": "schema:DataCatalog",
                         "type": "object",
                         "properties": {
                             "name": {
@@ -369,46 +370,46 @@
             }
         },
         {
-            "@id": "bioschemas:aggregator",
-            "rdfs:comment": " True if Beacon is an agregator of other Beacon Datasets.",
-            "@type": "rdf:Property",
-            "rdfs:label": "aggregator",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:Beacon"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Boolean"
-                }
-            ]
+          "@id": "bioschemasdeprecated:aggregator",
+          "@type": "rdf:Property",
+          "rdfs:comment": "True if Beacon is an agregator of other Beacon Datasets.",
+          "rdfs:label": "aggregator",
+          "schema:domainIncludes": {
+            "@id": "bioschemasdeprecated:Beacon"
+          },
+          "schema:rangeIncludes": [
+            {
+              "@id": "schema:Boolean"
+            }
+          ]
         },
         {
-            "@id": "rdf:type",
-            "rdfs:comment": " This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column.",
-            "@type": "rdf:Property",
-            "rdfs:label": "type",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:Beacon"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:URL"
-                }
-            ]
+          "@id": "rdf:type",
+          "@type": "rdf:Property",
+          "rdfs:comment": "This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column.",
+          "rdfs:label": "type",
+          "schema:domainIncludes": {
+            "@id": "bioschemasdeprecated:Beacon"
+          },
+          "schema:rangeIncludes": [
+            {
+              "@id": "schema:URL"
+            }
+          ]
         },
         {
-            "@id": "bioschemas:supportedRefs",
-            "rdfs:comment": " Supported Genome ID references.",
-            "@type": "rdf:Property",
-            "rdfs:label": "supportedRefs",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:Beacon"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Text"
-                }
-            ]
+          "@id": "bioschemasdeprecated:supportedRefs",
+          "@type": "rdf:Property",
+          "rdfs:comment": "Supported Genome ID references.",
+          "rdfs:label": "supportedRefs",
+          "schema:domainIncludes": {
+            "@id": "bioschemasdeprecated:Beacon"
+          },
+          "schema:rangeIncludes": [
+            {
+              "@id": "schema:URL"
+            }
+          ]
         }
     ]
 }
