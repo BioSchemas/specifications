@@ -302,7 +302,7 @@ def generate_property(g, prop, req_label, marginality, external_properties):
         if len(p.split(":")) > 1:
             if req_label == p.split(":")[1]:
                 if len(p.split(":")[0].split("bioschemas")) > 1:
-                    new_p["type"] = "Bioschemas"
+                    new_p["type"] = "bioschemas"
                 else:
                     new_p["type"] = p.split(":")[0]
     t = new_p["type"]
