@@ -10,10 +10,10 @@ on: [push]
 # env:
 #   GH_TOKEN: ${{ secrets.Sahar_Workflows_Token }}
 
-inputs:
-  branch-name: 
-    description: $`date +%Y_%m_%d-%H_%M_%S`
-    required: true
+# inputs:
+#   branch-name: 
+#     description: $`date +%Y_%m_%d-%H_%M_%S`
+#     required: true
 
 jobs:
   generate-profile:
@@ -69,7 +69,7 @@ jobs:
           cd bioschemas.github.io
           git checkout profile-auto-generation
           git pull
-          git checkout -b ${{ inputs.branch-name }}
+          git checkout -b `date +%Y_%m_%d-%H_%M`
           cd ..
 
       - name: Execute the config files update Python Script
@@ -107,7 +107,7 @@ jobs:
           git status
           git add .
           git commit -m "Updating Profile"
-          git push --set-upstream -u origin `date +%Y_%m_%d-%H_%M_%S`
+          git push --set-upstream -u origin `date +%Y_%m_%d-%H_%M`
       
       - name: Create a pull request
         run: |

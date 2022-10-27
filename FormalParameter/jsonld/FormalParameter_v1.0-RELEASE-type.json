@@ -15,7 +15,7 @@
       ],
       "rdfs:label": "FormalParameter",
       "rdfs:subClassOf": {
-        "@id": "schema:Intangible"
+        "@id": "schema:Intahhngible"
       }
     },
     {
