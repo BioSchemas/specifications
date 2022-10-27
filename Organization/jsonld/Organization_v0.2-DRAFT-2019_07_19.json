@@ -3,7 +3,8 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [
         {
@@ -23,7 +24,8 @@
                 "properties": {
                     "alternateName": {
                         "description": " An alias for the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "attachment": {
                         "description": "Any files or related websites which give more information about this organization, e.g., flyers, third party sites, ... ",
@@ -39,11 +41,13 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "budget": {
                         "description": "The annual (or total - for a project) budget for the organization. ",
-                        "$ref": "#/definitions/pricespecification"
+                        "$ref": "#/definitions/pricespecification",
+                        "owl:cardinality": "one"
                     },
                     "contactPoint": {
                         "description": " A contact point for a person or organization. Supersedes contactPoints.",
@@ -57,7 +61,8 @@
                                     "$ref": "#/definitions/contactpoint"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "dateModified": {
                         "description": "The date when the organization information was last modified. The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
@@ -69,7 +74,8 @@
                             {
                                 "$ref": "#/definitions/datetime"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "department": {
                         "description": " A relationship between an organization and a department of that organization, also described as an organization (allowing different urls, logos, opening hours). For example: a store with a pharmacy, or a bakery with a cafe.",
@@ -83,16 +89,19 @@
                                     "$ref": "#/definitions/organization"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "description": {
                         "description": " A description of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "dissolutionDate": {
                         "description": " The date that this organization was dissolved.",
                         "type": "string",
-                        "format": "date"
+                        "format": "date",
+                        "owl:cardinality": "one"
                     },
                     "founderMember": {
                         "description": "For an alliance or collaboration or project, the founding members. NOTE: schema/Organization has founder but this has a type of Person not Person and Organization ",
@@ -115,24 +124,29 @@
                                     "$ref": "#/definitions/person"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "foundingDate": {
                         "description": " The date that this organization was founded.",
                         "type": "string",
-                        "format": "date"
+                        "format": "date",
+                        "owl:cardinality": "one"
                     },
                     "fundingModel": {
                         "description": "A description of how the organization is funded. ",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "keywords": {
                         "description": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "legalName": {
                         "description": " The official name of the organization, e.g. the registered company name.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "location": {
                         "description": " The location of for example where the event is happening, an organization is located, or where an action takes place.",
@@ -146,7 +160,8 @@
                             {
                                 "type": "string"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "logo": {
                         "description": " An associated logo.",
@@ -158,7 +173,8 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "member": {
                         "description": " A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals. Supersedes members, musicGroupMember.\nInverse property: memberOf.",
@@ -181,7 +197,8 @@
                                     "$ref": "#/definitions/person"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "memberOf": {
                         "description": " An Organization (or ProgramMembership) to which this Person or Organization belongs.\nInverse property: member.",
@@ -204,7 +221,8 @@
                                     "$ref": "#/definitions/programmembership"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "membershipCategory": {
                         "description": "Defines a membership category and associated fees (for projects and alliances etc.). ",
@@ -218,11 +236,13 @@
                                     "$ref": "#/definitions/offer"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "name": {
                         "description": " The name of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "owns": {
                         "description": " Products owned by the organization or person.",
@@ -245,16 +265,19 @@
                                     "$ref": "#/definitions/product"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "parentOrganization": {
                         "description": " The larger organization that this organization is a subOrganization of, if any. Supersedes branchOf.\nInverse property: subOrganization.",
-                        "$ref": "#/definitions/organization"
+                        "$ref": "#/definitions/organization",
+                        "owl:cardinality": "one"
                     },
                     "sameAs": {
                         "description": " URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
                         "type": "string",
-                        "format": "uri"
+                        "format": "uri",
+                        "owl:cardinality": "one"
                     },
                     "socialMedia": {
                         "description": "Link to social media websites like twitter or facebook. ",
@@ -270,11 +293,13 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "status": {
                         "description": "To record if the organization is still alive, and if it were are project or alliance, what the outcome was, or if it has closed down or merged, why and when.\nNote: There is a health-lifesci.status, but this is not related to the current status property ",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "subOrganization": {
                         "description": " A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property.\nInverse property: parentOrganization.",
@@ -288,7 +313,8 @@
                                     "$ref": "#/definitions/organization"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "topic": {
                         "description": "Scientific topics that describe the organization and its activities, ideally using an ontology term from EDAM:Topic. ",
@@ -313,7 +339,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "type": {
                         "description": "The type of the organization should be selected from the Controlled Vocabulary column. ",
@@ -338,7 +365,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "url": {
                         "description": " URL of the item.",
@@ -354,7 +382,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     }
                 },
                 "required": [
@@ -606,42 +635,53 @@
             }
         },
         {
-            "@id": "bioschemas:keywords",
-            "rdfs:comment": "Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+            "@id": "rdf:type",
+            "rdfs:comment": "This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column. This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column.",
             "@type": "rdf:Property",
-            "rdfs:label": "keywords",
-            "schema:sameAs": {
-                "@id": "schema:keywords"
-            },
+            "rdfs:label": "type",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Organization"
             },
             "schema:rangeIncludes": [
                 {
                     "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
                 }
             ]
         },
         {
-            "@id": "bioschemas:founderMember",
-            "rdfs:comment": " For an alliance or collaboration or project, the founding members. NOTE: schema/Organization has founder but this has a type of Person not Person and Organization.",
+            "@id": "bioschemas:attachment",
+            "rdfs:comment": "Any files or related websites which give more information about this organization, e.g., flyers, third party sites, …",
             "@type": "rdf:Property",
-            "rdfs:label": "founderMember",
+            "rdfs:label": "attachment",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Organization"
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "schema:Person"
-                },
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:budget",
+            "rdfs:comment": "The annual (or total - for a project) budget for the organization.",
+            "@type": "rdf:Property",
+            "rdfs:label": "budget",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Organization"
+            },
+            "schema:rangeIncludes": [
                 {
-                    "@id": "schema:Organization"
+                    "@id": "schema:PriceSpecification"
                 }
             ]
         },
         {
             "@id": "bioschemas:dateModified",
-            "rdfs:comment": " The date on which the CreativeWork was most recently modified or when the item’s entry was modified within a DataFeed.",
+            "rdfs:comment": "The date on which the CreativeWork was most recently modified or when the item’s entry was modified within a DataFeed.",
             "@type": "rdf:Property",
             "rdfs:label": "dateModified",
             "schema:domainIncludes": {
@@ -657,36 +697,25 @@
             ]
         },
         {
-            "@id": "bioschemas:attachment",
-            "rdfs:comment": " Any files or related websites which give more information about this organization, e.g., flyers, third party sites, ...",
+            "@id": "bioschemas:founderMember",
+            "rdfs:comment": "For an alliance or collaboration or project, the founding members. NOTE: schema/Organization has founder but this has a type of Person not Person and Organization.",
             "@type": "rdf:Property",
-            "rdfs:label": "attachment",
+            "rdfs:label": "founderMember",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Organization"
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "schema:URL"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:budget",
-            "rdfs:comment": " The annual (or total - for a project) budget for the organization.",
-            "@type": "rdf:Property",
-            "rdfs:label": "budget",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:Organization"
-            },
-            "schema:rangeIncludes": [
+                    "@id": "schema:Organization"
+                },
                 {
-                    "@id": "schema:PriceSpecification"
+                    "@id": "schema:Person"
                 }
             ]
         },
         {
             "@id": "bioschemas:fundingModel",
-            "rdfs:comment": " A description of how the organization is funded.",
+            "rdfs:comment": "A description of how the organization is funded.",
             "@type": "rdf:Property",
             "rdfs:label": "fundingModel",
             "schema:domainIncludes": {
@@ -700,7 +729,7 @@
         },
         {
             "@id": "bioschemas:membershipCategory",
-            "rdfs:comment": " Defines a membership category and associated fees (for projects and alliances etc.).",
+            "rdfs:comment": "Defines a membership category and associated fees (for projects and alliances etc.).",
             "@type": "rdf:Property",
             "rdfs:label": "membershipCategory",
             "schema:domainIncludes": {
@@ -714,7 +743,7 @@
         },
         {
             "@id": "bioschemas:socialMedia",
-            "rdfs:comment": " Link to social media websites like twitter or facebook.",
+            "rdfs:comment": "Link to social media websites like twitter or facebook.",
             "@type": "rdf:Property",
             "rdfs:label": "socialMedia",
             "schema:domainIncludes": {
@@ -728,7 +757,7 @@
         },
         {
             "@id": "bioschemas:status",
-            "rdfs:comment": " To record if the organization is still alive, and if it were are project or alliance, what the outcome was, or if it has closed down or merged, why and when.\nNote: There is a health-lifesci.status, but this is not related to the current status property",
+            "rdfs:comment": "To record if the organization is still alive, and if it were are project or alliance, what the outcome was, or if it has closed down or merged, why and when. Note: There is a health-lifesci.status, but this is not related to the current status property",
             "@type": "rdf:Property",
             "rdfs:label": "status",
             "schema:domainIncludes": {
@@ -742,26 +771,9 @@
         },
         {
             "@id": "bioschemas:topic",
-            "rdfs:comment": " Scientific topics that describe the organization and its activities, ideally using an ontology term from EDAM:Topic.",
+            "rdfs:comment": "Scientific topics that describe the organization and its activities, ideally using an ontology term from EDAM:Topic. Controlled Vocabulary: EDAM:Topic (http://edamontology.org/topic_0003)",
             "@type": "rdf:Property",
             "rdfs:label": "topic",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:Organization"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Text"
-                },
-                {
-                    "@id": "schema:URL"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:type",
-            "rdfs:comment": " The type of the organization should be selected from the Controlled Vocabulary column.",
-            "@type": "rdf:Property",
-            "rdfs:label": "type",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Organization"
             },

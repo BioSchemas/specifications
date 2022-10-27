@@ -3,7 +3,8 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [
         {
@@ -23,7 +24,8 @@
                 "properties": {
                     "about": {
                         "description": "Describes what this issue is about. The subject matter of the content.\n Inverse property: subjectOf.",
-                        "$ref": "#/definitions/thing"
+                        "$ref": "#/definitions/thing",
+                        "owl:cardinality": "one"
                     },
                     "editor": {
                         "description": " Specifies the Person who edited the CreativeWork.",
@@ -37,7 +39,8 @@
                                     "$ref": "#/definitions/person"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "hasPart": {
                         "description": "A PublicationIssue has part ScholarlyArticle. Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).\n Inverse property: isPartOf.",
@@ -51,7 +54,8 @@
                                     "$ref": "#/definitions/scholarlyarticle"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "identifier": {
                         "description": "Publication issues do not commonly have a global or unique identifier. We recommend here to use the URL as identifier whenever possible. The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.",
@@ -66,7 +70,8 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "inLanguage": {
                         "description": " The language of the content or performance or used in an action. Please use one of the language codes from the IETF BCP 47 standard. See also availableLanguage. Supersedes language.",
@@ -89,7 +94,8 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "isPartOf": {
                         "description": "A PublicationIssue is part of PublicationVoume or Journal. If it is part of a PublicationVolume, optionally the 'isPartOf' a Journal could explicitely indicated as well, making it easier to find the journal this issue belongs to. Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.\n Inverse property: hasPart.",
@@ -112,7 +118,8 @@
                                     "$ref": "#/definitions/journal"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "issueNumber": {
                         "description": " Identifies the issue of publication; for example, \"iii\" or \"2\".",
@@ -123,11 +130,13 @@
                             {
                                 "type": "string"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "keywords": {
                         "description": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "pageEnd": {
                         "description": " The page on which the work ends; for example \"138\" or \"xvi\".",
@@ -138,7 +147,8 @@
                             {
                                 "type": "string"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "pageStart": {
                         "description": " The page on which the work starts; for example \"135\" or \"xiii\".",
@@ -149,7 +159,8 @@
                             {
                                 "type": "string"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "pagination": {
                         "description": " Any description of pages that is not separated into pageStart and pageEnd; for example, \"1-6, 9, 55\" or \"10-12, 46-49\".",
@@ -163,7 +174,8 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "sameAs": {
                         "description": "Any other link to this issue. URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
@@ -179,12 +191,14 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "url": {
                         "description": "Oficial URL. URL of the item.",
                         "type": "string",
-                        "format": "uri"
+                        "format": "uri",
+                        "owl:cardinality": "one"
                     }
                 },
                 "required": [

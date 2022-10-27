@@ -1,9 +1,10 @@
 {
     "@context": {
         "schema": "http://schema.org/",
-        "rdf": "https://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [
         {
@@ -23,7 +24,8 @@
                 "properties": {
                     "about": {
                         "description": " The subject matter of the content.",
-                        "$ref": "#/definitions/thing"
+                        "$ref": "#/definitions/thing",
+                        "owl:cardinality": "one"
                     },
                     "audience": {
                         "description": "Please choose values from [EDAM:Topic](http://edamontology.org/topic_0003). An intended audience, i.e. a group for whom something was created. Supersedes serviceAudience.",
@@ -37,7 +39,8 @@
                                     "$ref": "#/definitions/audience"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "author": {
                         "description": " The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.",
@@ -60,7 +63,8 @@
                                     "$ref": "#/definitions/person"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "contributor": {
                         "description": " A secondary contributor to the CreativeWork or Event.",
@@ -83,7 +87,8 @@
                                     "$ref": "#/definitions/person"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "dateCreated": {
                         "description": " The date on which the CreativeWork was created or the item was added to a DataFeed.",
@@ -95,7 +100,8 @@
                             {
                                 "$ref": "#/definitions/datetime"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "dateModified": {
                         "description": " The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
@@ -107,15 +113,18 @@
                             {
                                 "$ref": "#/definitions/datetime"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "description": {
                         "description": " A description of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "difficultyLevel": {
                         "description": "Difficulty level; level of experience required by users. Choose value from Controlled Vocabulary column. ",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "genre": {
                         "description": " Genre of the creative work, broadcast channel or group.",
@@ -140,7 +149,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "hasPart": {
                         "description": " Indicates a CreativeWork that is (in some sense) a part of this CreativeWork.\nInverse property: isPartOf.",
@@ -154,7 +164,8 @@
                                     "$ref": "#/definitions/creativework"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "inLanguage": {
                         "description": "Defaults to English if not specified. Please choose a value from [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). The language of the content or performance or used in an action. Please use one of the language codes from the IETF BCP 47 standard. See also [availableLanguage](http://schema.org/availableLanguage). Supersedes language.",
@@ -165,7 +176,8 @@
                             {
                                 "type": "string"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "isPartOf": {
                         "description": " Indicates a CreativeWork that this CreativeWork is (in some sense) part of.\nInverse property: [hasPart](http://schema.org/hasPart).",
@@ -179,11 +191,13 @@
                                     "$ref": "#/definitions/creativework"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "keywords": {
                         "description": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "learningResourceType": {
                         "description": "Please either leave blank or select one of the values from the Controlled Vocabulary column. The predominant type or kind characterizing the learning resource. For example, 'presentation', 'handout'.",
@@ -197,7 +211,8 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "license": {
                         "description": " A license document that applies to this content, typically indicated by URL.",
@@ -209,7 +224,8 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "mentions": {
                         "description": "Can be used to link additional resources, such as datasets, tools, etc. Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.",
@@ -223,20 +239,24 @@
                                     "$ref": "#/definitions/thing"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "name": {
                         "description": " The name of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "pid": {
                         "description": "Permanent identifer, such as DOIs. ",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "type": {
                         "description": "This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column. ",
                         "type": "string",
-                        "format": "uri"
+                        "format": "uri",
+                        "owl:cardinality": "one"
                     },
                     "review": {
                         "description": " A review of the item. Supersedes reviews.",
@@ -250,16 +270,19 @@
                                     "$ref": "#/definitions/review"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "sameAs": {
                         "description": " URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
                         "type": "string",
-                        "format": "uri"
+                        "format": "uri",
+                        "owl:cardinality": "one"
                     },
                     "timeRequired": {
                         "description": "Please specify in [ISO 8601 duration format](https://en.wikipedia.org/wiki/ISO_8601). Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'.",
-                        "$ref": "#/definitions/duration"
+                        "$ref": "#/definitions/duration",
+                        "owl:cardinality": "one"
                     },
                     "url": {
                         "description": " URL of the item.",
@@ -275,7 +298,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "version": {
                         "description": " The version of the CreativeWork embodied by a specified resource.",
@@ -286,7 +310,8 @@
                             {
                                 "type": "string"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     }
                 },
                 "required": [
@@ -460,8 +485,22 @@
             }
         },
         {
+            "@id": "rdf:type",
+            "rdfs:comment": "This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column. This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column.",
+            "@type": "rdf:Property",
+            "rdfs:label": "type",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:TrainingMaterial"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
             "@id": "bioschemas:difficultyLevel",
-            "rdfs:comment": " Difficulty level; level of experience required by users. Choose value from Controlled Vocabulary column.",
+            "rdfs:comment": "Difficulty level; level of experience required by users. Choose value from Controlled Vocabulary column.",
             "@type": "rdf:Property",
             "rdfs:label": "difficultyLevel",
             "schema:domainIncludes": {
@@ -475,7 +514,7 @@
         },
         {
             "@id": "bioschemas:pid",
-            "rdfs:comment": " Permanent identifer, such as DOIs.",
+            "rdfs:comment": "Permanent identifer, such as DOIs.",
             "@type": "rdf:Property",
             "rdfs:label": "pid",
             "schema:domainIncludes": {
@@ -484,20 +523,6 @@
             "schema:rangeIncludes": [
                 {
                     "@id": "schema:Text"
-                }
-            ]
-        },
-        {
-            "@id": "rdf:type",
-            "rdfs:comment": " This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column.",
-            "@type": "rdf:Property",
-            "rdfs:label": "type",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:TrainingMaterial"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:URL"
                 }
             ]
         }

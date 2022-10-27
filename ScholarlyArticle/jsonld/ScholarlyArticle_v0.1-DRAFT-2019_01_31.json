@@ -3,7 +3,8 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [
         {
@@ -33,11 +34,13 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "alternativeHeadline": {
                         "description": " A secondary title of the CreativeWork.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "articleBody": {
                         "description": "If included, could be separated in paragraphs or so. The actual body of the article.",
@@ -51,7 +54,8 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "articleSection": {
                         "description": " Articles may belong to one or more 'sections' in a magazine or newspaper, such as Sports, Lifestyle, etc.",
@@ -65,7 +69,8 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "author": {
                         "description": " The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.",
@@ -88,7 +93,8 @@
                                     "$ref": "#/definitions/person"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "backstory": {
                         "description": "Abstract For an Article, typically a NewsArticle, the backstory property provides a textual summary giving a brief explanation of why and how an article was created. In a journalistic setting this could include information about reporting process, methods, interviews, data sources, etc.",
@@ -99,7 +105,8 @@
                             {
                                 "type": "string"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "citation": {
                         "description": " A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
@@ -122,7 +129,8 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "copyrightHolder": {
                         "description": " The party holding the legal copyright to the CreativeWork.",
@@ -145,11 +153,13 @@
                                     "$ref": "#/definitions/person"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "copyrightYear": {
                         "description": " The year during which the claimed copyright for the CreativeWork was first asserted.",
-                        "type": "number"
+                        "type": "number",
+                        "owl:cardinality": "one"
                     },
                     "dateCreated": {
                         "description": " The date on which the CreativeWork was created or the item was added to a DataFeed.",
@@ -161,7 +171,8 @@
                             {
                                 "$ref": "#/definitions/datetime"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "dateModified": {
                         "description": " The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
@@ -186,12 +197,14 @@
                                     "$ref": "#/definitions/datetime"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "datePublished": {
                         "description": " Date of first broadcast/publication.",
                         "type": "string",
-                        "format": "date"
+                        "format": "date",
+                        "owl:cardinality": "one"
                     },
                     "hasPart": {
                         "description": "An article has part ScholarlySemanticAnnotation, i.e., entities recognized in the text and associated to an ontology term. Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).\n Inverse property: isPartOf.",
@@ -223,11 +236,13 @@
                                     "$ref": "#/definitions/scholarlysemanticannotation"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "headline": {
                         "description": "Title of the article Headline of the article.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "identifier": {
                         "description": "A global a unique identifier for articles in their DOI. Any other identifier can be included as an alternate name The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.",
@@ -242,7 +257,8 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "inLanguage": {
                         "description": " The language of the content or performance or used in an action. Please use one of the language codes from the IETF BCP 47 standard. See also availableLanguage. Supersedes language.",
@@ -265,11 +281,13 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "isAccessibleForFree": {
                         "description": " A flag to signal that the item, event, or place is accessible for free. Supersedes free.",
-                        "type": "boolean"
+                        "type": "boolean",
+                        "owl:cardinality": "one"
                     },
                     "isPartOf": {
                         "description": "We recommend at least to inlcude a link to the lowest level possible, i.e., PublicationIssue. It is also possible to use 'isPartOf' to link as well directly to the PublicationVolume or the Journal, making it easier to find links to each other. Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.\n Inverse property: hasPart.",
@@ -319,11 +337,13 @@
                                     "$ref": "#/definitions/trip"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "keywords": {
                         "description": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "license": {
                         "description": " A license document that applies to this content, typically indicated by URL.",
@@ -335,7 +355,8 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "pageEnd": {
                         "description": " The page on which the work ends; for example \"138\" or \"xvi\".",
@@ -346,7 +367,8 @@
                             {
                                 "type": "string"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "pageStart": {
                         "description": " The page on which the work starts; for example \"135\" or \"xiii\".",
@@ -357,7 +379,8 @@
                             {
                                 "type": "string"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "pagination": {
                         "description": " Any description of pages that is not separated into pageStart and pageEnd; for example, \"1-6, 9, 55\" or \"10-12, 46-49\".",
@@ -371,7 +394,8 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "sameAs": {
                         "description": "Any other link to this article, including those machine readable URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
@@ -387,12 +411,14 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "url": {
                         "description": "DOI is the recommended URL, any other should go as sameAs URL of the item.",
                         "type": "string",
-                        "format": "uri"
+                        "format": "uri",
+                        "owl:cardinality": "one"
                     },
                     "version": {
                         "description": " The version of the CreativeWork embodied by a specified resource.",
@@ -415,11 +441,13 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "wordCount": {
                         "description": " The number of words in the text of the Article.",
-                        "type": "integer"
+                        "type": "integer",
+                        "owl:cardinality": "one"
                     }
                 },
                 "required": [

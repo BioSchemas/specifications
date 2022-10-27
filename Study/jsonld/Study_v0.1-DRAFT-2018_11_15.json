@@ -3,7 +3,9 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+        "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/",
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [
         {
@@ -15,7 +17,7 @@
             ],
             "rdfs:label": "Study",
             "rdfs:subClassOf": {
-                "@id": "schema:Study"
+                "@id": "bioschemastypesdrafts:Study"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
@@ -33,7 +35,8 @@
                                     "$ref": "#/definitions/thing"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "additionalProperty": {
                         "description": "Used to provide arbirary properties of a study. A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.\n\nNote: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.",
@@ -47,7 +50,8 @@
                                     "$ref": "#/definitions/propertyvalue"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "author": {
                         "description": " The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.",
@@ -58,7 +62,8 @@
                             {
                                 "$ref": "#/definitions/person"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "citation": {
                         "description": " A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
@@ -69,7 +74,8 @@
                             {
                                 "type": "string"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "dateCreated": {
                         "description": " The date on which the CreativeWork was created or the item was added to a DataFeed.",
@@ -81,16 +87,19 @@
                             {
                                 "$ref": "#/definitions/datetime"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "datePublished": {
                         "description": " Date of first broadcast/publication.",
                         "type": "string",
-                        "format": "date"
+                        "format": "date",
+                        "owl:cardinality": "one"
                     },
                     "description": {
                         "description": " A description of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "identifier": {
                         "description": " The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.",
@@ -105,7 +114,8 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "isPartOf": {
                         "description": "Used to indicate the project that the study is a part of. Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of. Inverse property: hasPart.",
@@ -116,15 +126,18 @@
                             {
                                 "$ref": "#/definitions/trip"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "keywords": {
                         "description": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "name": {
                         "description": " The name of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "relatedStudy": {
                         "description": " Other related studies.",
@@ -158,7 +171,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "studyDomain": {
                         "description": "For example, in the life sciences  we could have\nFunctional Genomics: http://edamontology.org/topic_0085\nProtemics: http://edamontology.org/topic_0121 Define the domain of the study. For example, the domain could be astrophysics, functional genomics or earth science. Those domains can also have an ontology reference.",
@@ -170,7 +184,8 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "studyProcess": {
                         "description": "For example, in the life sciences  we could have \nRNA-seq of coding RNA from single cells: http://www.ebi.ac.uk/efo/EFO_0005684\ncase control design: http://www.ebi.ac.uk/efo/EFO_0001427 A process performed as part of an experiment or wider study, i.e. intentionally designed.\nThese processes can have ontology URL attached to.",
@@ -195,12 +210,14 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "url": {
                         "description": " URL of the item.",
                         "type": "string",
-                        "format": "uri"
+                        "format": "uri",
+                        "owl:cardinality": "one"
                     }
                 },
                 "required": [
@@ -428,60 +445,6 @@
                     }
                 }
             }
-        },
-        {
-            "@id": "bioschemas:relatedStudy",
-            "rdfs:comment": "Other related studies. ",
-            "@type": "rdf:Property",
-            "rdfs:label": "relatedStudy",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:Study"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bioschemas:Study"
-                },
-                {
-                    "@id": "schema:Thing"
-                },
-                {
-                    "@id": "schema:URL"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:studyDomain",
-            "rdfs:comment": "Define the domain of the study. For example, the domain could be astrophysics, functional genomics or earth science. Those domains can also have an ontology reference. For example, in the life sciences  we could have\nFunctional Genomics: http://edamontology.org/topic_0085\nProtemics: http://edamontology.org/topic_0121",
-            "@type": "rdf:Property",
-            "rdfs:label": "studyDomain",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:Study"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Text"
-                },
-                {
-                    "@id": "schema:URL"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:studyProcess",
-            "rdfs:comment": "A process performed as part of an experiment or wider study, i.e. intentionally designed.\nThese processes can have ontology URL attached to. For example, in the life sciences  we could have \nRNA-seq of coding RNA from single cells: http://www.ebi.ac.uk/efo/EFO_0005684\ncase control design: http://www.ebi.ac.uk/efo/EFO_0001427",
-            "@type": "rdf:Property",
-            "rdfs:label": "studyProcess",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:Study"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Text"
-                },
-                {
-                    "@id": "schema:URL"
-                }
-            ]
         }
     ]
 }

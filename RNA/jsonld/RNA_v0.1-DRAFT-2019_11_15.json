@@ -3,7 +3,10 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "https://discovery.biothings.io/view/bioschemas/"
+        "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/",
+        "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/",
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [
         {
@@ -15,7 +18,7 @@
             ],
             "rdfs:label": "RNA",
             "rdfs:subClassOf": {
-                "@id": "schema:BioChemEntity"
+                "@id": "bioschemastypesdrafts:RNA"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
@@ -24,11 +27,13 @@
                     "additionalType": {
                         "description": " An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
                         "type": "string",
-                        "format": "uri"
+                        "format": "uri",
+                        "owl:cardinality": "one"
                     },
                     "alternateName": {
                         "description": " An alias for the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "associatedDisease": {
                         "description": " Disease associated to this BioChemEntity. Such disease can be a MedicalCondition or a URL. If you want to add an evidence supporting the association, please use PropertyValue.",
@@ -43,35 +48,43 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "bioChemInteraction": {
                         "description": " A BioChemEntity that is known to interact with this item.",
-                        "$ref": "#/definitions/biochementity"
+                        "$ref": "#/definitions/biochementity",
+                        "owl:cardinality": "one"
                     },
                     "bioChemSimilarity": {
                         "description": " A similar molecular entity, e.g., obtained by fingerprint similarity algorithms.",
-                        "$ref": "#/definitions/biochementity"
+                        "$ref": "#/definitions/biochementity",
+                        "owl:cardinality": "one"
                     },
                     "biologicalRole": {
                         "description": " A role played by the molecular entity within a biological context.",
-                        "$ref": "#/definitions/definedterm"
+                        "$ref": "#/definitions/definedterm",
+                        "owl:cardinality": "one"
                     },
                     "description": {
                         "description": " A description of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "disambiguatingDescription": {
                         "description": " A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "encodesBioChemEntity": {
                         "description": " Another BioChemEntity encoded by this one.\nInverse property:isEncodedByBioChemEntity.",
-                        "$ref": "#/definitions/biochementity"
+                        "$ref": "#/definitions/biochementity",
+                        "owl:cardinality": "one"
                     },
                     "hasBioChemEntityPart": {
                         "description": " Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.\nInverse property:isPartOfBioChemEntity.",
-                        "$ref": "#/definitions/biochementity"
+                        "$ref": "#/definitions/biochementity",
+                        "owl:cardinality": "one"
                     },
                     "hasMolecularFunction": {
                         "description": " Molecular function performed by this BioChemEntity; please use PropertyValue if you want to include any evidence.",
@@ -86,7 +99,8 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "hasRepresentation": {
                         "description": " A common representation such as a protein sequence or chemical structure for this entity. For images use schema.org/image.",
@@ -101,11 +115,13 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "hasSequence": {
                         "description": " Nucleotide or amino acid sequence.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "hasSequenceAnnotation": {
                         "description": " Pointer to a sequence annotation; please use PropertyValue if you want to include any evidence.",
@@ -116,7 +132,8 @@
                             {
                                 "$ref": "#/definitions/sequenceannotation"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "identifier": {
                         "description": " The identifier property represents any kind of identifier for any kind ofThing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. Seebackground notesfor more details.",
@@ -131,7 +148,8 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "image": {
                         "description": " An image of the item. This can be aURLor a fully describedImageObject.",
@@ -143,11 +161,13 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
-                    "isCodingRna": {
+                    "isCodingRNA": {
                         "description": " Indicates whether or not this Rna is a coding one.",
-                        "type": "boolean"
+                        "type": "boolean",
+                        "owl:cardinality": "one"
                     },
                     "isEncodedByBioChemEntity": {
                         "description": " Another BioChemEntity encoding by this one.\nInverse property:encodesBioChemEntity.",
@@ -161,7 +181,8 @@
                             {
                                 "$ref": "#/definitions/dna"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "isInvolvedInBiologicalProcess": {
                         "description": " Biological process this BioChemEntity is involved in; please use PropertyValue if you want to include any evidence.",
@@ -176,7 +197,8 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "isLocatedInSubcellularLocation": {
                         "description": " Subcellular location where this BioChemEntity is located; please use PropertyValue if you want to include any evidence.",
@@ -191,24 +213,29 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "isMatchedBy": {
                         "description": " A model matching this BioChemEntity.",
-                        "$ref": "#/definitions/sequencematchingmodel"
+                        "$ref": "#/definitions/sequencematchingmodel",
+                        "owl:cardinality": "one"
                     },
                     "isPartOfBioChemEntity": {
                         "description": " Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity.\nInverse property:hasBioChemEntityPart.",
-                        "$ref": "#/definitions/biochementity"
+                        "$ref": "#/definitions/biochementity",
+                        "owl:cardinality": "one"
                     },
                     "name": {
                         "description": " The name of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "sameAs": {
                         "description": " URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
                         "type": "string",
-                        "format": "uri"
+                        "format": "uri",
+                        "owl:cardinality": "one"
                     },
                     "taxonomicRange": {
                         "description": " The taxonomic grouping of the organism that expresses, encodes, or in someway related to the BioChemEntity.",
@@ -226,12 +253,14 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "url": {
                         "description": " URL of the item.",
                         "type": "string",
-                        "format": "uri"
+                        "format": "uri",
+                        "owl:cardinality": "one"
                     }
                 },
                 "required": [],
@@ -552,94 +581,35 @@
             }
         },
         {
-          "@id": "bioschemas:encodesBioChemEntity",
-          "@type": "rdf:Property",
-          "rdfs:comment": "Another BioChemEntity encoded by this one. Inverse property:isEncodedByBioChemEntity.",
-          "rdfs:label": "encodesBioChemEntity",
-          "schema:domainIncludes": {
-            "@id": "bioschemas:RNA"
-          },
-          "schema:rangeIncludes": [
-            {
-              "@id": "schema:PropertyValue"
+            "@id": "bioschemas:hasSequenceAnnotation",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Pointer to a sequence annotation; please use PropertyValue if you want to include any evidence.",
+            "rdfs:label": "hasSequenceAnnotation",
+            "schema:domainIncludes": {
+              "@id": "bioschemas:RNA"
             },
-            {
-              "@id": "bioschemas:SequenceAnnotation"
-            }
-          ]
+            "schema:rangeIncludes": [
+              {
+                "@id": "bioschemastypesdrafts:SequenceAnnotation"
+              },
+              {
+                "@id": "schema:PropertyValue"
+              }
+            ]
         },
         {
-          "@id": "bioschemas:isMatchedBy",
-          "@type": "rdf:Property",
-          "rdfs:comment": "A model matching this BioChemEntity.",
-          "rdfs:label": "isMatchedBy",
-          "schema:domainIncludes": {
-            "@id": "bioschemas:RNA"
-          },
-          "schema:rangeIncludes": [
-            {
-              "@id": "schema:SequenceMatchingModel"
-            }
-          ]
-        },
-        {
-          "@id": "bioschemas:isCodingRna",
-          "@type": "rdf:Property",
-          "rdfs:comment": "Indicates whether or not this RNA is a coding one..",
-          "rdfs:label": "isCodingRna",
-          "schema:domainIncludes": {
-            "@id": "bioschemas:RNA"
-          },
-          "schema:rangeIncludes": [
-            {
-              "@id": "schema:Boolean"
-            }
-          ]
-        },
-        {
-          "@id": "bioschemas:additionalType",
-          "@type": "rdf:Property",
-          "rdfs:comment": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
-          "rdfs:label": "additionalType",
-          "schema:domainIncludes": {
-            "@id": "bioschemas:RNA"
-          },
-          "schema:rangeIncludes": [
-            {
-              "@id": "schema:URL"
-            }
-          ]
-        },
-        {
-          "@id": "bioschemas:hasSequence",
-          "@type": "rdf:Property",
-          "rdfs:comment": "Nucleotide or amino acid sequence.",
-          "rdfs:label": "hasSequence",
-          "schema:domainIncludes": {
-            "@id": "bioschemas:RNA"
-          },
-          "schema:rangeIncludes": [
-            {
-              "@id": "schema:Text"
-            }
-          ]
-        },
-        {
-          "@id": "bioschemas:hasSequenceAnnotation",
-          "@type": "rdf:Property",
-          "rdfs:comment": "Pointer to a sequence annotation; please use PropertyValue if you want to include any evidence.",
-          "rdfs:label": "hasSequenceAnnotation",
-          "schema:domainIncludes": {
-            "@id": "bioschemas:RNA"
-          },
-          "schema:rangeIncludes": [
-            {
-              "@id": "schema:PropertyValue"
+            "@id": "bioschemas:isMatchedBy",
+            "@type": "rdf:Property",
+            "rdfs:comment": "A model matching this BioChemEntity.",
+            "rdfs:label": "isMatchedBy",
+            "schema:domainIncludes": {
+              "@id": "bioschemas:RNA"
             },
-            {
-              "@id": "bioschemas:SequenceAnnotation"
-            }
-          ]
+            "schema:rangeIncludes": [
+              {
+                "@id": "bioschemastypesdrafts:SequenceMatchingModel"
+              }
+            ]
         }
     ]
 }

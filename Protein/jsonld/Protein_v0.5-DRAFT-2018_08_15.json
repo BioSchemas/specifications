@@ -3,7 +3,10 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+        "bioschemasdeprecated": "https://discovery.biothings.io/view/bioschemasdeprecated/",
+        "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/",
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [
         {
@@ -15,7 +18,7 @@
             ],
             "rdfs:label": "Protein",
             "rdfs:subClassOf": {
-                "@id": "bioschemas:BioChemEntity"
+                "@id": "bioschemastypes:Protein"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
@@ -33,7 +36,8 @@
                                     "$ref": "#/definitions/propertyvalue"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "additionalType": {
                         "description": "Any ontology term describing the protein concept. This is in addition to the official type used in Bioscheamas to describe a protein.\n\nThe official type for the Protein profile is [PR 000000001](http://purl.obolibrary.org/obo/PR_000000001) An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
@@ -49,7 +53,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "alternateName": {
                         "description": " An alias for the item.",
@@ -63,7 +68,8 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "associatedWith": {
                         "description": "Disease associated to this protein, if any. ",
@@ -88,7 +94,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "contains": {
                         "description": "Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. _Inverse property: isContainedIn_.\n\n**Bioschemas Protein**: For proteins, it can be used to link to protein sequence annotations such as domains, sites, regions, etc. ",
@@ -111,11 +118,13 @@
                                     "$ref": "#/definitions/proteinannotation"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "description": {
                         "description": "Protein function. We recommend to start the description with \"Function: [...]\". A description of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "enablesMF": {
                         "description": "RO:0002327 (enables). GO molecular function enabled by the gene/protein. \nRecommended range: BioChemEntity or CategoryCode, ProteinAnnotation if evidence should be included. ",
@@ -138,7 +147,8 @@
                                     "$ref": "#/definitions/propertyvalue"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "hasCategoryCode": {
                         "description": "A controlled vocabulary term equivalent to this entity. For instance, an organism coined in NCBI taxonomy can be represented as a BioChemEntity. As it also exists as a term in an ontology, it would be nice to capture that information via categoryCode. A Category code contained in this code set.",
@@ -152,7 +162,8 @@
                                     "$ref": "#/definitions/categorycode"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "hasRepresentation": {
                         "description": "A representation for this entity other than, for instance, an image (use image property for that) or the main web page/record (use mainEntityOfPage for that), and see [background notes](http://schema.org/docs/datamodel.html#mainEntityBackground), for sameAs and url). \n\n**Bioschemas Protein**: This property could be used, for instance, to register a sequence protein as it is a representation of the protein. If you want to better define the nature of the representation, use a PropertyValue as described in [additionalProperty](http://bioschemas.org/devSpecs/Protein/#additionalProperty). ",
@@ -186,7 +197,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "identifier": {
                         "description": " The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.",
@@ -201,7 +213,8 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "image": {
                         "description": " An image of the item. This can be a URL or a fully described ImageObject.",
@@ -226,7 +239,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "involvedInBP": {
                         "description": "RO:0002331 (is involved in). GO biological process this gene/protein is involved in.\nRecommended range: BioChemEntity or CategoryCode, ProteinAnnotation if evidence should be included. ",
@@ -249,7 +263,8 @@
                                     "$ref": "#/definitions/propertyvalue"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "isContainedIn": {
                         "description": "Indicates a BioChemEntity that this BioChemEntity is (in some sense) part of this BioChemEntity. _Inverse property: containedIn_ \n\n**Bioschemas Protein**: For proteins, it is recommended to at least specify the taxon/organism associated to the described protein. For taxon/organism, it is a good practice to use hasCategoryCode to point to a controlled vacabulary such as NCBI taxon or UniProt Taxonomy. Including as well the GO cellular locations is optional; for cellular locations it is a good practice to use hasCategorryCode to point to a GO Cellular Location term. ",
@@ -263,7 +278,8 @@
                                     "$ref": "#/definitions/biochementity"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "isTranslatedFrom": {
                         "description": "SIO:010083 (is translated from). Gene(s) from which this protein was translated from. In addtion to the bioschemas:BioChemEntity type, this property also expects a bioschemas:Gene profile. ",
@@ -286,7 +302,8 @@
                                     "$ref": "#/definitions/gene"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "location": {
                         "description": "The location can be refer to a position in a chromosome or sequence or to a physical place where, for instance, a sample is stored. Using additionalType is advised to make the distinction. For instance, FALDO can be used for sequence coordinates. \n\n**_Note_**: The list of Expected Types has been extended as schema.org/location only has Place, PostalAddress and Text. The location of for example where the event is happening, an organization is located, or where an action takes place.",
@@ -338,7 +355,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "mainEntityOfPage": {
                         "description": "Link via DataRecord to the main DataRecord representing this entity in a dataset. \n\n**Bioschemas Protein**: Currently not in use; use the [mainEntity](http://bioschemas.org/types/DataRecord/) property from DataRecord instead. Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](http://schema.org/docs/datamodel.html#mainEntityBackground) for details.\nInverse property: mainEntity.",
@@ -363,11 +381,13 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "name": {
                         "description": " The name of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "sameAs": {
                         "description": "Link to any resource other than the Record and the official webpage, for instance a Wikipedia page. URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
@@ -383,12 +403,14 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "url": {
                         "description": "Link to the official webpage associated to this entity. URL of the item.",
                         "type": "string",
-                        "format": "uri"
+                        "format": "uri",
+                        "owl:cardinality": "one"
                     }
                 },
                 "required": [
@@ -655,8 +677,22 @@
             }
         },
         {
+            "@id": "bioschemas:additionalProperty",
+            "rdfs:comment": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. \n Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, …) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism. \n Whenever possible, please use a property coined in a third-party well-known vocabulary. For instance, you can directly use RO ObjectProperty: enables as a property to express how a protein or gene enables some GO molecular function. If you still want or need to use additionalProperty, please use (i) property name to specify the name of the property, (ii) additionalType (if possible) to better specify the nature of the property, and (iii) value to link to the object/range of this property. We recommend to look at the OBO Relations Ontology (RO) or the Semanticscience Integrated Ontology (SIO) as starting points. \n Bioschemas Protein: If no suitable property exists in this profile, use any ontology term coined as a property and suitable for your needs. For instance sio:SIO_000095 (is member of) could be used to model the relation between a protein and a protein clan.",
+            "@type": "rdf:Property",
+            "rdfs:label": "additionalProperty",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Protein"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:PropertyValue"
+                }
+            ]
+        },
+        {
             "@id": "bioschemas:associatedWith",
-            "rdfs:comment": " Disease associated to this protein, if any.",
+            "rdfs:comment": "Disease associated to this protein, if any.",
             "@type": "rdf:Property",
             "rdfs:label": "associatedWith",
             "schema:domainIncludes": {
@@ -673,7 +709,7 @@
         },
         {
             "@id": "bioschemas:contains",
-            "rdfs:comment": " Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. _Inverse property: isContainedIn_.\n\n**Bioschemas Protein**: For proteins, it can be used to link to protein sequence annotations such as domains, sites, regions, etc.",
+            "rdfs:comment": "Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. Inverse property: isContainedIn. \n For proteins, it can be used to link to protein sequence annotations such as domains, sites, regions, etc.",
             "@type": "rdf:Property",
             "rdfs:label": "contains",
             "schema:domainIncludes": {
@@ -681,16 +717,16 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bioschemas:BioChemEntity"
+                    "@id": "bioschemastypes:BioChemEntity"
                 },
                 {
-                    "@id": "schema:bioschemas:ProteinAnnotation"
+                    "@id": "bioschemasdeprecated:ProteinAnnotation"
                 }
             ]
         },
         {
             "@id": "bioschemas:enablesMF",
-            "rdfs:comment": " RO:0002327 (enables). GO molecular function enabled by the gene/protein. \nRecommended range: BioChemEntity or CategoryCode, ProteinAnnotation if evidence should be included.",
+            "rdfs:comment": "RO:0002327 (enables). GO molecular function enabled by the gene/protein. Recommended range: BioChemEntity or CategoryCode, ProteinAnnotation if evidence should be included.",
             "@type": "rdf:Property",
             "rdfs:label": "enablesMF",
             "schema:domainIncludes": {
@@ -706,28 +742,22 @@
             ]
         },
         {
-            "@id": "bioschemas:hasRepresentation",
-            "rdfs:comment": " A representation for this entity other than, for instance, an image (use image property for that) or the main web page/record (use mainEntityOfPage for that), and see [background notes](http://schema.org/docs/datamodel.html#mainEntityBackground), for sameAs and url). \n\n**Bioschemas Protein**: This property could be used, for instance, to register a sequence protein as it is a representation of the protein. If you want to better define the nature of the representation, use a PropertyValue as described in [additionalProperty](http://bioschemas.org/devSpecs/Protein/#additionalProperty).",
+            "@id": "bioschemas:hasCategoryCode",
+            "rdfs:comment": "A controlled vocabulary term equivalent to this entity. For instance, an organism coined in NCBI taxonomy can be represented as a BioChemEntity. As it also exists as a term in an ontology, it would be nice to capture that information via categoryCode.",
             "@type": "rdf:Property",
-            "rdfs:label": "hasRepresentation",
+            "rdfs:label": "hasCategoryCode",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Protein"
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "schema:PropertyValue"
-                },
-                {
-                    "@id": "schema:Text"
-                },
-                {
-                    "@id": "schema:URL"
+                    "@id": "schema:CategoryCode"
                 }
             ]
         },
         {
             "@id": "bioschemas:involvedInBP",
-            "rdfs:comment": " RO:0002331 (is involved in). GO biological process this gene/protein is involved in.\nRecommended range: BioChemEntity or CategoryCode, ProteinAnnotation if evidence should be included.",
+            "rdfs:comment": "RO:0002331 (is involved in). GO biological process this gene/protein is involved in. Recommended range: BioChemEntity or CategoryCode, ProteinAnnotation if evidence should be included.",
             "@type": "rdf:Property",
             "rdfs:label": "involvedInBP",
             "schema:domainIncludes": {
@@ -744,7 +774,7 @@
         },
         {
             "@id": "bioschemas:isContainedIn",
-            "rdfs:comment": " Indicates a BioChemEntity that this BioChemEntity is (in some sense) part of this BioChemEntity. _Inverse property: containedIn_ \n\n**Bioschemas Protein**: For proteins, it is recommended to at least specify the taxon/organism associated to the described protein. For taxon/organism, it is a good practice to use hasCategoryCode to point to a controlled vacabulary such as NCBI taxon or UniProt Taxonomy. Including as well the GO cellular locations is optional; for cellular locations it is a good practice to use hasCategorryCode to point to a GO Cellular Location term.",
+            "rdfs:comment": "Indicates a BioChemEntity that this BioChemEntity is (in some sense) part of. \n For proteins, it is recommended to at least specify the taxon/organism associated to the described protein. For taxon/organism, it is a good practice to use hasCategoryCode to point to a controlled vacabulary such as NCBI taxon or UniProt Taxonomy. Including as well the GO cellular locations is optional; for cellular locations it is a good practice to use hasCategorryCode to point to a GO Cellular Location term.",
             "@type": "rdf:Property",
             "rdfs:label": "isContainedIn",
             "schema:domainIncludes": {
@@ -752,13 +782,13 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bioschemas:BioChemEntity"
+                    "@id": "bioschemastypes:BioChemEntity"
                 }
             ]
         },
         {
             "@id": "bioschemas:isTranslatedFrom",
-            "rdfs:comment": " SIO:010083 (is translated from). Gene(s) from which this protein was translated from. In addtion to the bioschemas:BioChemEntity type, this property also expects a bioschemas:Gene profile.",
+            "rdfs:comment": "SIO:010083 (is translated from). Gene(s) from which this protein was translated from. In addtion to the schema:BioChemEntity type, this property also expects a bioschemas:Gene profile.",
             "@type": "rdf:Property",
             "rdfs:label": "isTranslatedFrom",
             "schema:domainIncludes": {
@@ -766,10 +796,30 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bioschemas:BioChemEntity"
+                    "@id": "bioschemastypes:BioChemEntity"
                 },
                 {
-                    "@id": "schema:bioschemas:Gene"
+                    "@id": "bioschemastypes:Gene"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:location",
+            "rdfs:comment": "The location can be refer to a position in a chromosome or sequence or to a physical place where, for instance, a sample is stored. Using additionalType is advised to make the distinction. For instance, FALDO can be used for sequence coordinates. \n Note: The list of Expected Types has been extended as schema.org/location only has Place, PostalAddress and Text.",
+            "@type": "rdf:Property",
+            "rdfs:label": "location",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Protein"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:PropertyValue"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
                 }
             ]
         }

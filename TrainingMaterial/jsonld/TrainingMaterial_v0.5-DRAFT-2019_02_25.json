@@ -3,7 +3,8 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [
         {
@@ -33,7 +34,8 @@
                                     "$ref": "#/definitions/thing"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "audience": {
                         "description": "The type of audience intended for your course. A succinct description of the attendees. e.g. PhD Students, Post-docs, Clinicians An intended audience, i.e. a group for whom something was created. Supersedes serviceAudience.",
@@ -47,7 +49,8 @@
                                     "$ref": "#/definitions/audience"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "author": {
                         "description": " Those involved in the preparation, creation and/or presentation of the published work, specifically writing the initial draft The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.",
@@ -70,7 +73,8 @@
                                     "$ref": "#/definitions/person"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "contributor": {
                         "description": "Contributors are those that made non-authorship contributions e.g. critical review, commentary or revision A secondary contributor to the CreativeWork or Event.",
@@ -93,7 +97,8 @@
                                     "$ref": "#/definitions/person"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "dateCreated": {
                         "description": " The date on which the CreativeWork was created or the item was added to a DataFeed.",
@@ -105,7 +110,8 @@
                             {
                                 "$ref": "#/definitions/datetime"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "dateModified": {
                         "description": " The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
@@ -117,16 +123,19 @@
                             {
                                 "$ref": "#/definitions/datetime"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "datePublished": {
                         "description": " Date of first broadcast/publication.",
                         "type": "string",
-                        "format": "date"
+                        "format": "date",
+                        "owl:cardinality": "one"
                     },
                     "description": {
                         "description": " A description of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "featuredInEvent": {
                         "description": "The course instance or event where this training material was or will be featured. Inverse of workFeatured. \n\nUse isPartOf by default unless this training material is unique to a specific course instance. ",
@@ -149,7 +158,8 @@
                                     "$ref": "#/definitions/course"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "hasPart": {
                         "description": "A sub-training material or externally referenced training material\n Event",
@@ -172,7 +182,8 @@
                                     "$ref": "#/definitions/trip"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "identifier": {
                         "description": "An identifier for this resource such as a DOI or compact URI\n The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.",
@@ -206,7 +217,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "inLanguage": {
                         "description": "Defaults to English if not specified. Please choose a value from [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). The language of the content or performance or used in an action. Please use one of the language codes from the IETF BCP 47 standard. See also [availableLanguage](http://schema.org/availableLanguage). Supersedes language.",
@@ -217,7 +229,8 @@
                             {
                                 "type": "string"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "isPartOf": {
                         "description": "The Course this Training Material was/will be used in. Or a training material this training material is a part of (for example, if this is a module in a book, isPartOf can describe the book).\n\nInverse property: hasPart\n\nIf this varies in CourseInstances, use the featuredIn property  Indicates a CreativeWork that this CreativeWork is (in some sense) part of.\nInverse property: [hasPart](http://schema.org/hasPart).",
@@ -231,11 +244,13 @@
                                     "$ref": "#/definitions/creativework"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "keywords": {
                         "description": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "learningResourceType": {
                         "description": "This may include things such as video lecture, e-Learning module, or tutorial. The predominant type or kind characterizing the learning resource. For example, 'presentation', 'handout'.",
@@ -249,7 +264,8 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "license": {
                         "description": "If there is a licence it must be added. A license document that applies to this content, typically indicated by URL.",
@@ -274,7 +290,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "mentions": {
                         "description": "Datasets, tools, technologies, entities etc, which are used by or referred to by this training material. Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.",
@@ -288,11 +305,13 @@
                                     "$ref": "#/definitions/thing"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "name": {
                         "description": " The name of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "sameAs": {
                         "description": " URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
@@ -308,7 +327,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "skillLevel": {
                         "description": "The students level of ability in the topic being taught. Examples of skill levels include 'beginner', 'intermediate' or 'advanced' ",
@@ -323,20 +343,24 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "status": {
                         "description": "The status of a training material. If this is not filled in it will be regarded as Active. Options are Active, Under development, and Archived. ",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "timeRequired": {
                         "description": "The estimated time it takes to work through this resource.\n\nPlease specify in [ISO 8601 duration format](https://en.wikipedia.org/wiki/ISO_8601). Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'.",
-                        "$ref": "#/definitions/duration"
+                        "$ref": "#/definitions/duration",
+                        "owl:cardinality": "one"
                     },
                     "url": {
                         "description": " URL of the item.",
                         "type": "string",
-                        "format": "uri"
+                        "format": "uri",
+                        "owl:cardinality": "one"
                     },
                     "version": {
                         "description": "If this training material is versioned, its strongly recommended you use this property to list the version being displayed The version of the CreativeWork embodied by a specified resource.",
@@ -347,7 +371,8 @@
                             {
                                 "type": "string"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     }
                 },
                 "required": [
@@ -666,25 +691,8 @@
             }
         },
         {
-            "@id": "bioschemas:featuredInEvent",
-            "rdfs:comment": " The course instance or event where this training material was or will be featured. Inverse of workFeatured. \n\nUse isPartOf by default unless this training material is unique to a specific course instance.",
-            "@type": "rdf:Property",
-            "rdfs:label": "featuredInEvent",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:TrainingMaterial"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bioschemas:Event"
-                },
-                {
-                    "@id": "bioschemas:Course"
-                }
-            ]
-        },
-        {
             "@id": "bioschemas:skillLevel",
-            "rdfs:comment": " The students level of ability in the topic being taught. Examples of skill levels include 'beginner', 'intermediate' or 'advanced'",
+            "rdfs:comment": "The students level of ability in the topic being taught. Examples of skill levels include 'beginner', 'intermediate' or 'advanced'.",
             "@type": "rdf:Property",
             "rdfs:label": "skillLevel",
             "schema:domainIncludes": {
@@ -704,7 +712,7 @@
         },
         {
             "@id": "bioschemas:status",
-            "rdfs:comment": " The status of a training material. If this is not filled in it will be regarded as Active. Options are Active, Under development, and Archived.",
+            "rdfs:comment": "The status of a training material. If this is not filled in it will be regarded as Active. Options are 'Active', 'Under development', and 'Archived'.",
             "@type": "rdf:Property",
             "rdfs:label": "status",
             "schema:domainIncludes": {
@@ -713,6 +721,23 @@
             "schema:rangeIncludes": [
                 {
                     "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:featuredInEvent",
+            "rdfs:comment": "The course instance or event where this training material was or will be featured. Inverse of workFeatured.\n Use isPartOf by default unless this training material is unique to a specific course instance.",
+            "@type": "rdf:Property",
+            "rdfs:label": "featuredInEvent",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:TrainingMaterial"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Course"
+                },
+                {
+                    "@id": "schema:Event"
                 }
             ]
         }

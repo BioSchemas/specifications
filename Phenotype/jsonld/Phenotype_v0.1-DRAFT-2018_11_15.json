@@ -3,7 +3,10 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+        "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/",
+        "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/",
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [
         {
@@ -15,7 +18,7 @@
             ],
             "rdfs:label": "Phenotype",
             "rdfs:subClassOf": {
-                "@id": "bioschemas:Phenotype"
+                "@id": "bioschemastypesdrafts:Phenotype"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
@@ -33,7 +36,8 @@
                                     "$ref": "#/definitions/propertyvalue"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "alternateName": {
                         "description": " An alias for the item.",
@@ -47,7 +51,8 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "anatomicalLocation": {
                         "description": " Any part of an organism, typically a component of an anatomical system. Organs, tissues, and cells are all anatomical locations.",
@@ -61,11 +66,13 @@
                                     "$ref": "#/definitions/definedterm"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "description": {
                         "description": " A description of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "identifier": {
                         "description": " The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.",
@@ -80,7 +87,8 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "image": {
                         "description": " An image of the item. This can be a URL or a fully described ImageObject.",
@@ -92,11 +100,13 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "isAssociatedWith": {
                         "description": " BioChemEntity that has some association with this Phenotype",
-                        "$ref": "#/definitions/biochementity"
+                        "$ref": "#/definitions/biochementity",
+                        "owl:cardinality": "one"
                     },
                     "mainEntityOfPage": {
                         "description": "Link via DataRecord to the main DataRecord representing this entity in a dataset. It is usually preferred to use mainEntity from a DataRecord to point to its corresponding entity. Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](http://schema.org/docs/datamodel.html#mainEntityBackground) for details.\nInverse property: mainEntity.",
@@ -108,11 +118,13 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "name": {
                         "description": " The name of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "sameAs": {
                         "description": " URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
@@ -128,7 +140,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "taxonomicRange": {
                         "description": " The taxonomic grouping of the organism that expresses the Phenotype.",
@@ -143,12 +156,14 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "url": {
                         "description": "Link to the official webpage associated to this entity. URL of the item.",
                         "type": "string",
-                        "format": "uri"
+                        "format": "uri",
+                        "owl:cardinality": "one"
                     },
                     "valueReference": {
                         "description": " A DefinedTerm in this code set.",
@@ -162,7 +177,8 @@
                                     "$ref": "#/definitions/definedterm"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     }
                 },
                 "required": [
@@ -408,56 +424,8 @@
             }
         },
         {
-            "@id": "bioschemas:additionalProperty",
-            "rdfs:comment": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, …) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.",
-            "@type": "rdf:Property",
-            "rdfs:label": "additionalProperty",
-            "schema:sameAs": {
-                "@id": "schema:additionalProperty"
-            },
-            "schema:domainIncludes": {
-                "@id": "bioschemas:Phenotype"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:PropertyValue"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:valueReference",
-            "rdfs:comment": "A DefinedTerm in this code set.",
-            "@type": "rdf:Property",
-            "rdfs:label": "valueReference",
-            "schema:sameAs": {
-                "@id": "schema:valueReference"
-            },
-            "schema:domainIncludes": {
-                "@id": "bioschemas:Phenotype"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:DefinedTerm"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:anatomicalLocation",
-            "rdfs:comment": "Any part of an organism, typically a component of an anatomical system. Organs, tissues, and cells are all anatomical locations. ",
-            "@type": "rdf:Property",
-            "rdfs:label": "anatomicalLocation",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:Phenotype"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:DefinedTerm"
-                }
-            ]
-        },
-        {
             "@id": "bioschemas:isAssociatedWith",
-            "rdfs:comment": "BioChemEntity that has some association with this Phenotype ",
+            "rdfs:comment": "BioChemEntity that has some association with this Phenotype.",
             "@type": "rdf:Property",
             "rdfs:label": "isAssociatedWith",
             "schema:domainIncludes": {
@@ -465,27 +433,7 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "schema:BioChemEntity"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:taxonomicRange",
-            "rdfs:comment": "The taxonomic grouping of the organism that expresses the Phenotype. ",
-            "@type": "rdf:Property",
-            "rdfs:label": "taxonomicRange",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:Phenotype"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bioschemas:Taxon"
-                },
-                {
-                    "@id": "schema:Text"
-                },
-                {
-                    "@id": "schema:URL"
+                    "@id": "bioschemastypes:BioChemEntity"
                 }
             ]
         }

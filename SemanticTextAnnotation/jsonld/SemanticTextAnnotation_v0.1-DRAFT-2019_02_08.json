@@ -3,7 +3,8 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [
         {
@@ -33,11 +34,13 @@
                             {
                                 "$ref": "#/definitions/scholarlypublication"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "commentCount": {
                         "description": "Number of times this annotation is found in the associated scholarly article. The number of comments this CreativeWork (e.g. Article, Question or Answer) has received. This is most applicable to works published in Web sites with commenting system; additional comments may exist elsewhere.",
-                        "type": "integer"
+                        "type": "integer",
+                        "owl:cardinality": "one"
                     },
                     "creator": {
                         "description": "Person, organization or software application used to create this annotation. The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.",
@@ -69,7 +72,8 @@
                                     "$ref": "#/definitions/softwareapplication"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "dateCreated": {
                         "description": " The date on which the CreativeWork was created or the item was added to a DataFeed.",
@@ -81,7 +85,8 @@
                             {
                                 "$ref": "#/definitions/datetime"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "dateModified": {
                         "description": " The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
@@ -106,7 +111,8 @@
                                     "$ref": "#/definitions/datetime"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "identifier": {
                         "description": "If available. The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.",
@@ -121,7 +127,8 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "inLanguage": {
                         "description": " The language of the content or performance or used in an action. Please use one of the language codes from the IETF BCP 47 standard. See also availableLanguage. Supersedes language.",
@@ -132,11 +139,13 @@
                             {
                                 "type": "string"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "isAccessibleForFree": {
                         "description": " A flag to signal that the item, event, or place is accessible for free. Supersedes free.",
-                        "type": "boolean"
+                        "type": "boolean",
+                        "owl:cardinality": "one"
                     },
                     "license": {
                         "description": " A license document that applies to this content, typically indicated by URL.",
@@ -148,7 +157,8 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "mainEntity": {
                         "description": "Ontology terms associated to this annotation. On the DefinedTerm, use additionalType to link to a Unified Medical Language System (UMLS) semantic type (TUI) or group, and sameAs to link to the corresponding concept unique identifier (CUI), if available. Indicates the primary entity described in some page or other CreativeWork.\n Inverse property: mainEntityOfPage.",
@@ -171,7 +181,8 @@
                                     "$ref": "#/definitions/definedterm"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "position": {
                         "description": "A list of links that can help a user understand and navigate to a section or paragraph in the scholarly article where this annotation is located. If a text is used, different steps on the list should be separated with the character '>', being the sentence where the annotation is found the last element. If a URL is used, it should identify the section or paragraph where this annoation is found. The position of an item in a series or sequence of items.",
@@ -189,7 +200,8 @@
                                 "type": "string",
                                 "format": "uri"
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "one"
                     },
                     "text": {
                         "description": "Expression found in the text corresponding to this annotation. The textual content of this CreativeWork.",
@@ -203,7 +215,8 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     }
                 },
                 "required": [

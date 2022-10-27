@@ -3,7 +3,11 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+        "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/",
+        "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/",
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "owl": "http://www.w3.org/2002/07/owl/",
+        "dwc": "http://rs.tdwg.org/dwc/terms/"
     },
     "@graph": [
         {
@@ -15,7 +19,7 @@
             ],
             "rdfs:label": "Taxon",
             "rdfs:subClassOf": {
-                "@id": "bioschemas:BioChemEntity"
+                "@id": "bioschemastypes:Taxon"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
@@ -35,7 +39,8 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "alternateName": {
                         "description": "Scientific name, possibly including authorship and date information, of a synonym of the currently valid (zoological) or accepted (botanical) taxon. An alias for the item.",
@@ -49,19 +54,23 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "isContainedIn": {
                         "description": "Direct, most proximate higher-rank parent taxon Indicates a BioChemEntity that this BioChemEntity is (in some sense) part of.",
-                        "$ref": "#/definitions/biochementity"
+                        "$ref": "#/definitions/biochementity",
+                        "owl:cardinality": "one"
                     },
                     "name": {
                         "description": "Scientific name, possibly including authorship and date information of the currently valid (zoological) or accepted (botanical) taxon. If the authorship and date information are not included, then they should be provided in the scientifiName property. The name of the item.",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "rank": {
                         "description": "The taxonomic rank of this name ",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "sameAs": {
                         "description": "URL of third-party webpages describing the same taxon URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
@@ -77,24 +86,29 @@
                                     "format": "uri"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "scientificName": {
                         "description": "Full scientific name, with authorship and date information if known ",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "scientificNameAuthorship": {
                         "description": "Authorship information for the scientificName formatted according to the conventions of the applicable nomenclatural Code. Example: \"(Torr.) J.T. Howell\", \"(Martinovsk\u00fd) Tzvelev\", \"(Gy\u00f6rfi, 1952)\" ",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "taxonRank": {
                         "description": "The taxonomic rank of this name ",
-                        "type": "string"
+                        "type": "string",
+                        "owl:cardinality": "one"
                     },
                     "url": {
                         "description": "Link to the webpage associated with this taxon URL of the item.\nBioChemEntity: Link to the official webpage associated to this entity.",
                         "type": "string",
-                        "format": "uri"
+                        "format": "uri",
+                        "owl:cardinality": "one"
                     },
                     "vernacularName": {
                         "description": "A vernacular (common) name of the taxon ",
@@ -108,7 +122,8 @@
                                     "type": "string"
                                 }
                             }
-                        ]
+                        ],
+                        "owl:cardinality": "many"
                     }
                 },
                 "required": [
@@ -151,7 +166,7 @@
         },
         {
             "@id": "bioschemas:isContainedIn",
-            "rdfs:comment": "Indicates a BioChemEntity that this BioChemEntity is (in some sense) part of. Direct, most proximate higher-rank parent taxon",
+            "rdfs:comment": "Indicates a BioChemEntity that this BioChemEntity is (in some sense) part of.\n Direct, most proximate higher-rank parent taxon",
             "@type": "rdf:Property",
             "rdfs:label": "isContainedIn",
             "schema:domainIncludes": {
@@ -159,13 +174,13 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "schema:BioChemEntity"
+                    "@id": "bioschemastypes:BioChemEntity"
                 }
             ]
         },
         {
-            "@id": "rank",
-            "rdfs:comment": " The taxonomic rank of this name",
+            "@id": "bioschemas:rank",
+            "rdfs:comment": "The taxonomic rank of this name.",
             "@type": "rdf:Property",
             "rdfs:label": "rank",
             "schema:domainIncludes": {
@@ -178,8 +193,22 @@
             ]
         },
         {
-            "@id": "scientificNameAuthorship",
-            "rdfs:comment": " Authorship information for the scientificName formatted according to the conventions of the applicable nomenclatural Code. Example: \"(Torr.) J.T. Howell\", \"(Martinovsk\u00fd) Tzvelev\", \"(Gy\u00f6rfi, 1952)\"",
+            "@id": "bioschemas:scientificName",
+            "rdfs:comment": "Full scientific name, with authorship and date information if known.",
+            "@type": "rdf:Property",
+            "rdfs:label": "scientificName",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Taxon"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:scientificNameAuthorship",
+            "rdfs:comment": "Authorship information for the scientificName formatted according to the conventions of the applicable nomenclatural Code. Example: '(Torr.) J.T. Howell', '(Martinovský) Tzvelev', '(Györfi, 1952)'.",
             "@type": "rdf:Property",
             "rdfs:label": "scientificNameAuthorship",
             "schema:domainIncludes": {
@@ -192,22 +221,8 @@
             ]
         },
         {
-            "@id": "taxonRank",
-            "rdfs:comment": " The taxonomic rank of this name",
-            "@type": "rdf:Property",
-            "rdfs:label": "taxonRank",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:Taxon"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Text"
-                }
-            ]
-        },
-        {
-            "@id": "vernacularName",
-            "rdfs:comment": " A vernacular (common) name of the taxon",
+            "@id": "dwc:vernacularName",
+            "rdfs:comment": "A vernacular (common) name of the taxon.",
             "@type": "rdf:Property",
             "rdfs:label": "vernacularName",
             "schema:domainIncludes": {
@@ -215,7 +230,7 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "schema:Text"
+                    "@id": "schema:URL"
                 }
             ]
         }
