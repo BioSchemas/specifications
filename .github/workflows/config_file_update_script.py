@@ -37,7 +37,8 @@ for arg in args:
         if "json" in arg.split("."):
             arglist = arg.split("/")
             profile_name = arg.split("/")[-1].split(".")[0].split("_")[0]
-            profile_version = arg.split("_")[1].split("v")[1].split(".json")[0]
+            # profile_version = arg.split("_")[1].split("v")[1].split(".json")[0]
+            profile_version = arg.split("_")[1]
 
             print(
                 Fore.LIGHTBLUE_EX

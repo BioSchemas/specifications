@@ -403,7 +403,7 @@
           "rdfs:comment": "Supported sahar Genome ID references.",
           "rdfs:label": "supportedRefs",
           "schema:domainIncludes": {
-            "@id": "bioschemasdeprecated:Beacon"
+            "@id": "bioschemasdeprecatced:Beacon"
           },
           "schema:rangeIncludes": [
             {
