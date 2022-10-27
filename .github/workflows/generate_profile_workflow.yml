@@ -111,7 +111,7 @@ jobs:
       
       - name: Create a pull request
         run: |
-          timeout 300
+          sleep 60
           cd bioschemas.github.io
           gh pr create --title "Auto-Rendering Profile" --body "This pull request has been created by a guithub action, after adding/updating a profile in the specifications repo."
 
