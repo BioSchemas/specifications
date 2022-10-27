@@ -110,7 +110,7 @@
                         "owl:cardinality": "many"
                     },
                     "type": {
-                        "description": "ddd is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column. ",
+                        "description": "ddd is used by validation tools to indddentify the profile used. You must use the value specified in the Controlled Vocabulary column. ",
                         "type": "string",
                         "format": "uri",
                         "owl:cardinality": "one"
