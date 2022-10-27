@@ -7,8 +7,8 @@ on: [push]
 #  pull_request:
 #    types: [opened, reopened]
 
-# env:
-#   GH_TOKEN: ${{ secrets.Sahar_Workflows_Token }}
+env:
+  GH_TOKEN: ${{ secrets.Sahar_Workflows_Token }}
 
 # inputs:
 #   branch-name: 
@@ -114,7 +114,7 @@ jobs:
           git add .
           git commit -m "Updating Profile"
           git push origin latest-updated-profiles
-          
+
       - name: End Workflow
         run: |
           echo "Check the Website !"

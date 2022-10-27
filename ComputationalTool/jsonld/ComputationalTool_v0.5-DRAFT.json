@@ -130,7 +130,7 @@
                             {
                                 "type": "array",
                                 "items": {
-                                    "type": "strsssing"
+                                    "type": "strddsssing"
                                 }
                             }
                         ]
