@@ -1,0 +1,52 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "issue542": "https://discovery.biothings.io/view/issue542/",
+    "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+    "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/"
+  },
+  "@graph": [
+    {
+      "@id": "issue542:BioChemEntity",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Any biological, chemical, or biochemical thing. For example: a protein; a gene; a chemical; a synthetic chemical.\nVersion 0.8-DRAFT",
+      "rdfs:label": "BioChemEntity",
+      "rdfs:subClassOf": {
+        "@id": "schema:BioChemEntity"
+      }
+    },
+    {
+      "@id": "issue542:hasBioPolymerSequence",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A symbolic representation of a BioChemEnity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a Protein.",
+      "rdfs:label": "hasBioPolymerSequence",
+      "schema:domainIncludes": {
+        "@id": "issue542:BioChemEntity"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "issue542:hasSequenceAnnotation",
+      "@type": "rdf:Property",
+      "rdfs:comment": "An annotation on the BioPolymerSequence associated with this BioChemEntity.",
+      "rdfs:label": "hasSequenceAnnotation",
+      "schema:domainIncludes": {
+        "@id": "issue542:BioChemEntity"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:URL"
+        },
+        {
+          "@id": "bioschemastypesdrafts:SequenceAnnotation"
+        }
+      ]
+    }
+  ]
+}

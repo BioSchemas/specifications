@@ -1,0 +1,124 @@
+{
+    "@context": "http://schema.org",
+    "@id": "https://doi.org/10.1186/1471-2156-2-9",
+    "@type": "ScholarlyArticle",
+    "dct:conformsTo": "https://bioschemas.org/profiles/ScholarlyArticle/0.2-DRAFT-2020_12_03",
+    "url": [
+        "http://www.biomedcentral.com/1471-2156/2/9",
+        "http://www.ncbi.nlm.nih.gov/pmc/articles/PMC35353",
+        "http://info.identifiers.org/pubmed/11476670",
+        "https://www.ncbi.nlm.nih.gov/pubmed/11476670",
+        "https://doi.org/10.1186/1471-2156-2-9"
+    ],
+    "identifier": [
+        "pmcid:PMC35353",
+        "pmc-uid:35353",
+        "pmc:35353",
+        "pmid:11476670",
+        "doi:10.1186/1471-2156-2-9"
+    ],
+    "name": "A missense mutation (Q279R) in the Fumarylacetoacetate Hydrolase gene, responsible for hereditary tyrosinemia, acts as a splicing mutation",
+    "headline": "A missense mutation (Q279R) in the Fumarylacetoacetate Hydrolase gene, responsible for hereditary tyrosinemia, acts as a splicing mutation",
+    "datePublished": "2001-06-29",
+    "pageStart": 9,
+    "pageEnd": 9,
+    "abstract": "Background: Tyrosinemia type I, the most severe disease of the tyrosine catabolic ... ",
+    "author": [
+        {
+            "@type": "Person",
+            "givenName": "Natacha",
+            "familyName": "Dreumont",
+            "name": "Natacha Dreumont"
+        },
+        {
+            "@type": "Person",
+            "givenName": "Jacques A",
+            "familyName": "Poudrier",
+            "name": "Jacques A Poudrier"
+        },
+        {
+            "@type": "Person",
+            "givenName": "Anne",
+            "familyName": "Bergeron",
+            "name": "Anne Bergeron"
+        },
+        {
+            "@type": "Person",
+            "givenName": "Harvey L",
+            "familyName": "Levy",
+            "name": "Harvey L Levy"
+        },
+        {
+            "@type": "Person",
+            "givenName": "Faouzi",
+            "familyName": "Baklouti",
+            "name": "Faouzi Baklouti"
+        },
+        {
+            "@type": "Person",
+            "givenName": "Robert M",
+            "familyName": "Tanguay",
+            "name": "Robert M Tanguay"
+        }
+    ],
+    "publisher": [
+      {
+        "@type": "Organization",
+        "name": "BMC Genetics",
+        "url": "https://bmcgenet.biomedcentral.com"
+      }
+    ], 
+    "isPartOf": {
+        "@type": "PublicationVolume",
+        "volumeNumber": 2,
+        "isPartOf": {
+            "@type": "Periodical",
+            "issn": "1471-2156",
+            "name": "BMC Genetics",
+            "publisher": {
+                "@type": "Organization",
+                "name": "BioMed Central"
+            }
+        }
+    },
+    "citation": [
+        {
+            "@type": "ScholarlyArticle",
+            "@id": "https://doi.org/10.1073/pnas.74.10.4641"
+        },
+        {
+            "@type": "ScholarlyArticle",
+            "@id": "https://pubmed.ncbi.nlm.nih.gov/2378356/"
+        }
+    ],
+    "about": [
+        {
+            "@type": "CreativeWork",
+            "dct:conformsTo": "https://bioschemas.org/profiles/SemanticTextAnnotation/0.2-DRAFT-2020_12_03",
+            "subjectOf": "https://doi.org/10.1186/1471-2156-2-9",
+            "creator": "http://data.bioontology.org/documentation#nav_annotator",
+            "text": "missense mutation",
+            "commentCount": 3,
+            "mainEntity": [
+                {
+                  "@type": "DefinedTerm",
+                  "inDefinedTermSet": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                  "termCode": "ncit:C45585",
+                  "url": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C45585"
+                },
+                {
+                  "@type": "DefinedTerm",
+                  "inDefinedTermSet": "http://purl.bioontology.org/ontology/MESH/",
+                  "termCode": "mesh:D020125",
+                  "url": "http://purl.bioontology.org/ontology/MESH/D020125"
+                },
+                {
+                  "@type": "DefinedTerm",
+                  "inDefinedTermSet": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                  "termCode": "ncit:C18133",
+                  "url": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C18133"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+	"@context": "http://schema.org",
+	"@type": "MolecularEntity",
+	"name": "(S)-2,3-Epoxysqualene",
+	"alternateName": [
+		"(3S)-2,3-Dihydro-2,3-epoxysqualene",
+		"2,3-EDSQ",
+		"Oxidosqualene"
+	],
+	"identifier": "HMDB0001188",
+	"url": "http://www.hmdb.ca/metabolites/HMDB0001188",
+	"image": "http://www.hmdb.ca/structures/HMDB0001188/thumb.svg",
+	"molecularFormula": "C30H50O",
+  "molecularWeight": 426.7174,
+	"monoisotopicMolecularWeight": 426.386166222,
+	"inChI": "InChI=1S/C30H50O/c1-24(2)14-11-17-27(5)20-12-18-25(3)15-9-10-16-26(4)19-13-21-28(6)22-23-29-30(7,8)31-29/h14-16,20-21,29H,9-13,17-19,22-23H2,1-8H3/b25-15+,26-16+,27-20+,28-21+/t29-/m0/s1",
+	"inChIKey": "QYIMSPSDBYKPPY-RSKUXYSASA-N",
+	"smiles": ["CC(C)=CCC\\C(C)=C\\CC\\C(C)=C\\CC\\C=C(/C)CC\\C=C(/C)CC[C@@H]1OC1(C)C"],
+	"iupacName": "(3S)-2,2-dimethyl-3-[(3E,7E,11E,15E)-3,7,12,16,20-pentamethylhenicosa-3,7,11,15,19-pentaen-1-yl]oxirane",
+	"biologicalRole": [
+		{
+			"@type": "DefinedTerm",
+			"@id": "http://purl.obolibrary.org/obo/CHEBI_77746",
+			"inDefinedTermSet":
+				{
+					"@type":"DefinedTermSet",
+					"@id":"ftp://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.owl",
+					"name": "CHEBI"
+				},
+			"termCode": "CHEBI:77746",
+			"name": "human metabolite",
+			"url": "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:77746"
+		}
+  ]
+}

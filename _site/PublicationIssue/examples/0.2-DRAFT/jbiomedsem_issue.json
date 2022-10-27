@@ -1,0 +1,27 @@
+{
+    "@type": "CreativeWork",
+    "@id": "https://jbiomedsem.biomedcentral.com/icccd2020",
+    "dct:conformsTo": "https://bioschemas.org/profiles/PublicationIssue/0.2-DRAFT-2020_12_03",
+    
+    "identifier": "https://jbiomedsem.biomedcentral.com/icccd2020",
+    "issueNumber": 1,
+    "keywords": "Intelligence Computing, models, clinical data",
+    "url": "https://jbiomedsem.biomedcentral.com/icccd2020",
+    "about": "Accuracy, efficiency and transferability are realistic issues in clinical practice, and research hotspots as well...",
+    "editor": [
+        {
+            "@type": "Person",
+            "givenName": "Honghao",
+            "familyname": "Gao"
+        }
+    ],
+    "hasPart": "https://doi.org/exampleDOI/",
+    "inLanguage": "EN",
+    "isPartOf": [
+        {
+            "@type": "Periodical",
+            "identifier": "issn:2041-1480",
+            "name": "Journal of Biomedical Semantics"
+        }
+    ]
+}

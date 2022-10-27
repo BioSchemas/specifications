@@ -1,0 +1,93 @@
+PREFIX schema: <http://schema.org/> 
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+PREFIX so: <http://purl.obolibrary.org/obo/SO_> 
+PREFIX soProp: <http://purl.obolibrary.org/obo/so#> 
+PREFIX sio: <http://semanticscience.org/resource/SIO_> 
+PREFIX pr: <http://purl.obolibrary.org/obo/PR_> 
+
+<ProteinMinimum>{
+  rdf:type [schema:BioChemEntity] ;
+  rdf:type [pr:000000001] ;
+  (
+    schema:identifier xsd:string |
+    schema:identifier IRI |
+    schema:identifier schema:PropertyValue |
+    schema:identifier schema:Text |
+    schema:identifier schema:URL
+  ) + ;
+  (
+    schema:name xsd:string |
+    schema:name schema:Text
+  ) + 
+}
+
+
+<ProteinRecommended> {
+  (
+    schema:description xsd:string |
+    schema:description schema:Text
+  ) + ;
+  (
+    schema:image IRI |
+    schema:image schema:ImageObject |
+    schema:image schema:URL
+  ) * ;
+  (
+    schema:url IRI |
+    schema:url schema:URL
+  ) + ;
+  (
+    schema:isContainedIn IRI |
+    schema:isContainedIn BNODE |
+    schema:isContainedIn schema:BioChemEntity |
+    schema:isContainedIn schema:URL
+  ) + ;
+  (
+    sio:010081 IRI |
+    sio:010081 BNODE |
+    sio:010081 schema:BioChemEntity |
+    sio:010081 @<Gene>
+  ) + ;
+  (
+    soProp:associated_with IRI |
+    soProp:associated_with BNODE |
+    soProp:associated_with schema:URL |
+    soProp:associated_with schema:MedicalCondition
+  ) * 
+}
+
+
+
+<ProteinOptional> {
+  (
+    schema:additionalType IRI |
+    schema:additionaType schema:URL
+  ) * ;
+  (
+    schema:alternateName xsd:string |
+    schema:alternateName schema:Text
+  ) * ;
+  (
+    schema:sameAs IRI |
+    schema:sameAs schema:URL
+  ) * ;
+  (
+    schema:mainEntityOfPage IRI |
+    schema:mainEntityOfPage schema:CreativeWork |
+    schema:mainEntityOfPage schema:URL
+  ) * ;
+  (
+    schema:contains IRI |
+    schema:contains schema:BioChemEntity |
+    schema:contains schema:URL
+  ) * 
+}
+
+<Gene> {
+  rdf:type [schema:BioChemEntity] ;
+  rdf:type [so:0000704] 
+}

@@ -1,0 +1,75 @@
+{
+  "@context": "http://schema.org",
+  "@id": "https://www.ebi.ac.uk/metabolights/MTBLS1217",
+  "@type": "Study",
+  "author": [
+    {
+      "@type": "Person",
+      "dct:conformsTo": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+      "name": "Maria Doppler"
+    },
+    {
+      "@type": "Person",
+      "dct:conformsTo": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+      "name": "Christoph Bueschl"
+    },
+    {
+      "@type": "Person",
+      "dct:conformsTo": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+      "name": "Bernhard Kluger"
+    },
+    {
+      "@type": "Person",
+      "dct:conformsTo": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+      "name": "Andrea Koutnik"
+    },
+    {
+      "@type": "Person",
+      "dct:conformsTo": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+      "name": "Marc Lemmens"
+    },
+    {
+      "@type": "Person",
+      "dct:conformsTo": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+      "name": "Hermann Buerstmayr"
+    },
+    {
+      "@type": "Person",
+      "dct:conformsTo": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+      "name": "Justyna Rechthaler"
+    },
+    {
+      "@type": "Person",
+      "dct:conformsTo": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+      "name": "Rudolf Krska"
+    },
+    {
+      "@type": "Person",
+      "dct:conformsTo": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+      "name": "Gerhard Adam"
+    },
+    {
+      "@type": "Person",
+      "dct:conformsTo": "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19",
+      "name": "Rainer Schuhmacher"
+    }
+  ],
+  "citation": [
+    {
+      "@id": "https://dx.doi.org/10.3389/fpls.2019.01366",
+      "@type": "CreativeWork"
+    },
+    {
+      "@id": "https://dx.doi.org/10.3389/fpls.2019.01137",
+      "@type": "CreativeWork"
+    }
+  ],
+  "datePublished": "2020-09-11",
+  "dct:conformsTo": "https://bioschemas.org/profiles/Study/0.1-DRAFT-2018_11_15",
+  "description": "Untargeted approaches and thus biological interpretation of metabolomics results are still hampered by the reliable assignment of the global metabolome as well as classification and (putative) identification of metabolites. In this work we present an liquid chromatography-mass spectrometry (LC-MS)-based stable isotope assisted approach that combines global metabolome and tracer based isotope labeling for improved characterization of (unknown) metabolites and their classification into tracer derived submetabolomes. To this end, wheat plants were cultivated in a customized growth chamber, which was kept at 400 ± 50 ppm 13CO2 to produce highly enriched uniformly 13C-labeled sample material. Additionally, native plants were grown in the greenhouse and treated with either 13C9-labeled phenylalanine (Phe) or 13C11-labeled tryptophan (Trp) to study their metabolism and biochemical pathways. After sample preparation, liquid chromatography-high resolution mass spectrometry (LC-HRMS) analysis and automated data evaluation, the results of the global metabolome- and tracer-labeling approaches were combined. A total of 1,729 plant metabolites were detected out of which 122 respective 58 metabolites account for the Phe- and Trp-derived submetabolomes. Besides m/z and retention time, also the total number of carbon atoms as well as those of the incorporated tracer moieties were obtained for the detected metabolite ions. With this information at hand characterization of unknown compounds was improved as the additional knowledge from the tracer approaches considerably reduced the number of plausible sum formulas and structures of the detected metabolites. Finally, the number of putative structure formulas was further reduced by isotope-assisted annotation tandem mass spectrometry (MS/MS) derived product ion spectra of the detected metabolites. A major innovation of this paper is the classification of the metabolites into submetabolomes which turned out to be valuable information for effective filtering of database hits based on characteristic structural subparts. This allows the generation of a final list of true plant metabolites, which can be characterized at different levels of specificity.",
+  "identifier": "metabolights:MTBLS1217",
+  "keywords": "Untargeted Metabolites, Phenylalanine, Tryptophan, Ultra-Performance Liquid Chromatography-Mass Spectrometry, Labelling, Tandem Mass Spectrometry",
+  "name": "Stable Isotope–Assisted Plant Metabolomics: Combination of Global and Tracer-Based Labeling for Enhanced Untargeted Profiling and Compound Annotation",
+  "studyDomain": "http://edamontology.org/topic_3172",
+  "studyProcess": []
+}

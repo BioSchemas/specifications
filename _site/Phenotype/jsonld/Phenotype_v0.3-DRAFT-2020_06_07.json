@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/"
+  },
+  "@graph": [
+    {
+      "@id": "bioschemastypesdrafts:Phenotype",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A phenotype. Version 0.3-DRAFT-2020_06_07",
+      "rdfs:label": "Phenotype",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "bioschemastypesdrafts:additionalProperty",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.  Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.",
+      "rdfs:label": "additionalProperty",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:Phenotype"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:PropertyValue"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:anatomicalLocation",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Any part of an organism, typically a component of an anatomical system. Organs, tissues, and cells are all anatomical locations.",
+      "rdfs:label": "anatomicalLocation",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:Phenotype"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        },
+        {
+          "@id": "schema:DefinedTerm"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:associatedDisease",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Disease associated to this BioChemEntity. Such disease can be a MedicalCondition or a URL. If you want to add an evidence supporting the association, please use PropertyValue.",
+      "rdfs:label": "associatedDisease",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:Phenotype"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:MedicalCondition"
+        },
+        {
+          "@id": "schema:PropertyValue"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:bioChemAssociation",
+      "@type": "rdf:Property",
+      "rdfs:comment": "BioChemEntity, e.g., gene, associated to this Phenotype and relevant for its characterization, particularly useful for the molecular basis of this Phenotype.",
+      "rdfs:label": "bioChemAssociation",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:Phenotype"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:BioChemEntity"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:hasMolecularFunction",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Molecular function performed by this BioChemEntity; please use PropertyValue if you want to include any evidence.",
+      "rdfs:label": "hasMolecularFunction",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:Phenotype"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:DefinedTerm"
+        },
+        {
+          "@id": "schema:PropertyValue"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:isLocatedInSubcellularLocation",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Subcellular location where this BioChemEntity is located; please use PropertyValue if you want to include any evidence.",
+      "rdfs:label": "isLocatedInSubcellularLocation",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:Phenotype"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:DefinedTerm"
+        },
+        {
+          "@id": "schema:PropertyValue"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:isInvolvedInBiologicalProcess",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Biological process this BioChemEntity is involved in; please use PropertyValue if you want to include any evidence.",
+      "rdfs:label": "isInvolvedInBiologicalProcess",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:Phenotype"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:DefinedTerm"
+        },
+        {
+          "@id": "schema:PropertyValue"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:taxonomicRange",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The taxonomic grouping of the organism that expresses, encodes, or in someway related to the BioChemEntity.",
+      "rdfs:label": "taxonomicRange",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:Phenotype"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:DefinedTerm"
+        },
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        },
+        {
+          "@id": "schema:Taxon"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:valueReference",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature.",
+      "rdfs:label": "valueReference",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:Phenotype"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:DefinedTerm"
+        },
+        {
+          "@id": "schema:Enumeration"
+        },
+        {
+          "@id": "schema:PropertyValue"
+        },
+        {
+          "@id": "schema:QualitativeValue"
+        },
+        {
+          "@id": "schema:QuantitativeValue"
+        },
+        {
+          "@id": "schema:StructuredValue"
+        },
+        {
+          "@id": "schema:URL"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    }
+  ]
+}

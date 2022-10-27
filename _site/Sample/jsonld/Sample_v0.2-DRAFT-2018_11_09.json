@@ -1,0 +1,33 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "bioschemastypesdrafts": "http://discovery.biothings.io/view/bioschemastypesdrafts/"
+  },
+  "@graph": [
+    {
+      "@id": "bioschemastypesdrafts:Sample",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "To deliver on the identified use cases for samples, we have identified a minimal set of properties to encapsulate identification, linking, and metadata descriptions. Some of these properties are existing standard schema.org properties, others require Bioschemas extensions. Table 1 outlines the minimal set of properties for the \u2018Sample\u2019 concept and Table 2 shows our recommendations for use of the \u2018PropertyValue\u2019 concept to markup additional characteristics of a sample described within a sample page. We also propose a new concept, \u2018Biomedical Code\u2019, which is a generalisation of the existing \u2018Medical Code\u2019 concept defined in the health-lifesci.schema.org extension.",
+      "rdfs:label": "Sample",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "bioschemastypesdrafts:additionalProperty",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A property-value pair representing an additional characteristics of the entity, e.g. \u201cOrganism: Homo sapiens\u201d or \u201ctissue type: leaf\u201d. For details of how to use PropertyValue see below.",
+      "rdfs:label": "additionalProperty",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:Sample"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:PropertyValue"
+        }
+      ]
+    }
+  ]
+}

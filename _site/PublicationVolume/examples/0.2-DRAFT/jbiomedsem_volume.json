@@ -1,0 +1,31 @@
+{
+    "@type": "PublicationVolume",
+    "@id": "https://jbiomedsem.biomedcentral.com/articles/supplements/volume-4-supplement-1",
+    "dct:conformsTo": "https://bioschemas.org/profiles/PublicationVolume/0.2-DRAFT-2020_12_03",
+
+    "identifier": "https://jbiomedsem.biomedcentral.com/articles/supplements/volume-4-supplement-1",
+    "keywords": "Bio-ontologies, ISMB",
+    "volumeNumber": "Volume 4 supplement 1",
+    "about": "Extended versions of accepted papers submitted to Bio-ontologies",
+    "url": "https://jbiomedsem.biomedcentral.com/articles/supplements/volume-4-supplement-1",
+    "editor": [
+        {
+            "@type": "Person",
+            "givenName": "Larisa",
+            "familyname": "Soldatova"
+        }
+    ],
+    "hasPart": [
+        {
+            "@id": "https://doi.org/10.1186/2041-1480-4-s1-s5"
+        }
+    ],
+    "inLanguage": "EN",
+    "isPartOf": [
+        {
+            "@type": "Periodical",
+            "identifier": "issn:2041-1480",
+            "name": "Journal of Biomedical Semantics"
+        }
+    ]
+}

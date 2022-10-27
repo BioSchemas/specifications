@@ -1,0 +1,1957 @@
+{
+    "@context": "schema.org",
+    "@id": "http://www.wikidata.org/entity/Q587961",
+    "@type": "Record",
+    "dateModified": "2017-10-11T11:33:48Z",
+    "distribution": [{
+            "@type": "DataDownload",
+            "url": "https://www.wikidata.org/wiki/Special:EntityData/Q587961.json"
+        },
+        {
+            "@type": "DataDownload",
+            "url": "https://www.wikidata.org/wiki/Special:EntityData/Q587961.ttl"
+        },
+        {
+            "@type": "DataDownload",
+            "url": "https://www.wikidata.org/wiki/Special:EntityData/Q587961.nt"
+        }
+    ],
+    "identifier": "Q587961",
+    "mainEntity": {
+        "@type": "BioChemEntity",
+        "additionalProperty": [{
+                "@type": "PropertyValue",
+                "additionalType": "http://www.wikidata.org/prop/direct/P702",
+                "name": "gene",
+                "value": {
+                    "@id": "http://www.wikidata.org/entity/Q14873998",
+                    "@type": [
+                        "StructuredValue",
+                        "BioChemEntity"
+                    ],
+                    "additionalType": "http://www.wikidata.org/entity/Q7087",
+                    "identifier": "Q14873998"
+                }
+            },
+            {
+                "@type": "PropertyValue",
+                "additionalType": "http://www.wikidata.org/prop/direct/P279",
+                "value": {
+                    "@id": "http://www.wikidata.org/entity/Q24744796",
+                    "@type": [
+                        "StructuredValue",
+                        "BioChemEntity"
+                    ],
+                    "identifier": "Q24744796"
+                }
+            },
+            {
+                "@type": "PropertyValue",
+                "additionalType": "http://www.wikidata.org/prop/direct/P703",
+                "value": {
+                    "@id": "http://www.wikidata.org/entity/Q15978631",
+                    "@type": [
+                        "StructuredValue",
+                        "BioChemEntity"
+                    ],
+                    "identifier": "Q15978631"
+                }
+            },
+            [{
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P680",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14873983",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14873983"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P680",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14860854",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14860854"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P680",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14865298",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14865298"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P680",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14863082",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14863082"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P680",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14818106",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14818106"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P680",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14819233",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14819233"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P680",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14817981",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14817981"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P680",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14820641",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14820641"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P680",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14873984",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14873984"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P680",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14873985",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14873985"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P680",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q13667380",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q13667380"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P680",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14873988",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14873988"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P680",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14860850",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14860850"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P680",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14840131",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14840131"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P680",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14860806",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14860806"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P680",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q167149",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q167149"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P680",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14860293",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14860293"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P680",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14890003",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14890003"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P680",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14633858",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14633858"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P680",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14860365",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14860365"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P680",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14873986",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14873986"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P680",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14873987",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14873987"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P680",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14863338",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14863338"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P681",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q79899",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q79899"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P681",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q220599",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q220599"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P681",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q465608",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q465608"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P681",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14349455",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14349455"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P681",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14905148",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14905148"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P681",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q39572",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q39572"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P681",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14860845",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14860845"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P681",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14330632",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14330632"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P681",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q154626",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q154626"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P681",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q40260",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q40260"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P681",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q30869",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q30869"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P681",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14817956",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14817956"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P681",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14864857",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14864857"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P681",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14817965",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14817965"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14819846",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14819846"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14916316",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14916316"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14890370",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14890370"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14865865",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14865865"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14864488",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14864488"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14818018",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14818018"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q7251493",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q7251493"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14873992",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14873992"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14863042",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14863042"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q21104793",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q21104793"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14865300",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14865300"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14872793",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14872793"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14860450",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14860450"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14821388",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14821388"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14819470",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14819470"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q21108612",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q21108612"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q21468480",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q21468480"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14863427",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14863427"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14599311",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14599311"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14912175",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14912175"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14913087",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14913087"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14873996",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14873996"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14633883",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14633883"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14864683",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14864683"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14863968",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14863968"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14912137",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14912137"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14859964",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14859964"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q21109182",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q21109182"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14763019",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14763019"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q15311698",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q15311698"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14863422",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14863422"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14599315",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14599315"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q184726",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q184726"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14331037",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14331037"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14873997",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14873997"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14901963",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14901963"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q21104795",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q21104795"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14863045",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14863045"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14873991",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14873991"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q22245268",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q22245268"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14876082",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14876082"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q242736",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q242736"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14873993",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14873993"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14873994",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14873994"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14821004",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14821004"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q21095682",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q21095682"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14862215",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14862215"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q21468479",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q21468479"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q187640",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q187640"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14864247",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14864247"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q15328828",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q15328828"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14908219",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14908219"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q21106688",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q21106688"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14873995",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14873995"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14873990",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14873990"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14906419",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14906419"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14903134",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14903134"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q133226",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q133226"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14904989",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14904989"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q189814",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q189814"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14889747",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14889747"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14914088",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14914088"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q21104792",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q21104792"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q21106739",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q21106739"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14820654",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14820654"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14907708",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14907708"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14818129",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14818129"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14874551",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14874551"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q288322",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q288322"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14863410",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14863410"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14904372",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14904372"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14599319",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14599319"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q21096406",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q21096406"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14818063",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14818063"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q21104794",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q21104794"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14864035",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14864035"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14863711",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14863711"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q21109181",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q21109181"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14872979",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14872979"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14859977",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14859977"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14330986",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14330986"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q22269591",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q22269591"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14863111",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14863111"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14863419",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14863419"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14865235",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14865235"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q210538",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q210538"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14862719",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14862719"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14885826",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14885826"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14820052",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14820052"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14897720",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14897720"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14862244",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14862244"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14818120",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14818120"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14863354",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14863354"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q21112798",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q21112798"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P682",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q14865149",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q14865149"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P129",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q799775",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q799775"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P129",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q894611",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q894611"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P129",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q419940",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q419940"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P129",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q177094",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q177094"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P129",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q412327",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q412327"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P129",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q198728",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q198728"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P129",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q21098957",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q21098957"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P527",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q24738472",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q24738472"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P527",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q24771787",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q24771787"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P527",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q24769051",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q24769051"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P527",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q24768234",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q24768234"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P527",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q24719835",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q24719835"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P527",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q24780316",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q24780316"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P527",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q24740842",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q24740842"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P527",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q24768561",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q24768561"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P527",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q24726164",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q24726164"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P527",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q41797956",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q41797956"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P527",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q41797170",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q41797170"
+                    }
+                },
+                {
+                    "@type": "PropertyValue",
+                    "additionalType": "http://www.wikidata.org/prop/direct/P527",
+                    "value": {
+                        "@id": "http://www.wikidata.org/entity/Q41796988",
+                        "@type": [
+                            "StructuredValue",
+                            "BioChemEntity"
+                        ],
+                        "identifier": "Q41796988"
+                    }
+                }
+            ],
+            [],
+            [],
+            [],
+            []
+        ],
+        "additionalType": "http://www.wikidata.org/entity/Q8054",
+        "alternateName": [
+            "p150",
+            "c-abl oncogene 1, receptor tyrosine kinase",
+            "ABL1",
+            "proto-oncogene tyrosine-protein kinase ABL1",
+            "bcr/c-abl oncogene protein",
+            "Abelson murine leukemia viral oncogene homolog 1",
+            "Abelson tyrosine-protein kinase 1",
+            "proto-oncogene c-Abl",
+            "tyrosine-protein kinase ABL1",
+            "v-abl Abelson murine leukemia viral oncogene homolog 1"
+        ],
+        "description": "mammalian protein found in Homo sapiens",
+        "name": "ABL proto-oncogene 1, non-receptor tyrosine kinase"
+    },
+    "sameAs": "http://purl.uniprot.org/uniprot/P00519",
+    "seeAlso": [
+        "http://identifiers.org/ensembl/ENSP00000323315",
+        "http://identifiers.org/ensembl/ENSP00000361423",
+        "http://identifiers.org/ensembl/ENSP00000376971",
+        "http://identifiers.org/pdb/1AB2",
+        "http://identifiers.org/pdb/1AWO",
+        "http://identifiers.org/pdb/1BBZ",
+        "http://identifiers.org/pdb/1JU5",
+        "http://identifiers.org/pdb/1OPL",
+        "http://identifiers.org/pdb/1ZZP",
+        "http://identifiers.org/pdb/2ABL",
+        "http://identifiers.org/pdb/2E2B",
+        "http://identifiers.org/pdb/2FO0",
+        "http://identifiers.org/pdb/2G1T",
+        "http://identifiers.org/pdb/2G2F",
+        "http://identifiers.org/pdb/2G2H",
+        "http://identifiers.org/pdb/2G2I",
+        "http://identifiers.org/pdb/2GQG",
+        "http://identifiers.org/pdb/2HIW",
+        "http://identifiers.org/pdb/2HYY",
+        "http://identifiers.org/pdb/2HZ0",
+        "http://identifiers.org/pdb/2HZ4",
+        "http://identifiers.org/pdb/2HZI",
+        "http://identifiers.org/pdb/2V7A",
+        "http://identifiers.org/pdb/3CS9",
+        "http://identifiers.org/pdb/3EG0",
+        "http://identifiers.org/pdb/3EG1",
+        "http://identifiers.org/pdb/3EG2",
+        "http://identifiers.org/pdb/3EG3",
+        "http://identifiers.org/pdb/3EGU",
+        "http://identifiers.org/pdb/3K2M",
+        "http://identifiers.org/pdb/3QRI",
+        "http://identifiers.org/pdb/3QRJ",
+        "http://identifiers.org/pdb/3QRK",
+        "http://identifiers.org/pdb/3T04",
+        "http://identifiers.org/pdb/3UE4",
+        "http://identifiers.org/pdb/3UYO",
+        "http://identifiers.org/pdb/3PYY",
+        "http://identifiers.org/pdb/4J9B",
+        "http://identifiers.org/pdb/4J9C",
+        "http://identifiers.org/pdb/4J9D",
+        "http://identifiers.org/pdb/4J9E",
+        "http://identifiers.org/pdb/4J9F",
+        "http://identifiers.org/pdb/4J9G",
+        "http://identifiers.org/pdb/4J9H",
+        "http://identifiers.org/pdb/4J9I",
+        "http://identifiers.org/pdb/4JJB",
+        "http://identifiers.org/pdb/4JJC",
+        "http://identifiers.org/pdb/4JJD",
+        "http://identifiers.org/pdb/4TWP",
+        "http://identifiers.org/pdb/4WA9",
+        "http://identifiers.org/pdb/4XEY",
+        "http://identifiers.org/pdb/4YC8",
+        "http://identifiers.org/pdb/5DC9",
+        "http://identifiers.org/pdb/5DC4",
+        "http://identifiers.org/pdb/5DC0",
+        "http://identifiers.org/pdb/2O88",
+        "http://identifiers.org/pdb/5HU9",
+        "http://identifiers.org/refseq/NP_005148",
+        "http://identifiers.org/refseq/NP_009297"
+    ],
+    "url": "https://www.wikidata.org/wiki/Q587961"
+}

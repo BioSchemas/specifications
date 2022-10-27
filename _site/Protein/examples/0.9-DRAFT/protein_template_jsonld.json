@@ -1,0 +1,11 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Protein",
+  "@id": "%%%URL%%%",
+  "http://purl.org/dc/terms/conformsTo": "https://bioschemas.org/profiles/Protein/0.9-DRAFT-2019_08_20/",
+  "identifier": "%%%IDENTIFIER%%%",
+  "name": "%%%NAME%%%",
+  "associatedDisease": "%%%DISEASE%%%",
+  "description": "%%%DESCRIPTION%%%",
+  "url": "%%%URL%%%"
+}

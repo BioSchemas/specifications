@@ -1,0 +1,22 @@
+{
+  "@type": "Record",
+  "@id":"http://www.identifiers.org/uniprot",
+  "identifier": "uniprot",
+  "mainEntity": {
+    "@type": "Dataset",
+    "identifier": "https://uniprot.org",
+    "name": "Uniprot",
+    "description": "The UniProt Knowledgebase (UniProtKB) is a comprehensive resource for protein sequence and functional information with extensive cross-references to more than 120 external databases. Besides amino acid sequence and a description, it also provides taxonomic data and citation information."
+  },
+  "url": "http://www.identifiers.org/uniprot",
+  "citation": [
+    {
+      "@id": "http://identifiers.org/pubmed/16381842",
+      "@type": "ScholarlyArticle",
+      "name": "The Universal Protein Resource (UniProt): an expanding universe of protein information."
+    }
+  ],
+  "dateCreated": "2006-08-14",
+  "dateModified": "2019-02-25",
+  "distribution": "https://www.ebi.ac.uk/miriam/main/collections/MIR:00000005.rdf"
+}

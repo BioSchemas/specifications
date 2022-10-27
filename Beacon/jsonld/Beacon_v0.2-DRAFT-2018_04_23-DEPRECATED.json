@@ -400,7 +400,7 @@
         {
           "@id": "bioschemasdeprecated:supportedRefs",
           "@type": "rdf:Property",
-          "rdfs:comment": "Supported Genome ID references.",
+          "rdfs:comment": "Supported sahar Genome ID references.",
           "rdfs:label": "supportedRefs",
           "schema:domainIncludes": {
             "@id": "bioschemasdeprecated:Beacon"

@@ -1,0 +1,830 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
+        "edam": "http://edamontology.org/"
+    },
+    "@graph": [
+        {
+            "@id": "bioschemas:ComputationalTool",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Bioschemas specification for describing a SoftwareApplication in the Life Sciences The Life Science Tools specification provides a way to describe bioscience tools and software on the World Wide Web. It defines a set of metadata and vocabularies, built on top of existing technologies and standards, that can be used to represent such tools in Web pages and applications. The goal of the specification is to make it easier to discover, exchange and integrate information about life science tools across the Internet. <h3>Summary of Changes</h3> <p>Changes since the 0.4-DRAFT of the tools profile:</p> <ul> <li>Profile name changed from Tool to ComputationalTool</li> <li>outputData and outputFormat replaced with serviceOutput</li> <li>Expected types of additionalType changed from Text to URL</li> <li>Expected types of applicationCategory extended to include URL</li> <li>Expected types of applicationSubCategory extended to include URL</li> <li>inputData and inputFormat replaced with edam:has_input </li> <li>Expected types of featureList extended to include Text</li> <li>Expected types of provider extended to include Person</li> </ul> Version: 0.5-DRAFT",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/profiles/ComputationalTool/0.5-DRAFT"
+            ],
+            "rdfs:label": "ComputationalTool",
+            "rdfs:subClassOf": {
+                "@id": "schema:SoftwareApplication"
+            },
+            "$validation": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "type": "object",
+                "properties": {
+                    "additionalType": {
+                        "description": "Type of tool e.g. Command-line tool, Web application etc.\n**Note:** Bioschemas have changed [URL](http://schema.org/URL) to [Text](http://schema.org/Text) in the Expected Types. This will be reverted once Bio.Tools provides stable URIs for tool types. An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "applicationCategory": {
+                        "description": "The high-level category in the global context, **please always use \"Computational science tool\"**. Type of software application, e.g. 'Game, Multimedia'.",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ]
+                    },
+                    "applicationSubCategory": {
+                        "description": "Use an [EDAM:Topic](http://edamontology.org/topic_0003) to describe the category of application Subcategory of the application, e.g. 'Arcade Game'.",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "applicationSuite": {
+                        "description": "A suite of tools, to which the tool belongs. The name of the application suite to which the application belongs (e.g. Excel belongs to Office).",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "author": {
+                        "description": "TODO The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                }
+                            }
+                        ]
+                    },
+                    "citation": {
+                        "description": "Publication about this tool. A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "codeRepository": {
+                        "description": "Link to the source code repository of the tool. Link to the repository where the un-compiled, human readable code and related code is located (SVN, github, CodePlex).",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "contributor": {
+                        "description": "TODO A secondary contributor to the CreativeWork or Event.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                }
+                            }
+                        ]
+                    },
+                    "description": {
+                        "description": "A short description of the tool. A description of the item.",
+                        "type": "string"
+                    },
+                    "discussionUrl": {
+                        "description": "TODO A link to the page containing the comments of the CreativeWork.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "downloadUrl": {
+                        "description": "A link to the downloadable(s). If the file can be downloaded, URL to download the binary.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "has_input": {
+                        "description": "This is equivalent to edam:has_input. It should be modelled as a MediaObject. ",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/mediaobject"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/mediaobject"
+                                }
+                            }
+                        ]
+                    },
+                    "featureList": {
+                        "description": "Functionality provided by the tool.\n**Note:** Bioschemas have removed [Text](http://schema.org/Text) from the Expected Types Features or modules provided by this application (and possibly required by other applications).",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "funder": {
+                        "description": "TODO A person or organization that supports (sponsors) something through some kind of financial contribution.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                }
+                            }
+                        ]
+                    },
+                    "hasPart": {
+                        "description": "TODO Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).\nInverse property: isPartOf.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                }
+                            }
+                        ]
+                    },
+                    "identifier": {
+                        "description": "TODO The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/propertyvalue"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "isAccessibleForFree": {
+                        "description": "A flag to signal that the tool or the service are available to be used for free. A flag to signal that the item, event, or place is accessible for free. Supersedes free.",
+                        "type": "boolean"
+                    },
+                    "isBasedOn": {
+                        "description": "A tool or another work which this tool is based on, or is an extension, distribution, or deployment of. A resource from which this work is derived or from which it is a modification or adaption. Supersedes isBasedOnUrl.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/product"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/product"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "isPartOf": {
+                        "description": "A collection, other than a suite of tools, to which the tool belongs. Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.\nInverse property: hasPart.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                }
+                            }
+                        ]
+                    },
+                    "keywords": {
+                        "description": "Additional keywords or tags important for this tool. Multiple entries are delimited by commas. Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+                        "type": "string"
+                    },
+                    "license": {
+                        "description": "The license of a software, curated dataset, etc. A license document that applies to this content, typically indicated by URL.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "name": {
+                        "description": " The name of the item.",
+                        "type": "string"
+                    },
+                    "operatingSystem": {
+                        "description": "Operating systems on which the tool can be used (without additional wrapping). Operating systems supported (Windows 7, OSX 10.6, Android 1.6).",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "programmingLanguage": {
+                        "description": "The main programming language(s) used to build or execute the tool. The computer programming language.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/computerlanguage"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/computerlanguage"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "provider": {
+                        "description": "The provider organization of a web application, database portal, web service, etc.\n**Note:** Bioschemas have removed [Person](http://schema.org/Person) from the Expected Types. The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                }
+                            }
+                        ]
+                    },
+                    "serviceOutput": {
+                        "description": "This is equivalent to edam:has_output. It should be modelled as a MediaObject. The tangible thing generated by the service, e.g. a passport, permit, etc. Supersedes produces.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/mediaobject"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/mediaobject"
+                                }
+                            }
+                        ]
+                    },
+                    "softwareAddOn": {
+                        "description": "Additional sub-tools (add-ons, plug-ins, tools in a suite, etc.) that are included in the tool or workflow. Additional content for a software application.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/softwareapplication"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/softwareapplication"
+                                }
+                            }
+                        ]
+                    },
+                    "softwareHelp": {
+                        "description": "A documentation of the tool. Software application help.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                }
+                            }
+                        ]
+                    },
+                    "softwareVersion": {
+                        "description": "Version(s) of the tool, which this information is valid for. Can also be a comma-delimited list and include hyphen-separated ranges of versions. Version of the software instance.",
+                        "type": "string"
+                    },
+                    "thumbnailUrl": {
+                        "description": "A small image representing the tool, such as an icon. A thumbnail image relevant to the Thing.",
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "url": {
+                        "description": "Homepage of the tool. URL of the item.",
+                        "type": "string",
+                        "format": "uri"
+                    }
+                },
+                "required": [
+                    "description",
+                    "name",
+                    "url"
+                ],
+                "recommended": [
+                    "additionalType",
+                    "applicationCategory",
+                    "applicationSubCategory",
+                    "author",
+                    "citation",
+                    "featureList",
+                    "license",
+                    "softwareVersion"
+                ],
+                "optional": [
+                    "applicationSuite",
+                    "codeRepository",
+                    "contributor",
+                    "discussionUrl",
+                    "downloadUrl",
+                    "has_input",
+                    "funder",
+                    "hasPart",
+                    "identifier",
+                    "isAccessibleForFree",
+                    "isBasedOn",
+                    "isPartOf",
+                    "keywords",
+                    "operatingSystem",
+                    "programmingLanguage",
+                    "provider",
+                    "serviceOutput",
+                    "softwareAddOn",
+                    "softwareHelp",
+                    "thumbnailUrl"
+                ],
+                "definitions": {
+                    "organization": {
+                        "@type": "Organization",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "legalName": {
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
+                            },
+                            "sameAs": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        }
+                    },
+                    "person": {
+                        "@type": "Person",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "mainEntityOfPage": {
+                                "anyOf": [
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "format": "uri"
+                                        }
+                                    },
+                                    {
+                                        "$ref": "#/definitions/creativework"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/definitions/creativework"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ]
+                    },
+                    "creativework": {
+                        "@type": "CreativeWork",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
+                    "mediaobject": {
+                        "@type": "schema:MediaObject",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "propertyvalue": {
+                        "@type": "PropertyValue",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "valuereference": {
+                                "oneOf": [
+                                    {
+                                        "$ref": "#/definitions/categorycode"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": [
+                                            {
+                                                "$ref": "#/definitions/categorycode"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    }
+                                ]
+                            },
+                            "unitText": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "recommended": [
+                            "valueReference"
+                        ],
+                        "optional": [
+                            "unitCode",
+                            "unitText"
+                        ]
+                    },
+                    "categorycode": {
+                        "@type": "CategoryCode",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "codeValue": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                        ]
+                    },
+                    "product": {
+                        "@type": "schema:Product",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "computerlanguage": {
+                        "@type": "schema:ComputerLanguage",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "softwareapplication": {
+                        "@type": "schema:SoftwareApplication",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    }
+                }
+            }
+        },
+        {
+          "@id": "bioschemas:codeRepository",
+          "@type": "rdf:Property",
+          "rdfs:comment": "Link to the source code repository of the tool.",
+          "rdfs:label": "codeRepository",
+          "schema:domainIncludes": {
+            "@id": "bioschemas:ComputationalTool"
+          },
+          "schema:rangeIncludes": [
+            {
+              "@id": "schema:URL"
+            }
+          ]
+        },
+        {
+          "@id": "bioschemas:programmingLanguage",
+          "@type": "rdf:Property",
+          "rdfs:comment": "The main programming language(s) used to build or execute the tool. Please use terms from the ‘Programming language’ table in the Bio.Tools documentation",
+          "rdfs:label": "programmingLanguage",
+          "schema:domainIncludes": {
+            "@id": "bioschemas:ComputationalTool"
+          },
+          "schema:rangeIncludes": [
+            {
+              "@id": "schema:Text"
+            },
+            {
+              "@id": "schema:ComputerLanguage"
+            }
+          ]
+        },
+        {
+            "@id": "edam:has_input",
+            "rdfs:comment": " This is equivalent to edam:has_input. It should be modelled as a MediaObject.",
+            "@type": "rdf:Property",
+            "rdfs:label": "has_input",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ComputationalTool"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:MediaObject"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:serviceOutput",
+            "rdfs:comment": " This is equivalent to edam:has_output. It should be modelled as a MediaObject.",
+            "@type": "rdf:Property",
+            "rdfs:label": "serviceOutput",
+            "sameAs": {
+                "@id": "edam:has_output"
+            },
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ComputationalTool"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:MediaObject"
+                }
+            ]
+        }
+    ]
+}

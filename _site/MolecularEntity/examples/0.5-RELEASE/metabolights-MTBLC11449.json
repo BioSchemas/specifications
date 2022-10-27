@@ -1,0 +1,28 @@
+{
+  "@context": "https://schema.org/",
+  "@id": "https://www.ebi.ac.uk/metabolights/MTBLC11449",
+  "@type": "MolecularEntity",
+  "http://purl.org/dc/terms/conformsTo": {
+    "@type": "CreativeWork",
+    "@id": "https://bioschemas.org/profiles/MolecularEntity/0.5-RELEASE/"
+  },
+  "identifier": "MTBLC11449",
+  "name": "2,5-Didehydro-D-Gluconate",
+  "url": "https://www.ebi.ac.uk/metabolights/MTBLC11449",
+  "inChI": "InChI=1S/C6H8O7/c7-1-2(8)3(9)4(10)5(11)6(12)13/h3-4,7,9-10H,1H2,(H,12,13)/p-1/t3-,4+/m1/s1",
+  "inChIKey": "RXMWXENJQAINCC-DMTCNVIQSA-M",
+  "iupacName": "D-threo-2,5-hexodiulosonate",
+  "molecularFormula": "C6H7O7",
+  "molecularWeight": 191.11560,
+  "smiles": "OCC(=O)[C@@H](O)[C@H](O)C(=O)C([O-])=O",
+  "alternateName": [
+    "2,5-Didehydro-D-Gluconate",
+    "2,5-Didehydro-D-Gluconate",
+    "2,5-Diketo-D-Gluconate",
+    "2,5-Diketogluconate",
+    "2-Dehydro-L-Idonate",
+    "D-Threo-2,5-Hexodiulosonate"
+  ],
+  "image": "https://www.ebi.ac.uk/chebi/displayImage.do?defaultImage=true&imageIndex=0&chebiId=11449&dimensions=600&transbg=true",
+  "monoisotopicMolecularWeight": 191.019
+}

@@ -1,0 +1,76 @@
+{
+    "@context": {
+        "bs": "http://bioschemas.org/",
+        "schema": "http://schema.org/"
+    },
+    "@type": "Study",
+    "additionalProperty": [
+        {
+            "@type": "PropertyValue",
+            "name": "Study type",
+            "value": "methylation profiling by high throughput sequencing"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Study type",
+            "value": {
+                "Ontology": [
+                    "EFO"
+                ],
+                "TermId": [
+                    "EFO_0002761"
+                ]
+            }
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Technology",
+            "value": "Sequencing assay"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Assay by Molecule",
+            "value": "DNA assay"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Organism",
+            "value": "Homo sapiens"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Experimental Designs",
+            "value": "cell_type_comparison_design"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Experimental Designs",
+            "value": "reference_design"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Experimental Factors",
+            "value": "disease"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Experimental Factors",
+            "value": {
+                "TermName": [
+                    "disease"
+                ]
+            }
+        }
+    ],
+    "author": "Ming-Ta Hsu",
+    "citation": "Title: Hierarchical clustering of breast cancer methylomes revealed differentially methylated and expressed breast cancer genes.\nAuthors: Lin IH, Chen DT, Chang YF, Lee YL, Su CH, Cheng C, Tsai YC, Ng SC, Chen HT, Lee MC, Chen HW, Suen SH, Chen YC, Liu TT, Chang CH, Hsu MT\nDOI: 10.1371/journal.pone.0118453\n",
+    "datePublished": "2018-10-02",
+    "description": "To improve our understanding of the effect of differential methylation on gene expression between normal and tumor breast cells, we employed high-throughput sequencing technology to determine and compare CpG methylation of normal breast and four breast tumor genomes at single-base resolution. By comparing the methylation profiles between normal and tumor, we identified large hypomethylated zones in associated with large tissue-specific genes and gene deserts. We identified small hypomethylated regions in the methylomes and termed these sites as unmethylated islands (UMI). The UMI are highly correlated with positive regulatory chromatin marks and exhibit differential methylation mainly at the island shores. Our analysis showed there is a complex relationship between genome-wide promoter differential methylation and gene expression. Four other data sets from this study were also deposited at ArrayExpress under accession numbers E-MTAB-1935, E-MTAB-1952, E-MTAB-1958 and E-MTAB-1961.",
+    "identifier": "biostudies:E-MTAB-2014",
+    "isPartOf": {
+        "@id": "https://www.ebi.ac.uk/biostudies/arrayexpress/studies",
+        "@type": "schema:Dataset"
+    },
+    "name": "Genome-wide methylome profiling of normal breast and breast tumors",
+    "url": "https://wwwdev.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-2014"
+}

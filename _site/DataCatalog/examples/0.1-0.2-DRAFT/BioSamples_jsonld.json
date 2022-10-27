@@ -1,0 +1,31 @@
+{
+    "@context": "http://schema.org",
+    "@type": "DataCatalog",
+    "dataset": [
+        {
+            "@id": "https://www.ebi.ac.uk/biosamples/samples",
+            "@type": "Dataset"
+        }
+    ],
+    "description": "BioSamples stores and supplies descriptions and metadata about biological samples used in research and development by academia and industry. Samples are either 'reference' samples (e.g. from 1000 Genomes, HipSci, FAANG) or have been used in an assay database such as the European Nucleotide Archive (ENA) or ArrayExpress.",
+    "keywords": "samples, sample metadata",
+    "name": "BioSamples database",
+    "provider": {
+        "@type": "Organization",
+        "email": "biosamples@ebi.ac.uk",
+        "name": "BioSamples"
+    },
+    "publication": [
+        {
+            "@type": "PublicationEvent",
+            "name": "Updates to BioSamples database at European Bioinformatics Institute",
+            "url": "http://identifiers.org/pubmed:24265224"
+        }
+    ],
+    "sourceOrganization": {
+        "@type": "Organization",
+        "name": "The European Bioinformatics Institute (EMBL-EBI)",
+        "url": "https://www.ebi.ac.uk/"
+    },
+    "url": "https://www.ebi.ac.uk/biosamples/"
+}

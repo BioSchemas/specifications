@@ -1,0 +1,23 @@
+<script type="application/ld+json">
+{
+    "name": "Biostudies",
+    "description": "A\tBioStudies – one package for all the data supporting a study The BioStudies database holds descriptions of biological studies, links to data from these studies in other databases at EMBL-EBI or outside, as well as data that do not fit in the structured archives at EMBL-EBI. The database can accept a wide range of types of studies described via a simple format. It also enables manuscript authors to submit supplementary information and link to it from the publication",
+    "url": "https://www.ebi.ac.uk/biostudies/",
+    "keywords": "BioStudies, ArrayExpress, Functional Genomics, Imaging",
+    "provider": [
+        "Biostudies",
+        "https://www.ebi.ac.uk/biostudies/"
+    ],
+    "alternateName": "BST",
+    "identifier": [
+        "Accession Numbers"
+    ],
+    "publication": "McEntyre, Jo, Sarkans, Ugis & Brazma, Alvis (2015). The BioStudies database. Molecular systems biology, 11, 847.",
+    "sourceOrganization": [
+        "The European Bioinformatics Institute (EMBL-EBI)",
+        "https://www.ebi.ac.uk/"
+    ],
+    "@context": "http://schema.org",
+    "@type": "DataCatalog"
+}
+</script>

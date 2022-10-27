@@ -1,0 +1,313 @@
+{
+    "@context": "http://schema.org/",
+    "@type": "LabProtocol",
+    "dct:conformsTo": "https://bioschemas.org/profiles/LabProtocol/0.6-DRAFT-2020_12_08",
+    
+    "headline": "RNA Isolation from Synechocystis",
+    "identifier": "https://doi.org/10.21769/BioProtoc.1428",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "keywords": ["Microbiology", "Molecular Biology"],
+   
+    "protocolPurpose": "This protocol describes the steps involved in the whole mount processing of mouse eyes for visualization of the retinal vasculature.",
+
+    "protocolAdvantage": "We describe a fast, efficient and economic in-house protocol for...",
+
+    "protocolLimitation": "A major problem faced both in this and other transformation studies is...",
+
+    "protocolApplication": "RNA isolated by this method can be used for Northern blot hybridization, RT-qPCR, microarrays and Next Generation Sequencing.",
+
+    "protocolOutcome": "The yield of RNA depends on optical density of cyanobacterial culture and may reach up to 10-20 µg of total RNA per 1 ml of cell culture.",
+ 
+    "bioSampleUsed": [
+     {
+       "@type": ["BioChemEntity", "BioSample"],
+       "url": "http://purl.bioontology.org/ontology/NCBITAXON/1148",
+       "name": {
+         "@language": "en",
+         "@value": "Synechocystis sp. PCC 6803"
+       }
+     },
+     {
+       "@type": ["BioChemEntity", "BioSample"],
+       "url": "http://purl.bioontology.org/ontology/NCBITAXON/1140",
+       "name": {
+         "@language": "en",
+         "@value": "Synechococcus elongatus PCC 7942"
+        }
+     },
+     {
+       "@type": ["BioChemEntity", "BioSample"],
+       "url": "http://purl.bioontology.org/ontology/NCBITAXON/269084",
+       "name": {
+         "@language": "en",
+         "@value": "Synechococcus elongatus PCC 6301"
+        }
+     }
+   ],
+    
+   "reagentUsed": [
+    {
+      "@type": ["BioChemEntity", "MolecularEntity", "ChemicalSubstance"],
+      "url": "http://purl.obolibrary.org/obo/CHEBI_16236",
+      "name": {
+        "@language": "en",
+        "@value": "95% ethanol"
+        }
+     },
+     {
+      "@type": ["BioChemEntity", "MolecularEntity", "ChemicalSubstance"],
+      "url": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C62218",
+      "name": {
+        "@language": "en",
+        "@value": "70% ethanol"
+        }
+     },
+     {
+      "@type": ["BioChemEntity", "MolecularEntity", "ChemicalSubstance"],
+      "url": "http://purl.obolibrary.org/obo/CHEBI_15882",
+      "name": {
+        "@language": "en",
+        "@value": "Phenol"
+        }
+     },
+     {
+      "@type": ["BioChemEntity", "MolecularEntity", "ChemicalSubstance"],
+      "url": "http://purl.obolibrary.org/obo/CHMO_0001755",
+      "name": {
+        "@language": "en",
+        "@value": "Tris-HCl"
+        }
+     },
+     {
+      "@type": ["BioChemEntity", "MolecularEntity", "ChemicalSubstance"],
+      "name": {
+        "@language": "en",
+        "@value": "0.5 M EDTA-Na2 (pH 8.0)"
+        }
+     },
+     {
+      "@type": ["BioChemEntity", "MolecularEntity", "ChemicalSubstance"],
+      "name": {
+        "@language": "en",
+        "@value": "RNase-free autoclaved water"
+        }
+     },
+     {
+      "@type": ["BioChemEntity", "MolecularEntity", "ChemicalSubstance"],
+      "url": "http://purl.obolibrary.org/obo/CHEBI_35255",
+      "name": {
+        "@language": "en",
+        "@value": "Chloroform"
+        }
+     },
+     {
+      "@type": ["BioChemEntity", "MolecularEntity", "ChemicalSubstance"],
+      "url": "http://purl.obolibrary.org/obo/CHEBI_48607",
+      "name": {
+        "@language": "en",
+        "@value": "lithium chloride solution"
+        }
+     },
+     {
+      "@type": ["BioChemEntity", "MolecularEntity", "ChemicalSubstance"],
+      "name": {
+        "@language": "en",
+        "@value": "RNAse-free DNAse"
+        }
+     },
+     {
+      "@type": ["BioChemEntity", "MolecularEntity", "ChemicalSubstance"],
+      "url": "http://purl.obolibrary.org/obo/CHEBI_2511",
+      "name": {
+        "@language": "en",
+        "@value": "Agarose"
+        }
+     },
+     {
+      "@type": ["BioChemEntity", "MolecularEntity", "ChemicalSubstance"],
+      "name": {
+        "@language": "en",
+        "@value": "TAE electrophoresis buffer"
+        }
+     },
+     {
+      "@type": ["BioChemEntity", "MolecularEntity", "ChemicalSubstance"],
+      "name": {
+        "@language": "en",
+        "@value": "RNA ladder"
+        }
+     },
+     {
+      "@type": ["BioChemEntity", "MolecularEntity", "ChemicalSubstance"],
+      "url": "http://purl.obolibrary.org/obo/CHMO_0002069",
+      "name": {
+        "@language": "en",
+        "@value": "TE buffer"
+        }
+     },
+     {
+      "@type": ["BioChemEntity", "MolecularEntity", "ChemicalSubstance"],
+      "name": {
+        "@language": "en",
+        "@value": "Cell fix solution"
+        }
+      }
+    ],
+    
+   "labEquipmentUsed": [
+    {
+     "@language": "en",
+     "@value": "Saran wrap" 
+    },
+    {
+    "@language": "en",
+    "@value": "Autoclave bag"  
+    },
+    {
+   "@type": "DefinedTerm",
+   "url": "http://purl.org/net/SMARTprotocol#MicrocentrifugeTube",
+    "name": {
+       "@language": "en",
+       "@value": "Safe-Lock tubes, 2.0 ml"
+        }
+    },
+    {
+   "@language": "en",
+   "@value": "50 ml plastic conical polypropylene tubes"
+   },
+   {
+   "@type": "DefinedTerm",
+   "url": "http://purl.obolibrary.org/obo/OBI_0001112",
+    "name": {
+       "@language": "en",
+       "@value": "Autoclave"
+        }
+    },
+    {
+   "@type": "DefinedTerm",
+   "url": "http://purl.obolibrary.org/obo/ERO_0000245",
+    "name": {
+       "@language": "en",
+       "@value": "Refrigerated centrifuge"
+        }
+    },
+    {
+   "@language": "en",
+   "@value": "Refrigerated microcentrifuge"
+   },
+   {
+   "@type": "DefinedTerm",
+   "url": "http://purl.obolibrary.org/obo/OBI_0400155",
+    "name": {
+       "@language": "en",
+       "@value": "Water bath"
+        }
+    },
+    {
+   "@type": "DefinedTerm",
+   "url": "http://purl.obolibrary.org/obo/ERO_0000980",
+    "name": {
+       "@language": "en",
+       "@value": "Subzero refrigerators"
+        }
+    },
+    {
+   "@type": "DefinedTerm",
+   "url": "http://purl.obolibrary.org/obo/ERO_0000438",
+    "name": {
+       "@language": "en",
+       "@value": "Fume hood"
+        }
+    },
+    {
+   "@language": "en",
+   "@value": "Ice bath"
+   },
+   {
+   "@language": "en",
+   "@value": "Multi tube automated vortex"
+    },
+   {
+   "@type": "DefinedTerm",
+   "url": "http://purl.obolibrary.org/obo/OBI_0400115",
+    "name": {
+       "@language": "en",
+       "@value": "UV-spectrophotometer (preferably, Nanodrop)"
+        }
+    },
+    {
+   "@type": "DefinedTerm",
+   "url": "http://purl.obolibrary.org/obo/OBI_0001134",
+    "name": {
+       "@language": "en",
+       "@value": "Agarose gel electrophoresis equipment"
+        }
+      }
+    ],
+
+    "step": [
+        {
+            "@language": "en",
+            "@value": "Prepare 25 ml portions of cell fix solution in 50 ml plastic conical polypropylene tubes. Keep on ice. Pour 25 ml of cyanobacterial cell culture into 25 ml of ice-cold cell fix solution (Figure 1.1). Stir well and proceed to centrifugation or store samples at -20 °C up to 1 month. For 50-ml of cyanobacterial cultures, two 50 ml tubes should be used. Alternatively, 100-200 ml centrifuge bottles resistant to phenol and ethanol may be used." 
+           },
+           {
+            "@language": "en",
+            "@value": "Harvest fixed cells by centrifugation at 3,000 x g for 5-10 min at 4 °C (Figure 1.2)."
+           },
+           {
+            "@language": "en",
+            "@value": "Discard cell fix solution leaving 0,5-1 ml of solution to resuspend the pellet. Resuspend the pellet by vortexing or pipetting."
+           },
+           {
+            "@language": "en",
+            "@value": "Transfer a suspension into a sterile 2 ml Eppendorf tube. If 50 ml tubes are used for cell fixation and harvesting, combine two probes from 25 ml tubes in one 2 ml Eppendorf tube."  
+           },
+           {
+            "@language": "en",
+            "@value": "Centrifuge at 3,000-5,000 x g, 4 °C for 3-5 min and completely remove supernatant (Figure 1.3). Leave pelleted cells on ice. Note: Probes fixation is applied to kill cells immediately and to avoid possible degradation of RNA. This is extremely important when temperature-dependent changes in specific mRNAs are under study."
+           }
+    ],
+    
+   "citation": [
+      {
+       "@id": "https://www.ncbi.nlm.nih.gov/pubmed/10937442",
+       "@type": "ScholarlyArticle",
+       "name": {
+         "@language": "en",
+         "@value": "Expression of the gene for the delta9 acyl-lipid desaturase in the thermophilic cyanobacterium"
+          }
+        },
+      {
+       "@id": "https://www.ncbi.nlm.nih.gov/pubmed/24703081",
+       "@type": "ScholarlyArticle",
+       "name": {
+         "@language": "en",
+         "@value": "Cold-induced gene expression and ω(3) fatty acid unsaturation is controlled by red light in Synechocystis."
+          }
+        },
+      {
+       "@id": "https://www.ncbi.nlm.nih.gov/pubmed/3148836",
+       "@type": "ScholarlyArticle",
+       "name": {
+         "@language": "en",
+         "@value": "Isolation and purification of cyanobacteria"
+         }
+        },
+      {
+       "@id": "http://www.molecularcloning.com/",
+       "@type": "Book",
+       "name": {
+         "@language": "en",
+         "@value": "Molecular Cloning: A Laboratory Manual (Fourth Edition)"
+         }
+        },
+      {
+       "@id": "https://www.ncbi.nlm.nih.gov/pubmed/7541909",
+       "@type": "ScholarlyArticle",
+       "name": {
+         "@language": "en",
+         "@value": "A family of cold-regulated RNA-binding protein genes in the cyanobacterium Anabaena variabilis M3"
+         }
+       }
+     ]
+   }

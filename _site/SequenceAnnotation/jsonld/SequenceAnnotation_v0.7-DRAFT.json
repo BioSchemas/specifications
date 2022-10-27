@@ -1,0 +1,513 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+  },
+  "@graph": [
+    {
+      "@id": "bioschemas:SequenceAnnotation",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Used to provide metadata about Sequence Annotations. The sequence can be an amino acid (protein) or nucleic acid (Gene, DNA, RNA). Version: 0.7-DRAFT (05 July 2021) Note, the parent class for this type has been updated to a pending class in schema.org.",
+      "rdfs:label": "SequenceAnnotation",
+      "rdfs:subClassOf": {
+        "@id": "schema:BioChemEntity"
+      },
+      "$validation": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "sequenceLocation": {
+            "description": "A range/position location where this annotation or BioChemEntity is located reagrding another BioChemEntity, for instance a BioChemStructure in a Protein.",
+            "oneOf": [
+              {
+                "$ref": "#/definitions/sequencerange"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/sequencerange"
+                }
+              }
+            ]
+          },
+          "creationMethod": {
+            "description": "Method used to create or obtain this annotation or BioChemEntity; please use PropertyValue if you want to include any evidence.",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "$ref": "#/definitions/propertyvalue"
+              }
+            ]
+          },
+          "sequenceOrientation": {
+            "description": "One of 1, 0 or -1.",
+            "type": "integer"
+          },
+          "sequenceValue": {
+            "description": "value of the sequence",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "string",
+                "format": "uri"
+              }
+            ]
+          },
+          "valueReference": {
+            "description": "A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature.",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "$ref": "#/definitions/propertyvalue"
+              }
+            ]
+          },
+          "hasBioChemEntityPart": {
+            "description": "Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part. Inverse property: isPartOfBioChemEntity",
+            "oneOf": [
+              {
+                "$ref": "#/definitions/biochementity"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/biochementity"
+                }
+              }
+            ]
+          },
+          "hasRepresentation": {
+            "description": "A common representation such as a protein sequence or chemical structure for this entity. For images use schema.org/image.",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "$ref": "#/definitions/propertyvalue"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/propertyvalue"
+                }
+              }
+            ]
+          },
+          "isPartOfBioChemEntity": {
+            "description": "Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. Inverse property: hasBioChemEntityPart",
+            "anyOf": [
+              {
+                "$ref": "#/definitions/biochementity"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/biochementity"
+                }
+              },
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            ]
+          },
+          "isLocatedInSubcellularLocation": {
+            "description": "Subcellular location where this BioChemEntity is located; please use PropertyValue if you want to include any evidence.",
+            "anyOf": [
+              {
+                "$ref": "#/definitions/definedterm"
+              },
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "$ref": "#/definitions/propertyvalue"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/definedterm"
+                }
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/propertyvalue"
+                }
+              }
+            ]
+          },
+          "alternateName": {
+            "description": "An alias for the item.",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "description": {
+            "description": "A description of the item.",
+            "type": "string"
+          },
+          "image": {
+            "description": "An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].",
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              {
+                "$ref": "#/definitions/imageobject"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/imageobject"
+                }
+              }
+            ]
+          },
+          "name": {
+            "description": "The name of the item.",
+            "type": "string"
+          },
+          "sameAs": {
+            "description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            ]
+          },
+          "url": {
+            "description": "URL of the item.",
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "sequenceLocation"
+        ],
+        "recommended": [
+          "creationMethod",
+          "sequenceOrientation",
+          "sequenceValue",
+          "description",
+          "image",
+          "name",
+          "sameAs",
+          "url"
+        ],
+        "optional": [
+          "valueReference",
+          "hasBioChemEntityPart",
+          "hasRepresentation",
+          "isEncodedByBioChemEntity",
+          "isLocatedInSubcellularLocation",
+          "alternateName",
+          "isPartOfBioChemEntity"
+        ],
+        "definitions": {
+          "sequencerange": {
+            "@type": "bioschemas:SequenceRange",
+            "type": "object",
+            "properties": {
+              "rangeEnd": {
+                "type": "integer"
+              },
+              "rangeStart": {
+                "type": "integer"
+              }
+            }
+          },
+          "biochementity": {
+            "@type": "bioschemas:BioChemEntity",
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            }
+          },
+          "definedterm": {
+            "@type": "schema:DefinedTerm",
+            "type": "object",
+            "properties": {
+              "termCode": {
+                "type": "string"
+              }
+            }
+          },
+          "propertyvalue": {
+            "@type": "PropertyValue",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "value": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "boolean"
+                        },
+                        {
+                            "type": "number"
+                        }
+                    ]
+                },
+                "identifier": {
+                    "type": "string"
+                },
+                "valuereference": {
+                    "oneOf": [
+                        {
+                            "$ref": "#/definitions/categorycode"
+                        },
+                        {
+                            "type": "array",
+                            "items": [
+                                {
+                                    "$ref": "#/definitions/categorycode"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "unitCode": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "string",
+                            "format": "uri"
+                        }
+                    ]
+                },
+                "unitText": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "value"
+            ],
+            "recommended": [
+                "valueReference"
+            ],
+            "optional": [
+                "unitCode",
+                "unitText"
+            ]
+        },
+          "categorycode": {
+            "@type": "CategoryCode",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "codeValue": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "codeValue",
+                "url"
+            ]
+        },
+          "imageobject": {
+                        "@type": "ImageObject",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    }
+        }
+      }
+    },
+    {
+      "@id": "bioschemas:sequenceLocation",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A range/position location where this annotation or BioChemEntity is located reagrding another BioChemEntity, for instance a BioChemStructure in a Protein.",
+      "rdfs:label": "sequenceLocation",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:SequenceAnnotation"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "bioschemas:SequenceRange"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemas:creationMethod",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Method used to create or obtain this annotation or BioChemEntity; please use PropertyValue if you want to include any evidence.",
+      "rdfs:label": "creationMethod",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:SequenceAnnotation"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:PropertyValue"
+        },
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemas:sequenceOrientation",
+      "@type": "rdf:Property",
+      "rdfs:comment": "One of 1, 0 or -1.",
+      "rdfs:label": "sequenceOrientation",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:SequenceAnnotation"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Integer"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemas:sequenceValue",
+      "@type": "rdf:Property",
+      "rdfs:comment": "value of the sequence",
+      "rdfs:label": "sequenceValue",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:SequenceAnnotation"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemas:valueReference",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature.",
+      "rdfs:label": "valueReference",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:SequenceAnnotation"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:DefinedTerm"
+        },
+        {
+          "@id": "schema:Enumeration"
+        },
+        {
+          "@id": "schema:PropertyValue"
+        },
+        {
+          "@id": "schema:QualitativeValue"
+        },
+        {
+          "@id": "schema:QuantitativeValue"
+        },
+        {
+          "@id": "schema:StructuredValue"
+        },
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    }
+  ]
+}

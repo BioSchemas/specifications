@@ -1,0 +1,233 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+  },
+  "@graph": [
+    {
+      "@id": "bioschemas:Sample",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "To deliver on the identified use cases for samples, we have identified a minimal set of properties to encapsulate identification, linking, and metadata descriptions. Some of these properties are existing standard schema.org properties, others require Bioschemas extensions. Table 1 outlines the minimal set of properties for the \u2018Sample\u2019 concept and Table 2 shows our recommendations for use of the \u2018PropertyValue\u2019 concept to markup additional characteristics of a sample described within a sample page. We also propose a new concept, \u2018Biomedical Code\u2019, which is a generalisation of the existing \u2018Medical Code\u2019 concept defined in the health-lifesci.schema.org extension.",
+      "rdfs:label": "Sample",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      },
+      "$validation": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "additionalProperty": {
+            "description": "A property-value pair representing an additional characteristics of the entity, e.g. \u201cOrganism: Homo sapiens\u201d or \u201ctissue type: leaf\u201d. For details of how to use PropertyValue see below.",
+            "oneOf": [
+              {
+                "$ref": "#/definitions/propertyValue"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/propertyValue"
+                }
+              }
+            ]
+          },
+          "url": {
+            "description": "URL of the item.",
+            "type": "string",
+            "format": "uri"
+          },
+          "name": {
+            "description": "The name of the item.",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "identifier": {
+            "description": "The identifier property represents any kind of identifier for any kind of <a class=\"localLink\" href=\"http://schema.org/Thing\">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href=\"/docs/datamodel.html#identifierBg\">background notes</a> for more details.",
+            "anyOf": [
+              {
+                "$ref": "#/definitions/propertyValue"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/propertyValue"
+                }
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            ]
+          },
+          "subjectOf": {
+            "description": "A CreativeWork or Event about this Thing..",
+            "oneOf": [
+              {
+                "$ref": "#/definitions/creativeWork"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/creativeWork"
+                }
+              }
+            ]
+          },
+          "description": {
+            "description": "A description of the item.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "identifier"
+        ],
+        "recommended": [
+          "url"
+        ],
+        "optional": [
+          "additionalProperty",
+          "description",
+          "name",
+          "subjectOf"
+        ],
+        "definitions": {
+          "propertyValue": {
+            "@type": "PropertyValue",
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "value": {
+                "oneOf": [
+                  {"type": "string"},
+                  {"type": "boolean"},
+                  {"type": "number"}
+                ]
+              },
+              "identifier": {
+                "type": "string"
+              },
+              "valueReference": {
+                "oneOf": [
+                  {
+                    "$ref": "#/definitions/categoryCode"
+                  },
+                  {
+                    "type": "array",
+                    "items": [
+                      {
+                        "$ref": "#/definitions/categoryCode"
+                      }    
+                    ]
+                  }
+                ]  
+              },
+              "unitCode": {
+                "oneOf": [
+                  {
+                    "type": "string"},
+                  {
+                    "type": "string",
+                    "format": "uri"
+                  }
+                ]      
+              },
+              "unitText": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "value"
+            ],
+            "recommended": [
+              "valueReference"    
+            ],
+            "optional": [
+              "unitCode",
+              "unitText"
+            ]
+          },
+          "creativeWork": {
+            "@type": "CreativeWork",
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "identifier": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": []
+          },
+          "categoryCode": {
+            "@type": "CategoryCode",
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "codeValue": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "codeValue",
+              "url"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "@id": "bioschemas:additionalProperty",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A property-value pair representing an additional characteristics of the entity, e.g. \u201cOrganism: Homo sapiens\u201d or \u201ctissue type: leaf\u201d. For details of how to use PropertyValue see below.",
+      "rdfs:label": "additionalProperty",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:Sample"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:PropertyValue"
+        }
+      ]
+    }
+  ]
+}

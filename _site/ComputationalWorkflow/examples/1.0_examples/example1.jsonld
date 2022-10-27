@@ -1,0 +1,58 @@
+{
+  "@context": "http://schema.org",
+  "@type": "ComputationalWorkflow",
+  "@id": "https://workflowhub.eu/workflows/49",
+  "dct:conformsTo": "https://bioschemas.org/profiles/ComputationalWorkflow/1.0-RELEASE",
+  "description": "Galaxy-E (ecology.usegalaxy.eu) workflow to calculate species presence / absence, community metrics and compute generalized linear models to identify effects and significativity of these effects on biodiversity.",
+  "name": "Population and community metrics calculation from Biodiversity data",
+  "url": "https://workflowhub.eu/workflows/49",
+  "keywords": "GLM, Species abundance, Community_metrics, Ecology, Modeling, Presence_absence, Biodiversity, Statistics",
+  "license": "https://opensource.org/licenses/MIT",
+  "creator": [
+    {
+      "@type": "Person",
+      "@id": "https://workflowhub.eu/people/51",
+      "name": "Yvan Le Bras"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://workflowhub.eu/people/52",
+      "name": "Coline Royaux"
+    }
+  ],
+  "producer": [
+    {
+      "@type": [
+        "Project",
+        "Organization"
+      ],
+      "@id": "https://workflowhub.eu/projects/19",
+      "name": "PNDB"
+    }
+  ],
+  "dateCreated": "2020-07-24 12:27:09 UTC",
+  "dateModified": "2020-07-24 13:00:50 UTC",
+  "encodingFormat": "application/zip",
+  "sdPublisher": [
+    {
+      "@type": "Person",
+      "@id": "https://workflowhub.eu/people/51",
+      "name": "Yvan Le Bras"
+    }
+  ],
+  "version": 2,
+  "image": "https://workflowhub.eu/workflows/49/diagram?version=2",
+  "programmingLanguage": "Galaxy",
+  "inputs": [
+    {
+      "@type": "FormalParameter",
+      "@id": "https://workflowhub.eu/workflows/49/inputs/0",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE",
+      "name": "0_Input",
+      "encodingFormat": "http://edamontology.org/format_3752",
+      "additionalType": "http://edamontology.org/data_3707",
+      "description": "Species count. A tabular file with observation data. Must at least contain three columns 'observation.unit' which associate year and location (alternatively, you can have this column splited in 2 columns named 'year' and 'location'), 'species.code' with species ID and 'number' for abundance."    
+    }
+  ],
+  "outputs": []
+}

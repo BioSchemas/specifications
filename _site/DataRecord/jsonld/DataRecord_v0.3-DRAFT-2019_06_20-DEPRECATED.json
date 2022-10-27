@@ -1,0 +1,39 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "bioschemasdeprecated": "https://discovery.biothings.io/view/bioschemasdeprecated/",
+    "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@graph": [
+    {
+      "@id": "bioschemasdeprecated:DataRecord",
+      "@type": "rdfs:Class",
+      "owl:deprecated": "True",
+      "rdfs:comment": "A DataRecord is a part of a Dataset. Not all datasets naturally fall into parts, and some kinds of datasets (eg. relational and tabular) can be mapped into different senses of \"data record\". Although data records can themselves be viewed as datasets, for simplicity we do not declare this explicitly; if this perspective is needed it can be added using multiple typing. Version: 0.3-DRAFT-2019_06_20 (2019-06-20). Note this is type has been DEPRECATED.\n\n",
+      "rdfs:label": "DataRecord",
+      "schema:schemaVersion": [
+        "https://bioschemas.org/types/DataRecord/0.3-DRAFT-2019_06_20"
+      ],
+      "rdfs:subClassOf": {
+        "@id": "schema:CreativeWork"
+      }
+    },
+    {
+      "@id": "bioschemasdeprecated:includedInDataset",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A Dataset which contains this DataRecord.",
+      "rdfs:label": "includedInDataset",
+      "schema:domainIncludes": {
+        "@id": "bioschemasdeprecated:DataRecord"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Dataset"
+        }
+      ]
+    }
+  ]
+}

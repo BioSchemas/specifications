@@ -1,0 +1,106 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "bioschemas": "https://discovery.biothings.io/view/bioschemas/"
+  },
+  "@graph": [
+    {
+      "@id": "bioschemas:SequenceRange",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Used to define the range of a subsequence, typically used in conjunction with SequenceAnnotation to define the range of the annotation on the protein or gene sequence. Version: 0.1-DRAFT. Note, the parent class for this profile has been updated to a pending class in schema.org.",
+      "rdfs:label": "SequenceRange",
+      "rdfs:subClassOf": {
+        "@id": "schema:BioChemEntity"
+      },
+      "$validation": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "rangeEnd": {
+            "description": "Final position of the range",
+            "type": "integer"
+          },
+          "rangeStart": {
+            "description": "Initial position of the range.",
+            "type": "integer"
+          },
+          "endUncertainty": {
+            "description": "If the initial position is not known with reasonable certainty, specify here the uncertainty type as one of \u2018<\u2019 (any position before than rangeEnd), \u2018>\u2019 (any position after rangeEnd), \u2018~\u2019 (around rangeEnd), \u2018[#-#] (to indicate a range where rangeEnd could be located)\u2019.",
+            "type": "string"
+          },
+          "startUncertainty": {
+            "description": "If the initial position is not known with reasonable certainty, specify here the uncertainty type as one of \u2018<\u2019 (any position before than rangeStart), \u2018>\u2019 (any position after rangeStart), \u2018~\u2019 (around the rangeStart), \u2018[#-#] (to indicate a range where rangeStart could be located)\u2019.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "rangeEnd",
+          "rangeStart"
+        ],
+        "recommended": [
+          "endUncertainty",
+          "startUncertainty"
+        ],
+        "optional": []
+      }
+    },
+    {
+      "@id": "bioschemas:rangeEnd",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Final position of the range",
+      "rdfs:label": "rangeEnd",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:SequenceRange"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Integer"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemas:rangeStart",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Initial position of the range.",
+      "rdfs:label": "rangeStart",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:SequenceRange"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Integer"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemas:endUncertainty",
+      "@type": "rdf:Property",
+      "rdfs:comment": "If the initial position is not known with reasonable certainty, specify here the uncertainty type as one of \u2018<\u2019 (any position before than rangeEnd), \u2018>\u2019 (any position after rangeEnd), \u2018~\u2019 (around rangeEnd), \u2018[#-#] (to indicate a range where rangeEnd could be located)\u2019.",
+      "rdfs:label": "endUncertainty",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:SequenceRange"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemas:startUncertainty",
+      "@type": "rdf:Property",
+      "rdfs:comment": "If the initial position is not known with reasonable certainty, specify here the uncertainty type as one of \u2018<\u2019 (any position before than rangeStart), \u2018>\u2019 (any position after rangeStart), \u2018~\u2019 (around the rangeStart), \u2018[#-#] (to indicate a range where rangeStart could be located)\u2019.",
+      "rdfs:label": "startUncertainty",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:SequenceRange"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    }
+  ]
+}

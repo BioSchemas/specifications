@@ -1,0 +1,661 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+    },
+    "@graph": [
+        {
+            "@id": "bioschemas:Person",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A specification for describing people in life sciences The Life Science Person specification provides a way to describe bioscience events on the World Wide Web. It defines a set of metadata and vocabularies, built on top of existing technologies and standards, that can be used to represent the profile information of people in Web pages and applications. The goal of the specification is to make it easier to discover, life science profile information. Version: 0.2-DRAFT-2019_07_19",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/profiles/Person/0.2-DRAFT-2019_07_19"
+            ],
+            "rdfs:label": "Person",
+            "rdfs:subClassOf": {
+                "@id": "schema:Person"
+            },
+            "$validation": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "type": "object",
+                "properties": {
+                    "advisor": {
+                        "description": "A person who has been an educational, professional or personal advisor to the person. ",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                }
+                            }
+                        ]
+                    },
+                    "curriculumVitae": {
+                        "description": "A link or body of text describing the person's notable achievements, employment history, and contact details. ",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ]
+                    },
+                    "description": {
+                        "description": " A description of the item.",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "email": {
+                        "description": " Email address.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "$ref": "#/definitions/contactpoint"
+                            },
+                            {
+                                "$ref": "#/definitions/place"
+                            }
+                        ]
+                    },
+                    "experience": {
+                        "description": "A textual description of the professional experiences a person has acquired. ",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "expertise": {
+                        "description": "A textual description of the topic which a person has the most expertise in. This should make use of an ontology such as the EDAM ontology ",
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "funding": {
+                        "description": "Textual description of current or past funding ths person has acquired ",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "homeLocation": {
+                        "description": " A contact location for a person's residence.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/contactpoint"
+                            },
+                            {
+                                "$ref": "#/definitions/place"
+                            }
+                        ]
+                    },
+                    "image": {
+                        "description": " An image of the item. This can be a URL or a fully described ImageObject.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/imageobject"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ]
+                    },
+                    "interest": {
+                        "description": "Any interests held by the person. These should be single words or short phrases that relate to a person ",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "internatonalActivities": {
+                        "description": "Global connetions related to teaching and scholarly work in the past 3 years ",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "journalReferee": {
+                        "description": "Which journals this person is a reeree of ",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                }
+                            }
+                        ]
+                    },
+                    "keywords": {
+                        "description": "Keywords to describe the person. These should be single words or short phrases that relate to a person. Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+                        "oneOf": [
+                            {"type": "string"},
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "knowsLanguage": {
+                        "description": "A list of languages spoken by the Person Of a Person, and less typically of an Organization, to indicate a known language. We do not distinguish skill levels or reading/writing/speaking/signing here. Use language codes from the IETF BCP 47 standard.",
+                        "$ref": "#/definitions/language"
+                    },
+                    "mainEntityOfPage": {
+                        "description": " Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details.\nInverse property: mainEntity.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "memberOf": {
+                        "description": " An Organization (or ProgramMembership) to which this Person or Organization belongs.\nInverse property: member.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/programmembership"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/programmembership"
+                                }
+                            }
+                        ]
+                    },
+                    "name": {
+                        "description": " The name of the item.",
+                        "type": "string"
+                    },
+                    "orcid": {
+                        "description": "The url of ID of the person's ORCID (see http://orcid.org) ",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ]
+                    },
+                    "works": {
+                        "description": "All or notable publications, presentations, training materials, research outputs or any other body of work attributed to this person. ",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                }
+                            }
+                        ]
+                    },
+                    "worksFor": {
+                        "description": " Organizations that the person works for.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "required": [
+                    "description",
+                    "mainEntityOfPage",
+                    "name"
+                ],
+                "recommended": [
+                    "email",
+                    "expertise",
+                    "homeLocation",
+                    "image",
+                    "memberOf",
+                    "orcid",
+                    "worksFor"
+                ],
+                "optional": [
+                    "advisor",
+                    "curriculumVitae",
+                    "experience",
+                    "funding",
+                    "interest",
+                    "internatonalActivities",
+                    "journalReferee",
+                    "keywords",
+                    "knowsLanguage",
+                    "works"
+                ],
+                "definitions": {
+                    "person": {
+                        "@type": "Person",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "mainEntityOfPage": {
+                                "anyOf": [
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "format": "uri"
+                                        }
+                                    },
+                                    {
+                                        "$ref": "#/definitions/creativework"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/definitions/creativework"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ]
+                    },
+                    "creativework": {
+                        "@type": "CreativeWork",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
+                    "organization": {
+                        "@type": "Organization",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "legalName": {
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
+                            },
+                            "sameAs": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        }
+                    },
+                    "place": {
+                        "@type": "Place",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "address": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "$ref": "#/definitions/postaladdress"
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        }
+                    },
+                    "contactpoint": {
+                        "@type": "schema:ContactPoint",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "imageobject": {
+                        "@type": "ImageObject",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
+                    "language": {
+                        "@type": "Language",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "programmembership": {
+                        "@type": "ProgramMembership",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "postaladdress": {
+                        "@type": "schema:PostalAddress",
+                        "type": "object",
+                        "properties": {
+                            "addressCountry": {
+                                "type": "string"
+                            },
+                            "addressLocality": {
+                                "type": "string"
+                            },                            
+                            "addressRegion": {
+                                "type": "string"
+                            },
+                            "postOfficeBoxNumber": {
+                                "type": "string"
+                            },
+                            "postalCode": {
+                                "type": "string"
+                            },
+                            "streetAddress": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    }
+                }
+            }
+        },
+        {
+            "@id": "bioschemas:advisor",
+            "rdfs:comment": " A person who has been an educational, professional or personal advisor to the person.",
+            "@type": "rdf:Property",
+            "rdfs:label": "advisor",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Person"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemas:Person"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:curriculumVitae",
+            "rdfs:comment": " A link or body of text describing the person's notable achievements, employment history, and contact details.",
+            "@type": "rdf:Property",
+            "rdfs:label": "curriculumVitae",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Person"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:experience",
+            "rdfs:comment": " A textual description of the professional experiences a person has acquired.",
+            "@type": "rdf:Property",
+            "rdfs:label": "experience",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Person"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:expertise",
+            "rdfs:comment": " A textual description of the topic which a person has the most expertise in. This should make use of an ontology such as the EDAM ontology",
+            "@type": "rdf:Property",
+            "rdfs:label": "expertise",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Person"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:funding",
+            "rdfs:comment": " Textual description of current or past funding ths person has acquired",
+            "@type": "rdf:Property",
+            "rdfs:label": "funding",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Person"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:interest",
+            "rdfs:comment": " Any interests held by the person. These should be single words or short phrases that relate to a person",
+            "@type": "rdf:Property",
+            "rdfs:label": "interest",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Person"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:internatonalActivities",
+            "rdfs:comment": " Global connetions related to teaching and scholarly work in the past 3 years",
+            "@type": "rdf:Property",
+            "rdfs:label": "internatonalActivities",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Person"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:journalReferee",
+            "rdfs:comment": " Which journals this person is a reeree of",
+            "@type": "rdf:Property",
+            "rdfs:label": "journalReferee",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Person"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:CreativeWork"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:orcid",
+            "rdfs:comment": " The url of ID of the person's ORCID (see http://orcid.org)",
+            "@type": "rdf:Property",
+            "rdfs:label": "orcid",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Person"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:works",
+            "rdfs:comment": " All or notable publications, presentations, training materials, research outputs or any other body of work attributed to this person.",
+            "@type": "rdf:Property",
+            "rdfs:label": "works",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Person"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:CreativeWork"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:keywords",
+            "rdfs:comment": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+            "@type": "rdf:Property",
+            "rdfs:label": "keywords",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Person"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        }
+    ]
+}

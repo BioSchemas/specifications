@@ -1,0 +1,67 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "bioschemas": "https://discovery.biothings.io/view/bioschemas/"
+  },
+  "@graph": [
+    {
+      "@id": "bioschemas:DNA",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "DNA\nVersion: 0.2-DRAFT-2019_06_20 (2019-06-20). Note, the parent class for this type has been updated to a pending class in schema.org.",
+      "rdfs:label": "DNA",
+      "rdfs:subClassOf": {
+        "@id": "schema:BioChemEntity"
+      }
+    },
+    {
+      "@id": "bioschemas:encodesBioChemEntity",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Another BioChemEntity encoded by this one. Inverse property:isEncodedByBioChemEntity.",
+      "rdfs:label": "encodesBioChemEntity",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:DNA"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:PropertyValue"
+        },
+        {
+          "@id": "bioschemas:SequenceAnnotation"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemas:hasSequenceAnnotation",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Pointer to a sequence annotation; please use PropertyValue if you want to include any evidence.",
+      "rdfs:label": "hasSequenceAnnotation",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:DNA"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:PropertyValue"
+        },
+        {
+          "@id": "bioschemas:SequenceAnnotation"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemas:hasSequence",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Nucleotide or amino acid sequence.",
+      "rdfs:label": "hasSequence",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:DNA"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    }
+  ]
+}

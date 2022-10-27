@@ -1,0 +1,290 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "bioschemas": "https://discovery.biothings.io/view/bioschemas/"
+  },
+  "@graph": [
+    {
+      "@id": "bioschemas:Taxon",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A set of organisms asserted to represent a natural cohesive biological unit. Note, the parent class for this profile has been updated to a pending class in schema.org.",
+      "rdfs:label": "Taxon",
+      "rdfs:subClassOf": {
+        "@id": "schema:Taxon"
+      },
+      "$validation": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "vernacularName": {
+            "description": "A vernacular (common) name of the taxon",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "childTaxon": {
+            "description": "Closest child taxa of the taxon in question. Inverse property: parentTaxon",
+            "anyOf": [
+              {
+                "$ref": "#/definitions/taxon"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/taxon"
+                }
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            ]
+          },
+          "parentTaxon": {
+            "description": "Closest parent taxon of the taxon in question. Inverse property: childTaxon",
+            "anyOf": [
+              {
+                "$ref": "#/definitions/taxon"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/taxon"
+                }
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            ]
+          },
+          "taxonRank": {
+            "description": "The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary \u2013 (typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs).",
+            "anyOf": [
+              {
+                "$ref": "#/definitions/propertyValue"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/propertyValue"
+                }
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            ]
+          },
+          "additionalType": {
+            "description": "A Taxon type from a well known vocabulary, e.g. DarwinCore http://rs.tdwg.org/dwc/terms/Taxon or http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept.",
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            ]
+          },
+          "alternateName": {
+            "description": "Scientific name, with authorship and date information if known, of a synonym of the currently valid (zoological) or accepted (botanical) name.",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "name": {
+            "description": "Currently valid (zoological) or accepted (botanical) name for that taxon, with authorship and date information if known.",
+            "type": "string"
+          },
+          "sameAs": {
+            "description": "URL of third-party webpages describing the same taxon",
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            ]
+          },
+          "url": {
+            "description": "URL of the item.",
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "taxonRank",
+          "name"
+        ],
+        "recommended": [
+            "parentTaxon",
+            "url"
+        ],
+        "optional": [
+            "additionalType",
+            "alternateName",
+            "childTaxon",
+            "sameAs",
+            "vernacularName"
+        ],
+        "definitions":{
+            "taxon": {
+                "@type": "bioschemas:Taxon",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "taxonRank": {
+                    "anyOf": [
+                                  {
+                                    "$ref": "#/definitions/propertyValue"
+                                  },
+                                  {
+                                    "type": "array",
+                                    "items": {
+                                      "$ref": "#/definitions/propertyValue"
+                                    }
+                                  },
+                                  {
+                                    "type": "string"
+                                  },
+                                  {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  {
+                                    "type": "string",
+                                    "format": "uri"
+                                  },
+                                  {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "string",
+                                      "format": "uri"
+                                    }
+                                  }
+                                ]
+                  }
+                },
+                "required": [
+                  "name",
+                  "taxonRank"
+                ]   
+            },
+            "propertyValue": {
+                "@type": "PropertyValue",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"    
+                  },
+                  "identifier": {
+                    "type": "string"    
+                  }
+                },
+                "required": [
+                ]  
+            }
+        }
+      }
+    },
+    {
+      "@id": "bioschemas:vernacularName",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A vernacular (common) name of the taxon",
+      "rdfs:label": "vernacularName",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:Taxon"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    }
+  ]
+}

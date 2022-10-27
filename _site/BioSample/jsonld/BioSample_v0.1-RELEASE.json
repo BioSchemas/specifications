@@ -1,0 +1,174 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+  },
+  "@graph": [
+    {
+      "@id": "bioschemas:BioSample",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A biological material entity that is representative of a whole.\nComments: Typically samples are intended to be representative of the whole or aspects thereof. Examples of samples include biomedical samples (blood, urine) and plant specimens held at herbaria. Version 0.1-RELEASE. Note, the parent class for this schema has been updated to a pending class in schema.org.",
+      "rdfs:label": "BioSample",
+      "schema:additionalType":"https://bioschemas.org/types#nav-release",
+      "schema:schemaVersion":"0.1-RELEASE",
+      "rdfs:subClassOf": {
+        "@id": "schema:BioChemEntity"
+      }
+    },
+    {
+      "@id": "bioschemas:additionalProperty",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.",
+      "rdfs:label": "additionalProperty",
+      "schema:sameAs": {
+        "@id": "schema:additionalProperty"
+      },
+      "schema:domainIncludes": {
+        "@id": "bioschemas:BioSample"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:PropertyValue"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemas:collector",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The Person or Organization who collected the Sample. ",
+      "rdfs:label": "collector",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:BioSample"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Organization"
+        },
+        {
+          "@id": "schema:Person"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemas:custodian",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The Person or Organization who is responsible for the Sample.",
+      "rdfs:label": "custodian",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:BioSample"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Organization"
+        },
+        {
+          "@id": "schema:Person"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemas:dateCreated",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The date on which the CreativeWork was created or the item was added to a DataFeed. ",
+      "rdfs:label": "dateCreated",
+      "schema:sameAs": {
+        "@id": "schema:dateCreated"
+      },
+      "schema:domainIncludes": {
+        "@id": "bioschemas:BioSample"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Date"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemas:gender",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Gender of the person. While http://schema.org/Male and http://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender",
+      "rdfs:label": "gender",
+      "schema:sameAs": {
+        "@id": "schema:gender"
+      },
+      "schema:domainIncludes": {
+        "@id": "bioschemas:BioSample"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:GenderType"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemas:isControl",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Indicates whether the sample is being used as a normal control, may be in combination with another sample.",
+      "rdfs:label": "isControl",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:BioSample"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Boolean"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemas:itemLocation",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Current location of the item. ",
+      "rdfs:label": "itemLocation",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:BioSample"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Place"
+        },
+        {
+          "@id": "schema:PostalAddress"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemas:locationCreated",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The location where the CreativeWork was created, which may not be the same as the location depicted in the CreativeWork. ",
+      "rdfs:label": "locationCreated",
+      "schema:sameAs": {
+        "@id": "schema:locationCreated"
+      },
+      "schema:domainIncludes": {
+        "@id": "bioschemas:BioSample"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Place"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemas:samplingAge",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The age of the object when the Sample was created. ",
+      "rdfs:label": "samplingAge",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:BioSample"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Integer"
+        }
+      ]
+    }
+  ]
+}

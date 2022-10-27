@@ -1,0 +1,182 @@
+{
+  "@context": {
+    "biotools": "https://bio.tools/ontology/",
+    "bsc": "http://bioschemas.org/",
+    "edam": "http://edamontology.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sc": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#", 
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@graph": [
+    {
+      "@id": "https://doi.org/10.1093/nar/gkt997",
+      "@type": "sc:CreativeWork"
+    },
+    {
+      "@id": "https://doi.org/10.1093/nar/gkm955",
+      "@type": "sc:CreativeWork"
+    },
+    {
+      "@id": "https://doi.org/10.1093/nar/gkh012",
+      "@type": "sc:CreativeWork"
+    },
+    {
+      "@id": "https://doi.org/10.1093/nar/gkx1126",
+      "@type": "sc:CreativeWork"
+    },
+    {
+      "@id": "https://doi.org/10.1093/nar/gkj115",
+      "@type": "sc:CreativeWork"
+    },
+    {
+      "@id": "https://bio.tools/jaspar",
+      "@type": "sc:SoftwareApplication",
+      "dct:conformsTo": "https://bioschemas.org/profiles/ComputationalTool/0.5-DRAFT",
+      "sc:maintainer": [
+        "Boris Lenhard",
+        "Wyeth Wasserman",
+        {
+          "@id": "http://orcid.org/0000-0001-5127-5459"
+        },
+        "Albin Sandelin"
+      ],
+      "edam:has_input": [
+        {
+          "@id": "edam:data_1868"
+        },
+        {
+          "@id": "edam:data_2291"
+        },
+        {
+          "@id": "edam:data_1045"
+        },
+        {
+          "@id": "edam:data_3671"
+        },
+        {
+          "@id": "edam:data_1119"
+        },
+        {
+          "@id": "edam:data_3494"
+        },
+        {
+          "@id": "edam:data_1077"
+        },
+        {
+          "@id": "edam:data_2755"
+        },
+        {
+          "@id": "edam:data_2732"
+        }
+      ],
+      "edam:has_output": {
+        "@id": "edam:data_1119"
+      },
+      "sc:additionalType": [
+        "Database portal",
+        "Web API",
+        "Web application"
+      ],
+      "sc:applicationSubCategory": [
+        {
+          "@id": "edam:topic_2815"
+        },
+        {
+          "@id": "edam:topic_0621"
+        },
+        {
+          "@id": "edam:topic_0749"
+        },
+        {
+          "@id": "edam:topic_0622"
+        },
+        {
+          "@id": "edam:topic_0780"
+        },
+        {
+          "@id": "edam:topic_0204"
+        }
+      ],
+      "sc:citation": [
+        {
+          "@id": "https://doi.org/10.1093/nar/gkv1176"
+        },
+        "pubmed:19906716",
+        "pubmed:29253085",
+        {
+          "@id": "https://doi.org/10.1093/nar/gkp950"
+        },
+        {
+          "@id": "https://doi.org/10.1093/nar/gkx1126"
+        },
+        {
+          "@id": "https://doi.org/10.1093/nar/gkm955"
+        },
+        {
+          "@id": "https://doi.org/10.1093/bioinformatics/btx804"
+        },
+        "pubmed:14681366",
+        "pubmed:24194598",
+        "pubmed:18006571",
+        {
+          "@id": "https://doi.org/10.1093/nar/gkt997"
+        },
+        {
+          "@id": "https://doi.org/10.1093/nar/gkj115"
+        },
+        {
+          "@id": "https://doi.org/10.1093/nar/gkh012"
+        },
+        "pubmed:16381983",
+        "pubmed:26531826"
+      ],
+      "sc:description": "The high-quality transcription factor binding profile database.",
+      "sc:featureList": [
+        {
+          "@id": "edam:operation_0445"
+        },
+        {
+          "@id": "edam:operation_2421"
+        }
+      ],
+      "sc:isAccessibleForFree": true,
+      "sc:license": "CC-BY-4.0",
+      "sc:name": "JASPAR",
+      "sc:operatingSystem": [
+        "Mac",
+        "Linux",
+        "Windows"
+      ],
+      "sc:softwareHelp": [
+        {
+          "@id": "http://jaspar.genereg.net/docs/"
+        },
+        {
+          "@id": "http://jaspar.genereg.net/faq/"
+        },
+        {
+          "@id": "http://jaspar.genereg.net/api/v1/docs/"
+        }
+      ],
+      "sc:url": "http://jaspar.genereg.net/"
+    },
+    {
+      "@id": "https://doi.org/10.1093/nar/gkv1176",
+      "@type": "sc:CreativeWork"
+    },
+    {
+      "@id": "https://doi.org/10.1093/bioinformatics/btx804",
+      "@type": "sc:CreativeWork"
+    },
+    {
+      "@id": "http://orcid.org/0000-0001-5127-5459",
+      "@type": "schema:Person"
+    },
+    {
+      "@id": "https://doi.org/10.1093/nar/gkp950",
+      "@type": "sc:CreativeWork"
+    }
+  ]
+}

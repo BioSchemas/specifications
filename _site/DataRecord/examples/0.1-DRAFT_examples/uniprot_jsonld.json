@@ -1,0 +1,51 @@
+{
+  "@type": "Record",
+  "@id": "http://www.identifiers.org/uniprot/P00519",
+  "identifier": "P00519",
+  "additionalType": "http://purl.uniprot.org/core/Protein",
+  "citation": [
+    {
+      "@id": "http://www.identifiers.org/pubmed/10194451",
+      "@type": "ScholarlyArticle",
+      "name": {
+        "@language": "en",
+        "@value": "A novel SH2-containing ..."
+      },
+      "sameAs": [
+        "https://www.ncbi.nlm.nih.gov/pubmed/10194451",
+        "http://europepmc.org/abstract/MED/10194451",
+        "http://purl.uniprot.org/citations/10194451"
+      ]
+    },
+    {
+      "@id": "http://www.identifiers.org/pubmed/9037071",
+      "@type": "ScholarlyArticle",
+      "name": {
+        "@language": "en",
+        "@value": "Regulation of DNA ..."
+      },
+      "sameAs": [
+        "https://www.ncbi.nlm.nih.gov/pubmed/9037071",
+        "http://europepmc.org/abstract/MED/9037071",
+        "http://purl.uniprot.org/citations/10194451"
+      ]
+    }
+  ],
+  "dateCreated": "1986-07-21",
+  "dateModified": "2017-03-15",
+  "distribution": "http://www.uniprot.org/uniprot/P05067.fasta",
+  "image": "http://www.identifiers.org/uniprot/P00519#showFeaturesViewer",
+  "isBasedOn": {
+    "@type": "Dataset",
+    "@id": "http://www.uniprot.org/news/2017/03/15/release"
+  },
+  "mainEntity": {
+    "@type": "PhysicalEntity",
+    "additionalType": "http://semanticscience.org/resource/SIO_010043",
+    "identifier": "P00519",
+    "name": "Tyrosine-protein kinase ABL1"
+  },
+  "sameAs": "http://purl.uniprot.org/uniprot/P00519",
+  "seeAlso": "http://www.ebi.ac.uk/ena/data/view/AK312326",
+  "url": "http://www.uniprot.org/uniprot/P00519"
+}

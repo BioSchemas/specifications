@@ -1,0 +1,58 @@
+{
+    "@context": "http://schema.org",
+    "@type": [
+        "BioChemEntity",
+        "Sample"
+    ],
+    "name": "HPSI0617pf-tuji",
+    "description": "Fibroblast cell line HPSI0617pf-tuji from HipSci project",
+    "url": "https://www.ebi.ac.uk/biosamples/sample/SAMEA104383111",
+    "additionalProperty": [
+        {
+            "@type": "PropertyValue",
+            "name": "Material",
+            "value": "cell line",
+            "valueReference": [
+                {
+                    "@type": "CategoryCode",
+                    "codeValue": "EFO_0000322"
+                }
+            ]
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Organism",
+            "value": "Homo sapiens",
+            "valueReference": [
+                {
+                    "@type": "CategoryCode",
+                    "url": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+                }
+            ]
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "cell type",
+            "value": "fibroblast",
+            "valueReference": [
+                {
+                    "@type": "CategoryCode",
+                    "codeValue": "CL_0000057"
+                }
+            ]
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "project",
+            "value": "HipSci"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "synonym",
+            "value": "8028d635-9921-4e5e-9ce0-cd85b654574e"
+        }
+    ],
+    "identifiers": [
+        "biosamples:SAMEA104383111"
+    ]
+}

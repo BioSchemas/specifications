@@ -1,0 +1,157 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "dct:conformsTo": "https://bioschemas.org/profiles/CourseInstance/0.8_DRAFT-2020_10_06",
+  
+  "courseMode": ["online", "synchronous", "part-time"],
+  "location": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1.17, Kilburn Building, University of Manchester",
+      "addressLocality": "Manchester",
+      "addressRegion": "Greater Manchester",
+      "addressCountry": "United Kingdom",
+      "postalCode": "M13 9PL"
+    	}
+	},
+
+  
+  "endTime": "2019-02-05T17:00:00",
+  "inLanguage": "en-GB",
+  "instructor": [
+  	{
+  		"@type": "Person",
+  		"name": "Alan Jones"
+	},
+	{ 
+  		"@type": "Person",
+  		"name": "John Smith",
+  		"url": "https://manchester.ac.uk/staff/profiles/john-smith"
+	}
+  ],
+  "offers": [
+    {
+        "@type": "Offer",
+        "name": "Early Bird Tickets",
+        "priceValidUntil": "2021-02-04T09:00:00",
+        "price": "50.00",
+        "priceCurrency": "GBP"
+    },
+    {
+      "@type": "Offer",
+      "name": "Academic Price",
+      "price": "100.00",
+      "priceValidUntil": "2021-02-05T17:00:00",
+      "eligibleCustomerType": {
+        "@type": "BusinessEntityType",
+        "name": "Academic"
+      },
+      "priceCurrency": "GBP",
+    },
+    {
+      "@type": "Offer",
+      "name": "Industry Price",
+      "price": "500.00",
+      "priceCurrency": "GBP",
+        "eligibleCustomerType": {
+        "@type": "BusinessEntityType",
+        "name": "Industrial"
+      },
+    },
+    {
+      "@type": "Offer",
+      "name": "Free bursary (tickets) for first 50 registrants",
+      "price": "0.00",
+      "priceCurrency": "GBP",
+      "url": "http://www.eventbrite.com/my-workshop",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 50
+      }
+    }
+  ],
+  "startDate": "2019-02-04T09:00:00",
+  "url": "http://example.com/rna-seq_in_r",
+  
+  
+
+  "alternateName": "CS101 as part of M.130",
+  "contributor": [
+	{
+  		"@type": "Person",
+  		"name": "John Smith"
+	},
+	{ 
+	  "@type": "Person",
+	  "name": "Janet Jones",
+	 "url": "https://manchester.ac.uk/staff/profiles/janet-jones"
+	}
+  ],
+  "description": "An instance of a course being ran in an institution Y in the Fall 2020 onsite",
+  "duration": "P1DT6H",
+  "eventStatus": "postponed",
+  "funder":  [
+	{
+		"@type": "Person",
+		"name": "John Smith"
+	},
+	{ 
+		"@type": "Organization",
+		"name": "University of South Africa"
+	}
+  ],
+  "image": "https://image.server.com/my-image.jpg",
+  "maximumAttendeeCapacity": "35",
+  "organizer":  [
+	{
+		"@type": "Person",
+		"name": "Elizabeth Windsor",
+		"email": "e.r.windsor@gmail.com"
+	},
+	{ 
+		"@type": "Organization",
+		"name": "University of Soth Wales"
+	}
+  ],
+  "name": "RNA-seq data analysis in R in Autumn 2020 CS101",
+  "subEvent": [
+	{
+		"@type": "Event",
+		"name": "Lunch time Lecture",
+		"url": "https://lectureatlunch.com",
+		"description": "This special lecture, hosted during lunchtime as part of the RNA-SEQ in R workshop, demonstrates some of the latest technologies available."
+	},
+	{
+		"@type": "Event",
+		"name": "Online lecture",
+		"url": "https://onlinelectureat.org",
+		"description": "This online lecture describes the neXtProt database. It closes the general, and in person, course on protein sequence databases."
+	}
+  ],
+  "workFeatured": [
+	{
+		"@type": "TrainingMaterial",
+		"name": "Course Slides for Autumn 2020 offering of CS101",
+		"url": "http://example.com/slides_website"
+		"description": "The course slides contain diagrams, questions, and links to various resources about this course" 
+		"keywords": "Computer Science, CS, Introductory"
+	},
+	{
+		"@type": "Thing",
+		"name": "neXtProt database",
+		"url": "https://www.nextprot.org"
+		"description": "The course instance was dedicated to the neXtProt datbase and how to explore the universe of human proteins" 
+		"keywords": "Molecular Biology, Introductory"
+	}
+  ]
+
+}
+
+
+
+
+
+
+ 
+

@@ -1,0 +1,76 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "rdf": "https://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "dct": "https://dublincore.org/specifications/dublin-core/dcmi-terms/#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+    },
+    "@graph": [
+        {
+            "@id": "bioschemas:DataRecord",
+            "@type": "rdfs:Class",
+            "owl:deprecated": "True",
+            "rdfs:comment": "Bioschemas specification describing a record in a dataset. A Record acts itself as a dataset although it refers to what could be seen as the minimum compact, complete and auto-descriptive unit in a dataset, i.e., a record. Bioschemas usage In Life Sciences, records will represent a BioChemEntity. Version: 0.1-DRAFT-2018_04_25",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/profiles/DataRecord/0.1-DRAFT-2018_04_25"
+            ],
+            "rdfs:label": "DataRecord",
+            "rdfs:subClassOf": {
+                "@id": "schema:Dataset"
+            }
+        },
+        {
+            "@id": "bioschemas:isBasisFor",
+            "rdfs:comment": " A resource for which this resource is basis for. Inverse property:  [isBasedOn](http://schema.org/isBasedOn).",
+            "@type": "rdf:Property",
+            "rdfs:label": "isBasisFor",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:DataRecord"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:CreativeWork"
+                },
+                {
+                    "@id": "schema:Product"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "rdf:type",
+            "rdfs:comment": " This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column.",
+            "@type": "rdf:Property",
+            "rdfs:label": "type",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:DataRecord"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:seeAlso",
+            "rdfs:comment": " A pointer to any (somehow related) Thing. To be used whenever you are not so sure about the nature of the relation. Otherwise, use more precise terms from pre-existing Controlled Vocabularies.",
+            "@type": "rdf:Property",
+            "rdfs:label": "seeAlso",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:DataRecord"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Thing"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        }
+    ]
+}

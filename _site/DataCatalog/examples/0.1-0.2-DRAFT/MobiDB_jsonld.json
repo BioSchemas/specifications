@@ -1,0 +1,111 @@
+{
+  "@context": "http://schema.org",
+  "@type": "DataCatalog",
+  "@id": "http://mobidb.bio.unipd.it",
+  "name": "MobiDB",
+  "description": "Database of protein disorder and mobility annotations",
+  "url": "http://mobidb.bio.unipd.it",
+  "publication": {
+    "@type": "PublicationEvent",
+    "name": "MobiDB 3.0: more annotations for intrinsic disorder, conformational diversity and interactions in proteins",
+    "url": "https://academic.oup.com/nar/article/46/D1/D471/4612964",
+    "sameAs": [
+      "https://doi.org/10.1093/nar/gkx1071",
+      "https://europepmc.org/abstract/MED/29136219",
+      "https://www.ncbi.nlm.nih.gov/pubmed/29136219",
+      "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5753340"
+    ]
+  },
+  "keywords": [
+    "protein annotation",
+    "protein disorder"
+  ],
+  "sourceOrganization": [
+    {
+      "@type": "Organization",
+      "name": "University of Padua, Department of Biomedical Sciences, BioComputing UP",
+      "url": "http://protein.bio.unipd.it"
+    }
+  ],
+  "provider": [
+    {
+      "@type": "Person",
+      "name": "Silvio Tosatto",
+      "email": "silvio.tosatto@unipd.it"
+    }
+  ],
+  "datePublished": "2018-01",
+  "dateModified": "2018-01",
+  "fileFormat": "text/html",
+  "citation": {},
+  "license": {
+    "@type": "CreativeWork",
+    "name": "Creative Commons CC4 Attribution",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "identifier": "https://www.ebi.ac.uk/miriam/main/datatypes/MIR:00000637",
+  "dataset": [
+    {
+      "@type": "Dataset",
+      "name": "MobiDB",
+      "description": "MobiDB dataset describes disorder and mobility annotation for proteins",
+      "url": "http://mobidb.bio.unipd.it",
+      "citation": {},
+      "identifier": "https://www.ebi.ac.uk/miriam/main/datatypes/MIR:00000637",
+      "keywords": [
+        "protein annotation",
+        "protein disorder"
+      ],
+      "includedInDataCatalog": "http://mobidb.bio.unipd.it",
+      "creator": {
+        "@type": "Organization",
+        "name": "University of Padua, Department of Biomedical Sciences, BioComputing UP",
+        "url": "http://protein.bio.unipd.it"
+      },
+      "version": "2018-01",
+      "license": {
+        "@type": "CreativeWork",
+        "name": "Creative Commons CC4 Attribution",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "name": "Indirect disorder",
+          "fileFormat": "application/json",
+          "contentURL": "http://mobidb.bio.unipd.it/ws/dataset/pdb/indirect.json"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "Indirect LIPs",
+          "fileFormat": "application/json",
+          "contentURL": "http://mobidb.bio.unipd.it/ws/dataset/pdb/lips.json"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "Manually curated disorder",
+          "fileFormat": "application/json",
+          "contentURL": "http://mobidb.bio.unipd.it/ws/dataset/mobidb/curated.json"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "Manually cuarted LIPs",
+          "fileFormat": "application/json",
+          "contentURL": "http://mobidb.bio.unipd.it/ws/dataset/mobidb/lips.json"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "SwissProt disorder",
+          "fileFormat": "application/json",
+          "contentURL": "http://mobidb.bio.unipd.it/ws/dataset/swissprot.json"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "Indirect dynamic structure",
+          "fileFormat": "application/json",
+          "contentURL": "http://mobidb.bio.unipd.it/ws/dataset/bmrb.json"
+        }
+      ]
+    }
+  ]
+}

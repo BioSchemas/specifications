@@ -1,0 +1,87 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+  },
+  "@graph": [
+    {
+      "@id": "bioschemas:SequenceMatchingModel",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A model used to determine sequence matches such as domains in proteins. Version: 0.1-DRAFT-2019_06_21 (2019-06-21)",
+      "rdfs:label": "SequenceMatchingModel",
+      "rdfs:subClassOf": {
+        "@id": "schema:CreativeWork"
+      }
+    },
+    {
+      "@id": "bioschemas:biologicalType",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Biological type targeted by this model, for instance domains or sites in proteins.",
+      "rdfs:label": "biologicalType",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:SequenceMatchingModel"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:BioChemEntity"
+        },
+        {
+          "@id": "schema:DefinedTerm"
+        },
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemas:match",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Entity matched by this model, for instance proteins where the domain targeted by this model are found. Inverse property: isMatchedBy.",
+      "rdfs:label": "match",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:SequenceMatchingModel"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:BioChemEntity"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemas:modelDataset",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Dataset where this matching model has been recorded.",
+      "rdfs:label": "modelDataset",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:SequenceMatchingModel"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Dataset"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemas:modelSignature",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Representation of the model such as regular expression or image.",
+      "rdfs:label": "modelSignature",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:SequenceMatchingModel"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:PropertyValue"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+	"@context": "http://schema.org",
+	"@type": ["BioChemEntity", "Sample"],
+	"identifier": "impc:M5640",
+	"name": "MFAK",
+	"description": "KO Mouse, Nutm1<tm1a(EUCOMM)Wtsi>",
+	"url": "https://www.infrafrontier.eu/search?keyword=Nutm1",
+	"dataset": [
+        {
+            "@context": "http://schema.org",
+            "@type": "Dataset",
+            "description": "mousephenotype.org stores information about the phenotyping process (Phenotypes, Genes, Statistical Analysys, Samples) carried by the IMPC members",
+            "name": "IMPC Mouse Phenotyping Sample Collection",
+            "url": "http://www.mousephenotype.org/data/search/products"
+        }
+    ],
+	"additionalProperty": [
+        {
+            "@type": "PropertyValue",
+            "name": "impc:allele",
+            "value": "tm1a(EUCOMM)Wtsi",
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "impc:gene",
+            "value": {
+                "@context": "http://schema.org",
+                "@type": ["BioChemEntity", "Gene"],
+                "identifier": "Nutm1",
+                "name": "NUT midline carcinoma, family member 1",
+                "url": "http://www.mousephenotype.org/data/genes/MGI:2661384",
+                "sameAs": [
+                    "http://www.informatics.jax.org/marker/MGI:2661384",
+                    "http://www.ensembl.org/Mus_musculus/Gene/Summary?g=ENSMUSG00000041358;r=2:112247948-112259291;t=ENSMUST00000043970",
+                    "http://www.ensembl.org/Mus_musculus/Location/Compara_Alignments/Image?align=677;db=core;g=ENSMUSG00000041358;r=2:112247948-112259291;t=ENSMUST00000043970",
+                    "https://databases.apf.edu.au/mutations/snpRow/list?mgiAccessionId=MGI:2661384",
+
+                ]
+            }
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "impc:productionCentre",
+            "value": "WTSI"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "impc:status",
+            "value": "Genotype confirmed"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "impc:strain",
+            "value": "EPD0112_1_B08"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "impc:type",
+            "value": "mouse"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "impc:type",
+            "value": "mouse"
+        }
+    ]
+}

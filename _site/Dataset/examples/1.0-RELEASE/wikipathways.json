@@ -1,0 +1,19 @@
+{
+  "@context":"https://schema.org",
+  "@type":"Dataset",
+  "http://purl.org/dc/terms/conformsTo": { "@type": "CreativeWork", "@id": "https://bioschemas.org/profiles/Dataset/1.0-RELEASE" },
+  "description":"WikiPathways is a database of biological pathways maintained by and for the scientific community.",
+  "@id":"http://wikidata.org/entity/Q7999828",
+  "identifier":"Q7999828",
+  "keywords": [ "biological pathway", "database", "biology", "gene", "protein", "metabolite" ],
+  "name":"WikiPathways",
+  "url":"https://wikipathways.org/",
+  "citation": {
+    "@type": "CreativeWork",
+    "name": "WikiPathways: connecting communities",
+    "identifier": [ "10.1093/nar/gkaa1024" ],
+    "datePublished": "2021-01-08",
+    "url": "https://doi.org/10.1093/nar/gkaa1024"
+  },
+  "license":"https://creativecommons.org/publicdomain/zero/1.0/"
+}

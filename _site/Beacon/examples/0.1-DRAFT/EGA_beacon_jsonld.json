@@ -1,0 +1,36 @@
+{
+  "@context": "http://bioschemas.org",
+  "@type": "Beacon",
+  "identifier": "ega",
+  "name:": "European Genome-Phenome Archive",
+  "url": "https://ega.crg.eu/beacon_web/",
+  "provider": [
+    {
+      "@type": "Organization",
+      "name": "EMBL-EBI",
+      "contactPoint":{"email":"","name":""},
+      "description":"",
+      "url":"http://www.ebi.ac.uk/",
+      "address":"",
+      "logo":"https://example.com/logo.png"
+    },
+    {
+      "@type": "Organization",
+      "name": "CRG",
+      "contactPoint":{"email":"","name":""},
+      "description":"",
+      "url":"https://ega.crg.eu",
+      "address":"",
+      "logo":""
+    }
+  ],
+  "dataset": [
+    {
+      "@type": "Dataset",
+      "identifier": "EGAD00001000227",
+      ...
+    },
+    ...
+  ],
+  "supportedReference": "HG19"  
+}

@@ -1,0 +1,14 @@
+{
+    "@context": "http://schema.org",
+    "@type": "Protein",
+    "http://purl.org/dc/terms/conformsTo": {
+      "@type": "CreativeWork",
+      "@id": "https://bioschemas.org/profiles/Protein/0.12-DRAFT"
+    }
+    "@id": "http://www.ebi.ac.uk/pdbe/entry/pdb/5hbi/protein/1",
+    "sameAs": "http://identifiers.org/uniprot:P02213",
+    "identifier": "P02213",
+    "name": "GLB1_ANAIN",
+    "url": "http://www.ebi.ac.uk/pdbe/entry/pdb/5hbi/protein/1",
+    "hasRepresentation": "PSVYDAAAQLTADVKKDLRDSWKVIGSDKKGNGVALMTTLFADNQETIGYFKRLGDVSQGMANDKLRGHSIILMYALQNFIDQLDNPDDLVCVVEKFAVNHITRKISAAEFGKINGPIKKVLASKNFGDKYANAWAKLVAVVQAAL"
+}

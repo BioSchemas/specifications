@@ -1,0 +1,41 @@
+@prefix schema: <http://schema.org/> .
+@prefix ns0: <http://purl.obolibrary.org/obo/so#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ns1: <http://semanticscience.org/resource/> .
+
+[]
+  a schema:BioChemEntity, <http://purl.obolibrary.org/obo/PR_000000001> ;
+  ns0:associated_with [
+    a schema:MedicalCondition ;
+    schema:additionalType <http://semanticscience.org/resource/SIO_010299> ;
+    schema:code [
+      a schema:MedicalCode ;
+      schema:codeValue "608232"^^xsd:string ;
+      schema:codingSystem "OMIM"^^xsd:string
+    ] ;
+    schema:name "Leukemia, chronic myeloid (CML)"^^xsd:string ;
+    schema:sameAs <http://purl.uniprot.org/mim/608232> ;
+    schema:url <http://www.uniprot.org/diseases/DI-03735>
+  ] ;
+  schema:additionalType <http://semanticscience.org/resource/SIO_010043> ;
+  schema:alternateName "ABL"^^xsd:string, "JTK7"^^xsd:string ;
+  schema:description "Function: Non-receptor tyrosine-protein kinase that plays a role..."^^xsd:string ;
+  schema:identifier <http://njh.me/P00519> ;
+  schema:isContainedIn [
+    a schema:BioChemEntity ;
+    schema:categoryCode [
+      schema:codeValue "9606"^^xsd:string ;
+      schema:url <http://purl.uniprot.org/taxonomy/9606>
+    ] ;
+    schema:identifier <http://njh.me/9606> ;
+    schema:name "Homo sapiens"^^xsd:string ;
+    schema:url <http://www.uniprot.org/taxonomy/9606>
+  ] ;
+  schema:name "ABL1"^^xsd:string ;
+  schema:url <http://www.uniprot.org/uniprot/P00519> ;
+  ns1:SIO_000001 "http://pfam.xfam.org/clan/CL0001"^^xsd:string ;
+  ns1:SIO_010081 [
+    a schema:BioChemEntity, <http://purl.obolibrary.org/obo/SO_0000704> ;
+    schema:identifier <http://njh.me/ABL1> ;
+    schema:name "ABL1"^^xsd:string
+  ] .

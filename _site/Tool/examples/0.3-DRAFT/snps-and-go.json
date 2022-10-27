@@ -1,0 +1,54 @@
+{
+    "@context": "http://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "SNPs and GO",
+    "description": "SNPs&GO is a server for the prediction of single point protein mutations likely to be involved in the insurgence of diseases in humans.",
+    "url": "http://snps-and-go.biocomp.unibo.it/snps-and-go/index.html",
+    "featureList": "http://edamontology.org/operation_3225",
+    "softwareVersion": "1.0",
+    "citation": "https://dx.doi.org/10.1002/humu.21047",
+    "publisher": [{
+            "@type": "Person",
+            "name": "Rita Casadio",
+            "email": "casadio@biocomp.unibo.it"
+        },
+        {
+            "@type": "Person",
+            "name": "Pier Luigi Martelli",
+            "email": "gigi@biocomp.unibo.it"
+        },
+        {
+            "@type": "Organization",
+            "name": "Bologna Biocomputing Group",
+            "founder": {
+                "@type": "Person",
+                "name": "Rita Casadio",
+                "email": "casadio@biocomp.unibo.it"
+            },
+            "url": "http://www.biocomp.unibo.it"
+        }
+    ],
+    "applicationCategory": "Web Application",
+    "operatingSystem": "Any",
+    "softwareHelp": {
+        "@type": "CreativeWork",
+        "name": "Help page",
+        "url": "http://snps-and-go.biocomp.unibo.it/snps-and-go/help2.htm"
+    },
+    "Keywords": [
+        "http://edamontology.org/topic_2885",
+        "http://edamontology.org/topic_0091",
+        "http://edamontology.org/topic_0123"
+    ],
+    "potentialAction": {
+        "@type": "ControlAction",
+        "object": {
+            "@type": "Dataset",
+            "additionalType": "http://edamontology.org/data_3021"
+        },
+        "result": {
+            "@type": "Dataset",
+            "additionalType": "http://edamontology.org/data_0896"
+        }
+    }
+}

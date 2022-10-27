@@ -1,0 +1,214 @@
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "dct:conformsTo": "https://bioschemas.org/profiles/Course/0.10-DRAFT",
+
+
+
+  "description": "This is a course ran at an institution. It's ran periodically - specific courses can be found through CourseInstances.",
+  "keywords": "RNA-Seq, Workshop",
+  "name": "My Course",
+
+
+
+
+
+
+  "about": [
+    {
+      "@type": "DefinedTerm",
+      "@id": "http://edamontology.org/topic_3316",
+      "inDefinedTermSet": "http://edamontology.org",
+      "termCode": "topic_3316",
+      "name": "Computer Science",
+      "url": "https://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_3316"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "http://edamontology.org/topic_3314",
+      "inDefinedTermSet": "http://edamontology.org",
+      "termCode": "topic_3314",
+      "name": "Chemistry",
+      "url": "http://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_3314"
+    }
+  ],
+  "abstract": "This course will take you through the basic usage of the command line shell. In it, you will discover what a shell is, skills for directory navigation, file manipulation, and how to run tools.",
+  "aggregateRating": "4/5",
+  "citation": [
+    {
+      "@type": "CreativeWork",
+      "identifier": "https://reference.site/creativework"
+    }
+  ],
+  "coursePrerequisites": [
+     {
+       "@type": "AlignmentObject",
+       "alignmentType": "educationalLevel",
+       "educationalFramework": "QAA",
+       "targetName": "Higher Education Credit Framework For England",
+       "targetUrl": "https://www.qaa.ac.uk/docs/qaa/quality-code/academic-credit-framework.pdf?sfvrsn=940bf781_12"
+    },
+    {
+       "@type": "Course",
+       "name": "Foundation Course in CS",
+       "description": "This course introduces you to the very basic, foundational concepts of computers and programming",
+       "keywords": "CS, foundation, course, eLearning",
+       "url": "http://my-training.site/myPrerequisiteCourse",
+       "timeRequired": "P1W2DT5H",
+       "educationalLevel": "beginner"
+    }
+  ],
+  "educationalLevel": "Intermediate",
+  "hasCourseInstance": [
+    {
+       "@type": "CourseInstance",
+       "courseMode": "online",
+       "location":
+          {
+            "@type": "Place",
+            "address":
+            {
+               "@type": "PostalAddress",
+               "streetAddress": "1.17, Kilburn Building, University of Manchester",
+               "addressLocality": "Manchester",
+               "addressRegion": "Greater Manchester",
+               "addressCountry": "United Kingdom",
+               "postalCode": "M13 9PL"
+             }
+           },
+        "url": "http://my-training.site/myCourse/courseInstance",
+        "inLanguage": "en-GB",
+        "instructor": [
+           {
+           "@type": "Person",
+           "name": "John Smith"
+           },
+           {
+           "@type": "Person",
+           "name": "Bob Jones"
+           }
+         ],
+       "startDate": "2019-02-04T11:00:00",
+       "endDate": "2019-02-05T17:00:00",
+       "offers":
+          {
+            "@type": "Offer",
+            "price": "100.00",
+            "priceCurrency": "GBP",
+            "url": "http://www.eventbrite.com/my-workshop"
+          },
+       "mentions": [
+          {
+            "@type": "Tool",
+            "name": "Galaxy",
+            "url": "https://bio.tools/galaxy",
+            "description": "Open, web-based platform for data intensive biomedical research"
+          },
+          {
+            "@type": "Dataset",
+            "name": "European Genome-phenome Archive",
+            "url": "https://www.ebi.ac.uk/ega/home",
+            "description": "The EGA archives a large number of datasets, the access to which is controlled by a Data Access Committee (DAC)."
+          }
+        ]
+    }
+  ],
+  "license": "CC-BY 2.0 CA",
+  "mentions": [
+    {
+      "@type": "Tool",
+      "name": "Galaxy",
+      "url": "https://bio.tools/galaxy",
+      "description": "Open, web-based platform for data intensive biomedical research"
+    },
+    {
+      "@type": "Dataset",
+      "name": "European Genome-phenome Archive",
+      "url": "https://www.ebi.ac.uk/ega/home",
+      "description": "The EGA archives a large number of datasets, the access to which is controlled by a Data Access Committee (DAC)."
+    }
+  ],
+  "provider":  [
+    {
+      "@type": "Organization",
+      "name": "University of Manchester"
+    }
+  ],
+  "teaches": [
+      "The student will be able to recall shell commands",
+      "The student will be able to write code to copy files",
+      "The student will be able to discover new commands on their own"
+  ],
+  "timeRequired": "P3D",
+  "url": "https://training.site/123",
+
+
+
+
+
+
+
+
+  "accessibilitySummary": "Visual elements are not described.",
+  "alternateName": "Comp-sci 101",
+  "audience": "PhD students, Post-docs",
+  "comment": "This course is excellent for gaining the foundations of operating systems",
+  "commentCount": "37",
+  "courseCode": "CS101",
+  "creator":  [
+    {
+      "@type": "Person",
+      "name": "Elizabeth Windsor"
+    },
+    {
+      "@type": "Organization",
+      "name": "University of Manchester"
+    }
+  ],
+  "dateCreated": "2019-02-18 09:00:00 +0000",
+  "dateModified": "2019-03-28 13:25:13 +0000",
+  "educationalCredentialAwarded": "Certified Software Carpentry Instructor",
+  "hasPart": [
+    {
+      "@type": "TrainingMaterial",
+      "name": "Course Slides for CS101",
+      "description": "The course slides contain diagrams, questions, and links to various resources about this course",
+      "keywords": "Computer Science, CS, Introductory",
+      "timeRequired": "P1W2DT5H",
+      "learningResourceType": "slides",
+      "url": "http://example.com/slides_website",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "skillLevel": "beginner",
+      "identifier": "http://identifiers.org/my-org/13412",
+      "about": [
+        {
+          "@type": "DefinedTerm",
+          "@id": "http://edamontology.org/topic_3316",
+          "inDefinedTermSet": "http://edamontology.org",
+          "termCode": "topic_3316",
+          "name": "Computer Science",
+          "url": "https://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_3316"
+        }
+      ],
+      "inLanguage": "en-GB",
+      "mentions": [
+        {
+          "@type": "Tool",
+          "name": "Galaxy",
+          "url": "https://bio.tools/galaxy",
+          "description": "Open, web-based platform for data intensive biomedical research"
+        }
+      ]
+    }
+  ],
+  "image": "https://image.server.com/my-image.jpg",
+  "isBasedOn": [
+    {
+      "@type": "Course",
+      "name": "Based on this Course Name XX",
+      "description": "This couse XX is ran at insitution YY every fall.",
+      "keywords": "RNA-Seq, Viruses, Short course"
+    }
+  ],
+  "thumbnailUrl": "https://image.server.com/my-image.jpg"
+}

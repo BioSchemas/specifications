@@ -1,0 +1,37 @@
+{
+    "@context": "http://schema.org",
+    "@type": [
+        "BioChemEntity",
+        "Sample"
+    ],
+    "name": "Name of the sample",
+    "description": "Description of the sample",
+    "url": "URL of the sample",
+    "additionalProperty": [
+        {
+            "@type": "PropertyValue",
+            "name": "Name of the property (e.g. Material, Organism, cell type)",
+            "value": "Value of the proerty",
+            "valueReference": [
+                {
+                    "@type": "CategoryCode",
+                    "codeValue": "Ontology term for the property (e.g. EFO_0000322, http://purl.obolibrary.org/obo/NCBITaxon_9606"
+                }
+            ]
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "A different property",
+            "value": "Value",
+            "valueReference": [
+                {
+                    "@type": "CategoryCode",
+                    "url": "Ontology term URL/identifier"
+                }
+            ]
+        }
+    ],
+    "identifiers": [
+        "Identifier of the sample"
+    ]
+}

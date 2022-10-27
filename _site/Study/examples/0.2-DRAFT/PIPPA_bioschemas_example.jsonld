@@ -1,0 +1,40 @@
+{
+    "@context": "http://schema.org/",
+    "@type": "Study",
+    "@id": "https://pippa.psb.ugent.be/pippa_experiments/consult_experiment_basic_info/50",
+    "studyProcess": "Phenotyping",
+    "identifier": "55",
+    "name": "Enrico Pe field trial",
+    "startDate": "2012/05/01",
+    "endDate": "2012/08/01",
+    "http://purl.org/ppeo/PPEO.owl#hasGrowthFacility": {
+        "http://purl.org/ppeo/PPEO.owl#hasType": "growth chamber"
+    },
+    "studySubject": [
+        {
+            "@type": "BioChemEntity",
+            "identifier": "208",
+            "name": "A632 RIL 8-way ",
+            "taxonomicRange": [
+                {
+                    "@type": "Taxon",
+                    "@id": "https://www.wikidata.org/entity/Q11575",
+                    "taxonRank": "species",
+                    "scientificName": "Zea mays"
+                },
+                {
+                    "@Type": "Taxon",
+                    "parentTaxon": "https://www.wikidata.org/entity/Q11575",
+                    "taxonRank": "variety",
+                    "name": "B73"
+                },
+                {
+                    "@Type": "Taxon",
+                    "parentTaxon": "https://www.wikidata.org/entity/Q11575",
+                    "taxonRank": "Infraspecific Rank",
+                    "name": "RIL 8-way"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+  "@context": [
+    { "bs": "http://bioschemas.org/specifications/" },
+    "http://schema.org",
+    {
+      "@base": "http://schema.org"
+    }
+  ],
+
+  "@type": "DataRecord",
+  "@id": "http://www.identifiers.org/ensembl/ENSG00000142192",
+
+  "identifier": "ENSG00000142192",
+  "mainEntity": {
+    "@type": ["BioChemEntity", "bs:Gene"],
+    "identifier": "ENSG00000142192",
+    "name": "APP"
+  },
+
+  "isPartOf": {
+    "@type": "Dataset",
+    "@id": "https://www.ensembl.org/info/website/news.html"
+  },
+  "dateModified": "2017-12-01",
+
+
+  "url": "https://www.ensembl.org/Homo_sapiens/Variation/Summary?db=core;g=ENSG00000142192;r=21:25880550-26171128;vf=110312838"
+}

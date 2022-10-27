@@ -1,0 +1,58 @@
+﻿{
+    "@context": "http://schema.org/",
+    "@type": "SoftwareApplication",
+    "name": "Pscan",
+    "citation": "Zambelli F, Pesole G, Pavesi G. Pscan: finding over-represented transcription factor binding site motifs in sequences from co-regulated or co-expressed genes. Nucleic Acids Res. 2009 Jul;37(Web Server issue):W247-52. doi: 10.1093/nar/gkp464. Epub 2009 May 31. PubMed PMID: 19487240; PubMed Central PMCID: PMC2703934.",
+    "description": "Pscan is a software tool that scans a set of sequences (e.g. promoters) from co-regulated or co-expressed genes with motifs describing the binding specificity of known transcription factors and assesses which motifs are significantly over- or under-represented.",
+    "url": "http://www.beaconlab.it/pscan",
+    "featureList": ["Enrichment analysis", "Transcriptional regulatory element prediction", "Transcription factors and regulatory sites", "Sequence motif recognition", "Sequence motif discovery", "Transcription factor binding site prediction"],
+    "softwareVersion": "1.5",
+    "applicationCategory": "Web application",
+    "operatingSystem": "Any",
+    "softwareHelp": {
+        "@type": "CreativeWork",
+        "Name": "Help Page",
+        "url": "http://159.149.160.88/pscan/help.html"
+    },
+
+    "dateCreated": "2009-07-01",
+    "dateModified": "2018-01-19",
+    "potentialAction": {
+        "@type": "ControlAction",
+        "object": {
+            "@type": "Dataset",
+            "additionalType": "http://edamontology.org/data_1098"
+        },
+        "result": {
+            "@type": "Dataset",
+            "additionalType": "http://edamontology.org/operation_3501"
+        }
+    },
+    "license": "https://www.gnu.org/licenses/gpl-3.0.en.html",
+    "publisher": {
+        "@type": "Organization",
+        "name": "BeaconLab",
+        "url": "http://www.beaconlab.it",
+        "employee": [{
+                "@type": "Person",
+                "name": "Giulio Pavesi",
+                "email": "giulio.pavesi@unimi.it"
+            },
+            {
+                "@type": "Person",
+                "name": "Federico Zambelli",
+                "email": "federico.zambelli@unimi.it"
+            }
+        ],
+        "founder": {
+            "@type": "Person",
+            "name": "Graziano Pesole",
+            "email": "graziano.pesole@uniba.it"
+        },
+        "memberOf": {
+            "@type": "Organization",
+            "name": "ELIXIR-IIB",
+            "url": "http://www.elixir-italy.org"
+        }
+    }
+}

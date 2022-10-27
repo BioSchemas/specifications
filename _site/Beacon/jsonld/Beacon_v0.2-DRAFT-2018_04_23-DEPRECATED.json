@@ -1,0 +1,415 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "rdf": "https://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "dct": "https://dublincore.org/specifications/dublin-core/dcmi-terms/#",
+        "owl": "http://www.w3.org/2002/07/owl/",
+        "bioschemasdeprecated": "https://discovery.biothings.io/view/bioschemasdeprecated/"
+    },
+    "@graph": [
+        {
+            "@id": "bioschemasdeprecated:Beacon",
+            "@type": "rdfs:Class",
+            "owl:deprecated": "True",
+            "rdfs:comment": "A convention for beacon to self-describe.  In this document we propose a simple way for a beacons to self-describe their genetic variant cardinality service for better integration with other beacons within the beacon-network. It builds upon the Beacon service API and uses existing schema.org entities and properties.  Version: 0.2-DRAFT-2018_04_23",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/profiles/Beacon/0.2-DRAFT-2018_04_23"
+            ],
+            "rdfs:label": "Beacon",
+            "rdfs:subClassOf": {
+                "@id": "schema:DataCatalog"
+            },
+            "$validation": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "type": "object",
+                "properties": {
+                    "aggregator": {
+                        "description": "True if Beacon is an agregator of other Beacon Datasets. ",
+                        "type": "boolean",
+                        "owl:cardinality": "one"
+                    },
+                    "dataset": {
+                        "description": "Datasets served by this Beacon. A dataset contained in this catalog. \ninverse property: [includedInDataCatalog.](http://schema.org/includedInDataCatalog)",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/datacatalog"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/datacatalog"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "description": {
+                        "description": "Description of this Beacon. A description of the item.",
+                        "type": "string",
+                        "owl:cardinality": "one"
+                    },
+                    "identifier": {
+                        "description": "Unique identifier of the Beacon. The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "name": {
+                        "description": "Name of this Beacon. The name of the item.",
+                        "type": "string",
+                        "owl:cardinality": "one"
+                    },
+                    "potentialAction": {
+                        "description": "List of Actions that can be performed on this Beacon. Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/action"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/action"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "provider": {
+                        "description": "Contact information for this Beacon. The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes [carrier](http://schema.org/carrier).",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "type": {
+                        "description": "This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column. ",
+                        "type": "string",
+                        "format": "uri",
+                        "owl:cardinality": "one"
+                    },
+                    "sameAs": {
+                        "description": "Alternative URL for this Beacon. URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "supportedRefs": {
+                        "description": "Supported Genome ID references. ",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "url": {
+                        "description": "Welcome Page of this Beacon. URL of the item.",
+                        "type": "string",
+                        "format": "uri",
+                        "owl:cardinality": "one"
+                    },
+                    "version": {
+                        "description": "Beacon API version number. The version of the CreativeWork embodied by a specified resource.",
+                        "oneOf": [
+                            {
+                                "type": "number"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    }
+                },
+                "required": [
+                    "dataset",
+                    "name",
+                    "potentialAction",
+                    "provider",
+                    "type",
+                    "supportedRefs",
+                    "url"
+                ],
+                "recommended": [
+                    "aggregator",
+                    "description",
+                    "identifier",
+                    "version"
+                ],
+                "optional": [
+                    "sameAs"
+                ],
+                "definitions": {
+                    "datacatalog": {
+                        "@type": "schema:DataCatalog",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "propertyvalue": {
+                        "@type": "PropertyValue",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "valuereference": {
+                                "oneOf": [
+                                    {
+                                        "$ref": "#/definitions/categorycode"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": [
+                                            {
+                                                "$ref": "#/definitions/categorycode"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    }
+                                ]
+                            },
+                            "unitText": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "recommended": [
+                            "valueReference"
+                        ],
+                        "optional": [
+                            "unitCode",
+                            "unitText"
+                        ]
+                    },
+                    "categorycode": {
+                        "@type": "CategoryCode",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "codeValue": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                        ]
+                    },
+                    "action": {
+                        "@type": "schema:Action",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "organization": {
+                        "@type": "Organization",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "legalName": {
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
+                            },
+                            "sameAs": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        }
+                    },
+                    "person": {
+                        "@type": "Person",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "mainEntityOfPage": {
+                                "anyOf": [
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "format": "uri"
+                                        }
+                                    },
+                                    {
+                                        "$ref": "#/definitions/creativework"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/definitions/creativework"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ]
+                    },
+                    "creativework": {
+                        "@type": "CreativeWork",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    }
+                }
+            }
+        },
+        {
+          "@id": "bioschemasdeprecated:aggregator",
+          "@type": "rdf:Property",
+          "rdfs:comment": "True if Beacon is an agregator of other Beacon Datasets.",
+          "rdfs:label": "aggregator",
+          "schema:domainIncludes": {
+            "@id": "bioschemasdeprecated:Beacon"
+          },
+          "schema:rangeIncludes": [
+            {
+              "@id": "schema:Boolean"
+            }
+          ]
+        },
+        {
+          "@id": "rdf:type",
+          "@type": "rdf:Property",
+          "rdfs:comment": "This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column.",
+          "rdfs:label": "type",
+          "schema:domainIncludes": {
+            "@id": "bioschemasdeprecated:Beacon"
+          },
+          "schema:rangeIncludes": [
+            {
+              "@id": "schema:URL"
+            }
+          ]
+        },
+        {
+          "@id": "bioschemasdeprecated:supportedRefs",
+          "@type": "rdf:Property",
+          "rdfs:comment": "Supported Genome ID references.",
+          "rdfs:label": "supportedRefs",
+          "schema:domainIncludes": {
+            "@id": "bioschemasdeprecated:Beacon"
+          },
+          "schema:rangeIncludes": [
+            {
+              "@id": "schema:URL"
+            }
+          ]
+        }
+    ]
+}

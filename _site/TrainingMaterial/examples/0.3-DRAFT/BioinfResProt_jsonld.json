@@ -1,0 +1,38 @@
+{
+    "@context": "http://schema.org/",
+    "@type": "creativeWork",
+    "genre": "trainingMaterial",
+    "name": "Bioinformatics resources for protein biology",
+    "description": "A Powerpoint show and a Wiki page of links to introduce data resources and tools that can help undergraduate students study proteins.",
+    "about": {
+        "@type": "BioChemEntity",
+        "identifier": "P00519",
+        "additionalType": "http://semanticscience.org/resource/protein",
+        "name": "ABL1",
+        "additionalProperty": {
+            "additionalType": "http://semanticscience.org/resource/is-transcribed-from",
+            "identifier": "P00519",
+            "name": "ABL1",
+            "additionalProperty": {
+                "additionalType": "http://semanticscience.org/resource/organism",
+                "name": "gene",
+                "value": {
+                    "@type": ["StructuredValue", "BioChemEntity"],
+                    "identifier": "ABL1",
+                    "name": "ABL1"
+                }
+            }
+        }
+    },
+    "audience": {
+        "@type": "Audience",
+        "audienceType": "Biologists"
+    },
+    "dateCreated": "2015-04-15T",
+    "learningResourceType": ["Presentation", "Website"],
+    "author": {
+        "@type": "Person",
+        "name": "Jane Doe"
+    },
+    "timeRequired": "P5W"
+}

@@ -1,0 +1,125 @@
+{
+	"@context": "http://schema.org",
+	"@type": "DataCatalog",
+	"@id": "http://itsonedb.cloud.ba.infn.it/",
+	"name": "ITSoneDB",
+	"description": "ITSoneDB is a comprehensive collection of eukaryotic ribosomal RNA Internal Transcribed Spacer 1 (ITS1) sequences. It is aimed at supporting metabarcoding surveys of fungal and other microbial eukaryotic environmental communities.",
+	"url": "http://itsonedb.cloud.ba.infn.it/",
+	"keywords": "barcoding, metagenomics, ITS, Internal Transcribed Spacer, eukaryotic",
+	"provider": {
+		"@type": "Organization",
+		"name": "CNR - ITB",
+		"email": "flavio.licciulli@ba.itb.cnr.it",
+		"url": "http://www.ba.itb.cnr.it"
+	},
+	"sourceOrganization": {
+		"@type": "Organization",
+		"name": "CNR - IBIOM",
+		"email": "graziano.pesole@uniba.it",
+		"url": "http://www.ibiom.cnr.it"
+	},
+	"publication": {
+		"@type": "PublicationEvent",
+		"name": "ITSoneDB: a comprehensive collection of eukaryotic ribosomal RNA Internal Transcribed Spacer 1 (ITS1) sequences",
+		"url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5753230/"
+	},
+	"citation": {
+		"@type": "CreativeWork",
+		"name": "Reference databases for taxonomic assignment in metagenomics.",
+		"url": "https://www.ncbi.nlm.nih.gov/pubmed/22786784",
+		"sameAs": "https://academic.oup.com/bib/article/13/6/682/193389"
+	},
+	"datePublished": "2012-09",
+	"dateModified": "2017-08-01",
+	"alternateName": "ITS1DB",
+	"dataset": [
+		{
+			"@type": "Dataset",
+			"name": "Eukaryotic ITSOneDB",
+			"description": "Eukaryotic sequence",
+			"url": "http://http://itsonedb.cloud.ba.infn.it/",
+			"identifier": "ITSoneDB-Euk",
+			"keywords": "barcoding, metagenomics, ITS, Internal Transcribed Spacer, eukaryotic",
+			"includedInDataCatalog": "http://itsonedb.cloud.ba.infn.it/",
+			"creator": [
+				{
+					"@type": "Organization",
+					"name": "CNR - IBIOM",
+					"email": "graziano.pesole@uniba.it",
+					"url": "http://www.ibiom.cnr.it"
+				},
+				{
+					"@type": "Organization",
+					"name": "CNR - ITB",
+					"email": "flavio.licciulli@ba.itb.cnr.it",
+					"url": "http://www.ba.itb.cnr.it"
+				}
+			],
+			"version": "2017-08-01",
+			"distribution": [
+				{
+					"@type": "DataDownload",
+					"name": "Eukaryotic ITS1 ENA&HMM",
+					"fileFormat": "fasta",
+					"contentURL": "ftp://ftp.ba.cloud.infn.it/ITS1_Euk.fasta.gz"
+				},
+				{
+					"@type": "DataDownload",
+					"name": "Eukaryotic ITS1 ENA",
+					"fileFormat": "fasta",
+					"contentURL": "ftp://ftp.ba.cloud.infn.it/ITS1_Euk_ENA.fasta.gz"
+				},
+				{
+					"@type": "DataDownload",
+					"name": "Eukaryotic ITS1 HMM",
+					"fileFormat": "fasta",
+					"contentURL": "ftp://ftp.ba.cloud.infn.it/ITS1_Euk_HMM.fasta.gz"
+				}
+			]
+		},
+		{
+			"@type": "Dataset",
+			"name": "Marine ITSOneDB",
+			"description": "Marine sequence",
+			"url": "http://itsonedb.cloud.ba.infn.it/",
+			"identifier": "ITSoneDB-Mar",
+			"keywords": "barcoding, metagenomics, marine, ITS, Internal Transcribed Spacer, marine",
+			"includedInDataCatalog": "http://itsonedb.cloud.ba.infn.it/",
+			"creator": [
+				{
+					"@type": "Organization",
+					"name": "CNR - IBIOM",
+					"email": "graziano.pesole@uniba.it",
+					"url": "http://www.ibiom.cnr.it"
+				},
+				{
+					"@type": "Organization",
+					"name": "CNR - ITB",
+					"email": "flavio.licciulli@ba.itb.cnr.it",
+					"url": "http://www.ba.itb.cnr.it"
+				}
+			],
+			"version": "2018-02-01",
+			"distribution": [
+				{
+					"@type": "DataDownload",
+					"name": "Marine ITS1 ENA&HMM",
+					"fileFormat": "fasta",
+					"contentURL": "ftp://ftp.ba.cloud.infn.it/ITS1_Mar.fasta.gz"
+				},
+				{
+					"@type": "DataDownload",
+					"name": "Marine ITS1 ENA",
+					"fileFormat": "fasta",
+					"contentURL": "ftp://ftp.ba.cloud.infn.it/ITS1_Mar_ENA.fasta.gz"
+				},
+				{
+					"@type": "DataDownload",
+					"name": "Marine ITS1 HMM",
+					"fileFormat": "fasta",
+					"contentURL": "ftp://ftp.ba.cloud.infn.it/ITS1_Mar_HMM.fasta.gz"
+				}
+			]
+		}
+	]
+}

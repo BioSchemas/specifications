@@ -1,0 +1,14 @@
+{
+  "@context": "http://schema.org",
+  "@type": "ChemicalSubstance",
+  "identifier": "50-78-2",
+  "name": "Benzoic acid, 2-(acetyloxy)-",
+  "url": "https://commonchemistry.org/ChemicalDetail.aspx?ref=50-78-2",
+  "chemicalComposition": "C3H8O4",
+  "hasBioChemEntityPart": [
+    {
+      "@type": "MolecularEntity",
+      "name": "Benzoic acid, 2-(acetyloxy)-"
+    }
+  ]
+}

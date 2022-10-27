@@ -1,0 +1,58 @@
+{
+    "@context": "http://schema.org",
+    "@type": "DataCatalog",
+    "identifier": "https://identifiers.org/MIR:00100800",
+    "name": "Identifiers.org",
+    "description": "The Identifiers.org registry contains registered namespace and provider prefixes with associated access URIs for a large number of high quality data collections. These prefixes are used in web resolution of compact identifiers of the form PREFIX:ACCESSION or PROVIDER/PREFIX:ACCESSION commonly used to specify bioinformatics and other data resources.",
+    "url": "https://identifiers.org/",
+    "dataset": [
+        {
+            "@type": "Dataset",
+            "name": "Collection",
+            "description": "Collection catalog with each assigned a unique namespace.",
+            "identifier": "https://identifiers.org/MIR:00100005",
+            "url": "https://identifiers.org/MIR:00100005",
+            "keywords": "prefix"
+        },
+        {
+            "@type": "Dataset",
+            "name": "Resource",
+            "description": "Resources (physical locations) providing access to the data.",
+            "identifier": "https://identifiers.org/MIR:00100245",
+            "url": "https://identifiers.org/MIR:00100245",
+            "keywords": "provider"
+        }
+    ],
+    "keywords": "registry,life science",
+    "provider": {
+        "@type": "Person",
+        "name": "Identifiers.org support",
+        "email": "identifiers-org@ebi.ac.uk"
+    },
+    "license": {
+        "@type": "CreativeWork",
+        "name": "Creative Commons CC4 Attribution",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "publication": [
+        {
+            "@type": "PublicationEvent",
+            "name": "Uniform Resolution of Compact Identifiers for Biomedical Data",
+            "url": "http://biorxiv.org/content/early/2017/01/18/101279"
+        },
+        {
+            "@type": "PublicationEvent",
+            "name": "Identifiers.org and MIRIAM Registry: community resources to provide persistent identification.",
+            "url": "https://identifiers.org/pubmed:22140103"
+        }
+    ],
+    "sourceOrganization": {
+        "@type": "Organization",
+        "name": "The European Bioinformatics Institute (EMBL-EBI)",
+        "url": "http://www.ebi.ac.uk/"
+    },
+    "alternateName": [
+        "Identifiers.org Registry",
+        "MIRIAM Registry"
+    ]
+}

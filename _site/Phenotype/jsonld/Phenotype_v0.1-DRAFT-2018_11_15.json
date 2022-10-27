@@ -1,0 +1,493 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+    },
+    "@graph": [
+        {
+            "@id": "bioschemas:Phenotype",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Bioschemas profile describing a Phenotype in Life Sciences This Phenotype type specification presents the markup for describing a Phenotype. Version: 0.1-DRAFT-2018_11_15",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/profiles/Phenotype/0.1-DRAFT-2018_11_15"
+            ],
+            "rdfs:label": "Phenotype",
+            "rdfs:subClassOf": {
+                "@id": "bioschemas:Phenotype"
+            },
+            "$validation": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "type": "object",
+                "properties": {
+                    "additionalProperty": {
+                        "description": "Whenever possible, please use a property coined in a third-party well-know vocabulary. For instance, you can directly use http://purl.obolibrary.org/obo/RO_0002327 as a property to express how a protein or gene enables some GO molecular function. If you still want or need to use additionalProperty, please use (i) property name to specify the name of the property, (ii) additionalType (if possible) to better specify the nature of the property, and (iii) value to link to the object/range of this property. A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.\n\nNote: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/propertyvalue"
+                                }
+                            }
+                        ]
+                    },
+                    "alternateName": {
+                        "description": " An alias for the item.",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "anatomicalLocation": {
+                        "description": " Any part of an organism, typically a component of an anatomical system. Organs, tissues, and cells are all anatomical locations.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/definedterm"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/definedterm"
+                                }
+                            }
+                        ]
+                    },
+                    "description": {
+                        "description": " A description of the item.",
+                        "type": "string"
+                    },
+                    "identifier": {
+                        "description": " The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ]
+                    },
+                    "image": {
+                        "description": " An image of the item. This can be a URL or a fully described ImageObject.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/imageobject"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ]
+                    },
+                    "isAssociatedWith": {
+                        "description": " BioChemEntity that has some association with this Phenotype",
+                        "$ref": "#/definitions/biochementity"
+                    },
+                    "mainEntityOfPage": {
+                        "description": "Link via DataRecord to the main DataRecord representing this entity in a dataset. It is usually preferred to use mainEntity from a DataRecord to point to its corresponding entity. Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](http://schema.org/docs/datamodel.html#mainEntityBackground) for details.\nInverse property: mainEntity.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "description": " The name of the item.",
+                        "type": "string"
+                    },
+                    "sameAs": {
+                        "description": " URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "taxonomicRange": {
+                        "description": " The taxonomic grouping of the organism that expresses the Phenotype.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/taxon"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "description": "Link to the official webpage associated to this entity. URL of the item.",
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "valueReference": {
+                        "description": " A DefinedTerm in this code set.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/definedterm"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/definedterm"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "required": [
+                    "identifier",
+                    "name"
+                ],
+                "recommended": [
+                    "description",
+                    "image",
+                    "url"
+                ],
+                "optional": [
+                    "additionalProperty",
+                    "alternateName",
+                    "anatomicalLocation",
+                    "isAssociatedWith",
+                    "mainEntityOfPage",
+                    "sameAs",
+                    "taxonomicRange",
+                    "valueReference"
+                ],
+                "definitions": {
+                    "propertyvalue": {
+                        "@type": "PropertyValue",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "valuereference": {
+                                "oneOf": [
+                                    {
+                                        "$ref": "#/definitions/categorycode"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": [
+                                            {
+                                                "$ref": "#/definitions/categorycode"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    }
+                                ]
+                            },
+                            "unitText": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "recommended": [
+                            "valueReference"
+                        ],
+                        "optional": [
+                            "unitCode",
+                            "unitText"
+                        ]
+                    },
+                    "categorycode": {
+                        "@type": "CategoryCode",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "codeValue": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                        ]
+                    },
+                    "definedterm": {
+                        "@type": "DefinedTerm",
+                        "type": "object",
+                        "properties": {
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "termCode": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "inDefinedTermSet": {
+                                "$ref": "#/definitions/definedtermset"
+                            }
+                        },
+                        "required": []
+                    },
+                    "definedtermset": {
+                        "@type": "DefinedTermSet",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
+                    "imageobject": {
+                        "@type": "ImageObject",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
+                    "biochementity": {
+                        "@type": "bioschemas:BioChemEntity",
+                        "type": "object",
+                        "properties": {
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "creativework": {
+                        "@type": "CreativeWork",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
+                    "taxon": {
+                        "@type": "bioschemas:Taxon",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "taxonRank": {
+                                "anyOf": [
+                                    {
+                                        "$ref": "#/definitions/propertyvalue"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/definitions/propertyvalue"
+                                        }
+                                    },
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "format": "uri"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "taxonRank"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "@id": "bioschemas:additionalProperty",
+            "rdfs:comment": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, …) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.",
+            "@type": "rdf:Property",
+            "rdfs:label": "additionalProperty",
+            "schema:sameAs": {
+                "@id": "schema:additionalProperty"
+            },
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Phenotype"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:PropertyValue"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:valueReference",
+            "rdfs:comment": "A DefinedTerm in this code set.",
+            "@type": "rdf:Property",
+            "rdfs:label": "valueReference",
+            "schema:sameAs": {
+                "@id": "schema:valueReference"
+            },
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Phenotype"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:DefinedTerm"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:anatomicalLocation",
+            "rdfs:comment": "Any part of an organism, typically a component of an anatomical system. Organs, tissues, and cells are all anatomical locations. ",
+            "@type": "rdf:Property",
+            "rdfs:label": "anatomicalLocation",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Phenotype"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:DefinedTerm"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:isAssociatedWith",
+            "rdfs:comment": "BioChemEntity that has some association with this Phenotype ",
+            "@type": "rdf:Property",
+            "rdfs:label": "isAssociatedWith",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Phenotype"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:BioChemEntity"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:taxonomicRange",
+            "rdfs:comment": "The taxonomic grouping of the organism that expresses the Phenotype. ",
+            "@type": "rdf:Property",
+            "rdfs:label": "taxonomicRange",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Phenotype"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemas:Taxon"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        }
+    ]
+}

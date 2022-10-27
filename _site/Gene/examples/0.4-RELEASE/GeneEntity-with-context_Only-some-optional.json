@@ -1,0 +1,27 @@
+{
+  "@context": [
+    {
+      "bs": "http://bioschemas.org/"
+    },
+    "http://schema.org",
+    {
+      "@base": "http://schema.org"
+    }
+  ],
+  "@type": [
+    "bs:Gene"
+  ],
+  "identifier": "ENSG00000142192",
+  "name": "APP",
+  "sameAs": "https://www.wikidata.org/wiki/Q14865870",
+  "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000142192;r=21:25880550-26171128",
+  "hasBioChemEntityPart": {
+    "@type": [
+      "BioChemEntity",
+      "http://semanticscience.org/resource/SIO_001381"
+    ],
+    "identifier": "rs577882423",
+    "name": "rs577882423",
+    "url": "https://www.ensembl.org/Homo_sapiens/Variation/Summary?db=core;g=ENSG00000142192;r=21:25880550-26171128;vf=110312838"
+  }
+}

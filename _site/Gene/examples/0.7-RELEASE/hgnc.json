@@ -1,0 +1,46 @@
+{
+  "@context": [
+    {
+      "bs": "http://bioschemas.org/"
+    },
+    "http://schema.org",
+    {
+      "@base": "http://schema.org"
+    }
+  ],
+  "@type": "bs:Gene",
+  "@id": "https://www.genenames.org/data/gene-symbol-report/#gene",
+  "identifier": "HGNC:5",
+  "name": "A1BG",
+  "description": "alpha-1-B glycoprotein",
+  "url": "https://www.genenames.org/data/gene-symbol-report/",
+  "isPartOfBioChemEntity": {
+    "@type": "bs:BioChemEntity",
+    "name": "Chromosome 19"
+  },
+  "sameAs": [
+    "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000121410",
+    "http://view.ncbi.nlm.nih.gov/gene/1",
+    "http://genome.cse.ucsc.edu/cgi-bin/hgGene?org=Human&hgg_chrom=none&hgg_type=knownGene&hgg_gene=uc002qsd.5",
+    "https://www.alliancegenome.org/gene/HGNC:5"
+  ],
+  "encodesBioChemEntity": [
+    {
+      "@type": "bs:Protein",
+      "@id": "http://www.uniprot.org/uniprot/P04217",
+      "url": "http://www.uniprot.org/uniprot/P04217",
+      "identifier": "P04217"
+    }
+  ],
+  "taxonomicRange": {
+    "@type": "DefinedTerm",
+    "termCode": "9606",
+    "url": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+    "sameAs": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=info&id=9606",
+    "inDefinedTermSet": {
+      "@type": "DefinedTermSet",
+      "name": "NCBI taxon",
+      "url": "https://bioportal.bioontology.org/ontologies/NCBITAXON"
+    }
+  }
+}

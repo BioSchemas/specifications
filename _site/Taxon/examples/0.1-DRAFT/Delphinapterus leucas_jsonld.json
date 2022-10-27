@@ -1,0 +1,54 @@
+{
+    "@context": [
+        "http://schema.org",
+        {
+            "dwc": "http://rs.tdwg.org/dwc/terms/",
+            "tc": "http://rs.tdwg.org/ontology/voc/TaxonConcept#",
+
+            "Taxon": "dwc:Taxon",
+            "dwc:vernacularName": { "@container": "@language" },
+            "tc:rank": { "@type": "@id" },
+        }
+    ],
+    
+    "@type" : [ "BioChemEntity", "Taxon" ],
+    "additionalType": "tc:TaxonConcept",
+
+    "identifier": "60932",
+    "url": "https://inpn.mnhn.fr/espece/cd_nom/60932?lg=en",
+    "image": "https://inpn.mnhn.fr/photos/uploads/webtofs/inpn/3/181473.jpg",
+
+    "name": "Delphinapterus leucas",
+    "dwc:scientificName": "Delphinapterus leucas (Pallas, 1776)",
+    "dwc:scientificNameAuthorship": "(Pallas, 1776)",
+    "alternateName": [ 
+        "Balaena albicans Muller, 1776",
+        "Beluga catodon Gray, 1846" 
+    ],
+
+    "tc:rank":  [
+        "http://rs.tdwg.org/ontology/voc/TaxonRank#Species",
+        "http://www.wikidata.org/entity/Q7432"
+    ],
+    "dwc:taxonRank": "species",    
+
+    "isContainedIn": {
+        "@type": [ "BioChemEntity", "Taxon" ],
+        "identifier": "191588",
+        "url": "https://inpn.mnhn.fr/espece/cd_nom/191588?lg=en",
+        "name": "Delphinapterus",
+        "dwc:scientificName": "Delphinapterus Lacépède, 1804",
+    },
+
+    "dwc:vernacularName": [
+        { "@language": "en", "@value": "Beluga Whale" },
+        { "@language": "fr", "@value": "Bélouga" }
+    ],
+    
+    "sameAs": [
+        "http://eol.org/pages/328541",
+        "http://en.wikipedia.org/w/index.php?title=Beluga_whale",
+        "http://www.catalogueoflife.org/annual-checklist/details/species/id/6850357",
+        "http://www.iucnredlist.org/details/6335"
+    ]
+}

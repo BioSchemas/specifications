@@ -1,0 +1,28 @@
+{
+  "@type": "CreativeWork",
+  "dct:conformsTo": "https://bioschemas.org/profiles/SemanticTextAnnotation/0.2-DRAFT-2020_12_03",
+  "subjectOf": "https://doi.org/10.1186/1471-2156-2-9",
+  "creator": "http://data.bioontology.org/documentation#nav_annotator",
+  "text": "missense mutation",
+  "commentCount": 3,
+  "mainEntity": [
+    {
+      "@type": "DefinedTerm",
+      "inDefinedTermSet": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+      "termCode": "ncit:C45585",
+      "url": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C45585"
+    },
+    {
+      "@type": "DefinedTerm",
+      "inDefinedTermSet": "http://purl.bioontology.org/ontology/MESH/",
+      "termCode": "mesh:D020125",
+      "url": "http://purl.bioontology.org/ontology/MESH/D020125"
+    },
+    {
+      "@type": "DefinedTerm",
+      "inDefinedTermSet": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+      "termCode": "ncit:C18133",
+      "url": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C18133"
+    }
+  ]
+}

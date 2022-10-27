@@ -1,0 +1,119 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "bioschemastypesdrafts": "http://discovery.biothings.io/view/bioschemastypesdrafts/"
+  },
+  "@graph": [
+    {
+      "@id": "bioschemastypesdrafts:SequenceAnnotation",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Used to provide metadata about Sequence Annotations. The sequence can be an amino acid (protein) or nucleic acid (Gene, DNA, RNA). Version: 0.1-DRAFT-2019_06_21",
+      "rdfs:label": "SequenceAnnotation",
+      "rdfs:subClassOf": {
+        "@id": "schema:BioChemEntity"
+      }
+    },
+    {
+      "@id": "bioschemastypesdrafts:sequenceLocation",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A range/position location where this annotation or BioChemEntity is located reagrding another BioChemEntity, for instance a BioChemStructure in a Protein.",
+      "rdfs:label": "sequenceLocation",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:SequenceAnnotation"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "bioschemastypesdrafts:SequenceRange"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:creationMethod",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Method used to create or obtain this annotation or BioChemEntity; please use PropertyValue if you want to include any evidence.",
+      "rdfs:label": "creationMethod",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:SequenceAnnotation"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:PropertyValue"
+        },
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:sequenceOrientation",
+      "@type": "rdf:Property",
+      "rdfs:comment": "One of 1, 0 or -1.",
+      "rdfs:label": "sequenceOrientation",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:SequenceAnnotation"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Integer"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:sequenceValue",
+      "@type": "rdf:Property",
+      "rdfs:comment": "value of the sequence",
+      "rdfs:label": "sequenceValue",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:SequenceAnnotation"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:valueReference",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature.",
+      "rdfs:label": "valueReference",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:SequenceAnnotation"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:DefinedTerm"
+        },
+        {
+          "@id": "schema:Enumeration"
+        },
+        {
+          "@id": "schema:PropertyValue"
+        },
+        {
+          "@id": "schema:QualitativeValue"
+        },
+        {
+          "@id": "schema:QuantitativeValue"
+        },
+        {
+          "@id": "schema:StructuredValue"
+        },
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    }
+  ]
+}

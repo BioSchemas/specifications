@@ -1,0 +1,614 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
+        "ChEBI": ""
+    },
+    "@graph": [
+        {
+            "@id": "bioschemas:LabProtocol",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Bioschemas profile describing a LabProtocol in Life Sciences This LabProtocol profile specification presents the markup for describing a LabProtocol Version: 0.3-DRAFT-2019_06_14",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/profiles/LabProtocol/0.3-DRAFT-2019_06_14"
+            ],
+            "rdfs:label": "LabProtocol",
+            "rdfs:subClassOf": {
+                "@id": "schema:HowTo"
+            },
+            "$validation": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "type": "object",
+                "properties": {
+                    "additionalType": {
+                        "description": "Optional for LabProtocol as it has its own type in schema.org. If used, the recommended URL is SmartProtocols (http://purl.org/net/SMARTprotocol#ExperimentalProtocol) An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "reagent": {
+                        "description": "Reagent used in the protocol. It can be a record in a Dataset describing the reagent or a BioChemEntity corresponding to the reagent or a URL pointing to the type of reagent used. ChEBI and PubChem entities can be used whenever available. Commercial names are also acceptable (URL if possible) ",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/biochementity"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/biochementity"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "citation": {
+                        "description": " A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "duration": {
+                        "description": "The time it takes to actually carry out the protocol, in ISO 8601 date format. The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format.",
+                        "$ref": "#/definitions/duration"
+                    },
+                    "hasPart": {
+                        "description": "A particular case in Bioschemas is LabProtocol where structural elements are used to described advantages (situations the Protocol has been successfully employed), limitations (situations the Protocol would be unreliable or otherwise unsuccessful), applications (Applications of the protocol list the full diversity of the applications of the method and support if is possible to extend the range of applications of the protocol. e.g. northern blot assays, sequencing, etc.), and outcomes (outcome or expected result by a protocol execution). For LabProtocol, in the applicationType, please use http://purl.org/net/SMARTprotocol#AdvantageOfTheProtocol for advantages, http://purl.org/net/SMARTprotocol#LimitationOfTheProtocol for limitations, http://purl.org/net/SMARTprotocol#ApplicationOfTheProtocol for applicability, and http://purl.org/net/SMARTprotocol#OutcomeOfTheProtocol for outcomes. Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense). Inverse property: isPartOf.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/trip"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/trip"
+                                }
+                            }
+                        ]
+                    },
+                    "identifier": {
+                        "description": " The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ]
+                    },
+                    "instrument": {
+                        "description": "For LabProtocols it would be a laboratory equipment use by a person to follow one or more steps described in this LabProtocol.\nNote: Bioschemas have added the following to the list of Expected Types: Text and URL. The object that helped the agent perform the action. e.g. John wrote a book with a pen.",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/thing"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/thing"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "isBasedOn": {
+                        "description": "Note: Bioschemas have removed Product from the Expected Types A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html. Supersedes isBasedOnUrl.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "isPartOf": {
+                        "description": " Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of. Inverse property: hasPart.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/trip"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/trip"
+                                }
+                            }
+                        ]
+                    },
+                    "keywords": {
+                        "description": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+                        "type": "string"
+                    },
+                    "license": {
+                        "description": " A license document that applies to this content, typically indicated by URL.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ]
+                    },
+                    "purpose": {
+                        "description": "Note: Bioschemas have changed the Expected Types by removing MedicalDevicePurpose and Thing, and adding Text. A goal towards an action is taken. Can be concrete or abstract.",
+                        "type": "string"
+                    },
+                    "sample": {
+                        "description": "Sample used in the protocol. It could be a record in a Dataset describing the sample or a physical object corresponding to the sample or a URL pointing to the type of sample used. ",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/biochementity"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/biochementity"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "software": {
+                        "description": "An application that can complete the request. ",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/softwareapplication"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/softwareapplication"
+                                }
+                            }
+                        ]
+                    },
+                    "step": {
+                        "description": "Use in LabProtocol to include the step by step process followed in this protocol. A single step item (as HowToStep, text, document, video, etc.) or a HowToSection.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/howtosection"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/howtosection"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/howtostep"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/howtostep"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "required": [
+                    "reagent",
+                    "instrument",
+                    "keywords",
+                    "purpose",
+                    "sample"
+                ],
+                "recommended": [
+                    "citation",
+                    "duration",
+                    "hasPart",
+                    "identifier",
+                    "isPartOf",
+                    "license",
+                    "software",
+                    "step"
+                ],
+                "optional": [
+                    "additionalType",
+                    "isBasedOn"
+                ],
+                "definitions": {
+                    "biochementity": {
+                        "@type": "bioschemas:BioChemEntity",
+                        "type": "object",
+                        "properties": {
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "creativework": {
+                        "@type": "CreativeWork",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
+                    "duration": {
+                        "@type": "schema:Duration",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "trip": {
+                        "@type": "schema:Trip",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "propertyvalue": {
+                        "@type": "PropertyValue",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "valuereference": {
+                                "oneOf": [
+                                    {
+                                        "$ref": "#/definitions/categorycode"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": [
+                                            {
+                                                "$ref": "#/definitions/categorycode"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    }
+                                ]
+                            },
+                            "unitText": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "recommended": [
+                            "valueReference"
+                        ],
+                        "optional": [
+                            "unitCode",
+                            "unitText"
+                        ]
+                    },
+                    "categorycode": {
+                        "@type": "CategoryCode",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "codeValue": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                        ]
+                    },
+                    "thing": {
+                        "@type": "schema:Thing",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "softwareapplication": {
+                        "@type": "schema:SoftwareApplication",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "howtosection": {
+                        "@type": "schema:HowToSection",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "howtostep": {
+                        "@type": "schema:HowToStep",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    }
+                }
+            }
+        },
+        {
+            "@id": "ChEBI:reagent",
+            "rdfs:comment": " Reagent used in the protocol. It can be a record in a Dataset describing the reagent or a BioChemEntity corresponding to the reagent or a URL pointing to the type of reagent used. ChEBI and PubChem entities can be used whenever available. Commercial names are also acceptable (URL if possible)",
+            "@type": "rdf:Property",
+            "rdfs:label": "reagent",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:LabProtocol"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:BioChemEntity"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:instrument",
+            "rdfs:comment": "The object that helped the agent perform the action. e.g. John wrote a book with a pen. For LabProtocols it would be a laboratory equipment use by a person to follow one or more steps described in this LabProtocol.\nNote: Bioschemas have added the following to the list of Expected Types: Text and URL.",
+            "@type": "rdf:Property",
+            "rdfs:label": "instrument",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:LabProtocol"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:Thing"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:purpose",
+            "rdfs:comment": "A goal towards an action is taken. Can be concrete or abstract. Note: Bioschemas have changed the Expected Types by removing MedicalDevicePurpose and Thing, and adding Text.",
+            "@type": "rdf:Property",
+            "rdfs:label": "purpose",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:LabProtocol"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:sample",
+            "rdfs:comment": " Sample used in the protocol. It could be a record in a Dataset describing the sample or a physical object corresponding to the sample or a URL pointing to the type of sample used.",
+            "@type": "rdf:Property",
+            "rdfs:label": "sample",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:LabProtocol"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:BioChemEntity"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:software",
+            "rdfs:comment": " An application that can complete the request.",
+            "@type": "rdf:Property",
+            "rdfs:label": "software",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:LabProtocol"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:SoftwareApplication"
+                }
+            ]
+        }
+    ]
+}

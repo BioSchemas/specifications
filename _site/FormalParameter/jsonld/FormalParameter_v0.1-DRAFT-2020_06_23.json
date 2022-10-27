@@ -1,0 +1,266 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+    },
+    "@graph": [
+        {
+            "@id": "bioschemas:FormalParameter",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A formal parameter is a slot that may be satisfied when the workflow is run. It appears as an Input or Output of a Workflow  Version: 0.1-DRAFT-2020_06_23",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/profiles/FormalParameter/0.1-DRAFT-2020_06_23"
+            ],
+            "rdfs:label": "FormalParameter",
+            "rdfs:subClassOf": {
+                "@id": "schema:Intangible"
+            },
+            "$validation": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "type": "object",
+                "properties": {
+                    "additionalType": {
+                        "description": " An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "defaultValue": {
+                        "description": " The default value for the FormalParameter. This is commonly only used for Inputs.",
+                        "$ref": "#/definitions/thing"
+                    },
+                    "description": {
+                        "description": "The description may include verbatim the Workflow's description of the FormalParameter and its type A description of the item.",
+                        "type": "string"
+                    },
+                    "encodingFormat": {
+                        "description": " URLs to accepted formats",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "identifier": {
+                        "description": " The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/propertyvalue"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "name": {
+                        "description": " The name of the item.",
+                        "type": "string"
+                    },
+                    "valueRequired": {
+                        "description": " If the FormalParameter must be specified. This is commonly only used for Inputs",
+                        "type": "boolean"
+                    }
+                },
+                "required": [
+                    "additionalType",
+                    "encodingFormat",
+                    "name"
+                ],
+                "recommended": [
+                    "description"
+                ],
+                "optional": [
+                    "defaultValue",
+                    "identifier",
+                    "valueRequired"
+                ],
+                "definitions": {
+                    "thing": {
+                        "@type": "schema:Thing",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "propertyvalue": {
+                        "@type": "PropertyValue",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "valuereference": {
+                                "oneOf": [
+                                    {
+                                        "$ref": "#/definitions/categorycode"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": [
+                                            {
+                                                "$ref": "#/definitions/categorycode"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    }
+                                ]
+                            },
+                            "unitText": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "recommended": [
+                            "valueReference"
+                        ],
+                        "optional": [
+                            "unitCode",
+                            "unitText"
+                        ]
+                    },
+                    "categorycode": {
+                        "@type": "CategoryCode",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "codeValue": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                        ]
+                    }
+                }
+            }
+        },
+    {
+      "@id": "bioschemas:defaultValue",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The default value for the FormalParameter. This is commonly only used for Inputs.",
+      "rdfs:label": "defaultValue",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:FormalParameter"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:Thing"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemas:valueRequired",
+      "@type": "rdf:Property",
+      "rdfs:comment": "If the FormalParameter must be specified. This is commonly only used for Inputs",
+      "rdfs:label": "valueRequired",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:FormalParameter"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Boolean"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemas:encodingFormat",
+      "@type": "rdf:Property",
+      "rdfs:comment": "URLs to accepted formats.  It is strongly recommented that this be specified. If it is not specified, then nothing should be assumed about the encoding formats of the FormalParameter. Recommended ontology: http://edamontology.org/format_1915",
+      "rdfs:label": "encodingFormat",
+      "schema:domainIncludes": {
+        "@id": "bioschemas:FormalParameter"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    }
+    ]
+}

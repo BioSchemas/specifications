@@ -1,0 +1,87 @@
+{
+   "@context" : "http://schema.org",
+   "@type" : "Organization",
+   "address" : {
+      "@type" : "PostalAddress",
+      "addressLocality" : "Brno, Czechia",
+      "contactType" : "juridical person",
+      "streetAddress" : "Masarykův onkologický ústav Žlutý kopec 7"
+   },
+   "alternateName" : "MMCI",
+   "description" : "Biobank at MMCI was established to preserve patient-derived specimens such as tumours and blood-derived samples . Its structure comprises of a \"long-term storage repository\" designed to store a comprehensive set of patient samples such as tumours, adjacent tissues, genomic DNA and serum at surgery, and the \"short term storage repository\" designed to store serum aliquots from periodic determination of soluble blood tumour markers.  Comprehensive clinical data are available through the hospital infromation system to enable further translational and clinical research.",
+   "email" : "mmci@bbmri.cz",
+   "identifier" : "bbmri-eric:ID:CZ_MMCI",
+   "legalName" : "Masaryk Memorial Cancer Institute",
+   "name" : "Bank of Biological Material, Masaryk Memorial Cancer Institute",
+   "url" : "https://directory.bbmri-eric.eu/menu/main/dataexplorer/details/eu_bbmri_eric_biobanks/bbmri-eric:ID:CZ_MMCI"
+}
+
+
+{
+   "@context" : "http://schema.org",
+   "@type" : "DataCatalog",
+   "dataset" : [
+      {
+         "@id" : "/api/v2/eu_bbmri_eric_collections/bbmri-eric:ID:CZ_MMCI:collection:LTS",
+         "@type" : "DataRecord",
+         "identifier" : "bbmri-eric:ID:CZ_MMCI:collection:LTS",
+         "name" : "Long Term Storage Collection",
+         "url" : "/api/v2/eu_bbmri_eric_collections/bbmri-eric:ID:CZ_MMCI:collection:LTS"
+      },
+      {
+         "@id" : "/api/v2/eu_bbmri_eric_collections/bbmri-eric:ID:CZ_MMCI:collection:LTS:gDNA",
+         "@type" : "DataRecord",
+         "identifier" : "bbmri-eric:ID:CZ_MMCI:collection:LTS:gDNA",
+         "name" : "Genomic DNA in Long Term Storage Collection",
+         "url" : "/api/v2/eu_bbmri_eric_collections/bbmri-eric:ID:CZ_MMCI:collection:LTS:gDNA"
+      },
+      {
+         "@id" : "/api/v2/eu_bbmri_eric_collections/bbmri-eric:ID:CZ_MMCI:collection:LTS:gDNA-HCS",
+         "@type" : "DataRecord",
+         "identifier" : "bbmri-eric:ID:CZ_MMCI:collection:LTS:gDNA-HCS",
+         "name" : "Genomic DNA in Long Term Storage for Hereditary Cancer Syndroms",
+         "url" : "/api/v2/eu_bbmri_eric_collections/bbmri-eric:ID:CZ_MMCI:collection:LTS:gDNA-HCS"
+      },
+      {
+         "@id" : "/api/v2/eu_bbmri_eric_collections/bbmri-eric:ID:CZ_MMCI:collection:LTS:gDNA-wholeblood",
+         "@type" : "DataRecord",
+         "identifier" : "bbmri-eric:ID:CZ_MMCI:collection:LTS:gDNA-wholeblood",
+         "name" : "Whole Blood (gDNA complement) in Long Term Storage Collection",
+         "url" : "/api/v2/eu_bbmri_eric_collections/bbmri-eric:ID:CZ_MMCI:collection:LTS:gDNA-wholeblood"
+      },
+      {
+         "@id" : "/api/v2/eu_bbmri_eric_collections/bbmri-eric:ID:CZ_MMCI:collection:LTS:serum",
+         "@type" : "DataRecord",
+         "identifier" : "bbmri-eric:ID:CZ_MMCI:collection:LTS:serum",
+         "name" : "Serum in Long Term Storage Collection",
+         "url" : "/api/v2/eu_bbmri_eric_collections/bbmri-eric:ID:CZ_MMCI:collection:LTS:serum"
+      },
+      {
+         "@id" : "/api/v2/eu_bbmri_eric_collections/bbmri-eric:ID:CZ_MMCI:collection:LTS:tissue-LN",
+         "@type" : "DataRecord",
+         "identifier" : "bbmri-eric:ID:CZ_MMCI:collection:LTS:tissue-LN",
+         "name" : "Tissues in LN in Long Term Storage Collection",
+         "url" : "/api/v2/eu_bbmri_eric_collections/bbmri-eric:ID:CZ_MMCI:collection:LTS:tissue-LN"
+      },
+      {
+         "@id" : "/api/v2/eu_bbmri_eric_collections/bbmri-eric:ID:CZ_MMCI:collection:LTS:tissue-RNAlater",
+         "@type" : "DataRecord",
+         "identifier" : "bbmri-eric:ID:CZ_MMCI:collection:LTS:tissue-RNAlater",
+         "name" : "Tissues in RNAlater in Long Term Storage Collection",
+         "url" : "/api/v2/eu_bbmri_eric_collections/bbmri-eric:ID:CZ_MMCI:collection:LTS:tissue-RNAlater"
+      },
+      {
+         "@id" : "/api/v2/eu_bbmri_eric_collections/bbmri-eric:ID:CZ_MMCI:collection:STS",
+         "@type" : "DataRecord",
+         "identifier" : "bbmri-eric:ID:CZ_MMCI:collection:STS",
+         "name" : "Short Term Storage Collection",
+         "url" : "/api/v2/eu_bbmri_eric_collections/bbmri-eric:ID:CZ_MMCI:collection:STS"
+      }
+   ],
+   "provider" : {
+      "@id" : "https://directory.bbmri-eric.eu/menu/main/dataexplorer/details/eu_bbmri_eric_biobanks/bbmri-eric:ID:CZ_MMCI",
+      "@type" : "Organization",
+      "identifier" : "bbmri-eric:ID:CZ_MMCI",
+      "url" : "https://directory.bbmri-eric.eu/menu/main/dataexplorer/details/eu_bbmri_eric_biobanks/bbmri-eric:ID:CZ_MMCI"
+   }
+}

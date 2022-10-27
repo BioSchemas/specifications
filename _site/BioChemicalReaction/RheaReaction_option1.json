@@ -1,0 +1,91 @@
+{
+  "@context": "https://schema.org/",
+  "@id": "https://www.rhea-db.org/reaction?id=51724",
+  "@type": "ItemList",
+  "name": "H2O + P(1),P(6)-bis(5'-adenosyl) hexaphosphate = adenosine 5'-tetraphosphate + ADP + 2 H(+)",
+  "identifier": "RHEA:51724",
+  "numberOfItems": 5,
+  "itemListElement": [
+    {
+      "@type": "MolecularEntity",
+      "dct:conformsTo": {
+        "@type": "CreativeWork",
+        "@id": "https://bioschemas.org/profiles/MolecularEntity/0.5-RELEASE/"
+      },
+      "@id": "http://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15377",
+      "identifier": "CHEBI:15377",
+      "name": "H2O",
+      "molecularFormula": "H2O",
+      "inChIKey": "XLYOFNOQVPJJNP-UHFFFAOYSA-N",
+      "smiles": "[H]O[H]",
+      "image": "https://www.rhea-db.org/compoundImage?dimensions=200&chebiId=CHEBI:15377"
+    },
+    {
+      "@type": "MolecularEntity",
+      "dct:conformsTo": {
+        "@type": "CreativeWork",
+        "@id": "https://bioschemas.org/profiles/MolecularEntity/0.5-RELEASE/"
+      },
+      "@id": "http://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:63740",
+      "identifier": "CHEBI:63740",
+      "name": "P1,P6-bis(5'-adenosyl) hexaphosphate",
+      "molecularFormula": "C20H24N10O25P6",
+      "inChIKey": "PZCFFCOJNXGTIM-XPWFQUROSA-H",
+      "smiles": "Nc1ncnc2n(cnc12)[C@@H]1O[C@H](COP([O-])(=O)OP([O-])(=O)OP([O-])(=O)OP([O-])(=O)OP([O-])(=O)OP([O-])(=O)OC[C@H]2O[C@H]([C@H](O)[C@@H]2O)n2cnc3c(N)ncnc23)[C@@H](O)[C@H]1O",
+      "image": "https://www.rhea-db.org/compoundImage?dimensions=200&chebiId=CHEBI:63740"
+    },
+    {
+      "@type": "MolecularEntity",
+      "dct:conformsTo": {
+        "@type": "CreativeWork",
+        "@id": "https://bioschemas.org/profiles/MolecularEntity/0.5-RELEASE/"
+      },
+      "@id": "http://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:58450",
+      "identifier": "CHEBI:58450",
+      "name": "adenosine 5'-tetraphosphate",
+      "molecularFormula": "C10H12N5O16P4",
+      "inChIKey": "WWMWAMFHUSTZTA-KQYNXXCUSA-I",
+      "smiles": "Nc1ncnc2n(cnc12)[C@@H]1O[C@H](COP([O-])(=O)OP([O-])(=O)OP([O-])(=O)OP([O-])([O-])=O)[C@@H](O)[C@H]1O",
+      "image": "https://www.rhea-db.org/compoundImage?dimensions=200&chebiId=CHEBI:58450"
+    },
+    {
+      "@type": "MolecularEntity",
+      "dct:conformsTo": {
+        "@type": "CreativeWork",
+        "@id": "https://bioschemas.org/profiles/MolecularEntity/0.5-RELEASE/"
+      },
+      "@id": "http://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:456216",
+      "identifier": "CHEBI:456216",
+      "name": "ADP",
+      "molecularFormula": "C10H12N5O10P2",
+      "inChIKey": "XTWYTFMLZFPYCI-KQYNXXCUSA-K",
+      "smiles": "Nc1ncnc2n(cnc12)[C@@H]1O[C@H](COP([O-])(=O)OP([O-])([O-])=O)[C@@H](O)[C@H]1O",
+      "image": "https://www.rhea-db.org/compoundImage?dimensions=200&chebiId=CHEBI:456216"
+    },
+    {
+      "@type": "MolecularEntity",
+      "dct:conformsTo": {
+        "@type": "CreativeWork",
+        "@id": "https://bioschemas.org/profiles/MolecularEntity/0.5-RELEASE/"
+      },
+      "@id": "http://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15378",
+      "identifier": "CHEBI:15378",
+      "name": "H+",
+      "molecularFormula": "H",
+      "inChIKey": "GPRLSGONYQIRFK-UHFFFAOYSA-N",
+      "smiles": "[H+]",
+      "image": "https://www.rhea-db.org/compoundImage?dimensions=200&chebiId=CHEBI:15378"
+    }
+  ],
+  "citation": {
+    "@type": "ScholarlyArticle",
+    "@id": "PMID: 10090752"
+  },
+  "dateModified": "2020-05-27",
+  "sameAs": [
+    "https://www.rhea-db.org/reaction?id=51725",
+    "https://www.rhea-db.org/reaction?id=51726",
+    "https://www.rhea-db.org/reaction?id=51727",
+    "http://www.reactome.org/content/detail/R-HSA-6810472.1"
+  ]
+}

@@ -26,14 +26,14 @@ def generate_transformed_profile(g, path_changed_file, external_properties):
         for req_label in g["$validation"]["required"]:
             prop = g["$validation"]["properties"][req_label]
             new_p = generate_property(
-                g, prop, req_label, "Required", external_properties
+                g, prop, req_label, "Minimum", external_properties
             )
             transformed_profile["mapping"].append(new_p)
 
         for reco_label in g["$validation"]["recommended"]:
             prop = g["$validation"]["properties"][reco_label]
             new_p = generate_property(
-                g, prop, reco_label, "Minimum", external_properties
+                g, prop, reco_label, "Recommended", external_properties
             )
             transformed_profile["mapping"].append(new_p)
 

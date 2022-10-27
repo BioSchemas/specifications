@@ -1,0 +1,70 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "bioschemastypes": "http://discovery.biothings.io/view/bioschemastypes/"
+  },
+  "@graph": [
+    {
+      "@id": "bioschemastypes:FormalParameter",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A FormalParameter is an identified variable used to stand for the actual value(s) that are consumed/produced by a set of steps. Version: 1.0-RELEASE (09 March 2021) ",
+      "schema:schemaVersion": [
+        "https://bioschemas.org/types/FormalParameter/1.0-RELEASE"
+      ],
+      "rdfs:label": "FormalParameter",
+      "rdfs:subClassOf": {
+        "@id": "schema:Intangible"
+      }
+    },
+    {
+      "@id": "bioschemastypes:defaultValue",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The default value for the FormalParameter. This is commonly only used for Inputs.",
+      "rdfs:label": "defaultValue",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypes:FormalParameter"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:Thing"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypes:valueRequired",
+      "@type": "rdf:Property",
+      "rdfs:comment": "If the FormalParameter must be specified. This is commonly only used for Inputs",
+      "rdfs:label": "valueRequired",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypes:FormalParameter"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Boolean"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypes:encodingFormat",
+      "@type": "rdf:Property",
+      "rdfs:comment": "URLs to accepted formats.  It is strongly recommented that this be specified. If it is not specified, then nothing should be assumed about the encoding formats of the FormalParameter. Recommended ontology: http://edamontology.org/format_1915",
+      "rdfs:label": "encodingFormat",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypes:FormalParameter"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    }
+  ]
+}

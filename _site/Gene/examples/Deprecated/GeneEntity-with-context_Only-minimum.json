@@ -1,0 +1,13 @@
+{
+  "@context": [
+    { "bs": "http://bioschemas.org/specifications/" },
+    "http://schema.org",
+    {
+      "@base": "http://schema.org"
+    }
+  ],
+  "@type": ["BioChemEntity", "bs:Gene"],
+
+  "identifier": "ENSG00000142192",
+  "name": "APP"
+}

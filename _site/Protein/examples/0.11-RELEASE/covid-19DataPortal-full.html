@@ -1,0 +1,53 @@
+<!--
+  This file includes annotations at the end of some lines.
+  These have a # at the start of them.
+-->
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@id": "https://www.covid19dataportal.org/proteins?db=uniprot-covid19",
+  "@type": "CollectionPage",
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": 45,
+    "itemListElement": [
+      {
+        "@type": "Protein",
+        "@id": "https://covid-19.uniprot.org/uniprotkb/Q9BYF1",
+        "identifier": "Q9BYF1",
+        "name": "Angiotensin-converting enzyme 2", #Bioschemas requires a name rather than a description, this value should be templated
+        "associatedDisease": "http://purl.obolibrary.org/obo/DOID_0080600", #Pick another ontology URI if you prefer, this value will be constant for all entries
+        "isEncodedByBioChemEntity": {
+          "@type": "Gene",
+          "name"": "ACE2"
+        },
+        "sameAs": "http://purl.uniprot.org/uniprot/Q9BYF1", #You don't have this on the human view but it should be easy to include in the machine version which makes the data more interoperable
+        "taxonomicRange": {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+          "@type": "Taxon",
+          "name": "Homo sapiens"
+        }
+      },
+      {
+        "@type": "Protein",
+        "@id": "https://covid-19.uniprot.org/uniprotkb/P35613",
+        "identifier": "P35613",
+        "name": "Basigin", #Bioschemas requires a name rather than a description, this value should be templated
+        "associatedDisease": "http://purl.obolibrary.org/obo/DOID_0080600", #Pick another ontology URI if you prefer, this value will be constant for all entries
+        "isEncodedByBioChemEntity": {
+          "@type": "Gene",
+          "name"": "BSG"
+        },
+        "sameAs": "http://purl.uniprot.org/uniprot/P35613", #You don't have this on the human view but it should be easy to include in the machine version which makes the data more interoperable
+        "taxonomicRange": {
+          "@id": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+          "@type": "Taxon",
+          "name": "Homo sapiens"
+        }
+      },
+      #Rest of the list goes here
+      ...
+    ]
+  }
+}
+</script>

@@ -1,0 +1,20 @@
+{
+    "@context": "https://schema.org/",
+    "@type": "Dataset",
+    "http://purl.org/dc/terms/conformsTo": { "@type": "CreativeWork", "@id": "https://bioschemas.org/profiles/Dataset/1.0-RELEASE" },
+    "@id": "https://doi.org/10.5281/zenodo.5743204",
+    "identifier": "10.5281/zenodo.5743204",
+    "name": "RDF version of the data from Choi, JS. et al. Towards a generalized toxicity prediction model for oxide nanomaterials using integrated data from different sources (2018)",
+    "description": "This is an RDFied version of the dataset published in Choi, JS., Ha, M.K., Trinh, T.X. et al. Towards a generalized toxicity prediction model for oxide nanomaterials using integrated data from different sources. Sci Rep 8, 6110 (2018). The original dataset publication DOI: https://doi.org/10.1038/s41598-018-24483-z. The Original publication authors: Jang-Sik Choi, My Kieu Ha, Tung Xuan Trinh, Tae Hyun Yoon & Hyung-Gi Byun",
+    "license": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "url": "https://zenodo.org/record/5743204",
+    "keywords": "oxide, nanomaterial, toxicity, prediction",
+    "creator": [
+      {
+        "@type": "Organization",
+        "name": "NanoSolveIT"
+      }
+    ],
+    "datePublished": "2021-11-30",
+    "citation": { "@type": "CreativeWork", "@id": "https://doi.org/10.1038/s41598-018-24483-z", "name": "Towards a generalized toxicity prediction model for oxide nanomaterials using integrated data from different sources" }
+  }

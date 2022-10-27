@@ -1,0 +1,156 @@
+{
+    "@context":"http://schema.org",
+    "@type":"Dataset",
+    "name": "Supporting data for \"Genomic data for 78 chickens from 14 populations\"",
+    "description": "Since the domestication of the red jungle fowls (Gallus gallus) (dating back to ~10,000 B.P.) in Asia, domestic chickens (Gallus gallus domesticus) have been subjected to the combined effects of natural selection and human-driven artificial selection; this has resulted in marked phenotypic diversity in a number of traits, including behavior, body composition, egg production and skin color. Population genomic variations through diversifying selection have not been fully investigated. The whole genomes of 78 domestic chickens were sequenced to an average of 18-fold coverage for each bird. By combining this data with publicly available genomes of 5 wild red jungle fowls and 8 Xishuangbanna game fowls, we conducted a comprehensive comparative genomics analysis of 91 chickens from 17 populations. After aligning ~21.30 gigabases (Gb) of high quality data from each individual to the reference chicken genome, we identified ~6.44 million (M) SNPs for each population. These SNPs included 1.10 M novel SNPs in 17 populations that were absent in the current chicken dbSNP (Build 145) entries. The current data is important for population genetics and further studies in chicken, and will serve as a valuable resource for investigating diversifying selection and candidate genes for selective breeding in chicken.",
+    "url": "http://dx.doi.org/10.5524/100291",
+    "version": "1",
+    "keywords": [
+        "Chicken, Genetic diversity, Population genomics, Whole-genome resequencing"
+    ],
+    "creator": [
+        {
+            "givenName": "Diyan",
+            "familyName": "Li",
+            "@type": "Person"
+        },
+        {
+            "givenName": "Tiandong",
+            "familyName": "Che",
+            "@type": "Person"
+        },
+        {
+            "givenName": "Binlong",
+            "familyName": "Chen",
+            "url": "orcid.org/0000-0002-9078-2549",
+            "@type": "Person"
+        },
+        {
+            "givenName": "Shilin",
+            "familyName": "Tian",
+            "@type": "Person"
+        },
+        {
+            "givenName": "Xuming",
+            "familyName": "Zhou",
+            "@type": "Person"
+        },
+        {
+            "givenName": "Guolong",
+            "familyName": "Zhang",
+            "url": "orcid.org/0000-0003-4781-5816",
+            "@type": "Person"
+        },
+        {
+            "givenName": "Miao",
+            "familyName": "Li",
+            "@type": "Person"
+        },
+        {
+            "givenName": "Uma",
+            "familyName": "Gaur",
+            "@type": "Person"
+        },
+        {
+            "givenName": "Yan",
+            "familyName": "Li",
+            "@type": "Person"
+        },
+        {
+            "givenName": "Majing",
+            "familyName": "Luo",
+            "@type": "Person"
+        },
+        {
+            "givenName": "Long",
+            "familyName": "Zhang",
+            "@type": "Person"
+        },
+        {
+            "givenName": "Zhongxian",
+            "familyName": "Xu",
+            "@type": "Person"
+        },
+        {
+            "givenName": "Xiaoling",
+            "familyName": "Zhao",
+            "@type": "Person"
+        },
+        {
+            "givenName": "Huadong",
+            "familyName": "Yin",
+            "@type": "Person"
+        },
+        {
+            "givenName": "Yan",
+            "familyName": "Wang",
+            "@type": "Person"
+        },
+        {
+            "givenName": "Long",
+            "familyName": "Jin",
+            "@type": "Person"
+        },
+        {
+            "givenName": "Qianzi",
+            "familyName": "Tang",
+            "@type": "Person"
+        },
+        {
+            "givenName": "Huailiang",
+            "familyName": "Xu",
+            "@type": "Person"
+        },
+        {
+            "givenName": "Mingyao",
+            "familyName": "Yang",
+            "url": "orcid.org/0000-0001-6508-2738",
+            "@type": "Person"
+        },
+        {
+            "givenName": "Rongjia",
+            "familyName": "Zhou",
+            "url": "0000-0002-9701-8009",
+            "@type": "Person"
+        },
+        {
+            "givenName": "Ruiqiang",
+            "familyName": "Li",
+            "@type": "Person"
+        },
+        {
+            "givenName": "Qing",
+            "familyName": "Zhu",
+            "@type": "Person"
+        },
+        {
+            "givenName": "Mingzhou",
+            "familyName": "Li",
+            "url": "orcid.org/0000-0001-8681-7684",
+            "@type": "Person"
+        }
+    ],
+    "includedInDataCatalog": {
+        "url": "https://GigaDB.org",
+        "name": "GigaDB",
+        "@type": "DataCatalog"
+    },
+    "distribution": [
+        {
+            "contentUrl": "ftp://penguin.genomics.cn/pub/10.5524/100001_101000/100291/",
+            "fileFormat": "FTP",
+            "@type": "DataDownload"
+        },
+        {
+            "contentUrl": "https://www.ebi.ac.uk/ena/data/view/PRJNA241474",
+            "fileFormat": "HTML",
+            "@type": "DataDownload"
+        }
+    ],
+    "subjectof": {
+        "Url": "http://dx.doi.org/10.1093/gigascience/gix026",
+        "@type": "creativeWork",
+        "datePublished": "1 June 2017",
+        "headline": "Genomic data for 78 chickens from 14 populations"
+    }
+}

@@ -1,0 +1,1240 @@
+[ {
+  "@id" : "https://biocomputingup.it/#Organization",
+  "@type" : [ "https://schema.org/Organization" ],
+  "http://purl.org/dc/terms/conformsTo" : [ {
+    "@id" : "https://bioschemas.org/profiles/Organization/0.2-DRAFT-2019_07_19"
+  } ],
+  "https://schema.org/description" : [ {
+    "@value" : "University of Padua, Department of Biomedical Sciences, BioComputing UP laboratory"
+  } ],
+  "https://schema.org/legalName" : [ {
+    "@value" : "University of Padua"
+  } ],
+  "https://schema.org/name" : [ {
+    "@value" : "BioComputing UP, Department of Biomedical Sciences, University of Padua"
+  } ],
+  "https://schema.org/sameAs" : [ {
+    "@id" : "https://biocomputingup.it"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00003/20210907/1/disprot.org/DP00003/1343757371",
+  "@type" : [ "https://schema.org/SequenceRange" ],
+  "https://schema.org/rangeEnd" : [ {
+    "@value" : "334"
+  } ],
+  "https://schema.org/rangeStart" : [ {
+    "@value" : "294"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00003/20210907/1/disprot.org/DP00003/1439209021",
+  "@type" : [ "https://schema.org/SequenceRange" ],
+  "https://schema.org/rangeEnd" : [ {
+    "@value" : "464"
+  } ],
+  "https://schema.org/rangeStart" : [ {
+    "@value" : "454"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00003/20210907/1/disprot.org/DP00003/1748786242",
+  "@type" : [ "https://schema.org/PropertyValue" ],
+  "https://schema.org/name" : [ {
+    "@value" : "Protein disorder content"
+  } ],
+  "https://schema.org/propertyID" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00499"
+  } ],
+  "https://schema.org/value" : [ {
+    "@value" : "9.829867674858223E-2"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00003/20210907/1/disprot.org/DP00003/1881427155",
+  "@type" : [ "https://schema.org/DefinedTermSet" ],
+  "https://schema.org/name" : [ {
+    "@value" : "NCBI taxon"
+  } ],
+  "https://schema.org/url" : [ {
+    "@id" : "https://bioportal.bioontology.org/ontologies/NCBITAXON"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00003/20210907/1/disprot.org/DP00003/1896912531",
+  "@type" : [ "https://schema.org/DefinedTerm" ],
+  "https://schema.org/inDefinedTermSet" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00003/20210907/1/disprot.org/DP00003/1881427155"
+  } ],
+  "https://schema.org/sameAs" : [ {
+    "@id" : "http://purl.uniprot.org/taxonomy/28285"
+  }, {
+    "@id" : "https://identifiers.org/taxonomy:28285"
+  }, {
+    "@id" : "http://purl.obolibrary.org/obo/NCBITaxon_28285"
+  } ],
+  "https://schema.org/termCode" : [ {
+    "@value" : "28285"
+  } ],
+  "https://schema.org/url" : [ {
+    "@id" : "http://purl.bioontology.org/ontology/NCBITAXON/28285"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00003/20210907/1/disprot.org/DP00003/1941496935",
+  "@type" : [ "https://schema.org/SequenceRange" ],
+  "https://schema.org/rangeEnd" : [ {
+    "@value" : "529"
+  } ],
+  "https://schema.org/rangeStart" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00003/20210907/1/disprot.org/DP00003/358568134",
+  "@type" : [ "https://schema.org/PropertyValue" ],
+  "https://schema.org/name" : [ {
+    "@value" : "Term"
+  } ],
+  "https://schema.org/value" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00076"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00003/20210907/1/disprot.org/DP00003/882439562",
+  "@type" : [ "https://schema.org/PropertyValue" ],
+  "https://schema.org/name" : [ {
+    "@value" : "Term"
+  } ],
+  "https://schema.org/value" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00076"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00004/20210907/2/disprot.org/DP00004/1619892227",
+  "@type" : [ "https://schema.org/PropertyValue" ],
+  "https://schema.org/name" : [ {
+    "@value" : "Term"
+  } ],
+  "https://schema.org/value" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00076"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00004/20210907/2/disprot.org/DP00004/1655452007",
+  "@type" : [ "https://schema.org/PropertyValue" ],
+  "https://schema.org/name" : [ {
+    "@value" : "Protein disorder content"
+  } ],
+  "https://schema.org/propertyID" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00499"
+  } ],
+  "https://schema.org/value" : [ {
+    "@value" : "2.1764705882352942E-1"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00004/20210907/2/disprot.org/DP00004/1820736838",
+  "@type" : [ "https://schema.org/PropertyValue" ],
+  "https://schema.org/name" : [ {
+    "@value" : "Term"
+  } ],
+  "https://schema.org/value" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00510"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00004/20210907/2/disprot.org/DP00004/2045537157",
+  "@type" : [ "https://schema.org/SequenceRange" ],
+  "https://schema.org/rangeEnd" : [ {
+    "@value" : "170"
+  } ],
+  "https://schema.org/rangeStart" : [ {
+    "@value" : "134"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00004/20210907/2/disprot.org/DP00004/2105325746",
+  "@type" : [ "https://schema.org/DefinedTermSet" ],
+  "https://schema.org/name" : [ {
+    "@value" : "NCBI taxon"
+  } ],
+  "https://schema.org/url" : [ {
+    "@id" : "https://bioportal.bioontology.org/ontologies/NCBITAXON"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00004/20210907/2/disprot.org/DP00004/271345528",
+  "@type" : [ "https://schema.org/DefinedTerm" ],
+  "https://schema.org/inDefinedTermSet" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00004/20210907/2/disprot.org/DP00004/2105325746"
+  } ],
+  "https://schema.org/sameAs" : [ {
+    "@id" : "http://purl.uniprot.org/taxonomy/9606"
+  }, {
+    "@id" : "https://identifiers.org/taxonomy:9606"
+  }, {
+    "@id" : "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+  } ],
+  "https://schema.org/termCode" : [ {
+    "@value" : "9606"
+  } ],
+  "https://schema.org/url" : [ {
+    "@id" : "http://purl.bioontology.org/ontology/NCBITAXON/9606"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00004/20210907/2/disprot.org/DP00004/480974100",
+  "@type" : [ "https://schema.org/SequenceRange" ],
+  "https://schema.org/rangeEnd" : [ {
+    "@value" : "170"
+  } ],
+  "https://schema.org/rangeStart" : [ {
+    "@value" : "134"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00004/20210907/2/disprot.org/DP00004/499355226",
+  "@type" : [ "https://schema.org/PropertyValue" ],
+  "https://schema.org/name" : [ {
+    "@value" : "Term"
+  } ],
+  "https://schema.org/value" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00050"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00004/20210907/2/disprot.org/DP00004/960742943",
+  "@type" : [ "https://schema.org/SequenceRange" ],
+  "https://schema.org/rangeEnd" : [ {
+    "@value" : "170"
+  } ],
+  "https://schema.org/rangeStart" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00004/20210907/2/disprot.org/DP00004/98832210",
+  "@type" : [ "https://schema.org/SequenceRange" ],
+  "https://schema.org/rangeEnd" : [ {
+    "@value" : "170"
+  } ],
+  "https://schema.org/rangeStart" : [ {
+    "@value" : "134"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/1009444519",
+  "@type" : [ "https://schema.org/PropertyValue" ],
+  "https://schema.org/name" : [ {
+    "@value" : "Term"
+  } ],
+  "https://schema.org/value" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00076"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/1077537019",
+  "@type" : [ "https://schema.org/SequenceRange" ],
+  "https://schema.org/rangeEnd" : [ {
+    "@value" : "47"
+  } ],
+  "https://schema.org/rangeStart" : [ {
+    "@value" : "34"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/1199537498",
+  "@type" : [ "https://schema.org/PropertyValue" ],
+  "https://schema.org/name" : [ {
+    "@value" : "Term"
+  } ],
+  "https://schema.org/value" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00063"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/1257796954",
+  "@type" : [ "https://schema.org/PropertyValue" ],
+  "https://schema.org/name" : [ {
+    "@value" : "Term"
+  } ],
+  "https://schema.org/value" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00076"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/1271382721",
+  "@type" : [ "https://schema.org/SequenceRange" ],
+  "https://schema.org/rangeEnd" : [ {
+    "@value" : "107"
+  } ],
+  "https://schema.org/rangeStart" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/1413740343",
+  "@type" : [ "https://schema.org/PropertyValue" ],
+  "https://schema.org/name" : [ {
+    "@value" : "Term"
+  } ],
+  "https://schema.org/value" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00050"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/1535211358",
+  "@type" : [ "https://schema.org/PropertyValue" ],
+  "https://schema.org/name" : [ {
+    "@value" : "Term"
+  } ],
+  "https://schema.org/value" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00511"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/1557472421",
+  "@type" : [ "https://schema.org/DefinedTermSet" ],
+  "https://schema.org/name" : [ {
+    "@value" : "NCBI taxon"
+  } ],
+  "https://schema.org/url" : [ {
+    "@id" : "https://bioportal.bioontology.org/ontologies/NCBITAXON"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/1603435240",
+  "@type" : [ "https://schema.org/PropertyValue" ],
+  "https://schema.org/name" : [ {
+    "@value" : "Term"
+  } ],
+  "https://schema.org/value" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00050"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/1666891346",
+  "@type" : [ "https://schema.org/PropertyValue" ],
+  "https://schema.org/name" : [ {
+    "@value" : "Term"
+  } ],
+  "https://schema.org/value" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00076"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/1682055931",
+  "@type" : [ "https://schema.org/PropertyValue" ],
+  "https://schema.org/name" : [ {
+    "@value" : "Term"
+  } ],
+  "https://schema.org/value" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00066"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/1786460745",
+  "@type" : [ "https://schema.org/SequenceRange" ],
+  "https://schema.org/rangeEnd" : [ {
+    "@value" : "107"
+  } ],
+  "https://schema.org/rangeStart" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/1895124567",
+  "@type" : [ "https://schema.org/DefinedTerm" ],
+  "https://schema.org/inDefinedTermSet" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/1557472421"
+  } ],
+  "https://schema.org/sameAs" : [ {
+    "@id" : "http://purl.uniprot.org/taxonomy/10710"
+  }, {
+    "@id" : "https://identifiers.org/taxonomy:10710"
+  }, {
+    "@id" : "http://purl.obolibrary.org/obo/NCBITaxon_10710"
+  } ],
+  "https://schema.org/termCode" : [ {
+    "@value" : "10710"
+  } ],
+  "https://schema.org/url" : [ {
+    "@id" : "http://purl.bioontology.org/ontology/NCBITAXON/10710"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/1906093950",
+  "@type" : [ "https://schema.org/SequenceRange" ],
+  "https://schema.org/rangeEnd" : [ {
+    "@value" : "107"
+  } ],
+  "https://schema.org/rangeStart" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/2005379000",
+  "@type" : [ "https://schema.org/SequenceRange" ],
+  "https://schema.org/rangeEnd" : [ {
+    "@value" : "107"
+  } ],
+  "https://schema.org/rangeStart" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/2011680892",
+  "@type" : [ "https://schema.org/PropertyValue" ],
+  "https://schema.org/name" : [ {
+    "@value" : "Term"
+  } ],
+  "https://schema.org/value" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00510"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/2079549948",
+  "@type" : [ "https://schema.org/SequenceRange" ],
+  "https://schema.org/rangeEnd" : [ {
+    "@value" : "36"
+  } ],
+  "https://schema.org/rangeStart" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/2145892216",
+  "@type" : [ "https://schema.org/SequenceRange" ],
+  "https://schema.org/rangeEnd" : [ {
+    "@value" : "47"
+  } ],
+  "https://schema.org/rangeStart" : [ {
+    "@value" : "34"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/235465215",
+  "@type" : [ "https://schema.org/SequenceRange" ],
+  "https://schema.org/rangeEnd" : [ {
+    "@value" : "107"
+  } ],
+  "https://schema.org/rangeStart" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/313846963",
+  "@type" : [ "https://schema.org/SequenceRange" ],
+  "https://schema.org/rangeEnd" : [ {
+    "@value" : "107"
+  } ],
+  "https://schema.org/rangeStart" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/339817883",
+  "@type" : [ "https://schema.org/SequenceRange" ],
+  "https://schema.org/rangeEnd" : [ {
+    "@value" : "107"
+  } ],
+  "https://schema.org/rangeStart" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/346339967",
+  "@type" : [ "https://schema.org/PropertyValue" ],
+  "https://schema.org/name" : [ {
+    "@value" : "Term"
+  } ],
+  "https://schema.org/value" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00076"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/37194791",
+  "@type" : [ "https://schema.org/PropertyValue" ],
+  "https://schema.org/name" : [ {
+    "@value" : "Term"
+  } ],
+  "https://schema.org/value" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00076"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/422739231",
+  "@type" : [ "https://schema.org/PropertyValue" ],
+  "https://schema.org/name" : [ {
+    "@value" : "Term"
+  } ],
+  "https://schema.org/value" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00517"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/524863385",
+  "@type" : [ "https://schema.org/SequenceRange" ],
+  "https://schema.org/rangeEnd" : [ {
+    "@value" : "22"
+  } ],
+  "https://schema.org/rangeStart" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/550065185",
+  "@type" : [ "https://schema.org/SequenceRange" ],
+  "https://schema.org/rangeEnd" : [ {
+    "@value" : "22"
+  } ],
+  "https://schema.org/rangeStart" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/594029466",
+  "@type" : [ "https://schema.org/PropertyValue" ],
+  "https://schema.org/name" : [ {
+    "@value" : "Term"
+  } ],
+  "https://schema.org/value" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00511"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/622723804",
+  "@type" : [ "https://schema.org/PropertyValue" ],
+  "https://schema.org/name" : [ {
+    "@value" : "Term"
+  } ],
+  "https://schema.org/value" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00510"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/652441487",
+  "@type" : [ "https://schema.org/PropertyValue" ],
+  "https://schema.org/name" : [ {
+    "@value" : "Term"
+  } ],
+  "https://schema.org/value" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00063"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/661824365",
+  "@type" : [ "https://schema.org/SequenceRange" ],
+  "https://schema.org/rangeEnd" : [ {
+    "@value" : "107"
+  } ],
+  "https://schema.org/rangeStart" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/679459059",
+  "@type" : [ "https://schema.org/SequenceRange" ],
+  "https://schema.org/rangeEnd" : [ {
+    "@value" : "107"
+  } ],
+  "https://schema.org/rangeStart" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/726966167",
+  "@type" : [ "https://schema.org/SequenceRange" ],
+  "https://schema.org/rangeEnd" : [ {
+    "@value" : "107"
+  } ],
+  "https://schema.org/rangeStart" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/851963025",
+  "@type" : [ "https://schema.org/PropertyValue" ],
+  "https://schema.org/name" : [ {
+    "@value" : "Term"
+  } ],
+  "https://schema.org/value" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00066"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/868802206",
+  "@type" : [ "https://schema.org/SequenceRange" ],
+  "https://schema.org/rangeEnd" : [ {
+    "@value" : "22"
+  } ],
+  "https://schema.org/rangeStart" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/924391138",
+  "@type" : [ "https://schema.org/PropertyValue" ],
+  "https://schema.org/name" : [ {
+    "@value" : "Protein disorder content"
+  } ],
+  "https://schema.org/propertyID" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00499"
+  } ],
+  "https://schema.org/value" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/945847033",
+  "@type" : [ "https://schema.org/SequenceRange" ],
+  "https://schema.org/rangeEnd" : [ {
+    "@value" : "107"
+  } ],
+  "https://schema.org/rangeStart" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/crawl/v1/disprot/disprot/20210907/1/disprot.org/1195803267",
+  "@type" : [ "https://schema.org/Person" ],
+  "https://schema.org/email" : [ {
+    "@value" : "silvio.tosatto@unipd.it"
+  } ],
+  "https://schema.org/familyName" : [ {
+    "@value" : "Tosatto"
+  } ],
+  "https://schema.org/givenName" : [ {
+    "@value" : "Silvio"
+  } ],
+  "https://schema.org/identifier" : [ {
+    "@value" : "https://orcid.org/0000-0003-4525-7793"
+  } ],
+  "https://schema.org/name" : [ {
+    "@value" : "Silvio Tosatto"
+  } ],
+  "https://schema.org/url" : [ {
+    "@id" : "https://biocomputingup.it/people/silvio"
+  } ]
+}, {
+  "@id" : "https://bioschemas.org/profiles/DataCatalog/0.3-RELEASE-2019_07_01",
+  "@type" : [ "https://schema.org/CreativeWork" ]
+}, {
+  "@id" : "https://bioschemas.org/profiles/Dataset/0.3-RELEASE-2019_06_14",
+  "@type" : [ "https://schema.org/CreativeWork" ]
+}, {
+  "@id" : "https://bioschemas.org/profiles/Organization/0.2-DRAFT-2019_07_19",
+  "@type" : [ "https://schema.org/CreativeWork" ]
+}, {
+  "@id" : "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+  "@type" : [ "https://schema.org/CreativeWork" ]
+}, {
+  "@id" : "https://creativecommons.org/licensEs/by/4.0/",
+  "@type" : [ "https://schema.org/CreativeWork" ],
+  "https://schema.org/name" : [ {
+    "@value" : "Creative Commons CC4 Attribution"
+  } ],
+  "https://schema.org/url" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0"
+  } ]
+}, {
+  "@id" : "https://disprot.org",
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "DisProt"
+  } ]
+}, {
+  "@id" : "https://disprot.org/#2021-08",
+  "@type" : [ "https://schema.org/Dataset" ],
+  "http://purl.org/dc/terms/conformsTo" : [ {
+    "@id" : "https://bioschemas.org/profiles/Dataset/0.3-RELEASE-2019_06_14"
+  } ],
+  "https://schema.org/creator" : [ {
+    "@id" : "https://biocomputingup.it/#Organization"
+  } ],
+  "https://schema.org/dateModified" : [ {
+    "@value" : "2021-08"
+  } ],
+  "https://schema.org/description" : [ {
+    "@value" : "DisProt is a database of intrinsically disordered proteins. Disordered regions are manually curated from literature. DisProt annotations cover both structural and functional aspects of disorder detected by specific experimental methods. Annotation concepts and detection methods are encoded in the Disorder Ontology."
+  } ],
+  "https://schema.org/identifier" : [ {
+    "@value" : "https://disprot.org/#2020-12"
+  } ],
+  "https://schema.org/includedInDataCatalog" : [ {
+    "@id" : "https://disprot.org/#DataCatalog"
+  } ],
+  "https://schema.org/keywords" : [ {
+    "@value" : "DisProt"
+  }, {
+    "@value" : "IDP"
+  }, {
+    "@value" : "IDPs"
+  }, {
+    "@value" : "intrinsic protein disorder"
+  }, {
+    "@value" : "protein annotation"
+  }, {
+    "@value" : "protein disorder"
+  }, {
+    "@value" : "manually curated"
+  } ],
+  "https://schema.org/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0"
+  } ],
+  "https://schema.org/name" : [ {
+    "@value" : "DisProt"
+  } ],
+  "https://schema.org/url" : [ {
+    "@id" : "https://disprot.org"
+  } ],
+  "https://schema.org/version" : [ {
+    "@value" : "8.3"
+  } ]
+}, {
+  "@id" : "https://disprot.org/#DataCatalog",
+  "@type" : [ "https://schema.org/DataCatalog" ],
+  "http://purl.org/dc/terms/conformsTo" : [ {
+    "@id" : "https://bioschemas.org/profiles/DataCatalog/0.3-RELEASE-2019_07_01"
+  } ],
+  "https://schema.org/citation" : [ {
+    "@id" : "https://doi.org/10.1093/nar/gkz975"
+  } ],
+  "https://schema.org/dataset" : [ {
+    "@id" : "https://disprot.org/#2021-08"
+  } ],
+  "https://schema.org/dateModified" : [ {
+    "@value" : "2021-08"
+  } ],
+  "https://schema.org/datePublished" : [ {
+    "@value" : "2019-09"
+  } ],
+  "https://schema.org/description" : [ {
+    "@value" : "DisProt is a database of intrinsically disordered proteins. Disordered regions are manually curated from literature. DisProt annotations cover both structural and functional aspects of disorder detected by specific experimental methods. Annotation concepts and detection methods are encoded in the Disorder Ontology."
+  } ],
+  "https://schema.org/encodingFormat" : [ {
+    "@value" : "text/html"
+  }, {
+    "@value" : "application/json"
+  } ],
+  "https://schema.org/identifier" : [ {
+    "@value" : "https://registry.identifiers.org/registry/disprot"
+  } ],
+  "https://schema.org/keywords" : [ {
+    "@value" : "DisProt"
+  }, {
+    "@value" : "IDP"
+  }, {
+    "@value" : "IDPs"
+  }, {
+    "@value" : "intrinsic protein disorder"
+  }, {
+    "@value" : "protein annotation"
+  }, {
+    "@value" : "protein disorder"
+  } ],
+  "https://schema.org/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0"
+  } ],
+  "https://schema.org/name" : [ {
+    "@value" : "DisProt, The database of intrinsically disordered proteins"
+  } ],
+  "https://schema.org/provider" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/disprot/20210907/1/disprot.org/1195803267"
+  } ],
+  "https://schema.org/sameAs" : [ {
+    "@id" : "https://registry.identifiers.org/registry/disprot"
+  } ],
+  "https://schema.org/sourceOrganization" : [ {
+    "@id" : "https://biocomputingup.it/#Organization"
+  } ],
+  "https://schema.org/url" : [ {
+    "@id" : "https://disprot.org"
+  } ]
+}, {
+  "@id" : "https://disprot.org/DP00003",
+  "@type" : [ "https://schema.org/Protein" ],
+  "http://purl.org/dc/terms/conformsTo" : [ {
+    "@id" : "https://bioschemas.org/profiles/Protein/0.11-RELEASE"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "DisProt"
+  } ],
+  "https://schema.org/hasBioPolymerSequence" : [ {
+    "@value" : "MASREEEQRETTPERGRGAARRPPTMEDVSSPSPSPPPPRAPPKKRMRRRIESEDEEDSSQDALVPRTPSPRPSTSAADLAIAPKKKKKRPSPKPERPPSPEVIVDSEEEREDVALQMVGFSNPPVLIKHGKGGKRTVRRLNEDDPVARGMRTQEEEEEPSEAESEITVMNPLSVPIVSAWEKGMEAARALMDKYHVDNDLKANFKLLPDQVEALAAVCKTWLNEEHRGLQLTFTSKKTFVTMMGRFLQAYLQSFAEVTYKHHEPTGCALWLHRCAEIEGELKCLHGSIMINKEHVIEMDVTSENGQRALKEQSSKAKIVKNRWGRNVVQISNTDARCCVHDAACPANQFSGKSCGMFFSEGAKAQVAFKQIKAFMQALYPNAQTGHGHLLMPLRCECNSKPGHAPFLGRQLPKLTPFALSNAEDLDADLISDKSVLASVHHPALIVFQCCNPVYRNSRAQGGGPNCDFKISAPDLLNALVMVRSLWSENFTELPRMVVPEFKWSTKHQYRNVSLPVAHSDARQNPFDF"
+  } ],
+  "https://schema.org/hasSequenceAnnotation" : [ {
+    "@id" : "https://disprot.org/DP00003#disorder-content"
+  }, {
+    "@id" : "https://disprot.org/DP00003r002"
+  }, {
+    "@id" : "https://disprot.org/DP00003r004"
+  } ],
+  "https://schema.org/identifier" : [ {
+    "@value" : "https://identifiers.org/disprot:DP00003"
+  } ],
+  "https://schema.org/includedInDataset" : [ {
+    "@value" : "https://disprot.org/#2021-08"
+  } ],
+  "https://schema.org/name" : [ {
+    "@value" : "DNA-binding protein"
+  } ],
+  "https://schema.org/sameAs" : [ {
+    "@id" : "http://purl.uniprot.org/uniprot/P03265"
+  } ],
+  "https://schema.org/taxonomicRange" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00003/20210907/1/disprot.org/DP00003/1896912531"
+  } ]
+}, {
+  "@id" : "https://disprot.org/DP00003#disorder-content",
+  "@type" : [ "https://schema.org/SequenceAnnotation" ],
+  "https://schema.org/additionalProperty" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00003/20210907/1/disprot.org/DP00003/1748786242"
+  } ],
+  "https://schema.org/sequenceLocation" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00003/20210907/1/disprot.org/DP00003/1941496935"
+  } ]
+}, {
+  "@id" : "https://disprot.org/DP00003r002",
+  "@type" : [ "https://schema.org/SequenceAnnotation" ],
+  "https://schema.org/additionalProperty" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00003/20210907/1/disprot.org/DP00003/358568134"
+  } ],
+  "https://schema.org/sequenceLocation" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00003/20210907/1/disprot.org/DP00003/1343757371"
+  } ],
+  "https://schema.org/subjectOf" : [ {
+    "@id" : "https://identifiers.org/pubmed:8632448"
+  } ]
+}, {
+  "@id" : "https://disprot.org/DP00003r004",
+  "@type" : [ "https://schema.org/SequenceAnnotation" ],
+  "https://schema.org/additionalProperty" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00003/20210907/1/disprot.org/DP00003/882439562"
+  } ],
+  "https://schema.org/sequenceLocation" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00003/20210907/1/disprot.org/DP00003/1439209021"
+  } ],
+  "https://schema.org/subjectOf" : [ {
+    "@id" : "https://identifiers.org/pubmed:8632448"
+  } ]
+}, {
+  "@id" : "https://disprot.org/DP00004",
+  "@type" : [ "https://schema.org/Protein" ],
+  "http://purl.org/dc/terms/conformsTo" : [ {
+    "@id" : "https://bioschemas.org/profiles/Protein/0.11-RELEASE"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "DisProt"
+  } ],
+  "https://schema.org/hasBioPolymerSequence" : [ {
+    "@value" : "MKTQRDGHSLGRWSLVLLLLGLVMPLAIIAQVLSYKEAVLRAIDGINQRSSDANLYRLLDLDPRPTMDGDPDTPKPVSFTVKETVCPRTTQQSPEDCDFKKDGLVKRCMGTVTLNQARGSFDISCDKDNKRFALLGDFFRKSKEKIGKEFKRIVQRIKDFLRNLVPRTES"
+  } ],
+  "https://schema.org/hasSequenceAnnotation" : [ {
+    "@id" : "https://disprot.org/DP00004#disorder-content"
+  }, {
+    "@id" : "https://disprot.org/DP00004r001"
+  }, {
+    "@id" : "https://disprot.org/DP00004r002"
+  }, {
+    "@id" : "https://disprot.org/DP00004r004"
+  } ],
+  "https://schema.org/identifier" : [ {
+    "@value" : "https://identifiers.org/disprot:DP00004"
+  } ],
+  "https://schema.org/includedInDataset" : [ {
+    "@value" : "https://disprot.org/#2021-08"
+  } ],
+  "https://schema.org/name" : [ {
+    "@value" : "Cathelicidin antimicrobial peptide"
+  } ],
+  "https://schema.org/sameAs" : [ {
+    "@id" : "http://purl.uniprot.org/uniprot/P49913"
+  } ],
+  "https://schema.org/taxonomicRange" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00004/20210907/2/disprot.org/DP00004/271345528"
+  } ]
+}, {
+  "@id" : "https://disprot.org/DP00004#disorder-content",
+  "@type" : [ "https://schema.org/SequenceAnnotation" ],
+  "https://schema.org/additionalProperty" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00004/20210907/2/disprot.org/DP00004/1655452007"
+  } ],
+  "https://schema.org/sequenceLocation" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00004/20210907/2/disprot.org/DP00004/960742943"
+  } ]
+}, {
+  "@id" : "https://disprot.org/DP00004r001",
+  "@type" : [ "https://schema.org/SequenceAnnotation" ],
+  "https://schema.org/additionalProperty" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00004/20210907/2/disprot.org/DP00004/1619892227"
+  } ],
+  "https://schema.org/sequenceLocation" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00004/20210907/2/disprot.org/DP00004/480974100"
+  } ],
+  "https://schema.org/subjectOf" : [ {
+    "@id" : "https://identifiers.org/pubmed:9452503"
+  } ]
+}, {
+  "@id" : "https://disprot.org/DP00004r002",
+  "@type" : [ "https://schema.org/SequenceAnnotation" ],
+  "https://schema.org/additionalProperty" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00004/20210907/2/disprot.org/DP00004/499355226"
+  } ],
+  "https://schema.org/sequenceLocation" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00004/20210907/2/disprot.org/DP00004/2045537157"
+  } ],
+  "https://schema.org/subjectOf" : [ {
+    "@id" : "https://identifiers.org/pubmed:9452503"
+  } ]
+}, {
+  "@id" : "https://disprot.org/DP00004r004",
+  "@type" : [ "https://schema.org/SequenceAnnotation" ],
+  "https://schema.org/additionalProperty" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00004/20210907/2/disprot.org/DP00004/1820736838"
+  } ],
+  "https://schema.org/sequenceLocation" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00004/20210907/2/disprot.org/DP00004/98832210"
+  } ],
+  "https://schema.org/subjectOf" : [ {
+    "@id" : "https://identifiers.org/pubmed:9452503"
+  } ]
+}, {
+  "@id" : "https://disprot.org/DP00005",
+  "@type" : [ "https://schema.org/Protein" ],
+  "http://purl.org/dc/terms/conformsTo" : [ {
+    "@id" : "https://bioschemas.org/profiles/Protein/0.11-RELEASE"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "DisProt"
+  } ],
+  "https://schema.org/hasBioPolymerSequence" : [ {
+    "@value" : "MDAQTRRRERRAEKQAQWKAANPLLVGVSAKPVNRPILSLNRKPKSRVESALNPIDLTVLAEYHKQIESNLQRIERKNQRTWYSKPGERGITCSGRQKIKGKSIPLI"
+  } ],
+  "https://schema.org/hasSequenceAnnotation" : [ {
+    "@id" : "https://disprot.org/DP00005#disorder-content"
+  }, {
+    "@id" : "https://disprot.org/DP00005r001"
+  }, {
+    "@id" : "https://disprot.org/DP00005r004"
+  }, {
+    "@id" : "https://disprot.org/DP00005r005"
+  }, {
+    "@id" : "https://disprot.org/DP00005r006"
+  }, {
+    "@id" : "https://disprot.org/DP00005r007"
+  }, {
+    "@id" : "https://disprot.org/DP00005r008"
+  }, {
+    "@id" : "https://disprot.org/DP00005r009"
+  }, {
+    "@id" : "https://disprot.org/DP00005r010"
+  }, {
+    "@id" : "https://disprot.org/DP00005r011"
+  }, {
+    "@id" : "https://disprot.org/DP00005r012"
+  }, {
+    "@id" : "https://disprot.org/DP00005r013"
+  }, {
+    "@id" : "https://disprot.org/DP00005r014"
+  }, {
+    "@id" : "https://disprot.org/DP00005r015"
+  }, {
+    "@id" : "https://disprot.org/DP00005r016"
+  }, {
+    "@id" : "https://disprot.org/DP00005r017"
+  }, {
+    "@id" : "https://disprot.org/DP00005r018"
+  } ],
+  "https://schema.org/identifier" : [ {
+    "@value" : "https://identifiers.org/disprot:DP00005"
+  } ],
+  "https://schema.org/includedInDataset" : [ {
+    "@value" : "https://disprot.org/#2021-08"
+  } ],
+  "https://schema.org/name" : [ {
+    "@value" : "Antitermination protein N"
+  } ],
+  "https://schema.org/sameAs" : [ {
+    "@id" : "http://purl.uniprot.org/uniprot/P03045"
+  } ],
+  "https://schema.org/taxonomicRange" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/1895124567"
+  } ]
+}, {
+  "@id" : "https://disprot.org/DP00005#disorder-content",
+  "@type" : [ "https://schema.org/SequenceAnnotation" ],
+  "https://schema.org/additionalProperty" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/924391138"
+  } ],
+  "https://schema.org/sequenceLocation" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/235465215"
+  } ]
+}, {
+  "@id" : "https://disprot.org/DP00005r001",
+  "@type" : [ "https://schema.org/SequenceAnnotation" ],
+  "https://schema.org/additionalProperty" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/1257796954"
+  } ],
+  "https://schema.org/sequenceLocation" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/661824365"
+  } ],
+  "https://schema.org/subjectOf" : [ {
+    "@id" : "https://identifiers.org/pubmed:9659923"
+  } ]
+}, {
+  "@id" : "https://disprot.org/DP00005r004",
+  "@type" : [ "https://schema.org/SequenceAnnotation" ],
+  "https://schema.org/additionalProperty" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/37194791"
+  } ],
+  "https://schema.org/sequenceLocation" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/726966167"
+  } ],
+  "https://schema.org/subjectOf" : [ {
+    "@id" : "https://identifiers.org/pubmed:21936008"
+  } ]
+}, {
+  "@id" : "https://disprot.org/DP00005r005",
+  "@type" : [ "https://schema.org/SequenceAnnotation" ],
+  "https://schema.org/additionalProperty" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/1009444519"
+  } ],
+  "https://schema.org/sequenceLocation" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/679459059"
+  } ],
+  "https://schema.org/subjectOf" : [ {
+    "@id" : "https://identifiers.org/pubmed:9063900"
+  } ]
+}, {
+  "@id" : "https://disprot.org/DP00005r006",
+  "@type" : [ "https://schema.org/SequenceAnnotation" ],
+  "https://schema.org/additionalProperty" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/1682055931"
+  } ],
+  "https://schema.org/sequenceLocation" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/339817883"
+  } ],
+  "https://schema.org/subjectOf" : [ {
+    "@id" : "https://identifiers.org/pubmed:9063900"
+  } ]
+}, {
+  "@id" : "https://disprot.org/DP00005r007",
+  "@type" : [ "https://schema.org/SequenceAnnotation" ],
+  "https://schema.org/additionalProperty" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/346339967"
+  } ],
+  "https://schema.org/sequenceLocation" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/2005379000"
+  } ],
+  "https://schema.org/subjectOf" : [ {
+    "@id" : "https://identifiers.org/pubmed:9063900"
+  } ]
+}, {
+  "@id" : "https://disprot.org/DP00005r008",
+  "@type" : [ "https://schema.org/SequenceAnnotation" ],
+  "https://schema.org/additionalProperty" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/1535211358"
+  } ],
+  "https://schema.org/sequenceLocation" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/313846963"
+  } ],
+  "https://schema.org/subjectOf" : [ {
+    "@id" : "https://identifiers.org/pubmed:9063900"
+  } ]
+}, {
+  "@id" : "https://disprot.org/DP00005r009",
+  "@type" : [ "https://schema.org/SequenceAnnotation" ],
+  "https://schema.org/additionalProperty" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/594029466"
+  } ],
+  "https://schema.org/sequenceLocation" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/1271382721"
+  } ],
+  "https://schema.org/subjectOf" : [ {
+    "@id" : "https://identifiers.org/pubmed:9063900"
+  } ]
+}, {
+  "@id" : "https://disprot.org/DP00005r010",
+  "@type" : [ "https://schema.org/SequenceAnnotation" ],
+  "https://schema.org/additionalProperty" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/622723804"
+  } ],
+  "https://schema.org/sequenceLocation" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/1786460745"
+  } ],
+  "https://schema.org/subjectOf" : [ {
+    "@id" : "https://identifiers.org/pubmed:30795892"
+  } ]
+}, {
+  "@id" : "https://disprot.org/DP00005r011",
+  "@type" : [ "https://schema.org/SequenceAnnotation" ],
+  "https://schema.org/additionalProperty" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/422739231"
+  } ],
+  "https://schema.org/sequenceLocation" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/1906093950"
+  } ],
+  "https://schema.org/subjectOf" : [ {
+    "@id" : "https://identifiers.org/pubmed:30795892"
+  } ]
+}, {
+  "@id" : "https://disprot.org/DP00005r012",
+  "@type" : [ "https://schema.org/SequenceAnnotation" ],
+  "https://schema.org/additionalProperty" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/1603435240"
+  } ],
+  "https://schema.org/sequenceLocation" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/868802206"
+  } ],
+  "https://schema.org/subjectOf" : [ {
+    "@id" : "https://identifiers.org/pubmed:9659923"
+  } ]
+}, {
+  "@id" : "https://disprot.org/DP00005r013",
+  "@type" : [ "https://schema.org/SequenceAnnotation" ],
+  "https://schema.org/additionalProperty" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/1199537498"
+  } ],
+  "https://schema.org/sequenceLocation" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/1077537019"
+  } ],
+  "https://schema.org/subjectOf" : [ {
+    "@id" : "https://identifiers.org/pubmed:9659923"
+  } ]
+}, {
+  "@id" : "https://disprot.org/DP00005r014",
+  "@type" : [ "https://schema.org/SequenceAnnotation" ],
+  "https://schema.org/additionalProperty" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/652441487"
+  } ],
+  "https://schema.org/sequenceLocation" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/2145892216"
+  } ],
+  "https://schema.org/subjectOf" : [ {
+    "@id" : "https://identifiers.org/pubmed:9659923"
+  } ]
+}, {
+  "@id" : "https://disprot.org/DP00005r015",
+  "@type" : [ "https://schema.org/SequenceAnnotation" ],
+  "https://schema.org/additionalProperty" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/851963025"
+  } ],
+  "https://schema.org/sequenceLocation" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/524863385"
+  } ],
+  "https://schema.org/subjectOf" : [ {
+    "@id" : "https://identifiers.org/pubmed:9659923"
+  } ]
+}, {
+  "@id" : "https://disprot.org/DP00005r016",
+  "@type" : [ "https://schema.org/SequenceAnnotation" ],
+  "https://schema.org/additionalProperty" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/2011680892"
+  } ],
+  "https://schema.org/sequenceLocation" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/550065185"
+  } ],
+  "https://schema.org/subjectOf" : [ {
+    "@id" : "https://identifiers.org/pubmed:9659923"
+  } ]
+}, {
+  "@id" : "https://disprot.org/DP00005r017",
+  "@type" : [ "https://schema.org/SequenceAnnotation" ],
+  "https://schema.org/additionalProperty" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/1666891346"
+  } ],
+  "https://schema.org/sequenceLocation" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/945847033"
+  } ],
+  "https://schema.org/subjectOf" : [ {
+    "@id" : "https://identifiers.org/pubmed:10759866"
+  } ]
+}, {
+  "@id" : "https://disprot.org/DP00005r018",
+  "@type" : [ "https://schema.org/SequenceAnnotation" ],
+  "https://schema.org/additionalProperty" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/1413740343"
+  } ],
+  "https://schema.org/sequenceLocation" : [ {
+    "@id" : "https://bioschemas.org/crawl/v1/disprot/DP00005/20210907/3/disprot.org/DP00005/2079549948"
+  } ],
+  "https://schema.org/subjectOf" : [ {
+    "@id" : "https://identifiers.org/pubmed:10759866"
+  } ]
+}, {
+  "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl",
+  "@type" : [ "https://schema.org/DefinedTermSet" ],
+  "https://schema.org/name" : [ {
+    "@value" : "IDP ontology"
+  } ]
+}, {
+  "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00050",
+  "@type" : [ "https://schema.org/DefinedTerm" ],
+  "https://schema.org/inDefinedTermSet" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl"
+  } ],
+  "https://schema.org/name" : [ {
+    "@value" : "disorder to order"
+  } ],
+  "https://schema.org/termCode" : [ {
+    "@value" : "IDPO:00050"
+  } ]
+}, {
+  "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00063",
+  "@type" : [ "https://schema.org/DefinedTerm" ],
+  "https://schema.org/inDefinedTermSet" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl"
+  } ],
+  "https://schema.org/name" : [ {
+    "@value" : "protein binding"
+  } ],
+  "https://schema.org/termCode" : [ {
+    "@value" : "IDPO:00063"
+  } ]
+}, {
+  "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00066",
+  "@type" : [ "https://schema.org/DefinedTerm" ],
+  "https://schema.org/inDefinedTermSet" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl"
+  } ],
+  "https://schema.org/name" : [ {
+    "@value" : "RNA binding"
+  } ],
+  "https://schema.org/termCode" : [ {
+    "@value" : "IDPO:00066"
+  } ]
+}, {
+  "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00076",
+  "@type" : [ "https://schema.org/DefinedTerm" ],
+  "https://schema.org/inDefinedTermSet" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl"
+  } ],
+  "https://schema.org/name" : [ {
+    "@value" : "disorder"
+  } ],
+  "https://schema.org/termCode" : [ {
+    "@value" : "IDPO:00076"
+  } ]
+}, {
+  "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00510",
+  "@type" : [ "https://schema.org/DefinedTerm" ],
+  "https://schema.org/inDefinedTermSet" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl"
+  } ],
+  "https://schema.org/name" : [ {
+    "@value" : "molecular function regulator"
+  } ],
+  "https://schema.org/termCode" : [ {
+    "@value" : "IDPO:00510"
+  } ]
+}, {
+  "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00511",
+  "@type" : [ "https://schema.org/DefinedTerm" ],
+  "https://schema.org/inDefinedTermSet" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl"
+  } ],
+  "https://schema.org/name" : [ {
+    "@value" : "molecular function activator activity"
+  } ],
+  "https://schema.org/termCode" : [ {
+    "@value" : "IDPO:00511"
+  } ]
+}, {
+  "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00517",
+  "@type" : [ "https://schema.org/DefinedTerm" ],
+  "https://schema.org/inDefinedTermSet" : [ {
+    "@id" : "https://disprot.org/assets/data/IDPO_v0.2.owl"
+  } ],
+  "https://schema.org/name" : [ {
+    "@value" : "molecular adaptor activity"
+  } ],
+  "https://schema.org/termCode" : [ {
+    "@value" : "IDPO:00517"
+  } ]
+}, {
+  "@id" : "https://disprot.org/browse",
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "DisProt"
+  } ]
+}, {
+  "@id" : "https://doi.org/10.1093/nar/gkz975",
+  "@type" : [ "https://schema.org/ScholarlyArticle" ],
+  "https://schema.org/name" : [ {
+    "@value" : "DisProt: intrinsic protein disorder annotation in 2020"
+  } ],
+  "https://schema.org/sameAs" : [ {
+    "@id" : "https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkz975/5622715"
+  }, {
+    "@id" : "https://pubmed.ncbi.nlm.nih.gov/31713636"
+  } ],
+  "https://schema.org/url" : [ {
+    "@id" : "https://doi.org/10.1093/nar/gkz975"
+  } ]
+}, {
+  "@id" : "https://identifiers.org/pubmed:10759866",
+  "@type" : [ "https://schema.org/ScholarlyArticle" ]
+}, {
+  "@id" : "https://identifiers.org/pubmed:21936008",
+  "@type" : [ "https://schema.org/ScholarlyArticle" ]
+}, {
+  "@id" : "https://identifiers.org/pubmed:30795892",
+  "@type" : [ "https://schema.org/ScholarlyArticle" ]
+}, {
+  "@id" : "https://identifiers.org/pubmed:8632448",
+  "@type" : [ "https://schema.org/ScholarlyArticle" ]
+}, {
+  "@id" : "https://identifiers.org/pubmed:9063900",
+  "@type" : [ "https://schema.org/ScholarlyArticle" ]
+}, {
+  "@id" : "https://identifiers.org/pubmed:9452503",
+  "@type" : [ "https://schema.org/ScholarlyArticle" ]
+}, {
+  "@id" : "https://identifiers.org/pubmed:9659923",
+  "@type" : [ "https://schema.org/ScholarlyArticle" ]
+} ]

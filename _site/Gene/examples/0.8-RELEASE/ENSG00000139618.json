@@ -1,0 +1,36 @@
+{
+  "@context": "http://schema.org/",
+  "@id": "https://www.ensembl.org/id/ENSG00000139618",
+  "@type": "Gene",
+  "http://purl.org/dc/terms/conformsTo": {
+    "@id": "https://bioschemas.org/profiles/Gene/1.0-RELEASE/",
+    "@type": "CreativeWork"
+  },
+  "identifier": "ENSG00000139618",
+  "name": "BRCA2",
+  "isPartOf": {
+    "@id": "http://www.ensembl.org/#human-gene-set",
+    "@type": "Dataset",
+    "name": "Ensembl Human Gene Set"
+  },
+  "description": "BRCA2 DNA repair associated [Source:HGNC Symbol;Acc:HGNC:1101]",
+  "taxonomicRange": {
+    "codeCategory": {
+      "codeValue": "9606",
+      "inCodeSet": {
+        "@type": "CategoryCodeSet",
+        "name": "NCBI taxon"
+      },
+      "sameAs": "http://purl.uniprot.org/taxonomy/9606",
+      "url": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+      "@type": "CategoryCode"
+    },
+    "alternateName": "Human",
+    "name": "Homo sapiens",
+    "@type": "Taxon"
+  },
+  "isPartOfBioChemEntity": {
+    "@type": "BioChemEntity",
+    "name": "Chromosome 13"
+  }
+}

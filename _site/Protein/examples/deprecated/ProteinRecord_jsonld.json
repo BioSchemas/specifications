@@ -1,0 +1,84 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Record",
+  "@id": "http://www.identifiers.org/uniprot/P00519",
+
+  "identifier": "P00519",
+  "mainEntity": {
+    "@type": "BioChemEntity",
+
+    "additionalType": "http://semanticscience.org/resource/SIO_010043",
+    "identifier": "P00519",
+    "name": "ABL1",
+
+    "additionalProperty": {
+      "@type": "PropertyValue",
+      "additionalType": "http://semanticscience.org/resource/SIO_010081",
+      "name": "gene",
+      "value": {
+        "@type": ["StructuredValue", "BioChemEntity"],
+        "additionalType": "http://semanticscience.org/resource/SIO_010035",
+        "identifier": "ABL1",
+        "name": "ABL1"
+      }
+    },
+
+    "isContainedIn": {
+      "@type": "BioChemEntity",
+      "additionalType": "http://semanticscience.org/resource/SIO_010000",
+      "identifier": "9606",
+      "name": "Homo sapiens",
+      "url": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+      "sameAs": "http://purl.uniprot.org/taxonomy/9606"
+    },
+
+    "url": "http://www.uniprot.org/uniprot/P00519",
+
+    "alternateName": ["ABL", "JTK7"],
+    "description": "Non-receptor tyrosine-protein kinase that plays a role..."
+  },
+
+  "isPartOf": {
+    "@type": "Dataset",
+    "@id": "http://www.uniprot.org/news/2017/03/15/release"
+  },
+
+
+  "url": "http://www.uniprot.org/uniprot/P00519",
+  "sameAs": "http://purl.uniprot.org/uniprot/P00519",
+
+
+  "citation": [{
+      "@id": "http://www.identifiers.org/pubmed/10194451",
+      "@type": "ScholarlyArticle",
+      "headline": "A novel SH2-containing ...",
+      "datePublished": "1999-04-15",
+      "sameAs": [
+        "https://www.ncbi.nlm.nih.gov/pubmed/10194451",
+        "http://europepmc.org/abstract/MED/10194451",
+        "http://purl.uniprot.org/citations/10194451"
+      ]
+    },
+    {
+      "@id": "http://www.identifiers.org/pubmed/9037071",
+      "@type": "ScholarlyArticle",
+      "headline": "Regulation of DNA ...",
+      "datePublished": "1997-02-18",
+      "sameAs": [
+        "https://www.ncbi.nlm.nih.gov/pubmed/9037071",
+        "http://europepmc.org/abstract/MED/9037071",
+        "http://purl.uniprot.org/citations/10194451"
+      ]
+    }
+  ],
+  "dateCreated": "1986-07-21",
+  "dateModified": "2017-03-15",
+  "distribution": {
+    "@type": "DataDownload",
+    "url": "http://www.uniprot.org/uniprot/P00519.fasta"
+  },
+
+  "seeAlso": [
+    "http://www.identifiers.org/pdb/1AB2", "http://www.identifiers.org/pdb/1ABL"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "DataCatalog",
+  "@id": "https://www.covid19dataportal.org/",
+  "name": "COVID-19 Data Portal",
+  "description": "The COVID-19 Data Portal was launched in April 2020 to bring together relevant datasets for sharing and analysis in an effort to accelerate coronavirus research. It enables researchers to upload, access and analyse COVID-19 related reference data and specialist datasets as part of the wider European COVID-19 Data Platform.",
+  "url": "https://www.covid19dataportal.org/",
+  "keywords": [
+    "COVID-19",
+    "coronavirus",
+    "SARS-CoV-2"
+  ],
+  "provider": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.ebi.ac.uk/",
+      "name": "European Bioinformatics Institute",
+      "url": "https://www.ebi.ac.uk/"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://elixir-europe.org/",
+      "name": "ELIXIR",
+      "url": "https://elixir-europe.org/"
+    }
+  ],
+  "dateCreated": "2020-04",
+  "dateModified": "2020-09",
+  "dataset": [
+    {
+      "@type": "Dataset",
+      "@id": "https://www.ebi.ac.uk/ena/",
+      "name": "European Nucleotide Archive (ENA)"
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://www.uniprot.org/uniprot/",
+      "name": "UniProt"
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://www.ebi.ac.uk/pdbe/",
+      "name": "Protein Data Bank in Europe (PDBe)"
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://www.ebi.ac.uk/pdbe/emdb/",
+      "name": "Electron Microscopy Data Bank (EMDB)"
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://www.ebi.ac.uk/gxa/home",
+      "name": "Expression Atlas"
+    },
+    {
+      "@type": "Dataset",
+      "@id": "http://europepmc.org/",
+      "name": "Europe PubMed Central (Europe PMC)"
+    }
+  ]
+}

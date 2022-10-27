@@ -1,0 +1,98 @@
+{
+	"@context": "http://schema.org",
+	"@type": "MolecularEntity",
+	"name": "Dopamine",
+	"alternateName": [
+		"3-hydroxytyramine",
+		"4-(2-aminoethyl)catechol",
+		"4-(2-aminoethyl)pyrocatechol"
+	],
+	"identifier": "CHEMBL59",
+	"url": "https://www.ebi.ac.uk/chembl/beta/compound_report_card/CHEMBL59/",
+	"image": "https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL59.svg?engine=indigo",
+	"sameAs": "https://www.wikidata.org/wiki/Q170304",
+	"molecularFormula": "C8H11NO2",
+	"molecularWeight": 153.181,
+	"monoisotopicMolecularWeight": 153.079,
+	"biologicalRole": [
+		{
+			"@type": "DefinedTerm",
+			"@id": "http://purl.obolibrary.org/obo/CHEBI_35522",
+			"inDefinedTermSet":
+				{
+					"@type":"DefinedTermSet",
+					"@id":"ftp://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.owl",
+					"name": "CHEBI"
+				},
+			"termCode": "CHEBI:35522",
+			"name": "β-adrenergic agonist",
+			"url": "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:35522"
+		},
+		{
+			"@type": "DefinedTerm",
+			"@id": "http://purl.obolibrary.org/obo/CHEBI_77746",
+			"inDefinedTermSet":
+				{
+					"@type":"DefinedTermSet",
+					"@id":"ftp://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.owl",
+					"name": "CHEBI"
+				},
+			"termCode": "CHEBI:77746",
+			"name": "human metabolite",
+			"url": "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:77746"
+		}
+	],
+	"chemicalRole": [
+		{
+			"@type": "DefinedTerm",
+			"@id": "http://purl.obolibrary.org/obo/CHEBI_39142",
+			"inDefinedTermSet":
+				{
+					"@type":"DefinedTermSet",
+					"@id":"ftp://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.owl",
+					"name": "CHEBI"
+				},
+			"termCode": "CHEBI:39142",
+			"name": "Brønsted base",
+			"url": "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:39142"
+		}		
+	],
+	"potentialUse": [
+		{
+			"@type": "DefinedTerm",
+			"@id": "http://purl.obolibrary.org/obo/CHEBI_38147",
+			"inDefinedTermSet":
+				{
+					"@type":"DefinedTermSet",
+					"@id":"ftp://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.owl",
+					"name": "CHEBI"
+				},
+			"termCode": "CHEBI:38147",
+			"name": "cardiotonic drug",
+			"url": "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:38147"
+		}],
+	"biochemicalInteraction": [{
+		"@type": "BioChemEntity",
+		"identifier": "CHEMBL3510",
+		"name": "Carbonic anhydrase XIV",
+		"url": "https://www.ebi.ac.uk/chembl/beta/target_report_card/CHEMBL3510/"
+	}],
+	"inChI": "InChI=1S/C8H11NO2/c9-4-3-6-1-2-7(10)8(11)5-6/h1-2,5,10-11H,3-4,9H2",
+	"inChIKey": "VYFYYTLLBUKUHU-UHFFFAOYSA-N",
+	"smiles": ["NCCc1ccc(O)c(O)c1"],
+	"iupacName": "4-(2-aminoethyl)benzene-1,2-diol",
+	"biochemicalSimilarity": [
+		{
+			"@type": "MolecularEntity",
+			"identifier": "CHEMBL31088",
+			"name": "DEOXIEPINEPHRINE",
+			"url": "https://www.ebi.ac.uk/chembl/beta/compound_report_card/CHEMBL31088/"
+		},
+		{
+			"@type": "MolecularEntity",
+			"identifier": "CHEMBL1950045",
+			"name": "3,4-Dihydroxyphenylethanol",
+			"url": "https://www.ebi.ac.uk/chembl/beta/compound_report_card/CHEMBL1950045/"
+		}
+	]
+}
