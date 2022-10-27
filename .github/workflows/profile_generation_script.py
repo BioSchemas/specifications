@@ -369,7 +369,7 @@ def generate_types_cardianlity(g, prop):
     for t in list_types:
         if len(t.split("/")) > 1:
             expected_types.append(t.split("/")[-1].capitalize())
-            ##If we ever needed it
+            ## If we ever needed it
             # external_type= g['$validation']["definitions"][t.split('/')[-1]]
             # print(Fore.YELLOW + f'Def of the External Type : {external_type}' + Style.RESET_ALL)
 
@@ -390,6 +390,11 @@ def generate_types_cardianlity(g, prop):
         if i == "Uri":
             clean_expected_types.remove(i)
             clean_expected_types.append("URI")
+    # Replace property definitions with their type
+    for i in clean_expected_types:
+        if i in dict_definitions.keys():
+            clean_expected_types.remove(i)
+            clean_expected_types.append(dict_definitions[i])
 
     print(Fore.MAGENTA + f"Expected Types : {clean_expected_types}" + Style.RESET_ALL)
 
@@ -425,16 +430,17 @@ for arg in args:
                     external_properties.append(g["@id"])
 
             for g in data["@graph"]:
-
                 if g["@type"] == "rdfs:Class":
-
                     print(
                         Fore.BLUE
                         + Style.BRIGHT
                         + f'Profile : {g["@id"]}'
                         + Style.RESET_ALL
                     )
-                    # print(Style.BRIGHT + f'{g.keys()}' + Style.RESET_ALL)
+                    # Dictionary of all external definitions
+                    dict_definitions = dict()
+                    for d in g["definitions"]:
+                        dict_definitions[d] = g["definitions"][d]["@type"]
 
                     # For each profile :
                     # Prepare the transfermed profile : spec_info & mapping fields
