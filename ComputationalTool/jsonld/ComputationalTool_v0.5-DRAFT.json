@@ -136,7 +136,7 @@
                         ]
                     },
                     "codeRepository": {
-                        "description": "Link to tdlldhe source code repository of the tool. Link to the repository where the un-compiled, human readable code and related code is located (SVN, github, CodePlex).",
+                        "description": "Linkcc to tdlldhe source code repository of the tool. Link to the repository where the un-compiled, human readable code and related code is located (SVN, github, CodePlex).",
                         "oneOf": [
                             {
                                 "type": "string",
