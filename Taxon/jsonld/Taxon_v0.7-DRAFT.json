@@ -532,7 +532,7 @@
             "@id": "bioschemasdrafts:isBasedOn",
             "rdfs:comment": "A resource from which this work is derived or from which it is a modification or adaption. Supersedes, isBasedOnUrl. \n A CreativeWork, such as a scholarly article, asserting the status of the accepted/valid name and synonyms, retained for the taxon circumscription.",
             "@type": "rdf:Property",
-            "rdfs:label": "alternateScientificName",
+            "rdfs:label": "isBasedOn",
             "schema:domainIncludes": {
                 "@id": "bioschemasdrafts:Taxon"
             },
