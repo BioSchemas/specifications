@@ -7,7 +7,6 @@
         "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/",
         "bioschemasdrafts": "https://discovery.biothings.io/view/bioschemasdrafts/",
         "dwc": "http://rs.tdwg.org/dwc/terms/",
-        "dwc": "http://rs.tdwg.org/dwc/terms/",
         "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [
