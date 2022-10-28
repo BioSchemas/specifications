@@ -610,6 +610,20 @@
                     }
                 }
             }
+        },
+        {
+            "@id": "bioschemas:hasStatus",
+            "rdfs:comment": "One of pseudogene, dead, killed, live, predicted, suppressed.",
+            "@type": "rdf:Property",
+            "rdfs:label": "hasStatus",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Gene"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
         }
     ]
 }
