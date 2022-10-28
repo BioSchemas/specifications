@@ -7,6 +7,7 @@
         "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/",
         "bioschemasdrafts": "https://discovery.biothings.io/view/bioschemasdrafts/",
         "dwc": "http://rs.tdwg.org/dwc/terms/",
+        "dwc": "http://rs.tdwg.org/dwc/terms/",
         "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [
@@ -484,6 +485,60 @@
             "schema:rangeIncludes": [
                 {
                     "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemasdrafts:scientificName",
+            "rdfs:comment": "A TaxonName representing the currently valid (zoological) or accepted (botanical) name for that taxon.",
+            "@type": "rdf:Property",
+            "rdfs:label": "scientificName",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdrafts:Taxon"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemastypesdrafts:TaxonName"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemasdrafts:alternateScientificName",
+            "rdfs:comment": "A TaxonName representing a scientific name, with authorship and date information if known, of a synonym of the currently valid (zoological) or accepted (botanical) name.",
+            "@type": "rdf:Property",
+            "rdfs:label": "alternateScientificName",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdrafts:Taxon"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemastypesdrafts:TaxonName"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemasdrafts:isBasedOn",
+            "rdfs:comment": "A resource from which this work is derived or from which it is a modification or adaption. Supersedes, isBasedOnUrl. \n A CreativeWork, such as a scholarly article, asserting the status of the accepted/valid name and synonyms, retained for the taxon circumscription.",
+            "@type": "rdf:Property",
+            "rdfs:label": "alternateScientificName",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdrafts:Taxon"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:CreativeWork"
                 }
             ]
         }

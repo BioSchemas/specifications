@@ -733,6 +733,23 @@
                     }
                 }
             }
+        },
+        {
+            "@id": "bioschemasdrafts:hasSequenceAnnotation",
+            "rdfs:comment": "An annotation on the BioPolymerSequence associated with this BioChemEntity.",
+            "@type": "rdf:Property",
+            "rdfs:label": "hasSequenceAnnotation",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdrafts:Protein"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemastypesdrafts:SequenceAnnotation"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
         }
     ]
 }
