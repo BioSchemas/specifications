@@ -3,6 +3,7 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/",
         "bioschemasdrafts": "https://discovery.biothings.io/view/bioschemasdrafts/",
         "owl": "http://www.w3.org/2002/07/owl/"
     },
@@ -669,6 +670,23 @@
             "schema:rangeIncludes": [
                 {
                     "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemasdrafts:hasSequenceAnnotation",
+            "rdfs:comment": "An annotation on the BioPolymerSequence associated with this BioChemEntity. For genes, it can be used to link to gene sequence annotations such as variants or so.",
+            "@type": "rdf:Property",
+            "rdfs:label": "hasSequenceAnnotation",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdrafts:Gene"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemastypesdrafts:SequenceAnnotation"
+                },
+                {
+                    "@id": "schema:URL"
                 }
             ]
         }
