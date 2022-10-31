@@ -3,6 +3,7 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/",
         "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
         "owl": "http://www.w3.org/2002/07/owl/"
     },
@@ -638,7 +639,7 @@
                         ]
                     },
                     "dna": {
-                        "@type": "bioschemas:Dna",
+                        "@type": "bioschemastypesdrafts:DNA",
                         "type": "object",
                         "properties": {
                             "encodesBioChemEntity": {
@@ -661,7 +662,7 @@
                         "required": []
                     },
                     "rna": {
-                        "@type": "bioschemas:Rna",
+                        "@type": "bioschemastypesdrafts:RNA",
                         "type": "object",
                         "properties": {
                             "encodesBioChemEntity": {
