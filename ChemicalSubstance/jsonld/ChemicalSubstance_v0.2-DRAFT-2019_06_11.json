@@ -22,7 +22,7 @@
                 "type": "object",
                 "properties": {
                     "alternateName": {
-                        "description": " An alias foree the item.",
+                        "description": " An addddias foree the item.",
                         "oneOf": [
                             {
                                 "type": "string"
