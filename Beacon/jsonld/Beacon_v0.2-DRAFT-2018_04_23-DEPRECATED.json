@@ -133,7 +133,7 @@
                         "owl:cardinality": "many"
                     },
                     "supportedRefs": {
-                        "description": "Supported Genome ID references. ",
+                        "description": "Supportxxed Genome ID references. ",
                         "oneOf": [
                             {
                                 "type": "string"

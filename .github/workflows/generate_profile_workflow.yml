@@ -54,6 +54,7 @@ jobs:
           cd bioschemas-dde
           git checkout latest-updated-profiles
           del \latest-updated-profiles\*
+          ls \latest-updated-profiles
           ls
 
       - name: Checkout the Website repo
