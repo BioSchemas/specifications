@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 from pydoc import doc
 from unittest import skip
+import uuid
 import yaml
 from colorama import Fore
 from colorama import Style
@@ -557,6 +558,7 @@ for arg in args:
                     )
 
                     header = [
+                        "time",
                         "namespace",
                         "name",
                         "subclassOf",
@@ -578,6 +580,7 @@ for arg in args:
                                     SubClass = row[3] + " " + row[4]
 
                     data = [
+                        uuid.uuid1(),
                         "bioschams",
                         profile_name,
                         SubClass,
