@@ -12,7 +12,7 @@
             "@id": "bioschemasdeprecated:Beacon",
             "@type": "rdfs:Class",
             "owl:deprecated": "True",
-            "rdfs:comment": "A convention for beacon to self-describe.  In this document we propose a simple way for a beacons to self-describe their genetic variant cardinality service for better integration with other beacons within the beacon-network. It builds upon the Beacon service API and uses existing schema.org entities and properties.  Version: 0.2-DRAFT-2018_04_23",
+            "rdfs:comment": "A convention for beacons to self-describe.  In this document we propose a simple way for a beacons to self-describe their genetic variant cardinality service for better integration with other beacons within the beacon-network. It builds upon the Beacon service API and uses existing schema.org entities and properties.  Version: 0.2-DRAFT-2018_04_23",
             "schema:schemaVersion": [
                 "https://bioschemas.org/profiles/Beacon/0.2-DRAFT-2018_04_23"
             ],
@@ -110,7 +110,7 @@
                         "owl:cardinality": "many"
                     },
                     "type": {
-                        "description": "This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column. ",
+                        "description": "ddd is used by validation tools to indssssddentify the profile used. You must use the value specified in the Controlled Vocabulary column. ",
                         "type": "string",
                         "format": "uri",
                         "owl:cardinality": "one"
@@ -148,7 +148,7 @@
                         "owl:cardinality": "many"
                     },
                     "url": {
-                        "description": "Welcome Page of this Beacon. URL of the item.",
+                        "description": "Welcome Padddge of this Beacon. URL of the item.",
                         "type": "string",
                         "format": "uri",
                         "owl:cardinality": "one"
@@ -370,46 +370,46 @@
             }
         },
         {
-          "@id": "bioschemasdeprecated:aggregator",
-          "@type": "rdf:Property",
-          "rdfs:comment": "True if Beacon is an agregator of other Beacon Datasets.",
-          "rdfs:label": "aggregator",
-          "schema:domainIncludes": {
-            "@id": "bioschemasdeprecated:Beacon"
-          },
-          "schema:rangeIncludes": [
-            {
-              "@id": "schema:Boolean"
-            }
-          ]
+            "@id": "bioschemasdeprecated:aggregator",
+            "@type": "rdf:Property",
+            "rdfs:comment": "True if Beacon is an agregator of other Beacon Datasets.",
+            "rdfs:label": "aggregator",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdeprecated:Beacon"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Boolean"
+                }
+            ]
         },
         {
-          "@id": "rdf:type",
-          "@type": "rdf:Property",
-          "rdfs:comment": "This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column.",
-          "rdfs:label": "type",
-          "schema:domainIncludes": {
-            "@id": "bioschemasdeprecated:Beacon"
-          },
-          "schema:rangeIncludes": [
-            {
-              "@id": "schema:URL"
-            }
-          ]
+            "@id": "rdf:type",
+            "@type": "rdf:Property",
+            "rdfs:comment": "This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column.",
+            "rdfs:label": "type",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdeprecated:Beacon"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:URL"
+                }
+            ]
         },
         {
-          "@id": "bioschemasdeprecated:supportedRefs",
-          "@type": "rdf:Property",
-          "rdfs:comment": "Supported Genome ID references.",
-          "rdfs:label": "supportedRefs",
-          "schema:domainIncludes": {
-            "@id": "bioschemasdeprecated:Beacon"
-          },
-          "schema:rangeIncludes": [
-            {
-              "@id": "schema:URL"
-            }
-          ]
+            "@id": "bioschemasdeprecated:supportedRefs",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Supported sahar Genome ID references.",
+            "rdfs:label": "supportedRefs",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdeprecatced:Beacon"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:URL"
+                }
+            ]
         }
     ]
 }

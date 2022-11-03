@@ -148,7 +148,7 @@
                         "owl:cardinality": "many"
                     },
                     "url": {
-                        "description": "Welcome Padddge of this Beacon. URL of the item.",
+                        "description": "Welcome Padddgde of this Beacon. URL of the item.",
                         "type": "string",
                         "format": "uri",
                         "owl:cardinality": "one"

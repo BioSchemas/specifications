@@ -223,7 +223,7 @@ def get_cross_walk_url(profile_name):
             line_count += 1
             if line_count > 1:
                 if row[0] == profile_name:
-                    cross_walk_url = row[3]
+                    cross_walk_url = row[5]
 
     return cross_walk_url
 
@@ -560,7 +560,7 @@ for arg in args:
                         "namespace",
                         "name",
                         "subclassOf",
-                        "type" "version",
+                        "version",
                         "url",
                     ]
 
@@ -575,7 +575,7 @@ for arg in args:
                             line_count += 1
                             if line_count > 1:
                                 if row[0] == profile_name:
-                                    SubClass = row[0]
+                                    SubClass = row[3] + " " + row[4]
 
                     data = [
                         "bioschams",
