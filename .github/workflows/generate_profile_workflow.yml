@@ -53,9 +53,7 @@ jobs:
           git clone https://user:$GITHUB_TOKEN@github.com/BioSchemas/bioschemas-dde
           cd bioschemas-dde
           git checkout latest-updated-profiles
-          del /f/s/q latest-updated-profiles > nul
-          rmdir /s/q latest-updated-profiles
-          mkdir  latest-updated-profiles
+          for /d %x in (\latest-updated-profiles\*) do @rd /s /q "%x"
           ls \latest-updated-profiles
           ls
 
