@@ -300,9 +300,7 @@ def generate_property(
     new_p["property"] = req_label
     print(Fore.GREEN + Style.BRIGHT + f"Property : {req_label}" + Style.RESET_ALL)
     new_p["marginality"] = marginality
-    new_p["cardinality"], new_p["expected_types"] = generate_types_cardianlity(
-        g, prop
-    )
+    new_p["cardinality"], new_p["expected_types"] = generate_types_cardianlity(g, prop)
 
     if "description" in prop.keys():
         new_p["description"] = prop["description"]
@@ -396,11 +394,11 @@ def generate_types_cardianlity(g, prop):
     ### Some cleaning up
     expected_types = []
     remove_deplicates_expected_types = []
-    capitalized_expected_types = []
+    upper_case_expected_types = []
 
     for t in list_types:
         if len(t.split("/")) > 1:
-                expected_types.append(t.split("/")[-1])
+            expected_types.append(t.split("/")[-1])
         else:
             expected_types.append(t)
 
@@ -423,24 +421,36 @@ def generate_types_cardianlity(g, prop):
             clean_expected_types.append("URL")
 
     # Replace property definitions with their type
+    # Replace property definitions with their type
     for i in remove_deplicates_expected_types:
         if i in dict_definitions.keys():
-            if not "bioschemas" in dict_definitions[i]:
-                if not "schema" in dict_definitions[i]:
-                    clean_expected_types.remove(i)
-                    clean_expected_types.append(dict_definitions[i])
-    
-    capitalized_expected_types = clean_expected_types
-    for i in clean_expected_types:
-        i[0].upper()
-        capitalized_expected_types.remove(i)
-        capitalized_expected_types.append(i)
+            if not "bioschemas" and not "schema" in dict_definitions[i]:
+                clean_expected_types.remove(i)
+                clean_expected_types.append(dict_definitions[i])
+            elif len(dict_definitions[i].split(":")) > 0:
+                clean_expected_types.remove(i)
+                clean_expected_types.append(dict_definitions[i].split(":")[-1])
+
+    upper_case_expected_types = clean_expected_types
+    for i in upper_case_expected_types:
+
+        t = ""
+
+        for c in range(len(i)):
+            if c == 0:
+                t += i[c].upper()
+            else:
+                t += i[c]
+        print(t)
+        clean_expected_types.remove(i)
+        clean_expected_types.append(t)
 
     print(Fore.MAGENTA + f"Expected Types : {clean_expected_types}" + Style.RESET_ALL)
 
     print(Fore.RED + f"Cardinality = {cardianliy}" + Style.RESET_ALL)
 
     return cardianliy, clean_expected_types
+
 
 # ## Main Script
 
