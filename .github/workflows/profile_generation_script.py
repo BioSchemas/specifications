@@ -1,6 +1,7 @@
 import json
 from pathlib import Path
 from pydoc import doc
+from unittest import skip
 import yaml
 from colorama import Fore
 from colorama import Style
@@ -10,7 +11,9 @@ import csv
 from os import path
 
 
-def generate_transformed_profile(g, path_changed_file, external_properties):
+def generate_transformed_profile(
+    data, g, path_changed_file, external_properties, dict_definitions
+):
 
     transformed_profile = dict()
 
@@ -26,21 +29,39 @@ def generate_transformed_profile(g, path_changed_file, external_properties):
         for req_label in g["$validation"]["required"]:
             prop = g["$validation"]["properties"][req_label]
             new_p = generate_property(
-                g, prop, req_label, "Minimum", external_properties
+                data,
+                g,
+                prop,
+                req_label,
+                "Minimum",
+                external_properties,
+                dict_definitions,
             )
             transformed_profile["mapping"].append(new_p)
 
         for reco_label in g["$validation"]["recommended"]:
             prop = g["$validation"]["properties"][reco_label]
             new_p = generate_property(
-                g, prop, reco_label, "Recommended", external_properties
+                data,
+                g,
+                prop,
+                reco_label,
+                "Recommended",
+                external_properties,
+                dict_definitions,
             )
             transformed_profile["mapping"].append(new_p)
 
         for opt_label in g["$validation"]["optional"]:
             prop = g["$validation"]["properties"][opt_label]
             new_p = generate_property(
-                g, prop, opt_label, "Optional", external_properties
+                data,
+                g,
+                prop,
+                opt_label,
+                "Optional",
+                external_properties,
+                dict_definitions,
             )
             transformed_profile["mapping"].append(new_p)
     else:
@@ -264,15 +285,24 @@ def generate_spec_info(g, path_changed_file):
     return spec_info
 
 
-def generate_property(g, prop, req_label, marginality, external_properties):
+def generate_property(
+    data, g, prop, req_label, marginality, external_properties, dict_definitions
+):
 
-    print(Fore.GREEN + Style.BRIGHT + f"Property : {req_label}" + Style.RESET_ALL)
     new_p = dict()
-    # If I want to create a dict, new_p[] = {'description':prop["description"]}
+
+    # Replace property definitions with their type
+    for g in data["@graph"]:
+        if req_label == g["rdfs:label"]:
+            if not "bioschemas" in g["@id"].split(":")[0]:
+                req_label = g["@id"]
 
     new_p["property"] = req_label
+    print(Fore.GREEN + Style.BRIGHT + f"Property : {req_label}" + Style.RESET_ALL)
     new_p["marginality"] = marginality
-    new_p["cardinality"], new_p["expected_types"] = generate_types_cardianlity(g, prop)
+    new_p["cardinality"], new_p["expected_types"] = generate_types_cardianlity(
+        g, prop
+    )
 
     if "description" in prop.keys():
         new_p["description"] = prop["description"]
@@ -365,43 +395,52 @@ def generate_types_cardianlity(g, prop):
 
     ### Some cleaning up
     expected_types = []
+    remove_deplicates_expected_types = []
+    capitalized_expected_types = []
 
     for t in list_types:
         if len(t.split("/")) > 1:
-            expected_types.append(t.split("/")[-1].capitalize())
-            ## If we ever needed it
-            # external_type= g['$validation']["definitions"][t.split('/')[-1]]
-            # print(Fore.YELLOW + f'Def of the External Type : {external_type}' + Style.RESET_ALL)
-
+                expected_types.append(t.split("/")[-1])
         else:
-            expected_types.append(t.capitalize())
+            expected_types.append(t)
 
     # Remove duplicates
-    clean_expected_types = list(set(expected_types))
+    remove_deplicates_expected_types = list(set(expected_types))
+
+    # Some treatments on the type's label
+    clean_expected_types = remove_deplicates_expected_types
 
     # Replace 'String' with 'Text'
-    for i in clean_expected_types:
-        if i == "String":
+    for i in remove_deplicates_expected_types:
+        if i == "string":
             clean_expected_types.remove(i)
             clean_expected_types.append("Text")
 
     # Replace 'Uri' with 'URI'
-    for i in clean_expected_types:
-        if i == "Uri":
+    for i in remove_deplicates_expected_types:
+        if i == "uri":
             clean_expected_types.remove(i)
-            clean_expected_types.append("URI")
+            clean_expected_types.append("URL")
+
     # Replace property definitions with their type
-    for i in clean_expected_types:
+    for i in remove_deplicates_expected_types:
         if i in dict_definitions.keys():
-            clean_expected_types.remove(i)
-            clean_expected_types.append(dict_definitions[i])
+            if not "bioschemas" in dict_definitions[i]:
+                if not "schema" in dict_definitions[i]:
+                    clean_expected_types.remove(i)
+                    clean_expected_types.append(dict_definitions[i])
+    
+    capitalized_expected_types = clean_expected_types
+    for i in clean_expected_types:
+        i[0].upper()
+        capitalized_expected_types.remove(i)
+        capitalized_expected_types.append(i)
 
     print(Fore.MAGENTA + f"Expected Types : {clean_expected_types}" + Style.RESET_ALL)
 
     print(Fore.RED + f"Cardinality = {cardianliy}" + Style.RESET_ALL)
 
     return cardianliy, clean_expected_types
-
 
 # ## Main Script
 
@@ -440,12 +479,14 @@ for arg in args:
                     # Dictionary of all external definitions
                     dict_definitions = dict()
                     for d in g["$validation"]["definitions"]:
-                        dict_definitions[d] = g["$validation"]["definitions"][d]["@type"]
+                        dict_definitions[d] = g["$validation"]["definitions"][d][
+                            "@type"
+                        ]
 
                     # For each profile :
                     # Prepare the transfermed profile : spec_info & mapping fields
                     transformed_profile = generate_transformed_profile(
-                        g, arg, external_properties
+                        data, g, arg, external_properties, dict_definitions
                     )
 
                     # Inject the YAML in a HTML File
