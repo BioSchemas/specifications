@@ -577,7 +577,7 @@ for arg in args:
                             line_count += 1
                             if line_count > 1:
                                 if row[0] == profile_name:
-                                    SubClass = row[3] + " " + row[4]
+                                    SubClass = row[4]
 
                     data = [
                         uuid.uuid1(),

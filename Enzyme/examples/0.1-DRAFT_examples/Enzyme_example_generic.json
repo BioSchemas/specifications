@@ -1,9 +1,0 @@
-{   "@context": {
-    "scheme": "http://schema.org/",
-    "bs": "http://bioschema.org/"
-  },
-    "@type": "https://bioschemas.org/Enzyme",
-    "identifier": "https://enzyme.expasy.org/EC/1.1.1.283",
-    "hasECNumber": "1.1.1.283",
-    "hasECAcceptedName": "Methylglyoxal reductase (NADPH)"
-}
