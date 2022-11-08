@@ -1,0 +1,155 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/"
+    },
+    "@graph": [
+        {
+            "@id": "bioschemastypesdrafts:Study",
+            "@type": "rdfs:Class",
+            "rdfs:comment": " This Study profile presents the markup when describing a Study Version: 0.3-DRAFT",
+            "rdfs:label": "Study",
+            "rdfs:subClassOf": {
+                "@id": "schema:CreativeWork"
+            }
+        },
+        {
+            "@id": "bioschemastypesdrafts:startDate",
+            "rdfs:comment": "The start date and time of the item (in ISO 8601 date format). ",
+            "@type": "rdf:Property",
+            "rdfs:label": "startDate",
+            "schema:domainIncludes": {
+                "@id": "bioschemastypesdrafts:Study"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Date"
+                },
+                {
+                    "@id": "schema:DateTime"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemastypesdrafts:endDate",
+            "rdfs:comment": "The end date and time of the item (in ISO 8601 date format). ",
+            "@type": "rdf:Property",
+            "rdfs:label": "endDate",
+            "schema:domainIncludes": {
+                "@id": "bioschemastypesdrafts:Study"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Date"
+                },
+                {
+                    "@id": "schema:DateTime"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemastypesdrafts:additionalProperty",
+            "rdfs:comment": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism. ",
+            "@type": "rdf:Property",
+            "rdfs:label": "additionalProperty",
+            "schema:domainIncludes": {
+                "@id": "bioschemastypesdrafts:Study"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:PropertyValue"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemastypesdrafts:relatedStudy",
+            "rdfs:comment": "A study that is related to this one. ",
+            "@type": "rdf:Property",
+            "rdfs:label": "relatedStudy",
+            "schema:domainIncludes": {
+                "@id": "bioschemastypesdrafts:Study"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemastypesdrafts:Study"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemastypesdrafts:studyDomain",
+            "rdfs:comment": "Define the domain of the study. For example, the domain could be astrophysics, functional genomics or earth science. Those domains can also have an ontology reference. For example, in the life sciences  we could have\nFunctional Genomics: http://edamontology.org/topic_0085\nProtemics: http://edamontology.org/topic_0121",
+            "@type": "rdf:Property",
+            "rdfs:label": "studyDomain",
+            "schema:domainIncludes": {
+                "@id": "bioschemastypesdrafts:Study"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:PropertyValue"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemastypesdrafts:studyProcess",
+            "rdfs:comment": "A process performed as part of an experiment or wider study, i.e. intentionally designed.\nThese processes can have ontology URL attached to. For example, in the life sciences  we could have \nRNA-seq of coding RNA from single cells: http://www.ebi.ac.uk/efo/EFO_0005684\ncase control design: http://www.ebi.ac.uk/efo/EFO_0001427",
+            "@type": "rdf:Property",
+            "rdfs:label": "studyProcess",
+            "schema:domainIncludes": {
+                "@id": "bioschemastypesdrafts:Study"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:PropertyValue"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemastypesdrafts:studyLocation",
+            "rdfs:comment": "The location in which the study is taking/took place.",
+            "@type": "rdf:Property",
+            "rdfs:label": "studyLocation",
+            "schema:domainIncludes": {
+                "@id": "bioschemastypesdrafts:Study"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Place"
+                },
+                {
+                    "@id": "schema:AdministrativeArea"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemastypesdrafts:studySubject",
+            "rdfs:comment": "A subject of the study, i.e. one of the medical conditions, therapies, devices, drugs, etc. investigated by the study.",
+            "@type": "rdf:Property",
+            "rdfs:label": "studySubject",
+            "schema:domainIncludes": {
+                "@id": "bioschemastypesdrafts:Study"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:MedicalEntity"
+                },
+                {
+                    "@id": "schema:BioChemEntity"
+                }
+            ]
+        }
+    ]
+}
