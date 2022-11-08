@@ -1,0 +1,539 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "owl": "http://www.w3.org/2002/07/owl/"
+    },
+    "@graph": [
+        {
+            "@id": "bioschemas:Person",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A specification for describing people in life sciences The Life Science Person specification provides a way to describe bioscience events on the World Wide Web. It defines a set of metadata and vocabularies, built on top of existing technologies and standards, that can be used to represent the profile information of people in Web pages and applications. The goal of the specification is to make it easier to discover, life science profile information. Changes since 0.2-DRAFT-2019_07_19<ul><li>added sameAs property as recommended</li></ul>. Version: 0.3-DRAFT",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/profiles/Person/0.3-DRAFT"
+            ],
+            "rdfs:label": "Person",
+            "rdfs:subClassOf": {
+                "@id": "schema:Person"
+            },
+            "$validation": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "type": "object",
+                "properties": {
+                    "advisor": {
+                        "description": "A person who has been an educational, professional or personal advisor to the person. ",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "curriculumVitae": {
+                        "description": "A link or body of text describing the person's notable achievements, employment history, and contact details. ",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "description": {
+                        "description": " A description of the item.",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "email": {
+                        "description": " Email address.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "$ref": "#/definitions/contactpoint"
+                            },
+                            {
+                                "$ref": "#/definitions/place"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "experience": {
+                        "description": "A textual description of the professional experiences a person has acquired. ",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "expertise": {
+                        "description": "A textual description of the topic which a person has the most expertise in. This should make use of an ontology such as the EDAM ontology ",
+                        "type": "string",
+                        "format": "uri",
+                        "owl:cardinality": "one"
+                    },
+                    "funding": {
+                        "description": "Textual description of current or past funding ths person has acquired ",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "homeLocation": {
+                        "description": " A contact location for a person's residence.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/contactpoint"
+                            },
+                            {
+                                "$ref": "#/definitions/place"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "image": {
+                        "description": " An image of the item. This can be a URL or a fully described ImageObject.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/imageobject"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "interest": {
+                        "description": "Any interests held by the person. These should be single words or short phrases that relate to a person ",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "internatonalActivities": {
+                        "description": "Global connetions related to teaching and scholarly work in the past 3 years ",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "journalReferee": {
+                        "description": "Which journals this person is a reeree of ",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "keywords": {
+                        "description": "Keywords to describe the person. These should be single words or short phrases that relate to a person. Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "knowsLanguage": {
+                        "description": "A list of languages spoken by the Person Of a Person, and less typically of an Organization, to indicate a known language. We do not distinguish skill levels or reading/writing/speaking/signing here. Use language codes from the IETF BCP 47 standard.",
+                        "$ref": "#/definitions/language",
+                        "owl:cardinality": "one"
+                    },
+                    "mainEntityOfPage": {
+                        "description": " Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details.\nInverse property: mainEntity.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "memberOf": {
+                        "description": " An Organization (or ProgramMembership) to which this Person or Organization belongs.\nInverse property: member.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/programmembership"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/programmembership"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "name": {
+                        "description": " The name of the item.",
+                        "type": "string",
+                        "owl:cardinality": "one"
+                    },
+                    "orcid": {
+                        "description": "The url of ID of the person's ORCID (see http://orcid.org) ",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "works": {
+                        "description": "All or notable publications, presentations, training materials, research outputs or any other body of work attributed to this person. ",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "worksFor": {
+                        "description": " Organizations that the person works for.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "sameAs": {
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "description": "URL of additional sources for the dataset",
+                        "owl:cardinality": "many"
+                    }
+                },
+                "required": [
+                    "description",
+                    "mainEntityOfPage",
+                    "name"
+                ],
+                "recommended": [
+                    "email",
+                    "expertise",
+                    "homeLocation",
+                    "image",
+                    "memberOf",
+                    "orcid",
+                    "worksFor",
+                    "sameAs"
+                ],
+                "optional": [
+                    "advisor",
+                    "curriculumVitae",
+                    "experience",
+                    "funding",
+                    "interest",
+                    "internatonalActivities",
+                    "journalReferee",
+                    "keywords",
+                    "knowsLanguage",
+                    "works"
+                ],
+                "definitions": {
+                    "person": {
+                        "@type": "Person",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "mainEntityOfPage": {
+                                "anyOf": [
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "format": "uri"
+                                        }
+                                    },
+                                    {
+                                        "$ref": "#/definitions/creativework"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/definitions/creativework"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ]
+                    },
+                    "creativework": {
+                        "@type": "CreativeWork",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
+                    "organization": {
+                        "@type": "Organization",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "legalName": {
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
+                            },
+                            "sameAs": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        }
+                    },
+                    "place": {
+                        "@type": "Place",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "address": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "$ref": "#/definitions/postaladdress"
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        }
+                    },
+                    "contactpoint": {
+                        "@type": "schema:ContactPoint",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "imageobject": {
+                        "@type": "ImageObject",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
+                    "language": {
+                        "@type": "Language",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "programmembership": {
+                        "@type": "ProgramMembership",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "postaladdress": {
+                        "@type": "schema:PostalAddress",
+                        "type": "object",
+                        "properties": {
+                            "addressCountry": {
+                                "type": "string"
+                            },
+                            "addressLocality": {
+                                "type": "string"
+                            },
+                            "addressRegion": {
+                                "type": "string"
+                            },
+                            "postOfficeBoxNumber": {
+                                "type": "string"
+                            },
+                            "postalCode": {
+                                "type": "string"
+                            },
+                            "streetAddress": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    }
+                }
+            }
+        }
+    ]
+}

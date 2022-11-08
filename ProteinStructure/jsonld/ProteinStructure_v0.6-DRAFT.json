@@ -1,0 +1,752 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "rdf": "https://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "dct": "https://dublincore.org/specifications/dublin-core/dcmi-terms/#",
+        "owl": "http://www.w3.org/2002/07/owl/",
+        "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/",
+        "bioschemasdrafts": "https://discovery.biothings.io/view/bioschemasdrafts/"
+    },
+    "@graph": [
+        {
+            "@id": "bioschemasdrafts:ProteinStructure",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "This profile specification presents the BioChemEntity usage when describing a Protein structure. Changes since 0.5-DRAFT-2018_08_15<ul><li>added sameAs property as recommended</li></ul>. Version: 0.6-DRAFT",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/profiles/ProteinStructure/0.6-DRAFT"
+            ],
+            "rdfs:label": "ProteinStructure",
+            "rdfs:subClassOf": {
+                "@id": "bioschemastypes:BioChemEntity"
+            },
+            "$validation": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "type": "object",
+                "properties": {
+                    "identifier": {
+                        "description": " The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "alternateName": {
+                        "description": " An alias for the item.",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "description": {
+                        "description": " A description of the item.",
+                        "type": "string",
+                        "owl:cardinality": "one"
+                    },
+                    "name": {
+                        "description": " The name of the item.",
+                        "type": "string",
+                        "owl:cardinality": "one"
+                    },
+                    "url": {
+                        "description": "Link to the official webpage associated to this entity. URL of the item.",
+                        "type": "string",
+                        "format": "uri",
+                        "owl:cardinality": "one"
+                    },
+                    "image": {
+                        "description": " An image of the item. This can be a URL or a fully described ImageObject.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/imageobject"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/imageobject"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "boundMolecule": {
+                        "description": "Bound molecules.",
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "expressionSystem": {
+                        "description": " Organism where this protein structure is expressed.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/biochementity"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/biochementity"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/taxon"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/taxon"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "structureDeterminationMethod": {
+                        "description": " Method used to determine the protein structure.",
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "additionalProperty": {
+                        "description": "As much a possible, do not use it! Alternatively, consider reusing properties/relations already coined in controlled vocabularies. We recommed to look at the [OBO Relations Ontology (RO)](http://obofoundry.org/ontology/ro.html) or the [Semanticscience Integrated Ontology (SIO)](http://sio.semanticscience.org/) as starting points. A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/propertyvalue"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "additionalType": {
+                        "description": "Should be set to any of the values listed in the Controlled Vocabulary. An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "contains": {
+                        "description": "Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. Inverse property: isContainedIn. ",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/biochementity"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/biochementity"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "hasCategoryCode": {
+                        "description": "A Category code contained in this code set. A controlled vocabulary term equivalent to this entity. For instance, an organism coined in NCBI taxonomy can be represented as a BioChemEntity. As it also exists as a term in an ontology, it would be nice to capture that information via categoryCode. ",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/categorycode"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/categorycode"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "hasRepresentation": {
+                        "description": "Representation of this entity. For instance, a chemical structure or sequence. A representation for this entity other than, for instance, an image (use image property for that) or the main web page/record (use mainEntityOfPage for that), and see background notes, for sameAs and url).",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/propertyvalue"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "isContainedIn": {
+                        "description": "Indicates a BioChemEntity that this BioChemEntity is (in some sense) a part of. Inverse property: contains. ",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/biochementity"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/biochementity"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "location": {
+                        "description": "The location can refer to a position in the chromosome or sequence or to a physical place where, for instance, a sample is stored. Using [additionalType](http://bioschemas.org/devSpecs/ProteinStructure/#additionalType) is advised to make this distinction. For instance, [FALDO](https://github.com/OBF/FALDO) can be used for sequence co-ordinates.\n**Note:** The list of Expected Types has been extended as schema.org/location only has Place, PostalAddress and Text. The location of for example where the event is happening, an organization is located, or where an action takes place.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/place"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/place"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/postaladdress"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/postaladdress"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/propertyvalue"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "mainEntityOfPage": {
+                        "description": "Link via DataRecord or [URL](http://schema.org/url) to the main Record representing this entity in a dataset.\n**Note:** Bioschemas has replaced DataRecord with CreativeWork in the Expected Types. Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "$ref": "#/definitions/creativework"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "sameAs": {
+                        "description": "Link to any resource other than the Record and the official webpage, for instance a Wikipedia page. URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    }
+                },
+                "required": [
+                    "identifier"
+                ],
+                "recommended": [
+                    "alternateName",
+                    "description",
+                    "name",
+                    "url",
+                    "image",
+                    "boundMolecule",
+                    "expressionSystem",
+                    "structureDeterminationMethod",
+                    "sameAs"
+                ],
+                "optional": [
+                    "additionalProperty",
+                    "additionalType",
+                    "contains",
+                    "hasCategoryCode",
+                    "hasRepresentation",
+                    "isContainedIn",
+                    "location",
+                    "mainEntityOfPage",
+                    "sameAs"
+                ],
+                "definitions": {
+                    "propertyvalue": {
+                        "@type": "PropertyValue",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "valuereference": {
+                                "oneOf": [
+                                    {
+                                        "$ref": "#/definitions/categorycode"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": [
+                                            {
+                                                "$ref": "#/definitions/categorycode"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    }
+                                ]
+                            },
+                            "unitText": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "recommended": [
+                            "valueReference"
+                        ],
+                        "optional": [
+                            "unitCode",
+                            "unitText"
+                        ]
+                    },
+                    "biochementity": {
+                        "@type": "bioschemasdrafts:BioChemEntity",
+                        "type": "object",
+                        "properties": {
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "imageobject": {
+                        "@type": "ImageObject",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
+                    "taxon": {
+                        "@type": "Taxon",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "taxonRank": {
+                                "anyOf": [
+                                    {
+                                        "$ref": "#/definitions/propertyvalue"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/definitions/propertyvalue"
+                                        }
+                                    },
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "format": "uri"
+                                        }
+                                    },
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "required": []
+                    },
+                    "categorycode": {
+                        "@type": "CategoryCode",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "codeValue": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                        ]
+                    },
+                    "place": {
+                        "@type": "Place",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "postaladdress": {
+                        "@type": "PostalAddress",
+                        "type": "object",
+                        "properties": {
+                            "streetAddress": {
+                                "type": "string"
+                            },
+                            "postalCode": {
+                                "type": "string"
+                            },
+                            "postOfficeBoxNumber": {
+                                "type": "string"
+                            },
+                            "addressRegion": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "creativework": {
+                        "@type": "schema:CreativeWork",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    }
+                }
+            }
+        },
+        {
+            "@id": "bioschemasdrafts:additionalProperty",
+            "rdfs:comment": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. \n Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, …) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism. \n As much a possible, do not use it! Alternatively, consider reusing properties/relations already coined in controlled vocabularies. We recommed to look at the OBO Relations Ontology (RO) or the Semanticscience Integrated Ontology (SIO) as starting points.",
+            "@type": "rdf:Property",
+            "rdfs:label": "additionalProperty",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdrafts:ProteinStructure"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:PropertyValue"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemasdrafts:contains",
+            "rdfs:comment": "Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. Inverse property: isContainedIn. \n For proteins, it can be used to link to protein sequence annotations such as domains, sites, regions, etc.",
+            "@type": "rdf:Property",
+            "rdfs:label": "contains",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdrafts:ProteinStructure"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemastypes:BioChemEntity"
+                },
+                {
+                    "@id": "bioschemasdeprecated:ProteinAnnotation"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemasdrafts:hasCategoryCode",
+            "rdfs:comment": "A controlled vocabulary term equivalent to this entity. For instance, an organism coined in NCBI taxonomy can be represented as a BioChemEntity. As it also exists as a term in an ontology, it would be nice to capture that information via categoryCode.",
+            "@type": "rdf:Property",
+            "rdfs:label": "hasCategoryCode",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdrafts:ProteinStructure"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:CategoryCode"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemasdrafts:isContainedIn",
+            "rdfs:comment": "Indicates a BioChemEntity that this BioChemEntity is (in some sense) part of. \n For proteins, it is recommended to at least specify the taxon/organism associated to the described protein. For taxon/organism, it is a good practice to use hasCategoryCode to point to a controlled vacabulary such as NCBI taxon or UniProt Taxonomy. Including as well the GO cellular locations is optional; for cellular locations it is a good practice to use hasCategorryCode to point to a GO Cellular Location term.",
+            "@type": "rdf:Property",
+            "rdfs:label": "isContainedIn",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdrafts:ProteinStructure"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemastypes:BioChemEntity"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemasdrafts:location",
+            "rdfs:comment": "The location can be refer to a position in a chromosome or sequence or to a physical place where, for instance, a sample is stored. Using additionalType is advised to make the distinction. For instance, FALDO can be used for sequence coordinates. \n Note: The list of Expected Types has been extended as schema.org/location only has Place, PostalAddress and Text.",
+            "@type": "rdf:Property",
+            "rdfs:label": "location",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdrafts:ProteinStructure"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:PropertyValue"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemasdrafts:boundMolecule",
+            "rdfs:comment": "Bound molecules.",
+            "@type": "rdf:Property",
+            "rdfs:label": "boundMolecule",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdrafts:ProteinStructure"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemasdrafts:expressionSystem",
+            "rdfs:comment": "Organism where this protein extructure is expresed.",
+            "@type": "rdf:Property",
+            "rdfs:label": "expressionSystem",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdrafts:ProteinStructure"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemastypes:BioChemEntity"
+                },
+                {
+                    "@id": "bioschemastypes:Taxon"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemasdrafts:structureDeterminationMethod",
+            "rdfs:comment": "Method used to determine the protein structure.",
+            "@type": "rdf:Property",
+            "rdfs:label": "structureDeterminationMethod",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdrafts:ProteinStructure"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        }
+    ]
+}
