@@ -566,7 +566,6 @@
                     "isPartOfBioChemEntity",
                     "monoisotopicMolecularWeight",
                     "potentialUse",
-                    "sameAs",
                     "taxonomicRange"
                 ],
                 "anyOf": [
