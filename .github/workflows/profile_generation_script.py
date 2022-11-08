@@ -192,9 +192,9 @@ def get_previous_release(path_changed_file):
 def get_status(version):
     status = ""
     if version.split("-")[-1] == "DRAFT":
-        status = "Revision"
+        status = "revision"
     elif version.split("-")[-1] == "RELEASE":
-        status = "Deprecated"
+        status = "deprecated"
     return status
 
 
@@ -512,7 +512,7 @@ for arg in args:
                     out_HTML_file = (
                         folderpath
                         + "/"
-                        + transformed_profile["spec_info"]["version"]
+                        + arg.split("/")[-1].split(".")[0].split("_")[0]
                         + ".html"
                     )
 
@@ -584,7 +584,7 @@ for arg in args:
                         "bioschams",
                         profile_name,
                         SubClass,
-                        transformed_profile["spec_info"]["version"],
+                        arg.split("/")[-1].split(".")[0].split("_")[0],
                         "https://github.com/BioSchemas/specifications/tree/master/"
                         + arg,
                     ]
