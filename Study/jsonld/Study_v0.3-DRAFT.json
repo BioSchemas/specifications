@@ -330,7 +330,7 @@
                                 }
                             }
                         ],
-                        "description": "URL of additional sources for the dataset",
+                        "description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
                         "owl:cardinality": "many"
                     }
                 },
@@ -684,6 +684,20 @@
                     }
                 }
             }
+        },
+        {
+            "@id": "ppeo:hasGrowthFacility",
+            "rdfs:comment": "Has growth facility. \n The kind of growth facility used in a plant study.",
+            "@type": "rdf:Property",
+            "rdfs:label": "hasGrowthFacility",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Study"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:URL"
+                }
+            ]
         }
     ]
 }
