@@ -10,7 +10,7 @@
         {
             "@id": "bioschemas:Organization",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Bioschemas specification for describing a Organization in the life-science. Provides a way to describe bioscience organizations on the World Wide Web. It defines metadata terms that can be used in the code of web pages and applications, and builds on top of existing technologies and standards. The goal of the specification is to make it easier to discover, exchange and integrate life science organization profiles across the Internet. Changes since 0.2-DRAFT<ul><li>added sameAs property as recommended</li></ul>. Version: 0.3-DRAFT",",
+            "rdfs:comment": "Bioschemas specification for describing a Organization in the life-science. Provides a way to describe bioscience organizations on the World Wide Web. It defines metadata terms that can be used in the code of web pages and applications, and builds on top of existing technologies and standards. The goal of the specification is to make it easier to discover, exchange and integrate life science organization profiles across the Internet. Changes since 0.2-DRAFT<ul><li>added sameAs property as recommended</li></ul>. Version: 0.3-DRAFT",
             "schema:schemaVersion": [
                 "https://bioschemas.org/profiles/Organization/0.3-DRAFT"
             ],
