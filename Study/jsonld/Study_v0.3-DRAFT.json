@@ -189,7 +189,7 @@
                         "type": "string",
                         "owl:cardinality": "one"
                     },
-                    "hasGrowthChamber": {
+                    "hasGrowthFacility": {
                         "description": "The kind of growth facility used in a plant study has growth facility",
                         "type": "string",
                         "format": "uri",
