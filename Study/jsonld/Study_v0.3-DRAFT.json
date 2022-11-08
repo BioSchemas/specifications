@@ -12,7 +12,7 @@
         {
             "@id": "bioschemas:Study",
             "@type": "rdfs:Class",
-            "rdfs:comment": " This Study profile presents the markup when describing a Study Version: 0.2-DRAFT",
+            "rdfs:comment": " This Study profile presents the markup when describing a Study Version: 0.3-DRAFT. Changes since 0.2-DRAFT<ul><li>added sameAs property as recommended.</li></ul>",
             "schema:schemaVersion": [
                 "https://bioschemas.org/profiles/Study/0.2-DRAFT"
             ],
