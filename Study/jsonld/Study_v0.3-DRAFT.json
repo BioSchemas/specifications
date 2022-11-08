@@ -359,7 +359,7 @@
                 ],
                 "optional": [
                     "isPartOf",
-                    "hasGrowthChamber",
+                    "hasGrowthFacility",
                     "relatedStudy"
                 ],
                 "definitions": {
