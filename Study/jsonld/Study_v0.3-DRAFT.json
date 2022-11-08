@@ -3,151 +3,699 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/"
+        "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/",
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "ppeo": "http://purl.org/ppeo/PPEO.owl#",
+        "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [
         {
-            "@id": "bioschemastypesdrafts:Study",
+            "@id": "bioschemas:Study",
             "@type": "rdfs:Class",
-            "rdfs:comment": " This Study profile presents the markup when describing a Study Version: 0.3-DRAFT",
+            "rdfs:comment": " This Study profile presents the markup when describing a Study Version: 0.3-DRAFT. Changes since 0.2-DRAFT<ul><li>added sameAs property as recommended.</li></ul>",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/profiles/Study/0.2-DRAFT"
+            ],
             "rdfs:label": "Study",
             "rdfs:subClassOf": {
-                "@id": "schema:CreativeWork"
+                "@id": "bioschemastypesdrafts:Study"
+            },
+            "$validation": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "type": "object",
+                "properties": {
+                    "about": {
+                        "description": "Use to link to the Protein, Gene, etc that the study is about The subject matter of the content.\nInverse property: subjectOf.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/thing"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/thing"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "additionalProperty": {
+                        "description": "Used to provide arbirary properties of a study. A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.\n\nNote: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/propertyvalue"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "author": {
+                        "description": "Used to indicate the person(s) or organizations that conducted the Study. Please use creator to indicate the Research project The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "citation": {
+                        "description": " A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "creator": {
+                        "description": "Used to specify the research project that created the study. Please use author to indicate the organisation, or individuals that conducted the study. The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "dateCreated": {
+                        "description": " The date on which the CreativeWork was created or the item was added to a DataFeed.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "date"
+                            },
+                            {
+                                "$ref": "#/definitions/datetime"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "datePublished": {
+                        "description": " Date of first broadcast/publication.",
+                        "type": "string",
+                        "format": "date",
+                        "owl:cardinality": "one"
+                    },
+                    "description": {
+                        "description": " A description of the item.",
+                        "type": "string",
+                        "owl:cardinality": "one"
+                    },
+                    "endDate": {
+                        "description": "Used to indicate the end date of the study. (Extension of existing schema.org property) The end date and time of the item (in <a href=\"http://en.wikipedia.org/wiki/ISO_8601\">ISO 8601 date format</a>).",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "date"
+                            },
+                            {
+                                "$ref": "#/definitions/datetime"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "identifier": {
+                        "description": " The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "isPartOf": {
+                        "description": "Used to indicate the project that the study is a part of. Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of. Inverse property: hasPart.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "keywords": {
+                        "description": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/definedterm"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "name": {
+                        "description": " The name of the item.",
+                        "type": "string",
+                        "owl:cardinality": "one"
+                    },
+                    "hasGrowthFacility": {
+                        "description": "The kind of growth facility used in a plant study has growth facility",
+                        "type": "string",
+                        "format": "uri",
+                        "owl:cardinality": "one"
+                    },
+                    "relatedStudy": {
+                        "description": " A study that is related to this one.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/study"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/study"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "startDate": {
+                        "description": "Used to indicate the start date of the study. (Extension of existing schema.org property) The start date and time of the item (in <a href=\"http://en.wikipedia.org/wiki/ISO_8601\">ISO 8601 date format</a>).",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "date"
+                            },
+                            {
+                                "$ref": "#/definitions/datetime"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "studyDomain": {
+                        "description": "For example, in the life sciences  we could have\nFunctional Genomics: http://edamontology.org/topic_0085\nProtemics: http://edamontology.org/topic_0121 Define the domain of the study. For example, the domain could be astrophysics, functional genomics or earth science. Those domains can also have an ontology reference.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "studyLocation": {
+                        "description": "(Reuse of property from MedicalStudy; Expected types extended.) The location in which the study is taking/took place.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/administrativearea"
+                            },
+                            {
+                                "$ref": "#/definitions/place"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "studyProcess": {
+                        "description": "For example, in the life sciences  we could have \nRNA-seq of coding RNA from single cells: http://www.ebi.ac.uk/efo/EFO_0005684\ncase control design: http://www.ebi.ac.uk/efo/EFO_0001427 A process performed as part of an experiment or wider study, i.e. intentionally designed.\nThese processes can have ontology URL attached to.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/propertyvalue"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "studySubject": {
+                        "description": "(Reuse of property from MedicalStudy; Expected types extended.) A subject of the study, i.e. one of the medical conditions, therapies, devices, drugs, etc. investigated by the study.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/biochementity"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/biochementity"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/medicalentity"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/medicalentity"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "url": {
+                        "description": " URL of the item.",
+                        "type": "string",
+                        "format": "uri",
+                        "owl:cardinality": "one"
+                    },
+                    "sameAs": {
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+                        "owl:cardinality": "many"
+                    }
+                },
+                "required": [
+                    "author",
+                    "datePublished",
+                    "description",
+                    "identifier",
+                    "name",
+                    "studyDomain",
+                    "studySubject"
+                ],
+                "recommended": [
+                    "about",
+                    "additionalProperty",
+                    "citation",
+                    "creator",
+                    "dateCreated",
+                    "endDate",
+                    "keywords",
+                    "startDate",
+                    "studyLocation",
+                    "studyProcess",
+                    "url",
+                    "sameAs"
+                ],
+                "optional": [
+                    "isPartOf",
+                    "hasGrowthFacility",
+                    "relatedStudy"
+                ],
+                "definitions": {
+                    "thing": {
+                        "@type": "schema:Thing",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "propertyvalue": {
+                        "@type": "PropertyValue",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "valuereference": {
+                                "oneOf": [
+                                    {
+                                        "$ref": "#/definitions/categorycode"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": [
+                                            {
+                                                "$ref": "#/definitions/categorycode"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    }
+                                ]
+                            },
+                            "unitText": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "recommended": [
+                            "valueReference"
+                        ],
+                        "optional": [
+                            "unitCode",
+                            "unitText"
+                        ]
+                    },
+                    "categorycode": {
+                        "@type": "CategoryCode",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "codeValue": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                        ]
+                    },
+                    "organization": {
+                        "@type": "Organization",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "legalName": {
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
+                            },
+                            "sameAs": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        }
+                    },
+                    "person": {
+                        "@type": "Person",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "mainEntityOfPage": {
+                                "anyOf": [
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "format": "uri"
+                                        }
+                                    },
+                                    {
+                                        "$ref": "#/definitions/creativework"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/definitions/creativework"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ]
+                    },
+                    "creativework": {
+                        "@type": "CreativeWork",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
+                    "datetime": {
+                        "@type": "schema:DateTime",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "definedterm": {
+                        "@type": "DefinedTerm",
+                        "type": "object",
+                        "properties": {
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "termCode": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "inDefinedTermSet": {
+                                "$ref": "#/definitions/definedtermset"
+                            }
+                        },
+                        "required": []
+                    },
+                    "definedtermset": {
+                        "@type": "DefinedTermSet",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
+                    "study": {
+                        "@type": "bioschemas:Study",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "place": {
+                        "@type": "Place",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "address": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "$ref": "#/definitions/postaladdress"
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        }
+                    },
+                    "administrativearea": {
+                        "@type": "schema:AdministrativeArea",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "biochementity": {
+                        "@type": "bioschemas:BioChemEntity",
+                        "type": "object",
+                        "properties": {
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "medicalentity": {
+                        "@type": "schema:MedicalEntity",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "postaladdress": {
+                        "@type": "schema:PostalAddress",
+                        "type": "object",
+                        "properties": {
+                            "addressCountry": {
+                                "type": "string"
+                            },
+                            "addressLocality": {
+                                "type": "string"
+                            },
+                            "addressRegion": {
+                                "type": "string"
+                            },
+                            "postOfficeBoxNumber": {
+                                "type": "string"
+                            },
+                            "postalCode": {
+                                "type": "string"
+                            },
+                            "streetAddress": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    }
+                }
             }
         },
         {
-            "@id": "bioschemastypesdrafts:startDate",
-            "rdfs:comment": "The start date and time of the item (in ISO 8601 date format). ",
+            "@id": "ppeo:hasGrowthFacility",
+            "rdfs:comment": "Has growth facility. \n The kind of growth facility used in a plant study.",
             "@type": "rdf:Property",
-            "rdfs:label": "startDate",
+            "rdfs:label": "hasGrowthFacility",
             "schema:domainIncludes": {
-                "@id": "bioschemastypesdrafts:Study"
+                "@id": "bioschemas:Study"
             },
             "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Date"
-                },
-                {
-                    "@id": "schema:DateTime"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemastypesdrafts:endDate",
-            "rdfs:comment": "The end date and time of the item (in ISO 8601 date format). ",
-            "@type": "rdf:Property",
-            "rdfs:label": "endDate",
-            "schema:domainIncludes": {
-                "@id": "bioschemastypesdrafts:Study"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Date"
-                },
-                {
-                    "@id": "schema:DateTime"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemastypesdrafts:additionalProperty",
-            "rdfs:comment": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism. ",
-            "@type": "rdf:Property",
-            "rdfs:label": "additionalProperty",
-            "schema:domainIncludes": {
-                "@id": "bioschemastypesdrafts:Study"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:PropertyValue"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemastypesdrafts:relatedStudy",
-            "rdfs:comment": "A study that is related to this one. ",
-            "@type": "rdf:Property",
-            "rdfs:label": "relatedStudy",
-            "schema:domainIncludes": {
-                "@id": "bioschemastypesdrafts:Study"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "bioschemastypesdrafts:Study"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemastypesdrafts:studyDomain",
-            "rdfs:comment": "Define the domain of the study. For example, the domain could be astrophysics, functional genomics or earth science. Those domains can also have an ontology reference. For example, in the life sciences  we could have\nFunctional Genomics: http://edamontology.org/topic_0085\nProtemics: http://edamontology.org/topic_0121",
-            "@type": "rdf:Property",
-            "rdfs:label": "studyDomain",
-            "schema:domainIncludes": {
-                "@id": "bioschemastypesdrafts:Study"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:PropertyValue"
-                },
-                {
-                    "@id": "schema:Text"
-                },
                 {
                     "@id": "schema:URL"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemastypesdrafts:studyProcess",
-            "rdfs:comment": "A process performed as part of an experiment or wider study, i.e. intentionally designed.\nThese processes can have ontology URL attached to. For example, in the life sciences  we could have \nRNA-seq of coding RNA from single cells: http://www.ebi.ac.uk/efo/EFO_0005684\ncase control design: http://www.ebi.ac.uk/efo/EFO_0001427",
-            "@type": "rdf:Property",
-            "rdfs:label": "studyProcess",
-            "schema:domainIncludes": {
-                "@id": "bioschemastypesdrafts:Study"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:PropertyValue"
-                },
-                {
-                    "@id": "schema:Text"
-                },
-                {
-                    "@id": "schema:URL"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemastypesdrafts:studyLocation",
-            "rdfs:comment": "The location in which the study is taking/took place.",
-            "@type": "rdf:Property",
-            "rdfs:label": "studyLocation",
-            "schema:domainIncludes": {
-                "@id": "bioschemastypesdrafts:Study"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Place"
-                },
-                {
-                    "@id": "schema:AdministrativeArea"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemastypesdrafts:studySubject",
-            "rdfs:comment": "A subject of the study, i.e. one of the medical conditions, therapies, devices, drugs, etc. investigated by the study.",
-            "@type": "rdf:Property",
-            "rdfs:label": "studySubject",
-            "schema:domainIncludes": {
-                "@id": "bioschemastypesdrafts:Study"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:MedicalEntity"
-                },
-                {
-                    "@id": "schema:BioChemEntity"
                 }
             ]
         }

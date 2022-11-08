@@ -1,0 +1,295 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "owl": "http://www.w3.org/2002/07/owl/"
+    },
+    "@graph": [
+        {
+            "@id": "bioschemas:ChemicalSubstance",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "This profile describes a ChemicalSubstance which is 'a portion of matter of constant composition, composed of molecular entities of the same type or of different types' (source: ChEBI:59999). Note, the parent class for this profile has been updated to a pending class in schema.org. Version 0.5-DRAFT. Changes since 0.4-RELEASE<ul><li>added sameAs property as recommended.</li></ul>",
+            "rdfs:label": "ChemicalSubstance",
+            "rdfs:subClassOf": {
+                "@id": "schema:ChemicalSubstance"
+            },
+            "$validation": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "type": "object",
+                "properties": {
+                    "potentialUse": {
+                        "description": "Intended use of the BioChemEntity by humans.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/definedTerm"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/definedTerm"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "chemicalComposition": {
+                        "description": "The chemical composition describes the identity and relative ratio of the chemical elements that make up the substance. For substances this often cannot be accurately determined, an approximation is acceptable.",
+                        "type": "string",
+                        "owl:cardinality": "one"
+                    },
+                    "chemicalRole": {
+                        "description": "A role played by the BioChemEntity or molecular entity within a chemical context.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/definedTerm"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/definedTerm"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "bioChemInteraction": {
+                        "description": "A BioChemEntity that is know to interact with this item.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/bioChemEntity"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/bioChemEntity"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "bioChemSimilarity": {
+                        "description": "A similar molecular entity, e.g., obtained by fingerprint similarity algorithm.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/bioChemEntity"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/bioChemEntity"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "biologicalRole": {
+                        "description": "A role played by the molecular entity within a biological context.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/definedTerm"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/definedTerm"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "hasBioChemEntityPart": {
+                        "description": "Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part. Inverse property: isPartOfBioChemEntity",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/bioChemEntity"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/bioChemEntity"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "alternateName": {
+                        "description": "An alias for the item.",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "description": {
+                        "description": "A description of the item.",
+                        "type": "string",
+                        "owl:cardinality": "one"
+                    },
+                    "disambiguatingDescription": {
+                        "description": "A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.",
+                        "type": "string",
+                        "owl:cardinality": "one"
+                    },
+                    "identifier": {
+                        "description": "The identifier property represents any kind of identifier for any kind of <a class=\"localLink\" href=\"http://schema.org/Thing\">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href=\"/docs/datamodel.html#identifierBg\">background notes</a> for more details.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/propertyValue"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "image": {
+                        "description": "An image of the item. This can be a <a class=\"localLink\" href=\"http://schema.org/URL\">URL</a> or a fully described <a class=\"localLink\" href=\"http://schema.org/ImageObject\">ImageObject</a>.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "name": {
+                        "description": "The name of the item.",
+                        "type": "string",
+                        "owl:cardinality": "one"
+                    },
+                    "sameAs": {
+                        "description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "url": {
+                        "description": "URL of the item.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    }
+                },
+                "required": [
+                    "name",
+                    "identifier",
+                    "url"
+                ],
+                "recommended": [
+                    "chemicalComposition",
+                    "hasBioChemEntityPart",
+                    "sameAs"
+                ],
+                "optional": [
+                    "alternateName",
+                    "bioChemInteraction",
+                    "bioChemSimilarity",
+                    "biologicalRole",
+                    "chemicalRole",
+                    "description",
+                    "disambiguatingDescription",
+                    "image",
+                    "potentialUse",
+                    "sameAs"
+                ],
+                "definitions": {
+                    "definedTerm": {
+                        "@type": "DefinedTerm",
+                        "type": "object",
+                        "properties": {
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "termCode": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "bioChemEntity": {
+                        "@type": "bioschemas:BioChemEntity",
+                        "type": "object",
+                        "properties": {
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "propertyValue": {
+                        "@type": "PropertyValue",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    }
+                }
+            }
+        }
+    ]
+}

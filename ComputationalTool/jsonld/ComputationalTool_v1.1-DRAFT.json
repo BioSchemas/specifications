@@ -1,0 +1,904 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "owl": "http://www.w3.org/2002/07/owl/"
+    },
+    "@graph": [
+        {
+            "@id": "bioschemas:ComputationalTool",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The Life Science Tools specification provides a way to describe bioscience tools and software on the World Wide Web. It defines a set of metadata and vocabularies, built on top of existing technologies and standards, that can be used to represent such tools in Web pages and applications. The goal of the specification is to make it easier to discover. Version 1.1-DRAFT.<h3>Summary of Changes</h3> <p>Changes since the 1.0-RELEASE</p> <ul> <li>added sameAs property as recommended.</li></ul>",
+            "rdfs:label": "ComputationalTool",
+            "rdfs:subClassOf": {
+                "@id": "schema:SoftwareApplication"
+            },
+            "$validation": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "type": "object",
+                "properties": {
+                    "codeRepository": {
+                        "description": "Link to the source code repository of the tool.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "input": {
+                        "description": "Specification of a consumed input.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/formalParameter"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/formalParameter"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "output": {
+                        "description": "Specification of a produced output.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/formalParameter"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/formalParameter"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "programmingLanguage": {
+                        "description": "The main programming language(s) used to build or execute the tool. Please use terms from the \u2018Programming language\u2019 table in the Bio.Tools documentation",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/computerLanguage"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/computerLanguage"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "downloadUrl": {
+                        "description": "Link(s) to the downloadable(s).",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "applicationSubCategory": {
+                        "description": "Subcategory of the application, e.g. 'Arcade Game'. Use an EDAM:Topic to describe the category of application",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/edamTopic"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/edamTopic"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "applicationCategory": {
+                        "description": "Type of software application, e.g. 'Game, Multimedia'. Please use terms from the 'Tool type' table in the biotools documentation.",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "softwareVersion": {
+                        "description": "Version(s) of the tool, which this information is valid for. Can also be a comma-delimited list and include hyphen-separated ranges of versions.",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "featureList": {
+                        "description": "Features or modules provided by this application (and possibly required by other applications). Functionality provided by the tool. Note: Bioschemas have removed Text from the Expected Types.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/edamOperation"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/edamOperation"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "applicationSuite": {
+                        "description": "A suite of tools, to which the tool belongs. The name of the application suite to which the application belongs (e.g. Excel belongs to Office).",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "softwareHelp": {
+                        "description": "A documentation of the tool.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/creativeWork"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativeWork"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "softwareAddOn": {
+                        "description": "Additional sub-tools (add-ons, plug-ins, tools in a suite, etc.) that are included in the tool or workflow. Additional content for a software application.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/softwareApplication"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/softwareApplication"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "operatingSystem": {
+                        "description": "Operating systems on which the tool can be used (without additional wrapping). Operating systems supported (Windows 7, OSX 10.6, Android 1.6). Please use terms from the \u2018Operating systems\u2019 table in the biotools documentation",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "description": {
+                        "description": "A short description of the tool.",
+                        "type": "string",
+                        "owl:cardinality": "one"
+                    },
+                    "identifier": {
+                        "description": "The identifier property represents any kind of identifier for any kind of <a class=\"localLink\" href=\"http://schema.org/Thing\">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href=\"/docs/datamodel.html#identifierBg\">background notes</a> for more details.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/propertyValue"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/propertyValue"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "name": {
+                        "description": "The name of the item.",
+                        "type": "string",
+                        "owl:cardinality": "one"
+                    },
+                    "url": {
+                        "description": "Homepage of the tool. URL of the item.",
+                        "type": "string",
+                        "format": "uri",
+                        "owl:cardinality": "one"
+                    },
+                    "author": {
+                        "description": "The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "citation": {
+                        "description": "Publication about this tool. A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/citation"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/citation"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "contributor": {
+                        "description": "A secondary contributor to the CreativeWork or Event.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "discussionUrl": {
+                        "description": "A link to the page containing the comments of the CreativeWork.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "funder": {
+                        "description": "A person or organization that supports (sponsors) something through some kind of financial contribution.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "hasPart": {
+                        "description": "Indicates any software dependency. Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/creativeWork"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativeWork"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "isAccessibleForFree": {
+                        "description": "A flag to signal that the tool or the service are available to be used for free.",
+                        "type": "boolean",
+                        "owl:cardinality": "one"
+                    },
+                    "isBasedOn": {
+                        "description": "A tool or another work which this tool is based on, or is an extension, distribution, or deployment of.  A resource from which this work is derived or from which it is a modification or adaption.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/creativeWork"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativeWork"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/product"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/product"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "isPartOf": {
+                        "description": "A collection, other than a suite of tools, to which the tool belongs.. Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/creativeWork"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativeWork"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "keywords": {
+                        "description": "Additional keywords or tags important for this tool. Multiple entries are delimited by commas. Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "license": {
+                        "description": "The license of a software, curated dataset, etc. A license document that applies to this content, typically indicated by URL. Use SPDX list of licenses in form https://spdx.org/licenses/",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/creativeWork"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativeWork"
+                                }
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "provider": {
+                        "description": "The provider organization of a web application, database portal, web service, etc. Note: Bioschemas have removed Person from the Expected Types. The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "thumbnailUrl": {
+                        "description": "A small image representing the tool, such as an icon. A thumbnail image relevant to the Thing.",
+                        "type": "string",
+                        "format": "uri",
+                        "owl:cardinality": "one"
+                    },
+                    "sameAs": {
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+                        "owl:cardinality": "many"
+                    }
+                },
+                "required": [
+                    "description",
+                    "name",
+                    "url"
+                ],
+                "recommended": [
+                    "applicationCategory",
+                    "applicationSubCategory",
+                    "author",
+                    "citation",
+                    "featureList",
+                    "license",
+                    "softwareVersion",
+                    "sameAs"
+                ],
+                "optional": [
+                    "applicationSuite",
+                    "codeRepository",
+                    "contributor",
+                    "discussionUrl",
+                    "downloadUrl",
+                    "funder",
+                    "hasPart",
+                    "identifier",
+                    "input",
+                    "isAccessibleForFree",
+                    "isBasedOn",
+                    "isPartOf",
+                    "keywords",
+                    "operatingSystem",
+                    "output",
+                    "programmingLanguage",
+                    "provider",
+                    "softwareAddOn",
+                    "softwareHelp",
+                    "thumbnailUrl"
+                ],
+                "definitions": {
+                    "formalParameter": {
+                        "@type": "bioschemas:FormalParameter",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
+                    "schema": {
+                        "@type": "CreativeWork",
+                        "type": "object",
+                        "properties": {
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "@id": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "edamTopic": {
+                        "@type": "DefinedTerm",
+                        "type": "object",
+                        "strict": false,
+                        "vocabulary": {
+                            "ontology": [
+                                "edam"
+                            ],
+                            "children_of": [
+                                "http://edamontology.org/topic_0003"
+                            ],
+                            "property": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string",
+                                    "format": "uri"
+                                },
+                                "identifier": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "edamOperation": {
+                        "@type": "DefinedTerm",
+                        "type": "object",
+                        "strict": false,
+                        "vocabulary": {
+                            "ontology": [
+                                "edam"
+                            ],
+                            "children_of": [
+                                "http://edamontology.org/operation_0004"
+                            ],
+                            "property": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string",
+                                    "format": "uri"
+                                },
+                                "identifier": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "creativeWork": {
+                        "@type": "CreativeWork",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
+                    "softwareApplication": {
+                        "@type": "SoftwareApplication",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
+                    "propertyValue": {
+                        "@type": "PropertyValue",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "person": {
+                        "@type": "Person",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "alternateName": {
+                                "type": "string"
+                            },
+                            "givenName": {
+                                "type": "string"
+                            },
+                            "familyName": {
+                                "type": "string",
+                                "identifier": {
+                                    "type": "string"
+                                }
+                            },
+                            "affiliation": {
+                                "oneOf": [
+                                    {
+                                        "$ref": "#/definitions/organization"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/definitions/organization"
+                                        }
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "organization": {
+                        "@type": "Organization",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "alternateName": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "citation": {
+                        "description": "A citation object for a resource.",
+                        "@type": "CreativeWork",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "description": "Name of or title of the citation",
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "description": "An identifier associated with the citation",
+                                "type": "string"
+                            },
+                            "pmid": {
+                                "description": "A pubmed identifier if available",
+                                "type": "string"
+                            },
+                            "doi": {
+                                "description": "A doi if available",
+                                "type": "string"
+                            },
+                            "url": {
+                                "description": "The url of the resource cited",
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "citeText": {
+                                "description": "The bibliographic citation for the referenced resource as is provided",
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "product": {
+                        "@type": "Product",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
+                    "computerLanguage": {
+                        "@type": "ComputerLanguage",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    }
+                }
+            }
+        },
+        {
+            "@id": "bioschemas:codeRepository",
+            "rdfs:comment": "Link to the repository where the un-compiled, human readable code and related code is located (SVN, github, CodePlex).",
+            "@type": "rdf:Property",
+            "rdfs:label": "codeRepository",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ComputationalTool"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:input",
+            "rdfs:comment": "Specification of a consumed input.",
+            "@type": "rdf:Property",
+            "rdfs:label": "input",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ComputationalTool"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemas:FormalParameter"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:output",
+            "rdfs:comment": "Specification of a produced output.",
+            "@type": "rdf:Property",
+            "rdfs:label": "output",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ComputationalTool"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemas:FormalParameter"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:programmingLanguage",
+            "rdfs:comment": "The computer programming language.",
+            "@type": "rdf:Property",
+            "rdfs:label": "programmingLanguage",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ComputationalTool"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        }
+    ]
+}
