@@ -409,7 +409,7 @@
                         ]
                     },
                     "biochementity": {
-                        "@type": "bioschemas:BioChemEntity",
+                        "@type": "bioschemastypesdrafts:BioChemEntity",
                         "type": "object",
                         "properties": {
                             "url": {
@@ -426,7 +426,7 @@
                         "required": []
                     },
                     "definedterm": {
-                        "@type": "DefinedTerm",
+                        "@type": "schema:DefinedTerm",
                         "type": "object",
                         "properties": {
                             "url": {
@@ -514,7 +514,7 @@
                         "required": []
                     },
                     "rna": {
-                        "@type": "bioschemas:RNA",
+                        "@type": "bioschemastypesdrafts:RNA",
                         "type": "object",
                         "properties": {
                             "name": {
@@ -524,7 +524,7 @@
                         "required": []
                     },
                     "dna": {
-                        "@type": "bioschemas:Dna",
+                        "@type": "bioschemastypesdrafts:DNA",
                         "type": "object",
                         "properties": {
                             "name": {
@@ -534,7 +534,7 @@
                         "required": []
                     },
                     "sequencematchingmodel": {
-                        "@type": "schema:SequenceMatchingModel",
+                        "@type": "bioschemastypesdrafts:SequenceMatchingModel",
                         "type": "object",
                         "properties": {
                             "name": {
