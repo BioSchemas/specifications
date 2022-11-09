@@ -607,8 +607,6 @@
                     }
                 },
                 "required": [
-                    "input",
-                    "output",
                     "programmingLanguage",
                     "name",
                     "url",
@@ -619,6 +617,8 @@
                     "version"
                 ],
                 "recommended": [
+                    "input",
+                    "output",
                     "citation",
                     "contributor",
                     "creativeWorkStatus",
