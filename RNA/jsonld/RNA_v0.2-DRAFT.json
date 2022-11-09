@@ -284,7 +284,7 @@
                     "hasSequenceAnnotation",
                     "identifier",
                     "image",
-                    "isCodingRna",
+                    "isCodingRNA",
                     "isEncodedByBioChemEntity",
                     "isInvolvedInBiologicalProcess",
                     "isLocatedInSubcellularLocation",
@@ -581,6 +581,37 @@
                     }
                 }
             }
+        },
+        {
+            "@id": "bioschemas:hasSequenceAnnotation",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Pointer to a sequence annotation; please use PropertyValue if you want to include any evidence.",
+            "rdfs:label": "hasSequenceAnnotation",
+            "schema:domainIncludes": {
+              "@id": "bioschemas:RNA"
+            },
+            "schema:rangeIncludes": [
+              {
+                "@id": "bioschemastypesdrafts:SequenceAnnotation"
+              },
+              {
+                "@id": "schema:PropertyValue"
+              }
+            ]
+        },
+        {
+            "@id": "bioschemas:isMatchedBy",
+            "@type": "rdf:Property",
+            "rdfs:comment": "A model matching this BioChemEntity.",
+            "rdfs:label": "isMatchedBy",
+            "schema:domainIncludes": {
+              "@id": "bioschemas:RNA"
+            },
+            "schema:rangeIncludes": [
+              {
+                "@id": "bioschemastypesdrafts:SequenceMatchingModel"
+              }
+            ]
         }
     ]
 }
