@@ -282,7 +282,7 @@
                     "hasSequenceAnnotation",
                     "identifier",
                     "image",
-                    "isCodingRna",
+                    "isCodingRNA",
                     "isEncodedByBioChemEntity",
                     "isInvolvedInBiologicalProcess",
                     "isLocatedInSubcellularLocation",
