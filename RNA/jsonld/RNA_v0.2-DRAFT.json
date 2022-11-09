@@ -291,7 +291,6 @@
                     "isMatchedBy",
                     "isPartOfBioChemEntity",
                     "name",
-                    "sameAs",
                     "taxonomicRange",
                     "url"
                 ],
