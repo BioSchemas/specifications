@@ -229,8 +229,7 @@
                     "editor",
                     "inLanguage",
                     "keywords",
-                    "pagination",
-                    "sameAs"
+                    "pagination"
                 ],
                 "definitions": {
                     "thing": {
