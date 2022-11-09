@@ -232,10 +232,21 @@
                         "owl:cardinality": "one"
                     },
                     "sameAs": {
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
                         "description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
-                        "type": "string",
-                        "format": "uri",
-                        "owl:cardinality": "one"
+                        "owl:cardinality": "many"
                     },
                     "taxonomicRange": {
                         "description": " The taxonomic grouping of the organism that expresses, encodes, or in someway related to the BioChemEntity.",
