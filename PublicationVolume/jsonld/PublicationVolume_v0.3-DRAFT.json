@@ -1,0 +1,461 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "owl": "http://www.w3.org/2002/07/owl/"
+    },
+    "@graph": [
+        {
+            "@id": "bioschemas:PublicationVolume",
+            "@type": "rdfs:Class",
+           "rdfs:comment": "Bioschemas profile, based on Biotea model, describing a PublicationVolume in Life Sciences. A PublicationVolume is a collection of publication issues, or scholarly articles, or possibly, although no commonly, any mix from those mentioned. It is commonly part of a Journal.<h4>Summary of Changes</h4>    Changes since previous draft 0.2-DRAFT-2020_12_03 of the PublicationVolumen profile:    <ul>  <li>added sameAs property as recommended</li>  </ul> Version: 0.3-DRAFT",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/profiles/PublicationVolume/0.3-DRAFT"
+            ],
+            "rdfs:label": "PublicationVolume",
+            "rdfs:subClassOf": {
+                "@id": "schema:PublicationVolume"
+            },
+            "$validation": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "type": "object",
+                "properties": {
+                    "about": {
+                        "description": "Describes what this volume is about. The subject matter of the content.\n Inverse property: subjectOf.",
+                        "$ref": "#/definitions/thing",
+                        "owl:cardinality": "one"
+                    },
+                    "editor": {
+                        "description": " Specifies the Person who edited the CreativeWork.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "hasPart": {
+                        "description": "A PublicationVolume has part PublicationIssue (a.k.a. supplements) or ScholaryArticle. We recommend to include at least the highest 'hasPart' level, i.e., PublicationIssue. It is also possible to use 'hasPart' to link as well directly to ScholarlyArticle, making it easier to find articles in this volume. Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).\n Inverse property: isPartOf.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/publicationissue"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/publicationissue"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/scholarlyarticle"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/scholarlyarticle"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "identifier": {
+                        "description": "Volumes in a journal are commonly identified by a number thus not unique nor global. We recommend to use the URL as identifier whenever possible. The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "inLanguage": {
+                        "description": " The language of the content or performance or used in an action. Please use one of the language codes from the IETF BCP 47 standard. See also availableLanguage. Supersedes language.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/language"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/language"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "isPartOf": {
+                        "description": "A PublicationVolume is part of a Journal. Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.\n Inverse property: hasPart.",
+                        "$ref": "#/definitions/journal",
+                        "owl:cardinality": "one"
+                    },
+                    "keywords": {
+                        "description": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/definedterm"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "pageEnd": {
+                        "description": " The page on which the work ends; for example \"138\" or \"xvi\".",
+                        "oneOf": [
+                            {
+                                "type": "integer"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "pageStart": {
+                        "description": " The page on which the work starts; for example \"135\" or \"xiii\".",
+                        "oneOf": [
+                            {
+                                "type": "integer"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "pagination": {
+                        "description": " Any description of pages that is not separated into pageStart and pageEnd; for example, \"1-6, 9, 55\" or \"10-12, 46-49\".",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "sameAs": {
+                        "description": "Any other URL linking to this volume, preferrable in machine-readable format. URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "url": {
+                        "description": "Oficial URL. URL of the item.",
+                        "type": "string",
+                        "format": "uri",
+                        "owl:cardinality": "one"
+                    },
+                    "volumeNumber": {
+                        "description": " Identifies the volume of publication or multi-part work; for example, \"iii\" or \"2\".",
+                        "oneOf": [
+                            {
+                                "type": "integer"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    }
+                },
+                "required": [
+                    "url",
+                    "volumeNumber"
+                ],
+                "recommended": [
+                    "hasPart",
+                    "identifier",
+                    "isPartOf",
+                    "pageEnd",
+                    "pageStart",
+                    "sameAs"
+                ],
+                "optional": [
+                    "about",
+                    "editor",
+                    "inLanguage",
+                    "keywords",
+                    "pagination"
+                ],
+                "definitions": {
+                    "thing": {
+                        "@type": "schema:Thing",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "person": {
+                        "@type": "Person",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "mainEntityOfPage": {
+                                "anyOf": [
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "format": "uri"
+                                        }
+                                    },
+                                    {
+                                        "$ref": "#/definitions/creativework"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/definitions/creativework"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ]
+                    },
+                    "creativework": {
+                        "@type": "CreativeWork",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
+                    "publicationissue": {
+                        "@type": "bioschemas:PublicationIssue",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "scholarlyarticle": {
+                        "@type": "bioschemas:ScholarlyArticle",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "propertyvalue": {
+                        "@type": "PropertyValue",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "valuereference": {
+                                "oneOf": [
+                                    {
+                                        "$ref": "#/definitions/categorycode"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": [
+                                            {
+                                                "$ref": "#/definitions/categorycode"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    }
+                                ]
+                            },
+                            "unitText": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "recommended": [
+                            "valueReference"
+                        ],
+                        "optional": [
+                            "unitCode",
+                            "unitText"
+                        ]
+                    },
+                    "categorycode": {
+                        "@type": "CategoryCode",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "codeValue": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                        ]
+                    },
+                    "language": {
+                        "@type": "schema:Language",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "journal": {
+                        "@type": "bioschemas:Journal",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "definedterm": {
+                        "@type": "DefinedTerm",
+                        "type": "object",
+                        "properties": {
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "termCode": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "inDefinedTermSet": {
+                                "$ref": "#/definitions/definedtermset"
+                            }
+                        },
+                        "required": []
+                    },
+                    "definedtermset": {
+                        "@type": "DefinedTermSet",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    }
+                }
+            }
+        }
+    ]
+}

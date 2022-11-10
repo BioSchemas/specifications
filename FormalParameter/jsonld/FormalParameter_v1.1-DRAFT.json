@@ -1,0 +1,224 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "owl": "http://www.w3.org/2002/07/owl/",
+        "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/"
+    },
+    "@graph": [
+        {
+            "@id": "bioschemas:FormalParameter",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Bioschemas specification for describing a formal parameter in the Life Sciences. Changes since 1.0-RELEASE<ul><li>added sameAs property as recommended</li></ul>Version: 1.1-DRAFT ",
+            "rdfs:label": "FormalParameter",
+            "rdfs:subClassOf": {
+                "@id": "bioschemastypes:FormalParameter"
+            },
+            "$validation": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "type": "object",
+                "properties": {
+                    "defaultValue": {
+                        "description": "The default value for the FormalParameter. This is commonly only used for Inputs.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/thing"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "valueRequired": {
+                        "description": "If the FormalParameter must be specified. This is commonly only used for Inputs",
+                        "type": "boolean",
+                        "owl:cardinality": "one"
+                    },
+                    "encodingFormat": {
+                        "description": "URLs to accepted formats.  It is strongly recommented that this be specified. If it is not specified, then nothing should be assumed about the encoding formats of the FormalParameter.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/edmoformats"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/edmoformats"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "additionalType": {
+                        "description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "name": {
+                        "description": "The name of the item.",
+                        "type": "string",
+                        "owl:cardinality": "one"
+                    },
+                    "identifier": {
+                        "description": "The identifier property represents any kind of identifier for any kind of <a class=\"localLink\" href=\"http://schema.org/Thing\">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href=\"/docs/datamodel.html#identifierBg\">background notes</a> for more details.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/propertyValue"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/propertyValue"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "description": {
+                        "description": "A description of the item.",
+                        "type": "string",
+                        "owl:cardinality": "one"
+                    },
+                    "sameAs": {
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website",
+                        "owl:cardinality": "many"
+                    }
+                },
+                "required": [
+                    "name"
+                ],
+                "recommended": [
+                    "additionalType",
+                    "description",
+                    "encodingFormat",
+                    "sameAs"
+                ],
+                "optional": [
+                    "defaultValue",
+                    "identifier",
+                    "valueRequired"
+                ],
+                "definitions": {
+                    "thing": {
+                        "description": "The most generic type of item.",
+                        "@type": "Thing",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "description": "The name of the item.",
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "description": "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details.",
+                                "type": "string"
+                            },
+                            "url": {
+                                "description": "URL of the item.",
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "additionalType": {
+                                "description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ]
+                    },
+                    "edmoformats": {
+                        "@type": "DefinedTerm",
+                        "type": "string",
+                        "vocabulary": {
+                            "ontology": [
+                                "edmo_format"
+                            ],
+                            "children_of": [
+                                "http://edamontology.org/format_1915"
+                            ]
+                        },
+                        "strict": false
+                    },
+                    "propertyValue": {
+                        "description": "A property-value pair, e.g. representing a feature of a product or place. Use the 'name' property for the name of the property. If there is an additional human-readable version of the value, put that into the 'description' property.",
+                        "@type": "PropertyValue",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "description": "The name of the item.",
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "description": "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details.",
+                                "type": "string"
+                            },
+                            "url": {
+                                "description": "URL of the item.",
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "additionalType": {
+                                "description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "propertyID": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    }
+                }
+            }
+        }
+    ]
+}

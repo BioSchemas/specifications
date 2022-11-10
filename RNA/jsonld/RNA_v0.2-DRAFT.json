@@ -12,9 +12,9 @@
         {
             "@id": "bioschemas:RNA",
             "@type": "rdfs:Class",
-            "rdfs:comment": " Version: 0.1-DRAFT-2019_11_15. Note, the parent class for this type has been updated to a pending class in schema.org.",
+            "rdfs:comment": " The parent class for this type has been updated to a pending class in schema.org. Changes since 0.1-DRAFT-2019_11_15<ul><li>added sameAs property as recommended</li></ul>. Version: 0.2-DRAFT",
             "schema:schemaVersion": [
-                "https://bioschemas.org/profiles/RNA/0.1-DRAFT-2019_11_15"
+                "https://bioschemas.org/profiles/RNA/0.2-DRAFT"
             ],
             "rdfs:label": "RNA",
             "rdfs:subClassOf": {
@@ -232,10 +232,21 @@
                         "owl:cardinality": "one"
                     },
                     "sameAs": {
-                        "description": " URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
-                        "type": "string",
-                        "format": "uri",
-                        "owl:cardinality": "one"
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+                        "owl:cardinality": "many"
                     },
                     "taxonomicRange": {
                         "description": " The taxonomic grouping of the organism that expresses, encodes, or in someway related to the BioChemEntity.",
@@ -264,7 +275,9 @@
                     }
                 },
                 "required": [],
-                "recommended": [],
+                "recommended": [
+                    "sameAs"
+                ],
                 "optional": [
                     "additionalType",
                     "alternateName",
@@ -289,7 +302,6 @@
                     "isMatchedBy",
                     "isPartOfBioChemEntity",
                     "name",
-                    "sameAs",
                     "taxonomicRange",
                     "url"
                 ],
@@ -397,7 +409,7 @@
                         ]
                     },
                     "biochementity": {
-                        "@type": "bioschemas:BioChemEntity",
+                        "@type": "bioschemastypesdrafts:BioChemEntity",
                         "type": "object",
                         "properties": {
                             "url": {
@@ -414,7 +426,7 @@
                         "required": []
                     },
                     "definedterm": {
-                        "@type": "DefinedTerm",
+                        "@type": "schema:DefinedTerm",
                         "type": "object",
                         "properties": {
                             "url": {
@@ -502,7 +514,7 @@
                         "required": []
                     },
                     "rna": {
-                        "@type": "bioschemas:RNA",
+                        "@type": "bioschemastypesdrafts:RNA",
                         "type": "object",
                         "properties": {
                             "name": {
@@ -512,7 +524,7 @@
                         "required": []
                     },
                     "dna": {
-                        "@type": "bioschemas:Dna",
+                        "@type": "bioschemastypesdrafts:DNA",
                         "type": "object",
                         "properties": {
                             "name": {
@@ -522,7 +534,7 @@
                         "required": []
                     },
                     "sequencematchingmodel": {
-                        "@type": "schema:SequenceMatchingModel",
+                        "@type": "bioschemastypesdrafts:SequenceMatchingModel",
                         "type": "object",
                         "properties": {
                             "name": {

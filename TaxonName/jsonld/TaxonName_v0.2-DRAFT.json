@@ -1,0 +1,378 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/",
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "owl": "http://www.w3.org/2002/07/owl/"
+    },
+    "@graph": [
+        {
+            "@id": "bioschemas:TaxonName",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Bioschemas profile for describing a name of a biological taxon, which may be valid (zoology) / accepted (botany) or not. This profile povides a way to denote the scientific names of a taxon. The taxon accepted/valid name is linked to the taxon with property scientificName while the synonyms are linked with property alternateScientificName. Changes since Version 0.1-DRAFT <ul><li>added sameAs property as recommended</li></ul> Version:0.2-DRAFT",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/profiles/TaxonName/0.2-DRAFT"
+            ],
+            "rdfs:label": "TaxonName",
+            "rdfs:subClassOf": {
+                "@id": "bioschemastypesdrafts:TaxonName"
+            },
+            "$validation": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "type": "object",
+                "properties": {
+                    "additionalType": {
+                        "description": "An equivalent TaxonName type from a well known vocabulary, e.g. TDWG: http://rs.tdwg.org/ontology/voc/TaxonName#TaxonName An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "author": {
+                        "description": "Authorship and date information associated to this taxon name, formatted as per the numenclatural rules The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "description": {
+                        "description": " A description of the item.",
+                        "type": "string",
+                        "owl:cardinality": "one"
+                    },
+                    "identifier": {
+                        "description": "A PropertyValue should be used to relate the taxon name with counterpart identifiers within well known authorities such as GBIF, WoRMS, EoL etc.\nWikidata properties may be used in this respect, e.g.:\nNCBI id (https://www.wikidata.org/entity/P685), \nGBIF id (https://www.wikidata.org/entity/P846),\nEoL id (https://www.wikidata.org/entity/P830), \niNaturalist id (https://www.wikidata.org/entity/P3151), \nWoRMS id (https://www.wikidata.org/entity/P850), \nFishbase id (https://www.wikidata.org/entity/P938),\nTAXREF id (https://www.wikidata.org/entity/P3186),\n...\n The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "isBasedOn": {
+                        "description": "A CreativeWork, such as a scholarly article that coined the name or asserted its status A resource from which this work is derived or from which it is a modification or adaption. Supersedes isBasedOnUrl.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/product"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/product"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "name": {
+                        "description": "A name of that taxon without authorship and date information The name of the item.",
+                        "type": "string",
+                        "owl:cardinality": "one"
+                    },
+                    "taxonRank": {
+                        "description": " The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary \u2013 (typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs).",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/propertyvalue"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "url": {
+                        "description": "Link to the webpage associated to this taxon URL of the item.",
+                        "type": "string",
+                        "format": "uri",
+                        "owl:cardinality": "one"
+                    },
+                    "sameAs": {
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "description": "URL of additional sources for the dataset",
+                        "owl:cardinality": "many"
+                    }
+                },
+                "required": [
+                    "name"
+                ],
+                "recommended": [
+                    "author",
+                    "taxonRank",
+                    "url",
+                    "sameAs"
+                ],
+                "optional": [
+                    "additionalType",
+                    "description",
+                    "identifier",
+                    "isBasedOn"
+                ],
+                "definitions": {
+                    "organization": {
+                        "@type": "Organization",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "legalName": {
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
+                            },
+                            "sameAs": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        }
+                    },
+                    "person": {
+                        "@type": "Person",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "mainEntityOfPage": {
+                                "anyOf": [
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "format": "uri"
+                                        }
+                                    },
+                                    {
+                                        "$ref": "#/definitions/creativework"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/definitions/creativework"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ]
+                    },
+                    "creativework": {
+                        "@type": "CreativeWork",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
+                    "propertyvalue": {
+                        "@type": "PropertyValue",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "valuereference": {
+                                "oneOf": [
+                                    {
+                                        "$ref": "#/definitions/categorycode"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": [
+                                            {
+                                                "$ref": "#/definitions/categorycode"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    }
+                                ]
+                            },
+                            "unitText": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "recommended": [
+                            "valueReference"
+                        ],
+                        "optional": [
+                            "unitCode",
+                            "unitText"
+                        ]
+                    },
+                    "categorycode": {
+                        "@type": "CategoryCode",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "codeValue": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                        ]
+                    },
+                    "product": {
+                        "@type": "schema:Product",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    }
+                }
+            }
+        }
+    ]
+}

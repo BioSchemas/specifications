@@ -1,0 +1,74 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/",
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "owl": "http://www.w3.org/2002/07/owl/"
+    },
+    "@graph": [
+        {
+            "@id": "bioschemas:SequenceRange",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Used to define the range of a subsequence, typically used in conjunction with SequenceAnnotation to define the range of the annotation on the protein or gene sequence. Version: 0.1-DRAFT. Note, the parent class for this profile has been updated to a pending class in schema.org.",
+            "rdfs:label": "SequenceRange",
+            "rdfs:subClassOf": {
+                "@id": "bioschemastypesdrafts:SequenceRange"
+            },
+            "$validation": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "type": "object",
+                "properties": {
+                    "rangeEnd": {
+                        "description": "Final position of the range",
+                        "type": "integer",
+                        "owl:cardinality": "one"
+                    },
+                    "rangeStart": {
+                        "description": "Initial position of the range.",
+                        "type": "integer",
+                        "owl:cardinality": "one"
+                    },
+                    "endUncertainty": {
+                        "description": "If the initial position is not known with reasonable certainty, specify here the uncertainty type as one of \u2018<\u2019 (any position before than rangeEnd), \u2018>\u2019 (any position after rangeEnd), \u2018~\u2019 (around rangeEnd), \u2018[#-#] (to indicate a range where rangeEnd could be located)\u2019.",
+                        "type": "string",
+                        "owl:cardinality": "one"
+                    },
+                    "startUncertainty": {
+                        "description": "If the initial position is not known with reasonable certainty, specify here the uncertainty type as one of \u2018<\u2019 (any position before than rangeStart), \u2018>\u2019 (any position after rangeStart), \u2018~\u2019 (around the rangeStart), \u2018[#-#] (to indicate a range where rangeStart could be located)\u2019.",
+                        "type": "string",
+                        "owl:cardinality": "one"
+                    },
+                    "sameAs": {
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+                        "owl:cardinality": "many"
+                    }
+                },
+                "required": [
+                    "rangeEnd",
+                    "rangeStart"
+                ],
+                "recommended": [
+                    "endUncertainty",
+                    "startUncertainty",
+                    "sameAs"
+                ],
+                "optional": []
+            }
+        }
+    ]
+}

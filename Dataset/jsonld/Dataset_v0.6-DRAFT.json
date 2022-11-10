@@ -1,0 +1,686 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "owl": "http://www.w3.org/2002/07/owl/"
+    },
+    "@graph": [
+        {
+            "@id": "bioschemas:Dataset",
+            "@type": "rdfs:Class",
+            "rdfs:comment": " A guide for how to describe datasets in the life-sciences using Schema.org-like annotation.<h3>Summary of Changes</h3><ul><li>add sameAs property as recommended.</li><li> Included DefinedTerm as expected type for measurementTechnique</li></ul> Version: 0.6-DRAFT",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/profiles/Dataset/0.6-DRAFT"
+            ],
+            "rdfs:label": "Dataset",
+            "rdfs:subClassOf": {
+                "@id": "schema:Dataset"
+            },
+            "$validation": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "type": "object",
+                "properties": {
+                    "alternateName": {
+                        "description": " An alias for the item.",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "citation": {
+                        "description": "A citation for a publication that describes the dataset. A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "creator": {
+                        "description": "The name of the dataset creator (person or organization). The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "dateCreated": {
+                        "description": " The date on which the CreativeWork was created or the item was added to a DataFeed.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "date"
+                            },
+                            {
+                                "$ref": "#/definitions/datetime"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "dateModified": {
+                        "description": " The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "date"
+                            },
+                            {
+                                "$ref": "#/definitions/datetime"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "datePublished": {
+                        "description": " Date of first broadcast/publication.",
+                        "type": "string",
+                        "format": "date",
+                        "owl:cardinality": "one"
+                    },
+                    "description": {
+                        "description": "A short summary describing a dataset. A description of the item.",
+                        "type": "string",
+                        "owl:cardinality": "one"
+                    },
+                    "distribution": {
+                        "description": " A downloadable form of this dataset, at a specific location, in a specific format.",
+                        "$ref": "#/definitions/datadownload",
+                        "owl:cardinality": "one"
+                    },
+                    "hasPart": {
+                        "description": " Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense). \nInverse property: [isPartOf](https://schema.org/isPartOf)",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "$ref": "#/definitions/trip"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "identifier": {
+                        "description": "CURIEs that can be resolved using [Identifiers.org](https://identifiers.org/) should be used. The identifier property represents any kind of identifier for any kind of [Thing](https://schema.org/Thing), such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/propertyvalue"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "includedInDataCatalog": {
+                        "description": " A data catalog which contains this dataset. Supersedes [includedDataCatalog](https://schema.org/includedDataCatalog), [catalog](https://schema.org/catalog).\nInverse property: [dataset](https://schema.org/dataset)",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/datacatalog"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/datacatalog"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "isAccessibleForFree": {
+                        "description": " A flag to signal that the item, event, or place is accessible for free. Supersedes [free](https://schema.org/free).",
+                        "type": "boolean",
+                        "owl:cardinality": "one"
+                    },
+                    "isBasedOn": {
+                        "description": "Use to link a Dataset to the Study that it was generated from. A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html. \nSupersedes isBasedOnUrl.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/product"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/product"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "isPartOf": {
+                        "description": " Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of. Inverse property: [hasPart](https://schema.org/hasPart)",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "keywords": {
+                        "description": "Keywords should be drawn from a controlled vocabulary, e.g. [EDAM](https://edamontology.org/), and supplied as a DefinedTerm list. Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/definedterm"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "license": {
+                        "description": "A license under which the dataset is distributed. A license document that applies to this content, typically indicated by URL.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "maintainer": {
+                        "description": " A maintainer of a [Dataset](https://schema.org/Dataset), software package ([SoftwareApplication](https://schema.org/SoftwareApplication)), or other [Project](https://schema.org/Project). A maintainer is a [Person](https://schema.org/Person) or [Organization](https://schema.org/Organization) that manages contributions to, and/or publication of, some (typically complex) artifact. It is common for distributions of software and data to be based on \"upstream\" sources. When [maintainer](https://schema.org/maintainer) is applied to a specific version of something e.g. a particular version or packaging of a [Dataset](https://schema.org/Dataset), it is always possible that the upstream source has a different maintainer. The [isBasedOn](https://schema.org/isBasedOn) property can be used to indicate such relationships between datasets to make the different maintenance roles clear. Similarly in the case of software, a package may have dedicated maintainers working on integration into software distributions such as Ubuntu, as well as upstream maintainers of the underlying work.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "measurementTechnique": {
+                        "description": " A technique or technology used in a [Dataset](https://schema.org/Dataset) (or [DataDownload](https://schema.org/DataDownload), [DataCatalog](https://schema.org/DataCatalog)), corresponding to the method used for measuring the corresponding variable(s) (described using [variableMeasured](https://schema.org/variableMeasured)). This is oriented towards scientific and scholarly dataset publication but may have broader applicability; it is not intended as a full representation of measurement, but rather as a high level summary for dataset discovery.\n\nFor example, if [variableMeasured](https://schema.org/variableMeasured) is: molecule concentration, [measurementTechnique](https://schema.org/measurementTechnique) could be: \"mass spectrometry\" or \"nmr spectroscopy\" or \"colorimetry\" or \"immunofluorescence\".\n\nIf the [variableMeasured](https://schema.org/variableMeasured) is \"depression rating\", the [measurementTechnique](https://schema.org/measurementTechnique) could be \"Zung Scale\" or \"HAM-D\" or \"Beck Depression Inventory\".\n\nIf there are several [variableMeasured](https://schema.org/variableMeasured) properties recorded for some given data object, use a [PropertyValue](https://schema.org/PropertyValue) for each [variableMeasured](https://schema.org/variableMeasured) and attach the corresponding [measurementTechnique](https://schema.org/measurementTechnique).",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/definedterm"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/definedterm"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "name": {
+                        "description": "A descriptive name of the dataset. The name of the item.",
+                        "type": "string",
+                        "owl:cardinality": "one"
+                    },
+                    "publisher": {
+                        "description": " The publisher of the creative work.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "sameAs": {
+                        "description": " URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+                        "type": "string",
+                        "format": "uri",
+                        "owl:cardinality": "one"
+                    },
+                    "url": {
+                        "description": "The location of a page describing the dataset. URL of the item.",
+                        "type": "string",
+                        "format": "uri",
+                        "owl:cardinality": "one"
+                    },
+                    "variableMeasured": {
+                        "description": "What does the dataset measure? (e.g., temperature, pressure). The variableMeasured property can indicate (repeated as necessary) the variables that are measured in some dataset, either described as text or as pairs of identifier and description using PropertyValue.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/propertyvalue"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "version": {
+                        "description": "The version number for this dataset. The version of the CreativeWork embodied by a specified resource.",
+                        "oneOf": [
+                            {
+                                "type": "number"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    }
+                },
+                "required": [
+                    "description",
+                    "identifier",
+                    "keywords",
+                    "license",
+                    "name",
+                    "url"
+                ],
+                "recommended": [
+                    "alternateName",
+                    "citation",
+                    "creator",
+                    "distribution",
+                    "includedInDataCatalog",
+                    "isBasedOn",
+                    "measurementTechnique",
+                    "variableMeasured",
+                    "version",
+                    "sameAs"
+                ],
+                "optional": [
+                    "dateCreated",
+                    "dateModified",
+                    "datePublished",
+                    "hasPart",
+                    "isAccessibleForFree",
+                    "isPartOf",
+                    "maintainer",
+                    "publisher",
+                    "sameAs"
+                ],
+                "definitions": {
+                    "creativework": {
+                        "@type": "CreativeWork",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
+                    "organization": {
+                        "@type": "Organization",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "legalName": {
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
+                            },
+                            "sameAs": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        }
+                    },
+                    "person": {
+                        "@type": "Person",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "mainEntityOfPage": {
+                                "anyOf": [
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "format": "uri"
+                                        }
+                                    },
+                                    {
+                                        "$ref": "#/definitions/creativework"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/definitions/creativework"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ]
+                    },
+                    "datetime": {
+                        "@type": "schema:DateTime",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "datadownload": {
+                        "@type": "schema:DataDownload",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "trip": {
+                        "@type": "schema:Trip",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "propertyvalue": {
+                        "@type": "PropertyValue",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "valuereference": {
+                                "oneOf": [
+                                    {
+                                        "$ref": "#/definitions/categorycode"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": [
+                                            {
+                                                "$ref": "#/definitions/categorycode"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    }
+                                ]
+                            },
+                            "unitText": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "recommended": [
+                            "valueReference"
+                        ],
+                        "optional": [
+                            "unitCode",
+                            "unitText"
+                        ]
+                    },
+                    "categorycode": {
+                        "@type": "CategoryCode",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "codeValue": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                        ]
+                    },
+                    "datacatalog": {
+                        "@type": "bioschemas:DataCatalog",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "product": {
+                        "@type": "schema:Product",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "definedterm": {
+                        "@type": "DefinedTerm",
+                        "type": "object",
+                        "properties": {
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "termCode": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "inDefinedTermSet": {
+                                "$ref": "#/definitions/definedtermset"
+                            }
+                        },
+                        "required": []
+                    },
+                    "definedtermset": {
+                        "@type": "DefinedTermSet",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    }
+                }
+            }
+        }
+    ]
+}

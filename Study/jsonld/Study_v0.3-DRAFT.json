@@ -4,8 +4,9 @@
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/",
+        "bioschemasdrafts": "https://discovery.biothings.io/view/bioschemasdrafts/",
         "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
-        "ppeo": "http://purl.org/ppeo/PPEO.owl#",
+        "ppeo:hasGrowthFacility": "http://purl.org/ppeo/PPEO.owl#hasGrowthFacility",
         "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [

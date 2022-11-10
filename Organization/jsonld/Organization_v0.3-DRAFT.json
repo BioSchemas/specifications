@@ -1,0 +1,639 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "owl": "http://www.w3.org/2002/07/owl/"
+    },
+    "@graph": [
+        {
+            "@id": "bioschemas:Organization",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Bioschemas specification for describing a Organization in the life-science. Provides a way to describe bioscience organizations on the World Wide Web. It defines metadata terms that can be used in the code of web pages and applications, and builds on top of existing technologies and standards. The goal of the specification is to make it easier to discover, exchange and integrate life science organization profiles across the Internet. Changes since 0.2-DRAFT<ul><li>added sameAs property as recommended</li></ul>. Version: 0.3-DRAFT",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/profiles/Organization/0.3-DRAFT"
+            ],
+            "rdfs:label": "Organization",
+            "rdfs:subClassOf": {
+                "@id": "schema:Organization"
+            },
+            "$validation": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "type": "object",
+                "properties": {
+                    "alternateName": {
+                        "description": " An alias for the item.",
+                        "type": "string",
+                        "owl:cardinality": "one"
+                    },
+                    "attachment": {
+                        "description": "Any files or related websites which give more information about this organization, e.g., flyers, third party sites, ... ",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "budget": {
+                        "description": "The annual (or total - for a project) budget for the organization. ",
+                        "$ref": "#/definitions/pricespecification",
+                        "owl:cardinality": "one"
+                    },
+                    "contactPoint": {
+                        "description": " A contact point for a person or organization. Supersedes contactPoints.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/contactpoint"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/contactpoint"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "dateModified": {
+                        "description": "The date when the organization information was last modified. The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "date"
+                            },
+                            {
+                                "$ref": "#/definitions/datetime"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "department": {
+                        "description": " A relationship between an organization and a department of that organization, also described as an organization (allowing different urls, logos, opening hours). For example: a store with a pharmacy, or a bakery with a cafe.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "description": {
+                        "description": " A description of the item.",
+                        "type": "string",
+                        "owl:cardinality": "one"
+                    },
+                    "dissolutionDate": {
+                        "description": " The date that this organization was dissolved.",
+                        "type": "string",
+                        "format": "date",
+                        "owl:cardinality": "one"
+                    },
+                    "founderMember": {
+                        "description": "For an alliance or collaboration or project, the founding members. NOTE: schema/Organization has founder but this has a type of Person not Person and Organization ",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "foundingDate": {
+                        "description": " The date that this organization was founded.",
+                        "type": "string",
+                        "format": "date",
+                        "owl:cardinality": "one"
+                    },
+                    "fundingModel": {
+                        "description": "A description of how the organization is funded. ",
+                        "type": "string",
+                        "owl:cardinality": "one"
+                    },
+                    "keywords": {
+                        "description": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+                        "type": "string",
+                        "owl:cardinality": "one"
+                    },
+                    "legalName": {
+                        "description": " The official name of the organization, e.g. the registered company name.",
+                        "type": "string",
+                        "owl:cardinality": "one"
+                    },
+                    "location": {
+                        "description": " The location of for example where the event is happening, an organization is located, or where an action takes place.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/place"
+                            },
+                            {
+                                "$ref": "#/definitions/postaladdress"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "logo": {
+                        "description": " An associated logo.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/imageobject"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ],
+                        "owl:cardinality": "one"
+                    },
+                    "member": {
+                        "description": " A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals. Supersedes members, musicGroupMember.\nInverse property: memberOf.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "memberOf": {
+                        "description": " An Organization (or ProgramMembership) to which this Person or Organization belongs.\nInverse property: member.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/programmembership"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/programmembership"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "membershipCategory": {
+                        "description": "Defines a membership category and associated fees (for projects and alliances etc.). ",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/offer"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/offer"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "name": {
+                        "description": " The name of the item.",
+                        "type": "string",
+                        "owl:cardinality": "one"
+                    },
+                    "owns": {
+                        "description": " Products owned by the organization or person.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/ownershipinfo"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/ownershipinfo"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/product"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/product"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "parentOrganization": {
+                        "description": " The larger organization that this organization is a subOrganization of, if any. Supersedes branchOf.\nInverse property: subOrganization.",
+                        "$ref": "#/definitions/organization",
+                        "owl:cardinality": "one"
+                    },
+                    "sameAs": {
+                        "description": " URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+                        "type": "string",
+                        "format": "uri",
+                        "owl:cardinality": "one"
+                    },
+                    "socialMedia": {
+                        "description": "Link to social media websites like twitter or facebook. ",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "status": {
+                        "description": "To record if the organization is still alive, and if it were are project or alliance, what the outcome was, or if it has closed down or merged, why and when.\nNote: There is a health-lifesci.status, but this is not related to the current status property ",
+                        "type": "string",
+                        "owl:cardinality": "one"
+                    },
+                    "subOrganization": {
+                        "description": " A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property.\nInverse property: parentOrganization.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "topic": {
+                        "description": "Scientific topics that describe the organization and its activities, ideally using an ontology term from EDAM:Topic. ",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "type": {
+                        "description": "The type of the organization should be selected from the Controlled Vocabulary column. ",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    },
+                    "url": {
+                        "description": " URL of the item.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
+                    }
+                },
+                "required": [
+                    "description",
+                    "legalName",
+                    "name",
+                    "sameAs",
+                    "topic",
+                    "type"
+                ],
+                "recommended": [
+                    "alternateName",
+                    "contactPoint",
+                    "fundingModel",
+                    "keywords",
+                    "location",
+                    "logo",
+                    "member",
+                    "memberOf",
+                    "membershipCategory",
+                    "status",
+                    "url",
+                    "sameAs"
+                ],
+                "optional": [
+                    "attachment",
+                    "budget",
+                    "dateModified",
+                    "department",
+                    "dissolutionDate",
+                    "founderMember",
+                    "foundingDate",
+                    "owns",
+                    "parentOrganization",
+                    "socialMedia",
+                    "subOrganization"
+                ],
+                "definitions": {
+                    "pricespecification": {
+                        "@type": "schema:PriceSpecification",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "contactpoint": {
+                        "@type": "schema:ContactPoint",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "datetime": {
+                        "@type": "schema:DateTime",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "organization": {
+                        "@type": "Organization",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "legalName": {
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
+                            },
+                            "sameAs": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        }
+                    },
+                    "person": {
+                        "@type": "Person",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "mainEntityOfPage": {
+                                "anyOf": [
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "format": "uri"
+                                        }
+                                    },
+                                    {
+                                        "$ref": "#/definitions/creativework"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/definitions/creativework"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ]
+                    },
+                    "creativework": {
+                        "@type": "CreativeWork",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
+                    "place": {
+                        "@type": "Place",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "address": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "$ref": "#/definitions/postaladdress"
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        }
+                    },
+                    "postaladdress": {
+                        "@type": "PostalAddress",
+                        "type": "object",
+                        "properties": {
+                            "addressCountry": {
+                                "type": "string"
+                            },
+                            "addressLocality": {
+                                "type": "string"
+                            },
+                            "addressRegion": {
+                                "type": "string"
+                            },
+                            "postOfficeBoxNumber": {
+                                "type": "string"
+                            },
+                            "postalCode": {
+                                "type": "string"
+                            },
+                            "streetAddress": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "imageobject": {
+                        "@type": "ImageObject",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
+                    "programmembership": {
+                        "@type": "schema:ProgramMembership",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "offer": {
+                        "@type": "schema:Offer",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "ownershipinfo": {
+                        "@type": "schema:OwnershipInfo",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "product": {
+                        "@type": "schema:Product",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    }
+                }
+            }
+        }
+    ]
+}
