@@ -2,3 +2,4 @@
 /specifications.iml
 *.swp
 .DS_STORE
+.github/workflows/__pycache__/
