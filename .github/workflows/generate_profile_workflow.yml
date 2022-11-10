@@ -94,7 +94,7 @@ jobs:
 
       - name: Commit and Push the changes in the website
         run: | 
-          sleep 30
+          sleep 5
           cd bioschemas.github.io
           git config user.name "sahar-frikha"
           git config user.email "sahar.frikha1@gmail.com"
