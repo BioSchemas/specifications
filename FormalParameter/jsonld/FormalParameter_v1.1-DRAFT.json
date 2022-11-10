@@ -11,7 +11,7 @@
         {
             "@id": "bioschemas:FormalParameter",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Bioschemas specification for describing a formal parameter in the Life Sciences. Changes since 1.0-RELEASE<ul><li>added sameAs property as recommended</li></ul>Version: 1.1-DRAFT ",
+            "rdfs:comment": "Bioschemas specification for describing a formal parameter in the Life Sciences. Version 1.1-DRAFT. <h3>Summary of Changes</h3> Changes since 1.0-RELEASE<ul><li>added sameAs property as recommended</li></ul>",
             "rdfs:label": "FormalParameter",
             "rdfs:subClassOf": {
                 "@id": "bioschemastypes:FormalParameter"

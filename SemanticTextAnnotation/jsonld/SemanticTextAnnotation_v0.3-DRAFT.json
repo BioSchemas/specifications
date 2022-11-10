@@ -10,7 +10,7 @@
         {
             "@id": "bioschemas:SemanticTextAnnotation",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Bioschemas profile, based on Biotea model, describing a semantic annotation associated to a piece of text in a ScholarlyArticle in Life Sciences. A SemanticTextAnnotation corresponds to an expression identified in a ScholarlyArticle and associated to an ontology term.<h4>Summary of Changes</h4>    Changes since previous draft 0.2-DRAFT-2020_12_03 of the SemanticAnnotation profile:    <ul>  <li>added sameAs property as recommended</li> </ul> Version: 0.3-DRAFT",
+            "rdfs:comment": "Bioschemas profile, based on Biotea model, describing a semantic annotation associated to a piece of text in a ScholarlyArticle in Life Sciences. A SemanticTextAnnotation corresponds to an expression identified in a ScholarlyArticle and associated to an ontology term. Version 0.3-DRAFT. <h3>Summary of Changes</h3>    Changes since previous draft 0.2-DRAFT-2020_12_03 of the SemanticAnnotation profile:    <ul>  <li>added sameAs property as recommended</li> </ul>",
             "schema:schemaVersion": [
                 "https://bioschemas.org/profiles/SemanticTextAnnotation/0.3-DRAFT"
             ],

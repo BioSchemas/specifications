@@ -12,7 +12,7 @@
         {
             "@id": "bioschemasdrafts:ProteinStructure",
             "@type": "rdfs:Class",
-            "rdfs:comment": "This profile specification presents the BioChemEntity usage when describing a Protein structure. Changes since 0.5-DRAFT-2018_08_15<ul><li>added sameAs property as recommended</li></ul>. Version: 0.6-DRAFT",
+            "rdfs:comment": "This profile specification presents the BioChemEntity usage when describing a Protein structure. Version 0.6-DRAFT. <h3>Summary of Changes</h3>Changes since 0.5-DRAFT-2018_08_15<ul><li>added sameAs property as recommended</li></ul>",
             "schema:schemaVersion": [
                 "https://bioschemas.org/profiles/ProteinStructure/0.6-DRAFT"
             ],
