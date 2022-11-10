@@ -10,7 +10,7 @@
         {
             "@id": "bioschemas:Journal",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Bioschemas profile, based on Biotea model, describing a Journal in Life Sciences. A Journal is a collection of publication issues, publication volumes or scholarly articles, or possibly, although no commonly, any mix from those mentioned. <h4>Summary of Changes</h4>    Changes since previous draft 0.2 Journal profile:    <ul>      <li>added sameAs property as recommended</li></ul>Version: 0.3-DRAFT",
+            "rdfs:comment": "Bioschemas profile, based on Biotea model, describing a Journal in Life Sciences. A Journal is a collection of publication issues, publication volumes or scholarly articles, or possibly, although no commonly, any mix from those mentioned. Version 0.3-DRAFT<h3>Summary of Changes</h3> Changes since previous draft 0.2 Journal profile: <ul><li>added sameAs property as recommended</li></ul>",
             "schema:schemaVersion": [
                 "https://bioschemas.org/profiles/Journal/0.3-DRAFT"
             ],

@@ -10,7 +10,7 @@
         {
             "@id": "bioschemas:DataCatalog",
             "@type": "rdfs:Class",
-            "rdfs:comment": "A guide for how to describe data catalogs/repositories in the life-sciences using Schema.org-like annotation. Version 0.4-DRAFT. Changes since 0.3-RELEASE-2019_07_01:<ul><li>added sameAs property as recommended.</li></ul>",
+            "rdfs:comment": "A guide for how to describe data catalogs/repositories in the life-sciences using Schema.org-like annotation. Version 0.4-DRAFT. <h3>Summary of Changes</h3> Changes since 0.3-RELEASE-2019_07_01:<ul><li>added sameAs property as recommended.</li></ul>",
             "rdfs:label": "DataCatalog",
             "rdfs:subClassOf": {
                 "@id": "schema:DataCatalog"

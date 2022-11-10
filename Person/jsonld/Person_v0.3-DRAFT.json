@@ -10,7 +10,7 @@
         {
             "@id": "bioschemas:Person",
             "@type": "rdfs:Class",
-            "rdfs:comment": "A specification for describing people in life sciences The Life Science Person specification provides a way to describe bioscience events on the World Wide Web. It defines a set of metadata and vocabularies, built on top of existing technologies and standards, that can be used to represent the profile information of people in Web pages and applications. The goal of the specification is to make it easier to discover, life science profile information. Changes since 0.2-DRAFT-2019_07_19<ul><li>added sameAs property as recommended</li></ul>. Version: 0.3-DRAFT",
+            "rdfs:comment": "A specification for describing people in life sciences The Life Science Person specification provides a way to describe bioscience events on the World Wide Web. It defines a set of metadata and vocabularies, built on top of existing technologies and standards, that can be used to represent the profile information of people in Web pages and applications. The goal of the specification is to make it easier to discover, life science profile information. Version: 0.3-DRAFT. <h3>Summary of Changes</h3>Changes since 0.2-DRAFT-2019_07_19:<ul><li>added sameAs property as recommended</li></ul>. ",
             "schema:schemaVersion": [
                 "https://bioschemas.org/profiles/Person/0.3-DRAFT"
             ],

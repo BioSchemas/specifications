@@ -10,7 +10,7 @@
         {
             "@id": "bioschemasdrafts:Disease",
             "@type": "rdfs:Class",
-            "rdfs:comment": "This is the first draft of the Disease profile, using MedicalCondition type from schema.org as template for inheriting some properties. Changes since 0.1-DRAFT<ul><li>added sameAs as recommended<li></ul>Version 0.2-DRAFT",
+            "rdfs:comment": "This is the first draft of the Disease profile, using MedicalCondition type from schema.org as template for inheriting some properties. Version 0.2-DRAFT. <h3>Summary of Changes</h3> Changes since 0.1-DRAFT<ul><li>added sameAs as recommended<li></ul>",
             "rdfs:label": "Disease",
             "rdfs:subClassOf": {
                 "@id": "schema:MedicalCondition"

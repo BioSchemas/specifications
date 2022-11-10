@@ -11,7 +11,7 @@
         {
             "@id": "bioschemas:TaxonName",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Bioschemas profile for describing a name of a biological taxon, which may be valid (zoology) / accepted (botany) or not. This profile povides a way to denote the scientific names of a taxon. The taxon accepted/valid name is linked to the taxon with property scientificName while the synonyms are linked with property alternateScientificName. Changes since Version 0.1-DRAFT <ul><li>added sameAs property as recommended</li></ul> Version:0.2-DRAFT",
+            "rdfs:comment": "Bioschemas profile for describing a name of a biological taxon, which may be valid (zoology) / accepted (botany) or not. This profile povides a way to denote the scientific names of a taxon. The taxon accepted/valid name is linked to the taxon with property scientificName while the synonyms are linked with property alternateScientificName. Version: 0.2-DRAFT. <h3>Summary of Changes</h3> Changes since Version 0.1-DRAFT <ul><li>added sameAs property as recommended</li></ul>",
             "schema:schemaVersion": [
                 "https://bioschemas.org/profiles/TaxonName/0.2-DRAFT"
             ],

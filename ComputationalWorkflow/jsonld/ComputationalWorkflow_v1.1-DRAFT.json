@@ -11,7 +11,7 @@
         {
             "@id": "bioschemas:ComputationalWorkflow",
             "@type": "rdfs:Class",
-            "rdfs:comment": "A computational workflow consists of an orchestrated and repeatable pattern of activity enabled by the systematic organization of resources into processes that transform materials, provide services, or process information (source Wikipedia.org). It is executed by a computational process and is thus distinct from laboratory or business workflows. Changes since 1.0-RELEASE<ul><li>added sameAs property as recommended</li><li>Change input/outputs from minimal/required to recommended (issue 563)</li><li>Add applicationSubCategory and featurelist as recommended (issue 564)</li></ul>Version 1.1-DRAFT",
+            "rdfs:comment": "A computational workflow consists of an orchestrated and repeatable pattern of activity enabled by the systematic organization of resources into processes that transform materials, provide services, or process information (source Wikipedia.org). It is executed by a computational process and is thus distinct from laboratory or business workflows. Version 1.1-DRAFT. <h3>Summary of Changes</h3> Changes since 1.0-RELEASE<ul><li>added sameAs property as recommended</li><li>Change input/outputs from minimal/required to recommended (issue 563)</li><li>Add applicationSubCategory and featurelist as recommended (issue 564)</li></ul>Version 1.1-DRAFT",
             "rdfs:label": "ComputationalWorkflow",
             "rdfs:subClassOf": {
                 "@id": "bioschemastypes:ComputationalWorkflow"
