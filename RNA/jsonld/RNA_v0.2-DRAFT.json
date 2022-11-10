@@ -12,7 +12,7 @@
         {
             "@id": "bioschemas:RNA",
             "@type": "rdfs:Class",
-            "rdfs:comment": " The parent class for this type has been updated to a pending class in schema.org. Changes since 0.1-DRAFT-2019_11_15<ul><li>added sameAs property as recommended</li></ul>. Version: 0.2-DRAFT",
+            "rdfs:comment": "The parent class for this type has been updated to a pending class in schema.org. Changes since 0.1-DRAFT-2019_11_15<ul><li>added sameAs property as recommended</li></ul>. Version: 0.2-DRAFT",
             "schema:schemaVersion": [
                 "https://bioschemas.org/profiles/RNA/0.2-DRAFT"
             ],
