@@ -11,7 +11,7 @@
         {
             "@id": "bioschemas:MolecularEntity",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Bioschemas profile describing a MolecularEntity. Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity. (Source: ChEBI:23367) based on version 0.5. Note, the parent class for this profile has been updated to a pending class in schema.org. Version 0.6-DRAFT. <h3>Summary of Changes</h3><br>Changes since 0.5-DRAFT: <ul></li>anyOf 'name','inCHI','SMILES' required</li><li>sameAs removed from recommended</li><li>identifier moved from required to optional.</li></ul>",
+            "rdfs:comment": "Bioschemas profile describing a MolecularEntity. Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity. (Source: ChEBI:23367) based on version 0.5. Note, the parent class for this profile has been updated to a pending class in schema.org. Version 0.6-DRAFT. <h3>Summary of Changes</h3><br>Changes since 0.5-DRAFT:<ul></li>anyOf 'name','inCHI','SMILES' required</li><li>sameAs removed from recommended</li><li>identifier moved from required to optional.</li></ul>",
             "rdfs:label": "MolecularEntity",
             "rdfs:subClassOf": {
                 "@id": "schema:MolecularEntity"
