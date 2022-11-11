@@ -467,7 +467,7 @@
                     "image",
                     "isInvolvedInBiologicalProcess",
                     "isLocatedInSubcellularLocation",
-                    "mainEntityOfPage"
+                    "mainEntityOfPage",
                     "taxonomicRange"
                 ],
                 "definitions": {
