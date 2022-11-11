@@ -11,7 +11,7 @@
         {
             "@id": "bioschemasdrafts:Protein",
             "@type": "rdfs:Class",
-            "rdfs:comment": "This Protein profile specification presents the most common properties used for a Protein plus examples on how to use them. Version 0.12-DRAFT. <h3>Summary of Changes</h3><br>Changes since 0.11-DRAFT:<ul><li> Updated type properties to Schema.org pending release.</li><li>Addition of hasSequenceAnnotation property at Recommended level</li></ul>",
+            "rdfs:comment": "This Protein profile specification presents the most common properties used for a Protein plus examples on how to use them. Version 0.12-DRAFT. <h3>Summary of Changes</h3><br>Changes since 0.11-DRAFT:<ul><li> Updated type properties to Schema.org pending release.</li><li>Addition of hasSequenceAnnotation property at Recommended level.</li></ul>",
             "rdfs:label": "Protein",
             "rdfs:subClassOf": {
                 "@id": "schema:Protein"

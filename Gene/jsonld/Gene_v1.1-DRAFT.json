@@ -452,7 +452,7 @@
                     "isPartOfBioChemEntity",
                     "url",
                     "hasSequenceAnnotation",
-                    "sameAs",
+                    "sameAs"
                 ],
                 "optional": [
                     "alternateName",
