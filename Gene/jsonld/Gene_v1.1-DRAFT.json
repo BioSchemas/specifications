@@ -11,7 +11,7 @@
         {
             "@id": "bioschemasdrafts:Gene",
             "@type": "rdfs:Class",
-            "rdfs:comment": "This Gene profile specification presents the markup for describing a Gene. Version 1.1-DRAFT. <h3>Summary of Changes</h3>  <ul><li>Updated type properties to Schema.org pending release.</li><li>Addition of hasSequenceAnnotation property at Recommended level.</li><li>Remove use of mainEntityOfPage; DataRecord has been deprecated</li>",
+            "rdfs:comment": "This Gene profile specification presents the markup for describing a Gene. Version 1.1-DRAFT. <h3>Summary of Changes</h3> Changes since 1.0-RELEASE: <ul><li>Updated type properties to Schema.org pending release.</li><li>Addition of hasSequenceAnnotation property at Recommended level.</li><li>Added sameAs as recommended.</li><li>Remove use of mainEntityOfPage; DataRecord has been deprecated.</li></ul>",
             "rdfs:label": "Gene",
             "rdfs:subClassOf": {
                 "@id": "schema:Gene"
@@ -451,7 +451,8 @@
                     "encodesBioChemEntity",
                     "isPartOfBioChemEntity",
                     "url",
-                    "hasSequenceAnnotation"
+                    "hasSequenceAnnotation",
+                    "sameAs",
                 ],
                 "optional": [
                     "alternateName",
@@ -466,8 +467,7 @@
                     "image",
                     "isInvolvedInBiologicalProcess",
                     "isLocatedInSubcellularLocation",
-                    "mainEntityOfPage",
-                    "sameAs",
+                    "mainEntityOfPage"
                     "taxonomicRange"
                 ],
                 "definitions": {
