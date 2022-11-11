@@ -10,7 +10,7 @@
         {
             "@id": "bioschemas:PublicationIssue",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Bioschemas profile, based on Biotea model, describing a PublicationIssue in Life Sciences. A PublicationIssue is a collection of publication scholarly articles published as a collection in a publication volume or a journal. Version 0.3-DRAFT.<h3>Summary of Changes</h3>    Changes since previous draft 0.2-DRAFT-2020_12_03 of the PublicationIssue profile:    <ul>  <li>added sameAs property as recommended</li>  </ul>",
+            "rdfs:comment": "Bioschemas profile, based on Biotea model, describing a PublicationIssue in Life Sciences. A PublicationIssue is a collection of publication scholarly articles published as a collection in a publication volume or a journal. Version 0.3-DRAFT.<h3>Summary of Changes</h3><br>Changes since previous draft 0.2-DRAFT-2020_12_03 of the PublicationIssue profile:    <ul>  <li>added sameAs property as recommended</li>  </ul>",
             "schema:schemaVersion": [
                 "https://bioschemas.org/profiles/PublicationIssue/0.3-DRAFT"
             ],
