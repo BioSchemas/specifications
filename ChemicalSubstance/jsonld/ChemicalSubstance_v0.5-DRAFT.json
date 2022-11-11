@@ -231,8 +231,7 @@
                     "description",
                     "disambiguatingDescription",
                     "image",
-                    "potentialUse",
-                    "sameAs"
+                    "potentialUse"
                 ],
                 "definitions": {
                     "definedTerm": {
