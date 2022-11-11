@@ -3,6 +3,7 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemasdrafts": "https://discovery.biothings.io/view/bioschemasdrafts/",
         "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
         "owl": "http://www.w3.org/2002/07/owl/",
         "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/"
@@ -11,7 +12,7 @@
         {
             "@id": "bioschemas:FormalParameter",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Bioschemas specification for describing a formal parameter in the Life Sciences. Version 1.1-DRAFT. <h3>Summary of Changes</h3> Changes since 1.0-RELEASE<ul><li>added sameAs property as recommended</li></ul>",
+            "rdfs:comment": "Bioschemas specification for describing a formal parameter in the Life Sciences. Version 1.1-DRAFT. <h3>Summary of Changes</h3><br>Changes since 1.0-RELEASE:<ul><li>added sameAs property as recommended</li></ul>",
             "rdfs:label": "FormalParameter",
             "rdfs:subClassOf": {
                 "@id": "bioschemastypes:FormalParameter"
