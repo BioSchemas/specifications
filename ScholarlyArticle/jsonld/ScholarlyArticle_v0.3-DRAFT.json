@@ -10,7 +10,7 @@
         {
             "@id": "bioschemas:ScholarlyArticle",
             "@type": "rdfs:Class",
-           "rdfs:comment": "Bioschemas profile, based on Biotea model, describing a ScholarlyArticle in Life Sciences. A ScholarlyArticle is an article commonly reporting a scientific research, for instance a journal article or thesis. DOI is recommended as official idnetifier (e.g., \"@id\" in JSON-LD) Version 0.3-DRAFT. <h3>Summary of Changes</h3>    Changes since previous draft 0.2-DRAFT-2020_12_03 of the ScholarlyArticle profile:    <ul>  <li>added sameAs property as recommended</li>  </ul>",
+           "rdfs:comment": "Bioschemas profile, based on Biotea model, describing a ScholarlyArticle in Life Sciences. A ScholarlyArticle is an article commonly reporting a scientific research, for instance a journal article or thesis. DOI is recommended as official idnetifier (e.g., \"@id\" in JSON-LD) Version 0.3-DRAFT. <h3>Summary of Changes</h3> <br>Changes since previous draft 0.2-DRAFT-2020_12_03 of the ScholarlyArticle profile:<ul><li>added sameAs property as recommended</li></ul>",
             "schema:schemaVersion": [
                 "https://bioschemas.org/profiles/ScholarlyArticle/0.3-DRAFT"
             ],
