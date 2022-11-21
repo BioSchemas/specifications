@@ -168,12 +168,21 @@
                                 }
                             },
                             {
-                                "$ref": "#/definitions/anatomicalPart"
+                                "$ref": "#/definitions/anatomicalStructure"
                             },
                             {
                                 "type": "array",
                                 "items": {
-                                    "$ref": "#/definitions/anatomicalPart"
+                                    "$ref": "#/definitions/anatomicalStructure"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/anatomicalSystem"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/anatomicalSystem"
                                 }
                             }
                         ],
@@ -584,29 +593,25 @@
                         },
                         "required": []
                     },
-                    "anatomicalPart": {
-                        "anyOf": [
-                            {
-                                "@type": "AnatomicalStructure",
-                                "type": "object",
-                                "properties": {
-                                    "name": {
-                                        "type": "string"
-                                    }
-                                },
-                                "required": []
-                            },
-                            {
-                                "@type": "AnatomicalSystem",
-                                "type": "object",
-                                "properties": {
-                                    "name": {
-                                        "type": "string"
-                                    }
-                                },
-                                "required": []
+                    "anatomicalStructure": {
+                        "@type": "AnatomicalStructure",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
                             }
-                        ]
+                        },
+                        "required": []
+                    },
+                    "anatomicalStructure": {
+                        "@type": "AnatomicalSystem",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
                     }
                 }
             }
