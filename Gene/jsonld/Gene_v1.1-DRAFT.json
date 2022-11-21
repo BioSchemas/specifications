@@ -631,7 +631,7 @@
                         },
                         "required": []
                     },
-                    "anatomicalStructure": {
+                    "anatomicalSystem": {
                         "@type": "AnatomicalSystem",
                         "type": "object",
                         "properties": {
