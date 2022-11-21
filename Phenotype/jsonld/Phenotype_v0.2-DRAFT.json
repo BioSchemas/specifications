@@ -11,7 +11,7 @@
         {
             "@id": "bioschemas:Phenotype",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Bioschemas profile describing a Phenotype in Life Sciences This Phenotype type specification presents the markup for describing a Phenotype. Version 0.2-DRAFT. <h3>Summary of Changes</h3>Changes from Previous Version:<ul><li>isAssociatedWith BioChemEntity switch to recommended and renamed as bioChemAssociation with an improved description</li><li>taxonomicRange switch to recommended</li><li>image switch to optional and many</li><li>additionalType dropped</li><li>additionalProperty description changed</li><li>new property: associatedDisease</li><li>new properties for GO associations: hasMolecularFunction, isInvolvedInBiologicalProcess and isLocatedInSubcellularLocation</li></ul>",
+            "rdfs:comment": "Bioschemas profile describing a Phenotype in Life Sciences This Phenotype type specification presents the markup for describing a Phenotype. Version 0.2-DRAFT. <h3>Summary of Changes</h3><br>Changes from Previous Version:<ul><li>isAssociatedWith BioChemEntity switch to recommended and renamed as bioChemAssociation with an improved description</li><li>taxonomicRange switch to recommended</li><li>image switch to optional and many</li><li>additionalType dropped</li><li>additionalProperty description changed</li><li>new property: associatedDisease</li><li>new properties for GO associations: hasMolecularFunction, isInvolvedInBiologicalProcess and isLocatedInSubcellularLocation</li></ul>",
             "schema:schemaVersion": [
                 "https://bioschemas.org/profiles/Phenotype/0.2-DRAFT"
             ],
@@ -351,7 +351,8 @@
                     "bioChemAssociation",
                     "description",
                     "taxonomicRange",
-                    "url"
+                    "url",
+                    "sameAs"
                 ],
                 "optional": [
                     "additionalProperty",
@@ -363,7 +364,6 @@
                     "isInvolvedInBiologicalProcess",
                     "isLocatedInSubcellularLocation",
                     "mainEntityOfPage",
-                    "sameAs",
                     "valueReference"
                 ],
                 "definitions": {
