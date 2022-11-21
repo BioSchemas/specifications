@@ -641,29 +641,6 @@
                         },
                         "required": []
                     },
-                    "anatomicalPart": {
-                        "anyOf": [
-                            {
-                                "@type": "AnatomicalStructure",
-                                "type": "object",
-                                "properties": {
-                                    "name": {
-                                        "type": "string"
-                                    }
-                                },
-                                "required": []
-                            },
-                            {
-                                "@type": "AnatomicalSystem",
-                                "type": "object",
-                                "properties": {
-                                    "name": {
-                                        "type": "string"
-                                    }
-                                },
-                                "required": []
-                            }
-                        ]
                     },
                     "dna": {
                         "@type": "bioschemastypesdrafts:DNA",
