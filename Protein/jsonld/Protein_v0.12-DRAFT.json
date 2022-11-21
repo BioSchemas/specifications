@@ -641,7 +641,6 @@
                         },
                         "required": []
                     },
-                    },
                     "dna": {
                         "@type": "bioschemastypesdrafts:DNA",
                         "type": "object",
