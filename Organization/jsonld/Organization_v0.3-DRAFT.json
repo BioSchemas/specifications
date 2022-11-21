@@ -634,6 +634,158 @@
                     }
                 }
             }
+        },
+        {
+            "@id": "rdf:type",
+            "rdfs:comment": "This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column. This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column.",
+            "@type": "rdf:Property",
+            "rdfs:label": "type",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Organization"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:attachment",
+            "rdfs:comment": "Any files or related websites which give more information about this organization, e.g., flyers, third party sites, …",
+            "@type": "rdf:Property",
+            "rdfs:label": "attachment",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Organization"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:budget",
+            "rdfs:comment": "The annual (or total - for a project) budget for the organization.",
+            "@type": "rdf:Property",
+            "rdfs:label": "budget",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Organization"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:PriceSpecification"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:dateModified",
+            "rdfs:comment": "The date on which the CreativeWork was most recently modified or when the item’s entry was modified within a DataFeed.",
+            "@type": "rdf:Property",
+            "rdfs:label": "dateModified",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Organization"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Date"
+                },
+                {
+                    "@id": "schema:DateTime"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:founderMember",
+            "rdfs:comment": "For an alliance or collaboration or project, the founding members. NOTE: schema/Organization has founder but this has a type of Person not Person and Organization.",
+            "@type": "rdf:Property",
+            "rdfs:label": "founderMember",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Organization"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Organization"
+                },
+                {
+                    "@id": "schema:Person"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:fundingModel",
+            "rdfs:comment": "A description of how the organization is funded.",
+            "@type": "rdf:Property",
+            "rdfs:label": "fundingModel",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Organization"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:membershipCategory",
+            "rdfs:comment": "Defines a membership category and associated fees (for projects and alliances etc.).",
+            "@type": "rdf:Property",
+            "rdfs:label": "membershipCategory",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Organization"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Offer"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:socialMedia",
+            "rdfs:comment": "Link to social media websites like twitter or facebook.",
+            "@type": "rdf:Property",
+            "rdfs:label": "socialMedia",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Organization"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:status",
+            "rdfs:comment": "To record if the organization is still alive, and if it were are project or alliance, what the outcome was, or if it has closed down or merged, why and when. Note: There is a health-lifesci.status, but this is not related to the current status property",
+            "@type": "rdf:Property",
+            "rdfs:label": "status",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Organization"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:topic",
+            "rdfs:comment": "Scientific topics that describe the organization and its activities, ideally using an ontology term from EDAM:Topic. Controlled Vocabulary: EDAM:Topic (http://edamontology.org/topic_0003)",
+            "@type": "rdf:Property",
+            "rdfs:label": "topic",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Organization"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
         }
     ]
 }
