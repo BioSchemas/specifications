@@ -11,7 +11,7 @@
         {
             "@id": "bioschemas:SequenceRange",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Used to define the range of a subsequence, typically used in conjunction with SequenceAnnotation to define the range of the annotation on the protein or gene sequence. Version: 0.1-DRAFT. Version: <h3>Summary of Changes</h3> Not available. Note, the parent class for this profile has been updated to a pending class in schema.org.",
+            "rdfs:comment": "Used to define the range of a subsequence, typically used in conjunction with SequenceAnnotation to define the range of the annotation on the protein or gene sequence. Version: 0.1-DRAFT. <h3>Summary of Changes</h3><br>Not available. Note, the parent class for this profile has been updated to a pending class in schema.org.",
             "rdfs:label": "SequenceRange",
             "rdfs:subClassOf": {
                 "@id": "bioschemastypesdrafts:SequenceRange"

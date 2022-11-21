@@ -11,7 +11,7 @@
         {
             "@id": "bioschemas:SequenceAnnotation",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Used to provide metadata about Sequence Annotations. The sequence can be an amino acid (protein) or nucleic acid (Gene, DNA, RNA). Version: 0.7-DRAFT (05 July 2021) Note, the parent class for this type has been updated to a pending class in schema.org. <h3>Summary of Changes</h3> Not available.",
+            "rdfs:comment": "Used to provide metadata about Sequence Annotations. The sequence can be an amino acid (protein) or nucleic acid (Gene, DNA, RNA). Version: 0.7-DRAFT (05 July 2021) Note, the parent class for this type has been updated to a pending class in schema.org. <h3>Summary of Changes</h3><br>Not available.",
             "rdfs:label": "SequenceAnnotation",
             "rdfs:subClassOf": {
                 "@id": "bioschemastypesdrafts:SequenceAnnotation"
@@ -288,7 +288,6 @@
                     "valueReference",
                     "hasBioChemEntityPart",
                     "hasRepresentation",
-                    "isEncodedByBioChemEntity",
                     "isLocatedInSubcellularLocation",
                     "alternateName",
                     "isPartOfBioChemEntity"
