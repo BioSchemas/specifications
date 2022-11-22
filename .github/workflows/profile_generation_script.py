@@ -416,37 +416,53 @@ def generate_types_cardianlity(g, prop):
     list_types = list()
     cardianliy = "ONE"
 
+    print( "prop.keys ", prop.keys())
+    
     if "type" in prop.keys():
         if "format" in prop.keys():
             list_types.append(prop["format"])
-        else:
+            print(prop["format"])
+        if not prop["type"]=="object" :
             list_types.append(prop["type"])
 
     if "$ref" in prop.keys():
         list_types.append(prop["$ref"])
+    
+    if "@type" in prop.keys():
+        list_types.append(prop["@type"])
 
     if "anyOf" in prop.keys():
         for e in prop["anyOf"]:
-            if "format" in e.keys():
-                list_types.append(e["format"])
-            elif "items" in e.keys():
-                list_types.append(e["items"])
-                cardianliy = "MANY"
-            else:
-                for t in e.keys():
-                    list_types.append(e[t])
+            if "type" in e.keys():
+                if not e["type"]=="array":
+                    if "format" in e.keys():
+                        list_types.append(e["format"])
+                    if not e["type"]=="object" :
+                        list_types.append(e["type"])
+
+            if "$ref" in e.keys():
+                list_types.append(e["$ref"])
+
+            if "@type" in e.keys():
+                list_types.append(e["@type"])
 
     if "oneOf" in prop.keys():
         for e in prop["oneOf"]:
-            if "format" in e.keys():
-                list_types.append(e["format"])
-            elif "items" in e.keys():
-                list_types.append(e["items"])
-                cardianliy = "MANY"
-            else:
-                for t in e.keys():
-                    list_types.append(e[t])
+            if "type" in e.keys():
+                if not e["type"]=="array":
+                    if "format" in e.keys():
+                        list_types.append(e["format"])
+                    if not e["type"]=="object" :
+                        list_types.append(e["type"])
 
+            if "$ref" in e.keys():
+                list_types.append(e["$ref"])
+
+            if "@type" in e.keys():
+                list_types.append(e["@type"])
+    
+    print("list types ", list_types)
+    
     i = 1
     j = 1
     while i == 1:
@@ -470,10 +486,10 @@ def generate_types_cardianlity(g, prop):
     expected_types = []
     remove_deplicates_expected_types = []
     upper_case_expected_types = []
-
+    
     for t in list_types:
         if len(t.split("/")) > 1:
-            expected_types.append(t.split("/")[-1])
+                expected_types.append(t.split("/")[-1])
         else:
             expected_types.append(t)
 
@@ -500,32 +516,32 @@ def generate_types_cardianlity(g, prop):
     for i in remove_deplicates_expected_types:
         if i in dict_definitions.keys():
             if not "bioschemas" and not "schema" in dict_definitions[i]:
+                    clean_expected_types.remove(i)
+                    clean_expected_types.append(dict_definitions[i])
+            elif len(dict_definitions[i].split(':')) > 0:
                 clean_expected_types.remove(i)
-                clean_expected_types.append(dict_definitions[i])
-            elif len(dict_definitions[i].split(":")) > 0:
-                clean_expected_types.remove(i)
-                clean_expected_types.append(dict_definitions[i].split(":")[-1])
+                clean_expected_types.append(dict_definitions[i].split(':')[-1])
 
     upper_case_expected_types = clean_expected_types
     for i in upper_case_expected_types:
-
-        t = ""
-
+        
+        t  = ""
+        
         for c in range(len(i)):
-            if c == 0:
+            if c == 0 :
                 t += i[c].upper()
-            else:
+            else : 
                 t += i[c]
         print(t)
         clean_expected_types.remove(i)
         clean_expected_types.append(t)
-
+        
+        
     print(Fore.MAGENTA + f"Expected Types : {clean_expected_types}" + Style.RESET_ALL)
 
     print(Fore.RED + f"Cardinality = {cardianliy}" + Style.RESET_ALL)
 
     return cardianliy, sorted(clean_expected_types)
-
 
 # ## Main Script
 
