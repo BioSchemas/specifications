@@ -510,6 +510,13 @@ def generate_types_cardianlity(g, prop):
         if i == "uri":
             clean_expected_types.remove(i)
             clean_expected_types.append("URL")
+
+    # Replace 'date-time' with 'Date-Time'
+    for i in remove_deplicates_expected_types:
+        if i == "date-time":
+            clean_expected_types.remove(i)
+            clean_expected_types.append("DateTime")
+
     # to remove the ontology
     for i in remove_deplicates_expected_types:
         if len(i.split(":")) > 0:
