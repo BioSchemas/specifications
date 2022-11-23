@@ -851,15 +851,31 @@
           },
           "dateModified": {
             "description": "The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
-            "format": "date",
             "owl:cardinality": "one",
-            "type": "string"
+            "oneOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "format": "date-time",
+                "type": "string"
+              }
+            ]
           },
           "datePublished": {
             "description": "Date of first broadcast/publication.",
-            "format": "date",
             "owl:cardinality": "one",
-            "type": "string"
+            "oneOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "format": "date-time",
+                "type": "string"
+              }
+            ]
           },
           "encodingFormat": {
             "description": "Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)) e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc.).\n\nIn cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]] alongside particular [[encodingFormat]] information.\n\nUnregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.",
