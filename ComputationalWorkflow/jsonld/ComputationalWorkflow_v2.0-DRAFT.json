@@ -837,9 +837,17 @@
           },
           "dateCreated": {
             "description": "The date on which the CreativeWork was created or the item was added to a DataFeed.",
-            "format": "date",
             "owl:cardinality": "one",
-            "type": "string"
+            "oneOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "format": "date-time",
+                "type": "string"
+              }
+            ]
           },
           "dateModified": {
             "description": "The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
