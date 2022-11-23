@@ -499,17 +499,23 @@ def generate_types_cardianlity(g, prop):
     # Some treatments on the type's label
     clean_expected_types = remove_deplicates_expected_types
 
-    # Replace 'String' with 'Text', 'Uri' with 'URI', etc.
+    # Replace 'String' with 'Text'
     for i in remove_deplicates_expected_types:
         if i == "string":
             clean_expected_types.remove(i)
             clean_expected_types.append("Text")
-        elif i == "uri":
+
+    # Replace 'Uri' with 'URI'
+    for i in remove_deplicates_expected_types:
+        if i == "uri":
             clean_expected_types.remove(i)
             clean_expected_types.append("URL")
-        elif i=="date-time":
+
+    # Replace 'date-time' with 'Date-Time'
+    for i in remove_deplicates_expected_types:
+        if i == "date-time":
             clean_expected_types.remove(i)
-            clean_expected_types.append("DateTime") 
+            clean_expected_types.append("DateTime")
 
     # to remove the ontology
     for i in remove_deplicates_expected_types:
