@@ -545,20 +545,21 @@ def generate_types_cardianlity(g, prop):
                 clean_expected_types.append(dict_definitions[i].split(":")[-1])
 
     upper_case_expected_types = clean_expected_types
-    for i in upper_case_expected_types:
-
+    for i in clean_expected_types:
         t = ""
-
         for c in range(len(i)):
             if c == 0:
                 t += i[c].upper()
             else:
                 t += i[c]
-        print(t)
-        clean_expected_types.remove(i)
-        clean_expected_types.append(t)
+        upper_case_expected_types.remove(i)
+        upper_case_expected_types.append(t)
 
-    print(Fore.MAGENTA + f"Expected Types : {clean_expected_types}" + Style.RESET_ALL)
+    print(clean_expected_types)
+
+    print(
+        Fore.MAGENTA + f"Expected Types : {upper_case_expected_types}" + Style.RESET_ALL
+    )
 
     print(Fore.RED + f"Cardinality = {cardianliy}" + Style.RESET_ALL)
 
