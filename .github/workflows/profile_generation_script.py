@@ -516,6 +516,16 @@ def generate_types_cardianlity(g, prop):
         if i == "date-time":
             clean_expected_types.remove(i)
             clean_expected_types.append("DateTime")
+    # Replace 'date' with 'Date'
+    for i in remove_deplicates_expected_types:
+        if i == "date":
+            clean_expected_types.remove(i)
+            clean_expected_types.append("Date")
+    # Replace 'boolean' with 'Boolean'
+    for i in remove_deplicates_expected_types:
+        if i == "boolean":
+            clean_expected_types.remove(i)
+            clean_expected_types.append("Boolean")
 
     # to remove the ontology
     for i in remove_deplicates_expected_types:
