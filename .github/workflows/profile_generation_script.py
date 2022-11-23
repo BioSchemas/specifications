@@ -510,7 +510,12 @@ def generate_types_cardianlity(g, prop):
         if i == "uri":
             clean_expected_types.remove(i)
             clean_expected_types.append("URL")
-
+    # to remove the ontology
+    for i in remove_deplicates_expected_types:
+        if len(i.split(":")) > 0:
+            remove_deplicates_expected_types.remove(i)
+            remove_deplicates_expected_types.append(i.split(":")[-1])
+            
     # Replace property definitions with their type
     # Replace property definitions with their type
     for i in remove_deplicates_expected_types:
