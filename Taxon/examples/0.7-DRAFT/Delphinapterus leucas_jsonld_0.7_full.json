@@ -1,16 +1,15 @@
 {
     "@context": [
         "http://schema.org",
-        {   "dwc": "http://rs.tdwg.org/dwc/terms/",
+        {
+            "dct": "http://purl.org/dc/terms/",
+            "dwc": "http://rs.tdwg.org/dwc/terms/",
             "dwc:vernacularName": { "@container": "@language" }
         }
     ],
 
-    "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Taxon/0.7-DRAFT"
-    },
-
     "@type" : "Taxon",
+    "dct:conformsTo": { "@id": "https://bioschemas.org/profiles/Taxon/0.7-DRAFT" },
     "additionalType": [ "dwc:Taxon", "http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept" ],
     "identifier": [
         {   "@type": "PropertyValue",
@@ -36,11 +35,13 @@
     "alternateName": [ "Balaena albicans Muller, 1776", "Beluga catodon Gray, 1846" ],
     "alternateScientificName": [
         {   "@type" : "TaxonName",
+            "dct:conformsTo": { "@id": "https://bioschemas.org/profiles/TaxonName/0.1-DRAFT" },
             "name": "Balaena albicans",
             "author": "Muller, 1776",
             "taxonRank": "species"
         },
         {   "@type" : "TaxonName",
+            "dct:conformsTo": { "@id": "https://bioschemas.org/profiles/TaxonName/0.1-DRAFT" },
             "name": "Beluga catodon",
             "author": "Gray, 1846",
             "taxonRank": "species"
@@ -59,6 +60,7 @@
 
     "parentTaxon": { 
         "@type": "Taxon",
+        "dct:conformsTo": { "@id": "https://bioschemas.org/profiles/Taxon/0.7-DRAFT" },
         "name": "Delphinapterus Lacépède, 1804",
         "identifier": "191588",
         "mainEntityOfPage": "https://inpn.mnhn.fr/espece/cd_nom/191588?lg=en",
