@@ -10,7 +10,7 @@
         {
             "@id": "bioschemas:Dataset",
             "@type": "rdfs:Class",
-            "rdfs:comment": "A guide for how to describe datasets in the life-sciences using Schema.org-like annotation. Version 1.0-RELEASE. <h3>Summary of Changes</h3> <br>Key changes since 0.3-RELEASE:<ul><li>Updated properties to Schema.org v12.0; various properties added at recommended or optional level, expected types updated. See 0.4-DRAFT for full details</li><li>license now a minimum property</li><li>keywords: Cardinality #501 – Cardinality is MANY</li><li>distribution: Cardinality #574 – Cardinality changed to MANY</li><li>datePublished: Increased marginlity #576 – Now recommended</li><li>publisher: Increased marginlity, Cardinality #576 – Now recommended with MANY cardinality</li></ul>",
+            "rdfs:comment": "A guide for how to describe datasets in the life-sciences using Schema.org-like annotation. Version 1.1-DRAFT. <h3>Summary of Changes</h3> <br>Key changes since 1.0-RELEASE:<ul><li>sameAs now recommended.</li></ul>",
             "schema:schemaVersion": [
                 "https://bioschemas.org/profiles/Dataset/1.0-RELEASE"
             ],
@@ -443,7 +443,8 @@
                     "isBasedOn",
                     "measurementTechnique",
                     "variableMeasured",
-                    "version"
+                    "version",
+                    "sameAs"
                 ],
                 "optional": [
                     "dateCreated",
@@ -452,8 +453,7 @@
                     "isAccessibleForFree",
                     "isPartOf",
                     "maintainer",
-                    "publisher",
-                    "sameAs"
+                    "publisher"
                 ],
                 "definitions": {
                     "creativework": {
