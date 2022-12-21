@@ -10,9 +10,9 @@
         {
             "@id": "bioschemas:Dataset",
             "@type": "rdfs:Class",
-            "rdfs:comment": " A guide for how to describe datasets in the life-sciences using Schema.org-like annotation. Version 0.6-DRAFT. <h3>Summary of Changes:</h3> <br><ul><li>add sameAs property as recommended.</li><li> Included DefinedTerm as expected type for measurementTechnique</li></ul>",
+            "rdfs:comment": "A guide for how to describe datasets in the life-sciences using Schema.org-like annotation. Version 1.0-RELEASE. <h3>Summary of Changes</h3> <br>Key changes since 0.3-RELEASE:<ul><li>Updated properties to Schema.org v12.0; various properties added at recommended or optional level, expected types updated. See 0.4-DRAFT for full details</li><li>license now a minimum property</li><li>keywords: Cardinality #501 – Cardinality is MANY</li><li>distribution: Cardinality #574 – Cardinality changed to MANY</li><li>datePublished: Increased marginlity #576 – Now recommended</li><li>publisher: Increased marginlity, Cardinality #576 – Now recommended with MANY cardinality</li></ul>",
             "schema:schemaVersion": [
-                "https://bioschemas.org/profiles/Dataset/0.6-DRAFT"
+                "https://bioschemas.org/profiles/Dataset/1.0-RELEASE"
             ],
             "rdfs:label": "Dataset",
             "rdfs:subClassOf": {
@@ -124,8 +124,18 @@
                     },
                     "distribution": {
                         "description": " A downloadable form of this dataset, at a specific location, in a specific format.",
-                        "$ref": "#/definitions/datadownload",
-                        "owl:cardinality": "one"
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/datadownload"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/datadownload"
+                                }
+                            }
+                        ],
+                        "owl:cardinality": "many"
                     },
                     "hasPart": {
                         "description": " Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense). \nInverse property: [isPartOf](https://schema.org/isPartOf)",
@@ -254,9 +264,28 @@
                             {
                                 "type": "string",
                                 "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/definedterm"
+                                }
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
                         ],
-                        "owl:cardinality": "one"
+                        "owl:cardinality": "many"
                     },
                     "license": {
                         "description": "A license under which the dataset is distributed. A license document that applies to this content, typically indicated by URL.",
@@ -408,23 +437,23 @@
                     "alternateName",
                     "citation",
                     "creator",
+                    "datePublished",
                     "distribution",
                     "includedInDataCatalog",
                     "isBasedOn",
                     "measurementTechnique",
                     "variableMeasured",
-                    "version",
-                    "sameAs"
+                    "version"
                 ],
                 "optional": [
                     "dateCreated",
                     "dateModified",
-                    "datePublished",
                     "hasPart",
                     "isAccessibleForFree",
                     "isPartOf",
                     "maintainer",
-                    "publisher"
+                    "publisher",
+                    "sameAs"
                 ],
                 "definitions": {
                     "creativework": {
