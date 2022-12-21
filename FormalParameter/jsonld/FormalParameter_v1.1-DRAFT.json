@@ -181,7 +181,7 @@
                         "type": "string",
                         "vocabulary": {
                             "ontology": [
-                                "edmo_format"
+                                "edam"
                             ],
                             "children_of": [
                                 "http://edamontology.org/format_1915"
