@@ -346,15 +346,6 @@
                                     "type": "string",
                                     "format": "uri"
                                 }
-                            },
-                            {
-                                "$ref": "#/definitions/definedterm"
-                            },
-                            {
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/definitions/definedterm"
-                                }
                             }
                         ],
                         "owl:cardinality": "many"
