@@ -12,7 +12,7 @@ For new profiles:
 
 ## 2 Automated Rendering (Github Action)
 
-Once the pull request in the specifiaction repository is merged, a [GitHub Action workflow](.github/workflows/generate_profile_workflow.yml) is launched. It converts the JSON-LD representation of the Bioschemas profile from the specifications repository into the format needed for the Bioschemas website. 
+Once the pull request in the specifiaction repository is merged, a [GitHub Action workflow](https://github.com/BioSchemas/specifications/blob/master/.github/workflows/generate_profile_workflow.yml) is launched. It converts the JSON-LD representation of the Bioschemas profile from the specifications repository into the format needed for the Bioschemas website. 
 
 *Workflow steps (shown in figure below):*
 
