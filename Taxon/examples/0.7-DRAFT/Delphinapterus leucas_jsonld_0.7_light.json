@@ -11,8 +11,8 @@
     },
 
     "@type" : "Taxon",
+    "@id": "http://taxref.mnhn.fr/lod/taxon/60932",
     "additionalType": [ "dwc:Taxon", "http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept" ],
-    "identifier": "60932",
     "mainEntityOfPage": "https://inpn.mnhn.fr/espece/cd_nom/60932?lg=en",
 
     "name": "Delphinapterus leucas (Pallas, 1776)",
@@ -22,7 +22,7 @@
         { "@language": "fr", "@value": "Bélouga" }
     ],
 
-    "taxonRank": "species",
+    "taxonRank": [ "http://www.wikidata.org/entity/Q7432", "species" ],
 
     "parentTaxon": { 
         "@type": "Taxon",
@@ -33,8 +33,8 @@
     
     "image": "https://inpn.mnhn.fr/photos/uploads/webtofs/inpn/3/181473.jpg",
     "sameAs": [
-        "http://doris.ffessm.fr/Especes/Delphinapterus-leucas-Beluga-868",
         "http://www.marinespecies.org/aphia.php?p=taxdetails&id=137115",
-        "http://www.iucnredlist.org/details/6335"
+        "http://www.iucnredlist.org/details/6335",
+        "https://www.gbif.org/species/5220003"
     ]
 }

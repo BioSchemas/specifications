@@ -5,7 +5,7 @@
     ],
 
     "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/TaxonName/0.1-DRAFT"
+        "@id": "https://bioschemas.org/profiles/TaxonName/0.2-DRAFT"
     },
 
     "@type" : "TaxonName",
@@ -13,17 +13,17 @@
     "additionalType": "tn:TaxonName",
     "name": "Delphinapterus leucas",
     "author": "(Pallas, 1776)",
+    "mainEntityOfPage": "https://taxref.mnhn.fr/taxref-web/taxa/60932",
     "taxonRank": [
-        "http://rs.tdwg.org/ontology/voc/TaxonRank#Species",
+        "species",
         "http://www.wikidata.org/entity/Q7432",
-        "species"
+        "http://rs.tdwg.org/ontology/voc/TaxonRank#Species"
     ],
     
     "isBasedOn": {
-        "@type": "ScholarlyArticle",
-        "name": "...",
-        "author": [ "First Author", "Second Author" ],
-        "datePublished": "..."
+        "@type": "CreativeWork",
+        "name": "Reise Prov. Russ. Reichs vol.3 1 p.85...",
+        "author": [ "M.P.S. Pallas" ]
     },
 
     "identifier": [
@@ -32,5 +32,8 @@
             "propertyID": "https://www.wikidata.org/entity/P3186",
             "value": "60932"
         }
+    ],
+    "sameAs": [
+        "https://www.gbif.org/species/5220003"
     ]
 }

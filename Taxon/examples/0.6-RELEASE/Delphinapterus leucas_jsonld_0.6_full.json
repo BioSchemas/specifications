@@ -11,6 +11,7 @@
     },
 
     "@type" : "Taxon",
+    "@id": "http://taxref.mnhn.fr/lod/taxon/60932",
     "additionalType": [ "dwc:Taxon", "http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept" ],
     "identifier": "60932",
     "mainEntityOfPage": "https://inpn.mnhn.fr/espece/cd_nom/60932?lg=en",

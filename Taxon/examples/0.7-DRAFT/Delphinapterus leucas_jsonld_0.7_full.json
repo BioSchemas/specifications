@@ -11,6 +11,7 @@
     },
 
     "@type" : "Taxon",
+    "@id": "http://taxref.mnhn.fr/lod/taxon/60932",
     "additionalType": [ "dwc:Taxon", "http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept" ],
     "identifier": [
         {   "@type": "PropertyValue",
@@ -22,6 +23,11 @@
             "name": "WoRMS id",
             "propertyID": "https://www.wikidata.org/entity/P850",
             "value": "137115"
+        },
+        {   "@type": "PropertyValue",
+            "name": "GBIF id",
+            "propertyID": "https://www.wikidata.org/entity/P846",
+            "value": "5220003"
         }
     ],
     "mainEntityOfPage": "https://inpn.mnhn.fr/espece/cd_nom/60932?lg=en",
@@ -52,9 +58,9 @@
     ],
 
     "taxonRank": [
+      "species",
       "http://rs.tdwg.org/ontology/voc/TaxonRank#Species",
-      "http://www.wikidata.org/entity/Q7432",
-      "species"
+      "http://www.wikidata.org/entity/Q7432"
     ],
 
     "parentTaxon": { 
@@ -63,9 +69,9 @@
         "identifier": "191588",
         "mainEntityOfPage": "https://inpn.mnhn.fr/espece/cd_nom/191588?lg=en",
         "taxonRank" : [ 
+            "genus",
             "http://rs.tdwg.org/ontology/voc/TaxonRank#Genus", 
-            "http://www.wikidata.org/entity/Q34740",
-            "genus"
+            "http://www.wikidata.org/entity/Q34740"
         ]
     },
 
@@ -89,8 +95,8 @@
     
     "image": "https://inpn.mnhn.fr/photos/uploads/webtofs/inpn/3/181473.jpg",
     "sameAs": [
-        "http://doris.ffessm.fr/Especes/Delphinapterus-leucas-Beluga-868",
         "http://www.marinespecies.org/aphia.php?p=taxdetails&id=137115",
-        "http://www.iucnredlist.org/details/6335"
+        "http://www.iucnredlist.org/details/6335",
+        "https://www.gbif.org/species/5220003"
     ]
 }
