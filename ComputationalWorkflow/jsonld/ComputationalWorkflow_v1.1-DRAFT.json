@@ -3,13 +3,13 @@
     "schema": "http://schema.org/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "bh2022GH": "https://discovery.biothings.io/view/bh2022GH/",
+    "bioschemasdrafts": "https://discovery.biothings.io/view/bioschemasdrafts/",
     "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
     "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/"
   },
   "@graph": [
     {
-      "@id": "bh2022GH:ComputationalWorkflow",
+      "@id": "bioschemasdrafts:ComputationalWorkflow",
       "@type": "rdfs:Class",
       "rdfs:comment": "A computational workflow consists of an orchestrated and repeatable pattern of activity enabled by the systematic organization of resources into processes that transform materials, provide services, or process information (source Wikipedia.org). It is executed by a computational process and is thus distinct from laboratory or business workflows. Version 1.1-DRAFT. <h3>Summary of Changes</h3> Changes since 1.0-RELEASE<ul><li>added sameAs property as recommended</li><li>Updates from GH propagated from this spreadsheet here \nhttps://docs.google.com/spreadsheets/d/18FITcHImkm5nNk4HyD-8iMhrzw98Ika6pTrFQ2iaNh8/edit#gid=292464567 (Alan Williams)</li><li>updates by Nick Juty:<ul><li>mandate formalParameter (https://github.com/BioSchemas/specifications/issues/563)</li><li>prefix for parameter (https://github.com/BioSchemas/specifications/issues/562)</li><li>applicationSubcategory & featureList (https://github.com/BioSchemas/specifications/issues/564)</li></ul> </ul>",
       "rdfs:label": "ComputationalWorkflow",
@@ -2232,12 +2232,12 @@
       }
     },
     {
-      "@id": "bh2022GH:applicationSubCategory",
+      "@id": "bioschemasdrafts:applicationSubCategory",
       "@type": "rdf:Property",
       "rdfs:comment": "Subcategory of the application. \"A URL to the subcategory of ComputationalWorkflow. Note that the applicationCategory is implicitly Workflow. Example: \"applicationCategory\": \"http://edamontology.org/topic_3948\"",
       "rdfs:label": "applicationSubCategory",
       "schema:domainIncludes": {
-        "@id": "bh2022GH:ComputationalWorkflow"
+        "@id": "bioschemasdrafts:ComputationalWorkflow"
       },
       "schema:rangeIncludes": [
         {
@@ -2246,12 +2246,12 @@
       ]
     },
     {
-      "@id": "bh2022GH:featureList",
+      "@id": "bioschemasdrafts:featureList",
       "@type": "rdf:Property",
       "rdfs:comment": "Features or modules provided by this application (and possibly required by other applications). Functionality provided by the ComputatiionalWorkflow. ",
       "rdfs:label": "featureList",
       "schema:domainIncludes": {
-        "@id": "bh2022GH:ComputationalWorkflow"
+        "@id": "bioschemasdrafts:ComputationalWorkflow"
       },
       "schema:rangeIncludes": [
         {
