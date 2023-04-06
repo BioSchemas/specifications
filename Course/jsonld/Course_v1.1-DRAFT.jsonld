@@ -1,0 +1,1247 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "bioschemasdrafts": "https://discovery.biothings.io/view/bioschemasdrafts/",
+    "bioschemas": "https://discovery.biothings.io/view/bioschemas/"
+  },
+  "@graph": [
+    {
+      "@id": "bioschemasdrafts:Course",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "This specification must be used in tandem with a CourseInstance. A course is used to describe the broad, common aspects of a recurring training event - whereas a course instance is about the specific times and location of when that course is held.<h4>Summary of Changes</h4>Added sameAs <p> Version: 1.1-DRAFT",
+      "rdfs:label": "Course",
+      "rdfs:subClassOf": {
+        "@id": "schema:Course"
+      },
+      "$validation": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "about": {
+            "description": "The subject matter of the content.",
+            "oneOf": [
+              {
+                "@type": "schema:Thing",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              {
+                "items": {
+                  "@type": "schema:Thing",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [],
+                  "type": "object"
+                },
+                "type": "array"
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "abstract": {
+            "description": "An abstract is a short description that summarizes a [[CreativeWork]].",
+            "owl:cardinality": "one",
+            "type": "string"
+          },
+          "accessibilitySummary": {
+            "description": "A human-readable summary of specific accessibility features or deficiencies, consistent with the other accessibility metadata but expressing subtleties such as \"short descriptions are present but long descriptions will be needed for non-visual users\" or \"short descriptions are present and no long descriptions are needed.\"",
+            "owl:cardinality": "one",
+            "type": "string"
+          },
+          "aggregateRating": {
+            "description": "The overall rating, based on a collection of reviews or ratings, of the item.",
+            "@type": "schema:AggregateRating",
+            "owl:cardinality": "one",
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": [],
+            "type": "object"
+          },
+          "alternateName": {
+            "description": "An alias for the item.",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "audience": {
+            "description": "An intended audience, i.e. a group for whom something was created.",
+            "oneOf": [
+              {
+                "@type": "schema:Audience",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              {
+                "items": {
+                  "@type": "schema:Audience",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [],
+                  "type": "object"
+                },
+                "type": "array"
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "citation": {
+            "description": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+            "anyOf": [
+              {
+                "@type": "CreativeWork",
+                "properties": {
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              {
+                "items": {
+                  "@type": "CreativeWork",
+                  "properties": {
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "format": "uri",
+                      "type": "string"
+                    }
+                  },
+                  "required": [],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "comment": {
+            "description": "Comments, typically from users.",
+            "oneOf": [
+              {
+                "@type": "schema:Comment",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              {
+                "items": {
+                  "@type": "schema:Comment",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [],
+                  "type": "object"
+                },
+                "type": "array"
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "commentCount": {
+            "description": "The number of comments this CreativeWork (e.g. Article, Question or Answer) has received. This is most applicable to works published in Web sites with commenting system; additional comments may exist elsewhere.",
+            "owl:cardinality": "one",
+            "type": "integer"
+          },
+          "courseCode": {
+            "description": "The identifier for the [[Course]] used by the course [[provider]] (e.g. CS101 or 6.001).",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "coursePrerequisites": {
+            "description": "Requirements for taking the Course. May be completion of another [[Course]] or a textual description like \"permission of instructor\". Requirements may be a pre-requisite competency, referenced using [[AlignmentObject]].",
+            "anyOf": [
+              {
+                "@type": "bioschemas:Course",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              {
+                "items": {
+                  "@type": "bioschemas:Course",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              {
+                "@type": "schema:AlignmentObject",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              {
+                "items": {
+                  "@type": "schema:AlignmentObject",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "creator": {
+            "description": "The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.",
+            "anyOf": [
+              {
+                "@type": "Organization",
+                "properties": {
+                  "description": {
+                    "type": "string"
+                  },
+                  "legalName": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "sameAs": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              },
+              {
+                "items": {
+                  "@type": "Organization",
+                  "properties": {
+                    "description": {
+                      "type": "string"
+                    },
+                    "legalName": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "sameAs": {
+                      "format": "uri",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              {
+                "@type": "Person",
+                "properties": {
+                  "mainEntityOfPage": {
+                    "anyOf": [
+                      {
+                        "format": "uri",
+                        "type": "string"
+                      },
+                      {
+                        "items": {
+                          "format": "uri",
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
+                      {
+                        "@type": "CreativeWork",
+                        "properties": {
+                          "identifier": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "url": {
+                            "format": "uri",
+                            "type": "string"
+                          }
+                        },
+                        "required": [],
+                        "type": "object"
+                      },
+                      {
+                        "items": {
+                          "@type": "CreativeWork",
+                          "properties": {
+                            "identifier": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "url": {
+                              "format": "uri",
+                              "type": "string"
+                            }
+                          },
+                          "required": [],
+                          "type": "object"
+                        },
+                        "type": "array"
+                      }
+                    ]
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name"
+                ],
+                "type": "object"
+              },
+              {
+                "items": {
+                  "@type": "Person",
+                  "properties": {
+                    "mainEntityOfPage": {
+                      "anyOf": [
+                        {
+                          "format": "uri",
+                          "type": "string"
+                        },
+                        {
+                          "items": {
+                            "format": "uri",
+                            "type": "string"
+                          },
+                          "type": "array"
+                        },
+                        {
+                          "@type": "CreativeWork",
+                          "properties": {
+                            "identifier": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "url": {
+                              "format": "uri",
+                              "type": "string"
+                            }
+                          },
+                          "required": [],
+                          "type": "object"
+                        },
+                        {
+                          "items": {
+                            "@type": "CreativeWork",
+                            "properties": {
+                              "identifier": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "url": {
+                                "format": "uri",
+                                "type": "string"
+                              }
+                            },
+                            "required": [],
+                            "type": "object"
+                          },
+                          "type": "array"
+                        }
+                      ]
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "format": "uri",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "dateCreated": {
+            "description": "The date on which the CreativeWork was created or the item was added to a DataFeed.",
+            "oneOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "@type": "schema:DateTime",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              }
+            ],
+            "owl:cardinality": "one"
+          },
+          "dateModified": {
+            "description": "The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
+            "anyOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "items": {
+                  "format": "date",
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "@type": "schema:DateTime",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              {
+                "items": {
+                  "@type": "schema:DateTime",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [],
+                  "type": "object"
+                },
+                "type": "array"
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "description": {
+            "description": "A description of the item.",
+            "owl:cardinality": "one",
+            "type": "string"
+          },
+          "educationalCredentialAwarded": {
+            "description": "A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this course or program.",
+            "oneOf": [
+              {
+                "@type": "schema:EducationalOccupationalCredential",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "format": "uri",
+                "type": "string"
+              }
+            ],
+            "owl:cardinality": "one"
+          },
+          "educationalLevel": {
+            "description": "The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators.",
+            "oneOf": [
+              {
+                "@type": "DefinedTerm",
+                "properties": {
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "inDefinedTermSet": {
+                    "@type": "DefinedTermSet",
+                    "properties": {
+                      "identifier": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "url": {
+                        "format": "uri",
+                        "type": "string"
+                      }
+                    },
+                    "required": [],
+                    "type": "object"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "termCode": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "format": "uri",
+                "type": "string"
+              }
+            ],
+            "owl:cardinality": "one"
+          },
+          "hasCourseInstance": {
+            "description": "An offering of the course at a specific time and place or through specific media or mode of study or to a specific section of students.",
+            "oneOf": [
+              {
+                "@type": "bioschemas:CourseInstance",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              {
+                "items": {
+                  "@type": "bioschemas:CourseInstance",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [],
+                  "type": "object"
+                },
+                "type": "array"
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "hasPart": {
+            "description": "Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
+            "oneOf": [
+              {
+                "@type": "CreativeWork",
+                "properties": {
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              {
+                "items": {
+                  "@type": "CreativeWork",
+                  "properties": {
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "format": "uri",
+                      "type": "string"
+                    }
+                  },
+                  "required": [],
+                  "type": "object"
+                },
+                "type": "array"
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "image": {
+            "description": "An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].",
+            "oneOf": [
+              {
+                "@type": "ImageObject",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              {
+                "format": "uri",
+                "type": "string"
+              }
+            ],
+            "owl:cardinality": "one"
+          },
+          "isBasedOn": {
+            "description": "A resource from which this work is derived or from which it is a modification or adaption.",
+            "anyOf": [
+              {
+                "@type": "CreativeWork",
+                "properties": {
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              {
+                "items": {
+                  "@type": "CreativeWork",
+                  "properties": {
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "format": "uri",
+                      "type": "string"
+                    }
+                  },
+                  "required": [],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              {
+                "@type": "schema:Product",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              {
+                "items": {
+                  "@type": "schema:Product",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              {
+                "format": "uri",
+                "type": "string"
+              },
+              {
+                "items": {
+                  "format": "uri",
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "keywords": {
+            "description": "Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+            "oneOf": [
+              {
+                "@type": "DefinedTerm",
+                "properties": {
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "inDefinedTermSet": {
+                    "@type": "DefinedTermSet",
+                    "properties": {
+                      "identifier": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "url": {
+                        "format": "uri",
+                        "type": "string"
+                      }
+                    },
+                    "required": [],
+                    "type": "object"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "termCode": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "format": "uri",
+                "type": "string"
+              }
+            ],
+            "owl:cardinality": "one"
+          },
+          "license": {
+            "description": "A license document that applies to this content, typically indicated by URL.",
+            "oneOf": [
+              {
+                "@type": "CreativeWork",
+                "properties": {
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              {
+                "format": "uri",
+                "type": "string"
+              }
+            ],
+            "owl:cardinality": "one"
+          },
+          "mentions": {
+            "description": "Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.",
+            "oneOf": [
+              {
+                "@type": "schema:Thing",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              {
+                "items": {
+                  "@type": "schema:Thing",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [],
+                  "type": "object"
+                },
+                "type": "array"
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "name": {
+            "description": "The name of the item.",
+            "owl:cardinality": "one",
+            "type": "string"
+          },
+          "provider": {
+            "description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.",
+            "anyOf": [
+              {
+                "@type": "Organization",
+                "properties": {
+                  "description": {
+                    "type": "string"
+                  },
+                  "legalName": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "sameAs": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              },
+              {
+                "items": {
+                  "@type": "Organization",
+                  "properties": {
+                    "description": {
+                      "type": "string"
+                    },
+                    "legalName": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "sameAs": {
+                      "format": "uri",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              {
+                "@type": "Person",
+                "properties": {
+                  "mainEntityOfPage": {
+                    "anyOf": [
+                      {
+                        "format": "uri",
+                        "type": "string"
+                      },
+                      {
+                        "items": {
+                          "format": "uri",
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
+                      {
+                        "@type": "CreativeWork",
+                        "properties": {
+                          "identifier": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "url": {
+                            "format": "uri",
+                            "type": "string"
+                          }
+                        },
+                        "required": [],
+                        "type": "object"
+                      },
+                      {
+                        "items": {
+                          "@type": "CreativeWork",
+                          "properties": {
+                            "identifier": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "url": {
+                              "format": "uri",
+                              "type": "string"
+                            }
+                          },
+                          "required": [],
+                          "type": "object"
+                        },
+                        "type": "array"
+                      }
+                    ]
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name"
+                ],
+                "type": "object"
+              },
+              {
+                "items": {
+                  "@type": "Person",
+                  "properties": {
+                    "mainEntityOfPage": {
+                      "anyOf": [
+                        {
+                          "format": "uri",
+                          "type": "string"
+                        },
+                        {
+                          "items": {
+                            "format": "uri",
+                            "type": "string"
+                          },
+                          "type": "array"
+                        },
+                        {
+                          "@type": "CreativeWork",
+                          "properties": {
+                            "identifier": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "url": {
+                              "format": "uri",
+                              "type": "string"
+                            }
+                          },
+                          "required": [],
+                          "type": "object"
+                        },
+                        {
+                          "items": {
+                            "@type": "CreativeWork",
+                            "properties": {
+                              "identifier": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "url": {
+                                "format": "uri",
+                                "type": "string"
+                              }
+                            },
+                            "required": [],
+                            "type": "object"
+                          },
+                          "type": "array"
+                        }
+                      ]
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "format": "uri",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "sameAs": {
+            "description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+            "owl:cardinality": "many",
+            "oneOf": [
+              {
+                "format": "uri",
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "format": "uri",
+                  "type": "string"
+                }
+              }
+            ]   
+          },
+          "teaches": {
+            "description": "The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.",
+            "anyOf": [
+              {
+                "@type": "DefinedTerm",
+                "properties": {
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "inDefinedTermSet": {
+                    "@type": "DefinedTermSet",
+                    "properties": {
+                      "identifier": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "url": {
+                        "format": "uri",
+                        "type": "string"
+                      }
+                    },
+                    "required": [],
+                    "type": "object"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "termCode": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              {
+                "items": {
+                  "@type": "DefinedTerm",
+                  "properties": {
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "inDefinedTermSet": {
+                      "@type": "DefinedTermSet",
+                      "properties": {
+                        "identifier": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "url": {
+                          "format": "uri",
+                          "type": "string"
+                        }
+                      },
+                      "required": [],
+                      "type": "object"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "termCode": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "format": "uri",
+                      "type": "string"
+                    }
+                  },
+                  "required": [],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "thumbnailUrl": {
+            "description": "A thumbnail image relevant to the Thing.",
+            "format": "uri",
+            "owl:cardinality": "one",
+            "type": "string"
+          },
+          "timeRequired": {
+            "description": "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'PT30M', 'PT1H25M'.",
+            "@type": "schema:Duration",
+            "owl:cardinality": "one",
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": [],
+            "type": "object"
+          },
+          "url": {
+            "description": "URL of the item.",
+            "format": "uri",
+            "owl:cardinality": "one",
+            "type": "string"
+          }
+        },
+        "required": [
+          "description",
+          "keywords",
+          "name"
+        ],
+        "recommended": [
+          "about",
+          "abstract",
+          "aggregateRating",
+          "citation",
+          "coursePrerequisites",
+          "educationalLevel",
+          "hasCourseInstance",
+          "license",
+          "mentions",
+          "provider",
+          "sameAs",
+          "teaches",
+          "timeRequired",
+          "url"
+        ],
+        "optional": [
+          "accessibilitySummary",
+          "alternateName",
+          "audience",
+          "comment",
+          "commentCount",
+          "courseCode",
+          "creator",
+          "dateCreated",
+          "dateModified",
+          "educationalCredentialAwarded",
+          "hasPart",
+          "image",
+          "isBasedOn",
+          "thumbnailUrl"
+        ]
+      }
+    }
+  ]
+}
