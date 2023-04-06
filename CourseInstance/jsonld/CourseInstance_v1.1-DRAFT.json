@@ -10,7 +10,7 @@
     {
       "@id": "bioschemasdrafts:CourseInstance",
       "@type": "rdfs:Class",
-      "rdfs:comment": "This specification can be used in tandem with a Course. A course is used to describe the broad, common aspects of a recurring training event - whereas a course instance is about the specific times and location of when that course is held. Version 1.1-DRAFT <h4>Summary of Changes</h4>Changes since version 1.0-RELEASE<ul><li>Added sameAs</li><li>modified by Nick and Ginger</li></ul>",
+      "rdfs:comment": "This specification can be used in tandem with a Course. A course is used to describe the broad, common aspects of a recurring training event - whereas a course instance is about the specific times and location of when that course is held. Version 1.1-DRAFT <h4>Summary of Changes</h4>Changes since version 1.0-RELEASE<ul><li>Added sameAs</li><li>modified by Nick and Ginger</li></ul> ",
       "rdfs:label": "CourseInstance",
       "rdfs:subClassOf": {
         "@id": "schema:CourseInstance"
