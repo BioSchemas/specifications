@@ -3,17 +3,17 @@
     "schema": "http://schema.org/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "updateCourseInstance": "https://discovery.biothings.io/view/updateCourseInstance/",
+    "bioschemasdrafts": "https://discovery.biothings.io/view/bioschemasdrafts/",
     "bioschemas": "https://discovery.biothings.io/view/bioschemas/"
   },
   "@graph": [
     {
-      "@id": "updateCourseInstance:CourseInstance",
+      "@id": "bioschemasdrafts:CourseInstance",
       "@type": "rdfs:Class",
-      "rdfs:comment": "This specification can be used in tandem with a Course. A course is used to describe the broad, common aspects of a recurring training event - whereas a course instance is about the specific times and location of when that course is held.\n\nv1.1-DRAFT\n\nSummary of Changes\nAdded sameAs\n- modified by Nick and Ginger",
+      "rdfs:comment": "This specification can be used in tandem with a Course. A course is used to describe the broad, common aspects of a recurring training event - whereas a course instance is about the specific times and location of when that course is held. Version 1.1-DRAFT <h4>Summary of Changes</h4>Changes since version 1.0-RELEASE<ul><li>Added sameAs</li><li>modified by Nick and Ginger</li></ul>",
       "rdfs:label": "CourseInstance",
       "rdfs:subClassOf": {
-        "@id": "bioschemas:CourseInstance"
+        "@id": "schema:CourseInstance"
       },
       "$validation": {
         "$schema": "http://json-schema.org/draft-07/schema#",
@@ -1130,7 +1130,20 @@
           },
           "sameAs": {
             "description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
-            "owl:cardinality": "many"
+            "owl:cardinality": "many",
+            "oneOf": [
+                {
+                    "type": "string",
+                    "format": "uri"
+                },
+                {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "format": "uri"
+                    }
+                }
+            ]          
           },
           "url": {
             "description": "URL of the item.",
