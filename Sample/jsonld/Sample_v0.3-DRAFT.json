@@ -3,17 +3,18 @@
     "schema": "http://schema.org/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "extendSample": "https://discovery.biothings.io/view/extendSample/",
+    "bioschemasdrafts": "https://discovery.biothings.io/view/bioschemasdrafts/",
+    "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts,
     "bioschemas": "https://discovery.biothings.io/view/bioschemas/"
   },
   "@graph": [
     {
-      "@id": "extendSample:Sample",
+      "@id": "bioschemasdrafts:Sample",
       "@type": "rdfs:Class",
-      "rdfs:comment": "To deliver on the identified use cases for samples, we have identified a minimal set of properties to encapsulate identification, linking, and metadata descriptions. Some of these properties are existing standard schema.org properties, others require Bioschemas extensions. \n\nv0.3-DRAFT\n\nSummary of change\n- added sameAs\n- modified by Nick and Ginger\n- removed irrelevant text from description",
+      "rdfs:comment": "To deliver on the identified use cases for samples, we have identified a minimal set of properties to encapsulate identification, linking, and metadata descriptions. Some of these properties are existing standard schema.org properties, others require Bioschemas extensions. Version 0.3-DRAFT<h4>Summary of Changes</h4> Changes since 0.2-DRAFT<ul><li>added sameAs property as recommended.</li><li>modified by Nick and Ginger</li><li>removed irrelevant text from description</li></ul>",
       "rdfs:label": "Sample",
       "rdfs:subClassOf": {
-        "@id": "bioschemas:Sample"
+        "@id": "bioschemastypesdrafts:Sample"
       },
       "$validation": {
         "$schema": "http://json-schema.org/draft-07/schema#",
@@ -475,7 +476,20 @@
           },
           "sameAs": {
             "description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
-            "owl:cardinality": "many"
+            "owl:cardinality": "many",
+            "oneOf": [
+                {
+                    "type": "string",
+                    "format": "uri"
+                },
+                {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "format": "uri"
+                    }
+                }
+            ]            
           },
           "subjectOf": {
             "description": "A CreativeWork or Event about this Thing.",
