@@ -1,0 +1,560 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "bioschemasdrafts": "https://discovery.biothings.io/view/bioschemasdrafts/",
+    "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/",
+    "bioschemas": "https://discovery.biothings.io/view/bioschemas/"
+  },
+  "@graph": [
+    {
+      "@id": "bioschemasdrafts:Sample",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "To deliver on the identified use cases for samples, we have identified a minimal set of properties to encapsulate identification, linking, and metadata descriptions. Some of these properties are existing standard schema.org properties, others require Bioschemas extensions. Version 0.3-DRAFT<h4>Summary of Changes</h4> Changes since 0.2-DRAFT<ul><li>added sameAs property as recommended.</li><li>modified by Nick and Ginger</li><li>removed irrelevant text from description</li></ul>",
+      "rdfs:label": "Sample",
+      "rdfs:subClassOf": {
+        "@id": "bioschemastypesdrafts:Sample"
+      },
+      "$validation": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "additionalProperty": {
+            "description": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism. ",
+            "oneOf": [
+              {
+                "@type": "PropertyValue",
+                "optional": [
+                  "unitCode",
+                  "unitText"
+                ],
+                "properties": {
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "unitCode": {
+                    "oneOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "format": "uri",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "unitText": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "oneOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "boolean"
+                      },
+                      {
+                        "type": "number"
+                      }
+                    ]
+                  },
+                  "valueReference": {
+                    "oneOf": [
+                      {
+                        "@type": "CategoryCode",
+                        "properties": {
+                          "codeValue": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "url": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "name",
+                          "codeValue",
+                          "url"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "items": [
+                          {
+                            "@type": "CategoryCode",
+                            "properties": {
+                              "codeValue": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "url": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "name",
+                              "codeValue",
+                              "url"
+                            ],
+                            "type": "object"
+                          }
+                        ],
+                        "type": "array"
+                      }
+                    ]
+                  }
+                },
+                "recommended": [
+                  "valueReference"
+                ],
+                "required": [
+                  "name",
+                  "value"
+                ],
+                "type": "object"
+              },
+              {
+                "items": {
+                  "@type": "PropertyValue",
+                  "optional": [
+                    "unitCode",
+                    "unitText"
+                  ],
+                  "properties": {
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "unitCode": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "format": "uri",
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "unitText": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "boolean"
+                        },
+                        {
+                          "type": "number"
+                        }
+                      ]
+                    },
+                    "valueReference": {
+                      "oneOf": [
+                        {
+                          "@type": "CategoryCode",
+                          "properties": {
+                            "codeValue": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "url": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                          ],
+                          "type": "object"
+                        },
+                        {
+                          "items": [
+                            {
+                              "@type": "CategoryCode",
+                              "properties": {
+                                "codeValue": {
+                                  "type": "string"
+                                },
+                                "name": {
+                                  "type": "string"
+                                },
+                                "url": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "name",
+                                "codeValue",
+                                "url"
+                              ],
+                              "type": "object"
+                            }
+                          ],
+                          "type": "array"
+                        }
+                      ]
+                    }
+                  },
+                  "recommended": [
+                    "valueReference"
+                  ],
+                  "required": [
+                    "name",
+                    "value"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "description": {
+            "description": "A description of the item.",
+            "owl:cardinality": "one",
+            "type": "string"
+          },
+          "identifier": {
+            "description": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.\n        ",
+            "anyOf": [
+              {
+                "@type": "PropertyValue",
+                "optional": [
+                  "unitCode",
+                  "unitText"
+                ],
+                "properties": {
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "unitCode": {
+                    "oneOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "format": "uri",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "unitText": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "oneOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "boolean"
+                      },
+                      {
+                        "type": "number"
+                      }
+                    ]
+                  },
+                  "valueReference": {
+                    "oneOf": [
+                      {
+                        "@type": "CategoryCode",
+                        "properties": {
+                          "codeValue": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "url": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "name",
+                          "codeValue",
+                          "url"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "items": [
+                          {
+                            "@type": "CategoryCode",
+                            "properties": {
+                              "codeValue": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              },
+                              "url": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "name",
+                              "codeValue",
+                              "url"
+                            ],
+                            "type": "object"
+                          }
+                        ],
+                        "type": "array"
+                      }
+                    ]
+                  }
+                },
+                "recommended": [
+                  "valueReference"
+                ],
+                "required": [
+                  "name",
+                  "value"
+                ],
+                "type": "object"
+              },
+              {
+                "items": {
+                  "@type": "PropertyValue",
+                  "optional": [
+                    "unitCode",
+                    "unitText"
+                  ],
+                  "properties": {
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "unitCode": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "format": "uri",
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "unitText": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "boolean"
+                        },
+                        {
+                          "type": "number"
+                        }
+                      ]
+                    },
+                    "valueReference": {
+                      "oneOf": [
+                        {
+                          "@type": "CategoryCode",
+                          "properties": {
+                            "codeValue": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "url": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                          ],
+                          "type": "object"
+                        },
+                        {
+                          "items": [
+                            {
+                              "@type": "CategoryCode",
+                              "properties": {
+                                "codeValue": {
+                                  "type": "string"
+                                },
+                                "name": {
+                                  "type": "string"
+                                },
+                                "url": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "name",
+                                "codeValue",
+                                "url"
+                              ],
+                              "type": "object"
+                            }
+                          ],
+                          "type": "array"
+                        }
+                      ]
+                    }
+                  },
+                  "recommended": [
+                    "valueReference"
+                  ],
+                  "required": [
+                    "name",
+                    "value"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "format": "uri",
+                "type": "string"
+              },
+              {
+                "items": {
+                  "format": "uri",
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "name": {
+            "description": "The name of the item.",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "sameAs": {
+            "description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+            "owl:cardinality": "many",
+            "oneOf": [
+                {
+                    "type": "string",
+                    "format": "uri"
+                },
+                {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "format": "uri"
+                    }
+                }
+            ]            
+          },
+          "subjectOf": {
+            "description": "A CreativeWork or Event about this Thing.",
+            "oneOf": [
+              {
+                "@type": "CreativeWork",
+                "properties": {
+                  "identifier": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "format": "uri",
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              {
+                "items": {
+                  "@type": "CreativeWork",
+                  "properties": {
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "format": "uri",
+                      "type": "string"
+                    }
+                  },
+                  "required": [],
+                  "type": "object"
+                },
+                "type": "array"
+              }
+            ],
+            "owl:cardinality": "many"
+          },
+          "url": {
+            "description": "URL of the item.",
+            "format": "uri",
+            "owl:cardinality": "one",
+            "type": "string"
+          }
+        },
+        "required": [
+          "identifier"
+        ],
+        "recommended": [
+          "sameAs",
+          "url"
+        ],
+        "optional": [
+          "additionalProperty",
+          "description",
+          "name",
+          "subjectOf"
+        ]
+      }
+    }
+  ]
+}
