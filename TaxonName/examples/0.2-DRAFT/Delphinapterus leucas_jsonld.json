@@ -1,0 +1,27 @@
+{
+    "@context": [
+        "http://schema.org",
+        { "tn": "http://rs.tdwg.org/ontology/voc/TaxonName#" }
+    ],
+
+    "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/TaxonName/0.2-DRAFT"
+    },
+
+    "@type" : "TaxonName",
+    "additionalType": "tn:TaxonName",
+    "name": "Delphinapterus leucas",
+    "author": "(Pallas, 1776)",
+    "taxonRank": [
+      "http://rs.tdwg.org/ontology/voc/TaxonRank#Species",
+      "http://www.wikidata.org/entity/Q7432",
+      "species"
+    ],
+    
+    "isBasedOn": {
+        "@type": "ScholarlyArticle",
+        "name": "...",
+        "author": [ "First Author", "Second Author" ],
+        "datePublished": "..."
+    }
+}

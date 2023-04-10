@@ -1,0 +1,102 @@
+{
+    "@context": [
+        "http://schema.org",
+        {   "dwc": "http://rs.tdwg.org/dwc/terms/",
+            "dwc:vernacularName": { "@container": "@language" }
+        }
+    ],
+
+    "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Taxon/0.8-DRAFT"
+    },
+
+    "@type" : "Taxon",
+    "@id": "http://taxref.mnhn.fr/lod/taxon/60932",
+    "additionalType": [ "dwc:Taxon", "http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept" ],
+    "identifier": [
+        {   "@type": "PropertyValue",
+            "name": "TAXREF id",
+            "propertyID": "https://www.wikidata.org/entity/P3186",
+            "value": "60932"
+        },
+        {   "@type": "PropertyValue",
+            "name": "WoRMS id",
+            "propertyID": "https://www.wikidata.org/entity/P850",
+            "value": "137115"
+        },
+        {   "@type": "PropertyValue",
+            "name": "GBIF id",
+            "propertyID": "https://www.wikidata.org/entity/P846",
+            "value": "5220003"
+        }
+    ],
+    "mainEntityOfPage": "https://inpn.mnhn.fr/espece/cd_nom/60932?lg=en",
+    
+    "name": "Delphinapterus leucas (Pallas, 1776)",
+    "scientificName": {
+        "@type" : "TaxonName",
+        "name": "Delphinapterus leucas",
+        "author": "(Pallas, 1776)",
+        "taxonRank": "species"
+    },
+    "alternateName": [ "Balaena albicans Muller, 1776", "Beluga catodon Gray, 1846" ],
+    "alternateScientificName": [
+        {   "@type" : "TaxonName",
+            "name": "Balaena albicans",
+            "author": "Muller, 1776",
+            "taxonRank": "species"
+        },
+        {   "@type" : "TaxonName",
+            "name": "Beluga catodon",
+            "author": "Gray, 1846",
+            "taxonRank": "species"
+        }
+    ],
+    "dwc:vernacularName": [
+        { "@language": "en", "@value": "Beluga Whale" },
+        { "@language": "fr", "@value": "Bélouga" }
+    ],
+
+    "taxonRank": [
+      "species",
+      "http://rs.tdwg.org/ontology/voc/TaxonRank#Species",
+      "http://www.wikidata.org/entity/Q7432"
+    ],
+
+    "parentTaxon": { 
+        "@type": "Taxon",
+        "name": "Delphinapterus Lacépède, 1804",
+        "identifier": "191588",
+        "mainEntityOfPage": "https://inpn.mnhn.fr/espece/cd_nom/191588?lg=en",
+        "taxonRank" : [ 
+            "genus",
+            "http://rs.tdwg.org/ontology/voc/TaxonRank#Genus", 
+            "http://www.wikidata.org/entity/Q34740"
+        ]
+    },
+
+    "isBasedOn": {
+        "@type": "ScholarlyArticle",
+        "name": "...",
+        "author": [ "First Author", "Second Author" ],
+        "datePublished": "2012",
+        "pageStart": "10",
+        "pageEnd": "17",
+        "isPartOf": {
+            "@type": "PublicationIssue",
+            "issueNumber": "4",
+            "isPartOf": {
+                "@type": "PublicationVolume",
+                "name": "Journal name",
+                "volumeNumber": "18"
+            }
+        }
+    },
+    
+    "image": "https://inpn.mnhn.fr/photos/uploads/webtofs/inpn/3/181473.jpg",
+    "sameAs": [
+        "http://www.marinespecies.org/aphia.php?p=taxdetails&id=137115",
+        "http://www.iucnredlist.org/details/6335",
+        "https://www.gbif.org/species/5220003"
+    ]
+}
