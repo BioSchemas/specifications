@@ -14,7 +14,7 @@
         {
             "@id": "bioschemasdrafts:Taxon",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Bioschemas profile for describing a biological taxon This profile aims to denote a taxon by common properties such as its scientific name, taxonomic rank and vernacular names. It is also a means to link to existing taxonomic registers where each taxon has a URI. Version 0.8-DRAFT. <br/><h3>Summary of Changes</h3><br>Changes since 0.7-DRAFT:<ul><li>Change sameAs from optional to recommended.</li></ul>",
+            "rdfs:comment": "Bioschemas profile for describing a biological taxon This profile aims to denote a taxon by common properties such as its scientific name, taxonomic rank and vernacular names. It is also a means to link to existing taxonomic registers where each taxon has a URI. Version 0.8-DRAFT.<br/><h3>Summary of Changes</h3><br>Changes since 0.7-DRAFT:<ul><li>Change sameAs from optional to recommended.</li></ul>",
             "schema:schemaVersion": [
                 "https://bioschemas.org/profiles/Taxon/0.8-DRAFT"
             ],
