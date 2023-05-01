@@ -1,0 +1,40 @@
+{
+    "@context": [
+        "http://schema.org",
+        {   "dwc": "http://rs.tdwg.org/dwc/terms/",
+            "dwc:vernacularName": { "@container": "@language" }
+        }
+    ],
+    
+    "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Taxon/1.0-RELEASE"
+    },
+
+    "@type" : "Taxon",
+    "@id": "http://taxref.mnhn.fr/lod/taxon/60932",
+    "additionalType": [ "dwc:Taxon", "http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept" ],
+    "mainEntityOfPage": "https://inpn.mnhn.fr/espece/cd_nom/60932?lg=en",
+
+    "name": "Delphinapterus leucas (Pallas, 1776)",
+    "alternateName": [ "Balaena albicans Muller, 1776", "Beluga catodon Gray, 1846" ],
+    "dwc:vernacularName": [
+        { "@language": "en", "@value": "Beluga Whale" },
+        { "@language": "fr", "@value": "Bélouga" }
+    ],
+
+    "taxonRank": [ "http://www.wikidata.org/entity/Q7432", "species" ],
+
+    "parentTaxon": { 
+        "@type": "Taxon",
+        "name": "Delphinapterus Lacépède, 1804",
+        "mainEntityOfPage": "https://inpn.mnhn.fr/espece/cd_nom/191588?lg=en",
+        "taxonRank" : "genus"
+    },
+    
+    "image": "https://inpn.mnhn.fr/photos/uploads/webtofs/inpn/3/181473.jpg",
+    "sameAs": [
+        "http://www.marinespecies.org/aphia.php?p=taxdetails&id=137115",
+        "http://www.iucnredlist.org/details/6335",
+        "https://www.gbif.org/species/5220003"
+    ]
+}

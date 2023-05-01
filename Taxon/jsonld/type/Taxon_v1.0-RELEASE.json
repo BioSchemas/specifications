@@ -1,0 +1,124 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/"
+    },
+    "@graph": [
+        {
+            "@id": "bioschemastypes:Taxon",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A set of organisms asserted to represent a natural cohesive biological unit. Version: 1.0-RELEASE",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/types/Taxon/1.0-RELEASE",
+                "https://bioschemas.org/types/TaxonName/1.0-RELEASE",
+                "https://github.com/schemaorg/schemaorg/tree/main/data/releases/15.0/"],
+            "rdfs:label": "Taxon",
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "bioschemastypes:childTaxon",
+            "@id": "bioschemastypes:childTaxon",
+            "rdfs:comment": "Closest child taxa of the taxon in question.\nInverse property: parentTaxon Direct, most proximate lower-rank child taxa",
+            "@type": "rdf:Property",
+            "rdfs:label": "childTaxon",
+            "schema:domainIncludes": {
+                "@id": "bioschemastypes:Taxon"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Taxon"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemastypes:parentTaxon",
+            "rdfs:comment": "Closest parent taxon of the taxon in question.\nInverse property: childTaxon Direct, most proximate higher-rank parent taxon",
+            "@type": "rdf:Property",
+            "rdfs:label": "parentTaxon",
+            "schema:domainIncludes": {
+                "@id": "bioschemastypes:Taxon"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Taxon"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemastypes:taxonRank",
+            "rdfs:comment": "The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary (e.g. the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs) ",
+            "@type": "rdf:Property",
+            "rdfs:label": "taxonRank",
+            "schema:domainIncludes": {
+                "@id": "bioschemastypes:Taxon"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:PropertyValue"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemastypes:scientificName",
+            "rdfs:comment": "A TaxonName representing the currently valid (zoological) or accepted (botanical) name for that taxon.",
+            "@type": "rdf:Property",
+            "rdfs:label": "scientificName",
+            "schema:domainIncludes": {
+                "@id": "bioschemastypes:Taxon"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemastypes:TaxonName"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemastypes:alternateScientificName",
+            "rdfs:comment": "A TaxonName representing a scientific name, with authorship and date information if known, of a synonym of the currently valid (zoological) or accepted (botanical) name.",
+            "@type": "rdf:Property",
+            "rdfs:label": "alternateScientificName",
+            "schema:domainIncludes": {
+                "@id": "bioschemastypes:Taxon"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemastypes:TaxonName"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        }
+    ]
+}
