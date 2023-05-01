@@ -22,7 +22,7 @@
             ],
             "rdfs:label": "Taxon",
             "rdfs:subClassOf": {
-                "@id": "schema:Taxon"
+                "@id": "bioschemastypes:Taxon"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
@@ -312,7 +312,7 @@
                         "required": []
                     },
                     "taxon": {
-                        "@type": "schema:Taxon",
+                        "@type": "bioschemastypes:Taxon",
                         "type": "object",
                         "properties": {
                             "name": {
