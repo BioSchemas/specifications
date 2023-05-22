@@ -144,7 +144,7 @@
                                 "$ref": "#/definitions/creativework"
                             },
                             {
-                                "$ref": "#/definitions/trip"
+                                "$ref": "#/definitions/thing"
                             }
                         ],
                         "owl:cardinality": "one"
@@ -543,8 +543,8 @@
                         },
                         "required": []
                     },
-                    "trip": {
-                        "@type": "schema:Trip",
+                    "thing": {
+                        "@type": "schema:Thing",
                         "type": "object",
                         "properties": {
                             "name": {
