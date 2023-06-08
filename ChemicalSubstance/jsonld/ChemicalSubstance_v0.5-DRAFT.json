@@ -17,6 +17,7 @@
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
+                "$comment": "Non-JSON Schema descriptons (eg. owl:cardinality, schema:disambiguatingDescription) have been included in the property listing for the validation as the validation is the only place to define constraints on the use of an inherited, predefined property from schema.org or Bioschemas. While JSON-schema validators should ignore these additional descriptors, they are useful for providing clarity on the use of the property.",
                 "type": "object",
                 "properties": {
                     "potentialUse": {
@@ -36,11 +37,13 @@
                     },
                     "chemicalComposition": {
                         "description": "The chemical composition describes the identity and relative ratio of the chemical elements that make up the substance. For substances this often cannot be accurately determined, an approximation is acceptable.",
+                        "schema:disambiguatingDescription":"For substances this often cannot be accurately determined, an approximation is acceptable.",
                         "type": "string",
                         "owl:cardinality": "one"
                     },
                     "chemicalRole": {
-                        "description": "A role played by the BioChemEntity or molecular entity within a chemical context.",
+                        "description": "A role played by the BioChemEntity within a chemical context.",
+                        "schema:disambiguatingDescription":"A role played by the MolecularEntity within a chemical context.",
                         "oneOf": [
                             {
                                 "$ref": "#/definitions/definedTerm"
@@ -56,6 +59,7 @@
                     },
                     "bioChemInteraction": {
                         "description": "A BioChemEntity that is know to interact with this item.",
+                        "schema:disambiguatingDescription":"Interaction of the MolecularEntity with other BioChemical entities.",
                         "oneOf": [
                             {
                                 "$ref": "#/definitions/bioChemEntity"
