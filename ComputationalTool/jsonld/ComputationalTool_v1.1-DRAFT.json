@@ -17,6 +17,7 @@
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
+                "$comment": "Non-JSON Schema descriptors (eg. owl:cardinality, schema:disambiguatingDescription) have been included in the property list for the validation as this is the only place to define constraints on the use of an inherited, predefined property from schema.org or Bioschemas. While JSON-schema validators should ignore these additional descriptors so they should not cause any issues, they are useful for providing clarity on the use of the property.",
                 "type": "object",
                 "properties": {
                     "codeRepository": {
@@ -123,7 +124,8 @@
                         "owl:cardinality": "many"
                     },
                     "applicationCategory": {
-                        "description": "Type of software application, e.g. 'Game, Multimedia'. Please use terms from the 'Tool type' table in the biotools documentation.",
+                        "description": "Type of software application, e.g. 'Game, Multimedia'. ",
+                        "schema:disambiguatingDescription":"Type of tool e.g. Command-line tool, Web application etc. Note: Bioschemas have changed URL to Text in the Expected Types. This will be reverted once Bio.Tools provides stable URIs for tool types.",
                         "anyOf": [
                             {
                                 "type": "string"
@@ -250,7 +252,8 @@
                         "owl:cardinality": "many"
                     },
                     "description": {
-                        "description": "A short description of the tool.",
+                        "description": "A description of the item.",
+                        "schema:disambiguatingDescription":"A short description of the tool.",
                         "type": "string",
                         "owl:cardinality": "one"
                     },
@@ -295,7 +298,8 @@
                         "owl:cardinality": "one"
                     },
                     "url": {
-                        "description": "Homepage of the tool. URL of the item.",
+                        "description": "URL of the item.",
+                        "schema:disambiguatingDescription":"Homepage of the tool.",
                         "type": "string",
                         "format": "uri",
                         "owl:cardinality": "one"
