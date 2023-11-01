@@ -845,20 +845,6 @@
             }
         },
         {
-            "@id": "bioschemas:codeRepository",
-            "rdfs:comment": "Link to the repository where the un-compiled, human readable code and related code is located (SVN, github, CodePlex).",
-            "@type": "rdf:Property",
-            "rdfs:label": "codeRepository",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:ComputationalTool"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Text"
-                }
-            ]
-        },
-        {
             "@id": "bioschemas:input",
             "rdfs:comment": "Specification of a consumed input.",
             "@type": "rdf:Property",
@@ -883,20 +869,6 @@
             "schema:rangeIncludes": [
                 {
                     "@id": "bioschemas:FormalParameter"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:programmingLanguage",
-            "rdfs:comment": "The computer programming language.",
-            "@type": "rdf:Property",
-            "rdfs:label": "programmingLanguage",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:ComputationalTool"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Text"
                 }
             ]
         }
