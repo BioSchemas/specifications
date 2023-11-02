@@ -49,8 +49,19 @@
           },
           "url": {
             "description": "URL of the item.",
-            "type": "string",
-            "format": "uri",
+            "oneOf": [
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }  
+            ],
             "owl:cardinality": "many"
           }
         },
