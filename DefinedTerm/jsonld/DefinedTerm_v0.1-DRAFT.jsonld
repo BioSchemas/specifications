@@ -66,16 +66,15 @@
           }
         },
         "required": [
-          "termCode",
-          "inDefinedTermSet",
-          "description",
-          "identifier",
-          "name"
+          "inDefinedTermSet"
         ],
         "recommended": [
-          "sameAs"
+          "termCode",    
+          "sameAs",
+          "name"      
         ],
         "optional": [
+          "description",          
         ]
       },
       "schemaVersion": [
