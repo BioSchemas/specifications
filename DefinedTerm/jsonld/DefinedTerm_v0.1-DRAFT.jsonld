@@ -20,6 +20,7 @@
         "properties": {
           "termCode": {
             "description": "A code that identifies this [[DefinedTerm]] within a [[DefinedTermSet]]",
+            "type": "string",
             "owl:cardinality": "one"
           },
           "inDefinedTermSet": {
