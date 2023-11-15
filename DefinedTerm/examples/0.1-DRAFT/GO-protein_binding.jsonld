@@ -1,0 +1,20 @@
+{
+  "@type": "DefinedTerm",
+  "@id": "http://amigo.geneontology.org/amigo/term/GO:0005515",
+  "termCode": "0005515",
+  "name": "protein binding",
+  "url": "http://amigo.geneontology.org/amigo/term/GO:0005515",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "@id": "http://purl.obolibrary.org/obo/go.owl",
+    "name": "Gene Ontology",
+    "url": "https://bioportal.bioontology.org/ontologies/GO"
+  },
+  "sameAs": [
+    "http://purl.obolibrary.org/obo/GO_0005515",
+    "http://purl.bioontology.org/ontology/GO/GO:0005515",
+    "https://identifiers.org/GO:0005515",
+    "https://www.ebi.ac.uk/ols4/ontologies/go/terms?obo_id=GO:0005515",
+    "https://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0005515"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "@type": "DefinedTerm",
+  "@id": "http://purl.bioontology.org/ontology/EDAM/topic_0080",
+  "termCode": "topic_0080",
+  "name": "Sequence analysis",
+  "url": "http://purl.bioontology.org/ontology/EDAM/topic_0080",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "@id": "http://edamontology.org",
+    "name": "EDAM ontology",
+    "url": "https://bioportal.bioontology.org/ontologies/EDAM"
+  },
+  "sameAs": [
+    "https://identifiers.org/edam:topic_0080",
+    "https://www.ebi.ac.uk/ols/ontologies/edam/terms?short_form=topic_0080"
+  ]
+}
