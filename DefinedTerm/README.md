@@ -12,7 +12,7 @@ with `@type="DefinedTerm"` to link to an `@id` pointing to the IRI
 of the referenced concept.
 
 In other cases, more information is needed to search and view defined term information
-without having to lookup external ressources. E.g., a domain-specific search engine
+without having to lookup external resources. E.g., a domain-specific search engine
 can create faceted search based on the `name` property, like e.g. done in TeSS.
 Aforementioned terminology services also offer linking and query interfaces
 beyond IRIs as parameters.
