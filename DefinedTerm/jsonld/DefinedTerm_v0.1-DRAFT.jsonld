@@ -3,11 +3,11 @@
     "schema": "http://schema.org/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "DefinedTerm": "https://discovery.biothings.io/view/DefinedTerm/"
+    "bioschemasdrafts": "https://discovery.biothings.io/view/DefinedTerm/"
   },
   "@graph": [
     {
-      "@id": "DefinedTerm:DefinedTerm",
+      "@id": "bioschemasdrafts:DefinedTerm",
       "@type": "rdfs:Class",
       "rdfs:comment": "A word, name, acronym, phrase, etc. with a formal definition. Use the name property for the term being defined, use termCode if the term has an alpha-numeric code allocated, use description to provide the definition of the term. This Bioschemas profile specifically helps reusing terms from terminology and ontology services.",
       "rdfs:label": "DefinedTerm",
