@@ -9,7 +9,7 @@
     {
       "@id": "bioschemasdrafts:DefinedTerm",
       "@type": "rdfs:Class",
-      "rdfs:comment": "A word, name, acronym, phrase, etc. with a formal definition. Use the name property for the term being defined, use termCode if the term has an alpha-numeric code allocated, use description to provide the definition of the term. This Bioschemas profile specifically helps reusing terms from terminology and ontology services.",
+      "rdfs:comment": "A word, name, acronym, phrase, etc. with a formal definition. Use the name property for the term being defined, use termCode if the term has an alpha-numeric code allocated, use description to provide the definition of the term. This Bioschemas profile specifically helps reusing terms from terminology and ontology services. Version 0.1-DRAFT. <h3>Summary of Changes</h3> None--this is the first draft.",
       "rdfs:label": "DefinedTerm",
       "rdfs:subClassOf": {
         "@id": "schema:DefinedTerm"
