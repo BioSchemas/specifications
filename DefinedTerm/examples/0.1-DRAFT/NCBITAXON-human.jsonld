@@ -1,0 +1,18 @@
+{
+  "@type": "DefinedTerm",
+  "@id": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+  "termCode": "9606",
+  "name": "Homo sapiens",
+  "url": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "@id": "http://purl.obolibrary.org/obo/ncbitaxon.owl",
+    "name": "NCBI taxon",
+    "url": "https://bioportal.bioontology.org/ontologies/NCBITAXON"
+  },
+  "sameAs": [
+    "http://purl.uniprot.org/taxonomy/9606",
+    "https://identifiers.org/taxonomy:9606",
+    "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+  ]
+}

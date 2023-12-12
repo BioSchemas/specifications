@@ -1,0 +1,18 @@
+{
+  "@type": "DefinedTerm",
+  "@id": "http://purl.bioontology.org/ontology/ECO/ECO:0005670",
+  "termCode": "0005670",
+  "name": "x-ray crystallography evidence used in manual assertion",
+  "url": "http://purl.bioontology.org/ontology/ECO/ECO:0005670",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "@id": "http://purl.obolibrary.org/obo/eco.owl",
+    "name": "Evidence & Conclusion Ontology (ECO)",
+    "url": "https://bioportal.bioontology.org/ontologies/ECO"
+  },
+  "sameAs": [
+    "http://purl.obolibrary.org/obo/ECO_0005670",
+    "https://identifiers.org/ECO:0005670",
+    "https://www.ebi.ac.uk/ols4/ontologies/eco/terms?obo_id=ECO:0005670"
+  ]
+}
