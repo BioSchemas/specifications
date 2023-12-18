@@ -1,0 +1,62 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "isa": "https://discovery.biothings.io/view/isa/",
+    "bioschemas": "https://discovery.biothings.io/view/bioschemas/"
+  },
+  "@graph": [
+    {
+      "@id": "isa:LabProcess",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "This is an initial draft of the new LabProcess type.\n\nA LabProcess represents the specific application of a LabProtocol to some input (biological material or data) to produce some output (biological material or data).\n\nThis draft was prepared by Florian Wetzels and Lukas Weil, its specification is still up for discussion.",
+      "rdfs:label": "LabProcess",
+      "rdfs:subClassOf": {
+        "@id": "schema:Action"
+      },
+      "$validation": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "parameterValue": {
+            "description": "A parameter value of the experimental process, usually a key-value pair using ontology terms."
+          },
+          "executesLabProtocol": {
+            "description": "The protocol describes the experimental workflow and its parameters, which is instanciated by this process."
+          }
+        },
+        "required": [],
+        "recommended": [],
+        "optional": []
+      },
+      "schemaVersion": [
+        "https://schema.org/docs/releases.html#v23.0"
+      ]
+    },
+    {
+      "@id": "isa:parameterValue",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A parameter value of the experimental process, usually a key-value pair using ontology terms.",
+      "rdfs:label": "parameterValue",
+      "schema:domainIncludes": "isa:LabProcess",
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:PropertyValue"
+        }
+      ]
+    },
+    {
+      "@id": "isa:executesLabProtocol",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The protocol describes the experimental workflow and its parameters, which is instanciated by this process.",
+      "rdfs:label": "executesLabProtocol",
+      "schema:domainIncludes": "isa:LabProcess",
+      "schema:rangeIncludes": [
+        {
+          "@id": "bioschemastypesdrafts:LabProtocol"
+        }
+      ]
+    }
+  ]
+}
