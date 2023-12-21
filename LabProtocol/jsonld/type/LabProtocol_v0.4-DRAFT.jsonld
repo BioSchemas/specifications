@@ -12,7 +12,7 @@
     {
       "@id": "bioschemastypesdrafts:LabProtocol",
       "@type": "rdfs:Class",
-      "rdfs:comment": "An experimental lab protocol is a sequence of tasks and operations executed to perform experimental research in wet- or dry-labs. \n\nVersion: v0.3 \n\nChangelog: \n* Use HowTo as parent class rather than CreativeWork \n* Align properties to HowTo \n* Align properties from the previous version type (v0.3-DRAFT-2019_06_20) and current draft profile (v0.7-DRAFT) \n\nPrepared by: Leyla Jael Castro",
+      "rdfs:comment": "An experimental lab protocol is a sequence of tasks and operations executed to perform experimental research in wet- or dry-labs. \n\nVersion: v0.4 \n\nChangelog: \n* Use HowTo as parent class rather than CreativeWork \n* Align properties to HowTo \n* Align properties from the previous version type (v0.3-DRAFT-2019_06_20) and current draft profile (v0.7-DRAFT) \n\nPrepared by: Leyla Jael Castro",
       "rdfs:label": "LabProtocol",
       "rdfs:subClassOf": {
         "@id": "schema:HowTo"
