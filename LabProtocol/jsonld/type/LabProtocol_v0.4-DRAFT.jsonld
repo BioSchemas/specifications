@@ -1,0 +1,267 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+    "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/",
+    "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/"
+
+  },
+  "@graph": [
+    {
+      "@id": "bioschemastypesdrafts:LabProtocol",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An experimental lab protocol is a sequence of tasks and operations executed to perform experimental research in wet- or dry-labs. \n\nVersion: v0.4 \n\nChangelog: \n* Use HowTo as parent class rather than CreativeWork \n* Align properties to HowTo \n* Align properties from the previous version type (v0.3-DRAFT-2019_06_20) and current draft profile (v0.7-DRAFT) \n\nPrepared by: Leyla Jael Castro",
+      "rdfs:label": "LabProtocol",
+      "rdfs:subClassOf": {
+        "@id": "schema:HowTo"
+      },
+      "schemaVersion": [
+        "https://schema.org/docs/releases.html#v23.0"
+      ]
+    },
+    {
+      "@id": "bioschemastypes:input",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Specification of a consumed input.",
+      "rdfs:label": "input",
+      "schema:domainIncludes": {
+	    "@id": "bioschemastypesdrafts:LabProtocol"
+	  },
+      "schema:rangeIncludes": [
+        {
+          "@id": "bioschemastypes:FormalParameter"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypes:output",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Specification of a produced output.",
+      "rdfs:label": "output",
+      "schema:domainIncludes": {
+	    "@id": "bioschemastypesdrafts:LabProtocol"
+	  },
+      "schema:rangeIncludes": [
+        {
+          "@id": "bioschemastypes:FormalParameter"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:intendedUse",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Purpose and intended use stated to enable users to make a decision as to the suitability of this creative work (e.g., lab protocol, machine learning model, software) to their experimental problem or own use case.",
+      "rdfs:label": "intendedUse",
+      "schema:domainIncludes": {
+	    "@id": "bioschemastypesdrafts:LabProtocol"
+	  },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        },
+        {
+          "@id": "schema:DefinedTerm"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:ethicalLegalSocial",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Considerations wrt ethical, legal and social aspects.",
+      "rdfs:label": "ethicalLegalSocial",
+      "schema:domainIncludes": {
+	    "@id": "bioschemastypesdrafts:LabProtocol"
+	  },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:computationalTool",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Computational tool or workflow used to complete a part of this protocol.",
+      "rdfs:label": "computationalTool",
+      "schema:domainIncludes": {
+	    "@id": "bioschemastypesdrafts:LabProtocol"
+	  },
+      "schema:rangeIncludes": [
+        {
+          "@id": "bioschemastypes:ComputationalWorkflow"
+        },
+        {
+          "@id": "schema:SoftwareApplication"
+        },
+        {
+          "@id": "schema:SoftwareSourceCode"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:sample",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Sample used in the protocol. It could be a record in a Dataset describing the sample or a physical object corresponding to the sample or a URL pointing to the type of sample used.",
+      "rdfs:label": "sample",
+      "schema:domainIncludes": {
+	    "@id": "bioschemastypesdrafts:LabProtocol"
+	  },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Thing"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:bioSample",
+      "@type": "rdf:Property",
+      "rdfs:comment": "BioSample used in the protocol. It could be a record in a Dataset describing the sample or a physical object corresponding to the sample or a URL pointing to the type of sample used.",
+      "rdfs:label": "bioSample",
+      "schema:domainIncludes": {
+	    "@id": "bioschemastypesdrafts:LabProtocol"
+	  },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:BioChemEntity"
+        },
+	{
+          "@id": "bioschemastypes:BioSample"
+        },
+	{
+          "@id": "schema:DefinedTerm"
+        },
+	{
+          "@id": "schema:Taxon"
+        },
+	{
+          "@id": "schema:Text"
+        },
+	{
+          "@id": "schema:URL"
+        }      
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:labEquipment",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A laboratory equipment used by a person to follow one or more steps described in this LabProtocol.",
+      "rdfs:label": "labEquipment",
+      "schema:domainIncludes": [
+	    {"@id": "bioschemastypesdrafts:LabProtocol"}
+	  ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        },
+        {
+          "@id": "schema:DefinedTerm"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:protocolAdvantage",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Situations where the LabProtocol has been successfully employed including advantageous elements (e.g. better yield, shorter running time).",
+      "rdfs:label": "protocolAdvantage",
+      "schema:domainIncludes": [
+	    {"@id": "bioschemastypesdrafts:LabProtocol"}
+	  ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:CreativeWork"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:protocolApplication",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Applications of the protocol list the full diversity of the applications of the method and support if is possible to extend the range of applications of the protocol. e.g. northern blot assays, sequencing, etc. ",
+      "rdfs:label": "protocolApplication",
+      "schema:domainIncludes": [
+	    {"@id": "bioschemastypesdrafts:LabProtocol"}
+	  ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:CreativeWork"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:protocolLimitation",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Situations where the Protocol would be unreliable or otherwise unsuccessful.",
+      "rdfs:label": "protocolLimitation",
+      "schema:domainIncludes": [
+	    {"@id": "bioschemastypesdrafts:LabProtocol"}
+	  ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:CreativeWork"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:protocolOutcome",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Actual outcome or result by a protocol execution. The shape of the expected outcome/result can be described using the property 'output'.",
+      "rdfs:label": "protocolOutcome",
+      "schema:domainIncludes": [
+	    {"@id": "bioschemastypesdrafts:LabProtocol"}
+	  ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:CreativeWork"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:reagent",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Reagents used in the protocol. DefinedTerm is preferred whenever possible, e.g., ChEBI and PubChem entities can be used whenever available. Commercial names are also acceptable. A reagent is defined as ‘A substance used in a chemical reaction to detect, measure, examine, or produce other substances’ in [CHEBI:33893](https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:33893).",
+      "rdfs:label": "reagent",
+      "schema:domainIncludes": [
+	    {"@id": "bioschemastypesdrafts:LabProtocol"}
+	  ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:BioChemEntity"
+        },
+	{
+          "@id": "schema:ChemicalSubstance"
+        },
+        {
+          "@id": "schema:DefinedTerm"
+        },
+	{
+          "@id": "schema:MolecularEntity"
+        },
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    }
+  ]
+}
