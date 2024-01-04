@@ -23,7 +23,7 @@
             "description": "A parameter value of the experimental process, usually a key-value pair using ontology terms."
           },
           "executesLabProtocol": {
-            "description": "The protocol describes the experimental workflow and its parameters, which is instanciated by this process."
+            "description": "The lab protocol describes the experimental workflow and its parameters, which is instantiated by this process."
           }
         },
         "required": [],
@@ -49,7 +49,7 @@
     {
       "@id": "isa:executesLabProtocol",
       "@type": "rdf:Property",
-      "rdfs:comment": "The protocol describes the experimental workflow and its parameters, which is instanciated by this process.",
+      "rdfs:comment": "The lab protocol describes the experimental workflow and its parameters, which is instantiated by this process.",
       "rdfs:label": "executesLabProtocol",
       "schema:domainIncludes": "isa:LabProcess",
       "schema:rangeIncludes": [
