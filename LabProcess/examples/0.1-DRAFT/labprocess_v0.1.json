@@ -1,0 +1,85 @@
+{
+    "@context": "http://schema.org/",
+    "@type": [
+        "LabProcess"
+    ],
+    "name": "Cell Cultivation",
+    "executesProtocol": {
+        "@type": [
+            "LabProtocol"
+        ],
+        "intendedUse": {
+            "@type": "DefinedTerm",
+            "name": "growth protocol",
+            "termCode": "http://purl.obolibrary.org/obo/EFO_0003789"
+        },
+        "labEquipment": {
+            "@type": [
+              "DefinedTerm"
+            ],
+            "alternateName": "Fisherbrand™ Model 705 Sonic Dismembrator ()",
+            "name": "sonicator",
+            "termCode": "OBI:0400114",
+            "disambiguatingDescription": [
+                "ColumnIndex:1"
+            ]
+        },
+        "url": "abc.de",
+        "version": "1"
+    },
+    "parameterValue": [
+        {
+            "@type": "PropertyValue",
+            "name": "temperature",
+            "value": "20",
+            "unitCode": "http://purl.obolibrary.org/obo/UO_0000027",
+            "unitText": "degree Celsius",
+            "propertyID": "http://purl.obolibrary.org/obo/PATO_0000146"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "organism",
+            "value": "Arabidopsis thaliana",
+            "propertyID": "http://purl.obolibrary.org/obo/OBI_0100026",
+            "valueReference": "http://purl.obolibrary.org/obo/NCBITaxon_3702"
+        }
+    ],
+    "agent": {
+        "@type": "Person",
+        "givenName": "Timo",
+        "familyName": "Mühlhaus"
+    },
+    "endTime": "2012-04-23T18:25:43.511Z",
+    "object": [
+        {
+            "@type": [
+                "Sample"
+            ],
+            "name": "Sample1",
+            "additionalProperties": []
+        },
+        {
+            "@type": [
+                "Sample"
+            ],
+            "name": "Sample2",
+            "additionalProperties": []
+        }
+    ],
+    "result": [
+        {
+            "@type": [
+                "Sample"
+            ],
+            "name": "Cultivation Flask",
+            "additionalProperties": []
+        },
+        {
+            "@type": [
+                "Sample"
+            ],
+            "name": "Cultivation Flask",
+            "additionalProperties": []
+        }
+    ]
+}
