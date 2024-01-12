@@ -12,7 +12,7 @@
     {
       "@id": "bioschemastypesdrafts:LabProtocol",
       "@type": "rdfs:Class",
-      "rdfs:comment": "An experimental lab protocol is a sequence of tasks and operations executed to perform experimental research in wet- or dry-labs. \n\nVersion: v0.3 \n\nChangelog: \n* Use HowTo as parent class rather than CreativeWork \n* Align properties to HowTo \n* Align properties from the previous version type (v0.3-DRAFT-2019_06_20) and current draft profile (v0.7-DRAFT) \n\nPrepared by: Leyla Jael Castro",
+      "rdfs:comment": "An experimental lab protocol is a sequence of tasks and operations executed to perform experimental research in wet- or dry-labs. \n\nVersion: v0.4 \n\nChangelog: \n* Use HowTo as parent class rather than CreativeWork \n* Align properties to HowTo \n* Align properties from the previous version type (v0.3-DRAFT-2019_06_20) and current draft profile (v0.7-DRAFT) \n\nPrepared by: Leyla Jael Castro",
       "rdfs:label": "LabProtocol",
       "rdfs:subClassOf": {
         "@id": "schema:HowTo"
@@ -117,7 +117,36 @@
         }
       ]
     },
+    {
+      "@id": "bioschemastypesdrafts:bioSample",
+      "@type": "rdf:Property",
+      "rdfs:comment": "BioSample used in the protocol. It could be a record in a Dataset describing the sample or a physical object corresponding to the sample or a URL pointing to the type of sample used.",
+      "rdfs:label": "bioSample",
+      "schema:domainIncludes": {
+	    "@id": "bioschemastypesdrafts:LabProtocol"
+	  },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:BioChemEntity"
+        },
 	{
+          "@id": "bioschemastypes:BioSample"
+        },
+	{
+          "@id": "schema:DefinedTerm"
+        },
+	{
+          "@id": "schema:Taxon"
+        },
+	{
+          "@id": "schema:Text"
+        },
+	{
+          "@id": "schema:URL"
+        }      
+      ]
+    },
+    {
       "@id": "bioschemastypesdrafts:labEquipment",
       "@type": "rdf:Property",
       "rdfs:comment": "A laboratory equipment used by a person to follow one or more steps described in this LabProtocol.",
@@ -174,8 +203,25 @@
     {
       "@id": "bioschemastypesdrafts:protocolLimitation",
       "@type": "rdf:Property",
-      "rdfs:comment": "Situations where the Protocol would be unreliable or otherwise unsuccessful",
+      "rdfs:comment": "Situations where the Protocol would be unreliable or otherwise unsuccessful.",
       "rdfs:label": "protocolLimitation",
+      "schema:domainIncludes": [
+	    {"@id": "bioschemastypesdrafts:LabProtocol"}
+	  ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:CreativeWork"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:protocolOutcome",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Actual outcome or result by a protocol execution. The shape of the expected outcome/result can be described using the property 'output'.",
+      "rdfs:label": "protocolOutcome",
       "schema:domainIncludes": [
 	    {"@id": "bioschemastypesdrafts:LabProtocol"}
 	  ],
@@ -200,8 +246,14 @@
         {
           "@id": "schema:BioChemEntity"
         },
+	{
+          "@id": "schema:ChemicalSubstance"
+        },
         {
           "@id": "schema:DefinedTerm"
+        },
+	{
+          "@id": "schema:MolecularEntity"
         },
         {
           "@id": "schema:Text"
