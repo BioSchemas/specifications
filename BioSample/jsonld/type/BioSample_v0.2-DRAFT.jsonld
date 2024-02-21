@@ -296,9 +296,6 @@
       "schema:rangeIncludes": [
         {
           "@id": "schema:QualitativeValue"
-        },
-        {
-          "@id": ""
         }
       ]
     },
@@ -461,9 +458,6 @@
       "schema:rangeIncludes": [
         {
           "@id": "schema:Text"
-        },
-        {
-          "@id": ""
         }
       ]
     },
