@@ -15,7 +15,7 @@
       "schema:additionalType":"https://bioschemas.org/types#nav-draft",
       "schema:schemaVersion":"0.2-DRAFT",
       "rdfs:subClassOf": {
-        "@id": "bioschemastypedrafts:Sample"
+        "@id": "bioschemastypesdrafts:Sample"
       },
       "schemaVersion": [
         "https://schema.org/docs/releases.html#v23.0"
