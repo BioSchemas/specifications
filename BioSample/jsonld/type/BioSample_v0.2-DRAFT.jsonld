@@ -12,6 +12,8 @@
       "@type": "rdfs:Class",
       "rdfs:comment": "A biological material entity that is representative of a whole.\\nComments: Typically samples are intended to be representative of the whole or aspects thereof. Examples of samples include biomedical samples (blood, urine) and plant specimens held at herbaria.\\n\\nVersion: 0.2 \\ncreated by Nick Juty, Sara El-Gebali, Leyla Jael Castro, Helena Schnitzer, Alban Gaignard, Ginger Tsueng, Rita Monteiro and Joana Pauperio. Note, the property `funding` was originally added as `grant`, but was changed to for consistency with schema.org.",
       "rdfs:label": "BioSample",
+      "schema:additionalType":"https://bioschemas.org/types#nav-draft",
+      "schema:schemaVersion":"0.2-DRAFT",
       "rdfs:subClassOf": {
         "@id": "bioschemastypedrafts:Sample"
       },
