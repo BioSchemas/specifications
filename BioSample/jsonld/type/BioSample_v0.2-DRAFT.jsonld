@@ -16,7 +16,7 @@
       "rdfs:subClassOf": {
         "@id": "bioschemastypesdrafts:Sample"
       },
-      "schemaVersion": [
+      "schema:schemaVersion": [
         "https://schema.org/docs/releases.html#v23.0"
       ]
     },
