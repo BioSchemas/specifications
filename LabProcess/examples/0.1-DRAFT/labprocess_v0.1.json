@@ -1,0 +1,151 @@
+{
+    "@context": "http://schema.org/",
+    "@type": [
+        "LabProcess"
+    ],
+    "name": "Cell Cultivation",
+    "executesProtocol": {
+        "@type": [
+            "LabProtocol"
+        ],
+        "intendedUse": {
+            "@type": "DefinedTerm",
+            "name": "growth protocol",
+            "termCode": "http://purl.obolibrary.org/obo/EFO_0003789"
+        },
+        "labEquipment": {
+            "@type": [
+              "DefinedTerm"
+            ],
+            "alternateName": "Photon System Instruments, FMT 150/400-RB",
+            "name": "bioreactor",
+            "termCode": "http://purl.obolibrary.org/obo/OBI_0001046"
+        }
+    },
+    "parameterValue": [
+        {
+            "@type": "PropertyValue",
+            "name": "temperature",
+            "value": "20",
+            "unitCode": "http://purl.obolibrary.org/obo/UO_0000027",
+            "unitText": "degree Celsius",
+            "propertyID": "http://purl.obolibrary.org/obo/PATO_0000146"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "culture medium volume",
+            "value": "400",
+            "unitCode": "http://purl.obolibrary.org/obo/UO_0000098",
+            "unitText": "milliliter",
+            "propertyID": "DPBO:1000155"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Mixture Component",
+            "value": "TAP medium",
+            "propertyID": "http://purl.obolibrary.org/obo/NCIT_C103243"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "light intensity",
+            "value": "400",
+            "unitCode": "http://purl.obolibrary.org/obo/UO_0000160",
+            "unitText": "microeinstein per square meter per second",
+            "propertyID": "http://purl.obolibrary.org/obo/ZECO_0000151"
+        }     
+    ],
+    "agent": {
+        "@type": "Person",
+        "givenName": "Benedikt",
+        "familyName": "Venn"
+    },
+    "endTime": "2012-04-23T18:25:43.511Z",
+    "object": [
+        {
+            "@type": [
+                "Sample"
+            ],
+            "name": "reactor_35_A",
+            "additionalProperties": [
+                {
+                    "@type": "PropertyValue",
+                    "name": "organism",
+                    "value": "Chlamydomonas reinhardtii",
+                    "propertyID": "http://purl.obolibrary.org/obo/OBI_0100026",
+                    "valueReference": "http://purl.obolibrary.org/obo/NCBITaxon_3055"
+                },
+                {
+                    "@type": "PropertyValue",
+                    "name": "biological replicate",
+                    "value": 1,
+                    "propertyID": "http://www.ebi.ac.uk/efo/EFO_0002091"
+                }
+            ]
+        },
+        {
+            "@type": [
+                "Sample"
+            ],
+            "name": "reactor_35_B",
+            "additionalProperties": [
+                {
+                    "@type": "PropertyValue",
+                    "name": "organism",
+                    "value": "Chlamydomonas reinhardtii",
+                    "propertyID": "http://purl.obolibrary.org/obo/OBI_0100026",
+                    "valueReference": "http://purl.obolibrary.org/obo/NCBITaxon_3055"
+                },
+                {
+                    "@type": "PropertyValue",
+                    "name": "biological replicate",
+                    "value": 2,
+                    "propertyID": "http://www.ebi.ac.uk/efo/EFO_0002091"
+                }
+            ]
+        },
+        {
+            "@type": [
+                "Sample"
+            ],
+            "name": "reactor_35_C",
+            "additionalProperties": [
+                {
+                    "@type": "PropertyValue",
+                    "name": "organism",
+                    "value": "Chlamydomonas reinhardtii",
+                    "propertyID": "http://purl.obolibrary.org/obo/OBI_0100026",
+                    "valueReference": "http://purl.obolibrary.org/obo/NCBITaxon_3055"
+                },
+                {
+                    "@type": "PropertyValue",
+                    "name": "biological replicate",
+                    "value": 3,
+                    "propertyID": "http://www.ebi.ac.uk/efo/EFO_0002091"
+                }
+            ]
+        }
+    ],
+    "result": [
+        {
+            "@type": [
+                "Sample"
+            ],
+            "name": "run_35_A",
+            "additionalProperties": []
+        },
+        {
+            "@type": [
+                "Sample"
+            ],
+            "name": "run_35_B",
+            "additionalProperties": []
+        },
+        {
+            "@type": [
+                "Sample"
+            ],
+            "name": "run_35_C",
+            "additionalProperties": []
+        }
+    ]
+}
