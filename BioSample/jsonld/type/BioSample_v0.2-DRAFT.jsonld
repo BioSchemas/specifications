@@ -1,0 +1,548 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/"
+  },
+  "@graph": [
+    {
+      "@id": "bioschemastypesdrafts:BioSample",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A biological material entity that is representative of a whole.\\nComments: Typically samples are intended to be representative of the whole or aspects thereof. Examples of samples include biomedical samples (blood, urine) and plant specimens held at herbaria.\\n\\nVersion: 0.2 \\ncreated by Nick Juty, Sara El-Gebali, Leyla Jael Castro, Helena Schnitzer, Alban Gaignard, Ginger Tsueng, Rita Monteiro and Joana Pauperio. Note, the property `funding` was originally added as `grant`, but was changed to for consistency with schema.org.",
+      "rdfs:label": "BioSample",
+      "schema:additionalType":"https://bioschemas.org/types#nav-draft",
+      "rdfs:subClassOf": {
+        "@id": "bioschemastypesdrafts:Sample"
+      },
+      "schema:schemaVersion": [
+        "https://schema.org/docs/releases.html#v23.0"
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:dateCollected",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The date on which the sample was collected.",
+      "rdfs:label": "dateCollected",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Date"
+        },
+        {
+          "@id": "schema:DateTime"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:datePublished",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The date when the  record of the sample will be made publicly available.",
+      "rdfs:label": "datePublished",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Date"
+        },
+        {
+          "@id": "schema:DateTime"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:submitter",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The person or organization that registers the sample. ",
+      "rdfs:label": "submitter",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Person"
+        },
+        {
+          "@id": "schema:Organization"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:maintainer",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The Person or Organization who is responsible for the Sample.",
+      "rdfs:label": "maintainer",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Person"
+        },
+        {
+          "@id": "schema:Organization"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:contributor",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Person or organization that contributes to the work.",
+      "rdfs:label": "contributor",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Person"
+        },
+        {
+          "@id": "schema:Organization"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:longitude",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The longitude from which the sample was originally collected. ",
+      "rdfs:label": "longitude",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:GeoCoordinates"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:elevation",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The altitude from which the sample was originally collected. ",
+      "rdfs:label": "elevation",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:GeoCoordinates"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:latitude",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The latitude from which the sample was originally collected. ",
+      "rdfs:label": "latitude",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:GeoCoordinates"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:depth",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The extent downward or inward from the surface from which the sample was originally collected. ",
+      "rdfs:label": "depth",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:QuantitativeValue"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:locationOfOrigin",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The location from which the sample was originally collected.",
+      "rdfs:label": "locationOfOrigin",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:GeoCoordinates"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:dateModified",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Date sample record was last updated.",
+      "rdfs:label": "dateModified",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Date"
+        },
+        {
+          "@id": "schema:DateTime"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:keywords",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Terms that capture the main subjects e.g. cancer, plant biology.",
+      "rdfs:label": "keywords",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:alternateIdentifier",
+      "@type": "rdf:Property",
+      "rdfs:comment": "An additional identifier for the same instance of the resource. ",
+      "rdfs:label": "alternateIdentifier",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:contactPoint",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Person or organization that can be contacted for more information or support. ",
+      "rdfs:label": "contactPoint",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Person"
+        },
+        {
+          "@id": "schema:Organization"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:environmentalSystem",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A category or description of the habitat that describes elements of an ecosystem where the sample was collected.",
+      "rdfs:label": "environmentalSystem",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:sampleQuantity",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A numeric value for a measurement of the size  of a sample.",
+      "rdfs:label": "sampleQuantity",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:QuantitativeValue"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:processingDate",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The date the sample was processed or used in a method.",
+      "rdfs:label": "processingDate",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Date"
+        },
+        {
+          "@id": "schema:DateTime"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:sampleState",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Specify the composition and state of the sample, indicating which form it exisits in, e.g. gas, liquid, solid.",
+      "rdfs:label": "sampleState",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:sampleType",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Indicate the type of sample",
+      "rdfs:label": "sampleType",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:collectionMethod",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Provide information about the conditions and methods of acquisition of samples. ",
+      "rdfs:label": "collectionMethod",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:sampleStorageTemperature",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Storage condition of the sample.",
+      "rdfs:label": "sampleStorageTemperature",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:QualitativeValue"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:sampleProcess",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The processing technique that was applied to the sample, methods used to prepare the samples.",
+      "rdfs:label": "sampleProcess",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:experimentalPurpose",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Describe the planned or executed experimental procedures involving the samples.",
+      "rdfs:label": "experimentalPurpose",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:instrument",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Provide description of instruments and devices used.",
+      "rdfs:label": "instrument",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:funding",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Provide funding information.",
+      "rdfs:label": "funding",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Grant"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:project",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Information on the project.",
+      "rdfs:label": "project",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:ResearchProject"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:relatedItem",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Describe related items including other resources related to the samples.",
+      "rdfs:label": "relatedItem",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Dataset"
+        },
+        {
+          "@id": "schema:ImageObject"
+        },
+        {
+          "@id": "schema:CreativeWork"
+        },
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:isDescribedBy",
+      "@type": "rdf:Property",
+      "rdfs:comment": "List publications where the sample is mentioned or described.",
+      "rdfs:label": "isDescribedBy",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Article"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:studyTitle",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Title of the study the samples belong to",
+      "rdfs:label": "studyTitle",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:studyID",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Indicate the study ID.",
+      "rdfs:label": "studyID",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:sampleAvailability",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Indicate whether this resource is available for reuse.",
+      "rdfs:label": "sampleAvailability",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Boolean"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:accessConditions",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Sample access statement outlining conditions/requirements need to be fulfilled before access to the sample is granted.",
+      "rdfs:label": "accessConditions",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:ethics",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Indicate which ethics policies are associated with the sample.",
+      "rdfs:label": "ethics",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:scientificName",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The full scientific name (order, family, subfamily,  genus,specificEpithet).",
+      "rdfs:label": "scientificName",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:anatomicalSystem",
+      "@type": "rdf:Property",
+      "rdfs:comment": "An anatomical system is a group of anatomical structures that work together to perform a certain task. Can include circulatory, digestive, endocrine, immune and other systems",
+      "rdfs:label": "anatomicalSystem",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:AnatomicalSystem"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:organ",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Anatomical structure that performs a specific function or group of function.",
+      "rdfs:label": "organ",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:AnatomicalStructure"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:tissue",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Indicate the tissue from which the sample was collected.",
+      "rdfs:label": "tissue",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:AnatomicalStructure"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:sex",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The biological sex of the individual from which the sample was obtained.",
+      "rdfs:label": "sex",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:developmentalStage",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A temporal subdivision of a developmental process, indicating the age or stage of the object when the sample was created.",
+      "rdfs:label": "developmentalStage",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:relationshipType",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Describe the relationship to other entities or organisms e.g. parent, sibling, symbiont.",
+      "rdfs:label": "relationshipType",
+      "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    }
+  ]
+}
