@@ -2,7 +2,7 @@
 
 ## Type 
 
-Thing > [Taxon](https://bioschemas.org/Taxon/)
+Thing > CreativeWork > [TaxonName](https://bioschemas.org/TaxonName/)
 
 ## Profile
 
