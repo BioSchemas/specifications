@@ -1,0 +1,36 @@
+{
+    "@context": "http://schema.org",
+    "@type": "DataRecord",
+    "@id": "https://www.nextprot.org/entry/NX_P52701",
+    "includedInDataset": "ftp://ftp.nextprot.org/pub/current_release/xml/nextprot_all.xml.gz",
+    "citation": {
+      "@id": "",
+      "@type": ""
+    },
+    "mainEntity": {
+      "@id": "https://www.nextprot.org/entry/NX_P52701",
+      "@type": "Protein",
+      "http://purl.org/dc/terms/conformsTo": "https://bioschemas.org/specifications/Protein/0.9-DRAFT",
+      "identifier": "NX_P52701",
+      "name": "DNA mismatch repair protein Msh6",
+      "description": "",
+      "alternateName": ["G/T mismatch-binding protein", "GTBP", "GTMBP", "MutS protein homolog 6", "MutS-alpha 160 kDa subunit"],
+      "url": "https://www.nextprot.org/entry/NX_P52701",
+      "hasBioChemEntityPart": [
+        {
+          "isEncodedByBioChemEntity": {
+            "@type": "Gene",
+            "name": "MSH6",
+            "identifier": "HGNC:7329",
+            "hasRepresentation": "2p16.3"
+          },
+          "taxonomicRange": {
+            "@id": "https://identifiers.org/taxonomy:9606",
+            "@type": "Taxon",
+            "name": "Human"
+          }
+        }
+      ]
+    }
+  }
+  
