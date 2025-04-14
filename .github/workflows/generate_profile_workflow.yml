@@ -31,7 +31,7 @@ jobs:
 
       - name: Get Changed Files
         id: changed-files
-        uses: tj-actions/changed-files@v21
+        uses: tj-actions/changed-files@v41
 
       - name: List Changed Files
         run: |
