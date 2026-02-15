@@ -1,6 +1,6 @@
 # Steps to Render a Bioschemas Profile on the Bioschema Website
 
-It is assumed that you have already made the edits to the profile (see this [tutorial](/tutorials/dde/) for details on how to edit a profile), stored it in the [Bioschemas Specification repository](https://github.com/BioSchemas/specifications), and that you are now ready to get it published on the Bioschemas website.
+It is assumed that you have already made the edits to the profile (see this [tutorial](https://bioschemas.org/tutorials/dde/) for details on how to edit a profile), stored it in the [Bioschemas Specification repository](https://github.com/BioSchemas/specifications), and that you are now ready to get it published on the Bioschemas website.
 
 ## 1. Manual Configuration in the Website Repository
 For new profiles:
