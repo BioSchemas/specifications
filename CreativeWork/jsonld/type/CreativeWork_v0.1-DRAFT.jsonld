@@ -1,0 +1,112 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "bioschemastypes": "https://discovery.biothings.io/ns/bioschemastypes/",
+    "bioschemastypesdrafts": "https://discovery.biothings.io/ns/bioschemastypesdrafts/",
+    "bioschemas": "https://discovery.biothings.io/ns/bioschemas/"
+  },
+  "@graph": [
+    {
+      "@id": "bioschemastypesdrafts:CreativeWork",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Extension of a CreativeWork with additional properties relevant to research artifacts. \n\nAs metadata for research artifacts becomes more and more important as a mean to increase transparency and trust, there is a need to include additional properties to schema:CreativeWork reflecting, for instance, intended use, limitations, links across versions. Rather than adding the same set of properties to various Bioschemas types or profiles, we are here compiling them together at the CreativeWork level.\n\nAcknowledgement note: Some of the properties added to this bioschemas:CreativeWork type come from hackathons sponsored by NFDI4DS (DFG grant number 460234259), ConnOSS (DFG grant number 561044496), DiscoRSE (Klaus Tschira Foundation, scientific software grant), German BioHackathon 2026 (organized by deNBI).",
+      "rdfs:label": "CreativeWork",
+      "rdfs:subClassOf": {
+        "@id": "schema:CreativeWork"
+      },
+      "schemaVersion": [
+        "https://schema.org/docs/releases.html#v29.3"
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:applicationDomain",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The discipline, area, or research domain to which this item aligns or belongs to.",
+      "rdfs:label": "applicationDomain",
+      "owl:equivalentProperty": {
+        "@id": "http://purl.org/spar/fabio#hasDiscipline"
+      },
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:CreativeWork"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:DefinedTerm"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:contactPoint",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A contact point for a person, organization or CreativeWork",
+      "rdfs:label": "contactPoint",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:CreativeWork"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:ContactPoint"
+        },
+        {
+          "@id": "schema:Person"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:sourceRepository",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Link to the repository used to host this item while in development. Similar to codeRepository but for all sort of creative works.",
+      "rdfs:label": "sourceRepository",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:CreativeWork"
+      }
+    },
+    {
+      "@id": "bioschemastypesdrafts:nextItem",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A link to the CreativeWork that immediately follows the current one. Inverse property of previousItem.",
+      "rdfs:label": "nextItem",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:CreativeWork"
+      },
+      "schema:inverseOf": {
+        "@id": "bioschemastypesdrafts:previousItem"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:CreativeWork"
+        },
+        {
+          "@id": "schema:ListItem"
+        }
+      ]
+    },
+    {
+      "@id": "bioschemastypesdrafts:previousItem",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A link to the CreativeWork that precedes the current one. As it is easier to include the previous item rather than the next one, metadata repositories/registries should ideally add the nextItem automatically. Inverse property of nextItem. ",
+      "rdfs:label": "previousItem",
+      "schema:domainIncludes": {
+        "@id": "bioschemastypesdrafts:CreativeWork"
+      },
+      "schema:inverseOf": {
+        "@id": "bioschemastypesdrafts:nextItem"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:CreativeWork"
+        },
+        {
+          "@id": "schema:ListItem"
+        }
+      ]
+    }
+  ]
+}
