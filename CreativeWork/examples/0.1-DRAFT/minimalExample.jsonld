@@ -12,7 +12,7 @@
     "@dateModified": "03/19/2026, 12:46:20",
     "dwc": "http://rs.tdwg.org/dwc/terms/"
   },
-  "@type": ["bioschemastypesdrafts:CreativeWork", "CreativeWork"],
+  "@type": "bioschemastypesdrafts:CreativeWork",
   "@id": "https://pid_example.org/org1/myCW_v1.1",
   "description": "Creative work about how to use Python",
   "keywords": "Python",
@@ -24,12 +24,12 @@
     "url": "https://pid_example.org/org1/myContactWeForm"
   },
   "bioschemastypesdrafts:sourceRepository": "https://pid_example.org/org1/myCW_v1.1_rerpo",
-  "bioschemastypesdrafts:nextItem": {
-    "@type": ["bioschemastypesdrafts:CreativeWork", "CreativeWork"],
+  "bioschemastypesdrafts:nextVersion": {
+    "@type": "bioschemastypesdrafts:CreativeWork",
     "@id": "https://pid_example.org/org1/myCW_v1.2"
   },
-  "bioschemastypesdrafts:previousItem": {
-    "@type": ["bioschemastypesdrafts:CreativeWork", "CreativeWork"],
+  "bioschemastypesdrafts:previousVersion": {
+    "@type": "bioschemastypesdrafts:CreativeWork",
     "@id": "https://pid_example.org/org1/myCW_v1.0"
   }
 }

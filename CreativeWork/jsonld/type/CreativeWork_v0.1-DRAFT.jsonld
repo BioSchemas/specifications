@@ -69,9 +69,9 @@
       }
     },
     {
-      "@id": "bioschemastypesdrafts:nextItem",
+      "@id": "bioschemastypesdrafts:nextVersion",
       "@type": "rdf:Property",
-      "rdfs:comment": "A link to the CreativeWork that immediately follows the current one. Inverse property of previousItem.",
+      "rdfs:comment": "A link to the CreativeWork version that immediately follows the current one. Inverse property of previousItem.",
       "rdfs:label": "nextItem",
       "schema:domainIncludes": {
         "@id": "bioschemastypesdrafts:CreativeWork"
@@ -82,16 +82,13 @@
       "schema:rangeIncludes": [
         {
           "@id": "schema:CreativeWork"
-        },
-        {
-          "@id": "schema:ListItem"
         }
       ]
     },
     {
-      "@id": "bioschemastypesdrafts:previousItem",
+      "@id": "bioschemastypesdrafts:previousVersion",
       "@type": "rdf:Property",
-      "rdfs:comment": "A link to the CreativeWork that precedes the current one. As it is easier to include the previous item rather than the next one, metadata repositories/registries should ideally add the nextItem automatically. Inverse property of nextItem. ",
+      "rdfs:comment": "A link to the CreativeWork version that precedes the current one. As it is easier to include the previous item rather than the next one, metadata repositories/registries should ideally add the nextItem automatically. Inverse property of nextItem. ",
       "rdfs:label": "previousItem",
       "schema:domainIncludes": {
         "@id": "bioschemastypesdrafts:CreativeWork"
@@ -102,9 +99,6 @@
       "schema:rangeIncludes": [
         {
           "@id": "schema:CreativeWork"
-        },
-        {
-          "@id": "schema:ListItem"
         }
       ]
     }
