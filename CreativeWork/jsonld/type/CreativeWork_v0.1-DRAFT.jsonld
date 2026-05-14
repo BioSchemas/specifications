@@ -45,7 +45,7 @@
     {
       "@id": "bioschemastypesdrafts:contactPoint",
       "@type": "rdf:Property",
-      "rdfs:comment": "A contact point for a person, organization or CreativeWork",
+      "rdfs:comment": "A contact point for a person, organization or CreativeWork.",
       "rdfs:label": "contactPoint",
       "schema:domainIncludes": {
         "@id": "bioschemastypesdrafts:CreativeWork"
@@ -71,13 +71,13 @@
     {
       "@id": "bioschemastypesdrafts:nextVersion",
       "@type": "rdf:Property",
-      "rdfs:comment": "A link to the CreativeWork version that immediately follows the current one. Inverse property of previousItem.",
-      "rdfs:label": "nextItem",
+      "rdfs:comment": "A link to the CreativeWork version that immediately follows the current one. Inverse property of previousVersion.",
+      "rdfs:label": "nextVersion",
       "schema:domainIncludes": {
         "@id": "bioschemastypesdrafts:CreativeWork"
       },
       "schema:inverseOf": {
-        "@id": "bioschemastypesdrafts:previousItem"
+        "@id": "bioschemastypesdrafts:previousVersion"
       },
       "schema:rangeIncludes": [
         {
@@ -88,13 +88,13 @@
     {
       "@id": "bioschemastypesdrafts:previousVersion",
       "@type": "rdf:Property",
-      "rdfs:comment": "A link to the CreativeWork version that precedes the current one. As it is easier to include the previous item rather than the next one, metadata repositories/registries should ideally add the nextItem automatically. Inverse property of nextItem. ",
-      "rdfs:label": "previousItem",
+      "rdfs:comment": "A link to the CreativeWork version that precedes the current one. As it is easier to include the previous version rather than the next one, metadata repositories/registries should ideally add the nextVersion automatically. Inverse property of nextVersion. ",
+      "rdfs:label": "previousVersion",
       "schema:domainIncludes": {
         "@id": "bioschemastypesdrafts:CreativeWork"
       },
       "schema:inverseOf": {
-        "@id": "bioschemastypesdrafts:nextItem"
+        "@id": "bioschemastypesdrafts:nextVersion"
       },
       "schema:rangeIncludes": [
         {
