@@ -66,7 +66,12 @@
       "rdfs:label": "sourceRepository",
       "schema:domainIncludes": {
         "@id": "bioschemastypesdrafts:CreativeWork"
-      }
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:URL"
+        }
+      ]
     },
     {
       "@id": "bioschemastypesdrafts:nextVersion",
