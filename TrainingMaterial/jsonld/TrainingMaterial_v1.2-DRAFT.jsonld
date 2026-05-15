@@ -1735,6 +1735,9 @@
       "schema:rangeIncludes": [
         {
           "@id": "schema:ContactPoint"
+        },
+        {
+          "@id": "schema:Person"
         }
       ]
     },
@@ -1745,7 +1748,12 @@
       "rdfs:label": "sourceRepository",
       "schema:domainIncludes": {
         "@id": "bioschemasdrafts:TrainingMaterial"
-      }
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:URL"
+        }
+      ]
     },
     {
       "@id": "bioschemasdrafts:nextVersion",
