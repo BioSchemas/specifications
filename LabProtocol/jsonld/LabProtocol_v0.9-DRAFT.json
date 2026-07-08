@@ -897,7 +897,7 @@
                 }
               },
               {
-                "@type": "bioschemastypes:ComputationalWorkflow",
+                "@type": "ComputationalWorkflow",
                 "type": "object",
                 "properties": {
                   "name": {
@@ -909,7 +909,7 @@
               {
                 "type": "array",
                 "items": {
-                  "@type": "bioschemastypes:ComputationalWorkflow",
+                  "@type": "ComputationalWorkflow",
                   "type": "object",
                   "properties": {
                     "name": {
@@ -1292,7 +1292,7 @@
             "description": "Reagents used in the protocol. DefinedTerm is preferred whenever possible, e.g., ChEBI and PubChem entities can be used whenever available. Commercial names are also acceptable. A reagent is defined as ‘A substance used in a chemical reaction to detect, measure, examine, or produce other substances’ in [CHEBI:33893](https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:33893).",
             "anyOf": [
               {
-                "@type": "bioschemas:MolecularEntity",
+                "@type": "MolecularEntity",
                 "type": "object",
                 "properties": {
                   "name": {
@@ -1304,7 +1304,7 @@
               {
                 "type": "array",
                 "items": {
-                  "@type": "bioschemas:MolecularEntity",
+                  "@type": "MolecularEntity",
                   "type": "object",
                   "properties": {
                     "name": {
@@ -2322,7 +2322,7 @@
       ]
     },
     {
-      "@id": "labprotocolTempForRelease:parameter",
+      "@id": "parameter",
       "@type": "rdf:Property",
       "rdfs:comment": "A structured description of a condition to be specified in the execution of this LabProtocol. This includes physical quantities that can be set for steps of this LabProtocol, such as temperature or time. Ideally given with a reference to an ontology (propertyID).",
       "rdfs:label": "parameter",
