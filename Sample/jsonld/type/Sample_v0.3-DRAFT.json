@@ -50,7 +50,7 @@
     {
       "@id": "bioschemastypesdrafts:keywords",
       "@type": "rdf:Property",
-      "rdfs:comment": "Terms that capture the main subjects e.g. cancer, plant biology.",
+      "rdfs:comment": "Terms that capture the main topics e.g. cancer, plant biology.",
       "rdfs:label": "keywords",
       "schema:domainIncludes": {"@id": "bioschemastypesdrafts:Sample"},
       "schema:rangeIncludes": [
@@ -332,7 +332,7 @@
     {
       "@id": "bioschemastypesdrafts:sampleState",
       "@type": "rdf:Property",
-      "rdfs:comment": "Specify the composition and state of the sample, indicating which form it exisits in, e.g. gas, liquid, solid.",
+      "rdfs:comment": "Specify the composition and state of the sample. This can be used to indicate its phsyical state (gas, liquid, solid), degradation status (deteriorated, partially degraded) or passage number.",
       "rdfs:label": "sampleState",
       "schema:domainIncludes": {"@id": "bioschemastypesdrafts:Sample"},
       "schema:rangeIncludes": [
@@ -437,7 +437,7 @@
     {
       "@id": "bioschemastypesdrafts:ethics",
       "@type": "rdf:Property",
-      "rdfs:comment": "Indicate which ethics policies are associated with the sample.",
+      "rdfs:comment": "Indicate which ethics policies and/or social considerations are associated with the sample.",
       "rdfs:label": "ethics",
       "schema:domainIncludes": {"@id": "bioschemastypesdrafts:Sample"},
       "schema:rangeIncludes": [

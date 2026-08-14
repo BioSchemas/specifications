@@ -27,7 +27,7 @@
     {
       "@id": "bioschemastypesdrafts:scientificName",
       "@type": "rdf:Property",
-      "rdfs:comment": "The full scientific name (order, family, subfamily, genus, specificEpithet).",
+      "rdfs:comment": "The full scientific name (order, family, subfamily, genus, specific epithet).",
       "rdfs:label": "scientificName",
       "schema:domainIncludes": {"@id": "bioschemastypesdrafts:BioSample"},
       "schema:rangeIncludes": [
