@@ -8,15 +8,17 @@
       "@base": "http://schema.org"
     }
   ],
-  "@type": "Dataset",
+  "@type": "bio:DataRecord",
   "@id": "https://string-db.org/network/9606.ENSP00000379258",
+  "http://purl.org/dc/terms/conformsTo": "https://bioschemas.org/specifications/DataRecord/0.2-DRAFT",
+  "includedInDataset": "https://string-db.org/#string.v11",
   "mainEntity": {
-    "@type": [
-      "bio:Protein"
-    ],
+    "@type": "bio:Protein",
+    "@id": "https://string-db.org/network/9606.ENSP00000379258",
+    "http://purl.org/dc/terms/conformsTo": "https://bioschemas.org/specifications/Protein/0.9-DRAFT",
     "name": "GLI3",
     "identifier": "9606.ENSP00000379258",
-    "additionalproperty": [
+    "taxonomicRange": [
       {
         "@id": "http://identifiers.org/taxonomy:9606",
         "identifier": "9606",
@@ -24,7 +26,8 @@
         "name": "Homo sapiens",
         "taxonRank": "species"
       }
-    ]
+    ],
+    "url": "https://string-db.org/network/9606.ENSP00000379258",
   },
   "name": "STRING GLI3 interaction network (Homo sapiens)",
   "description": "Homo sapiens STRING functional association network of GLI3 protein.",
