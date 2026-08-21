@@ -1,0 +1,43 @@
+{
+    "@type": "Dataset",
+    "name": "neXtProt entries",
+    "description": "The collection of neXtProt entries for human proteins",
+    "url": "https://www.nextprot.org",
+    "keywords": "nextprot,Human,Proteins,Proteome,Proteomics,protein database,protein knowledgebase,protein resource,human protein,human proteome,function,medical,disease,expression,interactions,sequence,isoform,mutation,variant,phenotypes,proteomics,peptide,structure,3D,annotation,biocuration,chromosomes,protein validation,protein-coding genes,post-translational modifications,ptm,data integration,systems biology,genetic variations,UniProt",
+    "distribution": [
+        {
+            "@type": "DataDownload",
+            "contentUrl": "ftp://ftp.nextprot.org/pub/current_release/xml/nextprot_all.xml.gz",
+            "fileFormat": "XML"
+        },
+        {
+            "@type": "DataDownload",
+            "fileFormat": "RDF"
+        },
+        {
+            "@type": "DataDownload",
+            "contentUrl": "ftp://ftp.nextprot.org/pub/current_release/peff/nextprot_all.peff.gz",
+            "fileFormat": "PEFF"
+        },
+        {
+            "@type": "DataDownload",
+            "contentUrl": "ftp://ftp.nextprot.org/pub/current_release/md5/nextprot_sequence_md5.txt",
+            "fileFormat": "TXT"
+        },
+        {
+            "@type": "DataDownload",
+            "contentUrl": "https://api.nextprot.org/export/entries/all.fasta",
+            "fileFormat": "FASTA"
+        }
+    ],
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.nextprot.org/proteins/search?query={query}",
+        "query-input": "required name=query"
+    },
+    "license": {
+        "@type": "CreativeWork",
+        "name": "Creative Commons CC BY 4.0 Attribution",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+}
