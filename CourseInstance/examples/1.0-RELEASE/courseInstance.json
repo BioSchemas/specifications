@@ -133,15 +133,15 @@
 	{
 		"@type": "TrainingMaterial",
 		"name": "Course Slides for Autumn 2020 offering of CS101",
-		"url": "http://example.com/slides_website"
-		"description": "The course slides contain diagrams, questions, and links to various resources about this course" 
+		"url": "http://example.com/slides_website",
+		"description": "The course slides contain diagrams, questions, and links to various resources about this course",
 		"keywords": "Computer Science, CS, Introductory"
 	},
 	{
 		"@type": "Thing",
 		"name": "neXtProt database",
-		"url": "https://www.nextprot.org"
-		"description": "The course instance was dedicated to the neXtProt datbase and how to explore the universe of human proteins" 
+		"url": "https://www.nextprot.org",
+		"description": "The course instance was dedicated to the neXtProt datbase and how to explore the universe of human proteins",
 		"keywords": "Molecular Biology, Introductory"
 	}
   ]
