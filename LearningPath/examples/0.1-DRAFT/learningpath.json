@@ -1,0 +1,364 @@
+[
+  {
+    "@id": "https://elixir-europe.org/TM11",
+    "@type": [
+      "https://schema.org/LearningResource",
+      "https://schema.org/ListItem"
+    ],
+    "http://purl.org/dc/terms/conformsTo": [
+      {
+        "@id": "https://bioschemas.org/profiles/TrainingMaterial"
+      }
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "...learn about data management plans, from data stewards to FAIR principles"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "(1.1) ELIXIR-CONVERGE - The why of research data management"
+      }
+    ],
+    "https://schema.org/nextItem": [
+      {
+        "@id": "https://elixir-europe.org/TM12"
+      }
+    ],
+    "https://schema.org/url": [
+      {
+        "@value": "https://www.youtube.com/watch?v=S7HfUe1hWcg"
+      }
+    ]
+  },
+  {
+    "@id": "https://elixir-europe.org/TM23",
+    "@type": [
+      "https://schema.org/LearningResource",
+      "https://schema.org/ListItem"
+    ],
+    "http://purl.org/dc/terms/conformsTo": [
+      {
+        "@id": "https://bioschemas.org/profiles/TrainingMaterial"
+      }
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "...funded by the ELIXIR-UK: FAIR Data Stewardship training ..."
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "(2.3) RDMbites | FAIRification tools and templates"
+      }
+    ],
+    "https://schema.org/nextItem": [
+      {
+        "@id": "https://elixir-europe.org/Topic_3"
+      }
+    ],
+    "https://schema.org/url": [
+      {
+        "@value": "https://youtu.be/SuuhcuPYOso"
+      }
+    ]
+  },
+  {
+    "@id": "https://elixir-europe.org/Topic_1",
+    "@type": [
+      "https://schema.org/Course",
+      "https://schema.org/ListItem",
+      "https://schema.org/ItemList"
+    ],
+    "http://purl.org/dc/terms/conformsTo": [
+      {
+        "@id": "https://bioschemas.org/profiles/LearningPath/0.1-DRAFT"
+      }
+    ],
+    "https://schema.org/itemListElement": [
+      {
+        "@id": "https://elixir-europe.org/TM11"
+      },
+      {
+        "@id": "https://elixir-europe.org/TM12"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "(TOPIC 1) Introduction to Data Management"
+      }
+    ],
+    "https://schema.org/nextItem": [
+      {
+        "@id": "https://elixir-europe.org/Topic_2"
+      }
+    ],
+    "https://schema.org/teaches": [
+      {
+        "@value": "Understand the importance of Research Data Management..."
+      }
+    ]
+  },
+  {
+    "@id": "https://elixir-europe.org/GA_learning_path",
+    "@type": [
+      "https://schema.org/Course"
+    ],
+    "http://purl.org/dc/terms/conformsTo": [
+      {
+        "@id": "https://bioschemas.org/profiles/LearningPath/0.1-DRAFT"
+      }
+    ],
+    "https://schema.org/courseCode": [
+      {
+        "@value": "data-management-for-researchers"
+      }
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "The Data Management for Researchers learning path is designed to support researchers in developing strong, practical skills across the entire data lifecycle. "
+      }
+    ],
+    "https://schema.org/itemListElement": [
+      {
+        "@id": "https://elixir-europe.org/Topic_3"
+      },
+      {
+        "@id": "https://elixir-europe.org/Topic_2"
+      },
+      {
+        "@id": "https://elixir-europe.org/Topic_1"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Data Management for Researchers"
+      }
+    ],
+    "https://schema.org/provider": [
+      {
+        "@id": "https://elixir-europe.org/ELIXIR_Europe"
+      }
+    ]
+  },
+  {
+    "@id": "https://elixir-europe.org/Topic_2",
+    "@type": [
+      "https://schema.org/Course",
+      "https://schema.org/ListItem",
+      "https://schema.org/ItemList"
+    ],
+    "http://purl.org/dc/terms/conformsTo": [
+      {
+        "@id": "https://bioschemas.org/profiles/LearningPath/0.1-DRAFT"
+      }
+    ],
+    "https://schema.org/itemListElement": [
+      {
+        "@id": "https://elixir-europe.org/TM21"
+      },
+      {
+        "@id": "https://elixir-europe.org/TM22"
+      },
+      {
+        "@id": "https://elixir-europe.org/TM23"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "(TOPIC 2): FAIR data"
+      }
+    ],
+    "https://schema.org/nextItem": [
+      {
+        "@id": "https://elixir-europe.org/Topic_3"
+      }
+    ],
+    "https://schema.org/teaches": [
+      {
+        "@value": "...introduces the FAIR principles and shows how to apply them in real research workflows."
+      }
+    ]
+  },
+  {
+    "@id": "https://elixir-europe.org/TM32",
+    "@type": [
+      "https://schema.org/LearningResource",
+      "https://schema.org/ListItem"
+    ],
+    "http://purl.org/dc/terms/conformsTo": [
+      {
+        "@id": "https://bioschemas.org/profiles/TrainingMaterial"
+      }
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "...Derived from National Bioinformatics Infrastructure Sweden."
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "(3.2) NBISweden/module-dmp-dm-practices"
+      }
+    ],
+    "https://schema.org/url": [
+      {
+        "@value": "https://nbisweden.github.io/module-dmp-dm-practices/"
+      }
+    ]
+  },
+  {
+    "@id": "https://elixir-europe.org/TM22",
+    "@type": [
+      "https://schema.org/LearningResource",
+      "https://schema.org/ListItem"
+    ],
+    "http://purl.org/dc/terms/conformsTo": [
+      {
+        "@id": "https://bioschemas.org/profiles/TrainingMaterial"
+      }
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "...Derived from the comprehensive “FAIR in Bio Practice” program,..."
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "(2.2) FAIR for busy biologists"
+      }
+    ],
+    "https://schema.org/nextItem": [
+      {
+        "@id": "https://elixir-europe.org/TM23"
+      }
+    ],
+    "https://schema.org/url": [
+      {
+        "@value": "https://carpentries-incubator.github.io/fair-for-busy-biologists/"
+      }
+    ]
+  },
+  {
+    "@id": "https://elixir-europe.org/TM21",
+    "@type": [
+      "https://schema.org/LearningResource",
+      "https://schema.org/ListItem"
+    ],
+    "http://purl.org/dc/terms/conformsTo": [
+      {
+        "@id": "https://bioschemas.org/profiles/TrainingMaterial"
+      }
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "...context of the BY-COVID project"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "(2.1) FAIRsharing in a nutshell"
+      }
+    ],
+    "https://schema.org/nextItem": [
+      {
+        "@id": "https://elixir-europe.org/TM22"
+      }
+    ],
+    "https://schema.org/url": [
+      {
+        "@value": "https://fairsharing.org/educational#nutshell"
+      }
+    ]
+  },
+  {
+    "@id": "https://elixir-europe.org/Topic_3",
+    "@type": [
+      "https://schema.org/Course",
+      "https://schema.org/ListItem",
+      "https://schema.org/ItemList"
+    ],
+    "http://purl.org/dc/terms/conformsTo": [
+      {
+        "@id": "https://bioschemas.org/profiles/LearningPath/0.1-DRAFT"
+      }
+    ],
+    "https://schema.org/itemListElement": [
+      {
+        "@id": "https://elixir-europe.org/TM31"
+      },
+      {
+        "@id": "https://elixir-europe.org/TM32"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "(TOPIC 3): (ONE OF) Data Management Plans"
+      }
+    ],
+    "https://schema.org/teaches": [
+      {
+        "@value": "...introduces researchers to the creation and use of Data Management Plans. "
+      }
+    ]
+  },
+  {
+    "@id": "https://elixir-europe.org/TM12",
+    "@type": [
+      "https://schema.org/LearningResource",
+      "https://schema.org/ListItem"
+    ],
+    "http://purl.org/dc/terms/conformsTo": [
+      {
+        "@id": "https://bioschemas.org/profiles/TrainingMaterial"
+      }
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "...necessary skills for effective organisation and management of research data."
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "(1.2) Crash Course In Data Management"
+      }
+    ],
+    "https://schema.org/url": [
+      {
+        "@value": "https://doi.org/10.5281/zenodo.16993293"
+      }
+    ]
+  },
+  {
+    "@id": "https://elixir-europe.org/TM31",
+    "@type": [
+      "https://schema.org/LearningResource",
+      "https://schema.org/ListItem"
+    ],
+    "http://purl.org/dc/terms/conformsTo": [
+      {
+        "@id": "https://bioschemas.org/profiles/TrainingMaterial"
+      }
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "...ELIXIR Estonia will do a data management writing course."
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "(3.1) ESTONIA / Bring Your Own Data Management Plan"
+      }
+    ],
+    "https://schema.org/nextItem": [
+      {
+        "@id": "https://elixir-europe.org/TM32"
+      }
+    ],
+    "https://schema.org/url": [
+      {
+        "@value": "https://doi.org/10.5281/zenodo.7707813"
+      }
+    ]
+  }
+]

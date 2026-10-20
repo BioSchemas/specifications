@@ -1,0 +1,172 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "path": "https://discovery.biothings.io/ns/path/"
+  },
+  "@graph": [
+    {
+      "@id": "path:LearningPath",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "This is a first draft version of LearningPath.\nThis version is 0.1-DRAFT\nLearning paths are a structured sequence of learning activities, resources, and assessments designed to guide a learner from basic concepts to advanced skills.\nThese changes were prepared by Phil Reed.",
+      "rdfs:label": "LearningPath",
+      "rdfs:subClassOf": {
+        "@id": "schema:Course"
+      },
+      "$validation": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "courseCode": {
+            "description": "Schema:The identifier for the Course used by the course provider (e.g. CS101 or 6.001).\n\nBioschemas: The identifier for the LearningPath used by the provider (e.g. CS101 or 6.001).",
+            "owl:cardinality": "many"
+          },
+          "coursePrerequisites": {
+            "description": "Schema:Requirements for taking the Course. May be completion of another Course or a textual description like “permission of instructor”. Requirements may be a pre-requisite competency, referenced using AlignmentObject.\n\nBioschemas: Requirements for taking the LearningPath. May be completion of another Course or a textual description like “permission of instructor”. Requirements may be a pre-requisite competency, referenced using AlignmentObject.",
+            "owl:cardinality": "many"
+          },
+          "educationalCredentialAwarded": {
+            "description": "Schema:A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this course.\n\nBioschemas:Strongly recommended if exists. A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this LearningPath. Individual items within the LearningPath may award additional credentials.",
+            "owl:cardinality": "one"
+          },
+          "about": {
+            "description": "Schema:The subject matter of the content. Inverse property: subjectOf.\n\nBioschemas:The subject of this LearningPath.",
+            "owl:cardinality": "many"
+          },
+          "abstract": {
+            "description": "Schema:An abstract is a short description that summarizes a CreativeWork\n\nBioschemas:An abstract is a short description that summarizes a LearningPath",
+            "owl:cardinality": "one"
+          },
+          "accessibilitySummary": {
+            "description": "Schema:A human-readable summary of specific accessibility features or deficiencies, consistent with the other accessibility metadata but expressing subtleties such as “short descriptions are present but long descriptions will be needed for non-visual users” or “short descriptions are present and no long descriptions are needed.”\n\nBioschemas:A human-readable summary of specific accessibility features or deficiencies within the LearningPath.",
+            "owl:cardinality": "one"
+          },
+          "aggregateRating": {
+            "description": "The overall rating, based on a collection of reviews or ratings, of the item.",
+            "owl:cardinality": "one"
+          },
+          "audience": {
+            "description": "Schema:An intended audience, i.e. a group for whom something was created. Supersedes serviceAudience.\n\nBioschemas:The type of audience intended for your LearningPath. A succinct description of the attendees.",
+            "owl:cardinality": "many"
+          },
+          "citation": {
+            "description": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+            "owl:cardinality": "many"
+          },
+          "comment": {
+            "description": "Comments, typically from users.",
+            "owl:cardinality": "many"
+          },
+          "commentCount": {
+            "description": "The number of comments this CreativeWork (e.g. Article, Question or Answer) has received. This is most applicable to works published in Web sites with commenting system; additional comments may exist elsewhere.",
+            "owl:cardinality": "one"
+          },
+          "creator": {
+            "description": "Schema:The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.\n\nBioschemas:The creator/author of the LearningPath. Note, this may be different from the author who created the training materials used.",
+            "owl:cardinality": "many"
+          },
+          "dateCreated": {
+            "description": "The date on which the CreativeWork was created or the item was added to a DataFeed.",
+            "owl:cardinality": "one"
+          },
+          "dateModified": {
+            "description": "The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
+            "owl:cardinality": "many"
+          },
+          "educationalLevel": {
+            "description": "Schema:The level in terms of progression through an educational or training context. Examples of educational levels include ‘beginner’, ‘intermediate’ or ‘advanced’, and formal sets of level indicators.\n\nBioschemas:The level expected to be able to participate in the overall LearningPath. Examples of educational levels include ‘beginner’, ‘intermediate’ or ‘advanced’. Note: The modules and materials within a path may have different levels within a LearningPath.",
+            "owl:cardinality": "one"
+          },
+          "isBasedOn": {
+            "description": "Schema:A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html. Supersedes isBasedOnUrl.\n\nBioschemas:A course, book or other resource on which this LearningPath is based.",
+            "owl:cardinality": "many"
+          },
+          "keywords": {
+            "description": "Schema:\nKeywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.\n\nBioschemas:\nFree text keywords delimited by commas describing the LearningPath content. Use the DefinedTerm type to add a controlled vocabulary term to categorize the course (such as using the EDAM Topic ontology).",
+            "owl:cardinality": "one"
+          },
+          "license": {
+            "description": "Schema:A license document that applies to this content, typically indicated by URL.\n\nBioschemas:If the LearningPath has an open-source license, include the short URL, as found in SPDX. Otherwise use CreativeWork to describe your custom license.",
+            "owl:cardinality": "one"
+          },
+          "mentions": {
+            "description": "Schema:Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.\n\nBioschemas:Datasets, tools, technologies, entities etc, which are actively used by and/or referred to by this LearningPath.",
+            "owl:cardinality": "many"
+          },
+          "provider": {
+            "description": "Schema:The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.\n\nBioschemas:The organization responsible for providing the educational input for the overall LearningPath, e.g. content, assessments, accreditation etc. Note: the modules and materials within a path may be from different providers within a LearningPath.",
+            "owl:cardinality": "one"
+          },
+          "teaches": {
+            "description": "Schema:The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.\n\nBioschemas:Statements that describe what knowledge, skills or abilities students should acquire on completion of this LearningPath",
+            "owl:cardinality": "many"
+          },
+          "thumbnailUrl": {
+            "description": "A thumbnail image relevant to the Thing.",
+            "owl:cardinality": "one"
+          },
+          "timeRequired": {
+            "description": "Schema:Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. ‘P30M’, ‘P1H25M’.\n\nBioschemas:Approximate or typical time it takes to work through this LearningPath for the typical intended target audience, e.g. ‘P30M’, ‘P1H25M’. This should use the ISO 8601 duration format.\nIf the time is broken down by nested LearningPath profiles, use duration of the nested profiles to override timeRequired.",
+            "owl:cardinality": "one"
+          },
+          "alternateName": {
+            "description": "An alias for the item.",
+            "owl:cardinality": "many"
+          },
+          "description": {
+            "description": "A description of the item.",
+            "owl:cardinality": "one"
+          },
+          "image": {
+            "description": "An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].",
+            "owl:cardinality": "one"
+          },
+          "name": {
+            "description": "The name of the item.",
+            "owl:cardinality": "one"
+          },
+          "url": {
+            "description": "Schema:URL of the item.\n\nBioschemas:The preferred URL of the LearningPath page. You must provide this value if it is known.",
+            "owl:cardinality": "one"
+          }
+        },
+        "required": [
+          "description"
+        ],
+        "recommended": [
+          "coursePrerequisites",
+          "about",
+          "abstract",
+          "aggregateRating",
+          "citation",
+          "educationalLevel",
+          "keywords",
+          "license",
+          "provider",
+          "teaches",
+          "timeRequired",
+          "url",
+          "mentions"
+        ],
+        "optional": [
+          "courseCode",
+          "educationalCredentialAwarded",
+          "accessibilitySummary",
+          "audience",
+          "comment",
+          "commentCount",
+          "creator",
+          "dateCreated",
+          "dateModified",
+          "isBasedOn",
+          "thumbnailUrl",
+          "alternateName",
+          "image",
+          "name"
+        ]
+      },
+      "schemaVersion": [
+        "https://schema.org/docs/releases.html#v30.1"
+      ]
+    }
+  ]
+}
