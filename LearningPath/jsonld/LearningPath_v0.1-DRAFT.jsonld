@@ -9,9 +9,13 @@
       "@type": "rdfs:Class",
       "rdfs:comment": "This is a first draft version of LearningPath.\nThis version is 0.1-DRAFT\nLearning paths are a structured sequence of learning activities, resources, and assessments designed to guide a learner from basic concepts to advanced skills.\nThese changes were prepared by Phil Reed.",
       "rdfs:label": "LearningPath",
-      "rdfs:subClassOf": {
-        "@id": "schema:Course"
-      },
+      "rdfs:subClassOf": [
+        {
+          "@id": "schema:Course",
+          "@id": "schema:ItemList",
+          "@id": "schema:ListItem"
+        }
+      ],
       "$validation": {
         "$schema": "http://json-schema.org/draft-07/schema#",
         "type": "object",
@@ -644,10 +648,31 @@
             "owl:cardinality": "one",
             "type": "string",
             "format": "uri"
+          },
+          "itemListElement": {
+            "description": "Schema:\nFor itemListElement values, you can use simple strings (e.g. \"Peter\", \"Paul\", \"Mary\"), existing entities, or use ListItem.\n\nBioschemas:\nIndicates (typically several) LearningPath, TrainingMaterial, Course or CourseInstance entities that comprise this LearningPath. If the order of materials is important, these entities be ordered using the 'nextItem' property.",
+            "owl:cardinality": "many",
+            "oneOf": [
+              {
+                "$ref": "#/definitions/itemListElement"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/itemListElement"
+                }
+              }
+            ]
+          },
+          "nextItem": {
+            "description": "Schema: A link to the ListItem that follows the current one.\n\nBioschemas: A link to the next LearningPath, TrainingMaterial, Course or CourseInstance that follows the current one.",
+             "owl:cardinality": "one",
+             "$ref": "#/definitions/nextItem"
           }
         },
         "required": [
-          "description"
+          "description",
+          "itemListElement"
         ],
         "recommended": [
           "coursePrerequisites",
@@ -662,7 +687,8 @@
           "teaches",
           "timeRequired",
           "url",
-          "mentions"
+          "mentions",
+          "nextItem"
         ],
         "optional": [
           "courseCode",
@@ -700,6 +726,12 @@
           },
           "aggregateRating": {
             "@type": "AggregateRating",
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "nextItem": {
+            "@type": "ListItem",
             "type": "object",
             "properties": {},
             "required": []
