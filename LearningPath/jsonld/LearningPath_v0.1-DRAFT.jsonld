@@ -10,11 +10,9 @@
       "rdfs:comment": "This is a first draft version of LearningPath.\nThis version is 0.1-DRAFT\nLearning paths are a structured sequence of learning activities, resources, and assessments designed to guide a learner from basic concepts to advanced skills.\nThese changes were prepared by Phil Reed.",
       "rdfs:label": "LearningPath",
       "rdfs:subClassOf": [
-        {
-          "@id": "schema:Course",
-          "@id": "schema:ItemList",
-          "@id": "schema:ListItem"
-        }
+        {"@id": "schema:Course"},
+        {"@id": "schema:ItemList"},
+        {"@id": "schema:ListItem"}
       ],
       "$validation": {
         "$schema": "http://json-schema.org/draft-07/schema#",
