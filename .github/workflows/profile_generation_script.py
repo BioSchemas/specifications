@@ -303,7 +303,7 @@ def get_redirect_from(profile_name):
             line_count += 1
             if line_count > 1:
                 if row[0] == profile_name:
-                    redirect_from = row[2]
+                    redirect_from = yaml.safe_load(row[2]) or list()
 
     return redirect_from
 

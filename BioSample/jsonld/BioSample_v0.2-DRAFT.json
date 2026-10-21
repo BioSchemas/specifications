@@ -1,0 +1,233 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl/",
+    "bioschemastypes": "https://discovery.biothings.io/ns/bioschemastypes/",
+    "bioschemastypesdrafts": "https://discovery.biothings.io/ns/bioschemastypesdrafts/",
+    "dct": "http://purl.org/dc/terms/",
+    "@dateModified": "08/14/2026, 08:23:13",
+    "NAbiosampleprofile": "https://discovery.biothings.io/ns/NAbiosampleprofile/",
+    "bioschemas": "https://discovery.biothings.io/ns/bioschemas/"
+  },
+  "@graph": [
+    {
+      "@id": "NAbiosampleprofile:BioSample",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Drafting Biosample profile...",
+      "rdfs:label": "Biosample",
+      "rdfs:subClassOf": {
+        "@id": "bioschemastypes:BioSample"
+      },
+      "$validation": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "additionalProperty": {
+            "description": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.",
+            "owl:cardinality": "many",
+            "bsc_description": "Dummy Bioschemas description for additionalProperty."
+          },
+          "alternateIdentifier": {
+            "description": "An additional identifier for the same instance of the resource. ",
+            "owl:cardinality": "many",
+            "bsc_description": "Dummy Bioschemas description for alternateIdentifier."
+          },
+          "citation": {
+            "description": "List publications where the sample is mentioned or described.",
+            "owl:cardinality": "many",
+            "bsc_description": "Dummy Bioschemas description for citation."
+          },
+          "collectionMethod": {
+            "description": "Provide information about the conditions and methods of acquisition of samples. ",
+            "owl:cardinality": "many",
+            "bsc_description": "Dummy Bioschemas description for collectionMethod."
+          },
+          "collector": {
+            "description": "The Person or Organization who collected the Sample. ",
+            "owl:cardinality": "many",
+            "bsc_description": "Dummy Bioschemas description for collector."
+          },
+          "conditionsOfAccess": {
+            "description": "Sample access statement outlining conditions/requirements need to be fulfilled before access to the sample is granted.",
+            "owl:cardinality": "many",
+            "bsc_description": "Dummy Bioschemas description for conditionsOfAccess."
+          },
+          "conformsTo": {
+            "description": "Used to state the Bioschemas profile that the markup relates to. The versioned URL of the profile must be used. Note that we use a CURIE in the table here but the full URL for Dublin Core terms must be used in the markup (http://purl.org/dc/terms/conformsTo), see example.",
+            "owl:cardinality": "many",
+            "bsc_description": "Dummy Bioschemas description for conformsTo."
+          },
+          "contactPoint": {
+            "description": "A person or organization that can be contacted for more information or support.",
+            "owl:cardinality": "one",
+            "bsc_description": "Dummy Bioschemas description for contactPoint."
+          },
+          "contributor": {
+            "description": "A person or organization that contributes to the work.",
+            "owl:cardinality": "many",
+            "bsc_description": "Dummy Bioschemas description for contributor."
+          },
+          "dateCollected": {
+            "description": "The date on which the sample was collected.",
+            "owl:cardinality": "one",
+            "bsc_description": "Dummy Bioschemas description for dateCollected."
+          },
+          "dateCreated": {
+            "description": "The date on which the CreativeWork was created or the item was added to a DataFeed. ",
+            "owl:cardinality": "one",
+            "bsc_description": "Dummy Bioschemas description for dateCreated."
+          },
+          "dateModified": {
+            "description": "The date the sample record was last updated.",
+            "owl:cardinality": "many",
+            "bsc_description": "Dummy Bioschemas description for dateModified."
+          },
+          "dateProcessed": {
+            "description": "The date the sample was processed or used in a method.",
+            "owl:cardinality": "many",
+            "bsc_description": "Dummy Bioschemas description for dateProcessed."
+          },
+          "datePublished": {
+            "description": "The date when the record of the sample will be made publicly available.",
+            "owl:cardinality": "one",
+            "bsc_description": "Dummy Bioschemas description for datePublished."
+          },
+          "environmentalSystem": {
+            "description": "A category or description of the habitat that describes elements of an ecosystem where the sample was collected. Where possible use controlled vocabulary such as ENVO.",
+            "owl:cardinality": "many",
+            "bsc_description": "Dummy Bioschemas description for environmentalSystem."
+          },
+          "ethics": {
+            "description": "Indicate which ethics policies and/or social considerations are associated with the sample.",
+            "owl:cardinality": "many",
+            "bsc_description": "Dummy Bioschemas description for ethics."
+          },
+          "experimentalPurpose": {
+            "description": "Describe the planned or executed experimental procedures involving the samples.",
+            "owl:cardinality": "many",
+            "bsc_description": "Dummy Bioschemas description for experimentalPurpose."
+          },
+          "funding": {
+            "description": "Provide funding information.",
+            "owl:cardinality": "many",
+            "bsc_description": "Dummy Bioschemas description for funding."
+          },
+          "hasPart": {
+            "description": "Describe related items including other resources related to the samples. For example a subsample of this sample.",
+            "owl:cardinality": "many",
+            "bsc_description": "Dummy Bioschemas description for hasPart."
+          },
+          "instrument": {
+            "description": "Provide description of instruments and devices used in collecting, processing and analysis of samples.",
+            "owl:cardinality": "many",
+            "bsc_description": "Dummy Bioschemas description for instrument."
+          },
+          "isControl": {
+            "description": "Indicates whether the sample is being used as a normal control, may be in combination with another sample.",
+            "owl:cardinality": "many",
+            "bsc_description": "Dummy Bioschemas description for isControl."
+          },
+          "itemLocation": {
+            "description": "Current location of the item. ",
+            "owl:cardinality": "one",
+            "bsc_description": "Dummy Bioschemas description for itemLocation."
+          },
+          "locationCreated": {
+            "description": "The location where the CreativeWork was created, which may not be the same as the location depicted in the CreativeWork. ",
+            "owl:cardinality": "many",
+            "bsc_description": "Dummy Bioschemas description for locationCreated."
+          },
+          "custodian": {
+            "description": "The Person or Organization who is responsible for the Sample.",
+            "owl:cardinality": "many",
+            "bsc_description": "Dummy Bioschemas description for custodian."
+          },
+          "gender": {
+            "description": "Gender of the person. While http://schema.org/Male and http://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender",
+            "owl:cardinality": "many",
+            "bsc_description": "Dummy Bioschemas description for gender."
+          },
+          "samplingAge": {
+            "description": "The age of the object when the Sample was created. ",
+            "owl:cardinality": "many",
+            "bsc_description": "Dummy Bioschemas description for samplingAge."
+          },
+          "additionalType": {
+            "description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the\n    use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href=\"http://schema.org/docs/styleguide.html\">style guide</a>.",
+            "owl:cardinality": "many",
+            "bsc_description": "Dummy Bioschemas description for additionalType."
+          },
+          "alternateName": {
+            "description": "An alias for the item.",
+            "owl:cardinality": "many",
+            "bsc_description": "Dummy Bioschemas description for alternateName."
+          },
+          "description": {
+            "description": "A description of the item.",
+            "owl:cardinality": "one",
+            "bsc_description": "Dummy Bioschemas description for description."
+          },
+          "identifier": {
+            "description": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.\n        ",
+            "owl:cardinality": "one",
+            "bsc_description": "Dummy Bioschemas description for identifier."
+          },
+          "name": {
+            "description": "The name of the item.",
+            "owl:cardinality": "one",
+            "bsc_description": "Dummy Bioschemas description for name."
+          },
+          "sameAs": {
+            "description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+            "owl:cardinality": "many",
+            "bsc_description": "Dummy Bioschemas description for sameAs."
+          }
+        },
+        "required": [
+          "conformsTo",
+          "funding",
+          "identifier"
+        ],
+        "recommended": [
+          "collectionMethod",
+          "collector",
+          "conditionsOfAccess",
+          "contactPoint",
+          "contributor",
+          "dateCollected",
+          "dateCreated",
+          "dateModified",
+          "dateProcessed",
+          "datePublished",
+          "environmentalSystem",
+          "ethics",
+          "experimentalPurpose",
+          "instrument",
+          "locationCreated",
+          "custodian",
+          "gender",
+          "samplingAge",
+          "description",
+          "name",
+          "sameAs"
+        ],
+        "optional": [
+          "additionalProperty",
+          "alternateIdentifier",
+          "citation",
+          "hasPart",
+          "isControl",
+          "itemLocation",
+          "custodian",
+          "additionalType",
+          "alternateName"
+        ]
+      },
+      "schemaVersion": [
+        "https://schema.org/docs/releases.html#v30.1"
+      ]
+    }
+  ]
+}
