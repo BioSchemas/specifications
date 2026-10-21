@@ -1,0 +1,46 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "path": "https://discovery.biothings.io/ns/path/"
+  },
+  "@graph": [
+    {
+      "@id": "path:LearningPathItemList",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "This is a first draft version of LearningPath multiple inheritance, ItemList properties\nThis version: 0.1-DRAFT\nThese changes were prepared by Phil Reed",
+      "rdfs:label": "LearningPathItemList",
+      "rdfs:subClassOf": {
+        "@id": "schema:ItemList"
+      },
+      "$validation": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "itemListElement": {
+            "description": "Schema:\nFor itemListElement values, you can use simple strings (e.g. \"Peter\", \"Paul\", \"Mary\"), existing entities, or use ListItem.\n\nBioschemas:\nIndicates (typically several) LearningPath, TrainingMaterial, Course or CourseInstance entities that comprise this LearningPath. If the order of materials is important, these entities be ordered using the 'nextItem' property.",
+            "owl:cardinality": "many",
+            "oneOf": [
+              {
+                "$ref": "#/definitions/itemListElement"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/itemListElement"
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "itemListElement"
+        ],
+        "recommended": [],
+        "optional": []
+      },
+      "schemaVersion": [
+        "https://schema.org/docs/releases.html#v30.1"
+      ]
+    }
+  ]
+}
