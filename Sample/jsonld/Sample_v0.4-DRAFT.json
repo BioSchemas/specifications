@@ -14,7 +14,7 @@
     {
       "@id": "bioschemasdrafts:Sample",
       "@type": "rdfs:Class",
-      "rdfs:comment": "This profile describes a material entity that is representative of a whole.\n\nComments: Typically samples are intended to be representative of the whole or aspects thereof. Examples of samples include biomedical samples (blood, urine) and commercial samples (carpet, metal). <h4>Summary of Changes</h4><br>Profile updated to be based off of updated Draft Sample Type which includes many new properties. <p> Version: 0.4-DRAFT",
+      "rdfs:comment": "This profile describes a material entity that is representative of a whole.\n\nComments: Typically samples are intended to be representative of the whole or aspects thereof. Examples of samples include biomedical samples (blood, urine) and commercial samples (carpet, metal). <h4>Summary of Changes</h4>Profile updated to be based off of updated Draft Sample Type which includes many new properties. Updated by the Samples Working Group. <p> Version: 0.4-DRAFT",
       "rdfs:label": "Sample",
       "rdfs:subClassOf": {
         "@id": "bioschemastypesdrafts:Sample"
