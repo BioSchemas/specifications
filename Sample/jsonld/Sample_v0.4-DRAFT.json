@@ -1750,7 +1750,8 @@
               {
                 "type": "string",
                 "format": "uri"
-              }      
+              }
+            ]
           },
           "name": {
             "description": "The name of the item.",
