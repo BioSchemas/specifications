@@ -36,15 +36,7 @@
             "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE"
           },
           "name": "A short introduction to Galaxy",
-          "url": "https://training.galaxyproject.org/training-material/topics/introduction/tutorials/galaxy-intro-short/tutorial.html",
           "nextItem": "module1material2",
-          "@id": "https://tess.elixir-europe.org/materials/hands-on-for-a-short-introduction-to-galaxy-tutorial",
-          "@type": "LearningResource",
-          "dct:conformsTo": {
-            "@type": "CreativeWork",
-            "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE"
-          },
-          "name": "A short introduction to Galaxy",
           "learningResourceType": [
             "e-learning"
           ],
@@ -287,7 +279,7 @@
           "name": "An Introduction to Genome Assembly",
           "url": "https://training.galaxyproject.org/training-material/topics/assembly/tutorials/general-introduction/tutorial.html",
           "nextItem": "#module2material3"
-        },,
+        },
         {
           "@id": "#module2material4",
           "@type": ["LearningResource", "ListItem"],
