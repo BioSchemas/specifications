@@ -8,6 +8,9 @@ Thing > CreativeWork > [Course](https://schema.org/Course)
 
 Thing > Intangible > [ListItem](https://schema.org/ListItem)
 
+Thing > Intangible > [temList](https://schema.org/ItemList)
+
+
 ## Profile
 This [profile](https://bioschemas.org/profiles/LearningPath) provides a structured sequence of learning activities, resources, and assessments designed to guide a learner from basic concepts to advanced skills.
 
