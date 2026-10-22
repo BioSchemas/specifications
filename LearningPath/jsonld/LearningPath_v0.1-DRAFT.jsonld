@@ -1,7 +1,11 @@
 {
   "@context": {
     "schema": "http://schema.org/",
-    "path": "https://discovery.biothings.io/ns/path/"
+    "path": "https://discovery.biothings.io/ns/path/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+    "owl": "http://www.w3.org/2002/07/owl/"
   },
   "@graph": [
     {
@@ -38,12 +42,12 @@
             "owl:cardinality": "many",
             "oneOf": [
               {
-                "$ref": "#/definitions/coursePrerequisites"
+                "$ref": "#/definitions/coursePrerequisitesDef"
               },
               {
                 "type": "array",
                 "items": {
-                  "$ref": "#/definitions/coursePrerequisites"
+                  "$ref": "#/definitions/coursePrerequisitesDef"
                 }
               }
             ]
@@ -51,7 +55,7 @@
           "educationalCredentialAwarded": {
             "description": "Schema:A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this course.\n\nBioschemas:Strongly recommended if exists. A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this LearningPath. Individual items within the LearningPath may award additional credentials.",
             "owl:cardinality": "one",
-            "$ref": "#/definitions/educationalCredentialAwarded"
+            "$ref": "#/definitions/educationalCredentialAwardedDef"
           },
           "about": {
             "description": "Schema:The subject matter of the content. Inverse property: subjectOf.\n\nBioschemas:The subject of this LearningPath.",
@@ -87,7 +91,7 @@
           "aggregateRating": {
             "description": "The overall rating, based on a collection of reviews or ratings, of the item.",
             "owl:cardinality": "one",
-            "$ref": "#/definitions/aggregateRating"
+            "$ref": "#/definitions/aggregateRatingDef"
           },
           "audience": {
             "description": "Schema:An intended audience, i.e. a group for whom something was created. Supersedes serviceAudience.\n\nBioschemas:The type of audience intended for your LearningPath. A succinct description of the attendees.",
@@ -145,12 +149,12 @@
             "owl:cardinality": "many",
             "oneOf": [
               {
-                "$ref": "#/definitions/comment"
+                "$ref": "#/definitions/commentDef"
               },
               {
                 "type": "array",
                 "items": {
-                  "$ref": "#/definitions/comment"
+                  "$ref": "#/definitions/commentDef"
                 }
               }
             ]
@@ -652,12 +656,12 @@
             "owl:cardinality": "many",
             "oneOf": [
               {
-                "$ref": "#/definitions/itemListElement"
+                "$ref": "#/definitions/itemListElementDef"
               },
               {
                 "type": "array",
                 "items": {
-                  "$ref": "#/definitions/itemListElement"
+                  "$ref": "#/definitions/itemListElementDef"
                 }
               }
             ]
@@ -665,7 +669,7 @@
           "nextItem": {
             "description": "Schema: A link to the ListItem that follows the current one.\n\nBioschemas: A link to the next LearningPath, TrainingMaterial, Course or CourseInstance that follows the current one.",
              "owl:cardinality": "one",
-             "$ref": "#/definitions/nextItem"
+             "$ref": "#/definitions/nextItemDef"
           }
         },
         "required": [
@@ -705,7 +709,7 @@
           "name"
         ],
         "definitions": {
-          "educationalCredentialAwarded": {
+          "educationalCredentialAwardedDef": {
             "oneOf": [
               {
                 "@type": "EducationalOccupationalCredential",
@@ -722,17 +726,48 @@
               }
             ]
           },
-          "aggregateRating": {
+          "aggregateRatingDef": {
             "@type": "AggregateRating",
             "type": "object",
             "properties": {},
             "required": []
           },
-          "nextItem": {
+          "nextItemDef": {
             "@type": "ListItem",
             "type": "object",
             "properties": {},
             "required": []
+          },
+          "commentDef": {
+            "@type": "Comment",
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "itemListElementDef": {
+            "@type": "ListItem",
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "coursePrerequisitesDef": {
+            "oneOf": [
+               {
+                 "@type": "AlightmentObject",
+                 "type": "object",
+                 "properties": {},
+                 "required": []
+               },
+               {
+                 "@type": "Course",
+                 "type": "object",
+                 "properties": {},
+                 "required": []
+               },
+               {
+                 "type": "string"
+               }
+            ]
           }
         }
       },
