@@ -5,7 +5,7 @@
 "dct:conformsTo": {
   "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
   "@type": "CreativeWork"
-}
+},
 "description": "An introduction to the 10 simple rules for making training materials FAIR",
 "keywords": "FAIR, Training Materials, Bioschemas, ELIXIR, Structured Markup",
 "name": "Ten simple rules to make training materials FAIR",
